@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inglés YA · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg: #070c18;
+  --s1: #0d1526;
+  --s2: #111d35;
+  --s3: #162040;
+  --border: rgba(100,116,255,.12);
+  --border-h: rgba(100,116,255,.28);
+  --p1: #818cf8;
+  --p2: #6366f1;
+  --p-glow: rgba(99,102,241,.3);
+  --cyan: #67e8f9;
+  --cyan-d: #22d3ee;
+  --green: #34d399;
+  --green-d: #10b981;
+  --amber: #fbbf24;
+  --red: #f87171;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --dim: #64748b;
+  --r: 14px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 15% -5%, rgba(99,102,241,.09) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 85% 110%, rgba(34,211,238,.06) 0%, transparent 55%);
+}
+
+/* ── HEADER ── */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(7,12,24,.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 58px;
+}
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo-mark {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 900; color: #fff;
+  box-shadow: 0 0 20px rgba(99,102,241,.45);
+  letter-spacing: -.5px;
+}
+.logo-text { font-size: 16px; font-weight: 800; letter-spacing: .3px; }
+.logo-text span {
+  background: linear-gradient(90deg, var(--p1), var(--cyan));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.header-right { display: flex; align-items: center; gap: 20px; }
+.live-badge { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+.live-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 8px var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.55;transform:scale(1.4)} }
+#updated { font-size: 11px; color: var(--dim); }
+
+/* ── NAV TABS ── */
+nav {
+  background: rgba(7,12,24,.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 28px;
+  display: flex; gap: 2px;
+  position: sticky; top: 58px; z-index: 99;
+  overflow-x: auto;
+}
+nav::-webkit-scrollbar { height: 0; }
+.tab {
+  padding: 15px 18px; font-size: 12px; font-weight: 600;
+  letter-spacing: .3px; color: var(--dim); cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all .2s; white-space: nowrap; user-select: none;
+}
+.tab:hover { color: var(--muted); }
+.tab.active { color: var(--p1); border-bottom-color: var(--p1); }
+
+/* ── CONTENT ── */
+.pane { display: none; padding: 24px 28px; }
+.pane.active { display: block; }
+
+/* ── KPI GRID ── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px; margin-bottom: 18px;
+}
+@media (max-width: 1200px) { .kpi-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px)  { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.kpi-card {
+  background: var(--s1);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 18px 16px;
+  position: relative; overflow: hidden;
+  cursor: default;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.kpi-card:hover {
+  border-color: var(--border-h);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,.3);
+}
+.kpi-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--kc-accent);
+}
+.kpi-card::after {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 60px; height: 60px;
+  background: var(--kc-glow);
+  border-radius: 50%;
+  filter: blur(20px);
+  pointer-events: none;
+}
+.kpi-icon { font-size: 18px; margin-bottom: 10px; display: block; }
+.kpi-val {
+  font-size: 26px; font-weight: 900; line-height: 1;
+  color: var(--kc-color); margin-bottom: 5px;
+  font-variant-numeric: tabular-nums;
+}
+.kpi-lbl {
+  font-size: 10px; font-weight: 700; letter-spacing: .7px;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* ── GRID 2 ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+@media (max-width: 900px) { .g2 { grid-template-columns: 1fr; } }
+
+/* ── CARD ── */
+.card { background: var(--s1); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin-bottom: 14px; }
+.card-head {
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.card-title { font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--muted); }
+.card-sub { font-size: 11px; color: var(--dim); }
+
+/* ── FUNNEL ── */
+.funnel { display: flex; padding: 22px 16px; gap: 6px; }
+.funnel-step { flex: 1; position: relative; text-align: center; }
+.funnel-step:not(:last-child)::after {
+  content: '›'; position: absolute; right: -5px; top: 50%; transform: translateY(-50%);
+  color: var(--dim); font-size: 20px; z-index: 1; line-height: 1;
+}
+.f-pill {
+  display: inline-flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 14px 8px; border-radius: 12px;
+  width: calc(100% - 8px); min-height: 90px; border: 1px solid;
+}
+.f-val { font-size: 26px; font-weight: 900; line-height: 1.1; }
+.f-lbl { font-size: 9px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; margin-top: 3px; opacity: .8; }
+.f-pct { font-size: 10px; margin-top: 5px; color: var(--dim); }
+
+/* ── TABLE ── */
+table { width: 100%; border-collapse: collapse; }
+th {
+  background: var(--s2); color: var(--dim);
+  font-size: 10px; font-weight: 700; letter-spacing: .6px;
+  text-transform: uppercase; padding: 10px 14px;
+  text-align: left; border-bottom: 1px solid var(--border);
+  white-space: nowrap; user-select: none;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,.03);
+  vertical-align: middle;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(99,102,241,.04); }
+.num { font-weight: 700; font-variant-numeric: tabular-nums; }
+.tot td { font-weight: 800; background: rgba(99,102,241,.07); border-top: 1px solid var(--border) !important; }
+
+/* ── BADGES ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 9px; border-radius: 20px;
+  font-size: 10px; font-weight: 700; letter-spacing: .2px;
+}
+.ba { background: rgba(52,211,153,.15); color: var(--green); }
+.bp { background: rgba(251,191,36,.12);  color: var(--amber); }
+.bsi{ background: rgba(52,211,153,.15); color: var(--green); }
+.bno{ background: rgba(248,113,113,.12); color: var(--red); }
+
+/* ── PROGRESS BAR ── */
+.pbar-wrap { display: flex; align-items: center; gap: 8px; }
+.pbar { flex: 1; height: 5px; border-radius: 99px; background: var(--s3); }
+.pbar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--p2), var(--cyan-d)); transition: width .6s ease; }
+.pbar-val { font-size: 11px; font-weight: 700; color: var(--muted); min-width: 38px; text-align: right; }
+
+/* ── CHART ── */
+.chart-wrap { padding: 18px; height: 280px; }
+
+/* ── SUC CARDS ── */
+.suc-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px; }
+@media (max-width: 900px) { .suc-cards { grid-template-columns: 1fr; } }
+
+.suc-card {
+  background: var(--s1); border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+  transition: border-color .2s, transform .2s;
+}
+.suc-card:hover { border-color: var(--border-h); transform: translateY(-1px); }
+.suc-card-head {
+  padding: 14px 16px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px;
+}
+.suc-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.suc-name { font-size: 13px; font-weight: 800; letter-spacing: .2px; }
+.suc-body { padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.suc-stat { text-align: center; }
+.suc-stat-val { font-size: 22px; font-weight: 900; font-variant-numeric: tabular-nums; }
+.suc-stat-lbl { font-size: 9px; font-weight: 700; color: var(--dim); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+.suc-foot {
+  padding: 10px 16px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.conv-rate { font-size: 20px; font-weight: 900; color: var(--green); }
+
+/* ── SELECT ── */
+select.filter {
+  background: var(--s2); border: 1px solid var(--border);
+  color: var(--text); padding: 5px 12px; border-radius: 7px;
+  font-size: 11px; font-family: 'Inter', sans-serif; cursor: pointer;
+}
+select.filter:focus { outline: none; border-color: var(--p2); }
+
+/* ── EMPTY ── */
+.empty { text-align: center; color: var(--dim); padding: 32px; font-size: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">IY</div>
+    <div class="logo-text">INGLÉS <span>YA</span></div>
+  </div>
+  <div class="header-right">
+    <div class="live-badge">
+      <div class="live-dot"></div>
+      <span>En vivo</span>
+    </div>
+    <span id="updated">—</span>
+  </div>
+</header>
+
+<nav>
+  <div class="tab active"  data-pane="resumen">Resumen</div>
+  <div class="tab"         data-pane="sucursales">Sucursales</div>
+  <div class="tab"         data-pane="campanas">Campañas</div>
+  <div class="tab"         data-pane="adsets">Ad Sets</div>
+  <div class="tab"         data-pane="agenda">Agenda</div>
+  <div class="tab"         data-pane="diario">Diario</div>
+</nav>
+
+<!-- ══ RESUMEN ══ -->
+<div id="pane-resumen" class="pane active">
+  <div class="kpi-grid" id="kpis"></div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-head"><span class="card-title">Embudo del Mes</span></div>
+      <div class="funnel" id="funnel"></div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">Por Sucursal</span>
+        <span class="card-sub">Conversión L→I</span>
+      </div>
+      <table id="tbl-suc-mini"></table>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Campañas Activas</span>
+      <span class="card-sub">Meta Ads API</span>
+    </div>
+    <table id="tbl-camp-mini"></table>
+  </div>
+</div>
+
+<!-- ══ SUCURSALES ══ -->
+<div id="pane-sucursales" class="pane">
+  <div class="suc-cards" id="suc-cards"></div>
+  <div class="card">
+    <div class="card-head"><span class="card-title">Detalle Completo por Sucursal</span></div>
+    <table id="tbl-sucursales"></table>
+  </div>
+</div>
+
+<!-- ══ CAMPAÑAS ══ -->
+<div id="pane-campanas" class="pane">
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Campañas — Mes Actual</span>
+      <span class="card-sub">Fuente: Meta Ads API</span>
+    </div>
+    <table id="tbl-campanas"></table>
+  </div>
+</div>
+
+<!-- ══ AD SETS ══ -->
+<div id="pane-adsets" class="pane">
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Ad Sets — Mes Actual</span>
+      <span class="card-sub">Ordenado por Leads ↓</span>
+    </div>
+    <table id="tbl-adsets"></table>
+  </div>
+</div>
+
+<!-- ══ AGENDA ══ -->
+<div id="pane-agenda" class="pane">
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Prospectos en Agenda</span>
+      <select class="filter" id="suc-filter" onchange="renderAgenda()">
+        <option value="">Todas las sucursales</option>
+        <option>LINDAVISTA</option>
+        <option>IZTACALCO</option>
+        <option>ERMITA</option>
+      </select>
+    </div>
+    <table id="tbl-agenda"></table>
+  </div>
+</div>
+
+<!-- ══ DIARIO ══ -->
+<div id="pane-diario" class="pane">
+  <div class="card">
+    <div class="card-head"><span class="card-title">Leads y Gasto Diario (Meta Ads)</span></div>
+    <div class="chart-wrap"><canvas id="chart-meta"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-head"><span class="card-title">Leads Diarios por Sucursal</span></div>
+    <div class="chart-wrap"><canvas id="chart-suc"></canvas></div>
+  </div>
+</div>
+
+<script src="data_ingles.js"></script>
+<script>
+const D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
+  actualizado:'—', mes:'—',
+  kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
+  campanas:[], adsets:[], diario_meta:{},
+  sucursales:{
+    LINDAVISTA:{leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0},
+    IZTACALCO: {leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0},
+    ERMITA:    {leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0}
+  },
+  diario_suc:{}, agenda:[]
+};
+
+// Formatters
+const $m  = n => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',minimumFractionDigits:0}).format(n||0);
+const $n  = n => new Intl.NumberFormat('es-MX').format(Math.round(n)||0);
+const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : '—';
+const pctN= (a,b) => b>0 ? Math.min(100,(a/b)*100) : 0;
+const cplColor = v => !v ? 'var(--dim)' : v<200 ? 'var(--green)' : v<350 ? 'var(--amber)' : 'var(--red)';
+
+// Tabs
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('pane-' + tab.dataset.pane).classList.add('active');
+    if (tab.dataset.pane === 'diario') renderDiario();
+  });
+});
+
+// Animated counter
+function animCount(el, target, isMoney) {
+  const dur = 900, steps = 45;
+  let cur = 0, n = 0;
+  const fmt = v => isMoney ? $m(Math.round(v)) : $n(Math.round(v));
+  const t = setInterval(() => {
+    n++;
+    cur = target * (1 - Math.pow(1 - n/steps, 3));
+    if (n >= steps) { clearInterval(t); cur = target; }
+    el.textContent = fmt(cur);
+  }, dur / steps);
+}
+
+// ── KPIs ──
+function renderKpis() {
+  document.getElementById('updated').textContent = `${D.actualizado} · ${D.mes}`;
+  const k = D.kpis;
+  const cards = [
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, accent:'linear-gradient(90deg,#4f46e5,#818cf8)', color:'var(--p1)',    glow:'rgba(99,102,241,.18)' },
+    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  accent:'linear-gradient(90deg,#0369a1,#22d3ee)', color:'var(--cyan)',   glow:'rgba(34,211,238,.15)' },
+    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  accent:'linear-gradient(90deg,#7c3aed,#a78bfa)', color:'#a78bfa',       glow:'rgba(167,139,250,.15)'},
+    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, accent:'linear-gradient(90deg,#1d4ed8,#60a5fa)', color:'#60a5fa',       glow:'rgba(96,165,250,.15)' },
+    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, accent:'linear-gradient(90deg,#b45309,#fbbf24)', color:'var(--amber)',   glow:'rgba(251,191,36,.15)' },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, accent:'linear-gradient(90deg,#065f46,#34d399)', color:'var(--green)',   glow:'rgba(52,211,153,.18)' },
+  ];
+  document.getElementById('kpis').innerHTML = cards.map((c,i) => `
+    <div class="kpi-card" style="--kc-accent:${c.accent};--kc-color:${c.color};--kc-glow:${c.glow}">
+      <span class="kpi-icon">${c.icon}</span>
+      <div class="kpi-val" id="kv${i}">0</div>
+      <div class="kpi-lbl">${c.lbl}</div>
+    </div>`).join('');
+  cards.forEach((c,i) => animCount(document.getElementById('kv'+i), c.val, c.m));
+}
+
+// ── Funnel ──
+function renderFunnel() {
+  const k = D.kpis;
+  const steps = [
+    {l:'Leads',    v:k.leads_meta, bc:'rgba(99,102,241,.2)',  tc:'var(--p1)',   bi:'rgba(99,102,241,.4)'},
+    {l:'Citas',    v:k.citas,      bc:'rgba(124,58,237,.2)',  tc:'#a78bfa',     bi:'rgba(124,58,237,.4)'},
+    {l:'Visitas',  v:k.visitas,    bc:'rgba(251,191,36,.15)', tc:'var(--amber)', bi:'rgba(251,191,36,.3)'},
+    {l:'Inscritos',v:k.inscritos,  bc:'rgba(52,211,153,.18)', tc:'var(--green)', bi:'rgba(52,211,153,.4)'},
+  ];
+  document.getElementById('funnel').innerHTML = steps.map((s,i) => {
+    const p = i>0 && steps[0].v>0 ? `${((s.v/steps[0].v)*100).toFixed(0)}%` : '';
+    return `<div class="funnel-step">
+      <div class="f-pill" style="background:${s.bc};border-color:${s.bi}">
+        <div class="f-val" style="color:${s.tc}">${$n(s.v)}</div>
+        <div class="f-lbl" style="color:${s.tc}">${s.l}</div>
+        ${p ? `<div class="f-pct">${p}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Sucursal mini ──
+const SUC_COLORS = {LINDAVISTA:'#6366f1', IZTACALCO:'#22d3ee', ERMITA:'#f59e0b'};
+
+function renderSucMini() {
+  const suc = D.sucursales || {};
+  const rows = Object.entries(suc).map(([s,v]) => `<tr>
+    <td><span style="display:flex;align-items:center;gap:8px">
+      <span style="width:8px;height:8px;border-radius:50%;background:${SUC_COLORS[s]||'#888'};box-shadow:0 0 6px ${SUC_COLORS[s]||'#888'};flex-shrink:0"></span>
+      <strong>${s}</strong></span></td>
+    <td class="num" style="color:var(--p1)">${$n(v.leads)}</td>
+    <td class="num" style="color:#a78bfa">${$n(v.citas)}</td>
+    <td class="num" style="color:var(--green)">${$n(v.inscritos)}</td>
+    <td><div class="pbar-wrap">
+      <div class="pbar"><div class="pbar-fill" style="width:${pctN(v.inscritos,v.leads)}%"></div></div>
+      <div class="pbar-val">${pct(v.inscritos,v.leads)}</div>
+    </div></td>
+  </tr>`).join('');
+  document.getElementById('tbl-suc-mini').innerHTML =
+    `<thead><tr><th>Sucursal</th><th>Leads</th><th>Citas</th><th>Inscritos</th><th>Conv. L→I</th></tr></thead>
+     <tbody>${rows || '<tr><td colspan="5" class="empty">Sin datos</td></tr>'}</tbody>`;
+}
+
+// ── Campaign mini ──
+function renderCampMini() {
+  const active = (D.campanas||[]).filter(c=>c.status==='ACTIVE');
+  const rows = active.map(c => `<tr>
+    <td style="max-width:240px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${c.nombre}</span></td>
+    <td class="num" style="color:var(--p1)">${$n(c.leads)}</td>
+    <td class="num" style="color:var(--cyan)">${$m(c.gasto)}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="background:rgba(99,102,241,.12);color:var(--p1);padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700">${$m(c.presupuesto_dia)}/día</span>`:'—'}</td>
+  </tr>`).join('');
+  document.getElementById('tbl-camp-mini').innerHTML =
+    `<thead><tr><th>Campaña</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
+     <tbody>${rows || '<tr><td colspan="5" class="empty">Sin campañas activas — actualiza los datos</td></tr>'}</tbody>`;
+}
+
+// ── Sucursal cards (tab) ──
+function renderSucCards() {
+  const suc = D.sucursales || {};
+  const cols = ['#6366f1','#22d3ee','#f59e0b'];
+  document.getElementById('suc-cards').innerHTML = Object.entries(suc).map(([s,v],i) => `
+    <div class="suc-card">
+      <div class="suc-card-head">
+        <div class="suc-dot" style="background:${cols[i]};box-shadow:0 0 10px ${cols[i]}44"></div>
+        <div class="suc-name">${s}</div>
+      </div>
+      <div class="suc-body">
+        <div class="suc-stat"><div class="suc-stat-val" style="color:${cols[i]}">${$n(v.leads)}</div><div class="suc-stat-lbl">Leads</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:#a78bfa">${$n(v.citas)}</div><div class="suc-stat-lbl">Citas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--amber)">${$n(v.llamadas)}</div><div class="suc-stat-lbl">Llamadas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--green)">${$n(v.inscritos)}</div><div class="suc-stat-lbl">Inscritos</div></div>
+      </div>
+      <div class="suc-foot">
+        <span style="font-size:11px;color:var(--dim)">Lead → Inscrito</span>
+        <span class="conv-rate">${pct(v.inscritos,v.leads)}</span>
+      </div>
+    </div>`).join('');
+}
+
+// ── Full sucursales table ──
+function renderSucursales() {
+  const suc = D.sucursales || {};
+  const cols = ['#6366f1','#22d3ee','#f59e0b'];
+  const rows = Object.entries(suc).map(([s,v],i) => `<tr>
+    <td><span style="display:flex;align-items:center;gap:8px">
+      <span style="width:8px;height:8px;border-radius:50%;background:${cols[i]}"></span>
+      <strong>${s}</strong></span></td>
+    <td class="num" style="color:var(--p1)">${$n(v.leads)}</td>
+    <td class="num">${$n(v.llamadas)}</td>
+    <td class="num">${$n(v.no_contesta)}</td>
+    <td class="num" style="color:#a78bfa">${$n(v.citas)}</td>
+    <td class="num" style="color:var(--amber)">${$n(v.visitas)}</td>
+    <td class="num" style="color:var(--green)">${$n(v.inscritos)}</td>
+    <td><div class="pbar-wrap">
+      <div class="pbar"><div class="pbar-fill" style="width:${pctN(v.citas,v.leads)}%"></div></div>
+      <div class="pbar-val">${pct(v.citas,v.leads)}</div>
+    </div></td>
+    <td style="color:var(--green);font-weight:700">${pct(v.inscritos,v.leads)}</td>
+  </tr>`).join('');
+  const tot = Object.values(suc).reduce((a,v)=>({
+    leads:a.leads+v.leads, llamadas:a.llamadas+v.llamadas,
+    no_contesta:a.no_contesta+v.no_contesta, citas:a.citas+v.citas,
+    visitas:a.visitas+v.visitas, inscritos:a.inscritos+v.inscritos
+  }),{leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0});
+  document.getElementById('tbl-sucursales').innerHTML =
+    `<thead><tr><th>Sucursal</th><th>Leads</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→C</th><th>L→I</th></tr></thead>
+     <tbody>${rows}
+     <tr class="tot">
+       <td>TOTAL</td>
+       <td style="color:var(--p1)">${$n(tot.leads)}</td>
+       <td>${$n(tot.llamadas)}</td>
+       <td>${$n(tot.no_contesta)}</td>
+       <td style="color:#a78bfa">${$n(tot.citas)}</td>
+       <td style="color:var(--amber)">${$n(tot.visitas)}</td>
+       <td style="color:var(--green)">${$n(tot.inscritos)}</td>
+       <td>—</td>
+       <td style="color:var(--green)">${pct(tot.inscritos,tot.leads)}</td>
+     </tr></tbody>`;
+}
+
+// ── Campañas tab ──
+function renderCampanas() {
+  const rows = (D.campanas||[]).map(c => `<tr>
+    <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${c.nombre}</span></td>
+    <td>${c.status==='ACTIVE'?'<span class="badge ba">● ACTIVA</span>':'<span class="badge bp">⏸ PAUSADA</span>'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="color:var(--p1);font-weight:700">${$m(c.presupuesto_dia)}</span>`:'—'}</td>
+    <td class="num" style="color:var(--p1)">${$n(c.leads)}</td>
+    <td class="num" style="color:var(--cyan)">${$m(c.gasto)}</td>
+    <td class="num">${$n(c.impresiones)}</td>
+    <td class="num">${$n(c.alcance)}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
+  </tr>`).join('');
+  document.getElementById('tbl-campanas').innerHTML =
+    `<thead><tr><th>Campaña</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
+     <tbody>${rows || '<tr><td colspan="8" class="empty">Sin datos — corre actualizar_ingles.py</td></tr>'}</tbody>`;
+}
+
+// ── Ad Sets tab ──
+function renderAdsets() {
+  const rows = [...(D.adsets||[])].sort((a,b)=>b.leads-a.leads).map(a => `<tr>
+    <td>${a.nombre}</td>
+    <td>${a.status==='ACTIVE'?'<span class="badge ba">● ACTIVA</span>':'<span class="badge bp">⏸ PAUSADA</span>'}</td>
+    <td>${a.presupuesto_dia>0?`<span style="color:var(--p1);font-weight:700">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
+    <td class="num" style="color:var(--p1)">${$n(a.leads)}</td>
+    <td class="num" style="color:var(--cyan)">${$m(a.gasto)}</td>
+    <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'—'}</td>
+  </tr>`).join('');
+  document.getElementById('tbl-adsets').innerHTML =
+    `<thead><tr><th>Ad Set</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>CPL</th></tr></thead>
+     <tbody>${rows || '<tr><td colspan="6" class="empty">Sin datos</td></tr>'}</tbody>`;
+}
+
+// ── Agenda tab ──
+function renderAgenda() {
+  const filter = document.getElementById('suc-filter').value;
+  const data = (D.agenda||[]).filter(r => !filter || r.sucursal === filter);
+  const rows = data.map(r => `<tr>
+    <td>${r.sucursal?`<span style="background:rgba(99,102,241,.12);color:var(--p1);padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700">${r.sucursal}</span>`:'<span style="color:var(--dim)">—</span>'}</td>
+    <td><strong>${r.nombre}</strong></td>
+    <td style="color:var(--muted)">${r.tel}</td>
+    <td style="color:var(--dim);font-size:12px">${r.fecha_cita}</td>
+    <td>${r.asistio?'<span class="badge bsi">✓ SÍ</span>':'<span class="badge bno">✗ NO</span>'}</td>
+    <td>${r.inscrito?'<span class="badge bsi">✓ SÍ</span>':'<span class="badge bno">✗ NO</span>'}</td>
+    <td style="color:var(--dim);font-size:11px;max-width:200px">${r.obs||''}</td>
+  </tr>`).join('');
+  document.getElementById('tbl-agenda').innerHTML =
+    `<thead><tr><th>Sucursal</th><th>Nombre</th><th>Tel</th><th>Fecha Cita</th><th>Asistió</th><th>Inscrito</th><th>Observaciones</th></tr></thead>
+     <tbody>${rows || '<tr><td colspan="7" class="empty">Sin prospectos</td></tr>'}</tbody>`;
+}
+
+// ── Diario charts ──
+let chartMeta = null, chartSuc = null;
+function renderDiario() {
+  const dm = D.diario_meta || {};
+  const ds = D.diario_suc  || {};
+  const SUC_C = {
+    LINDAVISTA: ['#6366f1','rgba(99,102,241,.15)'],
+    IZTACALCO:  ['#22d3ee','rgba(34,211,238,.15)'],
+    ERMITA:     ['#f59e0b','rgba(251,191,36,.15)'],
+  };
+  const fechas = [...new Set([...Object.keys(dm),...Object.keys(ds)])].sort();
+  const lbl    = fechas.map(f => f.slice(5));
+  const leads  = fechas.map(f => (dm[f]||{}).leads||0);
+  const gasto  = fechas.map(f => (dm[f]||{}).gasto||0);
+  const GC = '#1a2543', TC = '#475569';
+  const fontOpt = { size:10, family:'Inter' };
+
+  if (chartMeta) chartMeta.destroy();
+  chartMeta = new Chart(document.getElementById('chart-meta'), {
+    data: { labels: lbl, datasets: [
+      { type:'bar',  label:'Leads', data:leads,
+        backgroundColor:'rgba(99,102,241,.35)', borderColor:'#6366f1',
+        borderWidth:1.5, borderRadius:5, yAxisID:'yL' },
+      { type:'line', label:'Gasto ($)', data:gasto,
+        borderColor:'#fbbf24', borderWidth:2,
+        pointRadius:3, pointBackgroundColor:'#fbbf24',
+        tension:.4, yAxisID:'yG', fill:false },
+    ]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{labels:{color:TC,font:fontOpt}}, tooltip:{mode:'index',intersect:false} },
+      scales:{
+        x:{ ticks:{color:TC,font:fontOpt}, grid:{color:GC} },
+        yL:{ position:'left',  ticks:{color:'#6366f1',font:fontOpt}, grid:{color:GC} },
+        yG:{ position:'right', ticks:{color:'#fbbf24',font:fontOpt,callback:v=>`$${v}`}, grid:{display:false} },
+      }
+    }
+  });
+
+  const sucDatasets = Object.entries(SUC_C).map(([s,[border,bg]]) => ({
+    label: s,
+    data: fechas.map(f => (ds[f]||{})[s]?.leads||0),
+    borderColor: border, backgroundColor: bg,
+    fill:true, tension:.4, borderWidth:2, pointRadius:2,
+  }));
+  if (chartSuc) chartSuc.destroy();
+  chartSuc = new Chart(document.getElementById('chart-suc'), {
+    type:'line',
+    data: { labels: lbl, datasets: sucDatasets },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{labels:{color:TC,font:fontOpt}}, tooltip:{mode:'index',intersect:false} },
+      scales:{
+        x:{ ticks:{color:TC,font:fontOpt}, grid:{color:GC} },
+        y:{ ticks:{color:TC,font:fontOpt}, grid:{color:GC} },
+      }
+    }
+  });
+}
+
+// Init
+renderKpis();
+renderFunnel();
+renderSucMini();
+renderCampMini();
+renderSucCards();
+renderSucursales();
+renderCampanas();
+renderAdsets();
+renderAgenda();
+</script>
+</body>
+</html>

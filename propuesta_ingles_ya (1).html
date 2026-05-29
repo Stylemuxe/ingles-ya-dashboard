@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta Digital — Inglés YA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #E02020;
+    --blue: #1B3FA0;
+    --dark: #0D0D0D;
+    --off: #F5F4F0;
+    --gray: #8A8A8A;
+    --light-gray: #E8E8E4;
+    --white: #FFFFFF;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--off);
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(224,32,32,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(27,63,160,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+  }
+
+  .nav-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    border: 1px solid rgba(224,32,32,0.3);
+    padding: 6px 14px;
+    border-radius: 2px;
+    width: fit-content;
+  }
+
+  .hero-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-title .line-red { color: var(--red); }
+  .hero-title .line-blue { color: var(--blue); }
+  .hero-title .line-off { color: var(--off); }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--gray);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+
+  .hero-sub strong { color: var(--off); font-weight: 500; }
+
+  .hero-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-prepared {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .hero-prepared strong { color: var(--off); font-weight: 500; display: block; font-size: 1rem; }
+
+  .scroll-hint {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray);
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .scroll-hint::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gray);
+    animation: line-grow 2s ease infinite;
+  }
+
+  @keyframes line-grow {
+    0%, 100% { width: 40px; opacity: 0.5; }
+    50% { width: 60px; opacity: 1; }
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: var(--gray);
+  }
+
+  /* ABOUT */
+  .about { background: var(--off); color: var(--dark); }
+  .about .section-label { color: #888; }
+  .about .section-label::before { background: #888; }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    color: var(--dark);
+  }
+
+  .about-title span { color: var(--red); }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--dark);
+  }
+
+  .skill-item::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--light-gray);
+  }
+
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--red);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.8rem; color: #888; margin-top: 4px; }
+
+  /* DIAGNÓSTICO */
+  .diagnostico { background: var(--dark); }
+
+  .diag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
+    background: #1a1a1a;
+    border: 1.5px solid #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .diag-item {
+    background: var(--dark);
+    padding: 2rem;
+    transition: background 0.3s;
+  }
+
+  .diag-item:hover { background: #111; }
+
+  .diag-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .diag-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    color: var(--off);
+    margin-bottom: 0.5rem;
+  }
+
+  .diag-text {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  .diag-status {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  .status-opp { background: rgba(224,32,32,0.15); color: var(--red); }
+  .status-ok { background: rgba(27,63,160,0.2); color: #6B8CFF; }
+
+  /* PAQUETES */
+  .paquetes { background: #0a0a0a; }
+
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pkg-card {
+    border: 1px solid #222;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+  }
+
+  .pkg-card:hover { transform: translateY(-4px); border-color: #333; }
+
+  .pkg-card.recommended {
+    border-color: var(--red);
+  }
+
+  .pkg-card.recommended::before {
+    content: 'RECOMENDADO';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background: var(--red);
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    padding: 5px;
+    color: white;
+  }
+
+  .pkg-head {
+    padding: 2rem 1.75rem 1.5rem;
+    background: #111;
+  }
+
+  .pkg-card.recommended .pkg-head { padding-top: 2.5rem; }
+
+  .pkg-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .pkg-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    color: var(--off);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .pkg-price-main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--off);
+    line-height: 1;
+  }
+
+  .pkg-price-main .currency { font-size: 1.4rem; color: var(--gray); }
+  .pkg-price-main .period { font-size: 1rem; color: var(--gray); font-family: 'DM Sans', sans-serif; font-weight: 300; }
+
+  .pkg-price-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    margin-top: 4px;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .pkg-body { padding: 1.75rem; }
+
+  .pkg-section-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  .pkg-section-title:first-child { margin-top: 0; }
+
+  .pkg-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+  }
+
+  .pkg-item .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .dot-red { background: var(--red); }
+  .dot-blue { background: #6B8CFF; }
+  .dot-amber { background: #F5A623; }
+
+  .pkg-platforms {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #1e1e1e;
+  }
+
+  .platform-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    color: var(--gray);
+  }
+
+  /* SITIO WEB */
+  .sitio-web {
+    background: var(--dark);
+    border-top: 1px solid #1a1a1a;
+  }
+
+  .unlock-banner {
+    background: linear-gradient(135deg, rgba(224,32,32,0.08), rgba(27,63,160,0.08));
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .unlock-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--off);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .unlock-title span { color: var(--red); }
+
+  .unlock-text {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 500px;
+  }
+
+  .unlock-price {
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .unlock-price-main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--off);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .unlock-price-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gray);
+    margin-top: 4px;
+  }
+
+  .web-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .web-feature {
+    padding: 1.5rem;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+  }
+
+  .web-feature-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+
+  .web-feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: var(--off);
+    margin-bottom: 0.5rem;
+  }
+
+  .web-feature-text {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* PROCESO */
+  .proceso { background: var(--off); color: var(--dark); }
+  .proceso .section-label { color: #888; }
+  .proceso .section-label::before { background: #888; }
+
+  .proceso-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--dark);
+    margin-bottom: 3rem;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    position: relative;
+  }
+
+  .step {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid var(--light-gray);
+    position: relative;
+  }
+
+  .step:last-child { border-right: none; }
+
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--light-gray);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-text {
+    font-size: 0.82rem;
+    color: #777;
+    line-height: 1.6;
+  }
+
+  /* REPORTES */
+  .reportes { background: var(--dark); }
+
+  .reportes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .reportes-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .reportes-title span { color: var(--blue); }
+
+  .reportes-text {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .report-items { display: flex; flex-direction: column; gap: 1rem; }
+
+  .report-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+  }
+
+  .report-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+  .report-item-title {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--off);
+    margin-bottom: 4px;
+  }
+
+  .report-item-text {
+    font-size: 0.8rem;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  .dashboard-preview {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-family: 'DM Mono', monospace;
+  }
+
+  .dash-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .dash-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dd-red { background: #FF5F57; }
+  .dd-yellow { background: #FFBD2E; }
+  .dd-green { background: #28CA41; }
+
+  .dash-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .dash-metric {
+    background: #0d0d0d;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .dash-metric-val {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--off);
+  }
+
+  .dash-metric-val.red { color: var(--red); }
+  .dash-metric-val.blue { color: #6B8CFF; }
+  .dash-metric-val.green { color: #28CA41; }
+
+  .dash-metric-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  .dash-chart {
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    padding: 0 4px;
+  }
+
+  .dash-bar-item {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .dash-bar-item:hover { opacity: 1; }
+
+  /* CTA / CIERRE */
+  .cierre {
+    background: var(--off);
+    color: var(--dark);
+    text-align: center;
+    padding: 8rem 3rem;
+  }
+
+  .cierre-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  .cierre-title .red { color: var(--red); }
+  .cierre-title .blue { color: var(--blue); }
+
+  .cierre-text {
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.9rem 2.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: white;
+  }
+
+  .btn-primary:hover { background: #c01818; transform: translateY(-2px); }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--dark);
+    border: 1.5px solid var(--dark);
+  }
+
+  .btn-secondary:hover { background: var(--dark); color: var(--off); }
+
+  .firma {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .firma-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    color: var(--dark);
+  }
+
+  .firma-title {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
+  }
+
+  .firma-contact {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.7;
+  }
+
+  .firma-contact a { color: var(--blue); text-decoration: none; }
+
+  /* ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero { padding: 1.5rem; min-height: 100svh; }
+    section { padding: 3.5rem 1.25rem; }
+
+    .nav { flex-direction: column; align-items: flex-start; gap: 4px; }
+    .nav-date { font-size: 0.65rem; }
+
+    .hero-title { font-size: clamp(3.2rem, 18vw, 5rem); }
+    .hero-sub { font-size: 0.95rem; }
+    .hero-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .stats-row { grid-template-columns: repeat(3,1fr); gap: 0.75rem; }
+    .stat-num { font-size: 2rem; }
+    .skills-grid { grid-template-columns: 1fr; gap: 0.75rem; }
+
+    .diag-grid { grid-template-columns: 1fr; gap: 1.5px; }
+
+    .pkg-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pkg-price-main { font-size: 2rem; }
+
+    .unlock-banner { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.5rem; }
+    .unlock-price { text-align: left; }
+    .unlock-price-main { font-size: 2.5rem; }
+    .web-features { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .steps { grid-template-columns: 1fr 1fr; gap: 0; }
+    .step { border-right: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray); padding: 1.25rem 1rem; }
+    .step:nth-child(even) { border-right: none; }
+    .step-num { font-size: 2.5rem; }
+
+    .reportes-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .dash-metrics { grid-template-columns: repeat(3,1fr); }
+    .dash-metric-val { font-size: 1rem; }
+
+    .cierre { padding: 5rem 1.25rem; }
+    .cierre-title { font-size: clamp(2.8rem, 15vw, 4.5rem); }
+    .cta-group { flex-direction: column; align-items: stretch; }
+    .btn { text-align: center; padding: 1rem 1.5rem; }
+
+    .firma { flex-direction: column; gap: 1rem; }
+    .firma-contact { text-align: left; }
+
+    .about-title { font-size: clamp(2rem, 10vw, 3rem); }
+    .unlock-title { font-size: clamp(1.5rem, 8vw, 2.2rem); }
+    .proceso-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+    .reportes-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+
+    .section-label { font-size: 0.65rem; margin-bottom: 2rem; }
+    .hero-tag { font-size: 0.65rem; }
+    .pkg-name { font-size: 1.6rem; }
+  }
+
+  @media (max-width: 400px) {
+    .web-features { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .step { border-right: none; }
+    .stats-row { grid-template-columns: repeat(3,1fr); gap: 0.5rem; }
+    .stat-num { font-size: 1.6rem; }
+    .stat-label { font-size: 0.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <nav class="nav">
+    <div class="nav-logo">Irving Fabián Sánchez · Estrategia Digital</div>
+    <div class="nav-date">Mayo 2026</div>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-tag">Propuesta de servicios digitales</div>
+    <h1 class="hero-title">
+      <span class="line-off">ESTRATEGIA</span><br>
+      <span class="line-red">DIGITAL</span><br>
+      <span class="line-blue">INGLÉS YA</span>
+    </h1>
+    <p class="hero-sub">
+      Una propuesta diseñada para llevar a <strong>Inglés YA.mx</strong> al siguiente nivel — más alumnos, más presencia y resultados medibles cada mes.
+    </p>
+  </div>
+
+  <div class="hero-bottom">
+    <div class="hero-prepared">
+      <strong>Irving Fabián Sánchez</strong>
+      Tráficker Digital · Estratega de Contenido
+    </div>
+    <div class="scroll-hint">SCROLL</div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="about">
+  <div class="section-label">Quién soy</div>
+  <div class="about-grid">
+    <div>
+      <h2 class="about-title">Soy el<br><span>especialista</span><br>que necesitas</h2>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Años en paid media</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">20+</div>
+          <div class="stat-label">Cuentas gestionadas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">$1M+</div>
+          <div class="stat-label">MXN en pauta administrada</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="about-text">
+        Soy <strong>Irving Fabián Sánchez</strong>, especialista en marketing digital con más de 3 años gestionando campañas de pago en Meta Ads y Google Ads para empresas en México.
+      </p>
+      <p class="about-text">
+        Mi enfoque va más allá de publicar anuncios — trabajo con <strong>datos reales, optimización constante y contenido de calidad</strong> para que cada peso invertido genere resultados concretos: más leads, más alumnos, más ingresos.
+      </p>
+      <p class="about-text">
+        Combino la gestión de tráfico pago con producción de contenido, community management y reportes ejecutivos en tiempo real. <strong>Un solo proveedor, todo resuelto.</strong>
+      </p>
+      <div class="skills-grid">
+        <div class="skill-item">Meta Ads (Facebook & Instagram)</div>
+        <div class="skill-item">Producción de video y reels</div>
+        <div class="skill-item">Google Ads (Search & Display)</div>
+        <div class="skill-item">Fotografía y edición</div>
+        <div class="skill-item">Estrategia de contenido</div>
+        <div class="skill-item">Diseño de creativos</div>
+        <div class="skill-item">SEO on-page</div>
+        <div class="skill-item">Dashboards en tiempo real</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO -->
+<section class="diagnostico">
+  <div class="section-label">Diagnóstico inicial</div>
+  <div style="margin-bottom: 2.5rem;">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:0.03em;margin-bottom:0.5rem;">Lo que veo en Inglés YA hoy</h2>
+    <p style="color:var(--gray);font-size:0.95rem;max-width:550px;line-height:1.7;">Un negocio con potencial real que aún no está aprovechando todos los canales digitales a su favor.</p>
+  </div>
+  <div class="diag-grid">
+    <div class="diag-item fade-in">
+      <div class="diag-icon">📣</div>
+      <div class="diag-title">Campañas activas en Meta</div>
+      <div class="diag-text">Ya existe inversión en Facebook e Instagram. La oportunidad está en optimizar el CPL y escalar lo que funciona.</div>
+      <div class="diag-status status-ok">EN OPERACIÓN</div>
+    </div>
+    <div class="diag-item fade-in">
+      <div class="diag-icon">🎬</div>
+      <div class="diag-title">Contenido orgánico</div>
+      <div class="diag-text">Presencia en redes pero sin una estrategia de contenido consistente que genere comunidad y confianza.</div>
+      <div class="diag-status status-opp">OPORTUNIDAD</div>
+    </div>
+    <div class="diag-item fade-in">
+      <div class="diag-icon">🌐</div>
+      <div class="diag-title">Sitio web</div>
+      <div class="diag-text">Sin sitio web activo no es posible aprovechar Google Ads ni el tráfico de búsqueda intencional — alumnos que ya buscan cursos de inglés.</div>
+      <div class="diag-status status-opp">OPORTUNIDAD CRÍTICA</div>
+    </div>
+    <div class="diag-item fade-in">
+      <div class="diag-icon">📊</div>
+      <div class="diag-title">Métricas y reportes</div>
+      <div class="diag-text">Sin un sistema de reporte claro, es difícil saber qué está funcionando y tomar decisiones con datos.</div>
+      <div class="diag-status status-opp">OPORTUNIDAD</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAQUETES -->
+<section class="paquetes">
+  <div class="section-label">Servicios y paquetes</div>
+  <div style="margin-bottom: 3rem;">
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:0.03em;margin-bottom:0.5rem;">Elige tu punto de entrada</h2>
+    <p style="color:var(--gray);font-size:0.95rem;max-width:550px;line-height:1.7;">Tres paquetes diseñados para crecer contigo. El presupuesto de pauta publicitaria siempre va aparte — tú controlas cuánto inviertes en anuncios.</p>
+  </div>
+
+  <div class="pkg-grid">
+
+    <!-- PKG 1 -->
+    <div class="pkg-card fade-in">
+      <div class="pkg-head">
+        <div class="pkg-num">PAQUETE 01</div>
+        <div class="pkg-name">Solo<br>Tráfico</div>
+        <div class="pkg-price-main"><span class="currency">$</span>7,000 <span class="period">– $8,500/mes</span></div>
+        <div class="pkg-price-note">+ IVA · Pauta aparte</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-section-title">Meta Ads</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Estructura y configuración de campañas</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Optimización de CPL semanal</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Control y escalación de presupuesto</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Pruebas A/B de creativos</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Segmentación y audiencias personalizadas</div>
+        <div class="pkg-section-title">Reportes</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Dashboard en tiempo real (acceso 24/7)</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Resumen quincenal por WhatsApp</div>
+        <div class="pkg-item"><span class="dot dot-red"></span>Reporte ejecutivo mensual en PDF</div>
+        <div class="pkg-platforms">
+          <span class="platform-tag">FACEBOOK</span>
+          <span class="platform-tag">INSTAGRAM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PKG 2 -->
+    <div class="pkg-card recommended fade-in">
+      <div class="pkg-head">
+        <div class="pkg-num">PAQUETE 02</div>
+        <div class="pkg-name">Tráfico +<br>Contenido</div>
+        <div class="pkg-price-main"><span class="currency">$</span>12,000 <span class="period">– $15,000/mes</span></div>
+        <div class="pkg-price-note">+ IVA · Pauta aparte</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-section-title">Todo el Paquete 1 +</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Parrilla de contenido mensual</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>6 publicaciones estáticas / carruseles</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>3 reels o videos cortos al mes</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Fotografía y edición de imagen</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Diseño de creativos para anuncios</div>
+        <div class="pkg-section-title">Publicación en 3 plataformas</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Calendarización y programación</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Copy optimizado + hashtags</div>
+        <div class="pkg-item"><span class="dot dot-blue"></span>Sin manejo de mensajes (contact center)</div>
+        <div class="pkg-platforms">
+          <span class="platform-tag">FACEBOOK</span>
+          <span class="platform-tag">INSTAGRAM</span>
+          <span class="platform-tag">TIKTOK</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PKG 3 -->
+    <div class="pkg-card fade-in" style="opacity:0.6;">
+      <div class="pkg-head">
+        <div class="pkg-num">PAQUETE 03 · 🔒 REQUIERE SITIO WEB</div>
+        <div class="pkg-name">Agencia<br>Completa</div>
+        <div class="pkg-price-main"><span class="currency">$</span>20,000 <span class="period">– $25,000/mes</span></div>
+        <div class="pkg-price-note">+ IVA · Pauta aparte · Se desbloquea con sitio web</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-section-title">Todo el Paquete 2 +</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Google Ads Search (palabras clave)</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Google Display (banners)</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Estrategia digital integral</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Reporte multi-plataforma Meta + Google</div>
+        <div class="pkg-section-title">Atención Premium</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Reunión mensual de estrategia</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Propuesta trimestral de crecimiento</div>
+        <div class="pkg-item"><span class="dot dot-amber"></span>Soporte prioritario WhatsApp</div>
+        <div class="pkg-platforms">
+          <span class="platform-tag">FACEBOOK</span>
+          <span class="platform-tag">INSTAGRAM</span>
+          <span class="platform-tag">TIKTOK</span>
+          <span class="platform-tag">GOOGLE</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SITIO WEB -->
+<section class="sitio-web">
+  <div class="section-label">Proyecto previo — Sitio web</div>
+  <div class="unlock-banner fade-in">
+    <div>
+      <h2 class="unlock-title">El sitio web que<br><span>desbloquea</span> todo</h2>
+      <p class="unlock-text">Inglés YA hoy no tiene sitio web. Eso significa que miles de personas que buscan cursos de inglés en Google no los pueden encontrar. Un sitio bien construido con landing pages optimizadas es la base de una estrategia digital completa — y es el paso previo necesario para activar Google Ads.</p>
+    </div>
+    <div class="unlock-price">
+      <div style="font-family:'DM Mono',monospace;font-size:0.7rem;color:var(--gray);letter-spacing:0.1em;margin-bottom:8px;">INVERSIÓN DE SETUP</div>
+      <div class="unlock-price-main">$25K – $35K</div>
+      <div class="unlock-price-sub">MXN pago único</div>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid #222;">
+        <div class="unlock-price-main" style="font-size:2rem;">$3,000</div>
+        <div class="unlock-price-sub">MXN/mes mantenimiento</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="web-features">
+    <div class="web-feature fade-in">
+      <div class="web-feature-icon">🎨</div>
+      <div class="web-feature-title">Diseño y desarrollo</div>
+      <div class="web-feature-text">Sitio completo con identidad visual de Inglés YA, responsive y optimizado para conversión.</div>
+    </div>
+    <div class="web-feature fade-in">
+      <div class="web-feature-icon">📍</div>
+      <div class="web-feature-title">Landing pages</div>
+      <div class="web-feature-text">Páginas específicas para cada campaña de Meta y Google, diseñadas para convertir visitas en leads.</div>
+    </div>
+    <div class="web-feature fade-in">
+      <div class="web-feature-icon">🔍</div>
+      <div class="web-feature-title">SEO on-page</div>
+      <div class="web-feature-text">Estructura optimizada para que Google posicione el sitio en búsquedas relevantes de cursos de inglés.</div>
+    </div>
+    <div class="web-feature fade-in">
+      <div class="web-feature-icon">📊</div>
+      <div class="web-feature-title">Integración completa</div>
+      <div class="web-feature-text">Meta Pixel, Google Analytics 4 y Search Console instalados y verificados desde el día uno.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="proceso">
+  <div class="section-label">Cómo trabajamos</div>
+  <h2 class="proceso-title">El proceso mes a mes</h2>
+  <div class="steps">
+    <div class="step fade-in">
+      <div class="step-num">01</div>
+      <div class="step-title">Onboarding</div>
+      <div class="step-text">Accesos, briefing de marca, definición de audiencias objetivo y calendario de contenido del primer mes.</div>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">02</div>
+      <div class="step-title">Lanzamiento</div>
+      <div class="step-text">Configuración de campañas, primera parrilla de contenido y publicación en todas las plataformas activas.</div>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">03</div>
+      <div class="step-title">Optimización</div>
+      <div class="step-text">Revisión semanal de métricas, ajuste de presupuestos y renovación de creativos con señales de fatiga.</div>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">04</div>
+      <div class="step-title">Reporte</div>
+      <div class="step-text">Resumen quincenal por WhatsApp + reporte ejecutivo mensual en PDF con resultados y propuesta del siguiente mes.</div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORTES -->
+<section class="reportes">
+  <div class="section-label">Transparencia total</div>
+  <div class="reportes-grid">
+    <div>
+      <h2 class="reportes-title">Sabrás exactamente<br><span>qué pasa</span><br>con tu inversión</h2>
+      <p class="reportes-text">Olvídate de esperar el fin de mes para saber si las campañas van bien. Con acceso a tu dashboard en tiempo real puedes ver los resultados cuando quieras, desde cualquier dispositivo.</p>
+      <div class="report-items">
+        <div class="report-item">
+          <div class="report-icon">📱</div>
+          <div>
+            <div class="report-item-title">Dashboard en tiempo real</div>
+            <div class="report-item-text">Acceso 24/7 a métricas clave: leads, CPL, inversión, alcance e impresiones.</div>
+          </div>
+        </div>
+        <div class="report-item">
+          <div class="report-icon">💬</div>
+          <div>
+            <div class="report-item-title">Resumen quincenal por WhatsApp</div>
+            <div class="report-item-text">Un mensaje directo cada 15 días con lo más importante y las acciones tomadas.</div>
+          </div>
+        </div>
+        <div class="report-item">
+          <div class="report-icon">📄</div>
+          <div>
+            <div class="report-item-title">Reporte ejecutivo mensual</div>
+            <div class="report-item-text">PDF profesional con resultados, análisis y propuesta de estrategia para el mes siguiente.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="dashboard-preview">
+        <div class="dash-bar">
+          <div class="dash-dot dd-red"></div>
+          <div class="dash-dot dd-yellow"></div>
+          <div class="dash-dot dd-green"></div>
+          <span style="font-size:0.65rem;color:var(--gray);margin-left:8px;">Dashboard · Inglés YA</span>
+        </div>
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <div class="dash-metric-val green">127</div>
+            <div class="dash-metric-label">Leads</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val red">$38</div>
+            <div class="dash-metric-label">CPL</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val blue">$4,826</div>
+            <div class="dash-metric-label">Invertido</div>
+          </div>
+        </div>
+        <div class="dash-chart">
+          <div class="dash-bar-item" style="height:40%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:55%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:35%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:70%;background:var(--red)"></div>
+          <div class="dash-bar-item" style="height:60%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:80%;background:var(--red)"></div>
+          <div class="dash-bar-item" style="height:65%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:90%;background:var(--red)"></div>
+          <div class="dash-bar-item" style="height:75%;background:var(--blue)"></div>
+          <div class="dash-bar-item" style="height:85%;background:var(--red)"></div>
+          <div class="dash-bar-item" style="height:95%;background:var(--red)"></div>
+          <div class="dash-bar-item" style="height:100%;background:var(--red)"></div>
+        </div>
+        <div style="font-size:0.6rem;color:var(--gray);margin-top:0.5rem;text-align:center">Leads por semana — Mayo 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="cierre">
+  <h2 class="cierre-title">
+    LISTO<br>
+    PARA<br>
+    <span class="red">EMPEZAR</span><br>
+    <span class="blue">¿Y TÚ?</span>
+  </h2>
+  <p class="cierre-text">El momento ideal para arrancar fue hace seis meses. El segundo mejor momento es hoy. Conversemos y definimos juntos cuál paquete se adapta mejor a lo que necesitas.</p>
+  <div class="cta-group">
+    <a href="https://wa.me/521XXXXXXXXXX" class="btn btn-primary">Agendar llamada por WhatsApp</a>
+    <a href="mailto:irving@email.com" class="btn btn-secondary">Escribir por correo</a>
+  </div>
+
+  <div class="firma">
+    <div>
+      <div class="firma-name">Irving Fabián Sánchez</div>
+      <div class="firma-title">Tráficker Digital · Estratega de Contenido · Ciudad de México</div>
+    </div>
+    <div class="firma-contact">
+      <div>Mayo 2026</div>
+      <div>Propuesta preparada exclusivamente para <a href="#">Inglés YA.mx</a></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer para animaciones
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
