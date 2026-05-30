@@ -15,7 +15,11 @@ API_BASE   = 'https://graph.facebook.com/v19.0'
 SHEET_SEG_ID  = '1mlIqrmxvEou-occ3Osv7DJv_O_jvU0c-'
 SHEET_SEG_GID = '1913702244'
 SHEET_AGE_ID  = '1MtKus1GkNxZGriSN2Ku5kNNaaROK6hoL'
-SHEET_AGE_GID = '60143132'
+SHEET_AGE_GIDS = {
+    'LINDAVISTA': '60143132',
+    'IZTACALCO':  '1436665808',
+    'ERMITA':     '801240161',
+}
 
 HOY        = date.today()
 MES_ACTUAL = HOY.strftime('%Y-%m')
@@ -172,13 +176,11 @@ def parse_seguimiento(text):
     return totales, diario
 
 # ─── AGENDA ──────────────────────────────────────────────────────────────────
-SUC_MAP = {'LIN': 'LINDAVISTA', 'IZT': 'IZTACALCO', 'ERM': 'ERMITA'}
 SKIP_KW = ('HOJA AGENDA', 'SUCURSAL:', 'FECHA:')
 
-def parse_agenda(text):
-    rows       = list(csv.reader(io.StringIO(text)))
-    agenda     = []
-    suc_actual = None
+def parse_agenda(text, sucursal):
+    rows   = list(csv.reader(io.StringIO(text)))
+    agenda = []
 
     for row in rows:
         if not any(c.strip() for c in row):
@@ -187,12 +189,7 @@ def parse_agenda(text):
         col0      = row[0].strip()
         full_text = ' '.join(row).upper()
 
-        # Marcador de sucursal (LIN / IZT / ERM)
-        if col0.upper()[:3] in SUC_MAP:
-            suc_actual = SUC_MAP[col0.upper()[:3]]
-            continue
-
-        # Saltar encabezados y separadores de fecha
+        # Saltar encabezados y separadores
         if any(kw in full_text for kw in SKIP_KW):
             continue
         if col0.upper() in ('NOMBRE', 'TEL', 'CORREO', 'CORREO ELECTRÓNICO'):
@@ -216,7 +213,7 @@ def parse_agenda(text):
 
         if nombre and (tel or fecha):
             agenda.append({
-                'sucursal':   suc_actual or '',
+                'sucursal':   sucursal,
                 'nombre':     nombre,
                 'tel':        tel,
                 'fecha_cita': fecha,
@@ -258,13 +255,17 @@ def main():
                        for s in SUCURSALES}
         diario_suc = {}
 
-    print('[5] Google Sheets — agenda...')
-    csv_age = fetch_csv_sheet(SHEET_AGE_ID, SHEET_AGE_GID)
-    if csv_age:
-        agenda = parse_agenda(csv_age)
-        print(f'    {len(agenda)} prospectos en agenda')
-    else:
-        agenda = []
+    print('[5] Google Sheets — agenda (3 sucursales)...')
+    agenda = []
+    for suc, gid in SHEET_AGE_GIDS.items():
+        csv_age = fetch_csv_sheet(SHEET_AGE_ID, gid)
+        if csv_age:
+            prospectos = parse_agenda(csv_age, suc)
+            agenda.extend(prospectos)
+            print(f'    {suc}: {len(prospectos)} prospectos')
+        else:
+            print(f'    {suc}: sin datos')
+    print(f'    Total: {len(agenda)} prospectos')
 
     # KPIs globales
     total_leads   = sum(c['leads']   for c in campanas)
