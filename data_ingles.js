@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "30/05/2026 00:10",
-  "mes": "May 2026",
+  "actualizado": "01/06/2026 06:26",
+  "mes": "June 2026",
   "kpis": {
-    "leads_meta": 648,
-    "gasto": 31591.89,
-    "cpl": 48.75,
-    "citas": 206,
+    "leads_meta": 619,
+    "gasto": 31753.85,
+    "cpl": 51.3,
+    "citas": 0,
     "visitas": 0,
-    "inscritos": 39
+    "inscritos": 0
   },
   "campanas": [
     {
@@ -15,11 +15,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 20375.43,
-      "impresiones": 197147,
-      "alcance": 103401,
-      "leads": 460,
-      "cpl": 44.29
+      "gasto": 20538.06,
+      "impresiones": 192933,
+      "alcance": 102712,
+      "leads": 444,
+      "cpl": 46.26
     },
     {
       "id": "6917541255358",
@@ -59,11 +59,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 11216.46,
-      "impresiones": 148858,
-      "alcance": 83412,
-      "leads": 188,
-      "cpl": 59.66
+      "gasto": 11215.79,
+      "impresiones": 150481,
+      "alcance": 84705,
+      "leads": 175,
+      "cpl": 64.09
     },
     {
       "id": "6909460120758",
@@ -105,9 +105,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 20375.43,
-      "leads": 460,
-      "cpl": 44.29
+      "gasto": 20538.06,
+      "leads": 444,
+      "cpl": 46.26
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -168,9 +168,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 11216.46,
-      "leads": 188,
-      "cpl": 59.66
+      "gasto": 11215.79,
+      "leads": 175,
+      "cpl": 64.09
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -236,842 +236,34 @@ const DATA_INGLES = {
       "cpl": 0
     }
   ],
-  "diario_meta": {
-    "2026-05-01": {
-      "leads": 17,
-      "gasto": 930.21
-    },
-    "2026-05-02": {
-      "leads": 20,
-      "gasto": 768.41
-    },
-    "2026-05-03": {
-      "leads": 31,
-      "gasto": 1090.29
-    },
-    "2026-05-04": {
-      "leads": 35,
-      "gasto": 1424.65
-    },
-    "2026-05-05": {
-      "leads": 33,
-      "gasto": 1384.79
-    },
-    "2026-05-06": {
-      "leads": 14,
-      "gasto": 904.27
-    },
-    "2026-05-07": {
-      "leads": 22,
-      "gasto": 822.59
-    },
-    "2026-05-08": {
-      "leads": 21,
-      "gasto": 992.87
-    },
-    "2026-05-09": {
-      "leads": 13,
-      "gasto": 880.57
-    },
-    "2026-05-10": {
-      "leads": 24,
-      "gasto": 1175.51
-    },
-    "2026-05-11": {
-      "leads": 20,
-      "gasto": 1068.74
-    },
-    "2026-05-12": {
-      "leads": 26,
-      "gasto": 1381.7
-    },
-    "2026-05-13": {
-      "leads": 25,
-      "gasto": 1137.85
-    },
-    "2026-05-14": {
-      "leads": 9,
-      "gasto": 841.97
-    },
-    "2026-05-15": {
-      "leads": 19,
-      "gasto": 1017.1
-    },
-    "2026-05-16": {
-      "leads": 14,
-      "gasto": 886.38
-    },
-    "2026-05-17": {
-      "leads": 6,
-      "gasto": 548.5
-    },
-    "2026-05-18": {
-      "leads": 24,
-      "gasto": 1307.92
-    },
-    "2026-05-19": {
-      "leads": 34,
-      "gasto": 1564.57
-    },
-    "2026-05-20": {
-      "leads": 33,
-      "gasto": 1278.29
-    },
-    "2026-05-21": {
-      "leads": 18,
-      "gasto": 942.8
-    },
-    "2026-05-22": {
-      "leads": 13,
-      "gasto": 806.76
-    },
-    "2026-05-23": {
-      "leads": 19,
-      "gasto": 1072.8
-    },
-    "2026-05-24": {
-      "leads": 13,
-      "gasto": 1000.89
-    },
-    "2026-05-25": {
-      "leads": 11,
-      "gasto": 1122.16
-    },
-    "2026-05-26": {
-      "leads": 24,
-      "gasto": 1504.66
-    },
-    "2026-05-27": {
-      "leads": 34,
-      "gasto": 1229.0
-    },
-    "2026-05-28": {
-      "leads": 9,
-      "gasto": 680.43
-    },
-    "2026-05-29": {
-      "leads": 8,
-      "gasto": 619.02
-    }
-  },
+  "diario_meta": {},
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 169,
-      "llamadas": 101,
+      "leads": 0,
+      "llamadas": 0,
       "no_contesta": 0,
-      "citas": 70,
+      "citas": 0,
       "visitas": 0,
-      "inscritos": 17
+      "inscritos": 0
     },
     "IZTACALCO": {
-      "leads": 175,
-      "llamadas": 101,
+      "leads": 0,
+      "llamadas": 0,
       "no_contesta": 0,
-      "citas": 73,
+      "citas": 0,
       "visitas": 0,
-      "inscritos": 10
+      "inscritos": 0
     },
     "ERMITA": {
-      "leads": 160,
-      "llamadas": 96,
+      "leads": 0,
+      "llamadas": 0,
       "no_contesta": 0,
-      "citas": 63,
+      "citas": 0,
       "visitas": 0,
-      "inscritos": 12
+      "inscritos": 0
     }
   },
-  "diario_suc": {
-    "2026-05-01": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 6,
-        "llamadas": 4,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 6,
-        "llamadas": 4,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-02": {
-      "LINDAVISTA": {
-        "leads": 6,
-        "llamadas": 2,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 6,
-        "llamadas": 2,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 6,
-        "llamadas": 2,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-03": {
-      "LINDAVISTA": {
-        "leads": 10,
-        "llamadas": 5,
-        "citas": 5,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 10,
-        "llamadas": 6,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 13,
-        "llamadas": 6,
-        "citas": 7,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-04": {
-      "LINDAVISTA": {
-        "leads": 11,
-        "llamadas": 6,
-        "citas": 6,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 11,
-        "llamadas": 5,
-        "citas": 6,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 13,
-        "llamadas": 5,
-        "citas": 7,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-05": {
-      "LINDAVISTA": {
-        "leads": 9,
-        "llamadas": 5,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 8,
-        "llamadas": 5,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 8,
-        "llamadas": 4,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-06": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 8,
-        "llamadas": 2,
-        "citas": 6,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-07": {
-      "LINDAVISTA": {
-        "leads": 9,
-        "llamadas": 6,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 9,
-        "llamadas": 6,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 8,
-        "llamadas": 5,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-08": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 5,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 5,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 2
-      }
-    },
-    "2026-05-09": {
-      "LINDAVISTA": {
-        "leads": 6,
-        "llamadas": 3,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 2,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-10": {
-      "LINDAVISTA": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 6,
-        "llamadas": 2,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-11": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 6,
-        "llamadas": 4,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-12": {
-      "LINDAVISTA": {
-        "leads": 10,
-        "llamadas": 7,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 10,
-        "llamadas": 6,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 2
-      },
-      "ERMITA": {
-        "leads": 8,
-        "llamadas": 8,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-13": {
-      "LINDAVISTA": {
-        "leads": 8,
-        "llamadas": 5,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 4
-      },
-      "IZTACALCO": {
-        "leads": 8,
-        "llamadas": 5,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 8,
-        "llamadas": 5,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-14": {
-      "LINDAVISTA": {
-        "leads": 3,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 3,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 1,
-        "llamadas": 0,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-15": {
-      "LINDAVISTA": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 2
-      },
-      "ERMITA": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-16": {
-      "LINDAVISTA": {
-        "leads": 2,
-        "llamadas": 1,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 2,
-        "llamadas": 1,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 2,
-        "llamadas": 1,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-17": {
-      "LINDAVISTA": {
-        "leads": 1,
-        "llamadas": 0,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-18": {
-      "LINDAVISTA": {
-        "leads": 3,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 3,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-19": {
-      "LINDAVISTA": {
-        "leads": 10,
-        "llamadas": 5,
-        "citas": 5,
-        "visitas": 0,
-        "inscritos": 3
-      },
-      "IZTACALCO": {
-        "leads": 10,
-        "llamadas": 7,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 7,
-        "llamadas": 5,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-20": {
-      "LINDAVISTA": {
-        "leads": 7,
-        "llamadas": 6,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 9,
-        "llamadas": 8,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 8,
-        "llamadas": 6,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 2
-      }
-    },
-    "2026-05-21": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 7,
-        "llamadas": 4,
-        "citas": 3,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 5,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-22": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 4,
-        "llamadas": 3,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 4,
-        "llamadas": 3,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      }
-    },
-    "2026-05-23": {
-      "LINDAVISTA": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 4,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-24": {
-      "LINDAVISTA": {
-        "leads": 1,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 1,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 1,
-        "llamadas": 0,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-25": {
-      "LINDAVISTA": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 7,
-        "llamadas": 3,
-        "citas": 4,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-26": {
-      "LINDAVISTA": {
-        "leads": 4,
-        "llamadas": 3,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 4,
-        "llamadas": 3,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-27": {
-      "LINDAVISTA": {
-        "leads": 10,
-        "llamadas": 5,
-        "citas": 5,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 10,
-        "llamadas": 5,
-        "citas": 5,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 10,
-        "llamadas": 4,
-        "citas": 6,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-28": {
-      "LINDAVISTA": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 2
-      },
-      "IZTACALCO": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 2,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "ERMITA": {
-        "leads": 2,
-        "llamadas": 1,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-29": {
-      "LINDAVISTA": {
-        "leads": 1,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 1,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-05-30": {
-      "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    }
-  },
+  "diario_suc": {},
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
@@ -1287,7 +479,7 @@ const DATA_INGLES = {
       "fecha_cita": "30-05-25 10:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "examen de colocacion"
+      "obs": "cancelo vista"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -1303,8 +495,8 @@ const DATA_INGLES = {
       "nombre": "Natalia con otra persona",
       "tel": "5548720816",
       "fecha_cita": "30-05-26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "examn de colocción"
     },
     {
@@ -1314,7 +506,7 @@ const DATA_INGLES = {
       "fecha_cita": "28-05-26 5:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "visita al planel"
+      "obs": "cancelo"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -1323,7 +515,7 @@ const DATA_INGLES = {
       "fecha_cita": "29-05-26 3:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "visita al plantel"
+      "obs": "cancelo"
     },
     {
       "sucursal": "LINDAVISTA",
