@@ -73,6 +73,21 @@ header::after {
 @keyframes livePulse { 0%{box-shadow:0 0 0 0 rgba(0,255,136,.7)} 70%{box-shadow:0 0 0 9px rgba(0,255,136,0)} 100%{box-shadow:0 0 0 0 rgba(0,255,136,0)} }
 #updated { font-size:11px; color:var(--dim); font-weight:600; }
 
+/* Selector de mes */
+.mes-selector {
+  display: flex; align-items: center; gap: 8px;
+}
+.mes-selector label { font-size:10px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--muted); }
+#mes-select {
+  background: var(--c3); border: 1px solid rgba(0,240,255,.25);
+  color: var(--cyan); padding: 5px 12px; border-radius: 8px;
+  font-size: 12px; font-weight: 700; cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color .2s;
+}
+#mes-select:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.2); }
+#mes-select option { background: #1e1b3c; color: var(--text); }
+
 /* ── TABS ── */
 nav {
   position: sticky; top: 64px; z-index: 99;
@@ -294,6 +309,12 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <img src="logo.jpg" alt="Inglés YA">
   </div>
   <div class="header-right">
+    <div class="mes-selector">
+      <label>Mes</label>
+      <select id="mes-select" onchange="cambiarMes(this.value)">
+        <option value="">Cargando...</option>
+      </select>
+    </div>
     <div class="live-badge"><div class="live-dot"></div>En vivo</div>
     <span id="updated">—</span>
   </div>
@@ -381,7 +402,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
 <script src="data_ingles.js"></script>
 <script>
-const D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
+let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
   actualizado:'—', mes:'—',
   kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
   campanas:[], adsets:[], diario_meta:{},
@@ -709,16 +730,63 @@ function renderDiario() {
   });
 }
 
+// ── Render todo ──
+function renderAll() {
+  renderKpis();
+  renderFunnel();
+  renderSucMini();
+  renderCampMini();
+  renderSucCards();
+  renderSucursales();
+  renderCampanas();
+  renderAdsets();
+  renderAgenda();
+  if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
+}
+
+// ── Selector de mes ──
+const MESES_NOMBRES = {
+  '01':'Ene','02':'Feb','03':'Mar','04':'Abr','05':'May','06':'Jun',
+  '07':'Jul','08':'Ago','09':'Sep','10':'Oct','11':'Nov','12':'Dic'
+};
+function nombreMes(m) {
+  const [y, mo] = m.split('-');
+  return `${MESES_NOMBRES[mo]} ${y}`;
+}
+
+async function cambiarMes(mesId) {
+  if (!mesId) return;
+  try {
+    const r = await fetch(`data_${mesId}.json`);
+    if (!r.ok) throw new Error('No encontrado');
+    D = await r.json();
+    const hoy = new Date();
+    const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
+    document.querySelector('.live-dot').style.opacity = mesId === mesActual ? '1' : '0.3';
+    renderAll();
+  } catch(e) {
+    console.warn('No se pudo cargar', mesId, e);
+  }
+}
+
+async function initMeses() {
+  try {
+    const r = await fetch('meses.json');
+    const meses = await r.json();
+    const sel = document.getElementById('mes-select');
+    sel.innerHTML = meses.map(m =>
+      `<option value="${m}">${nombreMes(m)}</option>`
+    ).join('');
+    if (meses.length > 0) await cambiarMes(meses[0]);
+  } catch(e) {
+    const sel = document.getElementById('mes-select');
+    sel.innerHTML = '<option value="">Mes actual</option>';
+    renderAll();
+  }
+}
+
 // Init
-renderKpis();
-renderFunnel();
-renderSucMini();
-renderCampMini();
-renderSucCards();
-renderSucursales();
-renderCampanas();
-renderAdsets();
-renderAgenda();
+initMeses();
 </script>
 </body>
 </html>

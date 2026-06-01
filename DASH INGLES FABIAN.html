@@ -402,7 +402,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
 <script src="data_ingles.js"></script>
 <script>
-const D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
+let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
   actualizado:'—', mes:'—',
   kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
   campanas:[], adsets:[], diario_meta:{},
