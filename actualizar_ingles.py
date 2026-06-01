@@ -1,10 +1,25 @@
 #!/usr/bin/env python3
 # actualizar_ingles.py — Inglés YA Dashboard
-# Jala Meta Ads API + Google Sheets y genera data_ingles.js
+# Uso: python actualizar_ingles.py              (mes actual)
+#      python actualizar_ingles.py --mes 2026-05 (mes específico)
 
-import os, json, csv, io, re, sys
+import os, json, csv, io, re, sys, argparse, calendar
 import requests
 from datetime import datetime, date
+
+# ─── ARGUMENTOS ──────────────────────────────────────────────────────────────
+parser = argparse.ArgumentParser()
+parser.add_argument('--mes', default=None, help='Mes a procesar YYYY-MM (default: mes actual)')
+args = parser.parse_args()
+
+if args.mes:
+    year, month = map(int, args.mes.split('-'))
+    ultimo_dia  = calendar.monthrange(year, month)[1]
+    HOY         = date(year, month, ultimo_dia)
+    MES_ACTUAL  = args.mes
+else:
+    HOY        = date.today()
+    MES_ACTUAL = HOY.strftime('%Y-%m')
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 TOKEN      = os.environ.get('TOKEN_INGLES_YA', '')
@@ -21,8 +36,6 @@ SHEET_AGE_GIDS = {
     'ERMITA':     '801240161',
 }
 
-HOY        = date.today()
-MES_ACTUAL = HOY.strftime('%Y-%m')
 SUCURSALES = ['LINDAVISTA', 'IZTACALCO', 'ERMITA']
 
 # ─── HELPERS ─────────────────────────────────────────────────────────────────
@@ -47,7 +60,7 @@ def fetch_csv_sheet(sheet_id, gid):
         r = requests.get(url, timeout=20)
         if r.status_code == 200:
             return r.text
-        print(f'  AVISO: Sheet HTTP {r.status_code} - verifica que este compartido como "Cualquier persona con el enlace puede ver"')
+        print(f'  AVISO: Sheet HTTP {r.status_code}')
         return None
     except Exception as e:
         print(f'  ERROR al leer Sheet: {e}')
@@ -59,15 +72,18 @@ def meta_get(endpoint, params):
     r = requests.get(f'{API_BASE}/{endpoint}', params=params, timeout=30)
     return r.json()
 
+def time_range():
+    return json.dumps({'since': f'{MES_ACTUAL}-01', 'until': HOY.strftime('%Y-%m-%d')})
+
 def fetch_campanas():
     resp = meta_get(f'{AD_ACCOUNT}/campaigns', {
-        'fields': 'name,status,daily_budget,insights{spend,impressions,reach,actions}',
-        'date_preset': 'this_month',
-        'limit': 25,
+        'fields':     'name,status,daily_budget,insights{spend,impressions,reach,actions}',
+        'time_range': time_range(),
+        'limit':      25,
     })
     out = []
     for c in resp.get('data', []):
-        ins = ((c.get('insights') or {}).get('data') or [{}])[0]
+        ins   = ((c.get('insights') or {}).get('data') or [{}])[0]
         leads = next((si(a['value']) for a in ins.get('actions', [])
                       if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
         gasto = sf(ins.get('spend', 0))
@@ -86,13 +102,13 @@ def fetch_campanas():
 
 def fetch_adsets():
     resp = meta_get(f'{AD_ACCOUNT}/adsets', {
-        'fields': 'name,status,daily_budget,campaign_id,insights{spend,actions}',
-        'date_preset': 'this_month',
-        'limit': 50,
+        'fields':     'name,status,daily_budget,campaign_id,insights{spend,actions}',
+        'time_range': time_range(),
+        'limit':      50,
     })
     out = []
     for a in resp.get('data', []):
-        ins = ((a.get('insights') or {}).get('data') or [{}])[0]
+        ins   = ((a.get('insights') or {}).get('data') or [{}])[0]
         leads = next((si(x['value']) for x in ins.get('actions', [])
                       if x['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
         gasto = sf(ins.get('spend', 0))
@@ -108,12 +124,10 @@ def fetch_adsets():
     return out
 
 def fetch_diario_meta():
-    inicio = HOY.replace(day=1).strftime('%Y-%m-%d')
-    fin    = HOY.strftime('%Y-%m-%d')
     resp = meta_get(f'{AD_ACCOUNT}/insights', {
         'fields':         'date_start,spend,actions',
         'time_increment': 1,
-        'time_range':     json.dumps({'since': inicio, 'until': fin}),
+        'time_range':     time_range(),
         'level':          'account',
         'limit':          60,
     })
@@ -124,12 +138,12 @@ def fetch_diario_meta():
         out[d['date_start']] = {'leads': leads, 'gasto': round(sf(d.get('spend', 0)), 2)}
     return out
 
-# ─── SEGUIMIENTO (Sheet diario) ───────────────────────────────────────────────
+# ─── SEGUIMIENTO ─────────────────────────────────────────────────────────────
 def parse_seguimiento(text):
-    rows     = list(csv.reader(io.StringIO(text)))
-    totales  = {s: dict(leads=0, llamadas=0, no_contesta=0, citas=0, visitas=0, inscritos=0)
-                for s in SUCURSALES}
-    diario   = {}
+    rows    = list(csv.reader(io.StringIO(text)))
+    totales = {s: dict(leads=0, llamadas=0, no_contesta=0, citas=0, visitas=0, inscritos=0)
+               for s in SUCURSALES}
+    diario  = {}
     cur_date = None
 
     for row in rows:
@@ -138,13 +152,11 @@ def parse_seguimiento(text):
         col0 = row[0].strip() if row else ''
         col1 = row[1].strip() if len(row) > 1 else ''
 
-        # Detectar fecha (col1 o col0)
         d = parse_fecha(col1) or parse_fecha(col0)
         if d:
             cur_date = d
             continue
 
-        # Fila de sucursal: col1 (días normales) o col0 (filas de resumen semanal)
         suc, offset = None, None
         if col1.upper() in SUCURSALES:
             suc, offset = col1.upper(), 2
@@ -179,17 +191,15 @@ def parse_seguimiento(text):
 SKIP_KW = ('HOJA AGENDA', 'SUCURSAL:', 'FECHA:')
 
 def parse_agenda(text, sucursal):
-    rows   = list(csv.reader(io.StringIO(text)))
+    rows  = list(csv.reader(io.StringIO(text)))
     agenda = []
 
     for row in rows:
         if not any(c.strip() for c in row):
             continue
-
         col0      = row[0].strip()
         full_text = ' '.join(row).upper()
 
-        # Saltar encabezados y separadores
         if any(kw in full_text for kw in SKIP_KW):
             continue
         if col0.upper() in ('NOMBRE', 'TEL', 'CORREO', 'CORREO ELECTRÓNICO'):
@@ -197,17 +207,16 @@ def parse_agenda(text, sucursal):
         if parse_fecha(col0) or re.match(r'^\s*\d{2}[-/]\d{2}[-/]\d{2,4}\s*$', col0):
             continue
 
-        # Nombre del prospecto (quita prefijo SÍ/NO)
         nombre = re.sub(r'^(SÍ|SI|NO)\s+', '', col0, flags=re.IGNORECASE).strip()
         if not nombre or len(nombre) < 3:
             continue
 
         try:
-            tel   = row[1].strip() if len(row) > 1 else ''
-            fecha = row[3].strip() if len(row) > 3 else ''
-            asis  = 'SÍ' in (row[4].strip().upper() if len(row) > 4 else '')
-            insc  = 'SÍ' in (row[5].strip().upper() if len(row) > 5 else '')
-            obs   = row[6].strip() if len(row) > 6 else ''
+            tel  = row[1].strip() if len(row) > 1 else ''
+            fecha= row[3].strip() if len(row) > 3 else ''
+            asis = 'SÍ' in (row[4].strip().upper() if len(row) > 4 else '')
+            insc = 'SÍ' in (row[5].strip().upper() if len(row) > 5 else '')
+            obs  = row[6].strip() if len(row) > 6 else ''
         except Exception:
             continue
 
@@ -224,9 +233,43 @@ def parse_agenda(text, sucursal):
 
     return agenda
 
+# ─── GUARDAR HISTÓRICO ────────────────────────────────────────────────────────
+def guardar_historico(data):
+    # Archivo mensual
+    mes_path = os.path.join(BASE_DIR, f'data_{MES_ACTUAL}.json')
+    with open(mes_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f'    Guardado: data_{MES_ACTUAL}.json')
+
+    # Índice de meses disponibles
+    meses_path = os.path.join(BASE_DIR, 'meses.json')
+    meses = []
+    if os.path.exists(meses_path):
+        try:
+            with open(meses_path, 'r', encoding='utf-8') as f:
+                meses = json.load(f)
+        except: pass
+    if MES_ACTUAL not in meses:
+        meses.append(MES_ACTUAL)
+    meses.sort(reverse=True)
+    with open(meses_path, 'w', encoding='utf-8') as f:
+        json.dump(meses, f, ensure_ascii=False)
+
+    # Si es el mes actual también actualiza data_ingles.js (para compatibilidad)
+    if MES_ACTUAL == date.today().strftime('%Y-%m'):
+        js_path = os.path.join(BASE_DIR, 'data_ingles.js')
+        with open(js_path, 'w', encoding='utf-8') as f:
+            f.write('const DATA_INGLES = ')
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write(';\n')
+        json_path = os.path.join(BASE_DIR, 'data_ingles.json')
+        with open(json_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f'    Guardado: data_ingles.js (mes actual)')
+
 # ─── MAIN ────────────────────────────────────────────────────────────────────
 def main():
-    print(f'=== INGLÉS YA · {HOY.strftime("%d/%m/%Y")} ===\n')
+    print(f'=== INGLÉS YA · {MES_ACTUAL} (proceso: {HOY.strftime("%d/%m/%Y")}) ===\n')
 
     if not TOKEN:
         print('ERROR: TOKEN_INGLES_YA no está en variables de entorno')
@@ -267,7 +310,6 @@ def main():
             print(f'    {suc}: sin datos')
     print(f'    Total: {len(agenda)} prospectos')
 
-    # KPIs globales
     total_leads   = sum(c['leads']   for c in campanas)
     total_gasto   = sum(c['gasto']   for c in campanas)
     total_insc    = sum(v['inscritos'] for v in totales_suc.values())
@@ -275,9 +317,17 @@ def main():
     total_visitas = sum(v['visitas']  for v in totales_suc.values())
     cpl           = round(total_gasto / total_leads, 2) if total_leads else 0
 
+    MESES_ES = {
+        '01':'Enero','02':'Febrero','03':'Marzo','04':'Abril',
+        '05':'Mayo','06':'Junio','07':'Julio','08':'Agosto',
+        '09':'Septiembre','10':'Octubre','11':'Noviembre','12':'Diciembre'
+    }
+    mes_nombre = f"{MESES_ES[MES_ACTUAL[5:]]} {MES_ACTUAL[:4]}"
+
     data = {
         'actualizado': datetime.now().strftime('%d/%m/%Y %H:%M'),
-        'mes':         HOY.strftime('%B %Y'),
+        'mes':         mes_nombre,
+        'mes_id':      MES_ACTUAL,
         'kpis': {
             'leads_meta': total_leads,
             'gasto':      round(total_gasto, 2),
@@ -294,19 +344,10 @@ def main():
         'agenda':      agenda,
     }
 
-    js_path   = os.path.join(BASE_DIR, 'data_ingles.js')
-    json_path = os.path.join(BASE_DIR, 'data_ingles.json')
+    print('\n[6] Guardando archivos...')
+    guardar_historico(data)
 
-    with open(js_path, 'w', encoding='utf-8') as f:
-        f.write('const DATA_INGLES = ')
-        json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write(';\n')
-
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(f'\nOK  data_ingles.js guardado en {BASE_DIR}')
-    print(f'    Leads: {total_leads} | Gasto: ${total_gasto:,.2f} | CPL: ${cpl:,.2f} | Inscritos: {total_insc}')
+    print(f'\nOK Leads: {total_leads} | Gasto: ${total_gasto:,.2f} | CPL: ${cpl:,.2f} | Inscritos: {total_insc}')
 
 
 if __name__ == '__main__':
