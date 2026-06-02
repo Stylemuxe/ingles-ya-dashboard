@@ -258,6 +258,34 @@ tr:hover td { background:rgba(0,240,255,.025); }
 /* ── CHART ── */
 .chart-wrap { padding:20px; height:280px; }
 
+/* ── CHURN RECOVERY ── */
+.churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
+@media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
+.churn-card {
+  background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:14px;
+  padding:18px 20px; position:relative; overflow:hidden;
+  transition:transform .25s, box-shadow .25s;
+}
+.churn-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,.4); }
+.churn-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--cc); box-shadow:0 0 10px var(--cc); }
+.churn-name { font-size:11px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--cc); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.churn-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.churn-label { font-size:11px; color:var(--muted); font-weight:600; }
+.churn-val { font-size:15px; font-weight:800; font-variant-numeric:tabular-nums; }
+.churn-bar-wrap { margin-top:14px; }
+.churn-bar-track { height:8px; border-radius:99px; background:rgba(255,255,255,.06); overflow:hidden; margin-bottom:6px; }
+.churn-bar-fill { height:100%; border-radius:99px; transition:width .9s cubic-bezier(.22,1,.36,1); animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
+.churn-pct-label { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); }
+.churn-status { font-size:12px; font-weight:800; }
+.churn-total {
+  margin-top:16px; padding:14px 18px; border-radius:10px;
+  background:rgba(0,240,255,.04); border:1px solid rgba(0,240,255,.1);
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.churn-total-item { text-align:center; }
+.churn-total-val { font-size:20px; font-weight:800; font-variant-numeric:tabular-nums; }
+.churn-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
+
 /* ── SUC CARDS ── */
 .suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .suc-cards { grid-template-columns:1fr; } }
@@ -344,6 +372,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     </div>
   </div>
   <div class="card">
+    <div class="card-head"><span class="card-title">Recuperacion de Churn</span><span class="card-sub">Alumnos recuperados vs 10% perdido</span></div>
+    <div id="churn-resumen"></div>
+  </div>
+  <div class="card">
     <div class="card-head"><span class="card-title">Campañas Activas</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-camp-mini"></table>
   </div>
@@ -352,6 +384,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- SUCURSALES -->
 <div id="pane-sucursales" class="pane">
   <div class="suc-cards" id="suc-cards"></div>
+  <div class="card">
+    <div class="card-head"><span class="card-title">Recuperacion de Churn</span><span class="card-sub">10% plantilla / mes</span></div>
+    <div id="churn-cards"></div>
+  </div>
   <div class="card">
     <div class="card-head"><span class="card-title">Detalle Completo</span></div>
     <table id="tbl-sucursales"></table>
@@ -513,6 +549,76 @@ function renderFunnel() {
       </div>
     </div>`;
   }).join('');
+}
+
+// Plantilla actual y churn esperado (10% mensual)
+const PLANTILLA = {
+  LINDAVISTA: 380,
+  IZTACALCO:  250,
+  ERMITA:     200,
+};
+
+function renderChurn() {
+  const suc = D.sucursales || {};
+  let totPlantilla=0, totChurn=0, totInscritos=0;
+
+  const cards = Object.entries(PLANTILLA).map(([nombre, plantilla]) => {
+    const v        = suc[nombre] || {};
+    const inscritos= v.inscritos || 0;
+    const churnMeta= Math.round(plantilla * 0.10);
+    const pct      = churnMeta > 0 ? Math.min(150, (inscritos / churnMeta) * 100) : 0;
+    const falta    = Math.max(0, churnMeta - inscritos);
+    const color    = pct >= 100 ? 'var(--green)' : pct >= 50 ? 'var(--orange)' : 'var(--pink)';
+    const statusTxt= pct >= 100 ? 'Churn recuperado' : falta === 0 ? 'Completo' : `Faltan ${falta}`;
+    const cfg      = SUC[nombre] || { c: '#888' };
+
+    totPlantilla += plantilla;
+    totChurn     += churnMeta;
+    totInscritos += inscritos;
+
+    return `<div class="churn-card" style="--cc:${cfg.c}">
+      <div class="churn-name"><span style="width:8px;height:8px;border-radius:50%;background:${cfg.c};display:inline-block"></span>${nombre}</div>
+      <div class="churn-row">
+        <span class="churn-label">Plantilla</span>
+        <span class="churn-val" style="color:var(--text)">${$n(plantilla)}</span>
+      </div>
+      <div class="churn-row">
+        <span class="churn-label">Churn esperado (10%)</span>
+        <span class="churn-val" style="color:var(--orange)">${$n(churnMeta)}</span>
+      </div>
+      <div class="churn-row">
+        <span class="churn-label">Inscritos del mes</span>
+        <span class="churn-val" style="color:${color}">${$n(inscritos)}</span>
+      </div>
+      <div class="churn-bar-wrap">
+        <div class="churn-bar-track">
+          <div class="churn-bar-fill" style="width:${pct}%;background:${color}"></div>
+        </div>
+        <div class="churn-pct-label">
+          <span class="churn-status" style="color:${color}">${statusTxt}</span>
+          <span style="font-weight:800;color:${color}">${pct.toFixed(0)}%</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const totPct     = totChurn > 0 ? Math.min(150, (totInscritos / totChurn) * 100) : 0;
+  const totFalta   = Math.max(0, totChurn - totInscritos);
+  const totColor   = totPct >= 100 ? 'var(--green)' : totPct >= 50 ? 'var(--orange)' : 'var(--pink)';
+
+  const html = `<div class="churn-grid">${cards}</div>
+  <div class="churn-total">
+    <div class="churn-total-item"><div class="churn-total-val" style="color:var(--text)">${$n(totPlantilla)}</div><div class="churn-total-lbl">Plantilla total</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:var(--orange)">${$n(totChurn)}</div><div class="churn-total-lbl">Churn esperado</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${$n(totInscritos)}</div><div class="churn-total-lbl">Inscritos</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${totFalta > 0 ? $n(totFalta)+' faltan' : 'Meta lograda'}</div><div class="churn-total-lbl">vs meta churn</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${totPct.toFixed(0)}%</div><div class="churn-total-lbl">Recuperado</div></div>
+  </div>`;
+
+  const el1 = document.getElementById('churn-cards');
+  const el2 = document.getElementById('churn-resumen');
+  if (el1) el1.innerHTML = html;
+  if (el2) el2.innerHTML = html;
 }
 
 // Sucursal config
@@ -738,6 +844,7 @@ function renderAll() {
   renderCampMini();
   renderSucCards();
   renderSucursales();
+  renderChurn();
   renderCampanas();
   renderAdsets();
   renderAgenda();
