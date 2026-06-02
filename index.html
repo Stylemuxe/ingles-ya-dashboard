@@ -571,59 +571,70 @@ function renderFunnel() {
   }).join('');
 }
 
-// Meta de leads: mapeo campaña → planteles que cubre
-const CAMP_SUC = {
-  'ERMITA':              { label:'ERMITA',            color:'#E02020', sucursales:['ERMITA'] },
-  'IZT':                 { label:'LINDAVISTA + IZTACALCO', color:'#00f0ff', sucursales:['LINDAVISTA','IZTACALCO'] },
+const SUC_COLOR = {
+  ERMITA:     '#E02020',
+  LINDAVISTA: '#00f0ff',
+  IZTACALCO:  '#1B46B4',
 };
-function campKey(nombre) {
-  const n = nombre.toUpperCase();
-  if (n.includes('ERMITA')) return 'ERMITA';
-  return 'IZT';
+
+function leadsXSede() {
+  const metas = D.metas_leads || {};
+  const camps = D.campanas || [];
+  const result = { ERMITA:0, LINDAVISTA:0, IZTACALCO:0 };
+
+  for (const c of camps) {
+    const n = c.nombre.toUpperCase();
+    if (n.includes('ERMITA')) {
+      result.ERMITA += c.leads;
+    } else {
+      // Campaña combinada LIND+IZT: repartir proporcional a la meta
+      const mL = metas.LINDAVISTA || 0;
+      const mI = metas.IZTACALCO  || 0;
+      const tot = mL + mI;
+      if (tot > 0) {
+        result.LINDAVISTA += Math.round(c.leads * mL / tot);
+        result.IZTACALCO  += c.leads - Math.round(c.leads * mL / tot);
+      } else {
+        result.LINDAVISTA += Math.round(c.leads / 2);
+        result.IZTACALCO  += c.leads - Math.round(c.leads / 2);
+      }
+    }
+  }
+  return result;
 }
 
 function renderMetaLeads() {
-  const metas  = D.metas_leads || {};
-  const camps  = (D.campanas || []).filter(c => c.leads > 0 || c.status === 'ACTIVE');
-  const totMeta = Object.values(metas).reduce((a,v)=>a+v, 0);
-  const totLeads= (D.kpis || {}).leads_meta || 0;
+  const metas    = D.metas_leads || {};
+  const totMeta  = Object.values(metas).reduce((a,v)=>a+v, 0);
+  const totLeads = (D.kpis||{}).leads_meta || 0;
+  const leadsSede= leadsXSede();
 
-  // Agrupar campañas por key
-  const grupos = {};
-  for (const c of camps) {
-    const k = campKey(c.nombre);
-    if (!grupos[k]) grupos[k] = { leads:0, ...CAMP_SUC[k] };
-    grupos[k].leads += c.leads;
-  }
-
-  // Meta por grupo = suma de metas de sus sucursales
-  for (const k of Object.keys(grupos)) {
-    grupos[k].meta = (grupos[k].sucursales || []).reduce((a,s)=>a+(metas[s]||0), 0);
-  }
-
-  const totPct  = totMeta > 0 ? Math.min(100,(totLeads/totMeta)*100) : 0;
+  const ORDEN = ['ERMITA','LINDAVISTA','IZTACALCO'];
+  const totPct  = totMeta>0 ? Math.min(100,(totLeads/totMeta)*100) : 0;
   const totColor= totPct>=100?'var(--green)':totPct>=50?'var(--orange)':'var(--pink)';
 
-  // Subtítulo del card
   document.getElementById('meta-leads-sub').textContent =
-    `${$n(totLeads)} de ${$n(totMeta)} — ${totPct.toFixed(1)}% del mes`;
+    `${$n(totLeads)} de ${$n(totMeta)} leads — ${totPct.toFixed(1)}%`;
 
-  const rows = Object.entries(grupos).map(([k,g])=>{
-    const pct   = g.meta>0 ? Math.min(100,(g.leads/g.meta)*100) : 0;
+  const rows = ORDEN.map(s => {
+    const leads = leadsSede[s] || 0;
+    const meta  = metas[s] || 0;
+    const pct   = meta>0 ? Math.min(100,(leads/meta)*100) : 0;
     const color = pct>=100?'var(--green)':pct>=50?'var(--orange)':'var(--pink)';
-    const falta = Math.max(0, g.meta-g.leads);
+    const falta = Math.max(0, meta-leads);
+    const sc    = SUC_COLOR[s] || '#888';
     return `<div class="ml-row">
       <div class="ml-label">
-        <div class="ml-name" style="color:${g.color}">${g.label}</div>
-        <div class="ml-sub">${falta>0 ? 'Faltan '+$n(falta)+' leads' : 'Meta alcanzada'}</div>
+        <div class="ml-name" style="color:${sc}">${s}</div>
+        <div class="ml-sub">${meta>0 ? (falta>0 ? 'Faltan '+$n(falta)+' leads' : '¡Meta alcanzada!') : 'Sin meta'}</div>
       </div>
       <div class="ml-bar">
         <div class="ml-bar-track">
           <div class="ml-bar-fill" style="width:${pct}%;background:${color}"></div>
         </div>
         <div class="ml-nums">
-          <span class="ml-actual" style="color:${color}">${$n(g.leads)} leads</span>
-          <span style="color:var(--muted)">meta ${$n(g.meta)} · ${pct.toFixed(0)}%</span>
+          <span class="ml-actual" style="color:${color}">${$n(leads)} leads</span>
+          <span style="color:var(--muted)">meta ${$n(meta)} · <strong style="color:${color}">${pct.toFixed(0)}%</strong></span>
         </div>
       </div>
     </div>`;
@@ -633,9 +644,9 @@ function renderMetaLeads() {
   <div class="ml-total-row">
     <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(totLeads)}</div><div class="ml-total-lbl">Leads del mes</div></div>
     <div class="ml-total-item"><div class="ml-total-val" style="color:var(--muted)">${$n(totMeta)}</div><div class="ml-total-lbl">Meta total</div></div>
-    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(Math.max(0,totMeta-totLeads))}</div><div class="ml-total-lbl">Leads pendientes</div></div>
+    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(Math.max(0,totMeta-totLeads))}</div><div class="ml-total-lbl">Pendientes</div></div>
     <div class="ml-total-item">
-      <div style="height:8px;width:180px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+      <div style="height:8px;width:160px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
         <div style="height:100%;width:${totPct}%;background:${totColor};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
       </div>
       <div style="font-size:11px;color:${totColor};font-weight:800;margin-top:4px;text-align:center">${totPct.toFixed(1)}% completado</div>
