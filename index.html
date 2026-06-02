@@ -789,12 +789,16 @@ function renderCampMini() {
 }
 
 function renderSucCards() {
-  const suc   = D.sucursales  || {};
-  const metas = D.metas_leads || {};
-  document.getElementById('suc-cards').innerHTML=Object.entries(suc).map(([s,v])=>{
-    const cfg  = SUC[s]||{c:'#888',g:'rgba(136,136,136,.1)',b:'rgba(136,136,136,.05)'};
+  const suc       = D.sucursales  || {};
+  const metas     = D.metas_leads || {};
+  const metaLeads = leadsXSede();
+  const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
+  document.getElementById('suc-cards').innerHTML = ORDEN.map(s => {
+    const v    = suc[s] || {};
+    const cfg  = SUC[s] || {c:'#888',g:'rgba(136,136,136,.1)',b:'rgba(136,136,136,.05)'};
+    const leads= metaLeads[s] || 0;
     const meta = metas[s] || 0;
-    const avPct= meta > 0 ? Math.min(100,(v.leads/meta)*100) : 0;
+    const avPct= meta > 0 ? Math.min(100,(leads/meta)*100) : 0;
     const avCol= avPct >= 100 ? 'var(--green)' : avPct >= 60 ? 'var(--orange)' : 'var(--pink)';
     const metaHTML = meta > 0 ? `
       <div style="margin-top:12px">
@@ -805,7 +809,7 @@ function renderSucCards() {
         <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
           <div style="height:100%;width:${avPct}%;background:${avCol};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
         </div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-align:right">${v.leads >= meta ? 'Meta alcanzada' : $n(meta-v.leads)+' leads para meta'}</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px;text-align:right">${leads >= meta ? 'Meta alcanzada' : $n(meta-leads)+' leads para meta'}</div>
       </div>` : '';
     return `<div class="suc-card" style="--sc:${cfg.c};--sg:${cfg.g};--sb:${cfg.b}">
       <div class="suc-card-head">
@@ -813,60 +817,65 @@ function renderSucCards() {
         <div class="suc-name">${s}</div>
       </div>
       <div class="suc-body">
-        <div class="suc-stat"><div class="suc-stat-val" style="color:${cfg.c};text-shadow:0 0 14px ${cfg.c}66">${$n(v.leads)}</div><div class="suc-stat-lbl">Leads</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#7b2ff7">${$n(v.citas)}</div><div class="suc-stat-lbl">Citas</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#ff9900">${$n(v.llamadas)}</div><div class="suc-stat-lbl">Llamadas</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#00ff88;text-shadow:0 0 12px rgba(0,255,136,.4)">${$n(v.inscritos)}</div><div class="suc-stat-lbl">Inscritos</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:${cfg.c};text-shadow:0 0 14px ${cfg.c}66">${$n(leads)}</div><div class="suc-stat-lbl">Leads Meta</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:#7b2ff7">${$n(v.citas||0)}</div><div class="suc-stat-lbl">Citas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:#ff9900">${$n(v.llamadas||0)}</div><div class="suc-stat-lbl">Llamadas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:#00ff88;text-shadow:0 0 12px rgba(0,255,136,.4)">${$n(v.inscritos||0)}</div><div class="suc-stat-lbl">Inscritos</div></div>
       </div>
       ${metaHTML}
       <div class="suc-foot">
         <span class="conv-label">Lead → Inscrito</span>
-        <span class="conv-rate">${pct(v.inscritos,v.leads)}</span>
+        <span class="conv-rate">${pct(v.inscritos||0, leads)}</span>
       </div>
     </div>`;
   }).join('');
 }
 
 function renderSucursales() {
-  const suc   = D.sucursales  || {};
-  const metas = D.metas_leads || {};
-  const rows  = Object.entries(suc).map(([s,v])=>{
+  const suc       = D.sucursales  || {};
+  const metas     = D.metas_leads || {};
+  const metaLeads = leadsXSede();
+  const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
+  const rows  = ORDEN.map(s=>{
+    const v     = suc[s] || {};
+    const leads = metaLeads[s] || 0;
     const meta  = metas[s] || 0;
-    const avPct = meta > 0 ? Math.min(100,(v.leads/meta)*100) : 0;
+    const avPct = meta > 0 ? Math.min(100,(leads/meta)*100) : 0;
     const avCol = avPct >= 100 ? 'var(--green)' : avPct >= 60 ? 'var(--orange)' : 'var(--pink)';
     const metaTd = meta > 0
       ? `<td><div class="pbar-wrap">
            <div class="pbar"><div class="pbar-fill" style="width:${avPct}%;background:${avCol}"></div></div>
            <div class="pbar-val" style="color:${avCol}">${avPct.toFixed(0)}%</div>
-         </div><div style="font-size:10px;color:var(--muted);margin-top:2px">${$n(v.leads)} / ${$n(meta)}</div></td>`
+         </div><div style="font-size:10px;color:var(--muted);margin-top:2px">${$n(leads)} / ${$n(meta)}</div></td>`
       : '<td style="color:var(--dim)">—</td>';
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-weight:800">${s}</strong></span></td>
-      <td class="num" style="color:#00f0ff">${$n(v.leads)}</td>
+      <td class="num" style="color:#00f0ff">${$n(leads)}</td>
       ${metaTd}
-      <td class="num">${$n(v.llamadas)}</td>
-      <td class="num">${$n(v.no_contesta)}</td>
-      <td class="num" style="color:#7b2ff7">${$n(v.citas)}</td>
-      <td class="num" style="color:#ff9900">${$n(v.visitas)}</td>
-      <td class="num" style="color:#00ff88">${$n(v.inscritos)}</td>
-      <td style="color:#00ff88;font-weight:800;font-size:14px">${pct(v.inscritos,v.leads)}</td>
+      <td class="num">${$n(v.llamadas||0)}</td>
+      <td class="num">${$n(v.no_contesta||0)}</td>
+      <td class="num" style="color:#7b2ff7">${$n(v.citas||0)}</td>
+      <td class="num" style="color:#ff9900">${$n(v.visitas||0)}</td>
+      <td class="num" style="color:#00ff88">${$n(v.inscritos||0)}</td>
+      <td style="color:#00ff88;font-weight:800;font-size:14px">${pct(v.inscritos||0, leads)}</td>
     </tr>`;
-  }).join('');
-  const tot = Object.values(suc).reduce((a,v)=>({
-    leads:a.leads+v.leads, llamadas:a.llamadas+v.llamadas, no_contesta:a.no_contesta+v.no_contesta,
-    citas:a.citas+v.citas, visitas:a.visitas+v.visitas, inscritos:a.inscritos+v.inscritos
-  }),{leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0});
+  });
+  const totLeads= Object.values(metaLeads).reduce((a,v)=>a+v,0);
+  const totCC   = ORDEN.reduce((a,s)=>{ const v=suc[s]||{}; return {
+    llamadas:a.llamadas+(v.llamadas||0), no_contesta:a.no_contesta+(v.no_contesta||0),
+    citas:a.citas+(v.citas||0), visitas:a.visitas+(v.visitas||0), inscritos:a.inscritos+(v.inscritos||0)
+  };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0});
   const totMeta = Object.values(metas).reduce((a,v)=>a+v,0);
   document.getElementById('tbl-sucursales').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th></tr></thead>
-     <tbody>${rows}<tr class="tot">
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th></tr></thead>
+     <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
-       <td style="color:#00f0ff">${$n(tot.leads)}</td>
-       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(tot.leads)+' / '+$n(totMeta):'—'}</td>
-       <td>${$n(tot.llamadas)}</td><td>${$n(tot.no_contesta)}</td>
-       <td style="color:#7b2ff7">${$n(tot.citas)}</td><td style="color:#ff9900">${$n(tot.visitas)}</td>
-       <td style="color:#00ff88">${$n(tot.inscritos)}</td>
-       <td style="color:#00ff88">${pct(tot.inscritos,tot.leads)}</td>
+       <td style="color:#00f0ff">${$n(totLeads)}</td>
+       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'—'}</td>
+       <td>${$n(totCC.llamadas)}</td><td>${$n(totCC.no_contesta)}</td>
+       <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
+       <td style="color:#00ff88">${$n(totCC.inscritos)}</td>
+       <td style="color:#00ff88">${pct(totCC.inscritos,totLeads)}</td>
      </tr></tbody>`;
 }
 
