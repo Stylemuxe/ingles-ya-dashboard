@@ -274,6 +274,24 @@ def guardar_historico(data):
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f'    Guardado: data_ingles.js (mes actual)')
 
+# ─── METAS (leads del mes anterior por sucursal) ─────────────────────────────
+def cargar_metas_leads():
+    year, month = map(int, MES_ACTUAL.split('-'))
+    if month == 1:
+        mes_ant = f'{year-1}-12'
+    else:
+        mes_ant = f'{year}-{month-1:02d}'
+    path = os.path.join(BASE_DIR, f'data_{mes_ant}.json')
+    if not os.path.exists(path):
+        return {s: 0 for s in SUCURSALES}
+    try:
+        with open(path, encoding='utf-8') as f:
+            d = json.load(f)
+        suc = d.get('sucursales', {})
+        return {s: suc.get(s, {}).get('leads', 0) for s in SUCURSALES}
+    except Exception:
+        return {s: 0 for s in SUCURSALES}
+
 # ─── MAIN ────────────────────────────────────────────────────────────────────
 def main():
     print(f'=== INGLÉS YA · {MES_ACTUAL} (proceso: {HOY.strftime("%d/%m/%Y")}) ===\n')
@@ -317,6 +335,10 @@ def main():
             print(f'    {suc}: sin datos')
     print(f'    Total: {len(agenda)} prospectos')
 
+    print('[5b] Metas de leads (mes anterior)...')
+    metas_leads = cargar_metas_leads()
+    print(f'    {", ".join(f"{k}:{v}" for k,v in metas_leads.items())}')
+
     total_leads   = sum(c['leads']   for c in campanas)
     total_gasto   = sum(c['gasto']   for c in campanas)
     total_insc    = sum(v['inscritos'] for v in totales_suc.values())
@@ -347,6 +369,7 @@ def main():
         'adsets':      adsets,
         'diario_meta': diario_meta,
         'sucursales':  totales_suc,
+        'metas_leads': metas_leads,
         'diario_suc':  diario_suc,
         'agenda':      agenda,
     }

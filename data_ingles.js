@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "02/06/2026 07:00",
+  "actualizado": "02/06/2026 09:50",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 15,
-    "gasto": 485.6,
-    "cpl": 32.37,
+    "leads_meta": 17,
+    "gasto": 884.07,
+    "cpl": 52.0,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 321.31,
-      "impresiones": 2820,
-      "alcance": 2550,
-      "leads": 9,
-      "cpl": 35.7
+      "gasto": 477.41,
+      "impresiones": 3413,
+      "alcance": 2977,
+      "leads": 10,
+      "cpl": 47.74
     },
     {
       "id": "6917541255358",
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 164.29,
-      "impresiones": 1658,
-      "alcance": 1497,
-      "leads": 6,
-      "cpl": 27.38
+      "gasto": 406.66,
+      "impresiones": 3496,
+      "alcance": 2849,
+      "leads": 7,
+      "cpl": 58.09
     },
     {
       "id": "6909460120758",
@@ -106,9 +106,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 321.31,
-      "leads": 9,
-      "cpl": 35.7
+      "gasto": 477.41,
+      "leads": 10,
+      "cpl": 47.74
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -169,9 +169,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 164.29,
-      "leads": 6,
-      "cpl": 27.38
+      "gasto": 406.66,
+      "leads": 7,
+      "cpl": 58.09
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -240,7 +240,11 @@ const DATA_INGLES = {
   "diario_meta": {
     "2026-06-01": {
       "leads": 15,
-      "gasto": 485.6
+      "gasto": 488.42
+    },
+    "2026-06-02": {
+      "leads": 2,
+      "gasto": 395.65
     }
   },
   "sucursales": {
@@ -268,6 +272,11 @@ const DATA_INGLES = {
       "visitas": 0,
       "inscritos": 0
     }
+  },
+  "metas_leads": {
+    "LINDAVISTA": 179,
+    "IZTACALCO": 185,
+    "ERMITA": 169
   },
   "diario_suc": {},
   "agenda": [
