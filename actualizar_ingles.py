@@ -166,23 +166,30 @@ def parse_seguimiento(text):
         if not suc or not cur_date or cur_date.strftime('%Y-%m') != MES_ACTUAL:
             continue
 
+        # Columnas: leads, llamadas, %llamadas, no_contesta, %no_contesta,
+        #           citas, %citas, cita_efectiva, %cita_ef, %visita, inscritos
         try:
-            v = [si(row[offset + i]) for i in range(6)]
+            leads       = si(row[offset + 0])
+            llamadas    = si(row[offset + 1])
+            no_contesta = si(row[offset + 3])
+            citas       = si(row[offset + 5])
+            visitas     = si(row[offset + 7])
+            inscritos   = si(row[offset + 10])
         except IndexError:
             continue
 
         t = totales[suc]
-        t['leads']       += v[0]
-        t['llamadas']    += v[1]
-        t['no_contesta'] += v[2]
-        t['citas']       += v[3]
-        t['visitas']     += v[4]
-        t['inscritos']   += v[5]
+        t['leads']       += leads
+        t['llamadas']    += llamadas
+        t['no_contesta'] += no_contesta
+        t['citas']       += citas
+        t['visitas']     += visitas
+        t['inscritos']   += inscritos
 
         ds = cur_date.strftime('%Y-%m-%d')
         diario.setdefault(ds, {})[suc] = {
-            'leads': v[0], 'llamadas': v[1],
-            'citas': v[3], 'visitas': v[4], 'inscritos': v[5],
+            'leads': leads, 'llamadas': llamadas,
+            'citas': citas, 'visitas': visitas, 'inscritos': inscritos,
         }
 
     return totales, diario
