@@ -274,6 +274,8 @@ def guardar_historico(data):
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f'    Guardado: data_ingles.js (mes actual)')
 
+META_INSCRITOS_MKT = 45   # alumnos nuevos que debe aportar MKT al mes
+
 # ─── METAS (leads del mes anterior por sucursal) ─────────────────────────────
 def cargar_metas_leads():
     year, month = map(int, MES_ACTUAL.split('-'))
@@ -369,7 +371,8 @@ def main():
         'adsets':      adsets,
         'diario_meta': diario_meta,
         'sucursales':  totales_suc,
-        'metas_leads': metas_leads,
+        'metas_leads':        metas_leads,
+        'meta_inscritos_mkt': META_INSCRITOS_MKT,
         'diario_suc':  diario_suc,
         'agenda':      agenda,
     }

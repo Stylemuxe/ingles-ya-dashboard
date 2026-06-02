@@ -504,7 +504,7 @@ function renderKpis() {
     { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
     { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
     { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta) },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos,k.leads_meta) },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -606,13 +606,23 @@ function renderChurn() {
   const totFalta   = Math.max(0, totChurn - totInscritos);
   const totColor   = totPct >= 100 ? 'var(--green)' : totPct >= 50 ? 'var(--orange)' : 'var(--pink)';
 
+  const metaMkt    = D.meta_inscritos_mkt || 45;
+  const mktPct     = Math.min(100, (totInscritos / metaMkt) * 100);
+  const mktColor   = mktPct >= 100 ? 'var(--green)' : mktPct >= 60 ? 'var(--orange)' : 'var(--pink)';
+  const mktFalta   = Math.max(0, metaMkt - totInscritos);
+
   const html = `<div class="churn-grid">${cards}</div>
   <div class="churn-total">
     <div class="churn-total-item"><div class="churn-total-val" style="color:var(--text)">${$n(totPlantilla)}</div><div class="churn-total-lbl">Plantilla total</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:var(--orange)">${$n(totChurn)}</div><div class="churn-total-lbl">Churn esperado</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${$n(totInscritos)}</div><div class="churn-total-lbl">Inscritos</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${totFalta > 0 ? $n(totFalta)+' faltan' : 'Meta lograda'}</div><div class="churn-total-lbl">vs meta churn</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:${totColor}">${totPct.toFixed(0)}%</div><div class="churn-total-lbl">Recuperado</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:var(--orange)">${$n(metaMkt)}</div><div class="churn-total-lbl">Meta inscritos MKT</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${$n(totInscritos)}</div><div class="churn-total-lbl">Inscritos del mes</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktFalta > 0 ? $n(mktFalta)+' faltan' : '¡Meta MKT lograda!'}</div><div class="churn-total-lbl">vs meta MKT</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktPct.toFixed(0)}%</div><div class="churn-total-lbl">Avance MKT</div></div>
+  </div>
+  <div style="margin-top:10px;padding:0 2px">
+    <div style="height:6px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+      <div style="height:100%;width:${mktPct}%;background:${mktColor};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
+    </div>
   </div>`;
 
   const el1 = document.getElementById('churn-cards');

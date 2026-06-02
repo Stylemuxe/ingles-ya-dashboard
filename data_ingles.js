@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "02/06/2026 09:50",
+  "actualizado": "02/06/2026 09:54",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 17,
-    "gasto": 884.07,
-    "cpl": 52.0,
+    "gasto": 902.75,
+    "cpl": 53.1,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 477.41,
-      "impresiones": 3413,
-      "alcance": 2977,
+      "gasto": 485.69,
+      "impresiones": 3445,
+      "alcance": 3015,
       "leads": 10,
-      "cpl": 47.74
+      "cpl": 48.57
     },
     {
       "id": "6917541255358",
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 406.66,
-      "impresiones": 3496,
-      "alcance": 2849,
+      "gasto": 417.06,
+      "impresiones": 3593,
+      "alcance": 3012,
       "leads": 7,
-      "cpl": 58.09
+      "cpl": 59.58
     },
     {
       "id": "6909460120758",
@@ -106,9 +106,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 477.41,
+      "gasto": 484.9,
       "leads": 10,
-      "cpl": 47.74
+      "cpl": 48.49
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -169,9 +169,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 406.66,
+      "gasto": 417.06,
       "leads": 7,
-      "cpl": 58.09
+      "cpl": 59.58
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -278,6 +278,7 @@ const DATA_INGLES = {
     "IZTACALCO": 185,
     "ERMITA": 169
   },
+  "meta_inscritos_mkt": 45,
   "diario_suc": {},
   "agenda": [
     {
