@@ -258,6 +258,22 @@ tr:hover td { background:rgba(0,240,255,.025); }
 /* ── CHART ── */
 .chart-wrap { padding:20px; height:280px; }
 
+/* ── META LEADS ── */
+.ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.04); }
+.ml-row:last-child { border-bottom:none; }
+.ml-label { min-width:200px; }
+.ml-name { font-size:12px; font-weight:800; letter-spacing:.4px; }
+.ml-sub { font-size:10px; color:var(--muted); margin-top:2px; }
+.ml-bar { flex:1; }
+.ml-bar-track { height:10px; border-radius:99px; background:rgba(255,255,255,.06); overflow:hidden; margin-bottom:5px; }
+.ml-bar-fill { height:100%; border-radius:99px; animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
+.ml-nums { display:flex; justify-content:space-between; font-size:11px; }
+.ml-actual { font-weight:800; font-variant-numeric:tabular-nums; }
+.ml-total-row { margin-top:16px; padding:14px 18px; border-radius:10px; background:rgba(0,240,255,.04); border:1px solid rgba(0,240,255,.1); display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.ml-total-item { text-align:center; }
+.ml-total-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
+.ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
+
 /* ── CHURN RECOVERY ── */
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
@@ -361,6 +377,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- RESUMEN -->
 <div id="pane-resumen" class="pane active">
   <div class="kpi-grid" id="kpis"></div>
+  <div class="card" id="card-meta-leads">
+    <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">—</span></div>
+    <div id="meta-leads-body"></div>
+  </div>
   <div class="g2">
     <div class="card">
       <div class="card-head"><span class="card-title">Embudo del Mes</span></div>
@@ -549,6 +569,81 @@ function renderFunnel() {
       </div>
     </div>`;
   }).join('');
+}
+
+// Meta de leads: mapeo campaña → planteles que cubre
+const CAMP_SUC = {
+  'ERMITA':              { label:'ERMITA',            color:'#E02020', sucursales:['ERMITA'] },
+  'IZT':                 { label:'LINDAVISTA + IZTACALCO', color:'#00f0ff', sucursales:['LINDAVISTA','IZTACALCO'] },
+};
+function campKey(nombre) {
+  const n = nombre.toUpperCase();
+  if (n.includes('ERMITA')) return 'ERMITA';
+  return 'IZT';
+}
+
+function renderMetaLeads() {
+  const metas  = D.metas_leads || {};
+  const camps  = (D.campanas || []).filter(c => c.leads > 0 || c.status === 'ACTIVE');
+  const totMeta = Object.values(metas).reduce((a,v)=>a+v, 0);
+  const totLeads= (D.kpis || {}).leads_meta || 0;
+
+  // Agrupar campañas por key
+  const grupos = {};
+  for (const c of camps) {
+    const k = campKey(c.nombre);
+    if (!grupos[k]) grupos[k] = { leads:0, ...CAMP_SUC[k] };
+    grupos[k].leads += c.leads;
+  }
+
+  // Meta por grupo = suma de metas de sus sucursales
+  for (const k of Object.keys(grupos)) {
+    grupos[k].meta = (grupos[k].sucursales || []).reduce((a,s)=>a+(metas[s]||0), 0);
+  }
+
+  const totPct  = totMeta > 0 ? Math.min(100,(totLeads/totMeta)*100) : 0;
+  const totColor= totPct>=100?'var(--green)':totPct>=50?'var(--orange)':'var(--pink)';
+
+  // Subtítulo del card
+  document.getElementById('meta-leads-sub').textContent =
+    `${$n(totLeads)} de ${$n(totMeta)} — ${totPct.toFixed(1)}% del mes`;
+
+  const rows = Object.entries(grupos).map(([k,g])=>{
+    const pct   = g.meta>0 ? Math.min(100,(g.leads/g.meta)*100) : 0;
+    const color = pct>=100?'var(--green)':pct>=50?'var(--orange)':'var(--pink)';
+    const falta = Math.max(0, g.meta-g.leads);
+    return `<div class="ml-row">
+      <div class="ml-label">
+        <div class="ml-name" style="color:${g.color}">${g.label}</div>
+        <div class="ml-sub">${falta>0 ? 'Faltan '+$n(falta)+' leads' : 'Meta alcanzada'}</div>
+      </div>
+      <div class="ml-bar">
+        <div class="ml-bar-track">
+          <div class="ml-bar-fill" style="width:${pct}%;background:${color}"></div>
+        </div>
+        <div class="ml-nums">
+          <span class="ml-actual" style="color:${color}">${$n(g.leads)} leads</span>
+          <span style="color:var(--muted)">meta ${$n(g.meta)} · ${pct.toFixed(0)}%</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const html = `<div style="padding:4px 0">${rows}</div>
+  <div class="ml-total-row">
+    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(totLeads)}</div><div class="ml-total-lbl">Leads del mes</div></div>
+    <div class="ml-total-item"><div class="ml-total-val" style="color:var(--muted)">${$n(totMeta)}</div><div class="ml-total-lbl">Meta total</div></div>
+    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(Math.max(0,totMeta-totLeads))}</div><div class="ml-total-lbl">Leads pendientes</div></div>
+    <div class="ml-total-item">
+      <div style="height:8px;width:180px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+        <div style="height:100%;width:${totPct}%;background:${totColor};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
+      </div>
+      <div style="font-size:11px;color:${totColor};font-weight:800;margin-top:4px;text-align:center">${totPct.toFixed(1)}% completado</div>
+    </div>
+  </div>`;
+
+  const el = document.getElementById('meta-leads-body');
+  if (el) el.innerHTML = html;
 }
 
 // Plantilla actual y churn esperado (10% mensual)
@@ -874,6 +969,7 @@ function renderDiario() {
 // ── Render todo ──
 function renderAll() {
   renderKpis();
+  renderMetaLeads();
   renderFunnel();
   renderSucMini();
   renderCampMini();
