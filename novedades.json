@@ -1,0 +1,59 @@
+{
+  "periodo": "Junio 2026",
+  "agencia": "Tráfico ETH",
+  "cliente": "Inglés YA",
+  "resumen": "Optimización de campañas, separación por plantel y corrección de métricas del Contact Center.",
+  "novedades": [
+    {
+      "fecha": "02/06/2026",
+      "tipo": "estrategia",
+      "titulo": "Separación de campañas por plantel",
+      "descripcion": "Se están creando 3 campañas independientes (ERMITA, LINDAVISTA, IZTACALCO) para medir el desempeño real de cada sede y optimizar el presupuesto de forma individual. Actualmente en configuración.",
+      "detalle": [
+        "ERMITA: $695.17/día (sin cambio)",
+        "LINDAVISTA: $186.13/día (campaña nueva)",
+        "IZTACALCO: $193.71/día (campaña nueva)"
+      ]
+    },
+    {
+      "fecha": "02/06/2026",
+      "tipo": "optimizacion",
+      "titulo": "Metas de leads y churn integradas al dashboard",
+      "descripcion": "Se configuraron las metas mensuales de leads por sede (basadas en el mes anterior) y la meta de 45 inscritos MKT. El dashboard ahora muestra el avance en tiempo real vs cada meta.",
+      "detalle": [
+        "Meta ERMITA: 169 leads/mes",
+        "Meta LINDAVISTA: 179 leads/mes",
+        "Meta IZTACALCO: 185 leads/mes",
+        "Meta inscritos MKT: 45/mes"
+      ]
+    },
+    {
+      "fecha": "02/06/2026",
+      "tipo": "novedad",
+      "titulo": "Dashboard en línea con actualización automática",
+      "descripcion": "El dashboard se actualiza automáticamente cada 4 horas desde la API de Meta Ads. No requiere intervención manual para ver los datos más recientes.",
+      "detalle": [
+        "Actualización cada 4 horas vía GitHub Actions",
+        "Historial de meses disponible (Mayo y Junio 2026)",
+        "Datos del Contact Center integrados"
+      ]
+    },
+    {
+      "fecha": "01/06/2026",
+      "tipo": "correccion",
+      "titulo": "Corrección en lectura de datos del Contact Center",
+      "descripcion": "Se detectó y corrigió un error en la importación de datos del seguimiento de Yolanda. Las columnas de porcentaje estaban siendo interpretadas como números, causando datos incorrectos de inscritos.",
+      "detalle": [
+        "Inscritos Mayo corregido: 5 (antes mostraba 39)",
+        "Citas, llamadas y no-contesta ahora correctos",
+        "Datos de junio en adelante serán precisos"
+      ]
+    }
+  ],
+  "pendientes": [
+    "Activar campañas LINDAVISTA e IZTACALCO en Business Manager",
+    "Pausar campaña combinada 'Ingles- Leads Mensajes 1 IZT Y LIND' al activar las nuevas",
+    "Verificar geo de Lindavista antes de activar",
+    "Revisión de creativos para julio 2026"
+  ]
+}

@@ -258,6 +258,90 @@ tr:hover td { background:rgba(0,240,255,.025); }
 /* ── CHART ── */
 .chart-wrap { padding:20px; height:280px; }
 
+/* ── REPORTE ── */
+.reporte-header {
+  background: linear-gradient(135deg, rgba(123,47,247,.18) 0%, rgba(27,63,160,.18) 100%);
+  border: 1px solid rgba(123,47,247,.25); border-radius: var(--r);
+  padding: 28px 32px; margin-bottom: 20px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+  position: relative; overflow: hidden;
+}
+.reporte-header::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--purple), var(--blue), var(--cyan));
+}
+.reporte-header-left { display: flex; flex-direction: column; gap: 6px; }
+.reporte-titulo { font-size: 22px; font-weight: 900; letter-spacing: -.3px; }
+.reporte-sub { font-size: 13px; color: var(--muted); font-weight: 600; }
+.reporte-agencia {
+  background: rgba(123,47,247,.15); border: 1px solid rgba(123,47,247,.3);
+  border-radius: 10px; padding: 10px 18px; text-align: center;
+}
+.reporte-agencia-name { font-size: 15px; font-weight: 900; color: var(--purple); }
+.reporte-agencia-lbl  { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; margin-top: 2px; }
+
+.reporte-resumen {
+  background: var(--c3); border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--r); padding: 18px 24px; margin-bottom: 20px;
+  font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 500;
+}
+
+.nov-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 20px; }
+@media(max-width: 860px) { .nov-grid { grid-template-columns: 1fr; } }
+
+.nov-card {
+  background: var(--c1); border: 1px solid rgba(255,255,255,.05);
+  border-radius: var(--r); padding: 22px 24px; position: relative;
+  overflow: hidden; transition: transform .25s, box-shadow .25s;
+  animation: cardIn .5s cubic-bezier(.22,1,.36,1) both;
+}
+.nov-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+.nov-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--nc); }
+.nov-card::after {
+  content: ''; position: absolute; top: 0; right: 0; width: 120px; height: 120px;
+  background: radial-gradient(circle at top right, var(--nc-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.nov-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; gap: 12px; }
+.nov-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 800;
+  letter-spacing: .5px; text-transform: uppercase; white-space: nowrap;
+  background: var(--nc-bg); color: var(--nc); border: 1px solid var(--nc-border);
+}
+.nov-fecha { font-size: 11px; color: var(--muted); font-weight: 600; white-space: nowrap; margin-top: 2px; }
+.nov-titulo { font-size: 16px; font-weight: 800; margin-bottom: 10px; line-height: 1.3; }
+.nov-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 14px; }
+.nov-detalle { display: flex; flex-direction: column; gap: 6px; }
+.nov-detalle-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--text); font-weight: 600;
+  background: rgba(255,255,255,.03); border-radius: 8px; padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,.04);
+}
+.nov-detalle-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--nc); flex-shrink: 0; }
+
+.pendientes-card {
+  background: rgba(255,153,0,.06); border: 1px solid rgba(255,153,0,.2);
+  border-radius: var(--r); padding: 22px 24px;
+}
+.pendientes-titulo { font-size: 14px; font-weight: 800; color: var(--orange); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.pendiente-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 10px; margin-bottom: 8px;
+  background: rgba(255,153,0,.05); border: 1px solid rgba(255,153,0,.1);
+  font-size: 13px; font-weight: 600; color: var(--text);
+  transition: background .2s;
+}
+.pendiente-item:last-child { margin-bottom: 0; }
+.pendiente-item:hover { background: rgba(255,153,0,.1); }
+.pendiente-num {
+  width: 22px; height: 22px; border-radius: 50%; background: rgba(255,153,0,.2);
+  color: var(--orange); font-size: 11px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
 /* ── META LEADS ── */
 .ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.04); }
 .ml-row:last-child { border-bottom:none; }
@@ -372,6 +456,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="adsets">Ad Sets</div>
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
+  <div class="tab" data-pane="reporte">Reporte</div>
 </nav>
 
 <!-- RESUMEN -->
@@ -444,6 +529,11 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
+<!-- REPORTE -->
+<div id="pane-reporte" class="pane">
+  <div id="reporte-body"></div>
+</div>
+
 <!-- DIARIO -->
 <div id="pane-diario" class="pane">
   <div class="card">
@@ -481,9 +571,69 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.pane').forEach(p=>p.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById('pane-'+tab.dataset.pane).classList.add('active');
-    if(tab.dataset.pane==='diario') renderDiario();
+    if(tab.dataset.pane==='diario')  renderDiario();
+    if(tab.dataset.pane==='reporte') renderReporte();
   });
 });
+
+// Reporte
+const TIPO_CFG = {
+  estrategia:  { icon:'🚀', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
+  optimizacion:{ icon:'⚡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
+  novedad:     { icon:'✨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
+  correccion:  { icon:'🔧', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
+  alerta:      { icon:'🔴', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
+};
+
+async function renderReporte() {
+  const el = document.getElementById('reporte-body');
+  if (!el) return;
+  let N;
+  try {
+    const r = await fetch('novedades.json');
+    N = await r.json();
+  } catch(e) {
+    el.innerHTML = '<div class="card" style="padding:32px;text-align:center;color:var(--muted)">Sin reporte disponible</div>';
+    return;
+  }
+
+  const cards = (N.novedades || []).map((n, i) => {
+    const cfg = TIPO_CFG[n.tipo] || TIPO_CFG.novedad;
+    const detalle = (n.detalle || []).map(d =>
+      `<div class="nov-detalle-item">${d}</div>`).join('');
+    return `<div class="nov-card" style="--nc:${cfg.color};--nc-glow:${cfg.glow};--nc-bg:${cfg.bg};--nc-border:${cfg.border};animation-delay:${i * .08}s">
+      <div class="nov-top">
+        <span class="nov-badge">${cfg.icon} ${cfg.label}</span>
+        <span class="nov-fecha">${n.fecha}</span>
+      </div>
+      <div class="nov-titulo">${n.titulo}</div>
+      <div class="nov-desc">${n.descripcion}</div>
+      ${detalle ? `<div class="nov-detalle">${detalle}</div>` : ''}
+    </div>`;
+  }).join('');
+
+  const pendientes = (N.pendientes || []).map((p, i) =>
+    `<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`
+  ).join('');
+
+  el.innerHTML = `
+    <div class="reporte-header">
+      <div class="reporte-header-left">
+        <div class="reporte-titulo">Reporte de Actividad · ${N.periodo || '—'}</div>
+        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || '—'}</strong> &nbsp;·&nbsp; ${N.novedades?.length || 0} actualizaciones este periodo</div>
+      </div>
+      <div class="reporte-agencia">
+        <div class="reporte-agencia-name">${N.agencia || '—'}</div>
+        <div class="reporte-agencia-lbl">Agencia</div>
+      </div>
+    </div>
+    ${N.resumen ? `<div class="reporte-resumen">${N.resumen}</div>` : ''}
+    <div class="nov-grid">${cards}</div>
+    ${pendientes ? `<div class="pendientes-card">
+      <div class="pendientes-titulo">📋 Próximos pasos</div>
+      ${pendientes}
+    </div>` : ''}`;
+}
 
 // Animated counter
 function animCount(el, target, isMoney) {
