@@ -597,11 +597,11 @@ async function renderReporte() {
     return;
   }
 
-  const cards = (N.novedades || []).map((n, i) => {
+  const renderCards = (lista, offset=0) => lista.map((n, i) => {
     const cfg = TIPO_CFG[n.tipo] || TIPO_CFG.novedad;
     const detalle = (n.detalle || []).map(d =>
       `<div class="nov-detalle-item">${d}</div>`).join('');
-    return `<div class="nov-card" style="--nc:${cfg.color};--nc-glow:${cfg.glow};--nc-bg:${cfg.bg};--nc-border:${cfg.border};animation-delay:${i * .08}s">
+    return `<div class="nov-card" style="--nc:${cfg.color};--nc-glow:${cfg.glow};--nc-bg:${cfg.bg};--nc-border:${cfg.border};animation-delay:${(i+offset) * .08}s">
       <div class="nov-top">
         <span class="nov-badge">${cfg.icon} ${cfg.label}</span>
         <span class="nov-fecha">${n.fecha}</span>
@@ -612,15 +612,35 @@ async function renderReporte() {
     </div>`;
   }).join('');
 
-  const pendientes = (N.pendientes || []).map((p, i) =>
-    `<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`
-  ).join('');
+  const enProceso  = N.en_proceso || [];
+  const novedades  = N.novedades  || [];
+  const pendientes = N.pendientes || [];
+  const totalActs  = novedades.length + enProceso.length;
+
+  const secEnProceso = enProceso.length ? `
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+      <span style="font-size:13px;font-weight:800;color:var(--orange)">🔄 En proceso</span>
+      <div style="flex:1;height:1px;background:rgba(255,153,0,.2)"></div>
+    </div>
+    <div class="nov-grid" style="margin-bottom:20px">${renderCards(enProceso, 0)}</div>` : '';
+
+  const secNovedades = novedades.length ? `
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+      <span style="font-size:13px;font-weight:800;color:var(--cyan)">✅ Realizados</span>
+      <div style="flex:1;height:1px;background:rgba(0,240,255,.15)"></div>
+    </div>
+    <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length)}</div>` : '';
+
+  const secPendientes = pendientes.length ? `<div class="pendientes-card">
+    <div class="pendientes-titulo">📋 Próximos pasos</div>
+    ${pendientes.map((p,i)=>`<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`).join('')}
+  </div>` : '';
 
   el.innerHTML = `
     <div class="reporte-header">
       <div class="reporte-header-left">
         <div class="reporte-titulo">Reporte de Actividad · ${N.periodo || '—'}</div>
-        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || '—'}</strong> &nbsp;·&nbsp; ${N.novedades?.length || 0} actualizaciones este periodo</div>
+        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || '—'}</strong> &nbsp;·&nbsp; ${totalActs} actualizaciones este periodo</div>
       </div>
       <div class="reporte-agencia">
         <div class="reporte-agencia-name">${N.agencia || '—'}</div>
@@ -628,11 +648,9 @@ async function renderReporte() {
       </div>
     </div>
     ${N.resumen ? `<div class="reporte-resumen">${N.resumen}</div>` : ''}
-    <div class="nov-grid">${cards}</div>
-    ${pendientes ? `<div class="pendientes-card">
-      <div class="pendientes-titulo">📋 Próximos pasos</div>
-      ${pendientes}
-    </div>` : ''}`;
+    ${secEnProceso}
+    ${secNovedades}
+    ${secPendientes}`;
 }
 
 // Animated counter

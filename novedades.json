@@ -50,6 +50,20 @@
       ]
     }
   ],
+  "en_proceso": [
+    {
+      "fecha": "02/06/2026",
+      "tipo": "estrategia",
+      "titulo": "Propuesta de presupuesto basada en metas",
+      "descripcion": "Se está elaborando una propuesta de presupuesto mensual alineada a las metas de inscritos por plantel. El objetivo es definir la inversión óptima en Meta Ads para alcanzar los 45 inscritos MKT al mes.",
+      "detalle": [
+        "Análisis de CPL histórico por plantel (mayo 2026)",
+        "Proyección de leads necesarios para 45 inscritos",
+        "Distribución de presupuesto por sede: ERMITA, LINDAVISTA, IZTACALCO",
+        "Escenarios: presupuesto conservador, moderado y agresivo"
+      ]
+    }
+  ],
   "pendientes": [
     "Activar campañas LINDAVISTA e IZTACALCO en Business Manager",
     "Pausar campaña combinada 'Ingles- Leads Mensajes 1 IZT Y LIND' al activar las nuevas",
