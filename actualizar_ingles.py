@@ -76,10 +76,10 @@ def time_range():
     return json.dumps({'since': f'{MES_ACTUAL}-01', 'until': HOY.strftime('%Y-%m-%d')})
 
 def fetch_campanas():
+    tr = time_range()
     resp = meta_get(f'{AD_ACCOUNT}/campaigns', {
-        'fields':     'name,status,daily_budget,insights{spend,impressions,reach,actions}',
-        'time_range': time_range(),
-        'limit':      25,
+        'fields': f'name,status,daily_budget,insights.time_range({tr}){{spend,impressions,reach,actions}}',
+        'limit':  25,
     })
     out = []
     for c in resp.get('data', []):
@@ -101,10 +101,10 @@ def fetch_campanas():
     return out
 
 def fetch_adsets():
+    tr = time_range()
     resp = meta_get(f'{AD_ACCOUNT}/adsets', {
-        'fields':     'name,status,daily_budget,campaign_id,insights{spend,actions}',
-        'time_range': time_range(),
-        'limit':      50,
+        'fields': f'name,status,daily_budget,campaign_id,insights.time_range({tr}){{spend,actions}}',
+        'limit':  50,
     })
     out = []
     for a in resp.get('data', []):

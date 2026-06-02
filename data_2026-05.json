@@ -1,11 +1,11 @@
 {
-  "actualizado": "01/06/2026 00:36",
+  "actualizado": "02/06/2026 00:52",
   "mes": "Mayo 2026",
   "mes_id": "2026-05",
   "kpis": {
-    "leads_meta": 619,
-    "gasto": 31753.85,
-    "cpl": 51.3,
+    "leads_meta": 657,
+    "gasto": 32669.12,
+    "cpl": 49.72,
     "citas": 228,
     "visitas": 0,
     "inscritos": 39
@@ -16,11 +16,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 20538.06,
-      "impresiones": 192933,
-      "alcance": 102712,
-      "leads": 444,
-      "cpl": 46.26
+      "gasto": 21128.74,
+      "impresiones": 199489,
+      "alcance": 106553,
+      "leads": 470,
+      "cpl": 44.95
     },
     {
       "id": "6917541255358",
@@ -60,11 +60,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 11215.79,
-      "impresiones": 150481,
-      "alcance": 84705,
-      "leads": 175,
-      "cpl": 64.09
+      "gasto": 11540.38,
+      "impresiones": 154379,
+      "alcance": 86146,
+      "leads": 187,
+      "cpl": 61.71
     },
     {
       "id": "6909460120758",
@@ -106,9 +106,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 20538.06,
-      "leads": 444,
-      "cpl": 46.26
+      "gasto": 21128.74,
+      "leads": 470,
+      "cpl": 44.95
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -169,9 +169,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 11215.79,
-      "leads": 175,
-      "cpl": 64.09
+      "gasto": 11540.38,
+      "leads": 187,
+      "cpl": 61.71
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -356,11 +356,11 @@
     },
     "2026-05-30": {
       "leads": 29,
-      "gasto": 1290.66
+      "gasto": 1290.78
     },
     "2026-05-31": {
       "leads": 38,
-      "gasto": 907.86
+      "gasto": 915.15
     }
   },
   "sucursales": {
@@ -1268,7 +1268,7 @@
       "tel": "5591895086",
       "fecha_cita": "25/05/2026 11:00",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": true,
       "obs": "vista al plantel"
     },
     {
@@ -1342,6 +1342,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luis",
+      "tel": "5566818475",
+      "fecha_cita": "05-06-26 6:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
     },
     {
       "sucursal": "IZTACALCO",
@@ -1483,15 +1492,6 @@
       "nombre": "Mireya",
       "tel": "7711158607",
       "fecha_cita": "13-05-26 6:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "clase muestra en linea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Luis",
-      "tel": "5566818475",
-      "fecha_cita": "16-05-26 9:00",
       "asistio": false,
       "inscrito": false,
       "obs": "clase muestra en linea"

@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "01/06/2026 15:07",
+  "actualizado": "02/06/2026 00:51",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 640,
-    "gasto": 31737.89,
-    "cpl": 49.59,
+    "leads_meta": 15,
+    "gasto": 484.82,
+    "cpl": 32.32,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 20516.92,
-      "impresiones": 188235,
-      "alcance": 101177,
-      "leads": 455,
-      "cpl": 45.09
+      "gasto": 320.86,
+      "impresiones": 2815,
+      "alcance": 2544,
+      "leads": 9,
+      "cpl": 35.65
     },
     {
       "id": "6917541255358",
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 11220.97,
-      "impresiones": 149054,
-      "alcance": 83558,
-      "leads": 185,
-      "cpl": 60.65
+      "gasto": 163.96,
+      "impresiones": 1653,
+      "alcance": 1497,
+      "leads": 6,
+      "cpl": 27.33
     },
     {
       "id": "6909460120758",
@@ -106,9 +106,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 20516.92,
-      "leads": 455,
-      "cpl": 45.09
+      "gasto": 320.86,
+      "leads": 9,
+      "cpl": 35.65
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -169,9 +169,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 11220.97,
-      "leads": 185,
-      "cpl": 60.65
+      "gasto": 163.96,
+      "leads": 6,
+      "cpl": 27.33
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -239,8 +239,8 @@ const DATA_INGLES = {
   ],
   "diario_meta": {
     "2026-06-01": {
-      "leads": 13,
-      "gasto": 422.25
+      "leads": 15,
+      "gasto": 484.82
     }
   },
   "sucursales": {
@@ -533,6 +533,15 @@ const DATA_INGLES = {
       "obs": "clase muestra"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luis",
+      "tel": "5566818475",
+      "fecha_cita": "05-06-26 6:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Brianda Rosas/Kleb Alpizar Rosas",
       "tel": "55 4933 9614",
@@ -672,15 +681,6 @@ const DATA_INGLES = {
       "nombre": "Mireya",
       "tel": "7711158607",
       "fecha_cita": "13-05-26 6:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "clase muestra en linea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Luis",
-      "tel": "5566818475",
-      "fecha_cita": "16-05-26 9:00",
       "asistio": false,
       "inscrito": false,
       "obs": "clase muestra en linea"
