@@ -750,23 +750,28 @@ function sucDot(s) {
 }
 
 function renderSucMini() {
-  const suc=D.sucursales||{};
-  const rows=Object.entries(suc).map(([s,v])=>{
-    const cfg=SUC[s]||{c:'#888'};
+  const suc       = D.sucursales || {};
+  const metaLeads = leadsXSede();
+  const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
+  const rows = ORDEN.map(s => {
+    const v      = suc[s] || {};
+    const leads  = metaLeads[s] || 0;
+    const citas  = v.citas     || 0;
+    const insc   = v.inscritos || 0;
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-size:13px;font-weight:800">${s}</strong></span></td>
-      <td class="num" style="color:#00f0ff">${$n(v.leads)}</td>
-      <td class="num" style="color:#7b2ff7">${$n(v.citas)}</td>
-      <td class="num" style="color:#00ff88">${$n(v.inscritos)}</td>
+      <td class="num" style="color:#00f0ff">${$n(leads)}</td>
+      <td class="num" style="color:#7b2ff7">${$n(citas)}</td>
+      <td class="num" style="color:#00ff88">${$n(insc)}</td>
       <td><div class="pbar-wrap">
-        <div class="pbar"><div class="pbar-fill" style="width:${pctN(v.inscritos,v.leads)}%"></div></div>
-        <div class="pbar-val">${pct(v.inscritos,v.leads)}</div>
+        <div class="pbar"><div class="pbar-fill" style="width:${pctN(insc,leads)}%"></div></div>
+        <div class="pbar-val">${pct(insc,leads)}</div>
       </div></td>
     </tr>`;
   }).join('');
   document.getElementById('tbl-suc-mini').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin datos</td></tr>'}</tbody>`;
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
+     <tbody>${rows}</tbody>`;
 }
 
 function renderCampMini() {
