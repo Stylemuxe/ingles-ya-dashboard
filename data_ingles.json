@@ -1,11 +1,11 @@
 {
-  "actualizado": "01/06/2026 06:45",
+  "actualizado": "01/06/2026 15:07",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 619,
-    "gasto": 31753.85,
-    "cpl": 51.3,
+    "leads_meta": 640,
+    "gasto": 31737.89,
+    "cpl": 49.59,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 20538.06,
-      "impresiones": 192933,
-      "alcance": 102712,
-      "leads": 444,
-      "cpl": 46.26
+      "gasto": 20516.92,
+      "impresiones": 188235,
+      "alcance": 101177,
+      "leads": 455,
+      "cpl": 45.09
     },
     {
       "id": "6917541255358",
@@ -60,11 +60,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 11215.79,
-      "impresiones": 150481,
-      "alcance": 84705,
-      "leads": 175,
-      "cpl": 64.09
+      "gasto": 11220.97,
+      "impresiones": 149054,
+      "alcance": 83558,
+      "leads": 185,
+      "cpl": 60.65
     },
     {
       "id": "6909460120758",
@@ -106,9 +106,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 20538.06,
-      "leads": 444,
-      "cpl": 46.26
+      "gasto": 20516.92,
+      "leads": 455,
+      "cpl": 45.09
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -169,9 +169,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 11215.79,
-      "leads": 175,
-      "cpl": 64.09
+      "gasto": 11220.97,
+      "leads": 185,
+      "cpl": 60.65
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -237,7 +237,12 @@
       "cpl": 0
     }
   ],
-  "diario_meta": {},
+  "diario_meta": {
+    "2026-06-01": {
+      "leads": 13,
+      "gasto": 422.25
+    }
+  },
   "sucursales": {
     "LINDAVISTA": {
       "leads": 0,
@@ -452,7 +457,7 @@
       "tel": "5591895086",
       "fecha_cita": "25/05/2026 11:00",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": true,
       "obs": "vista al plantel"
     },
     {
