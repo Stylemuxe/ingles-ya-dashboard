@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inglés YA · Dashboard</title>
+<title>InglÃ©s YA Â· Dashboard</title>
 <link href="https://fonts.cdnfonts.com/css/gilroy-free" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -45,7 +45,7 @@ body::before {
     radial-gradient(ellipse 40% 30% at 0% 60%, rgba(27,63,160,.06) 0%, transparent 60%);
 }
 
-/* ── HEADER ── */
+/* â”€â”€ HEADER â”€â”€ */
 header {
   position: sticky; top: 0; z-index: 100;
   background: rgba(13,11,30,.92);
@@ -88,7 +88,7 @@ header::after {
 #mes-select:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.2); }
 #mes-select option { background: #1e1b3c; color: var(--text); }
 
-/* ── TABS ── */
+/* â”€â”€ TABS â”€â”€ */
 nav {
   position: sticky; top: 64px; z-index: 99;
   background: rgba(13,11,30,.96);
@@ -106,12 +106,12 @@ nav::-webkit-scrollbar { height: 0; }
 .tab:hover { color: var(--muted); }
 .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); text-shadow: 0 0 14px rgba(0,240,255,.6); }
 
-/* ── PANES ── */
+/* â”€â”€ PANES â”€â”€ */
 .pane { display: none; padding: 24px 28px; position: relative; z-index: 1; }
 .pane.active { display: block; animation: paneIn .35s ease both; }
 @keyframes paneIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 
-/* ── KPI GRID ── */
+/* â”€â”€ KPI GRID â”€â”€ */
 .kpi-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; margin-bottom: 20px; }
 @media (max-width:1300px) { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width:700px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
@@ -178,11 +178,11 @@ nav::-webkit-scrollbar { height: 0; }
   text-transform:uppercase; color:var(--muted); text-align:center;
 }
 
-/* ── GRID 2 ── */
+/* â”€â”€ GRID 2 â”€â”€ */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .g2 { grid-template-columns:1fr; } }
 
-/* ── CARD ── */
+/* â”€â”€ CARD â”€â”€ */
 .card {
   background: var(--c1); border:1px solid rgba(255,255,255,.05); border-radius:var(--r);
   overflow:hidden; margin-bottom:14px; position:relative;
@@ -201,11 +201,11 @@ nav::-webkit-scrollbar { height: 0; }
 .card-title { font-size:11px; font-weight:800; letter-spacing:.9px; text-transform:uppercase; color:var(--muted); }
 .card-sub { font-size:11px; color:var(--dim); font-weight:600; }
 
-/* ── FUNNEL ── */
+/* â”€â”€ FUNNEL â”€â”€ */
 .funnel { display:flex; padding:22px 16px; gap:6px; }
 .funnel-step { flex:1; position:relative; text-align:center; }
 .funnel-step:not(:last-child)::after {
-  content:'›'; position:absolute; right:-5px; top:50%;
+  content:'â€º'; position:absolute; right:-5px; top:50%;
   transform:translateY(-50%); color:var(--dim); font-size:22px; z-index:1;
 }
 .f-pill {
@@ -223,7 +223,7 @@ nav::-webkit-scrollbar { height: 0; }
 .f-lbl { font-size:9px; font-weight:700; letter-spacing:.7px; text-transform:uppercase; margin-top:3px; opacity:.8; }
 .f-pct { font-size:10px; margin-top:5px; color:var(--dim); }
 
-/* ── TABLE ── */
+/* â”€â”€ TABLE â”€â”€ */
 table { width:100%; border-collapse:collapse; }
 th {
   background:rgba(13,11,30,.6); color:var(--dim);
@@ -237,14 +237,14 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .num { font-weight:700; font-variant-numeric:tabular-nums; font-size:14px; }
 .tot td { font-weight:800; font-size:14px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
 
-/* ── BADGES ── */
+/* â”€â”€ BADGES â”€â”€ */
 .badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:5px; font-size:10px; font-weight:700; letter-spacing:.3px; }
 .ba  { background:rgba(0,255,136,.12); color:var(--green); }
 .bp  { background:rgba(255,153,0,.1);  color:var(--orange); }
 .bsi { background:rgba(0,255,136,.12); color:var(--green); }
 .bno { background:rgba(255,0,102,.1);  color:var(--pink); }
 
-/* ── PROGRESS BAR ── */
+/* â”€â”€ PROGRESS BAR â”€â”€ */
 .pbar-wrap { display:flex; align-items:center; gap:8px; }
 .pbar { flex:1; height:4px; border-radius:99px; background:rgba(255,255,255,.05); overflow:hidden; }
 .pbar-fill {
@@ -255,10 +255,10 @@ tr:hover td { background:rgba(0,240,255,.025); }
 @keyframes barGrow { from{width:0!important} }
 .pbar-val { font-size:12px; font-weight:700; color:var(--muted); min-width:38px; text-align:right; }
 
-/* ── CHART ── */
+/* â”€â”€ CHART â”€â”€ */
 .chart-wrap { padding:20px; height:280px; }
 
-/* ── REPORTE ── */
+/* â”€â”€ REPORTE â”€â”€ */
 .reporte-header {
   background: linear-gradient(135deg, rgba(123,47,247,.18) 0%, rgba(27,63,160,.18) 100%);
   border: 1px solid rgba(123,47,247,.25); border-radius: var(--r);
@@ -342,7 +342,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 
-/* ── META LEADS ── */
+/* â”€â”€ META LEADS â”€â”€ */
 .ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.04); }
 .ml-row:last-child { border-bottom:none; }
 .ml-label { min-width:200px; }
@@ -358,65 +358,48 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .ml-total-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
 .ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
-/* ── SIMULADOR PRESUPUESTO ── */
-.sim-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px; }
-.sim-badge { background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple); border-radius:8px; padding:5px 14px; font-size:11px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; }
-.sim-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-@media(max-width:860px){ .sim-grid { grid-template-columns:1fr; } }
-
-.sim-funnel { display:flex; flex-direction:column; gap:10px; }
-.sim-step {
-  background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:12px;
-  padding:14px 18px; position:relative;
-}
-.sim-step-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
-.sim-step-name { font-size:12px; font-weight:800; letter-spacing:.3px; color:var(--text); display:flex; align-items:center; gap:8px; }
-.sim-step-base { font-size:10px; color:var(--muted); font-weight:600; }
-.sim-slider-wrap { display:flex; align-items:center; gap:12px; }
-.sim-slider {
-  -webkit-appearance:none; appearance:none; flex:1; height:6px;
-  border-radius:99px; outline:none; cursor:pointer;
-  background:rgba(255,255,255,.08);
-}
-.sim-slider::-webkit-slider-thumb {
-  -webkit-appearance:none; width:18px; height:18px; border-radius:50%;
-  background:var(--sc,var(--cyan)); cursor:pointer; border:2px solid var(--bg);
-  box-shadow:0 0 8px var(--sc,var(--cyan));
-}
-.sim-val {
-  min-width:46px; text-align:center; font-size:14px; font-weight:900;
-  color:var(--sc,var(--cyan)); font-variant-numeric:tabular-nums;
-}
-.sim-arrow { text-align:center; color:var(--dim); font-size:18px; line-height:1; }
-
-.sim-results { display:flex; flex-direction:column; gap:12px; }
-.sim-result-card {
-  border-radius:14px; padding:20px 22px;
-  border:1px solid rgba(255,255,255,.07); background:var(--c3);
-  transition:background .3s, border-color .3s;
-}
-.sim-result-card.positivo { background:rgba(0,255,136,.05); border-color:rgba(0,255,136,.2); }
-.sim-result-card.negativo { background:rgba(224,32,32,.05); border-color:rgba(224,32,32,.2); }
-.sim-result-card.neutro  { background:rgba(255,153,0,.05); border-color:rgba(255,153,0,.2); }
-.sim-result-lbl { font-size:10px; color:var(--muted); font-weight:700; letter-spacing:.6px; text-transform:uppercase; margin-bottom:8px; }
-.sim-result-val { font-size:28px; font-weight:900; font-variant-numeric:tabular-nums; line-height:1; }
-.sim-result-sub { font-size:12px; color:var(--muted); margin-top:6px; font-weight:600; }
-.sim-result-delta { font-size:13px; font-weight:800; margin-top:4px; }
-
-.sim-funnel-mini { display:flex; align-items:center; gap:0; flex-wrap:wrap; margin-top:12px; }
-.sim-fm-step { flex:1; min-width:60px; text-align:center; position:relative; }
-.sim-fm-step::after { content:'→'; position:absolute; right:-8px; top:50%; transform:translateY(-50%); color:var(--dim); font-size:14px; }
-.sim-fm-step:last-child::after { display:none; }
-.sim-fm-val { font-size:16px; font-weight:900; color:var(--cyan); }
-.sim-fm-lbl { font-size:9px; color:var(--muted); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-top:2px; }
+/* â”€â”€ SIMULADOR PRESUPUESTO â”€â”€ */
 .sim-reset-btn {
   background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple);
   border-radius:8px; padding:7px 16px; font-size:11px; font-weight:800; cursor:pointer;
   font-family:inherit; letter-spacing:.4px; transition:background .2s;
 }
 .sim-reset-btn:hover { background:rgba(123,47,247,.28); }
+.sim-section-title {
+  font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
+  color:var(--muted); margin:22px 0 10px; display:flex; align-items:center; gap:10px;
+}
+.sim-section-title::after { content:''; flex:1; height:1px; background:rgba(255,255,255,.07); }
+.sim-kpi-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+.sim-kpi { background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:14px 20px; flex:1; min-width:110px; }
+.sim-kpi-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
+.sim-kpi-lbl { font-size:10px; color:var(--muted); font-weight:700; letter-spacing:.5px; text-transform:uppercase; margin-top:4px; }
+.ref-table { width:100%; border-collapse:collapse; font-size:12px; }
+.ref-table th { background:rgba(13,11,30,.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); white-space:nowrap; }
+.ref-table th:first-child { text-align:left; }
+.ref-table td { padding:9px 12px; border-bottom:1px solid rgba(255,255,255,.03); text-align:center; font-variant-numeric:tabular-nums; }
+.ref-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
+.ref-table tr:hover td { background:rgba(255,255,255,.02); }
+.ref-table .tot td { font-weight:800; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; font-size:13px; }
+.proy-table { width:100%; border-collapse:collapse; }
+.proy-table th { background:rgba(13,11,30,.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); white-space:nowrap; }
+.proy-table th:first-child { text-align:left; }
+.proy-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.03); text-align:center; vertical-align:middle; }
+.proy-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
+.proy-table .tot td { font-weight:800; font-size:13px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
+.proy-input {
+  width:66px; background:rgba(0,255,136,.08); border:1px solid rgba(0,255,136,.3);
+  color:var(--green); border-radius:7px; padding:5px 8px; font-size:13px; font-weight:800;
+  text-align:center; font-family:inherit; font-variant-numeric:tabular-nums;
+  outline:none; transition:border-color .2s, box-shadow .2s;
+}
+.proy-input:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(0,255,136,.12); }
+.proy-calc { font-weight:800; font-variant-numeric:tabular-nums; font-size:13px; }
+.vs-chip { font-size:10px; font-weight:800; padding:2px 8px; border-radius:5px; margin-left:4px; vertical-align:middle; }
+.vs-ok  { background:rgba(0,255,136,.15); color:var(--green); }
+.vs-bad { background:rgba(224,32,32,.15);  color:var(--pink); }
 
-/* ── CHURN RECOVERY ── */
+/* â”€â”€ CHURN RECOVERY â”€â”€ */
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
 .churn-card {
@@ -444,7 +427,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .churn-total-val { font-size:20px; font-weight:800; font-variant-numeric:tabular-nums; }
 .churn-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
-/* ── SUC CARDS ── */
+/* â”€â”€ SUC CARDS â”€â”€ */
 .suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .suc-cards { grid-template-columns:1fr; } }
 .suc-card {
@@ -474,7 +457,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .conv-label { font-size:10px; color:var(--dim); font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
 .conv-rate { font-family:'Gilroy','Montserrat',sans-serif; font-size:24px; font-weight:800; color:var(--green); text-shadow:0 0 16px rgba(0,255,136,.4); }
 
-/* ── SELECT ── */
+/* â”€â”€ SELECT â”€â”€ */
 select.filter { background:var(--c3); border:1px solid rgba(255,255,255,.1); color:var(--text); padding:6px 14px; border-radius:8px; font-size:11px; font-weight:700; letter-spacing:.3px; cursor:pointer; }
 select.filter:focus { outline:none; border-color:var(--cyan); }
 
@@ -492,7 +475,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <img src="logo.jpg" alt="Inglés YA">
+    <img src="logo.jpg" alt="InglÃ©s YA">
   </div>
   <div class="header-right">
     <div class="mes-selector">
@@ -502,7 +485,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       </select>
     </div>
     <div class="live-badge"><div class="live-dot"></div>En vivo</div>
-    <span id="updated">—</span>
+    <span id="updated">â€”</span>
   </div>
 </header>
 
@@ -510,7 +493,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <nav>
   <div class="tab active" data-pane="resumen">Resumen</div>
   <div class="tab" data-pane="sucursales">Sucursales</div>
-  <div class="tab" data-pane="campanas">Campañas</div>
+  <div class="tab" data-pane="campanas">CampaÃ±as</div>
   <div class="tab" data-pane="adsets">Ad Sets</div>
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
@@ -522,7 +505,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <div id="pane-resumen" class="pane active">
   <div class="kpi-grid" id="kpis"></div>
   <div class="card" id="card-meta-leads">
-    <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">—</span></div>
+    <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">â€”</span></div>
     <div id="meta-leads-body"></div>
   </div>
   <div class="g2">
@@ -531,7 +514,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="funnel" id="funnel"></div>
     </div>
     <div class="card">
-      <div class="card-head"><span class="card-title">Por Sucursal</span><span class="card-sub">Conv L→I</span></div>
+      <div class="card-head"><span class="card-title">Por Sucursal</span><span class="card-sub">Conv Lâ†’I</span></div>
       <table id="tbl-suc-mini"></table>
     </div>
   </div>
@@ -540,7 +523,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div id="churn-resumen"></div>
   </div>
   <div class="card">
-    <div class="card-head"><span class="card-title">Campañas Activas</span><span class="card-sub">Meta Ads API</span></div>
+    <div class="card-head"><span class="card-title">CampaÃ±as Activas</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-camp-mini"></table>
   </div>
 </div>
@@ -558,10 +541,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
-<!-- CAMPAÑAS -->
+<!-- CAMPAÃ‘AS -->
 <div id="pane-campanas" class="pane">
   <div class="card">
-    <div class="card-head"><span class="card-title">Campañas — Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
+    <div class="card-head"><span class="card-title">CampaÃ±as â€” Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-campanas"></table>
   </div>
 </div>
@@ -569,7 +552,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- AD SETS -->
 <div id="pane-adsets" class="pane">
   <div class="card">
-    <div class="card-head"><span class="card-title">Ad Sets — Mes Actual</span><span class="card-sub">Ordenado por Leads ↓</span></div>
+    <div class="card-head"><span class="card-title">Ad Sets â€” Mes Actual</span><span class="card-sub">Ordenado por Leads â†“</span></div>
     <table id="tbl-adsets"></table>
   </div>
 </div>
@@ -591,111 +574,36 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- PRESUPUESTO / SIMULADOR -->
 <div id="pane-presupuesto" class="pane">
   <div class="card">
-    <div class="sim-header">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:6px">
       <div>
         <div class="card-title" style="font-size:17px">Simulador de Presupuesto</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px">Ajusta los porcentajes del funnel y calcula el presupuesto necesario para alcanzar la meta de inscritos</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Escribe tu meta de asistencias por sede â€” calcula cuanto presupuesto necesitas</div>
       </div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <span class="sim-badge">Base: Mayo 2026</span>
-        <button class="sim-reset-btn" onclick="simReset()">Restablecer</button>
-      </div>
-    </div>
-    <div class="sim-grid">
-      <!-- FUNNEL IZQUIERDA -->
-      <div class="sim-funnel">
-
-        <div class="sim-step" style="--sc:#00f0ff">
-          <div class="sim-step-head">
-            <span class="sim-step-name">🎯 Meta de inscritos MKT</span>
-            <span class="sim-step-base">fija</span>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px">
-            <span style="font-size:32px;font-weight:900;color:var(--cyan)" id="sim-meta-val">45</span>
-            <span style="font-size:13px;color:var(--muted)">inscritos / mes</span>
-          </div>
-        </div>
-
-        <div class="sim-arrow">↓</div>
-
-        <div class="sim-step" style="--sc:#00ff88">
-          <div class="sim-step-head">
-            <span class="sim-step-name">✅ Visita → Inscrito</span>
-            <span class="sim-step-base">Base mayo: 100%</span>
-          </div>
-          <div class="sim-slider-wrap">
-            <input type="range" class="sim-slider" id="sl-close" min="20" max="100" value="100" oninput="simCalc()">
-            <span class="sim-val" id="vl-close">100%</span>
-          </div>
-        </div>
-
-        <div class="sim-arrow">↓</div>
-
-        <div class="sim-step" style="--sc:#ff0066">
-          <div class="sim-step-head">
-            <span class="sim-step-name">🏫 Cita → Visita efectiva</span>
-            <span class="sim-step-base">Base mayo: 14%</span>
-          </div>
-          <div class="sim-slider-wrap">
-            <input type="range" class="sim-slider" id="sl-visita" min="5" max="100" value="14" oninput="simCalc()">
-            <span class="sim-val" id="vl-visita" style="color:#ff0066">14%</span>
-          </div>
-        </div>
-
-        <div class="sim-arrow">↓</div>
-
-        <div class="sim-step" style="--sc:#7b2ff7">
-          <div class="sim-step-head">
-            <span class="sim-step-name">📅 Contacto → Cita</span>
-            <span class="sim-step-base">Base mayo: 13%</span>
-          </div>
-          <div class="sim-slider-wrap">
-            <input type="range" class="sim-slider" id="sl-cita" min="5" max="80" value="13" oninput="simCalc()">
-            <span class="sim-val" id="vl-cita" style="color:#7b2ff7">13%</span>
-          </div>
-        </div>
-
-        <div class="sim-arrow">↓</div>
-
-        <div class="sim-step" style="--sc:#ff9900">
-          <div class="sim-step-head">
-            <span class="sim-step-name">📞 CC Lead → Contacto</span>
-            <span class="sim-step-base">Base mayo: 56%</span>
-          </div>
-          <div class="sim-slider-wrap">
-            <input type="range" class="sim-slider" id="sl-contacto" min="20" max="100" value="56" oninput="simCalc()">
-            <span class="sim-val" id="vl-contacto" style="color:#ff9900">56%</span>
-          </div>
-        </div>
-
-        <div class="sim-arrow">↓</div>
-
-        <div class="sim-step" style="--sc:#E02020">
-          <div class="sim-step-head">
-            <span class="sim-step-name">💬 CPL Meta Ads</span>
-            <span class="sim-step-base">Base mayo: $49.72</span>
-          </div>
-          <div class="sim-slider-wrap">
-            <input type="range" class="sim-slider" id="sl-cpl" min="20" max="150" value="50" oninput="simCalc()">
-            <span class="sim-val" id="vl-cpl" style="color:#E02020">$50</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- RESULTADOS DERECHA -->
-      <div class="sim-results" id="sim-results"></div>
+      <button class="sim-reset-btn" onclick="simReset()">Restablecer</button>
     </div>
 
-    <!-- MINI FUNNEL -->
-    <div style="margin-top:20px;padding:16px 20px;background:var(--c3);border-radius:12px;border:1px solid rgba(255,255,255,.06)">
-      <div style="font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px">Funnel proyectado</div>
-      <div class="sim-funnel-mini" id="sim-funnel-mini"></div>
+    <!-- KPIs MAYO -->
+    <div class="sim-section-title">Referencia Mayo 2026</div>
+    <div class="sim-kpi-row" id="sim-kpis"></div>
+
+    <!-- TABLA REFERENCIA -->
+    <div style="overflow-x:auto;margin-bottom:4px">
+      <table class="ref-table" id="ref-table"></table>
     </div>
+
+    <!-- PROYECTOR -->
+    <div class="sim-section-title" style="margin-top:28px">Proyector â€” escribe tu meta de asistencias por sede</div>
+    <div style="overflow-x:auto">
+      <table class="proy-table" id="proy-table"></table>
+    </div>
+
+    <!-- RESUMEN TOTAL -->
+    <div id="sim-total" style="margin-top:16px;padding:18px 22px;border-radius:12px;background:rgba(0,240,255,.04);border:1px solid rgba(0,240,255,.12);display:flex;align-items:center;gap:32px;flex-wrap:wrap"></div>
   </div>
 </div>
 
 <!-- REPORTE -->
+
 <div id="pane-reporte" class="pane">
   <div id="reporte-body"></div>
 </div>
@@ -707,7 +615,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div class="chart-wrap"><canvas id="chart-meta"></canvas></div>
   </div>
   <div class="card">
-    <div class="card-head"><span class="card-title">Leads por Sucursal — Diario</span></div>
+    <div class="card-head"><span class="card-title">Leads por Sucursal â€” Diario</span></div>
     <div class="chart-wrap"><canvas id="chart-suc"></canvas></div>
   </div>
 </div>
@@ -715,7 +623,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <script src="data_ingles.js"></script>
 <script>
 let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
-  actualizado:'—', mes:'—',
+  actualizado:'â€”', mes:'â€”',
   kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
   campanas:[], adsets:[], diario_meta:{},
   sucursales:{LINDAVISTA:{leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0},
@@ -726,7 +634,7 @@ let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
 
 const $m  = n => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',minimumFractionDigits:0}).format(n||0);
 const $n  = n => new Intl.NumberFormat('es-MX').format(Math.round(n)||0);
-const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : '—';
+const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : 'â€”';
 const pctN= (a,b) => b>0 ? Math.min(100,(a/b)*100) : 0;
 const cplColor = v => !v?'var(--dim)':v<150?'var(--green)':v<300?'var(--orange)':'var(--pink)';
 
@@ -739,115 +647,205 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.getElementById('pane-'+tab.dataset.pane).classList.add('active');
     if(tab.dataset.pane==='diario')      renderDiario();
     if(tab.dataset.pane==='reporte')     renderReporte();
-    if(tab.dataset.pane==='presupuesto') simCalc();
+    if(tab.dataset.pane==='presupuesto') simInit();
   });
 });
 
-// ── SIMULADOR DE PRESUPUESTO ──────────────────────────────────────────────────
-const SIM_BASE = { close:100, visita:14, cita:13, contacto:56, cpl:50 };
-const BUDGET_ACTUAL = 32669;
-const META_INS = 45;
+// â”€â”€ SIMULADOR DE PRESUPUESTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+const MAYO_REF = {
+  ERMITA:     { cc:169, llamadas:99,  nc:69, citas:12, visitas:0, inscritos:1, ml:470, gasto:21128.74, cpl:44.95 },
+  LINDAVISTA: { cc:179, llamadas:103, nc:78, citas:17, visitas:5, inscritos:4, ml:92,  gasto:5678,     cpl:61.71 },
+  IZTACALCO:  { cc:185, llamadas:103, nc:81, citas:10, visitas:0, inscritos:0, ml:95,  gasto:5862,     cpl:61.71 },
+};
+const PROY_SEDES  = ['ERMITA','LINDAVISTA','IZTACALCO'];
+const BUDGET_REF  = 32669;
+const META_INS_T  = 45;
+// meta inscritos por sede (proporcional al churn)
+const META_DIST   = { ERMITA:11, LINDAVISTA:20, IZTACALCO:14 };
 
-function simReset() {
-  Object.entries(SIM_BASE).forEach(([k,v]) => {
-    const sl = document.getElementById('sl-'+k);
-    if(sl) sl.value = v;
+function pctN2(a,b){ return b>0 ? ((a/b)*100).toFixed(1) : 'â€”'; }
+function pctChip(v,good,bad){
+  const n=parseFloat(v);
+  if(isNaN(n)) return '<span style="color:var(--dim)">â€”</span>';
+  const c = n>=good?'var(--green)':n>=bad?'var(--orange)':'var(--pink)';
+  return '<span style="color:'+c+';font-weight:800">'+v+'%</span>';
+}
+
+function simInit() {
+  // KPIs mayo
+  const totML  = Object.values(MAYO_REF).reduce((a,v)=>a+v.ml,0);
+  const totG   = Object.values(MAYO_REF).reduce((a,v)=>a+v.gasto,0);
+  const totIns = Object.values(MAYO_REF).reduce((a,v)=>a+v.inscritos,0);
+  const totCit = Object.values(MAYO_REF).reduce((a,v)=>a+v.citas,0);
+  const totVis = Object.values(MAYO_REF).reduce((a,v)=>a+v.visitas,0);
+  const avgCPL = totML>0 ? totG/totML : 0;
+  const kpis = document.getElementById('sim-kpis');
+  if(kpis) kpis.innerHTML = [
+    { v:$n(totML),  l:'Leads Meta',    c:'var(--cyan)'   },
+    { v:$m(totG),   l:'Gasto Mayo',    c:'var(--pink)'   },
+    { v:$m(avgCPL).replace('MXN','').trim(), l:'CPL Prom', c:'var(--orange)' },
+    { v:$n(totCit), l:'Citas',         c:'var(--purple)' },
+    { v:$n(totVis), l:'Visitas',       c:'var(--orange)' },
+    { v:$n(totIns), l:'Inscritos MKT', c:'var(--green)'  },
+    { v:$m(totIns>0?Math.round(totG/totIns):0).replace('MXN','').trim(), l:'Costo x Inscrito', c:'var(--cyan)' },
+  ].map(k=>`<div class="sim-kpi"><div class="sim-kpi-val" style="color:${k.c}">${k.v}</div><div class="sim-kpi-lbl">${k.l}</div></div>`).join('');
+
+  // Tabla referencia mayo
+  const rt = document.getElementById('ref-table');
+  if(rt){
+    const thead = `<thead><tr>
+      <th>Sede</th><th>Leads CC</th><th>Llamadas</th><th>% Cont</th>
+      <th>Citas</th><th>% Cita</th><th>Visitas</th><th>% Visita</th>
+      <th>Inscritos</th><th>Leads Meta</th><th>Gasto</th><th>CPL</th><th>CPI</th>
+    </tr></thead>`;
+    let tCC=0,tLL=0,tCit=0,tVis=0,tIns=0,tML=0,tG=0;
+    const rows = PROY_SEDES.map(s=>{
+      const r=MAYO_REF[s]; const sc=SUC_COLOR[s]||'#888';
+      tCC+=r.cc; tLL+=r.llamadas; tCit+=r.citas; tVis+=r.visitas;
+      tIns+=r.inscritos; tML+=r.ml; tG+=r.gasto;
+      const pCont = pctN2(r.llamadas,r.cc);
+      const pCita = pctN2(r.citas,r.cc);
+      const pVis  = pctN2(r.visitas,r.citas);
+      const cpi   = r.inscritos>0 ? $m(Math.round(r.gasto/r.inscritos)) : 'â€”';
+      return `<tr>
+        <td><span style="display:flex;align-items:center;gap:8px">${sucDot(s)}<strong style="color:${sc}">${s}</strong></span></td>
+        <td>${$n(r.cc)}</td><td>${$n(r.llamadas)}</td>
+        <td>${pctChip(pCont,60,40)}</td>
+        <td>${$n(r.citas)}</td>
+        <td>${pctChip(pCita,12,7)}</td>
+        <td>${$n(r.visitas)}</td>
+        <td>${pctChip(pVis,40,15)}</td>
+        <td style="color:var(--green);font-weight:800">${$n(r.inscritos)}</td>
+        <td style="color:var(--cyan)">${$n(r.ml)}</td>
+        <td style="color:var(--pink)">${$m(r.gasto)}</td>
+        <td>${$m(r.cpl)}</td>
+        <td style="color:var(--orange)">${cpi}</td>
+      </tr>`;
+    }).join('');
+    const avgCPLT=tML>0?tG/tML:0;
+    const cpiT=tIns>0?$m(Math.round(tG/tIns)):'â€”';
+    rt.innerHTML = thead+`<tbody>${rows}<tr class="tot">
+      <td>TOTAL</td><td>${$n(tCC)}</td><td>${$n(tLL)}</td>
+      <td>${pctChip(pctN2(tLL,tCC),60,40)}</td>
+      <td>${$n(tCit)}</td><td>${pctChip(pctN2(tCit,tCC),12,7)}</td>
+      <td>${$n(tVis)}</td><td>${pctChip(pctN2(tVis,tCit),40,15)}</td>
+      <td style="color:var(--green)">${$n(tIns)}</td>
+      <td style="color:var(--cyan)">${$n(tML)}</td>
+      <td style="color:var(--pink)">${$m(tG)}</td>
+      <td>${$m(avgCPLT)}</td><td style="color:var(--orange)">${cpiT}</td>
+    </tr></tbody>`;
+  }
+
+  // Tabla proyector
+  const pt = document.getElementById('proy-table');
+  if(pt){
+    const curLeads = leadsXSede();
+    const thead = `<thead><tr>
+      <th>Sede</th>
+      <th>Leads junio</th>
+      <th>% Agend<br><small style="font-weight:600;letter-spacing:0">(leadâ†’cita)</small></th>
+      <th>% Visita<br><small style="font-weight:600;letter-spacing:0">(citaâ†’visita)</small></th>
+      <th>CPL</th>
+      <th>Meta inscritos</th>
+      <th style="color:var(--cyan)">Leads necesarios</th>
+      <th style="color:var(--green)">Presupuesto necesario</th>
+    </tr></thead>`;
+    const rows = PROY_SEDES.map(s=>{
+      const r   = MAYO_REF[s];
+      const sc  = SUC_COLOR[s]||'#888';
+      const cl  = curLeads[s]||0;
+      const pAg = Math.max(1, Math.round(r.citas/r.cc*100));
+      const pVi = s==='LINDAVISTA' ? 29 : 14;
+      const metaIns = META_DIST[s]||15;
+      return `<tr id="pr-${s}">
+        <td><span style="display:flex;align-items:center;gap:8px">${sucDot(s)}<strong style="color:${sc}">${s}</strong></span></td>
+        <td style="color:var(--cyan);font-weight:800">${$n(cl)}</td>
+        <td><input class="proy-input pct" id="pi-ag-${s}" value="${pAg}" min="1" max="100" oninput="simCalc()">%</td>
+        <td><input class="proy-input pct" id="pi-vi-${s}" value="${pVi}" min="1" max="100" oninput="simCalc()">%</td>
+        <td><input class="proy-input" id="pi-cpl-${s}" value="${Math.round(r.cpl)}" min="10" max="300" oninput="simCalc()"></td>
+        <td><input class="proy-input" id="pi-ins-${s}" value="${metaIns}" min="1" max="200" oninput="simCalc()"></td>
+        <td class="proy-calc" id="pc-ml-${s}" style="color:var(--cyan)">â€”</td>
+        <td class="proy-calc" id="pc-bud-${s}" style="color:var(--green)">â€”</td>
+      </tr>`;
+    }).join('');
+    pt.innerHTML = thead+`<tbody>${rows}<tr class="tot">
+      <td>TOTAL</td><td></td><td></td><td></td><td></td>
+      <td id="tot-ins" style="color:var(--orange)">â€”</td>
+      <td id="tot-ml"  style="color:var(--cyan)">â€”</td>
+      <td id="tot-bud" style="color:var(--green)">â€”</td>
+    </tr></tbody>`;
+  }
+  simCalc();
+}
+
+function simReset(){
+  const curLeads=leadsXSede();
+  PROY_SEDES.forEach(s=>{
+    const r=MAYO_REF[s];
+    const el=(id)=>document.getElementById(id);
+    if(el('pi-ag-'+s))  el('pi-ag-'+s).value  = Math.max(1,Math.round(r.citas/r.cc*100));
+    if(el('pi-vi-'+s))  el('pi-vi-'+s).value  = s==='LINDAVISTA'?29:14;
+    if(el('pi-cpl-'+s)) el('pi-cpl-'+s).value = Math.round(r.cpl);
+    if(el('pi-ins-'+s)) el('pi-ins-'+s).value = META_DIST[s]||15;
   });
   simCalc();
 }
 
-function simCalc() {
-  const get = id => parseInt(document.getElementById(id)?.value || 0);
-  const pClose    = get('sl-close')    / 100;
-  const pVisita   = get('sl-visita')   / 100;
-  const pCita     = get('sl-cita')     / 100;
-  const pContacto = get('sl-contacto') / 100;
-  const cpl       = get('sl-cpl');
+function simCalc(){
+  const el=(id)=>document.getElementById(id);
+  const gv=(id)=>parseFloat(el(id)?.value||0)||0;
+  let totIns=0, totML=0, totBud=0;
+  PROY_SEDES.forEach(s=>{
+    const pAg  = gv('pi-ag-'+s)/100;
+    const pVi  = gv('pi-vi-'+s)/100;
+    const cpl  = gv('pi-cpl-'+s);
+    const meta = gv('pi-ins-'+s);
+    // back-calculate from inscritos
+    const visitas_need = meta;                                   // inscritos â‰ˆ visitas (close rate ~100%)
+    const citas_need   = pVi>0 ? Math.ceil(visitas_need/pVi):9999;
+    const cc_need      = pAg>0 ? Math.ceil(citas_need/pAg):9999;
+    const ml_need      = Math.ceil(cc_need/0.744);
+    const bud          = Math.round(ml_need*cpl);
+    totIns+=meta; totML+=ml_need; totBud+=bud;
+    const vsChip = bud<=BUDGET_REF/3
+      ? '<span class="vs-chip vs-ok">OK</span>'
+      : '<span class="vs-chip vs-bad">+pres</span>';
+    if(el('pc-ml-'+s))  el('pc-ml-'+s).textContent  = $n(ml_need);
+    if(el('pc-bud-'+s)) el('pc-bud-'+s).innerHTML   = $m(bud)+vsChip;
+  });
+  if(el('tot-ins')) el('tot-ins').textContent = $n(totIns)+' inscritos';
+  if(el('tot-ml'))  el('tot-ml').textContent  = $n(totML);
+  const totColor  = totBud<=BUDGET_REF?'var(--green)':'var(--pink)';
+  const difStr    = totBud<=BUDGET_REF
+    ? ' <span class="vs-chip vs-ok">-'+$m(BUDGET_REF-totBud)+'</span>'
+    : ' <span class="vs-chip vs-bad">+'+$m(totBud-BUDGET_REF)+'</span>';
+  if(el('tot-bud')) el('tot-bud').innerHTML = '<span style="color:'+totColor+';font-size:15px;font-weight:900">'+$m(totBud)+'</span>'+difStr;
 
-  // Actualizar labels
-  document.getElementById('vl-close').textContent    = get('sl-close')+'%';
-  document.getElementById('vl-visita').textContent   = get('sl-visita')+'%';
-  document.getElementById('vl-cita').textContent     = get('sl-cita')+'%';
-  document.getElementById('vl-contacto').textContent = get('sl-contacto')+'%';
-  document.getElementById('vl-cpl').textContent      = '$'+cpl;
-
-  // Calcular funnel hacia arriba desde meta
-  const visitas    = pClose    > 0 ? Math.ceil(META_INS    / pClose)    : 9999;
-  const citas      = pVisita   > 0 ? Math.ceil(visitas     / pVisita)   : 9999;
-  const contactos  = pCita     > 0 ? Math.ceil(citas       / pCita)     : 9999;
-  const cc_leads   = pContacto > 0 ? Math.ceil(contactos   / pContacto) : 9999;
-  // CC recibe ~74% de leads Meta (ratio mayo)
-  const meta_leads = Math.ceil(cc_leads / 0.744);
-  const budget     = meta_leads * cpl;
-  const diferencia = budget - BUDGET_ACTUAL;
-  const ahorro     = diferencia < 0;
-
-  // Resultados
-  const res = document.getElementById('sim-results');
-  if(!res) return;
-
-  const cardBudget = budget <= BUDGET_ACTUAL
-    ? `positivo" style="--sc:var(--green)`
-    : `negativo" style="--sc:var(--pink)`;
-  const budgetColor = budget <= BUDGET_ACTUAL ? 'var(--green)' : 'var(--pink)';
-  const difSign  = diferencia >= 0 ? '+' : '';
-  const difColor = ahorro ? 'var(--green)' : 'var(--pink)';
-  const difTexto = ahorro
-    ? `Ahorro de ${$m(Math.abs(diferencia))} vs presupuesto actual`
-    : `Inversión adicional de ${$m(diferencia)} vs presupuesto actual`;
-
-  res.innerHTML = `
-    <div class="sim-result-card ${cardBudget}">
-      <div class="sim-result-lbl">Presupuesto necesario</div>
-      <div class="sim-result-val" style="color:${budgetColor}">${$m(budget)}</div>
-      <div class="sim-result-sub">para ${META_INS} inscritos MKT</div>
-      <div class="sim-result-delta" style="color:${difColor}">${difSign}${$m(diferencia)} vs actual ($${(BUDGET_ACTUAL/1000).toFixed(0)}k)</div>
-    </div>
-
-    <div class="sim-result-card">
-      <div class="sim-result-lbl">Leads Meta necesarios</div>
-      <div class="sim-result-val" style="color:var(--cyan)">${$n(meta_leads)}</div>
-      <div class="sim-result-sub">CPL objetivo: ${$m(cpl)} · CC recibirá ~${$n(cc_leads)} leads</div>
-    </div>
-
-    <div class="sim-result-card">
-      <div class="sim-result-lbl">Costo por Inscrito (CPI)</div>
-      <div class="sim-result-val" style="color:var(--orange)">${$m(Math.round(budget/META_INS))}</div>
-      <div class="sim-result-sub">Base mayo: ${$m(Math.round(BUDGET_ACTUAL/5))} por inscrito</div>
-    </div>
-
-    <div class="sim-result-card ${budget <= BUDGET_ACTUAL ? 'positivo' : 'neutro'}">
-      <div class="sim-result-lbl">Diagnóstico</div>
-      <div style="font-size:13px;color:var(--text);font-weight:600;line-height:1.6;margin-top:4px">
-        ${budget <= BUDGET_ACTUAL
-          ? `Con estos porcentajes <strong style="color:var(--green)">alcanzas la meta de ${META_INS} inscritos</strong> dentro del presupuesto actual.`
-          : `Para alcanzar ${META_INS} inscritos se necesita <strong style="color:var(--pink)">${$m(diferencia)} adicionales</strong>. Sube la conversión del CC para reducirlo.`
-        }
-      </div>
-    </div>`;
-
-  // Mini funnel
-  const mf = document.getElementById('sim-funnel-mini');
-  if(mf) mf.innerHTML = [
-    {v: meta_leads,  l:'Leads Meta', c:'var(--cyan)'},
-    {v: cc_leads,    l:'CC trabaja', c:'var(--orange)'},
-    {v: contactos,   l:'Contactos',  c:'var(--orange)'},
-    {v: citas,       l:'Citas',      c:'var(--purple)'},
-    {v: visitas,     l:'Visitas',    c:'var(--pink)'},
-    {v: META_INS,    l:'Inscritos',  c:'var(--green)'},
-  ].map(s=>`<div class="sim-fm-step">
-    <div class="sim-fm-val" style="color:${s.c}">${$n(s.v)}</div>
-    <div class="sim-fm-lbl">${s.l}</div>
-  </div>`).join('');
+  // Resumen total
+  const st=el('sim-total');
+  if(st){
+    const cpiT=totIns>0?Math.round(totBud/totIns):0;
+    st.innerHTML=[
+      {v:$m(totBud),              l:'Presupuesto total',    c:totColor},
+      {v:$n(totML),               l:'Leads Meta necesarios',c:'var(--cyan)'},
+      {v:$n(totIns)+' inscritos', l:'Meta total MKT',       c:'var(--orange)'},
+      {v:$m(cpiT),                l:'Costo por inscrito',   c:'var(--purple)'},
+      {v:$m(BUDGET_REF),          l:'Presupuesto actual',   c:'var(--muted)'},
+    ].map(k=>`<div style="text-align:center">
+      <div style="font-size:20px;font-weight:900;color:${k.c};font-variant-numeric:tabular-nums">${k.v}</div>
+      <div style="font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-top:3px">${k.l}</div>
+    </div>`).join('');
+  }
 }
+
 
 // Reporte
 const TIPO_CFG = {
-  estrategia:  { icon:'🚀', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
-  optimizacion:{ icon:'⚡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
-  novedad:     { icon:'✨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
-  correccion:  { icon:'🔧', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
-  alerta:      { icon:'🔴', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
+  estrategia:  { icon:'ðŸš€', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
+  optimizacion:{ icon:'âš¡', label:'OptimizaciÃ³n', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
+  novedad:     { icon:'âœ¨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
+  correccion:  { icon:'ðŸ”§', label:'CorrecciÃ³n',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
+  alerta:      { icon:'ðŸ”´', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
 };
 
 async function renderReporte() {
@@ -884,31 +882,31 @@ async function renderReporte() {
 
   const secEnProceso = enProceso.length ? `
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-      <span style="font-size:13px;font-weight:800;color:var(--orange)">🔄 En proceso</span>
+      <span style="font-size:13px;font-weight:800;color:var(--orange)">ðŸ”„ En proceso</span>
       <div style="flex:1;height:1px;background:rgba(255,153,0,.2)"></div>
     </div>
     <div class="nov-grid" style="margin-bottom:20px">${renderCards(enProceso, 0)}</div>` : '';
 
   const secNovedades = novedades.length ? `
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-      <span style="font-size:13px;font-weight:800;color:var(--cyan)">✅ Realizados</span>
+      <span style="font-size:13px;font-weight:800;color:var(--cyan)">âœ… Realizados</span>
       <div style="flex:1;height:1px;background:rgba(0,240,255,.15)"></div>
     </div>
     <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length)}</div>` : '';
 
   const secPendientes = pendientes.length ? `<div class="pendientes-card">
-    <div class="pendientes-titulo">📋 Próximos pasos</div>
+    <div class="pendientes-titulo">ðŸ“‹ PrÃ³ximos pasos</div>
     ${pendientes.map((p,i)=>`<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`).join('')}
   </div>` : '';
 
   el.innerHTML = `
     <div class="reporte-header">
       <div class="reporte-header-left">
-        <div class="reporte-titulo">Reporte de Actividad · ${N.periodo || '—'}</div>
-        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || '—'}</strong> &nbsp;·&nbsp; ${totalActs} actualizaciones este periodo</div>
+        <div class="reporte-titulo">Reporte de Actividad Â· ${N.periodo || 'â€”'}</div>
+        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || 'â€”'}</strong> &nbsp;Â·&nbsp; ${totalActs} actualizaciones este periodo</div>
       </div>
       <div class="reporte-agencia">
-        <div class="reporte-agencia-name">${N.agencia || '—'}</div>
+        <div class="reporte-agencia-name">${N.agencia || 'â€”'}</div>
         <div class="reporte-agencia-lbl">Agencia</div>
       </div>
     </div>
@@ -948,16 +946,16 @@ function monthProgress() {
 
 // KPI CONFIG
 function renderKpis() {
-  document.getElementById('updated').textContent = `${D.actualizado} · ${D.mes}`;
+  document.getElementById('updated').textContent = `${D.actualizado} Â· ${D.mes}`;
   const k = D.kpis;
   const mp = monthProgress();
   const cards = [
-    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp },
-    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp },
-    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
-    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
-    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta) },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
+    { icon:'ðŸ’¬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp },
+    { icon:'ðŸ’¸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp },
+    { icon:'ðŸ“Š', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
+    { icon:'ðŸ“…', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
+    { icon:'ðŸƒ', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta) },
+    { icon:'âœ…', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -1020,7 +1018,7 @@ function leadsXSede() {
     if (n.includes('ERMITA')) {
       result.ERMITA += c.leads;
     } else {
-      // Campaña combinada LIND+IZT: repartir proporcional a la meta
+      // CampaÃ±a combinada LIND+IZT: repartir proporcional a la meta
       const mL = metas.LINDAVISTA || 0;
       const mI = metas.IZTACALCO  || 0;
       const tot = mL + mI;
@@ -1047,7 +1045,7 @@ function renderMetaLeads() {
   const totColor= totPct>=100?'var(--green)':totPct>=50?'var(--orange)':'var(--pink)';
 
   document.getElementById('meta-leads-sub').textContent =
-    `${$n(totLeads)} de ${$n(totMeta)} leads — ${totPct.toFixed(1)}%`;
+    `${$n(totLeads)} de ${$n(totMeta)} leads â€” ${totPct.toFixed(1)}%`;
 
   const rows = ORDEN.map(s => {
     const leads = leadsSede[s] || 0;
@@ -1059,7 +1057,7 @@ function renderMetaLeads() {
     return `<div class="ml-row">
       <div class="ml-label">
         <div class="ml-name" style="color:${sc}">${s}</div>
-        <div class="ml-sub">${meta>0 ? (falta>0 ? 'Faltan '+$n(falta)+' leads' : '¡Meta alcanzada!') : 'Sin meta'}</div>
+        <div class="ml-sub">${meta>0 ? (falta>0 ? 'Faltan '+$n(falta)+' leads' : 'Â¡Meta alcanzada!') : 'Sin meta'}</div>
       </div>
       <div class="ml-bar">
         <div class="ml-bar-track">
@@ -1067,7 +1065,7 @@ function renderMetaLeads() {
         </div>
         <div class="ml-nums">
           <span class="ml-actual" style="color:${color}">${$n(leads)} leads</span>
-          <span style="color:var(--muted)">meta ${$n(meta)} · <strong style="color:${color}">${pct.toFixed(0)}%</strong></span>
+          <span style="color:var(--muted)">meta ${$n(meta)} Â· <strong style="color:${color}">${pct.toFixed(0)}%</strong></span>
         </div>
       </div>
     </div>`;
@@ -1155,7 +1153,7 @@ function renderChurn() {
     <div class="churn-total-item"><div class="churn-total-val" style="color:var(--text)">${$n(totPlantilla)}</div><div class="churn-total-lbl">Plantilla total</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:var(--orange)">${$n(metaMkt)}</div><div class="churn-total-lbl">Meta inscritos MKT</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${$n(totInscritos)}</div><div class="churn-total-lbl">Inscritos del mes</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktFalta > 0 ? $n(mktFalta)+' faltan' : '¡Meta MKT lograda!'}</div><div class="churn-total-lbl">vs meta MKT</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktFalta > 0 ? $n(mktFalta)+' faltan' : 'Â¡Meta MKT lograda!'}</div><div class="churn-total-lbl">vs meta MKT</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktPct.toFixed(0)}%</div><div class="churn-total-lbl">Avance MKT</div></div>
   </div>
   <div style="margin-top:10px;padding:0 2px">
@@ -1203,7 +1201,7 @@ function renderSucMini() {
     </tr>`;
   }).join('');
   document.getElementById('tbl-suc-mini').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv Lâ†’I</th></tr></thead>
      <tbody>${rows}</tbody>`;
 }
 
@@ -1213,12 +1211,12 @@ function renderCampMini() {
     <td style="max-width:230px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
     <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(c.presupuesto_dia)}/día</span>`:'—'}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'â€”'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(c.presupuesto_dia)}/dÃ­a</span>`:'â€”'}</td>
   </tr>`).join('');
   document.getElementById('tbl-camp-mini').innerHTML=
-    `<thead><tr><th>Campaña</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin campañas activas</td></tr>'}</tbody>`;
+    `<thead><tr><th>CampaÃ±a</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
+     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin campaÃ±as activas</td></tr>'}</tbody>`;
 }
 
 function renderSucCards() {
@@ -1257,7 +1255,7 @@ function renderSucCards() {
       </div>
       ${metaHTML}
       <div class="suc-foot">
-        <span class="conv-label">Lead → Inscrito</span>
+        <span class="conv-label">Lead â†’ Inscrito</span>
         <span class="conv-rate">${pct(v.inscritos||0, leads)}</span>
       </div>
     </div>`;
@@ -1280,7 +1278,7 @@ function renderSucursales() {
            <div class="pbar"><div class="pbar-fill" style="width:${avPct}%;background:${avCol}"></div></div>
            <div class="pbar-val" style="color:${avCol}">${avPct.toFixed(0)}%</div>
          </div><div style="font-size:10px;color:var(--muted);margin-top:2px">${$n(leads)} / ${$n(meta)}</div></td>`
-      : '<td style="color:var(--dim)">—</td>';
+      : '<td style="color:var(--dim)">â€”</td>';
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-weight:800">${s}</strong></span></td>
       <td class="num" style="color:#00f0ff">${$n(leads)}</td>
@@ -1300,11 +1298,11 @@ function renderSucursales() {
   };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0});
   const totMeta = Object.values(metas).reduce((a,v)=>a+v,0);
   document.getElementById('tbl-sucursales').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>Lâ†’I</th></tr></thead>
      <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
        <td style="color:#00f0ff">${$n(totLeads)}</td>
-       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'—'}</td>
+       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'â€”'}</td>
        <td>${$n(totCC.llamadas)}</td><td>${$n(totCC.no_contesta)}</td>
        <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
        <td style="color:#00ff88">${$n(totCC.inscritos)}</td>
@@ -1315,30 +1313,30 @@ function renderSucursales() {
 function renderCampanas() {
   const rows=(D.campanas||[]).map(c=>`<tr>
     <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
-    <td>${c.status==='ACTIVE'?'<span class="badge ba">● ACTIVA</span>':'<span class="badge bp">⏸ PAUSADA</span>'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'—'}</td>
+    <td>${c.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'â€”'}</td>
     <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
     <td class="num">${$n(c.impresiones)}</td>
     <td class="num">${$n(c.alcance)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'â€”'}</td>
   </tr>`).join('');
   document.getElementById('tbl-campanas').innerHTML=
-    `<thead><tr><th>Campaña</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos — corre actualizar_ingles.py</td></tr>'}</tbody>`;
+    `<thead><tr><th>CampaÃ±a</th><th>Status</th><th>Budget/DÃ­a</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
+     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos â€” corre actualizar_ingles.py</td></tr>'}</tbody>`;
 }
 
 function renderAdsets() {
   const rows=[...(D.adsets||[])].sort((a,b)=>b.leads-a.leads).map(a=>`<tr>
     <td style="font-weight:600">${a.nombre}</td>
-    <td>${a.status==='ACTIVE'?'<span class="badge ba">● ACTIVA</span>':'<span class="badge bp">⏸ PAUSADA</span>'}</td>
-    <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
+    <td>${a.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
+    <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'â€”'}</td>
     <td class="num" style="color:#00f0ff">${$n(a.leads)}</td>
     <td class="num" style="color:#E02020">${$m(a.gasto)}</td>
-    <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'—'}</td>
+    <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'â€”'}</td>
   </tr>`).join('');
   document.getElementById('tbl-adsets').innerHTML=
-    `<thead><tr><th>Ad Set</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>CPL</th></tr></thead>
+    `<thead><tr><th>Ad Set</th><th>Status</th><th>Budget/DÃ­a</th><th>Leads</th><th>Gasto</th><th>CPL</th></tr></thead>
      <tbody>${rows||'<tr><td colspan="6" class="empty">Sin datos</td></tr>'}</tbody>`;
 }
 
@@ -1348,17 +1346,17 @@ function renderAgenda() {
   const rows=data.map(r=>{
     const cfg=SUC[r.sucursal]||{c:'#888',b:'rgba(136,136,136,.1)'};
     return `<tr>
-      <td>${r.sucursal?`<span style="background:${cfg.b};color:${cfg.c};padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.4px">${r.sucursal}</span>`:'<span style="color:var(--dim)">—</span>'}</td>
+      <td>${r.sucursal?`<span style="background:${cfg.b};color:${cfg.c};padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.4px">${r.sucursal}</span>`:'<span style="color:var(--dim)">â€”</span>'}</td>
       <td><strong style="font-weight:700">${r.nombre}</strong></td>
       <td style="color:var(--muted)">${r.tel}</td>
       <td style="color:var(--dim);font-size:12px">${r.fecha_cita}</td>
-      <td>${r.asistio?'<span class="badge bsi">✓ SÍ</span>':'<span class="badge bno">✗ NO</span>'}</td>
-      <td>${r.inscrito?'<span class="badge bsi">✓ SÍ</span>':'<span class="badge bno">✗ NO</span>'}</td>
+      <td>${r.asistio?'<span class="badge bsi">âœ“ SÃ</span>':'<span class="badge bno">âœ— NO</span>'}</td>
+      <td>${r.inscrito?'<span class="badge bsi">âœ“ SÃ</span>':'<span class="badge bno">âœ— NO</span>'}</td>
       <td style="color:var(--dim);font-size:11px;max-width:200px">${r.obs||''}</td>
     </tr>`;
   }).join('');
   document.getElementById('tbl-agenda').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Nombre</th><th>Tel</th><th>Fecha Cita</th><th>Asistió</th><th>Inscrito</th><th>Observaciones</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Nombre</th><th>Tel</th><th>Fecha Cita</th><th>AsistiÃ³</th><th>Inscrito</th><th>Observaciones</th></tr></thead>
      <tbody>${rows||'<tr><td colspan="7" class="empty">Sin prospectos</td></tr>'}</tbody>`;
 }
 
@@ -1424,7 +1422,7 @@ function renderDiario() {
   });
 }
 
-// ── Render todo ──
+// â”€â”€ Render todo â”€â”€
 function renderAll() {
   renderKpis();
   renderMetaLeads();
@@ -1440,7 +1438,7 @@ function renderAll() {
   if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
 }
 
-// ── Selector de mes ──
+// â”€â”€ Selector de mes â”€â”€
 const MESES_NOMBRES = {
   '01':'Ene','02':'Feb','03':'Mar','04':'Abr','05':'May','06':'Jun',
   '07':'Jul','08':'Ago','09':'Sep','10':'Oct','11':'Nov','12':'Dic'
@@ -1486,3 +1484,4 @@ initMeses();
 </script>
 </body>
 </html>
+
