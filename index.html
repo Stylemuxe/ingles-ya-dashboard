@@ -358,6 +358,64 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .ml-total-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
 .ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
+/* ── SIMULADOR PRESUPUESTO ── */
+.sim-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:20px; }
+.sim-badge { background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple); border-radius:8px; padding:5px 14px; font-size:11px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; }
+.sim-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:860px){ .sim-grid { grid-template-columns:1fr; } }
+
+.sim-funnel { display:flex; flex-direction:column; gap:10px; }
+.sim-step {
+  background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:12px;
+  padding:14px 18px; position:relative;
+}
+.sim-step-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.sim-step-name { font-size:12px; font-weight:800; letter-spacing:.3px; color:var(--text); display:flex; align-items:center; gap:8px; }
+.sim-step-base { font-size:10px; color:var(--muted); font-weight:600; }
+.sim-slider-wrap { display:flex; align-items:center; gap:12px; }
+.sim-slider {
+  -webkit-appearance:none; appearance:none; flex:1; height:6px;
+  border-radius:99px; outline:none; cursor:pointer;
+  background:rgba(255,255,255,.08);
+}
+.sim-slider::-webkit-slider-thumb {
+  -webkit-appearance:none; width:18px; height:18px; border-radius:50%;
+  background:var(--sc,var(--cyan)); cursor:pointer; border:2px solid var(--bg);
+  box-shadow:0 0 8px var(--sc,var(--cyan));
+}
+.sim-val {
+  min-width:46px; text-align:center; font-size:14px; font-weight:900;
+  color:var(--sc,var(--cyan)); font-variant-numeric:tabular-nums;
+}
+.sim-arrow { text-align:center; color:var(--dim); font-size:18px; line-height:1; }
+
+.sim-results { display:flex; flex-direction:column; gap:12px; }
+.sim-result-card {
+  border-radius:14px; padding:20px 22px;
+  border:1px solid rgba(255,255,255,.07); background:var(--c3);
+  transition:background .3s, border-color .3s;
+}
+.sim-result-card.positivo { background:rgba(0,255,136,.05); border-color:rgba(0,255,136,.2); }
+.sim-result-card.negativo { background:rgba(224,32,32,.05); border-color:rgba(224,32,32,.2); }
+.sim-result-card.neutro  { background:rgba(255,153,0,.05); border-color:rgba(255,153,0,.2); }
+.sim-result-lbl { font-size:10px; color:var(--muted); font-weight:700; letter-spacing:.6px; text-transform:uppercase; margin-bottom:8px; }
+.sim-result-val { font-size:28px; font-weight:900; font-variant-numeric:tabular-nums; line-height:1; }
+.sim-result-sub { font-size:12px; color:var(--muted); margin-top:6px; font-weight:600; }
+.sim-result-delta { font-size:13px; font-weight:800; margin-top:4px; }
+
+.sim-funnel-mini { display:flex; align-items:center; gap:0; flex-wrap:wrap; margin-top:12px; }
+.sim-fm-step { flex:1; min-width:60px; text-align:center; position:relative; }
+.sim-fm-step::after { content:'→'; position:absolute; right:-8px; top:50%; transform:translateY(-50%); color:var(--dim); font-size:14px; }
+.sim-fm-step:last-child::after { display:none; }
+.sim-fm-val { font-size:16px; font-weight:900; color:var(--cyan); }
+.sim-fm-lbl { font-size:9px; color:var(--muted); font-weight:700; letter-spacing:.4px; text-transform:uppercase; margin-top:2px; }
+.sim-reset-btn {
+  background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple);
+  border-radius:8px; padding:7px 16px; font-size:11px; font-weight:800; cursor:pointer;
+  font-family:inherit; letter-spacing:.4px; transition:background .2s;
+}
+.sim-reset-btn:hover { background:rgba(123,47,247,.28); }
+
 /* ── CHURN RECOVERY ── */
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
@@ -456,6 +514,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="adsets">Ad Sets</div>
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
+  <div class="tab" data-pane="presupuesto">Presupuesto</div>
   <div class="tab" data-pane="reporte">Reporte</div>
 </nav>
 
@@ -529,6 +588,113 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
+<!-- PRESUPUESTO / SIMULADOR -->
+<div id="pane-presupuesto" class="pane">
+  <div class="card">
+    <div class="sim-header">
+      <div>
+        <div class="card-title" style="font-size:17px">Simulador de Presupuesto</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Ajusta los porcentajes del funnel y calcula el presupuesto necesario para alcanzar la meta de inscritos</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="sim-badge">Base: Mayo 2026</span>
+        <button class="sim-reset-btn" onclick="simReset()">Restablecer</button>
+      </div>
+    </div>
+    <div class="sim-grid">
+      <!-- FUNNEL IZQUIERDA -->
+      <div class="sim-funnel">
+
+        <div class="sim-step" style="--sc:#00f0ff">
+          <div class="sim-step-head">
+            <span class="sim-step-name">🎯 Meta de inscritos MKT</span>
+            <span class="sim-step-base">fija</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="font-size:32px;font-weight:900;color:var(--cyan)" id="sim-meta-val">45</span>
+            <span style="font-size:13px;color:var(--muted)">inscritos / mes</span>
+          </div>
+        </div>
+
+        <div class="sim-arrow">↓</div>
+
+        <div class="sim-step" style="--sc:#00ff88">
+          <div class="sim-step-head">
+            <span class="sim-step-name">✅ Visita → Inscrito</span>
+            <span class="sim-step-base">Base mayo: 100%</span>
+          </div>
+          <div class="sim-slider-wrap">
+            <input type="range" class="sim-slider" id="sl-close" min="20" max="100" value="100" oninput="simCalc()">
+            <span class="sim-val" id="vl-close">100%</span>
+          </div>
+        </div>
+
+        <div class="sim-arrow">↓</div>
+
+        <div class="sim-step" style="--sc:#ff0066">
+          <div class="sim-step-head">
+            <span class="sim-step-name">🏫 Cita → Visita efectiva</span>
+            <span class="sim-step-base">Base mayo: 14%</span>
+          </div>
+          <div class="sim-slider-wrap">
+            <input type="range" class="sim-slider" id="sl-visita" min="5" max="100" value="14" oninput="simCalc()">
+            <span class="sim-val" id="vl-visita" style="color:#ff0066">14%</span>
+          </div>
+        </div>
+
+        <div class="sim-arrow">↓</div>
+
+        <div class="sim-step" style="--sc:#7b2ff7">
+          <div class="sim-step-head">
+            <span class="sim-step-name">📅 Contacto → Cita</span>
+            <span class="sim-step-base">Base mayo: 13%</span>
+          </div>
+          <div class="sim-slider-wrap">
+            <input type="range" class="sim-slider" id="sl-cita" min="5" max="80" value="13" oninput="simCalc()">
+            <span class="sim-val" id="vl-cita" style="color:#7b2ff7">13%</span>
+          </div>
+        </div>
+
+        <div class="sim-arrow">↓</div>
+
+        <div class="sim-step" style="--sc:#ff9900">
+          <div class="sim-step-head">
+            <span class="sim-step-name">📞 CC Lead → Contacto</span>
+            <span class="sim-step-base">Base mayo: 56%</span>
+          </div>
+          <div class="sim-slider-wrap">
+            <input type="range" class="sim-slider" id="sl-contacto" min="20" max="100" value="56" oninput="simCalc()">
+            <span class="sim-val" id="vl-contacto" style="color:#ff9900">56%</span>
+          </div>
+        </div>
+
+        <div class="sim-arrow">↓</div>
+
+        <div class="sim-step" style="--sc:#E02020">
+          <div class="sim-step-head">
+            <span class="sim-step-name">💬 CPL Meta Ads</span>
+            <span class="sim-step-base">Base mayo: $49.72</span>
+          </div>
+          <div class="sim-slider-wrap">
+            <input type="range" class="sim-slider" id="sl-cpl" min="20" max="150" value="50" oninput="simCalc()">
+            <span class="sim-val" id="vl-cpl" style="color:#E02020">$50</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RESULTADOS DERECHA -->
+      <div class="sim-results" id="sim-results"></div>
+    </div>
+
+    <!-- MINI FUNNEL -->
+    <div style="margin-top:20px;padding:16px 20px;background:var(--c3);border-radius:12px;border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.6px;text-transform:uppercase;margin-bottom:12px">Funnel proyectado</div>
+      <div class="sim-funnel-mini" id="sim-funnel-mini"></div>
+    </div>
+  </div>
+</div>
+
 <!-- REPORTE -->
 <div id="pane-reporte" class="pane">
   <div id="reporte-body"></div>
@@ -571,10 +737,109 @@ document.querySelectorAll('.tab').forEach(tab => {
     document.querySelectorAll('.pane').forEach(p=>p.classList.remove('active'));
     tab.classList.add('active');
     document.getElementById('pane-'+tab.dataset.pane).classList.add('active');
-    if(tab.dataset.pane==='diario')  renderDiario();
-    if(tab.dataset.pane==='reporte') renderReporte();
+    if(tab.dataset.pane==='diario')      renderDiario();
+    if(tab.dataset.pane==='reporte')     renderReporte();
+    if(tab.dataset.pane==='presupuesto') simCalc();
   });
 });
+
+// ── SIMULADOR DE PRESUPUESTO ──────────────────────────────────────────────────
+const SIM_BASE = { close:100, visita:14, cita:13, contacto:56, cpl:50 };
+const BUDGET_ACTUAL = 32669;
+const META_INS = 45;
+
+function simReset() {
+  Object.entries(SIM_BASE).forEach(([k,v]) => {
+    const sl = document.getElementById('sl-'+k);
+    if(sl) sl.value = v;
+  });
+  simCalc();
+}
+
+function simCalc() {
+  const get = id => parseInt(document.getElementById(id)?.value || 0);
+  const pClose    = get('sl-close')    / 100;
+  const pVisita   = get('sl-visita')   / 100;
+  const pCita     = get('sl-cita')     / 100;
+  const pContacto = get('sl-contacto') / 100;
+  const cpl       = get('sl-cpl');
+
+  // Actualizar labels
+  document.getElementById('vl-close').textContent    = get('sl-close')+'%';
+  document.getElementById('vl-visita').textContent   = get('sl-visita')+'%';
+  document.getElementById('vl-cita').textContent     = get('sl-cita')+'%';
+  document.getElementById('vl-contacto').textContent = get('sl-contacto')+'%';
+  document.getElementById('vl-cpl').textContent      = '$'+cpl;
+
+  // Calcular funnel hacia arriba desde meta
+  const visitas    = pClose    > 0 ? Math.ceil(META_INS    / pClose)    : 9999;
+  const citas      = pVisita   > 0 ? Math.ceil(visitas     / pVisita)   : 9999;
+  const contactos  = pCita     > 0 ? Math.ceil(citas       / pCita)     : 9999;
+  const cc_leads   = pContacto > 0 ? Math.ceil(contactos   / pContacto) : 9999;
+  // CC recibe ~74% de leads Meta (ratio mayo)
+  const meta_leads = Math.ceil(cc_leads / 0.744);
+  const budget     = meta_leads * cpl;
+  const diferencia = budget - BUDGET_ACTUAL;
+  const ahorro     = diferencia < 0;
+
+  // Resultados
+  const res = document.getElementById('sim-results');
+  if(!res) return;
+
+  const cardBudget = budget <= BUDGET_ACTUAL
+    ? `positivo" style="--sc:var(--green)`
+    : `negativo" style="--sc:var(--pink)`;
+  const budgetColor = budget <= BUDGET_ACTUAL ? 'var(--green)' : 'var(--pink)';
+  const difSign  = diferencia >= 0 ? '+' : '';
+  const difColor = ahorro ? 'var(--green)' : 'var(--pink)';
+  const difTexto = ahorro
+    ? `Ahorro de ${$m(Math.abs(diferencia))} vs presupuesto actual`
+    : `Inversión adicional de ${$m(diferencia)} vs presupuesto actual`;
+
+  res.innerHTML = `
+    <div class="sim-result-card ${cardBudget}">
+      <div class="sim-result-lbl">Presupuesto necesario</div>
+      <div class="sim-result-val" style="color:${budgetColor}">${$m(budget)}</div>
+      <div class="sim-result-sub">para ${META_INS} inscritos MKT</div>
+      <div class="sim-result-delta" style="color:${difColor}">${difSign}${$m(diferencia)} vs actual ($${(BUDGET_ACTUAL/1000).toFixed(0)}k)</div>
+    </div>
+
+    <div class="sim-result-card">
+      <div class="sim-result-lbl">Leads Meta necesarios</div>
+      <div class="sim-result-val" style="color:var(--cyan)">${$n(meta_leads)}</div>
+      <div class="sim-result-sub">CPL objetivo: ${$m(cpl)} · CC recibirá ~${$n(cc_leads)} leads</div>
+    </div>
+
+    <div class="sim-result-card">
+      <div class="sim-result-lbl">Costo por Inscrito (CPI)</div>
+      <div class="sim-result-val" style="color:var(--orange)">${$m(Math.round(budget/META_INS))}</div>
+      <div class="sim-result-sub">Base mayo: ${$m(Math.round(BUDGET_ACTUAL/5))} por inscrito</div>
+    </div>
+
+    <div class="sim-result-card ${budget <= BUDGET_ACTUAL ? 'positivo' : 'neutro'}">
+      <div class="sim-result-lbl">Diagnóstico</div>
+      <div style="font-size:13px;color:var(--text);font-weight:600;line-height:1.6;margin-top:4px">
+        ${budget <= BUDGET_ACTUAL
+          ? `Con estos porcentajes <strong style="color:var(--green)">alcanzas la meta de ${META_INS} inscritos</strong> dentro del presupuesto actual.`
+          : `Para alcanzar ${META_INS} inscritos se necesita <strong style="color:var(--pink)">${$m(diferencia)} adicionales</strong>. Sube la conversión del CC para reducirlo.`
+        }
+      </div>
+    </div>`;
+
+  // Mini funnel
+  const mf = document.getElementById('sim-funnel-mini');
+  if(mf) mf.innerHTML = [
+    {v: meta_leads,  l:'Leads Meta', c:'var(--cyan)'},
+    {v: cc_leads,    l:'CC trabaja', c:'var(--orange)'},
+    {v: contactos,   l:'Contactos',  c:'var(--orange)'},
+    {v: citas,       l:'Citas',      c:'var(--purple)'},
+    {v: visitas,     l:'Visitas',    c:'var(--pink)'},
+    {v: META_INS,    l:'Inscritos',  c:'var(--green)'},
+  ].map(s=>`<div class="sim-fm-step">
+    <div class="sim-fm-val" style="color:${s.c}">${$n(s.v)}</div>
+    <div class="sim-fm-lbl">${s.l}</div>
+  </div>`).join('');
+}
 
 // Reporte
 const TIPO_CFG = {
