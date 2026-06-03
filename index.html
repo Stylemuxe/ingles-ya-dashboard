@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InglÃ©s YA Â· Dashboard</title>
+<title>Inglés YA · Dashboard</title>
 <link href="https://fonts.cdnfonts.com/css/gilroy-free" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -45,7 +45,7 @@ body::before {
     radial-gradient(ellipse 40% 30% at 0% 60%, rgba(27,63,160,.06) 0%, transparent 60%);
 }
 
-/* â”€â”€ HEADER â”€â”€ */
+/* ── HEADER ── */
 header {
   position: sticky; top: 0; z-index: 100;
   background: rgba(13,11,30,.92);
@@ -88,7 +88,7 @@ header::after {
 #mes-select:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.2); }
 #mes-select option { background: #1e1b3c; color: var(--text); }
 
-/* â”€â”€ TABS â”€â”€ */
+/* ── TABS ── */
 nav {
   position: sticky; top: 64px; z-index: 99;
   background: rgba(13,11,30,.96);
@@ -106,12 +106,12 @@ nav::-webkit-scrollbar { height: 0; }
 .tab:hover { color: var(--muted); }
 .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); text-shadow: 0 0 14px rgba(0,240,255,.6); }
 
-/* â”€â”€ PANES â”€â”€ */
+/* ── PANES ── */
 .pane { display: none; padding: 24px 28px; position: relative; z-index: 1; }
 .pane.active { display: block; animation: paneIn .35s ease both; }
 @keyframes paneIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 
-/* â”€â”€ KPI GRID â”€â”€ */
+/* ── KPI GRID ── */
 .kpi-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; margin-bottom: 20px; }
 @media (max-width:1300px) { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width:700px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
@@ -178,11 +178,11 @@ nav::-webkit-scrollbar { height: 0; }
   text-transform:uppercase; color:var(--muted); text-align:center;
 }
 
-/* â”€â”€ GRID 2 â”€â”€ */
+/* ── GRID 2 ── */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .g2 { grid-template-columns:1fr; } }
 
-/* â”€â”€ CARD â”€â”€ */
+/* ── CARD ── */
 .card {
   background: var(--c1); border:1px solid rgba(255,255,255,.05); border-radius:var(--r);
   overflow:hidden; margin-bottom:14px; position:relative;
@@ -201,11 +201,11 @@ nav::-webkit-scrollbar { height: 0; }
 .card-title { font-size:11px; font-weight:800; letter-spacing:.9px; text-transform:uppercase; color:var(--muted); }
 .card-sub { font-size:11px; color:var(--dim); font-weight:600; }
 
-/* â”€â”€ FUNNEL â”€â”€ */
+/* ── FUNNEL ── */
 .funnel { display:flex; padding:22px 16px; gap:6px; }
 .funnel-step { flex:1; position:relative; text-align:center; }
 .funnel-step:not(:last-child)::after {
-  content:'â€º'; position:absolute; right:-5px; top:50%;
+  content:'›'; position:absolute; right:-5px; top:50%;
   transform:translateY(-50%); color:var(--dim); font-size:22px; z-index:1;
 }
 .f-pill {
@@ -223,7 +223,7 @@ nav::-webkit-scrollbar { height: 0; }
 .f-lbl { font-size:9px; font-weight:700; letter-spacing:.7px; text-transform:uppercase; margin-top:3px; opacity:.8; }
 .f-pct { font-size:10px; margin-top:5px; color:var(--dim); }
 
-/* â”€â”€ TABLE â”€â”€ */
+/* ── TABLE ── */
 table { width:100%; border-collapse:collapse; }
 th {
   background:rgba(13,11,30,.6); color:var(--dim);
@@ -237,14 +237,14 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .num { font-weight:700; font-variant-numeric:tabular-nums; font-size:14px; }
 .tot td { font-weight:800; font-size:14px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
 
-/* â”€â”€ BADGES â”€â”€ */
+/* ── BADGES ── */
 .badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:5px; font-size:10px; font-weight:700; letter-spacing:.3px; }
 .ba  { background:rgba(0,255,136,.12); color:var(--green); }
 .bp  { background:rgba(255,153,0,.1);  color:var(--orange); }
 .bsi { background:rgba(0,255,136,.12); color:var(--green); }
 .bno { background:rgba(255,0,102,.1);  color:var(--pink); }
 
-/* â”€â”€ PROGRESS BAR â”€â”€ */
+/* ── PROGRESS BAR ── */
 .pbar-wrap { display:flex; align-items:center; gap:8px; }
 .pbar { flex:1; height:4px; border-radius:99px; background:rgba(255,255,255,.05); overflow:hidden; }
 .pbar-fill {
@@ -255,10 +255,10 @@ tr:hover td { background:rgba(0,240,255,.025); }
 @keyframes barGrow { from{width:0!important} }
 .pbar-val { font-size:12px; font-weight:700; color:var(--muted); min-width:38px; text-align:right; }
 
-/* â”€â”€ CHART â”€â”€ */
+/* ── CHART ── */
 .chart-wrap { padding:20px; height:280px; }
 
-/* â”€â”€ REPORTE â”€â”€ */
+/* ── REPORTE ── */
 .reporte-header {
   background: linear-gradient(135deg, rgba(123,47,247,.18) 0%, rgba(27,63,160,.18) 100%);
   border: 1px solid rgba(123,47,247,.25); border-radius: var(--r);
@@ -342,7 +342,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 
-/* â”€â”€ META LEADS â”€â”€ */
+/* ── META LEADS ── */
 .ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.04); }
 .ml-row:last-child { border-bottom:none; }
 .ml-label { min-width:200px; }
@@ -358,7 +358,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .ml-total-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
 .ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
-/* â”€â”€ SIMULADOR PRESUPUESTO â”€â”€ */
+/* ── SIMULADOR PRESUPUESTO ── */
 .sim-reset-btn {
   background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple);
   border-radius:8px; padding:7px 16px; font-size:11px; font-weight:800; cursor:pointer;
@@ -399,7 +399,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .vs-ok  { background:rgba(0,255,136,.15); color:var(--green); }
 .vs-bad { background:rgba(224,32,32,.15);  color:var(--pink); }
 
-/* â”€â”€ CHURN RECOVERY â”€â”€ */
+/* ── CHURN RECOVERY ── */
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
 .churn-card {
@@ -427,7 +427,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .churn-total-val { font-size:20px; font-weight:800; font-variant-numeric:tabular-nums; }
 .churn-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
 
-/* â”€â”€ SUC CARDS â”€â”€ */
+/* ── SUC CARDS ── */
 .suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .suc-cards { grid-template-columns:1fr; } }
 .suc-card {
@@ -457,7 +457,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .conv-label { font-size:10px; color:var(--dim); font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
 .conv-rate { font-family:'Gilroy','Montserrat',sans-serif; font-size:24px; font-weight:800; color:var(--green); text-shadow:0 0 16px rgba(0,255,136,.4); }
 
-/* â”€â”€ SELECT â”€â”€ */
+/* ── SELECT ── */
 select.filter { background:var(--c3); border:1px solid rgba(255,255,255,.1); color:var(--text); padding:6px 14px; border-radius:8px; font-size:11px; font-weight:700; letter-spacing:.3px; cursor:pointer; }
 select.filter:focus { outline:none; border-color:var(--cyan); }
 
@@ -475,7 +475,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <img src="logo.jpg" alt="InglÃ©s YA">
+    <img src="logo.jpg" alt="Inglés YA">
   </div>
   <div class="header-right">
     <div class="mes-selector">
@@ -485,7 +485,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       </select>
     </div>
     <div class="live-badge"><div class="live-dot"></div>En vivo</div>
-    <span id="updated">â€”</span>
+    <span id="updated">—</span>
   </div>
 </header>
 
@@ -505,7 +505,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <div id="pane-resumen" class="pane active">
   <div class="kpi-grid" id="kpis"></div>
   <div class="card" id="card-meta-leads">
-    <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">â€”</span></div>
+    <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">—</span></div>
     <div id="meta-leads-body"></div>
   </div>
   <div class="g2">
@@ -514,7 +514,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="funnel" id="funnel"></div>
     </div>
     <div class="card">
-      <div class="card-head"><span class="card-title">Por Sucursal</span><span class="card-sub">Conv Lâ†’I</span></div>
+      <div class="card-head"><span class="card-title">Por Sucursal</span><span class="card-sub">Conv L→I</span></div>
       <table id="tbl-suc-mini"></table>
     </div>
   </div>
@@ -541,10 +541,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
-<!-- CAMPAÃ‘AS -->
+<!-- CAMPAÑAS -->
 <div id="pane-campanas" class="pane">
   <div class="card">
-    <div class="card-head"><span class="card-title">Campañas â€” Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
+    <div class="card-head"><span class="card-title">Campañas — Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-campanas"></table>
   </div>
 </div>
@@ -552,7 +552,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- AD SETS -->
 <div id="pane-adsets" class="pane">
   <div class="card">
-    <div class="card-head"><span class="card-title">Ad Sets â€” Mes Actual</span><span class="card-sub">Ordenado por Leads â†“</span></div>
+    <div class="card-head"><span class="card-title">Ad Sets — Mes Actual</span><span class="card-sub">Ordenado por Leads ↓</span></div>
     <table id="tbl-adsets"></table>
   </div>
 </div>
@@ -577,7 +577,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:6px">
       <div>
         <div class="card-title" style="font-size:17px">Simulador de Presupuesto</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px">Escribe tu meta de asistencias por sede â€” calcula cuanto presupuesto necesitas</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Escribe tu meta de asistencias por sede — calcula cuanto presupuesto necesitas</div>
       </div>
       <button class="sim-reset-btn" onclick="simReset()">Restablecer</button>
     </div>
@@ -592,7 +592,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     </div>
 
     <!-- PROYECTOR -->
-    <div class="sim-section-title" style="margin-top:28px">Proyector â€” escribe tu meta de asistencias por sede</div>
+    <div class="sim-section-title" style="margin-top:28px">Proyector — escribe tu meta de asistencias por sede</div>
     <div style="overflow-x:auto">
       <table class="proy-table" id="proy-table"></table>
     </div>
@@ -615,7 +615,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div class="chart-wrap"><canvas id="chart-meta"></canvas></div>
   </div>
   <div class="card">
-    <div class="card-head"><span class="card-title">Leads por Sucursal â€” Diario</span></div>
+    <div class="card-head"><span class="card-title">Leads por Sucursal — Diario</span></div>
     <div class="chart-wrap"><canvas id="chart-suc"></canvas></div>
   </div>
 </div>
@@ -623,7 +623,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <script src="data_ingles.js"></script>
 <script>
 let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
-  actualizado:'â€”', mes:'â€”',
+  actualizado:'—', mes:'—',
   kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
   campanas:[], adsets:[], diario_meta:{},
   sucursales:{LINDAVISTA:{leads:0,llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0},
@@ -634,7 +634,7 @@ let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
 
 const $m  = n => new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',minimumFractionDigits:0}).format(n||0);
 const $n  = n => new Intl.NumberFormat('es-MX').format(Math.round(n)||0);
-const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : 'â€”';
+const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : '—';
 const pctN= (a,b) => b>0 ? Math.min(100,(a/b)*100) : 0;
 const cplColor = v => !v?'var(--dim)':v<150?'var(--green)':v<300?'var(--orange)':'var(--pink)';
 
@@ -651,7 +651,7 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
-// â”€â”€ SIMULADOR DE PRESUPUESTO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── SIMULADOR DE PRESUPUESTO ──────────────────────────────────────────────────
 const MAYO_REF = {
   ERMITA:     { cc:169, llamadas:99,  nc:69, citas:12, visitas:0, inscritos:1, ml:470, gasto:21128.74, cpl:44.95 },
   LINDAVISTA: { cc:179, llamadas:103, nc:78, citas:17, visitas:5, inscritos:4, ml:92,  gasto:5678,     cpl:61.71 },
@@ -663,10 +663,10 @@ const META_INS_T  = 45;
 // meta inscritos por sede (proporcional al churn)
 const META_DIST   = { ERMITA:11, LINDAVISTA:20, IZTACALCO:14 };
 
-function pctN2(a,b){ return b>0 ? ((a/b)*100).toFixed(1) : 'â€”'; }
+function pctN2(a,b){ return b>0 ? ((a/b)*100).toFixed(1) : '—'; }
 function pctChip(v,good,bad){
   const n=parseFloat(v);
-  if(isNaN(n)) return '<span style="color:var(--dim)">â€”</span>';
+  if(isNaN(n)) return '<span style="color:var(--dim)">—</span>';
   const c = n>=good?'var(--green)':n>=bad?'var(--orange)':'var(--pink)';
   return '<span style="color:'+c+';font-weight:800">'+v+'%</span>';
 }
@@ -706,7 +706,7 @@ function simInit() {
       const pCont = pctN2(r.llamadas,r.cc);
       const pCita = pctN2(r.citas,r.cc);
       const pVis  = pctN2(r.visitas,r.citas);
-      const cpi   = r.inscritos>0 ? $m(Math.round(r.gasto/r.inscritos)) : 'â€”';
+      const cpi   = r.inscritos>0 ? $m(Math.round(r.gasto/r.inscritos)) : '—';
       return `<tr>
         <td><span style="display:flex;align-items:center;gap:8px">${sucDot(s)}<strong style="color:${sc}">${s}</strong></span></td>
         <td>${$n(r.cc)}</td><td>${$n(r.llamadas)}</td>
@@ -723,7 +723,7 @@ function simInit() {
       </tr>`;
     }).join('');
     const avgCPLT=tML>0?tG/tML:0;
-    const cpiT=tIns>0?$m(Math.round(tG/tIns)):'â€”';
+    const cpiT=tIns>0?$m(Math.round(tG/tIns)):'—';
     rt.innerHTML = thead+`<tbody>${rows}<tr class="tot">
       <td>TOTAL</td><td>${$n(tCC)}</td><td>${$n(tLL)}</td>
       <td>${pctChip(pctN2(tLL,tCC),60,40)}</td>
@@ -743,8 +743,8 @@ function simInit() {
     const thead = `<thead><tr>
       <th>Sede</th>
       <th>Leads junio</th>
-      <th>% Agend<br><small style="font-weight:600;letter-spacing:0">(leadâ†’cita)</small></th>
-      <th>% Visita<br><small style="font-weight:600;letter-spacing:0">(citaâ†’visita)</small></th>
+      <th>% Agend<br><small style="font-weight:600;letter-spacing:0">(lead→cita)</small></th>
+      <th>% Visita<br><small style="font-weight:600;letter-spacing:0">(cita→visita)</small></th>
       <th>CPL</th>
       <th>Meta inscritos</th>
       <th style="color:var(--cyan)">Leads necesarios</th>
@@ -764,15 +764,15 @@ function simInit() {
         <td><input class="proy-input pct" id="pi-vi-${s}" value="${pVi}" min="1" max="100" oninput="simCalc()">%</td>
         <td><input class="proy-input" id="pi-cpl-${s}" value="${Math.round(r.cpl)}" min="10" max="300" oninput="simCalc()"></td>
         <td><input class="proy-input" id="pi-ins-${s}" value="${metaIns}" min="1" max="200" oninput="simCalc()"></td>
-        <td class="proy-calc" id="pc-ml-${s}" style="color:var(--cyan)">â€”</td>
-        <td class="proy-calc" id="pc-bud-${s}" style="color:var(--green)">â€”</td>
+        <td class="proy-calc" id="pc-ml-${s}" style="color:var(--cyan)">—</td>
+        <td class="proy-calc" id="pc-bud-${s}" style="color:var(--green)">—</td>
       </tr>`;
     }).join('');
     pt.innerHTML = thead+`<tbody>${rows}<tr class="tot">
       <td>TOTAL</td><td></td><td></td><td></td><td></td>
-      <td id="tot-ins" style="color:var(--orange)">â€”</td>
-      <td id="tot-ml"  style="color:var(--cyan)">â€”</td>
-      <td id="tot-bud" style="color:var(--green)">â€”</td>
+      <td id="tot-ins" style="color:var(--orange)">—</td>
+      <td id="tot-ml"  style="color:var(--cyan)">—</td>
+      <td id="tot-bud" style="color:var(--green)">—</td>
     </tr></tbody>`;
   }
   simCalc();
@@ -801,7 +801,7 @@ function simCalc(){
     const cpl  = gv('pi-cpl-'+s);
     const meta = gv('pi-ins-'+s);
     // back-calculate from inscritos
-    const visitas_need = meta;                                   // inscritos â‰ˆ visitas (close rate ~100%)
+    const visitas_need = meta;                                   // inscritos ≈ visitas (close rate ~100%)
     const citas_need   = pVi>0 ? Math.ceil(visitas_need/pVi):9999;
     const cc_need      = pAg>0 ? Math.ceil(citas_need/pAg):9999;
     const ml_need      = Math.ceil(cc_need/0.744);
@@ -841,11 +841,11 @@ function simCalc(){
 
 // Reporte
 const TIPO_CFG = {
-  estrategia:  { icon:'ðŸš€', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
-  optimizacion:{ icon:'âš¡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
-  novedad:     { icon:'âœ¨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
-  correccion:  { icon:'ðŸ”§', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
-  alerta:      { icon:'ðŸ”´', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
+  estrategia:  { icon:'🚀', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
+  optimizacion:{ icon:'⚡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
+  novedad:     { icon:'✨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
+  correccion:  { icon:'🔧', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
+  alerta:      { icon:'🔴', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
 };
 
 async function renderReporte() {
@@ -882,31 +882,31 @@ async function renderReporte() {
 
   const secEnProceso = enProceso.length ? `
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-      <span style="font-size:13px;font-weight:800;color:var(--orange)">ðŸ”„ En proceso</span>
+      <span style="font-size:13px;font-weight:800;color:var(--orange)">🔄 En proceso</span>
       <div style="flex:1;height:1px;background:rgba(255,153,0,.2)"></div>
     </div>
     <div class="nov-grid" style="margin-bottom:20px">${renderCards(enProceso, 0)}</div>` : '';
 
   const secNovedades = novedades.length ? `
     <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-      <span style="font-size:13px;font-weight:800;color:var(--cyan)">âœ… Realizados</span>
+      <span style="font-size:13px;font-weight:800;color:var(--cyan)">✅ Realizados</span>
       <div style="flex:1;height:1px;background:rgba(0,240,255,.15)"></div>
     </div>
     <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length)}</div>` : '';
 
   const secPendientes = pendientes.length ? `<div class="pendientes-card">
-    <div class="pendientes-titulo">ðŸ“‹ Próximos pasos</div>
+    <div class="pendientes-titulo">📋 Próximos pasos</div>
     ${pendientes.map((p,i)=>`<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`).join('')}
   </div>` : '';
 
   el.innerHTML = `
     <div class="reporte-header">
       <div class="reporte-header-left">
-        <div class="reporte-titulo">Reporte de Actividad Â· ${N.periodo || 'â€”'}</div>
-        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || 'â€”'}</strong> &nbsp;Â·&nbsp; ${totalActs} actualizaciones este periodo</div>
+        <div class="reporte-titulo">Reporte de Actividad · ${N.periodo || '—'}</div>
+        <div class="reporte-sub">Cliente: <strong style="color:var(--text)">${N.cliente || '—'}</strong> &nbsp;·&nbsp; ${totalActs} actualizaciones este periodo</div>
       </div>
       <div class="reporte-agencia">
-        <div class="reporte-agencia-name">${N.agencia || 'â€”'}</div>
+        <div class="reporte-agencia-name">${N.agencia || '—'}</div>
         <div class="reporte-agencia-lbl">Agencia</div>
       </div>
     </div>
@@ -946,16 +946,16 @@ function monthProgress() {
 
 // KPI CONFIG
 function renderKpis() {
-  document.getElementById('updated').textContent = `${D.actualizado} Â· ${D.mes}`;
+  document.getElementById('updated').textContent = `${D.actualizado} · ${D.mes}`;
   const k = D.kpis;
   const mp = monthProgress();
   const cards = [
-    { icon:'ðŸ’¬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp },
-    { icon:'ðŸ’¸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp },
-    { icon:'ðŸ“Š', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
-    { icon:'ðŸ“…', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp },
+    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp },
+    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
+    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
     { icon:'ðŸƒ', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta) },
-    { icon:'âœ…', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -1018,7 +1018,7 @@ function leadsXSede() {
     if (n.includes('ERMITA')) {
       result.ERMITA += c.leads;
     } else {
-      // CampaÃ±a combinada LIND+IZT: repartir proporcional a la meta
+      // Campaña combinada LIND+IZT: repartir proporcional a la meta
       const mL = metas.LINDAVISTA || 0;
       const mI = metas.IZTACALCO  || 0;
       const tot = mL + mI;
@@ -1045,7 +1045,7 @@ function renderMetaLeads() {
   const totColor= totPct>=100?'var(--green)':totPct>=50?'var(--orange)':'var(--pink)';
 
   document.getElementById('meta-leads-sub').textContent =
-    `${$n(totLeads)} de ${$n(totMeta)} leads â€” ${totPct.toFixed(1)}%`;
+    `${$n(totLeads)} de ${$n(totMeta)} leads — ${totPct.toFixed(1)}%`;
 
   const rows = ORDEN.map(s => {
     const leads = leadsSede[s] || 0;
@@ -1057,7 +1057,7 @@ function renderMetaLeads() {
     return `<div class="ml-row">
       <div class="ml-label">
         <div class="ml-name" style="color:${sc}">${s}</div>
-        <div class="ml-sub">${meta>0 ? (falta>0 ? 'Faltan '+$n(falta)+' leads' : 'Â¡Meta alcanzada!') : 'Sin meta'}</div>
+        <div class="ml-sub">${meta>0 ? (falta>0 ? 'Faltan '+$n(falta)+' leads' : '¡Meta alcanzada!') : 'Sin meta'}</div>
       </div>
       <div class="ml-bar">
         <div class="ml-bar-track">
@@ -1065,7 +1065,7 @@ function renderMetaLeads() {
         </div>
         <div class="ml-nums">
           <span class="ml-actual" style="color:${color}">${$n(leads)} leads</span>
-          <span style="color:var(--muted)">meta ${$n(meta)} Â· <strong style="color:${color}">${pct.toFixed(0)}%</strong></span>
+          <span style="color:var(--muted)">meta ${$n(meta)} · <strong style="color:${color}">${pct.toFixed(0)}%</strong></span>
         </div>
       </div>
     </div>`;
@@ -1153,7 +1153,7 @@ function renderChurn() {
     <div class="churn-total-item"><div class="churn-total-val" style="color:var(--text)">${$n(totPlantilla)}</div><div class="churn-total-lbl">Plantilla total</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:var(--orange)">${$n(metaMkt)}</div><div class="churn-total-lbl">Meta inscritos MKT</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${$n(totInscritos)}</div><div class="churn-total-lbl">Inscritos del mes</div></div>
-    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktFalta > 0 ? $n(mktFalta)+' faltan' : 'Â¡Meta MKT lograda!'}</div><div class="churn-total-lbl">vs meta MKT</div></div>
+    <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktFalta > 0 ? $n(mktFalta)+' faltan' : '¡Meta MKT lograda!'}</div><div class="churn-total-lbl">vs meta MKT</div></div>
     <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktPct.toFixed(0)}%</div><div class="churn-total-lbl">Avance MKT</div></div>
   </div>
   <div style="margin-top:10px;padding:0 2px">
@@ -1201,7 +1201,7 @@ function renderSucMini() {
     </tr>`;
   }).join('');
   document.getElementById('tbl-suc-mini').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv Lâ†’I</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
      <tbody>${rows}</tbody>`;
 }
 
@@ -1211,12 +1211,12 @@ function renderCampMini() {
     <td style="max-width:230px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
     <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'â€”'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(c.presupuesto_dia)}/dÃ­a</span>`:'â€”'}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(c.presupuesto_dia)}/día</span>`:'—'}</td>
   </tr>`).join('');
   document.getElementById('tbl-camp-mini').innerHTML=
-    `<thead><tr><th>CampaÃ±a</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin campaÃ±as activas</td></tr>'}</tbody>`;
+    `<thead><tr><th>Campaña</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
+     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin campañas activas</td></tr>'}</tbody>`;
 }
 
 function renderSucCards() {
@@ -1255,7 +1255,7 @@ function renderSucCards() {
       </div>
       ${metaHTML}
       <div class="suc-foot">
-        <span class="conv-label">Lead â†’ Inscrito</span>
+        <span class="conv-label">Lead → Inscrito</span>
         <span class="conv-rate">${pct(v.inscritos||0, leads)}</span>
       </div>
     </div>`;
@@ -1278,7 +1278,7 @@ function renderSucursales() {
            <div class="pbar"><div class="pbar-fill" style="width:${avPct}%;background:${avCol}"></div></div>
            <div class="pbar-val" style="color:${avCol}">${avPct.toFixed(0)}%</div>
          </div><div style="font-size:10px;color:var(--muted);margin-top:2px">${$n(leads)} / ${$n(meta)}</div></td>`
-      : '<td style="color:var(--dim)">â€”</td>';
+      : '<td style="color:var(--dim)">—</td>';
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-weight:800">${s}</strong></span></td>
       <td class="num" style="color:#00f0ff">${$n(leads)}</td>
@@ -1298,11 +1298,11 @@ function renderSucursales() {
   };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0});
   const totMeta = Object.values(metas).reduce((a,v)=>a+v,0);
   document.getElementById('tbl-sucursales').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>Lâ†’I</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th></tr></thead>
      <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
        <td style="color:#00f0ff">${$n(totLeads)}</td>
-       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'â€”'}</td>
+       <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'—'}</td>
        <td>${$n(totCC.llamadas)}</td><td>${$n(totCC.no_contesta)}</td>
        <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
        <td style="color:#00ff88">${$n(totCC.inscritos)}</td>
@@ -1314,29 +1314,29 @@ function renderCampanas() {
   const rows=(D.campanas||[]).map(c=>`<tr>
     <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
     <td>${c.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'â€”'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'—'}</td>
     <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
     <td class="num">${$n(c.impresiones)}</td>
     <td class="num">${$n(c.alcance)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'â€”'}</td>
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
   </tr>`).join('');
   document.getElementById('tbl-campanas').innerHTML=
-    `<thead><tr><th>CampaÃ±a</th><th>Status</th><th>Budget/DÃ­a</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos â€” corre actualizar_ingles.py</td></tr>'}</tbody>`;
+    `<thead><tr><th>Campaña</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
+     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos — corre actualizar_ingles.py</td></tr>'}</tbody>`;
 }
 
 function renderAdsets() {
   const rows=[...(D.adsets||[])].sort((a,b)=>b.leads-a.leads).map(a=>`<tr>
     <td style="font-weight:600">${a.nombre}</td>
     <td>${a.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
-    <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'â€”'}</td>
+    <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
     <td class="num" style="color:#00f0ff">${$n(a.leads)}</td>
     <td class="num" style="color:#E02020">${$m(a.gasto)}</td>
-    <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'â€”'}</td>
+    <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'—'}</td>
   </tr>`).join('');
   document.getElementById('tbl-adsets').innerHTML=
-    `<thead><tr><th>Ad Set</th><th>Status</th><th>Budget/DÃ­a</th><th>Leads</th><th>Gasto</th><th>CPL</th></tr></thead>
+    `<thead><tr><th>Ad Set</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>CPL</th></tr></thead>
      <tbody>${rows||'<tr><td colspan="6" class="empty">Sin datos</td></tr>'}</tbody>`;
 }
 
@@ -1346,17 +1346,17 @@ function renderAgenda() {
   const rows=data.map(r=>{
     const cfg=SUC[r.sucursal]||{c:'#888',b:'rgba(136,136,136,.1)'};
     return `<tr>
-      <td>${r.sucursal?`<span style="background:${cfg.b};color:${cfg.c};padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.4px">${r.sucursal}</span>`:'<span style="color:var(--dim)">â€”</span>'}</td>
+      <td>${r.sucursal?`<span style="background:${cfg.b};color:${cfg.c};padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.4px">${r.sucursal}</span>`:'<span style="color:var(--dim)">—</span>'}</td>
       <td><strong style="font-weight:700">${r.nombre}</strong></td>
       <td style="color:var(--muted)">${r.tel}</td>
       <td style="color:var(--dim);font-size:12px">${r.fecha_cita}</td>
-      <td>${r.asistio?'<span class="badge bsi">âœ“ SÃ</span>':'<span class="badge bno">âœ— NO</span>'}</td>
-      <td>${r.inscrito?'<span class="badge bsi">âœ“ SÃ</span>':'<span class="badge bno">âœ— NO</span>'}</td>
+      <td>${r.asistio?'<span class="badge bsi">✓ SÃ</span>':'<span class="badge bno">✗ NO</span>'}</td>
+      <td>${r.inscrito?'<span class="badge bsi">✓ SÃ</span>':'<span class="badge bno">✗ NO</span>'}</td>
       <td style="color:var(--dim);font-size:11px;max-width:200px">${r.obs||''}</td>
     </tr>`;
   }).join('');
   document.getElementById('tbl-agenda').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Nombre</th><th>Tel</th><th>Fecha Cita</th><th>AsistiÃ³</th><th>Inscrito</th><th>Observaciones</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Nombre</th><th>Tel</th><th>Fecha Cita</th><th>Asistió</th><th>Inscrito</th><th>Observaciones</th></tr></thead>
      <tbody>${rows||'<tr><td colspan="7" class="empty">Sin prospectos</td></tr>'}</tbody>`;
 }
 
@@ -1422,7 +1422,7 @@ function renderDiario() {
   });
 }
 
-// â”€â”€ Render todo â”€â”€
+// ── Render todo ──
 function renderAll() {
   renderKpis();
   renderMetaLeads();
@@ -1438,7 +1438,7 @@ function renderAll() {
   if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
 }
 
-// â”€â”€ Selector de mes â”€â”€
+// ── Selector de mes ──
 const MESES_NOMBRES = {
   '01':'Ene','02':'Feb','03':'Mar','04':'Abr','05':'May','06':'Jun',
   '07':'Jul','08':'Ago','09':'Sep','10':'Oct','11':'Nov','12':'Dic'
