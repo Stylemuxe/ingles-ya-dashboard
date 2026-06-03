@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -493,7 +493,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <nav>
   <div class="tab active" data-pane="resumen">Resumen</div>
   <div class="tab" data-pane="sucursales">Sucursales</div>
-  <div class="tab" data-pane="campanas">CampaÃ±as</div>
+  <div class="tab" data-pane="campanas">Campañas</div>
   <div class="tab" data-pane="adsets">Ad Sets</div>
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
@@ -523,7 +523,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div id="churn-resumen"></div>
   </div>
   <div class="card">
-    <div class="card-head"><span class="card-title">CampaÃ±as Activas</span><span class="card-sub">Meta Ads API</span></div>
+    <div class="card-head"><span class="card-title">Campañas Activas</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-camp-mini"></table>
   </div>
 </div>
@@ -544,7 +544,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- CAMPAÃ‘AS -->
 <div id="pane-campanas" class="pane">
   <div class="card">
-    <div class="card-head"><span class="card-title">CampaÃ±as â€” Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
+    <div class="card-head"><span class="card-title">Campañas â€” Mes Actual</span><span class="card-sub">Meta Ads API</span></div>
     <table id="tbl-campanas"></table>
   </div>
 </div>
@@ -842,9 +842,9 @@ function simCalc(){
 // Reporte
 const TIPO_CFG = {
   estrategia:  { icon:'ðŸš€', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
-  optimizacion:{ icon:'âš¡', label:'OptimizaciÃ³n', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
+  optimizacion:{ icon:'âš¡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
   novedad:     { icon:'âœ¨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
-  correccion:  { icon:'ðŸ”§', label:'CorrecciÃ³n',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
+  correccion:  { icon:'ðŸ”§', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
   alerta:      { icon:'ðŸ”´', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
 };
 
@@ -895,7 +895,7 @@ async function renderReporte() {
     <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length)}</div>` : '';
 
   const secPendientes = pendientes.length ? `<div class="pendientes-card">
-    <div class="pendientes-titulo">ðŸ“‹ PrÃ³ximos pasos</div>
+    <div class="pendientes-titulo">ðŸ“‹ Próximos pasos</div>
     ${pendientes.map((p,i)=>`<div class="pendiente-item"><span class="pendiente-num">${i+1}</span>${p}</div>`).join('')}
   </div>` : '';
 
