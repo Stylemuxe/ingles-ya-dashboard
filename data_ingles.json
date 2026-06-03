@@ -1,11 +1,11 @@
 {
-  "actualizado": "02/06/2026 22:06",
+  "actualizado": "03/06/2026 18:08",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 30,
-    "gasto": 1435.92,
-    "cpl": 47.86,
+    "leads_meta": 46,
+    "gasto": 2722.99,
+    "cpl": 59.2,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 903.65,
-      "impresiones": 5686,
-      "alcance": 4828,
-      "leads": 22,
-      "cpl": 41.07
+      "gasto": 1757.54,
+      "impresiones": 12384,
+      "alcance": 10426,
+      "leads": 34,
+      "cpl": 51.69
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 532.27,
-      "impresiones": 4644,
-      "alcance": 3952,
-      "leads": 8,
-      "cpl": 66.53
+      "gasto": 965.45,
+      "impresiones": 9924,
+      "alcance": 8157,
+      "leads": 12,
+      "cpl": 80.45
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 903.65,
-      "leads": 22,
-      "cpl": 41.07
+      "gasto": 1757.54,
+      "leads": 34,
+      "cpl": 51.69
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -191,9 +191,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 532.47,
-      "leads": 8,
-      "cpl": 66.56
+      "gasto": 965.45,
+      "leads": 12,
+      "cpl": 80.45
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -262,11 +262,15 @@
   "diario_meta": {
     "2026-06-01": {
       "leads": 15,
-      "gasto": 491.26
+      "gasto": 491.45
     },
     "2026-06-02": {
-      "leads": 15,
-      "gasto": 944.66
+      "leads": 22,
+      "gasto": 1640.4
+    },
+    "2026-06-03": {
+      "leads": 9,
+      "gasto": 591.14
     }
   },
   "sucursales": {
