@@ -860,13 +860,21 @@ async function renderReporte() {
     return;
   }
 
-  const renderCards = (lista, offset=0) => lista.map((n, i) => {
+  const renderCards = (lista, offset=0, done=false) => lista.map((n, i) => {
     const cfg = TIPO_CFG[n.tipo] || TIPO_CFG.novedad;
     const detalle = (n.detalle || []).map(d =>
       `<div class="nov-detalle-item">${d}</div>`).join('');
-    return `<div class="nov-card" style="--nc:${cfg.color};--nc-glow:${cfg.glow};--nc-bg:${cfg.bg};--nc-border:${cfg.border};animation-delay:${(i+offset) * .08}s">
+    const doneOverlay = done ? `
+      <div style="position:absolute;top:12px;right:12px;background:rgba(0,255,136,.15);border:1px solid rgba(0,255,136,.4);border-radius:99px;padding:3px 10px;display:flex;align-items:center;gap:5px;font-size:10px;font-weight:800;color:var(--green);letter-spacing:.4px;text-transform:uppercase">
+        &#10003; Completado
+      </div>` : '';
+    const doneStyle = done
+      ? `--nc:var(--green);--nc-glow:rgba(0,255,136,.15);--nc-bg:rgba(0,255,136,.06);--nc-border:rgba(0,255,136,.2);`
+      : `--nc:${cfg.color};--nc-glow:${cfg.glow};--nc-bg:${cfg.bg};--nc-border:${cfg.border};`;
+    return `<div class="nov-card" style="${doneStyle}animation-delay:${(i+offset) * .08}s">
+      ${doneOverlay}
       <div class="nov-top">
-        <span class="nov-badge">${cfg.icon} ${cfg.label}</span>
+        <span class="nov-badge" style="${done?'background:rgba(0,255,136,.12);color:var(--green);border-color:rgba(0,255,136,.3)':''}">${cfg.icon} ${cfg.label}</span>
         <span class="nov-fecha">${n.fecha}</span>
       </div>
       <div class="nov-titulo">${n.titulo}</div>
@@ -892,7 +900,7 @@ async function renderReporte() {
       <span style="font-size:13px;font-weight:800;color:var(--cyan)">✅ Realizados</span>
       <div style="flex:1;height:1px;background:rgba(0,240,255,.15)"></div>
     </div>
-    <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length)}</div>` : '';
+    <div class="nov-grid" style="margin-bottom:20px">${renderCards(novedades, enProceso.length, true)}</div>` : '';
 
   const secPendientes = pendientes.length ? `<div class="pendientes-card">
     <div class="pendientes-titulo">📋 Próximos pasos</div>
