@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "03/06/2026 18:08",
+  "actualizado": "03/06/2026 23:38",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 46,
-    "gasto": 2722.99,
-    "cpl": 59.2,
+    "leads_meta": 58,
+    "gasto": 3372.87,
+    "cpl": 58.15,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 1757.54,
-      "impresiones": 12384,
-      "alcance": 10426,
-      "leads": 34,
-      "cpl": 51.69
+      "gasto": 2144.41,
+      "impresiones": 15616,
+      "alcance": 13007,
+      "leads": 45,
+      "cpl": 47.65
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 965.45,
-      "impresiones": 9924,
-      "alcance": 8157,
-      "leads": 12,
-      "cpl": 80.45
+      "gasto": 1228.46,
+      "impresiones": 14075,
+      "alcance": 11351,
+      "leads": 13,
+      "cpl": 94.5
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1757.54,
-      "leads": 34,
-      "cpl": 51.69
+      "gasto": 2144.41,
+      "leads": 45,
+      "cpl": 47.65
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -191,9 +191,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 965.45,
-      "leads": 12,
-      "cpl": 80.45
+      "gasto": 1228.46,
+      "leads": 13,
+      "cpl": 94.5
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -266,11 +266,11 @@ const DATA_INGLES = {
     },
     "2026-06-02": {
       "leads": 22,
-      "gasto": 1640.4
+      "gasto": 1646.47
     },
     "2026-06-03": {
-      "leads": 9,
-      "gasto": 591.14
+      "leads": 21,
+      "gasto": 1234.95
     }
   },
   "sucursales": {

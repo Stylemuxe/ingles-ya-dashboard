@@ -28,7 +28,12 @@ BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 API_BASE   = 'https://graph.facebook.com/v19.0'
 
 SHEET_SEG_ID  = '1mlIqrmxvEou-occ3Osv7DJv_O_jvU0c-'
-SHEET_SEG_GID = '1913702244'
+# GID por mes — agregar cada mes nuevo aqui
+SHEET_SEG_GIDS = {
+    '2026-05': '1913702244',
+    '2026-06': '768692381',
+}
+SHEET_SEG_GID = SHEET_SEG_GIDS.get(MES_ACTUAL, '768692381')
 SHEET_AGE_ID  = '1MtKus1GkNxZGriSN2Ku5kNNaaROK6hoL'
 SHEET_AGE_GIDS = {
     'LINDAVISTA': '60143132',
