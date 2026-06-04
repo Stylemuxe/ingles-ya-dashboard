@@ -1,11 +1,11 @@
 {
-  "actualizado": "04/06/2026 19:48",
+  "actualizado": "04/06/2026 23:56",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 70,
-    "gasto": 3799.42,
-    "cpl": 54.28,
+    "leads_meta": 80,
+    "gasto": 4182.36,
+    "cpl": 52.28,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 2314.44,
-      "impresiones": 17156,
-      "alcance": 14062,
-      "leads": 50,
-      "cpl": 46.29
+      "gasto": 2616.9,
+      "impresiones": 21356,
+      "alcance": 16918,
+      "leads": 58,
+      "cpl": 45.12
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1484.98,
-      "impresiones": 19804,
-      "alcance": 15556,
-      "leads": 20,
-      "cpl": 74.25
+      "gasto": 1565.46,
+      "impresiones": 21729,
+      "alcance": 17189,
+      "leads": 22,
+      "cpl": 71.16
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2314.44,
-      "leads": 50,
-      "cpl": 46.29
+      "gasto": 2616.9,
+      "leads": 58,
+      "cpl": 45.12
     },
     {
       "nombre": "Ingles Ya ERMITA",
@@ -191,9 +191,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1484.98,
-      "leads": 21,
-      "cpl": 70.71
+      "gasto": 1565.46,
+      "leads": 22,
+      "cpl": 71.16
     },
     {
       "nombre": "PROFESIONISTAS",
@@ -273,8 +273,8 @@
       "gasto": 1310.48
     },
     "2026-06-04": {
-      "leads": 9,
-      "gasto": 349.32
+      "leads": 19,
+      "gasto": 732.26
     }
   },
   "sucursales": {
@@ -589,6 +589,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Ruth Olivares",
+      "tel": "5517245135",
+      "fecha_cita": "06-06-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "conocer instalaciones"
     },
     {
       "sucursal": "IZTACALCO",
