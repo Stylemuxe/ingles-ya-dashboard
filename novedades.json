@@ -2,72 +2,108 @@
   "periodo": "Junio 2026",
   "agencia": "Tráfico ETH",
   "cliente": "Inglés YA",
-  "resumen": "Optimización de campañas, separación por plantel y corrección de métricas del Contact Center.",
+  "resumen": "Mes 1 del Paquete 2 ($12,000/mes). Dashboard en vivo, campañas activas por plantel y parrilla de contenido entregada. Pendiente activar campañas nuevas y producir piezas de contenido.",
   "novedades": [
     {
-      "fecha": "02/06/2026",
+      "fecha": "03/06/2026",
       "tipo": "estrategia",
-      "titulo": "Separación de campañas por plantel",
-      "descripcion": "Se están creando 3 campañas independientes (ERMITA, LINDAVISTA, IZTACALCO) para medir el desempeño real de cada sede y optimizar el presupuesto de forma individual. Actualmente en configuración.",
+      "titulo": "Contrato firmado — Paquete 2",
+      "descripcion": "Se firmó el contrato de servicios con David (SPENN MEXICO S.A. de C.V.) por el Paquete 2 a $12,000 MXN/mes. Incluye Meta Ads, contenido para redes sociales y reportes mensuales.",
       "detalle": [
-        "ERMITA: $695.17/día (sin cambio)",
-        "LINDAVISTA: $186.13/día (campaña nueva)",
-        "IZTACALCO: $193.71/día (campaña nueva)"
+        "Precio: $12,000 MXN/mes",
+        "Vigencia: 3 meses renovable (esquema 3→3→6→12 meses)",
+        "Paquete 2: Meta Ads + Contenido + Reportes",
+        "Cliente: David — SPENN MEXICO S.A. de C.V."
+      ]
+    },
+    {
+      "fecha": "03/06/2026",
+      "tipo": "novedad",
+      "titulo": "Parrilla de contenido junio entregada",
+      "descripcion": "Se prepararon y enviaron a David 3 propuestas de parrilla de contenido para junio 2026, cada una con 6 posts estáticos distribuidos a lo largo del mes para Facebook e Instagram.",
+      "detalle": [
+        "Propuesta A — El mundo habla inglés, ¿y tú? (guiños al mundial)",
+        "Propuesta B — Empieza YA (tono humano y empático)",
+        "Propuesta C — Mix Premium con TOEFL y modalidades",
+        "CTA a WhatsApp en todas las propuestas"
       ]
     },
     {
       "fecha": "02/06/2026",
       "tipo": "optimizacion",
-      "titulo": "Metas de leads y churn integradas al dashboard",
-      "descripcion": "Se configuraron las metas mensuales de leads por sede (basadas en el mes anterior) y la meta de 45 inscritos MKT. El dashboard ahora muestra el avance en tiempo real vs cada meta.",
+      "titulo": "Metas de leads, churn y simulador integrados al dashboard",
+      "descripcion": "Se configuraron las metas mensuales de leads por sede y la meta de 45 inscritos MKT. El tab Presupuesto incluye un simulador interactivo para proyectar el presupuesto necesario según las tasas de conversión del CC.",
       "detalle": [
         "Meta ERMITA: 169 leads/mes",
         "Meta LINDAVISTA: 179 leads/mes",
         "Meta IZTACALCO: 185 leads/mes",
-        "Meta inscritos MKT: 45/mes"
+        "Meta inscritos MKT: 45/mes",
+        "Simulador de presupuesto con funnel editable por sede"
       ]
     },
     {
       "fecha": "02/06/2026",
       "tipo": "novedad",
       "titulo": "Dashboard en línea con actualización automática",
-      "descripcion": "El dashboard se actualiza automáticamente cada 4 horas desde la API de Meta Ads. No requiere intervención manual para ver los datos más recientes.",
+      "descripcion": "El dashboard se actualiza automáticamente cada 4 horas desde la API de Meta Ads. Incluye 7 tabs: Resumen, Sucursales, Campañas, Ad Sets, Agenda, Diario, Presupuesto y Reporte.",
       "detalle": [
         "Actualización cada 4 horas vía GitHub Actions",
-        "Historial de meses disponible (Mayo y Junio 2026)",
-        "Datos del Contact Center integrados"
+        "Historial de meses: Mayo y Junio 2026",
+        "Datos del Contact Center integrados (hoja de junio: GID 768692381)",
+        "Tab Presupuesto con simulador interactivo"
+      ]
+    },
+    {
+      "fecha": "02/06/2026",
+      "tipo": "estrategia",
+      "titulo": "Separación de campañas por plantel",
+      "descripcion": "Se crearon campañas independientes para LINDAVISTA e IZTACALCO (antes combinadas). Cada plantel tendrá su propio presupuesto, métricas y CPL reales sin estimaciones.",
+      "detalle": [
+        "ERMITA: $695.17/día (sin cambio, activa)",
+        "LINDAVISTA: $186.13/día (creada, pendiente activar en Business Manager)",
+        "IZTACALCO: $193.71/día (creada, pendiente activar en Business Manager)"
       ]
     },
     {
       "fecha": "01/06/2026",
       "tipo": "correccion",
       "titulo": "Corrección en lectura de datos del Contact Center",
-      "descripcion": "Se detectó y corrigió un error en la importación de datos del seguimiento de Yolanda. Las columnas de porcentaje estaban siendo interpretadas como números, causando datos incorrectos de inscritos.",
+      "descripcion": "Se detectó y corrigió un error en la importación del seguimiento de Yolanda. Las columnas de porcentaje se confundían con números. Inscritos de mayo corregido a 5 (antes mostraba 39 incorrectamente).",
       "detalle": [
-        "Inscritos Mayo corregido: 5 (antes mostraba 39)",
-        "Citas, llamadas y no-contesta ahora correctos",
-        "Datos de junio en adelante serán precisos"
+        "Inscritos Mayo corregido: 5 reales (antes 39 incorrecto)",
+        "GID de junio configurado: 768692381",
+        "Fechas del 3 al 6 de junio tienen typo — pendiente que Yolanda corrija /5/ por /6/"
       ]
     }
   ],
   "en_proceso": [
     {
-      "fecha": "02/06/2026",
+      "fecha": "04/06/2026",
       "tipo": "estrategia",
-      "titulo": "Propuesta de presupuesto basada en metas",
-      "descripcion": "Se está elaborando una propuesta de presupuesto mensual alineada a las metas de inscritos por plantel. El objetivo es definir la inversión óptima en Meta Ads para alcanzar los 45 inscritos MKT al mes.",
+      "titulo": "Activar campañas LINDAVISTA e IZTACALCO",
+      "descripcion": "Las campañas ya están creadas en Meta Ads en estado PAUSADO. Pendiente configurar los ad sets en Business Manager, verificar el geo de Lindavista y activarlas para sustituir la campaña combinada actual.",
       "detalle": [
-        "Análisis de CPL histórico por plantel (mayo 2026)",
-        "Proyección de leads necesarios para 45 inscritos",
-        "Distribución de presupuesto por sede: ERMITA, LINDAVISTA, IZTACALCO",
-        "Escenarios: presupuesto conservador, moderado y agresivo"
+        "Crear ad sets en Business Manager (token no tiene permiso de escritura en la Página)",
+        "Verificar geo de Lindavista antes de activar",
+        "Pausar campaña combinada 'Ingles- Leads Mensajes 1 IZT Y LIND' al activar"
+      ]
+    },
+    {
+      "fecha": "04/06/2026",
+      "tipo": "novedad",
+      "titulo": "Producción de contenido junio (6 posts + 3 reels)",
+      "descripcion": "Pendiente producir las piezas físicas de contenido en Canva basadas en la propuesta que David apruebe. La parrilla ya fue enviada — esperando visto bueno.",
+      "detalle": [
+        "6 posts estáticos o carruseles",
+        "3 reels o videos cortos",
+        "Publicar y programar en FB, IG y TikTok"
       ]
     }
   ],
   "pendientes": [
-    "Activar campañas LINDAVISTA e IZTACALCO en Business Manager",
-    "Pausar campaña combinada 'Ingles- Leads Mensajes 1 IZT Y LIND' al activar las nuevas",
-    "Verificar geo de Lindavista antes de activar",
-    "Revisión de creativos para julio 2026"
+    "Yolanda: corregir fechas del 3 al 6 de junio en el Sheet (puso /5/ en lugar de /6/)",
+    "David: aprobar propuesta de parrilla de contenido y firmar contrato",
+    "Primer resumen quincenal por WhatsApp a David (15 de junio)",
+    "Reporte ejecutivo mensual en PDF (fin de junio)"
   ]
 }
