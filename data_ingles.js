@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "05/06/2026 11:51",
+  "actualizado": "05/06/2026 18:30",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 88,
-    "gasto": 4375.43,
-    "cpl": 49.72,
+    "leads_meta": 100,
+    "gasto": 4803.17,
+    "cpl": 48.03,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 2740.94,
-      "impresiones": 22718,
-      "alcance": 18075,
-      "leads": 64,
-      "cpl": 42.83
+      "gasto": 3034.98,
+      "impresiones": 25367,
+      "alcance": 19937,
+      "leads": 75,
+      "cpl": 40.47
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1634.49,
-      "impresiones": 23133,
-      "alcance": 18099,
-      "leads": 24,
-      "cpl": 68.1
+      "gasto": 1768.19,
+      "impresiones": 25161,
+      "alcance": 19558,
+      "leads": 25,
+      "cpl": 70.73
     },
     {
       "id": "6909460120758",
@@ -128,48 +128,12 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2740.94,
-      "leads": 64,
-      "cpl": 42.83
-    },
-    {
-      "nombre": "Ingles Ya ERMITA",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
-    },
-    {
-      "nombre": "Ingles Ya ERMITA 2",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 3034.98,
+      "leads": 75,
+      "cpl": 40.47
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
-    },
-    {
-      "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
-    },
-    {
-      "nombre": "Ingles Ya Consolidada",
       "status": "PAUSED",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
@@ -191,18 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1634.49,
-      "leads": 24,
-      "cpl": 68.1
-    },
-    {
-      "nombre": "PROFESIONISTAS",
-      "status": "PAUSED",
-      "campaign_id": "6910207751758",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 1768.19,
+      "leads": 25,
+      "cpl": 70.73
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -217,15 +172,6 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya Lindavista",
       "status": "ACTIVE",
       "campaign_id": "6911288401158",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
-    },
-    {
-      "nombre": "Ingles Ya Consolidada - Leads Mensajes",
-      "status": "PAUSED",
-      "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "leads": 0,
@@ -274,11 +220,11 @@ const DATA_INGLES = {
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 911.98
+      "gasto": 918.32
     },
     "2026-06-05": {
-      "leads": 1,
-      "gasto": 13.35
+      "leads": 13,
+      "gasto": 434.75
     }
   },
   "sucursales": {
