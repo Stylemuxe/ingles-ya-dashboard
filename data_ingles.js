@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "05/06/2026 18:30",
+  "actualizado": "05/06/2026 23:52",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 100,
-    "gasto": 4803.17,
-    "cpl": 48.03,
+    "leads_meta": 101,
+    "gasto": 4861.65,
+    "cpl": 48.14,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3034.98,
-      "impresiones": 25367,
-      "alcance": 19937,
+      "gasto": 3082.73,
+      "impresiones": 25684,
+      "alcance": 20184,
       "leads": 75,
-      "cpl": 40.47
+      "cpl": 41.1
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1768.19,
-      "impresiones": 25161,
-      "alcance": 19558,
-      "leads": 25,
-      "cpl": 70.73
+      "gasto": 1778.92,
+      "impresiones": 25355,
+      "alcance": 19760,
+      "leads": 26,
+      "cpl": 68.42
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3034.98,
+      "gasto": 3082.73,
       "leads": 75,
-      "cpl": 40.47
+      "cpl": 41.1
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1768.19,
-      "leads": 25,
-      "cpl": 70.73
+      "gasto": 1778.92,
+      "leads": 26,
+      "cpl": 68.42
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -220,11 +220,11 @@ const DATA_INGLES = {
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 918.32
+      "gasto": 918.89
     },
     "2026-06-05": {
-      "leads": 13,
-      "gasto": 434.75
+      "leads": 14,
+      "gasto": 492.66
     }
   },
   "sucursales": {
@@ -461,6 +461,15 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "LINDAVISTA",
+      "nombre": "Monica mam´(katya )",
+      "tel": "5583487479",
+      "fecha_cita": "20-05-26 10:00",
+      "asistio": true,
+      "inscrito": false,
+      "obs": "examen oral ya tiene el escrito"
+    },
+    {
+      "sucursal": "LINDAVISTA",
       "nombre": "PABLO",
       "tel": "7472258175",
       "fecha_cita": "23/05/2026",
@@ -544,10 +553,28 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Ruth Olivares",
       "tel": "5517245135",
-      "fecha_cita": "06-06-26",
+      "fecha_cita": "06-06-26 12:00",
       "asistio": false,
       "inscrito": false,
       "obs": "conocer instalaciones"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Uriel salinas (sandra mamá)",
+      "tel": "5541844644",
+      "fecha_cita": "06-06-24 9:00 a 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": ""
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Jose luis",
+      "tel": "5613770762",
+      "fecha_cita": "12-06-26 7:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "En línea"
     },
     {
       "sucursal": "IZTACALCO",
@@ -860,7 +887,7 @@ const DATA_INGLES = {
       "nombre": "Diana",
       "tel": "5520192618",
       "fecha_cita": "05-06-26 9:00",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra"
     }
