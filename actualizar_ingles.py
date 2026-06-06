@@ -330,6 +330,25 @@ def main():
                        for s in SUCURSALES}
         diario_suc = {}
 
+    # ─── Override manual (temporal: mientras se corrigen fechas del Sheet) ──
+    # Si existe ajuste_manual.json con el mes actual, reemplaza los totales
+    # por sucursal. Eliminar el bloque del mes cuando el Sheet quede corregido.
+    ajuste_path = os.path.join(BASE_DIR, 'ajuste_manual.json')
+    if os.path.exists(ajuste_path):
+        try:
+            with open(ajuste_path, encoding='utf-8') as f:
+                ajuste = json.load(f)
+            mes_aj = ajuste.get(MES_ACTUAL)
+            if mes_aj:
+                for suc in SUCURSALES:
+                    if suc in mes_aj:
+                        totales_suc[suc] = mes_aj[suc]
+                ins = sum(v.get('inscritos', 0) for v in totales_suc.values())
+                cit = sum(v.get('citas', 0) for v in totales_suc.values())
+                print(f'    OVERRIDE manual {MES_ACTUAL}: {ins} inscritos, {cit} citas')
+        except Exception as e:
+            print(f'    AVISO: no se pudo leer ajuste_manual.json: {e}')
+
     print('[5] Google Sheets — agenda (3 sucursales)...')
     agenda = []
     for suc, gid in SHEET_AGE_GIDS.items():

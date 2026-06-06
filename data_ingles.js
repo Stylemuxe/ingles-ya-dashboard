@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "05/06/2026 20:40",
+  "actualizado": "05/06/2026 20:52",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 101,
-    "gasto": 4869.38,
-    "cpl": 48.21,
-    "citas": 0,
+    "gasto": 4869.83,
+    "cpl": 48.22,
+    "citas": 3,
     "visitas": 0,
     "inscritos": 0
   },
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3087.83,
-      "impresiones": 25741,
+      "gasto": 3088.25,
+      "impresiones": 25747,
       "alcance": 20272,
       "leads": 75,
-      "cpl": 41.17
+      "cpl": 41.18
     },
     {
       "id": "6917541255358",
@@ -82,8 +82,8 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1781.55,
-      "impresiones": 25406,
+      "gasto": 1781.58,
+      "impresiones": 25407,
       "alcance": 19760,
       "leads": 26,
       "cpl": 68.52
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3087.83,
+      "gasto": 3088.25,
       "leads": 75,
-      "cpl": 41.17
+      "cpl": 41.18
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,7 +155,7 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1781.52,
+      "gasto": 1781.58,
       "leads": 26,
       "cpl": 68.52
     },
@@ -224,30 +224,30 @@ const DATA_INGLES = {
     },
     "2026-06-05": {
       "leads": 14,
-      "gasto": 499.86
+      "gasto": 500.34
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 19,
-      "llamadas": 10,
-      "no_contesta": 9,
-      "citas": 0,
+      "leads": 30,
+      "llamadas": 18,
+      "no_contesta": 12,
+      "citas": 3,
       "visitas": 0,
       "inscritos": 0
     },
     "IZTACALCO": {
-      "leads": 16,
-      "llamadas": 8,
-      "no_contesta": 8,
+      "leads": 25,
+      "llamadas": 14,
+      "no_contesta": 11,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 15,
-      "llamadas": 7,
-      "no_contesta": 8,
+      "leads": 24,
+      "llamadas": 11,
+      "no_contesta": 13,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0

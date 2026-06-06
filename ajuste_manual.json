@@ -1,0 +1,8 @@
+{
+  "_nota": "Override temporal mientras Yolanda corrige las fechas del Sheet (dias 4-10 jun estaban como /5/). Datos capturados manualmente del 1 al 5 de junio 2026. ELIMINAR este bloque del mes cuando el Sheet quede corregido.",
+  "2026-06": {
+    "LINDAVISTA": {"leads": 30, "llamadas": 18, "no_contesta": 12, "citas": 3, "visitas": 0, "inscritos": 0},
+    "IZTACALCO":  {"leads": 25, "llamadas": 14, "no_contesta": 11, "citas": 0, "visitas": 0, "inscritos": 0},
+    "ERMITA":     {"leads": 24, "llamadas": 11, "no_contesta": 13, "citas": 0, "visitas": 0, "inscritos": 0}
+  }
+}
