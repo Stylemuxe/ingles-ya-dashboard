@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "05/06/2026 23:52",
+  "actualizado": "05/06/2026 20:40",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 101,
-    "gasto": 4861.65,
-    "cpl": 48.14,
+    "gasto": 4869.38,
+    "cpl": 48.21,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3082.73,
-      "impresiones": 25684,
-      "alcance": 20184,
+      "gasto": 3087.83,
+      "impresiones": 25741,
+      "alcance": 20272,
       "leads": 75,
-      "cpl": 41.1
+      "cpl": 41.17
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1778.92,
-      "impresiones": 25355,
+      "gasto": 1781.55,
+      "impresiones": 25406,
       "alcance": 19760,
       "leads": 26,
-      "cpl": 68.42
+      "cpl": 68.52
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3082.73,
+      "gasto": 3087.83,
       "leads": 75,
-      "cpl": 41.1
+      "cpl": 41.17
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1778.92,
+      "gasto": 1781.52,
       "leads": 26,
-      "cpl": 68.42
+      "cpl": 68.52
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -220,34 +220,34 @@ const DATA_INGLES = {
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 918.89
+      "gasto": 919.39
     },
     "2026-06-05": {
       "leads": 14,
-      "gasto": 492.66
+      "gasto": 499.86
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 0,
-      "llamadas": 0,
-      "no_contesta": 0,
+      "leads": 19,
+      "llamadas": 10,
+      "no_contesta": 9,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0
     },
     "IZTACALCO": {
-      "leads": 0,
-      "llamadas": 0,
-      "no_contesta": 0,
+      "leads": 16,
+      "llamadas": 8,
+      "no_contesta": 8,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 0,
-      "llamadas": 0,
-      "no_contesta": 0,
+      "leads": 15,
+      "llamadas": 7,
+      "no_contesta": 8,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0
@@ -259,7 +259,77 @@ const DATA_INGLES = {
     "ERMITA": 169
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {},
+  "diario_suc": {
+    "2026-06-01": {
+      "LINDAVISTA": {
+        "leads": 7,
+        "llamadas": 4,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 7,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 6,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-02": {
+      "LINDAVISTA": {
+        "leads": 6,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 4,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 4,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-03": {
+      "LINDAVISTA": {
+        "leads": 6,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 5,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 5,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    }
+  },
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
