@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "05/06/2026 20:52",
+  "actualizado": "06/06/2026 09:13",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 101,
-    "gasto": 4869.83,
-    "cpl": 48.22,
+    "gasto": 4882.48,
+    "cpl": 48.34,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3088.25,
-      "impresiones": 25747,
-      "alcance": 20272,
+      "gasto": 3097.5,
+      "impresiones": 25812,
+      "alcance": 20310,
       "leads": 75,
-      "cpl": 41.18
+      "cpl": 41.3
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1781.58,
-      "impresiones": 25407,
-      "alcance": 19760,
+      "gasto": 1784.98,
+      "impresiones": 25461,
+      "alcance": 19796,
       "leads": 26,
-      "cpl": 68.52
+      "cpl": 68.65
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3088.25,
+      "gasto": 3097.5,
       "leads": 75,
-      "cpl": 41.18
+      "cpl": 41.3
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1781.58,
+      "gasto": 1784.98,
       "leads": 26,
-      "cpl": 68.52
+      "cpl": 68.65
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -220,11 +220,11 @@ const DATA_INGLES = {
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 919.39
+      "gasto": 920.47
     },
     "2026-06-05": {
       "leads": 14,
-      "gasto": 500.34
+      "gasto": 511.91
     }
   },
   "sucursales": {
