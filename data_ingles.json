@@ -1,11 +1,11 @@
 {
-  "actualizado": "06/06/2026 09:13",
+  "actualizado": "06/06/2026 15:59",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 101,
-    "gasto": 4882.48,
-    "cpl": 48.34,
+    "gasto": 4883.81,
+    "cpl": 48.35,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3097.5,
-      "impresiones": 25812,
+      "gasto": 3098.23,
+      "impresiones": 25822,
       "alcance": 20310,
       "leads": 75,
-      "cpl": 41.3
+      "cpl": 41.31
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1784.98,
-      "impresiones": 25461,
+      "gasto": 1785.58,
+      "impresiones": 25468,
       "alcance": 19796,
       "leads": 26,
-      "cpl": 68.65
+      "cpl": 68.68
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3097.5,
+      "gasto": 3098.23,
       "leads": 75,
-      "cpl": 41.3
+      "cpl": 41.31
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1784.98,
+      "gasto": 1785.58,
       "leads": 26,
-      "cpl": 68.65
+      "cpl": 68.68
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -220,11 +220,15 @@
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 920.47
+      "gasto": 920.94
     },
     "2026-06-05": {
       "leads": 14,
-      "gasto": 511.91
+      "gasto": 512.77
+    },
+    "2026-06-06": {
+      "leads": 0,
+      "gasto": 0.0
     }
   },
   "sucursales": {
@@ -626,7 +630,7 @@
       "fecha_cita": "06-06-26 12:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "conocer instalaciones"
+      "obs": "conocer instalaciones (pendiente)"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -635,7 +639,7 @@
       "fecha_cita": "06-06-24 9:00 a 12:00",
       "asistio": false,
       "inscrito": false,
-      "obs": ""
+      "obs": "(pendiente)"
     },
     {
       "sucursal": "LINDAVISTA",
