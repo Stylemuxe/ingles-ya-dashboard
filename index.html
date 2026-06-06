@@ -499,6 +499,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="diario">Diario</div>
   <div class="tab" data-pane="presupuesto">Presupuesto</div>
   <div class="tab" data-pane="reporte">Reporte</div>
+  <div class="tab" data-pane="incidencias">🚩 Incidencias CC</div>
 </nav>
 
 <!-- RESUMEN -->
@@ -620,6 +621,112 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
+<!-- INCIDENCIAS CC -->
+<div id="pane-incidencias" class="pane">
+  <style>
+    .inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:760px){.inc-grid{grid-template-columns:1fr}}
+    .inc-field{display:flex;flex-direction:column;gap:7px;margin-bottom:6px}
+    .inc-field label{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+    .inc-field input,.inc-field textarea{background:var(--c3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:12px 14px;border-radius:9px;font-size:14px;font-family:inherit;width:100%}
+    .inc-field input:focus,.inc-field textarea:focus{outline:none;border-color:var(--cyan)}
+    .inc-field.full{grid-column:1/-1}
+    /* Botones grandes (pills) */
+    .inc-pills{display:flex;flex-wrap:wrap;gap:8px}
+    .inc-pill{border:1.5px solid rgba(255,255,255,.12);background:var(--c3);color:var(--text);padding:11px 16px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;transition:.12s;user-select:none}
+    .inc-pill:hover{border-color:rgba(255,255,255,.35)}
+    .inc-pill.on{color:#04121a}
+    .inc-btn{background:linear-gradient(135deg,var(--cyan),#0bb);color:#04121a;border:none;padding:15px 34px;border-radius:11px;font-size:14px;font-weight:800;letter-spacing:.5px;cursor:pointer;text-transform:uppercase}
+    .inc-btn:disabled{opacity:.45;cursor:not-allowed}
+    .inc-msg{font-size:13px;font-weight:800;margin-left:14px}
+    .inc-warn{background:rgba(255,153,0,.12);border:1px solid var(--orange);color:var(--orange);padding:9px 14px;border-radius:9px;font-size:12px;font-weight:700;margin-top:4px;display:none}
+    .inc-count-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+    .inc-count{background:var(--c3);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px 12px;text-align:center}
+    .inc-count .n{font-size:26px;font-weight:800;line-height:1}
+    .inc-count .l{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+    .inc-chip{padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+    .inc-est{padding:4px 11px;border-radius:20px;font-size:10px;font-weight:800;cursor:pointer;border:1.5px solid;white-space:nowrap;user-select:none}
+    .inc-est.pend{color:var(--orange);border-color:var(--orange);background:rgba(255,153,0,.1)}
+    .inc-est.aten{color:var(--green);border-color:var(--green);background:rgba(0,255,136,.1)}
+    .inc-wa{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(37,211,102,.15);color:#25D366;text-decoration:none;font-size:15px}
+    .inc-wa:hover{background:rgba(37,211,102,.3)}
+  </style>
+
+  <div class="card">
+    <div class="card-head"><span class="card-title">Registrar incidencia</span><span class="card-sub">Yolanda / CC · 1 toque por campo</span></div>
+
+    <div class="inc-field full">
+      <label>1 · Plantel / Sede</label>
+      <div class="inc-pills" id="inc-pills-plantel"></div>
+    </div>
+
+    <div class="inc-field full" style="margin-top:8px">
+      <label>2 · Tipo de incidencia</label>
+      <div class="inc-pills" id="inc-pills-tipo"></div>
+    </div>
+
+    <div class="inc-grid" style="margin-top:8px">
+      <div class="inc-field">
+        <label>3 · Nombre del lead</label>
+        <input id="inc-nombre" type="text" placeholder="Nombre completo" autocomplete="off">
+      </div>
+      <div class="inc-field">
+        <label>4 · Teléfono (opcional)</label>
+        <input id="inc-telefono" type="tel" inputmode="numeric" placeholder="10 dígitos" autocomplete="off" oninput="incTelInput()">
+        <div class="inc-warn" id="inc-dup">⚠️ Este teléfono ya fue registrado antes</div>
+      </div>
+      <div class="inc-field full">
+        <label>5 · Comentario (opcional)</label>
+        <textarea id="inc-comentario" rows="2" placeholder="Detalle de la incidencia…"></textarea>
+      </div>
+      <div class="inc-field full" style="flex-direction:row;align-items:center;margin-top:4px">
+        <button class="inc-btn" id="inc-guardar" onclick="incGuardar()">✓ Guardar incidencia</button>
+        <span class="inc-msg" id="inc-msg"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><span class="card-title">Resumen de incidencias</span><span class="card-sub" id="inc-total-sub">—</span></div>
+    <div class="g2" style="align-items:center">
+      <div class="inc-count-grid" id="inc-counts"></div>
+      <div class="chart-wrap" style="max-height:240px"><canvas id="inc-dona"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">Incidencias registradas</span>
+      <span style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <input class="filter" id="inc-buscar" placeholder="🔍 Buscar…" oninput="incRender()" style="min-width:140px">
+        <select class="filter" id="inc-f-plantel" onchange="incRender()">
+          <option value="">Todos los planteles</option>
+          <option value="ERMITA">ERMITA</option>
+          <option value="LINDAVISTA">LINDAVISTA</option>
+          <option value="IZTACALCO">IZTACALCO</option>
+        </select>
+        <select class="filter" id="inc-f-tipo" onchange="incRender()">
+          <option value="">Todos los tipos</option>
+          <option value="Foráneo">Foráneo</option>
+          <option value="Fuera de rango">Fuera de rango</option>
+          <option value="Número equivocado">Número equivocado</option>
+          <option value="Ya inscrito">Ya inscrito</option>
+          <option value="No contesta">No contesta</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <select class="filter" id="inc-f-estado" onchange="incRender()">
+          <option value="">Todos</option>
+          <option value="Pendiente">Pendientes</option>
+          <option value="Atendida">Atendidas</option>
+        </select>
+        <span class="filter" style="cursor:pointer" onclick="incCargar()">↻</span>
+        <span class="filter" style="cursor:pointer" onclick="incExportar()">⬇ Excel</span>
+      </span>
+    </div>
+    <table id="inc-tabla"></table>
+  </div>
+</div>
+
 <script src="data_ingles.js"></script>
 <script>
 let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
@@ -648,8 +755,232 @@ document.querySelectorAll('.tab').forEach(tab => {
     if(tab.dataset.pane==='diario')      renderDiario();
     if(tab.dataset.pane==='reporte')     renderReporte();
     if(tab.dataset.pane==='presupuesto') simInit();
+    if(tab.dataset.pane==='incidencias') incCargar();
   });
 });
+
+// ── INCIDENCIAS CC ────────────────────────────────────────────────────────────
+const INCIDENCIAS_URL = "https://script.google.com/macros/s/AKfycbw45FRaGue1peFp4UHwUbU_THQh2M23imtu8OCYGQosLwOHg_0bSoy8NSdTC88x0jYyjg/exec";
+const INC_COLOR = { ERMITA:'#E02020', LINDAVISTA:'#00f0ff', IZTACALCO:'#1B46B4' };
+const INC_PLANTELES = ['ERMITA','LINDAVISTA','IZTACALCO'];
+const INC_TIPOS = ['Foráneo','Fuera de rango','Número equivocado','Ya inscrito','No contesta','Otro'];
+const INC_TIPO_COLOR = {
+  'Foráneo':'#ff9900','Fuera de rango':'#ff0066','Número equivocado':'#7b2ff7',
+  'Ya inscrito':'#00ff88','No contesta':'#7a78a0','Otro':'#4d7fff'
+};
+let INC_DATA = [];
+let incSelPlantel = localStorage.getItem('inc_last_plantel') || '';
+let incSelTipo = '';
+let incDona = null;
+let incBuilt = false;
+
+function incFmtFecha(f){
+  if(!f) return '—';
+  const d = new Date(f);
+  if(isNaN(d)) return String(f);
+  return d.toLocaleString('es-MX',{day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+}
+
+// Construye los botones grandes (pills) la primera vez
+function incBuildPills(){
+  if(incBuilt) return;
+  const cp = document.getElementById('inc-pills-plantel');
+  cp.innerHTML = INC_PLANTELES.map(p=>{
+    const c = INC_COLOR[p];
+    return `<div class="inc-pill" data-v="${p}" style="--pc:${c}" onclick="incPick('plantel','${p}')">${p}</div>`;
+  }).join('');
+  const ct = document.getElementById('inc-pills-tipo');
+  ct.innerHTML = INC_TIPOS.map(t=>{
+    const c = INC_TIPO_COLOR[t];
+    return `<div class="inc-pill" data-v="${t}" onclick="incPick('tipo',this.dataset.v)" style="--pc:${c}">${t}</div>`;
+  }).join('');
+  incBuilt = true;
+  incPaintPills();
+}
+
+function incPick(campo, val){
+  if(campo==='plantel'){ incSelPlantel = val; localStorage.setItem('inc_last_plantel', val); }
+  else { incSelTipo = val; }
+  incPaintPills();
+}
+
+function incPaintPills(){
+  document.querySelectorAll('#inc-pills-plantel .inc-pill').forEach(el=>{
+    const on = el.dataset.v===incSelPlantel;
+    el.classList.toggle('on', on);
+    el.style.background = on ? INC_COLOR[el.dataset.v] : 'var(--c3)';
+    el.style.borderColor = on ? INC_COLOR[el.dataset.v] : 'rgba(255,255,255,.12)';
+  });
+  document.querySelectorAll('#inc-pills-tipo .inc-pill').forEach(el=>{
+    const on = el.dataset.v===incSelTipo;
+    el.classList.toggle('on', on);
+    el.style.background = on ? INC_TIPO_COLOR[el.dataset.v] : 'var(--c3)';
+    el.style.borderColor = on ? INC_TIPO_COLOR[el.dataset.v] : 'rgba(255,255,255,.12)';
+  });
+}
+
+// Teléfono: solo dígitos, máx 10, y aviso de duplicado en vivo
+function incTelInput(){
+  const inp = document.getElementById('inc-telefono');
+  inp.value = inp.value.replace(/\D/g,'').slice(0,10);
+  const tel = inp.value;
+  const dup = tel.length>=10 && INC_DATA.some(i=>String(i.telefono).replace(/\D/g,'').slice(-10)===tel);
+  document.getElementById('inc-dup').style.display = dup ? 'block' : 'none';
+}
+
+async function incGuardar(){
+  const nombre     = document.getElementById('inc-nombre').value.trim();
+  const telefono   = document.getElementById('inc-telefono').value.trim();
+  const comentario = document.getElementById('inc-comentario').value.trim();
+  const msg = document.getElementById('inc-msg');
+  const btn = document.getElementById('inc-guardar');
+
+  if(!incSelPlantel || !incSelTipo || !nombre){
+    msg.style.color='var(--pink)';
+    msg.textContent='⚠️ Falta plantel, tipo o nombre';
+    return;
+  }
+  if(telefono && telefono.length<10){
+    msg.style.color='var(--orange)';
+    msg.textContent='⚠️ El teléfono debe tener 10 dígitos';
+    return;
+  }
+  btn.disabled=true; msg.style.color='var(--muted)'; msg.textContent='Guardando…';
+  try{
+    await fetch(INCIDENCIAS_URL, {
+      method:'POST',
+      body: JSON.stringify({action:'nueva', plantel:incSelPlantel, tipo:incSelTipo, nombre, telefono, comentario})
+    });
+    msg.style.color='var(--green)';
+    msg.textContent='✅ ¡Registrada!';
+    document.getElementById('inc-nombre').value='';
+    document.getElementById('inc-telefono').value='';
+    document.getElementById('inc-comentario').value='';
+    document.getElementById('inc-dup').style.display='none';
+    incSelTipo=''; incPaintPills(); // conserva el plantel, limpia el tipo
+    await incCargar();
+    setTimeout(()=>{msg.textContent='';}, 3500);
+  }catch(err){
+    msg.style.color='var(--pink)';
+    msg.textContent='❌ Error, reintenta';
+  }finally{
+    btn.disabled=false;
+  }
+}
+
+async function incEstado(id, nuevo){
+  if(!id) return;
+  // actualiza local de inmediato (optimista)
+  const it = INC_DATA.find(x=>String(x.id)===String(id));
+  if(it) it.estado = nuevo;
+  incRender();
+  try{
+    await fetch(INCIDENCIAS_URL, {method:'POST', body: JSON.stringify({action:'estado', id, estado:nuevo})});
+  }catch(err){ /* se reintenta al recargar */ }
+}
+
+async function incCargar(){
+  incBuildPills();
+  const tabla = document.getElementById('inc-tabla');
+  if(tabla) tabla.innerHTML='<tr><td style="color:var(--muted);padding:14px">Cargando incidencias…</td></tr>';
+  try{
+    const r = await fetch(INCIDENCIAS_URL);
+    const j = await r.json();
+    INC_DATA = (j && j.incidencias) ? j.incidencias : [];
+  }catch(err){
+    INC_DATA = [];
+    if(tabla) tabla.innerHTML='<tr><td style="color:var(--pink);padding:14px">No se pudieron cargar las incidencias</td></tr>';
+    return;
+  }
+  incRender();
+}
+
+function incRender(){
+  const fP = document.getElementById('inc-f-plantel').value;
+  const fT = document.getElementById('inc-f-tipo').value;
+  const fE = document.getElementById('inc-f-estado').value;
+  const q  = (document.getElementById('inc-buscar').value||'').toLowerCase().trim();
+
+  const base = INC_DATA.filter(i => !fP || i.plantel===fP);
+  const rows = INC_DATA.filter(i =>
+      (!fP || i.plantel===fP) && (!fT || i.tipo===fT) &&
+      (!fE || (i.estado||'Pendiente')===fE) &&
+      (!q || [i.nombre,i.telefono,i.comentario].join(' ').toLowerCase().includes(q))
+    ).slice().reverse();
+
+  // Contadores
+  const pend = base.filter(i=>(i.estado||'Pendiente')==='Pendiente').length;
+  const counts = document.getElementById('inc-counts');
+  counts.innerHTML =
+    `<div class="inc-count"><div class="n" style="color:var(--cyan)">${base.length}</div><div class="l">Total</div></div>` +
+    `<div class="inc-count"><div class="n" style="color:var(--orange)">${pend}</div><div class="l">Pendientes</div></div>` +
+    INC_TIPOS.map(t=>{
+      const n = base.filter(i=>i.tipo===t).length;
+      return `<div class="inc-count"><div class="n" style="color:${INC_TIPO_COLOR[t]}">${n}</div><div class="l">${t}</div></div>`;
+    }).join('');
+  document.getElementById('inc-total-sub').textContent =
+    `${INC_DATA.length} en total` + (fP?` · ${base.length} en ${fP}`:'');
+
+  incRenderDona(base);
+
+  // Tabla
+  const tabla = document.getElementById('inc-tabla');
+  if(!rows.length){
+    tabla.innerHTML='<tr><td style="color:var(--muted);padding:18px">Sin incidencias'+((fP||fT||fE||q)?' con este filtro':' registradas aún')+'.</td></tr>';
+    return;
+  }
+  tabla.innerHTML =
+    '<tr><th>Fecha</th><th>Plantel</th><th>Tipo</th><th>Lead</th><th>Teléfono</th><th>Comentario</th><th>Estado</th><th></th></tr>' +
+    rows.map(i=>{
+      const pc = INC_COLOR[i.plantel]||'#888';
+      const tc = INC_TIPO_COLOR[i.tipo]||'#888';
+      const est = i.estado||'Pendiente';
+      const aten = est==='Atendida';
+      const tel = String(i.telefono||'').replace(/\D/g,'');
+      const wa = tel.length>=10
+        ? `<a class="inc-wa" href="https://wa.me/52${tel.slice(-10)}" target="_blank" title="WhatsApp">💬</a>` : '';
+      return `<tr>
+        <td style="white-space:nowrap;color:var(--muted);font-size:12px">${incFmtFecha(i.fecha)}</td>
+        <td><span class="inc-chip" style="background:${pc}22;color:${pc}">${i.plantel||'—'}</span></td>
+        <td><span class="inc-chip" style="background:${tc}22;color:${tc}">${i.tipo||'—'}</span></td>
+        <td style="font-weight:700">${i.nombre||'—'}</td>
+        <td style="color:var(--muted)">${i.telefono||'—'}</td>
+        <td style="color:var(--muted);font-size:12px">${i.comentario||'—'}</td>
+        <td><span class="inc-est ${aten?'aten':'pend'}" onclick="incEstado('${i.id||''}','${aten?'Pendiente':'Atendida'}')">${aten?'✓ Atendida':'● Pendiente'}</span></td>
+        <td>${wa}</td>
+      </tr>`;
+    }).join('');
+}
+
+function incRenderDona(base){
+  const ctx = document.getElementById('inc-dona');
+  if(!ctx) return;
+  const labels = INC_TIPOS.filter(t=>base.some(i=>i.tipo===t));
+  const data = labels.map(t=>base.filter(i=>i.tipo===t).length);
+  const colors = labels.map(t=>INC_TIPO_COLOR[t]);
+  if(incDona) incDona.destroy();
+  if(!labels.length){ return; }
+  incDona = new Chart(ctx, {
+    type:'doughnut',
+    data:{ labels, datasets:[{ data, backgroundColor:colors, borderColor:'#0d0b1e', borderWidth:2 }] },
+    options:{ plugins:{ legend:{ position:'right', labels:{ color:'#e8e6f5', font:{size:11}, boxWidth:12 } } },
+      cutout:'62%', responsive:true, maintainAspectRatio:false }
+  });
+}
+
+function incExportar(){
+  if(!INC_DATA.length){ alert('No hay incidencias para exportar.'); return; }
+  const head = ['Fecha','Plantel','Tipo','Nombre','Teléfono','Comentario','Estado'];
+  const esc = v => '"'+String(v==null?'':v).replace(/"/g,'""')+'"';
+  const lines = [head.join(',')].concat(
+    INC_DATA.map(i=>[incFmtFecha(i.fecha),i.plantel,i.tipo,i.nombre,i.telefono,i.comentario,i.estado||'Pendiente'].map(esc).join(','))
+  );
+  const blob = new Blob(['﻿'+lines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'incidencias_cc_ingles_ya.csv';
+  a.click();
+}
 
 // ── SIMULADOR DE PRESUPUESTO ──────────────────────────────────────────────────
 const MAYO_REF = {
