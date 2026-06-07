@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "06/06/2026 20:20",
+  "actualizado": "07/06/2026 10:14",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
     "leads_meta": 101,
-    "gasto": 4884.3,
-    "cpl": 48.36,
+    "gasto": 4884.9,
+    "cpl": 48.37,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3098.28,
-      "impresiones": 25824,
-      "alcance": 20310,
+      "gasto": 3098.66,
+      "impresiones": 25831,
+      "alcance": 20327,
       "leads": 75,
-      "cpl": 41.31
+      "cpl": 41.32
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1786.02,
-      "impresiones": 25471,
+      "gasto": 1786.24,
+      "impresiones": 25472,
       "alcance": 19800,
       "leads": 26,
-      "cpl": 68.69
+      "cpl": 68.7
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3098.28,
+      "gasto": 3098.66,
       "leads": 75,
-      "cpl": 41.31
+      "cpl": 41.32
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1786.02,
+      "gasto": 1786.24,
       "leads": 26,
-      "cpl": 68.69
+      "cpl": 68.7
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -220,11 +220,11 @@ const DATA_INGLES = {
     },
     "2026-06-04": {
       "leads": 26,
-      "gasto": 920.94
+      "gasto": 921.05
     },
     "2026-06-05": {
       "leads": 14,
-      "gasto": 513.26
+      "gasto": 513.75
     },
     "2026-06-06": {
       "leads": 0,
