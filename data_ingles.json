@@ -1,11 +1,11 @@
 {
-  "actualizado": "08/06/2026 14:40",
+  "actualizado": "08/06/2026 22:11",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 101,
-    "gasto": 4884.9,
-    "cpl": 48.37,
+    "leads_meta": 108,
+    "gasto": 5384.17,
+    "cpl": 49.85,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3098.66,
-      "impresiones": 25831,
-      "alcance": 20327,
-      "leads": 75,
-      "cpl": 41.32
+      "gasto": 3426.02,
+      "impresiones": 30563,
+      "alcance": 23809,
+      "leads": 80,
+      "cpl": 42.83
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1786.24,
-      "impresiones": 25472,
-      "alcance": 19800,
-      "leads": 26,
-      "cpl": 68.7
+      "gasto": 1958.15,
+      "impresiones": 28055,
+      "alcance": 22011,
+      "leads": 28,
+      "cpl": 69.93
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3098.66,
-      "leads": 75,
-      "cpl": 41.32
+      "gasto": 3426.02,
+      "leads": 80,
+      "cpl": 42.83
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1786.24,
-      "leads": 26,
-      "cpl": 68.7
+      "gasto": 1958.15,
+      "leads": 28,
+      "cpl": 69.93
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -233,6 +233,10 @@
     "2026-06-07": {
       "leads": 0,
       "gasto": 0.0
+    },
+    "2026-06-08": {
+      "leads": 7,
+      "gasto": 499.27
     }
   },
   "sucursales": {
@@ -655,6 +659,15 @@
       "obs": "En línea"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Perla",
+      "tel": "5512272674",
+      "fecha_cita": "12-06-26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Brianda Rosas/Kleb Alpizar Rosas",
       "tel": "55 4933 9614",
@@ -962,12 +975,12 @@
     },
     {
       "sucursal": "ERMITA",
-      "nombre": "Diana",
+      "nombre": "Diana (fernanda)",
       "tel": "5520192618",
       "fecha_cita": "05-06-26 9:00",
       "asistio": true,
       "inscrito": false,
-      "obs": "Clase muestra"
+      "obs": "Clase muestra examen  de coloc"
     }
   ]
 }
