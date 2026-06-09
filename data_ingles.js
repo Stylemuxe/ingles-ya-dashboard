@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "08/06/2026 22:11",
+  "actualizado": "09/06/2026 11:44",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 108,
-    "gasto": 5384.17,
-    "cpl": 49.85,
+    "leads_meta": 125,
+    "gasto": 6470.14,
+    "cpl": 51.76,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 3426.02,
-      "impresiones": 30563,
-      "alcance": 23809,
-      "leads": 80,
-      "cpl": 42.83
+      "gasto": 4104.62,
+      "impresiones": 38018,
+      "alcance": 29004,
+      "leads": 94,
+      "cpl": 43.67
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
       "presupuesto_dia": 380.0,
-      "gasto": 1958.15,
-      "impresiones": 28055,
-      "alcance": 22011,
-      "leads": 28,
-      "cpl": 69.93
+      "gasto": 2365.52,
+      "impresiones": 35728,
+      "alcance": 28515,
+      "leads": 31,
+      "cpl": 76.31
     },
     {
       "id": "6909460120758",
@@ -128,9 +128,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3426.02,
-      "leads": 80,
-      "cpl": 42.83
+      "gasto": 4104.62,
+      "leads": 94,
+      "cpl": 43.67
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -155,9 +155,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 1958.15,
-      "leads": 28,
-      "cpl": 69.93
+      "gasto": 2365.62,
+      "leads": 31,
+      "cpl": 76.31
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -235,8 +235,12 @@ const DATA_INGLES = {
       "gasto": 0.0
     },
     "2026-06-08": {
-      "leads": 7,
-      "gasto": 499.27
+      "leads": 18,
+      "gasto": 1320.24
+    },
+    "2026-06-09": {
+      "leads": 6,
+      "gasto": 265.0
     }
   },
   "sucursales": {
