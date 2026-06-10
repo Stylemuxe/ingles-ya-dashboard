@@ -1,11 +1,11 @@
 {
-  "actualizado": "10/06/2026 09:06",
+  "actualizado": "10/06/2026 21:20",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 166,
-    "gasto": 8083.45,
-    "cpl": 48.7,
+    "leads_meta": 174,
+    "gasto": 8733.1,
+    "cpl": 50.19,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,9 +16,9 @@
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 4.74,
-      "impresiones": 41,
-      "alcance": 29,
+      "gasto": 175.99,
+      "impresiones": 2488,
+      "alcance": 2036,
       "leads": 0,
       "cpl": 0
     },
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 5180.9,
-      "impresiones": 49486,
-      "alcance": 36347,
-      "leads": 128,
-      "cpl": 40.48
+      "gasto": 5652.16,
+      "impresiones": 54923,
+      "alcance": 40098,
+      "leads": 136,
+      "cpl": 41.56
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "PAUSED",
       "presupuesto_dia": 380.0,
-      "gasto": 2897.81,
-      "impresiones": 43604,
-      "alcance": 34071,
+      "gasto": 2904.95,
+      "impresiones": 43702,
+      "alcance": 34270,
       "leads": 38,
-      "cpl": 76.26
+      "cpl": 76.45
     },
     {
       "id": "6909460120758",
@@ -137,7 +137,7 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 4.74,
+      "gasto": 175.99,
       "leads": 0,
       "cpl": 0
     },
@@ -146,9 +146,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5180.9,
-      "leads": 128,
-      "cpl": 40.48
+      "gasto": 5652.16,
+      "leads": 137,
+      "cpl": 41.26
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -173,9 +173,9 @@
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 2897.81,
+      "gasto": 2904.95,
       "leads": 38,
-      "cpl": 76.26
+      "cpl": 76.45
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -254,15 +254,15 @@
     },
     "2026-06-08": {
       "leads": 18,
-      "gasto": 1351.01
+      "gasto": 1351.89
     },
     "2026-06-09": {
       "leads": 47,
-      "gasto": 1819.64
+      "gasto": 1826.31
     },
     "2026-06-10": {
-      "leads": 0,
-      "gasto": 27.9
+      "leads": 9,
+      "gasto": 670.0
     }
   },
   "sucursales": {
