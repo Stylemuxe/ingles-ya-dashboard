@@ -791,8 +791,8 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
     <div class="guia-card" style="--gc:#00f0ff">
       <h3>💬 Leads Meta <span class="gc-tag">Cantidad</span></h3>
-      <div class="gc-def">Son las <b>personas que dejaron sus datos</b> (nombre y teléfono) a través de los anuncios de Facebook e Instagram durante el mes. Cada lead es un posible alumno interesado.</div>
-      <div class="gc-calc">Es un conteo directo: 1 formulario llenado = 1 lead.</div>
+      <div class="gc-def">Son las <b>personas que escribieron por WhatsApp</b> desde los anuncios de Facebook e Instagram durante el mes. El anuncio lleva un botón que abre un chat de WhatsApp, y cada persona que manda mensaje cuenta como un lead: un posible alumno interesado.</div>
+      <div class="gc-calc">Es un conteo directo: 1 mensaje nuevo a WhatsApp desde el anuncio = 1 lead.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> más leads = más oportunidades de venta. Pero ojo: un lead NO es un alumno todavía, apenas mostró interés. Ej. en mayo Ermita generó <b>470 leads</b>.</div>
     </div>
 
@@ -1465,7 +1465,7 @@ function renderKpis() {
   const k = D.kpis;
   const mp = monthProgress();
   const cards = [
-    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que dejaron sus datos a través de los anuncios de Meta este mes. Cada lead es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
     { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
     { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
     { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
