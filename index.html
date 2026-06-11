@@ -176,7 +176,58 @@ nav::-webkit-scrollbar { height: 0; }
 .kpi-lbl {
   font-size:10px; font-weight:700; letter-spacing:.8px;
   text-transform:uppercase; color:var(--muted); text-align:center;
+  display:flex; align-items:center; justify-content:center; gap:5px;
 }
+.kpi-info {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:14px; height:14px; border-radius:50%; font-size:9px; font-weight:800;
+  color:var(--kc,#00f0ff); border:1px solid var(--kc,#00f0ff);
+  cursor:help; opacity:.65; transition:opacity .2s; line-height:1;
+}
+.kpi-card:hover .kpi-info { opacity:1; }
+
+/* ── GUÍA DE MÉTRICAS ── */
+.guia-intro {
+  background:linear-gradient(135deg, rgba(0,240,255,.08), rgba(123,47,247,.06));
+  border:1px solid rgba(0,240,255,.18); border-radius:var(--r);
+  padding:20px 22px; margin-bottom:18px;
+}
+.guia-intro h2 { font-size:18px; color:var(--text); margin-bottom:6px; }
+.guia-intro p  { font-size:13px; color:var(--muted); line-height:1.6; }
+.guia-section-title {
+  font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+  color:var(--cyan); margin:24px 4px 12px; display:flex; align-items:center; gap:8px;
+}
+.guia-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+@media (max-width:860px){ .guia-grid { grid-template-columns:1fr; } }
+.guia-card {
+  background:var(--c1); border:1px solid rgba(255,255,255,.06);
+  border-left:3px solid var(--gc,#00f0ff); border-radius:12px; padding:18px 20px;
+  transition:transform .25s, box-shadow .25s;
+}
+.guia-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(0,0,0,.4); }
+.guia-card h3 {
+  font-size:14px; color:var(--text); margin-bottom:4px;
+  display:flex; align-items:center; gap:8px;
+}
+.guia-card .gc-tag {
+  font-size:10px; font-weight:700; color:var(--gc,#00f0ff);
+  background:color-mix(in srgb, var(--gc,#00f0ff) 14%, transparent);
+  padding:2px 8px; border-radius:99px; letter-spacing:.4px;
+}
+.guia-card .gc-def  { font-size:13px; color:var(--text);  line-height:1.55; margin:8px 0; }
+.guia-card .gc-calc {
+  font-size:12px; color:var(--muted); background:var(--bg); border-radius:8px;
+  padding:8px 12px; margin:8px 0; font-family:'Consolas',monospace; line-height:1.5;
+}
+.guia-card .gc-read {
+  font-size:12.5px; color:var(--muted); line-height:1.55;
+  border-top:1px dashed rgba(255,255,255,.08); padding-top:8px; margin-top:8px;
+}
+.guia-card .gc-read b { color:var(--text); }
+.guia-good { color:var(--green); font-weight:700; }
+.guia-warn { color:var(--orange); font-weight:700; }
+.guia-bad  { color:var(--pink); font-weight:700; }
 
 /* ── GRID 2 ── */
 .g2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
@@ -500,6 +551,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="presupuesto">Presupuesto</div>
   <div class="tab" data-pane="reporte">Reporte</div>
   <div class="tab" data-pane="incidencias">🚩 Incidencias CC</div>
+  <div class="tab" data-pane="guia">📖 Guía</div>
 </nav>
 
 <!-- RESUMEN -->
@@ -724,6 +776,130 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       </span>
     </div>
     <table id="inc-tabla"></table>
+  </div>
+</div>
+
+<!-- GUÍA DE MÉTRICAS -->
+<div id="pane-guia" class="pane">
+  <div class="guia-intro">
+    <h2>📖 Guía del Dashboard — ¿Qué significa cada cosa?</h2>
+    <p>Esta sección explica, en palabras simples, qué es cada número que ves en el tablero, cómo se calcula y cómo interpretarlo. La idea es que con esto cualquiera —sin ser experto en marketing— pueda leer el dashboard solo. Los ejemplos usan datos reales de Inglés YA.</p>
+  </div>
+
+  <div class="guia-section-title">🔢 Las 6 tarjetas de arriba (pestaña Resumen)</div>
+  <div class="guia-grid">
+
+    <div class="guia-card" style="--gc:#00f0ff">
+      <h3>💬 Leads Meta <span class="gc-tag">Cantidad</span></h3>
+      <div class="gc-def">Son las <b>personas que dejaron sus datos</b> (nombre y teléfono) a través de los anuncios de Facebook e Instagram durante el mes. Cada lead es un posible alumno interesado.</div>
+      <div class="gc-calc">Es un conteo directo: 1 formulario llenado = 1 lead.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> más leads = más oportunidades de venta. Pero ojo: un lead NO es un alumno todavía, apenas mostró interés. Ej. en mayo Ermita generó <b>470 leads</b>.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#E02020">
+      <h3>💸 Gasto Total <span class="gc-tag">Dinero</span></h3>
+      <div class="gc-def">El <b>dinero invertido en publicidad</b> (pauta) en Meta durante el mes. Es lo que se le paga a Facebook/Instagram para mostrar los anuncios.</div>
+      <div class="gc-calc">Suma de todo lo gastado en las campañas activas del mes.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> por sí solo no dice si vamos bien o mal — hay que mirarlo siempre junto a cuántos leads e inscritos trajo ese gasto.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#ff9900">
+      <h3>📊 CPL — Costo por Lead <span class="gc-tag">La clave de Víctor</span></h3>
+      <div class="gc-def">Es <b>cuánto cuesta conseguir UN lead</b>. La métrica más importante para saber si la pauta es eficiente.</div>
+      <div class="gc-calc">CPL = Gasto Total ÷ Leads<br>Ej: $21,128 ÷ 470 leads = <b>$44.95 por lead</b> (Ermita, mayo).</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> <span class="guia-good">Verde / barato: menos de $150</span> · <span class="guia-warn">Naranja / regular: $150 a $300</span> · <span class="guia-bad">Rojo / caro: más de $300</span>. Entre más bajo, mejor: significa que cada interesado nos costó poco.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#7b2ff7">
+      <h3>📅 Citas <span class="gc-tag">Cantidad</span></h3>
+      <div class="gc-def">Leads a los que el <b>Call Center (CC) logró agendar una cita</b> para visitar el plantel. Es el primer filtro de calidad: el interesado dijo "sí, voy a ir".</div>
+      <div class="gc-calc">Conteo de leads que aceptaron una fecha de visita.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si hay muchos leads pero pocas citas, el cuello de botella suele estar en el <b>Call Center</b> (no en la pauta): no contestan, no agendan o tardan.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#ff0066">
+      <h3>🏃 Visitas <span class="gc-tag">Cantidad</span></h3>
+      <div class="gc-def">Personas que <b>sí asistieron</b> al plantel a su cita. Es la diferencia entre agendar y presentarse.</div>
+      <div class="gc-calc">Conteo de citas que efectivamente llegaron.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> muchas citas pero pocas visitas = la gente agenda y no llega (falta confirmar/recordar la cita). Es donde más se pierde gente.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#00ff88">
+      <h3>✅ Inscritos <span class="gc-tag">El resultado final</span></h3>
+      <div class="gc-def">Las personas que <b>se inscribieron y pagaron</b>: alumnos nuevos reales. Es el objetivo de todo el embudo.</div>
+      <div class="gc-calc">Conteo de visitas que cerraron inscripción. La meta de marketing es <b>45 inscritos/mes</b>.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> es el número que de verdad importa al negocio. Todo lo demás (leads, citas, visitas) solo sirve si termina en inscritos.</div>
+    </div>
+
+  </div>
+
+  <div class="guia-section-title">🧮 Métricas que combinan números (más abajo en el tablero)</div>
+  <div class="guia-grid">
+
+    <div class="guia-card" style="--gc:#ff9900">
+      <h3>📊 CPL Promedio <span class="gc-tag">Promedio</span></h3>
+      <div class="gc-def">El <b>costo por lead promedio de toda la red</b> (las 3 sucursales juntas), no de una sola.</div>
+      <div class="gc-calc">CPL Prom = Gasto de TODAS las sedes ÷ Leads de TODAS las sedes.<br>No es el promedio simple de los CPL, sino ponderado por gasto.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> sirve para comparar una sede contra el promedio general. Si Iztacalco está por encima del promedio, esa sede está cara y hay que revisarla.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#00ff88">
+      <h3>🔁 Conversión Lead → Inscrito <span class="gc-tag">Porcentaje</span></h3>
+      <div class="gc-def">De cada 100 leads, <b>cuántos terminan inscritos</b>. Mide qué tan bien se aprovechan los interesados.</div>
+      <div class="gc-calc">Conv = (Inscritos ÷ Leads) × 100<br>Ej: 4 inscritos ÷ 92 leads = <b>4.3%</b> (Lindavista).</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> baja conversión con CPL barato = los leads llegan bien pero se pierden en CC o en el plantel. Es el termómetro de la operación, no de la pauta.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#00f0ff">
+      <h3>💵 Costo por Inscrito (CPI) <span class="gc-tag">Dinero</span></h3>
+      <div class="gc-def">Cuánto nos costó en publicidad <b>cada alumno nuevo inscrito</b>. Es el CPL llevado hasta el final del embudo.</div>
+      <div class="gc-calc">CPI = Gasto Total ÷ Inscritos.<br>Ej: $5,678 ÷ 4 inscritos = <b>$1,419 por inscrito</b>.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> es lo que de verdad cuesta "comprar" un alumno. Si el CPL es barato pero el CPI altísimo, el problema NO es la pauta: es que se pierde mucha gente entre el lead y la inscripción.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#7b2ff7">
+      <h3>🪜 Embudo del Mes <span class="gc-tag">Visual</span></h3>
+      <div class="gc-def">La <b>gráfica en forma de embudo</b> que muestra cómo se va reduciendo la gente en cada etapa: Leads → Citas → Visitas → Inscritos.</div>
+      <div class="gc-calc">Cada escalón es más chico que el anterior porque siempre se pierde gente en el camino.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Si cae fuerte de Leads a Citas → problema de Call Center.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#00ff88">
+      <h3>📞 % Contactabilidad (% Cont) <span class="gc-tag">Porcentaje</span></h3>
+      <div class="gc-def">De los leads que entraron, a <b>cuántos sí logró localizar el Call Center</b> por teléfono.</div>
+      <div class="gc-calc">% Cont = (Llamadas contestadas ÷ Leads) × 100.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si es bajo, mucha gente dejó sus datos pero nunca contestó (o nunca le marcaron). Sin contacto no hay cita, así que esto frena todo el embudo.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#ff0066">
+      <h3>🔄 Churn y Recuperación <span class="gc-tag">Retención</span></h3>
+      <div class="gc-def"><b>Churn</b> = alumnos que se dan de baja cada mes (se estima ~10% de la plantilla). <b>Recuperación</b> = cuántos de esos se logran reactivar.</div>
+      <div class="gc-calc">Compara los alumnos recuperados contra ese 10% que se pierde mes a mes.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si solo entran inscritos nuevos pero el churn se los come, la escuela no crece. Recuperar alumnos suele ser más barato que conseguir uno nuevo.</div>
+    </div>
+
+  </div>
+
+  <div class="guia-section-title">📁 Términos de la pauta (pestañas Campañas y Ad Sets)</div>
+  <div class="guia-grid">
+
+    <div class="guia-card" style="--gc:#00f0ff">
+      <h3>📣 Campaña <span class="gc-tag">Estructura</span></h3>
+      <div class="gc-def">Es el <b>"contenedor" grande de un anuncio</b> en Meta, con un objetivo (ej. conseguir leads). Cada plantel suele tener su propia campaña.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> en la pestaña Campañas ves cuánto gastó y cuántos leads trajo cada una. Sirve para comparar plantel contra plantel.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#7b2ff7">
+      <h3>🎯 Ad Set (Conjunto de anuncios) <span class="gc-tag">Estructura</span></h3>
+      <div class="gc-def">Dentro de una campaña, el Ad Set define <b>a quién le llega el anuncio</b> (público, zona, edad) y cuánto presupuesto se le asigna.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> la pestaña Ad Sets está ordenada por leads ↓. Los de arriba son los públicos que mejor funcionan; ahí conviene poner más presupuesto. Los de abajo con CPL caro son candidatos a pausar.</div>
+    </div>
+
+  </div>
+
+  <div class="guia-intro" style="margin-top:18px;background:linear-gradient(135deg,rgba(0,255,136,.07),rgba(0,240,255,.05));border-color:rgba(0,255,136,.2)">
+    <h2 style="font-size:15px">💡 La idea en una frase</h2>
+    <p>La <b>pauta</b> (CPL, Leads, Gasto) trae interesados baratos. El <b>Call Center y el plantel</b> (Citas, Visitas, Inscritos) los convierten en alumnos. Cuando un número se ve mal, esta guía ayuda a saber <b>en cuál de las dos partes</b> está el problema — y casi siempre, cuando el CPL es barato pero hay pocos inscritos, el cuello de botella está en la operación, no en los anuncios.</p>
   </div>
 </div>
 
@@ -1289,12 +1465,12 @@ function renderKpis() {
   const k = D.kpis;
   const mp = monthProgress();
   const cards = [
-    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp },
-    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp },
-    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)) },
-    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta) },
-    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta) },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}` },
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que dejaron sus datos a través de los anuncios de Meta este mes. Cada lead es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
+    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
+    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
+    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
+    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}`, tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -1309,7 +1485,7 @@ function renderKpis() {
         </div>
       </div>
       <div class="kpi-val" id="kv${i}">0</div>
-      <div class="kpi-lbl">${c.lbl}</div>
+      <div class="kpi-lbl">${c.lbl}<span class="kpi-info" title="${c.tip||''}">i</span></div>
     </div>`).join('');
 
   cards.forEach((c,i)=>{
