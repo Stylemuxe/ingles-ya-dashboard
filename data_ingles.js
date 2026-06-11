@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "10/06/2026 21:20",
+  "actualizado": "11/06/2026 13:04",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 174,
-    "gasto": 8733.1,
-    "cpl": 50.19,
+    "leads_meta": 188,
+    "gasto": 9209.81,
+    "cpl": 48.99,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 175.99,
-      "impresiones": 2488,
-      "alcance": 2036,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 318.22,
+      "impresiones": 4681,
+      "alcance": 3688,
+      "leads": 5,
+      "cpl": 63.64
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 5652.16,
-      "impresiones": 54923,
-      "alcance": 40098,
-      "leads": 136,
-      "cpl": 41.56
+      "gasto": 5986.15,
+      "impresiones": 58289,
+      "alcance": 42275,
+      "leads": 145,
+      "cpl": 41.28
     },
     {
       "id": "6917541255358",
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "PAUSED",
       "presupuesto_dia": 380.0,
-      "gasto": 2904.95,
-      "impresiones": 43702,
-      "alcance": 34270,
+      "gasto": 2905.44,
+      "impresiones": 43716,
+      "alcance": 34317,
       "leads": 38,
-      "cpl": 76.45
+      "cpl": 76.46
     },
     {
       "id": "6909460120758",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 175.99,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 318.22,
+      "leads": 5,
+      "cpl": 63.64
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5652.16,
-      "leads": 137,
-      "cpl": 41.26
+      "gasto": 5986.15,
+      "leads": 145,
+      "cpl": 41.28
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -173,9 +173,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
-      "gasto": 2904.95,
+      "gasto": 2905.44,
       "leads": 38,
-      "cpl": 76.45
+      "cpl": 76.46
     },
     {
       "nombre": "Ingles Ya Iztacalco",
@@ -254,15 +254,19 @@ const DATA_INGLES = {
     },
     "2026-06-08": {
       "leads": 18,
-      "gasto": 1351.89
+      "gasto": 1351.95
     },
     "2026-06-09": {
       "leads": 47,
-      "gasto": 1826.31
+      "gasto": 1828.9
     },
     "2026-06-10": {
-      "leads": 9,
-      "gasto": 670.0
+      "leads": 21,
+      "gasto": 1067.95
+    },
+    "2026-06-11": {
+      "leads": 1,
+      "gasto": 78.05
     }
   },
   "sucursales": {
