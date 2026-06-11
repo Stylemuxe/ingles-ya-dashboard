@@ -1,11 +1,11 @@
 {
-  "actualizado": "11/06/2026 13:04",
+  "actualizado": "11/06/2026 22:30",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 188,
-    "gasto": 9209.81,
-    "cpl": 48.99,
+    "leads_meta": 207,
+    "gasto": 9749.57,
+    "cpl": 47.1,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 318.22,
-      "impresiones": 4681,
-      "alcance": 3688,
-      "leads": 5,
-      "cpl": 63.64
+      "gasto": 427.03,
+      "impresiones": 6006,
+      "alcance": 4573,
+      "leads": 9,
+      "cpl": 47.45
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 5986.15,
-      "impresiones": 58289,
-      "alcance": 42275,
-      "leads": 145,
-      "cpl": 41.28
+      "gasto": 6417.1,
+      "impresiones": 64284,
+      "alcance": 45784,
+      "leads": 160,
+      "cpl": 40.11
     },
     {
       "id": "6917541255358",
@@ -83,7 +83,7 @@
       "status": "PAUSED",
       "presupuesto_dia": 380.0,
       "gasto": 2905.44,
-      "impresiones": 43716,
+      "impresiones": 43717,
       "alcance": 34317,
       "leads": 38,
       "cpl": 76.46
@@ -137,18 +137,18 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 318.22,
-      "leads": 5,
-      "cpl": 63.64
+      "gasto": 427.03,
+      "leads": 9,
+      "cpl": 47.45
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5986.15,
-      "leads": 145,
-      "cpl": 41.28
+      "gasto": 6417.1,
+      "leads": 160,
+      "cpl": 40.11
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -262,11 +262,11 @@
     },
     "2026-06-10": {
       "leads": 21,
-      "gasto": 1067.95
+      "gasto": 1076.02
     },
     "2026-06-11": {
-      "leads": 1,
-      "gasto": 78.05
+      "leads": 20,
+      "gasto": 607.8
     }
   },
   "sucursales": {
@@ -885,6 +885,15 @@
       "asistio": true,
       "inscrito": false,
       "obs": "visista al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Pilar",
+      "tel": "9986532545",
+      "fecha_cita": "12-06-26 7:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
     },
     {
       "sucursal": "ERMITA",
