@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "12/06/2026 12:35",
+  "actualizado": "12/06/2026 22:04",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 213,
-    "gasto": 9908.78,
-    "cpl": 46.52,
+    "leads_meta": 219,
+    "gasto": 10160.06,
+    "cpl": 46.39,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 466.99,
-      "impresiones": 6755,
-      "alcance": 4963,
-      "leads": 11,
-      "cpl": 42.45
+      "gasto": 521.84,
+      "impresiones": 7585,
+      "alcance": 5422,
+      "leads": 12,
+      "cpl": 43.49
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 6536.35,
-      "impresiones": 65548,
-      "alcance": 46196,
-      "leads": 164,
-      "cpl": 39.86
+      "gasto": 6732.78,
+      "impresiones": 67376,
+      "alcance": 46690,
+      "leads": 169,
+      "cpl": 39.84
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 466.99,
-      "leads": 11,
-      "cpl": 42.45
+      "gasto": 521.84,
+      "leads": 12,
+      "cpl": 43.49
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 6536.35,
-      "leads": 164,
-      "cpl": 39.86
+      "gasto": 6732.78,
+      "leads": 169,
+      "cpl": 39.84
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -266,11 +266,11 @@ const DATA_INGLES = {
     },
     "2026-06-11": {
       "leads": 26,
-      "gasto": 759.91
+      "gasto": 763.0
     },
     "2026-06-12": {
-      "leads": 0,
-      "gasto": 5.13
+      "leads": 6,
+      "gasto": 253.32
     }
   },
   "sucursales": {
@@ -702,6 +702,15 @@ const DATA_INGLES = {
       "obs": "Examen de colocación"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Edgar granados nivel intermedio",
+      "tel": "4443109041",
+      "fecha_cita": "15-06-26 6:30pm",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Calse muestra en línea"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Brianda Rosas/Kleb Alpizar Rosas",
       "tel": "55 4933 9614",
@@ -894,7 +903,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Pilar",
       "tel": "9986532545",
-      "fecha_cita": "12-06-26 7:30",
+      "fecha_cita": "12/06/2026 6:30",
       "asistio": false,
       "inscrito": false,
       "obs": "clase muestra en linea"
