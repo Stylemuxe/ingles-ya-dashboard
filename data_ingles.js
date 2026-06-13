@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "13/06/2026 17:01",
+  "actualizado": "13/06/2026 23:46",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 234,
-    "gasto": 10982.39,
-    "cpl": 46.93,
+    "leads_meta": 240,
+    "gasto": 11420.6,
+    "cpl": 47.59,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 654.71,
-      "impresiones": 8938,
-      "alcance": 6245,
+      "gasto": 732.56,
+      "impresiones": 9564,
+      "alcance": 6533,
       "leads": 14,
-      "cpl": 46.77
+      "cpl": 52.33
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 7422.24,
-      "impresiones": 74268,
-      "alcance": 50392,
-      "leads": 182,
-      "cpl": 40.78
+      "gasto": 7782.6,
+      "impresiones": 76469,
+      "alcance": 51242,
+      "leads": 188,
+      "cpl": 41.4
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 654.71,
+      "gasto": 732.56,
       "leads": 14,
-      "cpl": 46.77
+      "cpl": 52.33
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 7422.24,
-      "leads": 182,
-      "cpl": 40.78
+      "gasto": 7782.6,
+      "leads": 188,
+      "cpl": 41.4
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -270,11 +270,11 @@ const DATA_INGLES = {
     },
     "2026-06-12": {
       "leads": 9,
-      "gasto": 747.5
+      "gasto": 750.05
     },
     "2026-06-13": {
-      "leads": 12,
-      "gasto": 332.43
+      "leads": 18,
+      "gasto": 762.93
     }
   },
   "sucursales": {
@@ -496,21 +496,21 @@ const DATA_INGLES = {
     },
     "2026-06-09": {
       "LINDAVISTA": {
-        "leads": 3,
+        "leads": 15,
         "llamadas": 15,
         "citas": 0,
         "visitas": 0,
         "inscritos": 1
       },
       "IZTACALCO": {
-        "leads": 3,
+        "leads": 15,
         "llamadas": 15,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 3,
+        "leads": 9,
         "llamadas": 10,
         "citas": 0,
         "visitas": 0,
@@ -588,22 +588,22 @@ const DATA_INGLES = {
     },
     "2026-06-13": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 6,
+        "llamadas": 4,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 6,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 1,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -956,7 +956,7 @@ const DATA_INGLES = {
       "fecha_cita": "12-06-26 5:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "Examen de colocación"
+      "obs": "cancelo"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -966,6 +966,24 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Calse muestra en línea"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Estela Mtz",
+      "tel": "8311070083",
+      "fecha_cita": "15-06-26 6:30pm",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica",
+      "tel": "55 4947 7239",
+      "fecha_cita": "15-06-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en  plantel"
     },
     {
       "sucursal": "IZTACALCO",
