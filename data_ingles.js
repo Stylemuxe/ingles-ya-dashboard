@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "13/06/2026 10:13",
+  "actualizado": "13/06/2026 17:01",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 225,
-    "gasto": 10696.91,
-    "cpl": 47.54,
+    "leads_meta": 234,
+    "gasto": 10982.39,
+    "cpl": 46.93,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 584.22,
-      "impresiones": 8193,
-      "alcance": 5742,
+      "gasto": 654.71,
+      "impresiones": 8938,
+      "alcance": 6245,
       "leads": 14,
-      "cpl": 41.73
+      "cpl": 46.77
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 7207.25,
-      "impresiones": 72309,
-      "alcance": 49410,
-      "leads": 173,
-      "cpl": 41.66
+      "gasto": 7422.24,
+      "impresiones": 74268,
+      "alcance": 50392,
+      "leads": 182,
+      "cpl": 40.78
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 584.22,
+      "gasto": 654.71,
       "leads": 14,
-      "cpl": 41.73
+      "cpl": 46.77
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 7207.25,
-      "leads": 173,
-      "cpl": 41.66
+      "gasto": 7422.24,
+      "leads": 182,
+      "cpl": 40.78
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -270,11 +270,11 @@ const DATA_INGLES = {
     },
     "2026-06-12": {
       "leads": 9,
-      "gasto": 740.17
+      "gasto": 747.5
     },
     "2026-06-13": {
-      "leads": 3,
-      "gasto": 49.12
+      "leads": 12,
+      "gasto": 332.43
     }
   },
   "sucursales": {
