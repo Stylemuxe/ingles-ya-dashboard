@@ -1,11 +1,11 @@
 {
-  "actualizado": "14/06/2026 17:01",
+  "actualizado": "14/06/2026 23:55",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 251,
-    "gasto": 11851.0,
-    "cpl": 47.22,
+    "leads_meta": 258,
+    "gasto": 12308.68,
+    "cpl": 47.71,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 816.42,
-      "impresiones": 10442,
-      "alcance": 7032,
+      "gasto": 905.68,
+      "impresiones": 11061,
+      "alcance": 7323,
       "leads": 15,
-      "cpl": 54.43
+      "cpl": 60.38
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 8129.14,
-      "impresiones": 79003,
-      "alcance": 52352,
-      "leads": 198,
-      "cpl": 41.06
+      "gasto": 8497.56,
+      "impresiones": 82743,
+      "alcance": 54189,
+      "leads": 205,
+      "cpl": 41.45
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 816.42,
+      "gasto": 905.68,
       "leads": 15,
-      "cpl": 54.43
+      "cpl": 60.38
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 8129.14,
-      "leads": 198,
-      "cpl": 41.06
+      "gasto": 8497.56,
+      "leads": 205,
+      "cpl": 41.45
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -270,15 +270,15 @@
     },
     "2026-06-12": {
       "leads": 9,
-      "gasto": 750.18
+      "gasto": 750.24
     },
     "2026-06-13": {
       "leads": 22,
-      "gasto": 971.21
+      "gasto": 971.5
     },
     "2026-06-14": {
-      "leads": 7,
-      "gasto": 221.99
+      "leads": 14,
+      "gasto": 679.32
     }
   },
   "sucursales": {
