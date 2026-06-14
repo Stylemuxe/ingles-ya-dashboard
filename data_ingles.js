@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "13/06/2026 23:46",
+  "actualizado": "14/06/2026 10:53",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 240,
-    "gasto": 11420.6,
-    "cpl": 47.59,
+    "leads_meta": 245,
+    "gasto": 11640.78,
+    "cpl": 47.51,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 732.56,
-      "impresiones": 9564,
-      "alcance": 6533,
+      "gasto": 769.92,
+      "impresiones": 10013,
+      "alcance": 6792,
       "leads": 14,
-      "cpl": 52.33
+      "cpl": 54.99
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 7782.6,
-      "impresiones": 76469,
-      "alcance": 51242,
-      "leads": 188,
-      "cpl": 41.4
+      "gasto": 7965.42,
+      "impresiones": 77901,
+      "alcance": 51940,
+      "leads": 193,
+      "cpl": 41.27
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 732.56,
+      "gasto": 769.92,
       "leads": 14,
-      "cpl": 52.33
+      "cpl": 54.99
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 7782.6,
-      "leads": 188,
-      "cpl": 41.4
+      "gasto": 7965.42,
+      "leads": 193,
+      "cpl": 41.27
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -270,11 +270,15 @@ const DATA_INGLES = {
     },
     "2026-06-12": {
       "leads": 9,
-      "gasto": 750.05
+      "gasto": 750.18
     },
     "2026-06-13": {
-      "leads": 18,
-      "gasto": 762.93
+      "leads": 22,
+      "gasto": 970.55
+    },
+    "2026-06-14": {
+      "leads": 1,
+      "gasto": 12.43
     }
   },
   "sucursales": {
