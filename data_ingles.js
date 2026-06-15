@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "14/06/2026 23:55",
+  "actualizado": "15/06/2026 18:08",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 258,
-    "gasto": 12308.68,
-    "cpl": 47.71,
+    "leads_meta": 265,
+    "gasto": 12566.48,
+    "cpl": 47.42,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 905.68,
-      "impresiones": 11061,
-      "alcance": 7323,
-      "leads": 15,
-      "cpl": 60.38
+      "gasto": 981.58,
+      "impresiones": 11654,
+      "alcance": 7654,
+      "leads": 18,
+      "cpl": 54.53
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 8497.56,
-      "impresiones": 82743,
-      "alcance": 54189,
-      "leads": 205,
-      "cpl": 41.45
+      "gasto": 8679.46,
+      "impresiones": 84437,
+      "alcance": 54730,
+      "leads": 209,
+      "cpl": 41.53
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 905.68,
-      "leads": 15,
-      "cpl": 60.38
+      "gasto": 981.58,
+      "leads": 18,
+      "cpl": 54.53
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 8497.56,
-      "leads": 205,
-      "cpl": 41.45
+      "gasto": 8679.46,
+      "leads": 209,
+      "cpl": 41.53
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -274,11 +274,15 @@ const DATA_INGLES = {
     },
     "2026-06-13": {
       "leads": 22,
-      "gasto": 971.5
+      "gasto": 971.63
     },
     "2026-06-14": {
-      "leads": 14,
-      "gasto": 679.32
+      "leads": 17,
+      "gasto": 814.82
+    },
+    "2026-06-15": {
+      "leads": 4,
+      "gasto": 122.17
     }
   },
   "sucursales": {
@@ -988,6 +992,15 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "clase muestra en  plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luz JAqueline Morales",
+      "tel": "5519163138",
+      "fecha_cita": "jueves 18-06-26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examne de colocaón"
     },
     {
       "sucursal": "IZTACALCO",
