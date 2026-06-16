@@ -1,11 +1,11 @@
 {
-  "actualizado": "16/06/2026 13:18",
+  "actualizado": "16/06/2026 22:56",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 280,
-    "gasto": 13554.82,
-    "cpl": 48.41,
+    "leads_meta": 306,
+    "gasto": 14354.21,
+    "cpl": 46.91,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 1192.05,
-      "impresiones": 13238,
-      "alcance": 8366,
-      "leads": 20,
-      "cpl": 59.6
+      "gasto": 1373.6,
+      "impresiones": 14746,
+      "alcance": 9206,
+      "leads": 23,
+      "cpl": 59.72
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 9457.33,
-      "impresiones": 89797,
-      "alcance": 57119,
-      "leads": 222,
-      "cpl": 42.6
+      "gasto": 10075.17,
+      "impresiones": 96390,
+      "alcance": 60554,
+      "leads": 245,
+      "cpl": 41.12
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 1192.05,
-      "leads": 20,
-      "cpl": 59.6
+      "gasto": 1373.6,
+      "leads": 23,
+      "cpl": 59.72
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 9457.33,
-      "leads": 222,
-      "cpl": 42.6
+      "gasto": 10075.17,
+      "leads": 245,
+      "cpl": 41.12
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -278,15 +278,15 @@
     },
     "2026-06-14": {
       "leads": 17,
-      "gasto": 815.69
+      "gasto": 815.95
     },
     "2026-06-15": {
       "leads": 18,
-      "gasto": 1011.57
+      "gasto": 1028.0
     },
     "2026-06-16": {
-      "leads": 1,
-      "gasto": 98.07
+      "leads": 27,
+      "gasto": 880.77
     }
   },
   "sucursales": {
@@ -970,7 +970,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Uriel salinas (sandra mamá)",
       "tel": "5541844644",
-      "fecha_cita": "06-06-24 9:00 a 12:00",
+      "fecha_cita": "17-06-24",
       "asistio": false,
       "inscrito": false,
       "obs": "(pendiente)"
