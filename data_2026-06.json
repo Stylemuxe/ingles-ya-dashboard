@@ -1,11 +1,11 @@
 {
-  "actualizado": "15/06/2026 18:08",
+  "actualizado": "16/06/2026 13:18",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 265,
-    "gasto": 12566.48,
-    "cpl": 47.42,
+    "leads_meta": 280,
+    "gasto": 13554.82,
+    "cpl": 48.41,
     "citas": 3,
     "visitas": 0,
     "inscritos": 0
@@ -16,11 +16,11 @@
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 981.58,
-      "impresiones": 11654,
-      "alcance": 7654,
-      "leads": 18,
-      "cpl": 54.53
+      "gasto": 1192.05,
+      "impresiones": 13238,
+      "alcance": 8366,
+      "leads": 20,
+      "cpl": 59.6
     },
     {
       "id": "6978345982558",
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 8679.46,
-      "impresiones": 84437,
-      "alcance": 54730,
-      "leads": 209,
-      "cpl": 41.53
+      "gasto": 9457.33,
+      "impresiones": 89797,
+      "alcance": 57119,
+      "leads": 222,
+      "cpl": 42.6
     },
     {
       "id": "6917541255358",
@@ -137,18 +137,18 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 981.58,
-      "leads": 18,
-      "cpl": 54.53
+      "gasto": 1192.05,
+      "leads": 20,
+      "cpl": 59.6
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 8679.46,
-      "leads": 209,
-      "cpl": 41.53
+      "gasto": 9457.33,
+      "leads": 222,
+      "cpl": 42.6
     },
     {
       "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
@@ -278,11 +278,15 @@
     },
     "2026-06-14": {
       "leads": 17,
-      "gasto": 814.82
+      "gasto": 815.69
     },
     "2026-06-15": {
-      "leads": 4,
-      "gasto": 122.17
+      "leads": 18,
+      "gasto": 1011.57
+    },
+    "2026-06-16": {
+      "leads": 1,
+      "gasto": 98.07
     }
   },
   "sucursales": {
@@ -619,23 +623,46 @@
     },
     "2026-06-14": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 5,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 5,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 6,
+        "llamadas": 4,
         "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-15": {
+      "LINDAVISTA": {
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
@@ -1325,6 +1352,15 @@
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra examen  de coloc"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Vanessa",
+      "tel": "5575109275",
+      "fecha_cita": "sabado 27-06-2611:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "examen de colocaión presencial"
     }
   ]
 }
