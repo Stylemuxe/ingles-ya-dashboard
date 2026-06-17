@@ -299,6 +299,18 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 ::-webkit-scrollbar-track { background:var(--bg); }
 ::-webkit-scrollbar-thumb { background:var(--c3); border-radius:99px; }
 ::-webkit-scrollbar-thumb:hover { background:var(--cyan); }
+
+/* ── TOAST ── */
+#toast {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px);
+  background: rgba(20,17,40,.97); border: 1px solid rgba(224,32,32,.4);
+  color: var(--text); padding: 13px 22px; border-radius: 12px;
+  font-size: 13px; font-weight: 600; z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0,0,0,.6), 0 0 20px rgba(224,32,32,.15);
+  transition: transform .35s cubic-bezier(.22,1,.36,1), opacity .35s;
+  opacity: 0; pointer-events: none; white-space: nowrap;
+}
+#toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 </style>
 </head>
 <body>
@@ -400,8 +412,23 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
+<div id="toast"></div>
 <script src="data_ingles.js"></script>
 <script>
+let _toastTimer = null;
+function showToast(msg, tipo = 'error') {
+  const t = document.getElementById('toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.style.borderColor = tipo === 'ok' ? 'rgba(0,255,136,.4)' : 'rgba(224,32,32,.4)';
+  t.style.boxShadow   = tipo === 'ok'
+    ? '0 8px 32px rgba(0,0,0,.6), 0 0 20px rgba(0,255,136,.12)'
+    : '0 8px 32px rgba(0,0,0,.6), 0 0 20px rgba(224,32,32,.15)';
+  t.classList.add('show');
+  clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => t.classList.remove('show'), 3800);
+}
+
 let D = (typeof DATA_INGLES !== 'undefined') ? DATA_INGLES : {
   actualizado:'—', mes:'—',
   kpis:{leads_meta:0,gasto:0,cpl:0,citas:0,visitas:0,inscritos:0},
@@ -759,32 +786,44 @@ async function cambiarMes(mesId) {
   if (!mesId) return;
   try {
     const r = await fetch(`data_${mesId}.json`);
-    if (!r.ok) throw new Error('No encontrado');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
     D = await r.json();
-    // Quitar indicador live si es mes histórico
     const hoy = new Date();
     const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
     document.querySelector('.live-dot').style.opacity = mesId === mesActual ? '1' : '0.3';
     renderAll();
   } catch(e) {
     console.warn('No se pudo cargar', mesId, e);
+    const esFileProtocol = location.protocol === 'file:';
+    if (esFileProtocol) {
+      showToast('⚠️ Abre el dash en Firefox o con servidor local para cambiar de mes');
+    } else {
+      showToast(`No se pudo cargar ${nombreMes(mesId)} — ${e.message}`);
+    }
+    // Revertir selector al mes que sí está cargado
+    const sel = document.getElementById('mes-select');
+    if (D.mes_id) sel.value = D.mes_id;
   }
 }
 
 async function initMeses() {
   try {
     const r = await fetch('meses.json');
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
     const meses = await r.json();
     const sel = document.getElementById('mes-select');
     sel.innerHTML = meses.map(m =>
       `<option value="${m}">${nombreMes(m)}</option>`
     ).join('');
-    // Cargar el primer mes de la lista (el más reciente)
     if (meses.length > 0) await cambiarMes(meses[0]);
   } catch(e) {
-    // Sin meses.json — usar data_ingles.js ya cargado
+    // Sin meses.json o file:// bloqueado — usar data_ingles.js ya cargado
     const sel = document.getElementById('mes-select');
-    sel.innerHTML = '<option value="">Mes actual</option>';
+    if (typeof DATA_INGLES !== 'undefined' && DATA_INGLES.mes_id) {
+      sel.innerHTML = `<option value="${DATA_INGLES.mes_id}">${DATA_INGLES.mes}</option>`;
+    } else {
+      sel.innerHTML = '<option value="">Mes actual</option>';
+    }
     renderAll();
   }
 }

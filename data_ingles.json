@@ -1,30 +1,30 @@
 {
-  "actualizado": "11/06/2026 13:04",
+  "actualizado": "16/06/2026 20:55",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 188,
-    "gasto": 9209.81,
-    "cpl": 48.99,
-    "citas": 3,
-    "visitas": 0,
-    "inscritos": 0
+    "leads_meta": 307,
+    "gasto": 14520.35,
+    "cpl": 47.3,
+    "citas": 9,
+    "visitas": 1,
+    "inscritos": 4
   },
   "campanas": [
     {
       "id": "6978346009358",
-      "nombre": "IY - IZTACALCO - Mensajes",
+      "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 318.22,
-      "impresiones": 4681,
-      "alcance": 3688,
-      "leads": 5,
-      "cpl": 63.64
+      "gasto": 1431.59,
+      "impresiones": 15295,
+      "alcance": 9448,
+      "leads": 23,
+      "cpl": 62.24
     },
     {
       "id": "6978345982558",
-      "nombre": "IY - LINDAVISTA - Mensajes",
+      "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
       "gasto": 0.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 5986.15,
-      "impresiones": 58289,
-      "alcance": 42275,
-      "leads": 145,
-      "cpl": 41.28
+      "gasto": 10183.32,
+      "impresiones": 97134,
+      "alcance": 60696,
+      "leads": 246,
+      "cpl": 41.4
     },
     {
       "id": "6917541255358",
@@ -83,7 +83,7 @@
       "status": "PAUSED",
       "presupuesto_dia": 380.0,
       "gasto": 2905.44,
-      "impresiones": 43716,
+      "impresiones": 43717,
       "alcance": 34317,
       "leads": 38,
       "cpl": 76.46
@@ -125,7 +125,7 @@
   "adsets": [
     {
       "nombre": "IY - LINDAVISTA - Mensajes",
-      "status": "PAUSED",
+      "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -137,27 +137,18 @@
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 318.22,
-      "leads": 5,
-      "cpl": 63.64
+      "gasto": 1431.59,
+      "leads": 23,
+      "cpl": 62.24
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5986.15,
-      "leads": 145,
-      "cpl": 41.28
-    },
-    {
-      "nombre": "Ingles Ya Consolidada - Leads Mensajes - Copia",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 10183.32,
+      "leads": 246,
+      "cpl": 41.4
     },
     {
       "nombre": "New Engagement Campaign",
@@ -262,37 +253,57 @@
     },
     "2026-06-10": {
       "leads": 21,
-      "gasto": 1067.95
+      "gasto": 1077.99
     },
     "2026-06-11": {
-      "leads": 1,
-      "gasto": 78.05
+      "leads": 26,
+      "gasto": 763.88
+    },
+    "2026-06-12": {
+      "leads": 9,
+      "gasto": 750.24
+    },
+    "2026-06-13": {
+      "leads": 22,
+      "gasto": 971.63
+    },
+    "2026-06-14": {
+      "leads": 17,
+      "gasto": 815.95
+    },
+    "2026-06-15": {
+      "leads": 18,
+      "gasto": 1028.79
+    },
+    "2026-06-16": {
+      "leads": 28,
+      "gasto": 1047.31
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 30,
-      "llamadas": 18,
-      "no_contesta": 12,
-      "citas": 3,
-      "visitas": 0,
-      "inscritos": 0
+      "leads": 79,
+      "llamadas": 55,
+      "no_contesta": 33,
+      "citas": 7,
+      "visitas": 1,
+      "inscritos": 3
     },
     "IZTACALCO": {
-      "leads": 25,
-      "llamadas": 14,
-      "no_contesta": 11,
-      "citas": 0,
+      "leads": 70,
+      "llamadas": 47,
+      "no_contesta": 32,
+      "citas": 1,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 24,
-      "llamadas": 11,
-      "no_contesta": 13,
-      "citas": 0,
+      "leads": 56,
+      "llamadas": 36,
+      "no_contesta": 28,
+      "citas": 1,
       "visitas": 0,
-      "inscritos": 0
+      "inscritos": 1
     }
   },
   "metas_leads": {
@@ -367,6 +378,282 @@
         "leads": 5,
         "llamadas": 2,
         "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-04": {
+      "LINDAVISTA": {
+        "leads": 6,
+        "llamadas": 4,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 5,
+        "llamadas": 4,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 5,
+        "llamadas": 4,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-05": {
+      "LINDAVISTA": {
+        "leads": 5,
+        "llamadas": 4,
+        "citas": 2,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 4,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 4,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-06": {
+      "LINDAVISTA": {
+        "leads": 2,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-07": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-08": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 1,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-09": {
+      "LINDAVISTA": {
+        "leads": 15,
+        "llamadas": 15,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 15,
+        "llamadas": 15,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 9,
+        "llamadas": 10,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 1
+      }
+    },
+    "2026-06-10": {
+      "LINDAVISTA": {
+        "leads": 5,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 3,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-11": {
+      "LINDAVISTA": {
+        "leads": 10,
+        "llamadas": 5,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 10,
+        "llamadas": 5,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 8,
+        "llamadas": 5,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-12": {
+      "LINDAVISTA": {
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-13": {
+      "LINDAVISTA": {
+        "leads": 6,
+        "llamadas": 4,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 6,
+        "llamadas": 2,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 1,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-14": {
+      "LINDAVISTA": {
+        "leads": 5,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 5,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 6,
+        "llamadas": 4,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-06-15": {
+      "LINDAVISTA": {
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
@@ -674,7 +961,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Uriel salinas (sandra mamá)",
       "tel": "5541844644",
-      "fecha_cita": "06-06-24 9:00 a 12:00",
+      "fecha_cita": "17-06-24",
       "asistio": false,
       "inscrito": false,
       "obs": "(pendiente)"
@@ -695,7 +982,43 @@
       "fecha_cita": "12-06-26 5:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "Examen de colocación"
+      "obs": "cancelo"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Edgar granados nivel intermedio",
+      "tel": "4443109041",
+      "fecha_cita": "15-06-26 6:30pm",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Calse muestra en línea"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Estela Mtz",
+      "tel": "8311070083",
+      "fecha_cita": "15-06-26 6:30pm",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica",
+      "tel": "55 4947 7239",
+      "fecha_cita": "15-06-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en  plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luz JAqueline Morales",
+      "tel": "5519163138",
+      "fecha_cita": "jueves 18-06-26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examne de colocaón"
     },
     {
       "sucursal": "IZTACALCO",
@@ -887,6 +1210,15 @@
       "obs": "visista al plantel"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Pilar",
+      "tel": "9986532545",
+      "fecha_cita": "12/06/2026 6:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra en linea"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Anabel Bautista",
       "tel": "55 4933 9614",
@@ -1011,6 +1343,15 @@
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra examen  de coloc"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Vanessa",
+      "tel": "5575109275",
+      "fecha_cita": "sabado 27-06-2611:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "examen de colocaión presencial"
     }
   ]
 }
