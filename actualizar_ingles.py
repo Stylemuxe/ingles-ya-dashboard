@@ -203,8 +203,9 @@ def parse_seguimiento(text):
 SKIP_KW = ('HOJA AGENDA', 'SUCURSAL:', 'FECHA:')
 
 def parse_agenda(text, sucursal):
-    rows  = list(csv.reader(io.StringIO(text)))
-    agenda = []
+    rows     = list(csv.reader(io.StringIO(text)))
+    agenda   = []
+    cur_date = None
 
     for row in rows:
         if not any(c.strip() for c in row):
@@ -216,11 +217,21 @@ def parse_agenda(text, sucursal):
             continue
         if col0.upper() in ('NOMBRE', 'TEL', 'CORREO', 'CORREO ELECTRÓNICO'):
             continue
-        if parse_fecha(col0) or re.match(r'^\s*\d{2}[-/]\d{2}[-/]\d{2,4}\s*$', col0):
+
+        # Detectar fila de fecha (encabezado de sección) — incluye typos como 15-06026
+        d = parse_fecha(col0)
+        if d:
+            cur_date = d
+            continue
+        if re.match(r'^\s*\d{2}[-/]\d{2}[-/]?\d{2,4}\s*$', col0):
             continue
 
         nombre = re.sub(r'^(SÍ|SI|NO)\s+', '', col0, flags=re.IGNORECASE).strip()
         if not nombre or len(nombre) < 3:
+            continue
+
+        # Solo prospectos cuya sección de fecha corresponde al mes actual
+        if cur_date is None or cur_date.strftime('%Y-%m') != MES_ACTUAL:
             continue
 
         try:
