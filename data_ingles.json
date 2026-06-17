@@ -1,11 +1,11 @@
 {
-  "actualizado": "16/06/2026 21:07",
+  "actualizado": "17/06/2026 13:02",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 309,
-    "gasto": 14529.38,
-    "cpl": 47.02,
+    "leads_meta": 313,
+    "gasto": 14820.44,
+    "cpl": 47.35,
     "citas": 9,
     "visitas": 1,
     "inscritos": 4
@@ -16,33 +16,33 @@
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 1435.84,
-      "impresiones": 15332,
-      "alcance": 9450,
+      "gasto": 1486.56,
+      "impresiones": 15899,
+      "alcance": 9852,
       "leads": 23,
-      "cpl": 62.43
+      "cpl": 64.63
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 0.0,
-      "impresiones": 0,
-      "alcance": 0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 128.08,
+      "impresiones": 1513,
+      "alcance": 1249,
+      "leads": 1,
+      "cpl": 128.08
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 10188.1,
-      "impresiones": 97176,
-      "alcance": 60713,
-      "leads": 248,
-      "cpl": 41.08
+      "gasto": 10300.36,
+      "impresiones": 98013,
+      "alcance": 61497,
+      "leads": 251,
+      "cpl": 41.04
     },
     {
       "id": "6917541255358",
@@ -128,27 +128,27 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 129.77,
+      "leads": 1,
+      "cpl": 129.77
     },
     {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 1435.84,
+      "gasto": 1486.56,
       "leads": 23,
-      "cpl": 62.43
+      "cpl": 64.63
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 10188.1,
-      "leads": 248,
-      "cpl": 41.08
+      "gasto": 10300.36,
+      "leads": 251,
+      "cpl": 41.04
     },
     {
       "nombre": "New Engagement Campaign",
@@ -273,11 +273,15 @@
     },
     "2026-06-15": {
       "leads": 18,
-      "gasto": 1028.79
+      "gasto": 1028.97
     },
     "2026-06-16": {
-      "leads": 30,
-      "gasto": 1057.98
+      "leads": 33,
+      "gasto": 1243.4
+    },
+    "2026-06-17": {
+      "leads": 1,
+      "gasto": 102.63
     }
   },
   "sucursales": {
