@@ -112,9 +112,10 @@ nav::-webkit-scrollbar { height: 0; }
 @keyframes paneIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 
 /* ── KPI GRID ── */
-.kpi-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 14px; margin-bottom: 20px; }
-@media (max-width:1300px) { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
-@media (max-width:700px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
+.kpi-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 14px; margin-bottom: 20px; }
+@media (max-width:1400px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
+@media (max-width:900px)  { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width:600px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
 
 .kpi-card {
   background: var(--c1);
@@ -132,6 +133,7 @@ nav::-webkit-scrollbar { height: 0; }
 .kpi-card:nth-child(4){animation-delay:.20s}
 .kpi-card:nth-child(5){animation-delay:.25s}
 .kpi-card:nth-child(6){animation-delay:.30s}
+.kpi-card:nth-child(7){animation-delay:.35s}
 @keyframes cardIn { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
 
 .kpi-card::before {
@@ -1481,6 +1483,7 @@ function renderKpis() {
     { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
     { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
     { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}`, tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
+    { icon:'📋', lbl:'Agendados',  val:(D.agenda||[]).length, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, (D.agenda||[]).length), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
