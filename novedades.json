@@ -2,8 +2,58 @@
   "periodo": "Junio 2026",
   "agencia": "Tráfico ETH",
   "cliente": "Inglés YA",
-  "resumen": "Mes 1 del Paquete 2 ($12,000/mes). Dashboard en vivo, campañas activas por plantel y parrilla de contenido entregada. Pendiente activar campañas nuevas y producir piezas de contenido.",
+  "resumen": "Mes 1 del Paquete 2 ($12,000/mes). Campañas activas por plantel con geo segmentado, exclusión de foráneos aplicada, dashboard actualizado con agenda del mes y 4 inscritos confirmados al 18 de junio.",
   "novedades": [
+    {
+      "fecha": "18/06/2026",
+      "tipo": "optimizacion",
+      "titulo": "Geo targeting corregido — Campañas por zona",
+      "descripcion": "Se aplicó segmentación geográfica de radio 5km por plantel a los 3 ad sets activos. ERMITA cubría todo México — corregido. LINDAVISTA no tenía geo — corregido. IZTACALCO ya tenía radio correcto.",
+      "detalle": [
+        "ERMITA: cambio de País MX → Radio 5km (19.361451, -99.144616)",
+        "LINDAVISTA: sin geo → Radio 5km (19.492675, -99.130068)",
+        "IZTACALCO: Radio 5km confirmado ✅ (ya estaba correcto)",
+        "Cambio directo vía API v19.0 — activo de inmediato"
+      ]
+    },
+    {
+      "fecha": "18/06/2026",
+      "tipo": "estrategia",
+      "titulo": "Custom Audience 'Foráneos Inglés YA' — Exclusión activa",
+      "descripcion": "Se creó un Custom Audience con los 33 foráneos y fuera de rango capturados por Yolanda. El audience está excluido de las 3 campañas activas para evitar que Meta les muestre anuncios.",
+      "detalle": [
+        "33 teléfonos hasheados SHA-256 (100% recibidos, 0 inválidos)",
+        "Audience ID: 6995103720758",
+        "Foráneos: Tabasco, Cancún, Tijuana, Monterrey, Chihuahua, Cuernavaca, Veracruz, Puebla y más",
+        "Fuera de rango CDMX: Tlalpan, Mixcoac",
+        "Excluido de ERMITA, LINDAVISTA e IZTACALCO"
+      ]
+    },
+    {
+      "fecha": "18/06/2026",
+      "tipo": "novedad",
+      "titulo": "Agenda del mes integrada al dashboard",
+      "descripcion": "Se añadió la sección de Agenda en el Resumen con conteo de agendados, asistieron e inscritos por sucursal. El KPI 'Agendados' aparece ahora como 7mo card en la barra principal.",
+      "detalle": [
+        "Nuevo KPI: Agendados con anillo % inscrito/agendado",
+        "Tabla por sucursal: ERMITA / LINDAVISTA / IZTACALCO",
+        "Filtro de agenda solo por mes actual (antes jalaba todos los meses)",
+        "Fix UTF-8: ya no aparece 'SÃ' — corregido a 'SÍ'"
+      ]
+    },
+    {
+      "fecha": "18/06/2026",
+      "tipo": "correccion",
+      "titulo": "Datos actualizados al 18 de junio",
+      "descripcion": "Se eliminó el override temporal de ajuste_manual.json y se corrió el actualizador. Los datos reales de Yolanda quedaron reflejados correctamente para las primeras 2 semanas del mes.",
+      "detalle": [
+        "Leads totales: 309",
+        "Gasto: $14,529",
+        "CPL: $47",
+        "Inscritos: 4 (datos reales — antes mostraba 0 por el override)",
+        "Agenda junio: 7 prospectos con cita registrada"
+      ]
+    },
     {
       "fecha": "03/06/2026",
       "tipo": "estrategia",
@@ -45,7 +95,7 @@
       "fecha": "02/06/2026",
       "tipo": "novedad",
       "titulo": "Dashboard en línea con actualización automática",
-      "descripcion": "El dashboard se actualiza automáticamente cada 4 horas desde la API de Meta Ads. Incluye 7 tabs: Resumen, Sucursales, Campañas, Ad Sets, Agenda, Diario, Presupuesto y Reporte.",
+      "descripcion": "El dashboard se actualiza automáticamente cada 4 horas desde la API de Meta Ads. Incluye 8 tabs: Resumen, Sucursales, Campañas, Ad Sets, Agenda, Diario, Presupuesto y Reporte.",
       "detalle": [
         "Actualización cada 4 horas vía GitHub Actions",
         "Historial de meses: Mayo y Junio 2026",
@@ -56,12 +106,12 @@
     {
       "fecha": "02/06/2026",
       "tipo": "estrategia",
-      "titulo": "Separación de campañas por plantel",
-      "descripcion": "Se crearon campañas independientes para LINDAVISTA e IZTACALCO (antes combinadas). Cada plantel tendrá su propio presupuesto, métricas y CPL reales sin estimaciones.",
+      "titulo": "Separación de campañas por plantel — Activadas",
+      "descripcion": "Se crearon y activaron campañas independientes para LINDAVISTA e IZTACALCO. Cada plantel tiene su propio presupuesto, métricas y CPL real.",
       "detalle": [
-        "ERMITA: $695.17/día (sin cambio, activa)",
-        "LINDAVISTA: $186.13/día (creada, pendiente activar en Business Manager)",
-        "IZTACALCO: $193.71/día (creada, pendiente activar en Business Manager)"
+        "ERMITA: activa",
+        "LINDAVISTA: activa — IY - LINDAVISTA - Mensajes",
+        "IZTACALCO: activa — IY - IZTACALCO - Mensajes"
       ]
     },
     {
@@ -71,25 +121,13 @@
       "descripcion": "Se detectó y corrigió un error en la importación del seguimiento de Yolanda. Las columnas de porcentaje se confundían con números. Inscritos de mayo corregido a 5 (antes mostraba 39 incorrectamente).",
       "detalle": [
         "Inscritos Mayo corregido: 5 reales (antes 39 incorrecto)",
-        "GID de junio configurado: 768692381",
-        "Fechas del 3 al 6 de junio tienen typo — pendiente que Yolanda corrija /5/ por /6/"
+        "GID de junio configurado: 768692381"
       ]
     }
   ],
   "en_proceso": [
     {
-      "fecha": "04/06/2026",
-      "tipo": "estrategia",
-      "titulo": "Activar campañas LINDAVISTA e IZTACALCO",
-      "descripcion": "Las campañas ya están creadas en Meta Ads en estado PAUSADO. Pendiente configurar los ad sets en Business Manager, verificar el geo de Lindavista y activarlas para sustituir la campaña combinada actual.",
-      "detalle": [
-        "Crear ad sets en Business Manager (token no tiene permiso de escritura en la Página)",
-        "Verificar geo de Lindavista antes de activar",
-        "Pausar campaña combinada 'Ingles- Leads Mensajes 1 IZT Y LIND' al activar"
-      ]
-    },
-    {
-      "fecha": "04/06/2026",
+      "fecha": "18/06/2026",
       "tipo": "novedad",
       "titulo": "Producción de contenido junio (6 posts + 3 reels)",
       "descripcion": "En espera de la autorización de la parrilla por parte de David para arrancar con los diseños. Una vez aprobada se producen las piezas para Facebook e Instagram.",
@@ -101,9 +139,10 @@
     }
   ],
   "pendientes": [
-    "Yolanda: corregir fechas del 3 al 6 de junio en el Sheet (puso /5/ en lugar de /6/)",
-    "David: aprobar propuesta de parrilla de contenido y firmar contrato",
-    "Primer resumen quincenal por WhatsApp a David (15 de junio)",
-    "Reporte ejecutivo mensual en PDF (fin de junio)"
+    "Yolanda: corregir fechas del 17 al 30 de junio en el Sheet (el mes aparece como '4' en lugar de '6')",
+    "IZTACALCO: agregar headers de fecha en el Sheet de Agenda para que el filtro por mes funcione correctamente",
+    "Cuando Yolanda corrija las fechas: correr actualizar_ingles.py para reflejar los nuevos inscritos",
+    "Agregar foráneos nuevos al Custom Audience de Meta conforme Yolanda los capture",
+    "Reporte ejecutivo mensual en PDF — fin de junio"
   ]
 }
