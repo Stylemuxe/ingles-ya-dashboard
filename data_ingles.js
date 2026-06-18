@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "17/06/2026 22:26",
+  "actualizado": "18/06/2026 12:32",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 329,
-    "gasto": 15545.37,
-    "cpl": 47.25,
-    "citas": 10,
+    "leads_meta": 335,
+    "gasto": 15912.99,
+    "cpl": 47.5,
+    "citas": 11,
     "visitas": 1,
     "inscritos": 5
   },
@@ -16,33 +16,33 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 1590.74,
-      "impresiones": 16718,
-      "alcance": 10208,
+      "gasto": 1642.22,
+      "impresiones": 17115,
+      "alcance": 10332,
       "leads": 24,
-      "cpl": 66.28
+      "cpl": 68.43
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 327.72,
-      "impresiones": 3343,
-      "alcance": 2494,
-      "leads": 8,
-      "cpl": 40.97
+      "gasto": 437.69,
+      "impresiones": 4447,
+      "alcance": 3168,
+      "leads": 13,
+      "cpl": 33.67
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 10721.47,
-      "impresiones": 101577,
-      "alcance": 63077,
-      "leads": 259,
-      "cpl": 41.4
+      "gasto": 10927.64,
+      "impresiones": 103099,
+      "alcance": 63748,
+      "leads": 260,
+      "cpl": 42.03
     },
     {
       "id": "6917541255358",
@@ -128,27 +128,27 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 327.72,
-      "leads": 8,
-      "cpl": 40.97
+      "gasto": 437.69,
+      "leads": 13,
+      "cpl": 33.67
     },
     {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 1590.74,
+      "gasto": 1642.22,
       "leads": 24,
-      "cpl": 66.28
+      "cpl": 68.43
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 10721.47,
-      "leads": 259,
-      "cpl": 41.4
+      "gasto": 10927.64,
+      "leads": 260,
+      "cpl": 42.03
     },
     {
       "nombre": "New Engagement Campaign",
@@ -277,34 +277,38 @@ const DATA_INGLES = {
     },
     "2026-06-16": {
       "leads": 33,
-      "gasto": 1251.04
+      "gasto": 1251.38
     },
     "2026-06-17": {
-      "leads": 17,
-      "gasto": 819.26
+      "leads": 21,
+      "gasto": 1115.39
+    },
+    "2026-06-18": {
+      "leads": 2,
+      "gasto": 71.15
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 92,
-      "llamadas": 58,
-      "no_contesta": 40,
-      "citas": 7,
+      "leads": 99,
+      "llamadas": 65,
+      "no_contesta": 42,
+      "citas": 8,
       "visitas": 1,
       "inscritos": 4
     },
     "IZTACALCO": {
-      "leads": 83,
-      "llamadas": 50,
-      "no_contesta": 39,
+      "leads": 90,
+      "llamadas": 57,
+      "no_contesta": 41,
       "citas": 2,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 66,
-      "llamadas": 39,
-      "no_contesta": 32,
+      "leads": 72,
+      "llamadas": 45,
+      "no_contesta": 36,
       "citas": 1,
       "visitas": 0,
       "inscritos": 1
@@ -687,22 +691,22 @@ const DATA_INGLES = {
     },
     "2026-06-17": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 7,
+        "llamadas": 7,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 7,
+        "llamadas": 7,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 6,
+        "llamadas": 6,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
