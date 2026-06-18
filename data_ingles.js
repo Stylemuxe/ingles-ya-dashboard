@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "18/06/2026 12:32",
+  "actualizado": "18/06/2026 23:03",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 335,
-    "gasto": 15912.99,
-    "cpl": 47.5,
+    "leads_meta": 339,
+    "gasto": 16049.71,
+    "cpl": 47.34,
     "citas": 11,
     "visitas": 1,
     "inscritos": 5
@@ -16,33 +16,33 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 1642.22,
-      "impresiones": 17115,
-      "alcance": 10332,
+      "gasto": 1664.81,
+      "impresiones": 17288,
+      "alcance": 10415,
       "leads": 24,
-      "cpl": 68.43
+      "cpl": 69.37
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 437.69,
-      "impresiones": 4447,
-      "alcance": 3168,
-      "leads": 13,
-      "cpl": 33.67
+      "gasto": 490.1,
+      "impresiones": 4848,
+      "alcance": 3396,
+      "leads": 16,
+      "cpl": 30.63
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 10927.64,
-      "impresiones": 103099,
-      "alcance": 63748,
-      "leads": 260,
-      "cpl": 42.03
+      "gasto": 10989.36,
+      "impresiones": 103532,
+      "alcance": 64055,
+      "leads": 261,
+      "cpl": 42.1
     },
     {
       "id": "6917541255358",
@@ -128,27 +128,27 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 437.69,
-      "leads": 13,
-      "cpl": 33.67
+      "gasto": 490.1,
+      "leads": 16,
+      "cpl": 30.63
     },
     {
       "nombre": "IY - IZTACALCO - Mensajes",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 1642.22,
+      "gasto": 1664.81,
       "leads": 24,
-      "cpl": 68.43
+      "cpl": 69.37
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 10927.64,
-      "leads": 260,
-      "cpl": 42.03
+      "gasto": 10989.36,
+      "leads": 261,
+      "cpl": 42.1
     },
     {
       "nombre": "New Engagement Campaign",
@@ -281,11 +281,11 @@ const DATA_INGLES = {
     },
     "2026-06-17": {
       "leads": 21,
-      "gasto": 1115.39
+      "gasto": 1117.24
     },
     "2026-06-18": {
-      "leads": 2,
-      "gasto": 71.15
+      "leads": 6,
+      "gasto": 206.02
     }
   },
   "sucursales": {
@@ -983,60 +983,6 @@ const DATA_INGLES = {
     }
   },
   "agenda": [
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Ruth Olivares",
-      "tel": "5517245135",
-      "fecha_cita": "06-06-26 12:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "conocer instalaciones (pendiente)"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Perla",
-      "tel": "5512272674",
-      "fecha_cita": "12-06-26 5:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "cancelo"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Edgar granados nivel intermedio",
-      "tel": "4443109041",
-      "fecha_cita": "15-06-26 6:30pm",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Calse muestra en línea"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Estela Mtz",
-      "tel": "8311070083",
-      "fecha_cita": "15-06-26 6:30pm",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "clase muestra en linea"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Angelica",
-      "tel": "55 4947 7239",
-      "fecha_cita": "15-06-26 3:30",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "clase muestra en  plantel"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Luz JAqueline Morales",
-      "tel": "5519163138",
-      "fecha_cita": "jueves 18-06-26 3:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Examne de colocaón"
-    },
     {
       "sucursal": "ERMITA",
       "nombre": "Vanessa",
