@@ -1,11 +1,11 @@
 {
-  "actualizado": "20/06/2026 10:19",
+  "actualizado": "20/06/2026 17:08",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 346,
-    "gasto": 17197.67,
-    "cpl": 49.7,
+    "leads_meta": 356,
+    "gasto": 17758.44,
+    "cpl": 49.88,
     "citas": 11,
     "visitas": 1,
     "inscritos": 5
@@ -27,33 +27,33 @@
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 1864.93,
-      "impresiones": 19053,
-      "alcance": 11382,
+      "gasto": 1944.14,
+      "impresiones": 19535,
+      "alcance": 11571,
       "leads": 24,
-      "cpl": 77.71
+      "cpl": 81.01
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 787.97,
-      "impresiones": 8851,
-      "alcance": 6151,
-      "leads": 19,
-      "cpl": 41.47
+      "gasto": 922.77,
+      "impresiones": 10317,
+      "alcance": 7025,
+      "leads": 22,
+      "cpl": 41.94
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 11639.33,
-      "impresiones": 110594,
-      "alcance": 68472,
-      "leads": 265,
-      "cpl": 43.92
+      "gasto": 11986.09,
+      "impresiones": 113123,
+      "alcance": 69757,
+      "leads": 272,
+      "cpl": 44.07
     },
     {
       "id": "6917541255358",
@@ -148,27 +148,27 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 787.97,
-      "leads": 19,
-      "cpl": 41.47
+      "gasto": 922.77,
+      "leads": 22,
+      "cpl": 41.94
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 1864.93,
+      "gasto": 1944.14,
       "leads": 24,
-      "cpl": 77.71
+      "cpl": 81.01
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 11639.33,
-      "leads": 265,
-      "cpl": 43.92
+      "gasto": 11986.09,
+      "leads": 272,
+      "cpl": 44.07
     },
     {
       "nombre": "New Engagement Campaign",
@@ -309,11 +309,11 @@
     },
     "2026-06-19": {
       "leads": 7,
-      "gasto": 1120.4
+      "gasto": 1127.55
     },
     "2026-06-20": {
-      "leads": 0,
-      "gasto": 22.13
+      "leads": 10,
+      "gasto": 575.75
     }
   },
   "sucursales": {
@@ -1019,6 +1019,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "examen de colocaión presencial"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Zaida",
+      "tel": "5549414250",
+      "fecha_cita": "25-06-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
     }
   ]
 }
