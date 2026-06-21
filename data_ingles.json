@@ -1,11 +1,11 @@
 {
-  "actualizado": "20/06/2026 23:52",
+  "actualizado": "21/06/2026 11:32",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 360,
-    "gasto": 18439.55,
-    "cpl": 51.22,
+    "leads_meta": 362,
+    "gasto": 18909.04,
+    "cpl": 52.23,
     "citas": 12,
     "visitas": 1,
     "inscritos": 5
@@ -27,33 +27,33 @@
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "presupuesto_dia": 193.71,
-      "gasto": 2068.57,
-      "impresiones": 20256,
-      "alcance": 11967,
+      "gasto": 2125.8,
+      "impresiones": 20742,
+      "alcance": 12060,
       "leads": 26,
-      "cpl": 79.56
+      "cpl": 81.76
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 1037.87,
-      "impresiones": 11895,
-      "alcance": 7905,
-      "leads": 24,
-      "cpl": 43.24
+      "gasto": 1097.67,
+      "impresiones": 12921,
+      "alcance": 8376,
+      "leads": 25,
+      "cpl": 43.91
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 12427.67,
-      "impresiones": 117138,
-      "alcance": 72507,
-      "leads": 272,
-      "cpl": 45.69
+      "gasto": 12780.13,
+      "impresiones": 121175,
+      "alcance": 74669,
+      "leads": 273,
+      "cpl": 46.81
     },
     {
       "id": "6917541255358",
@@ -148,27 +148,27 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 1037.87,
-      "leads": 24,
-      "cpl": 43.24
+      "gasto": 1097.67,
+      "leads": 25,
+      "cpl": 43.91
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 2068.57,
+      "gasto": 2125.8,
       "leads": 26,
-      "cpl": 79.56
+      "cpl": 81.76
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 12427.67,
-      "leads": 272,
-      "cpl": 45.69
+      "gasto": 12780.13,
+      "leads": 273,
+      "cpl": 46.81
     },
     {
       "nombre": "New Engagement Campaign",
@@ -309,11 +309,15 @@
     },
     "2026-06-19": {
       "leads": 7,
-      "gasto": 1129.56
+      "gasto": 1130.68
     },
     "2026-06-20": {
-      "leads": 14,
-      "gasto": 1254.85
+      "leads": 16,
+      "gasto": 1641.15
+    },
+    "2026-06-21": {
+      "leads": 0,
+      "gasto": 82.07
     }
   },
   "sucursales": {
