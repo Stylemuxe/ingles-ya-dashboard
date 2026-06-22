@@ -1,16 +1,27 @@
 {
-  "actualizado": "22/06/2026 08:39",
+  "actualizado": "22/06/2026 18:37",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 372,
-    "gasto": 20114.31,
-    "cpl": 54.07,
+    "leads_meta": 373,
+    "gasto": 20354.8,
+    "cpl": 54.57,
     "citas": 12,
     "visitas": 1,
     "inscritos": 5
   },
   "campanas": [
+    {
+      "id": "6999397980958",
+      "nombre": "Leads Iztacalco Campaña",
+      "status": "ACTIVE",
+      "presupuesto_dia": 326.0,
+      "gasto": 63.62,
+      "impresiones": 574,
+      "alcance": 490,
+      "leads": 1,
+      "cpl": 63.62
+    },
     {
       "id": "6996804894758",
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -25,35 +36,35 @@
     {
       "id": "6978346009358",
       "nombre": "Ingles Ya IZTACALCO",
-      "status": "ACTIVE",
+      "status": "PAUSED",
       "presupuesto_dia": 193.71,
-      "gasto": 2373.06,
-      "impresiones": 23608,
+      "gasto": 2373.72,
+      "impresiones": 23628,
       "alcance": 13632,
       "leads": 27,
-      "cpl": 87.89
+      "cpl": 87.92
     },
     {
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 186.13,
-      "gasto": 1284.5,
-      "impresiones": 15788,
-      "alcance": 9599,
+      "gasto": 1329.88,
+      "impresiones": 16245,
+      "alcance": 9884,
       "leads": 26,
-      "cpl": 49.4
+      "cpl": 51.15
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 695.0,
-      "gasto": 13551.31,
-      "impresiones": 131653,
-      "alcance": 79923,
+      "gasto": 13682.14,
+      "impresiones": 132651,
+      "alcance": 80059,
       "leads": 281,
-      "cpl": 48.23
+      "cpl": 48.69
     },
     {
       "id": "6917541255358",
@@ -135,6 +146,15 @@
   ],
   "adsets": [
     {
+      "nombre": "Leads Iztacalco Campaña",
+      "status": "ACTIVE",
+      "campaign_id": "6999397980958",
+      "presupuesto_dia": 0.0,
+      "gasto": 63.62,
+      "leads": 1,
+      "cpl": 63.62
+    },
+    {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
       "status": "ACTIVE",
       "campaign_id": "6996804894758",
@@ -148,27 +168,27 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 1284.5,
+      "gasto": 1329.88,
       "leads": 26,
-      "cpl": 49.4
+      "cpl": 51.15
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
-      "gasto": 2373.08,
+      "gasto": 2373.72,
       "leads": 27,
-      "cpl": 87.89
+      "cpl": 87.92
     },
     {
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 13551.31,
+      "gasto": 13682.14,
       "leads": 281,
-      "cpl": 48.23
+      "cpl": 48.69
     },
     {
       "nombre": "New Engagement Campaign",
@@ -317,11 +337,11 @@
     },
     "2026-06-21": {
       "leads": 10,
-      "gasto": 1225.39
+      "gasto": 1226.44
     },
     "2026-06-22": {
-      "leads": 0,
-      "gasto": 56.6
+      "leads": 1,
+      "gasto": 297.15
     }
   },
   "sucursales": {
@@ -1042,6 +1062,24 @@
     }
   },
   "agenda": [
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Monica",
+      "tel": "5534330087",
+      "fecha_cita": "24-06-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica Olguín/Tanya Rangel (13 años)",
+      "tel": "5564165791",
+      "fecha_cita": "26-06-26 4:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra y Exame de colocación"
+    },
     {
       "sucursal": "ERMITA",
       "nombre": "Vanessa",
