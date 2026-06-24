@@ -1,12 +1,12 @@
 {
-  "actualizado": "24/06/2026 18:21",
+  "actualizado": "24/06/2026 23:52",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 402,
-    "gasto": 23395.32,
-    "cpl": 58.2,
-    "citas": 13,
+    "leads_meta": 406,
+    "gasto": 23820.33,
+    "cpl": 58.67,
+    "citas": 15,
     "visitas": 1,
     "inscritos": 5
   },
@@ -16,11 +16,11 @@
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
       "presupuesto_dia": 326.0,
-      "gasto": 899.5,
-      "impresiones": 10217,
-      "alcance": 6803,
+      "gasto": 992.58,
+      "impresiones": 11279,
+      "alcance": 7267,
       "leads": 4,
-      "cpl": 224.88
+      "cpl": 248.15
     },
     {
       "id": "6996804894758",
@@ -49,22 +49,22 @@
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 357.94,
-      "gasto": 1896.14,
-      "impresiones": 24875,
-      "alcance": 14174,
+      "gasto": 1996.98,
+      "impresiones": 26640,
+      "alcance": 14926,
       "leads": 39,
-      "cpl": 48.62
+      "cpl": 51.2
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 15319.87,
-      "impresiones": 150661,
-      "alcance": 88361,
-      "leads": 294,
-      "cpl": 52.11
+      "gasto": 15550.96,
+      "impresiones": 154641,
+      "alcance": 89773,
+      "leads": 298,
+      "cpl": 52.18
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
-      "gasto": 899.5,
+      "gasto": 993.41,
       "leads": 4,
-      "cpl": 224.88
+      "cpl": 248.35
     },
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -168,9 +168,9 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 1896.14,
+      "gasto": 1997.43,
       "leads": 39,
-      "cpl": 48.62
+      "cpl": 51.22
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
@@ -186,9 +186,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 15319.87,
-      "leads": 294,
-      "cpl": 52.11
+      "gasto": 15550.96,
+      "leads": 298,
+      "cpl": 52.18
     },
     {
       "nombre": "New Engagement Campaign",
@@ -341,38 +341,38 @@
     },
     "2026-06-22": {
       "leads": 14,
-      "gasto": 1439.66
+      "gasto": 1439.68
     },
     "2026-06-23": {
       "leads": 9,
-      "gasto": 1343.36
+      "gasto": 1343.96
     },
     "2026-06-24": {
-      "leads": 7,
-      "gasto": 551.75
+      "leads": 11,
+      "gasto": 976.14
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 119,
-      "llamadas": 77,
-      "no_contesta": 50,
-      "citas": 9,
+      "leads": 123,
+      "llamadas": 80,
+      "no_contesta": 51,
+      "citas": 10,
       "visitas": 1,
       "inscritos": 4
     },
     "IZTACALCO": {
-      "leads": 107,
-      "llamadas": 65,
+      "leads": 109,
+      "llamadas": 67,
       "no_contesta": 50,
-      "citas": 2,
+      "citas": 3,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 88,
-      "llamadas": 52,
-      "no_contesta": 46,
+      "leads": 92,
+      "llamadas": 54,
+      "no_contesta": 48,
       "citas": 2,
       "visitas": 0,
       "inscritos": 1
@@ -916,22 +916,22 @@
     },
     "2026-06-24": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 4,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -1087,6 +1087,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra y Exame de colocación"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica",
+      "tel": "5565247689",
+      "fecha_cita": "03-07-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muetra"
     },
     {
       "sucursal": "ERMITA",
