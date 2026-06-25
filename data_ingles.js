@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "25/06/2026 10:29",
+  "actualizado": "25/06/2026 19:20",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 406,
-    "gasto": 23989.82,
-    "cpl": 59.09,
+    "leads_meta": 410,
+    "gasto": 24401.25,
+    "cpl": 59.52,
     "citas": 15,
     "visitas": 1,
     "inscritos": 5
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
       "presupuesto_dia": 326.0,
-      "gasto": 1044.08,
-      "impresiones": 11951,
-      "alcance": 7526,
-      "leads": 4,
-      "cpl": 261.02
+      "gasto": 1173.5,
+      "impresiones": 13521,
+      "alcance": 8153,
+      "leads": 7,
+      "cpl": 167.64
     },
     {
       "id": "6996804894758",
@@ -49,22 +49,22 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 357.94,
-      "gasto": 2067.84,
-      "impresiones": 27964,
-      "alcance": 15525,
+      "gasto": 2221.43,
+      "impresiones": 30965,
+      "alcance": 16638,
       "leads": 39,
-      "cpl": 53.02
+      "cpl": 56.96
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 15598.09,
-      "impresiones": 155306,
-      "alcance": 89854,
-      "leads": 298,
-      "cpl": 52.34
+      "gasto": 15726.51,
+      "impresiones": 156635,
+      "alcance": 90046,
+      "leads": 299,
+      "cpl": 52.6
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
-      "gasto": 1044.08,
-      "leads": 4,
-      "cpl": 261.02
+      "gasto": 1175.2,
+      "leads": 7,
+      "cpl": 167.89
     },
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -168,9 +168,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 2067.84,
+      "gasto": 2222.14,
       "leads": 39,
-      "cpl": 53.02
+      "cpl": 56.98
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
@@ -186,9 +186,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 15598.09,
-      "leads": 298,
-      "cpl": 52.34
+      "gasto": 15726.51,
+      "leads": 299,
+      "cpl": 52.6
     },
     {
       "nombre": "New Engagement Campaign",
@@ -345,15 +345,15 @@ const DATA_INGLES = {
     },
     "2026-06-23": {
       "leads": 9,
-      "gasto": 1344.67
+      "gasto": 1344.73
     },
     "2026-06-24": {
       "leads": 11,
-      "gasto": 1137.74
+      "gasto": 1143.75
     },
     "2026-06-25": {
-      "leads": 0,
-      "gasto": 7.18
+      "leads": 4,
+      "gasto": 412.54
     }
   },
   "sucursales": {
@@ -1078,7 +1078,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Monica",
       "tel": "5534330087",
-      "fecha_cita": "24-06-26 3:30",
+      "fecha_cita": "03-07263:30:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
@@ -1102,6 +1102,24 @@ const DATA_INGLES = {
       "obs": "Clase muetra"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Melina",
+      "tel": "5537651092",
+      "fecha_cita": "27-06-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Yesica",
+      "tel": "5537335322",
+      "fecha_cita": "27-06-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Vanessa",
       "tel": "5575109275",
@@ -1115,6 +1133,15 @@ const DATA_INGLES = {
       "nombre": "Zaida",
       "tel": "5549414250",
       "fecha_cita": "25-06-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Charmant",
+      "tel": "4423676421",
+      "fecha_cita": "26-06-26 9:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
