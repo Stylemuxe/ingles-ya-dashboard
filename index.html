@@ -670,7 +670,48 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- REPORTE -->
 
 <div id="pane-reporte" class="pane">
-  <div id="reporte-body"></div>
+  <div id="reporte-body">
+
+    <!-- KPIs del mes -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px" id="rep-kpis"></div>
+
+    <!-- Campañas + Geo -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+      <div class="card">
+        <div class="card-head"><span class="card-title">Campañas Activas</span></div>
+        <table id="rep-campanas"></table>
+      </div>
+      <div class="card">
+        <div class="card-head"><span class="card-title">Configuración de Públicos</span><span class="card-sub">Geo + Exclusiones</span></div>
+        <table id="rep-geo"></table>
+      </div>
+    </div>
+
+    <!-- Embudo + Agenda -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+      <div class="card">
+        <div class="card-head"><span class="card-title">Embudo del Mes</span></div>
+        <table id="rep-embudo"></table>
+      </div>
+      <div class="card">
+        <div class="card-head"><span class="card-title">Agenda por Sucursal</span></div>
+        <table id="rep-agenda"></table>
+      </div>
+    </div>
+
+    <!-- Foráneos -->
+    <div class="card" style="margin-bottom:14px">
+      <div class="card-head"><span class="card-title">Foráneos Excluidos</span><span class="card-sub">Custom Audience activo en Meta</span></div>
+      <table id="rep-foraneos"></table>
+    </div>
+
+    <!-- Pendientes -->
+    <div class="card">
+      <div class="card-head"><span class="card-title">Pendientes</span></div>
+      <div id="rep-pendientes" style="padding:18px;display:flex;flex-direction:column;gap:10px"></div>
+    </div>
+
+  </div>
 </div>
 
 <!-- DIARIO -->
@@ -1543,19 +1584,29 @@ function leadsXSede() {
 
   for (const c of camps) {
     const n = c.nombre.toUpperCase();
-    if (n.includes('ERMITA')) {
+    if (n.includes('ERMITA') && !n.includes('CONSOLID')) {
       result.ERMITA += c.leads;
+    } else if (n.includes('LINDAVISTA') && !n.includes('CONSOLID')) {
+      result.LINDAVISTA += c.leads;
+    } else if (n.includes('IZTACALCO') && !n.includes('CONSOLID')) {
+      result.IZTACALCO += c.leads;
     } else {
-      // Campaña combinada LIND+IZT: repartir proporcional a la meta
+      // Campaña consolidada (3 planteles): repartir proporcional a las 3 metas
+      const mE = metas.ERMITA     || 0;
       const mL = metas.LINDAVISTA || 0;
       const mI = metas.IZTACALCO  || 0;
-      const tot = mL + mI;
+      const tot = mE + mL + mI;
       if (tot > 0) {
-        result.LINDAVISTA += Math.round(c.leads * mL / tot);
-        result.IZTACALCO  += c.leads - Math.round(c.leads * mL / tot);
+        const lE = Math.round(c.leads * mE / tot);
+        const lL = Math.round(c.leads * mL / tot);
+        result.ERMITA     += lE;
+        result.LINDAVISTA += lL;
+        result.IZTACALCO  += c.leads - lE - lL;
       } else {
-        result.LINDAVISTA += Math.round(c.leads / 2);
-        result.IZTACALCO  += c.leads - Math.round(c.leads / 2);
+        const each = Math.floor(c.leads / 3);
+        result.ERMITA     += each;
+        result.LINDAVISTA += each;
+        result.IZTACALCO  += c.leads - each * 2;
       }
     }
   }
@@ -1734,17 +1785,22 @@ function renderSucMini() {
 }
 
 function renderCampMini() {
-  const active=(D.campanas||[]).filter(c=>c.status==='ACTIVE');
-  const rows=active.map(c=>`<tr>
-    <td style="max-width:230px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
-    <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
-    <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(c.presupuesto_dia)}/día</span>`:'—'}</td>
-  </tr>`).join('');
+  const active = (D.campanas||[]).filter(c => c.status === 'ACTIVE');
+  const totLeads  = active.reduce((a,c) => a + c.leads,          0);
+  const totGasto  = active.reduce((a,c) => a + c.gasto,          0);
+  const totBudget = active.reduce((a,c) => a + c.presupuesto_dia, 0);
+  const totCPL    = totLeads > 0 ? totGasto / totLeads : 0;
+  const row = active.length ? `<tr>
+    <td style="max-width:230px"><span style="display:block;font-weight:600">Leads de Meta</span>
+      <span style="font-size:10px;color:var(--muted)">${active.length} campaña${active.length>1?'s':''} activa${active.length>1?'s':''}</span></td>
+    <td class="num" style="color:#00f0ff">${$n(totLeads)}</td>
+    <td class="num" style="color:#E02020">${$m(totGasto)}</td>
+    <td class="num" style="color:${cplColor(totCPL)}">${totLeads>0?$m(totCPL):'—'}</td>
+    <td>${totBudget>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(totBudget)}/día</span>`:'—'}</td>
+  </tr>` : '<tr><td colspan="5" class="empty">Sin campañas activas</td></tr>';
   document.getElementById('tbl-camp-mini').innerHTML=
     `<thead><tr><th>Campaña</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="5" class="empty">Sin campañas activas</td></tr>'}</tbody>`;
+     <tbody>${row}</tbody>`;
 }
 
 function renderSucCards() {
