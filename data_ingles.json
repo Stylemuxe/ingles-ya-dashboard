@@ -1,11 +1,11 @@
 {
-  "actualizado": "26/06/2026 12:26",
+  "actualizado": "26/06/2026 21:08",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 416,
-    "gasto": 24947.25,
-    "cpl": 59.97,
+    "leads_meta": 423,
+    "gasto": 25474.41,
+    "cpl": 60.22,
     "citas": 16,
     "visitas": 1,
     "inscritos": 5
@@ -16,11 +16,11 @@
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
       "presupuesto_dia": 326.0,
-      "gasto": 1302.99,
-      "impresiones": 14967,
-      "alcance": 8807,
+      "gasto": 1456.35,
+      "impresiones": 16293,
+      "alcance": 9437,
       "leads": 8,
-      "cpl": 162.87
+      "cpl": 182.04
     },
     {
       "id": "6996804894758",
@@ -49,22 +49,22 @@
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 357.94,
-      "gasto": 2419.73,
-      "impresiones": 35576,
-      "alcance": 18576,
-      "leads": 41,
-      "cpl": 59.02
+      "gasto": 2631.0,
+      "impresiones": 39105,
+      "alcance": 20220,
+      "leads": 45,
+      "cpl": 58.47
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 15944.72,
-      "impresiones": 158625,
-      "alcance": 90977,
-      "leads": 302,
-      "cpl": 52.8
+      "gasto": 16107.25,
+      "impresiones": 160537,
+      "alcance": 91719,
+      "leads": 305,
+      "cpl": 52.81
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
-      "gasto": 1302.99,
+      "gasto": 1456.35,
       "leads": 8,
-      "cpl": 162.87
+      "cpl": 182.04
     },
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -168,9 +168,9 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 2419.73,
-      "leads": 41,
-      "cpl": 59.02
+      "gasto": 2631.0,
+      "leads": 45,
+      "cpl": 58.47
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
@@ -186,9 +186,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 15944.72,
-      "leads": 302,
-      "cpl": 52.8
+      "gasto": 16107.25,
+      "leads": 305,
+      "cpl": 52.81
     },
     {
       "nombre": "New Engagement Campaign",
@@ -353,11 +353,11 @@
     },
     "2026-06-25": {
       "leads": 9,
-      "gasto": 891.01
+      "gasto": 897.4
     },
     "2026-06-26": {
-      "leads": 1,
-      "gasto": 66.55
+      "leads": 8,
+      "gasto": 587.32
     }
   },
   "sucursales": {
@@ -1136,7 +1136,7 @@
       "sucursal": "ERMITA",
       "nombre": "Zaida",
       "tel": "5549414250",
-      "fecha_cita": "25-06-26",
+      "fecha_cita": "25-06-26 5:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
