@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "25/06/2026 19:20",
+  "actualizado": "26/06/2026 00:21",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 410,
-    "gasto": 24401.25,
-    "cpl": 59.52,
-    "citas": 15,
+    "leads_meta": 412,
+    "gasto": 24673.85,
+    "cpl": 59.89,
+    "citas": 16,
     "visitas": 1,
     "inscritos": 5
   },
@@ -16,11 +16,11 @@ const DATA_INGLES = {
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
       "presupuesto_dia": 326.0,
-      "gasto": 1173.5,
-      "impresiones": 13521,
-      "alcance": 8153,
+      "gasto": 1245.44,
+      "impresiones": 14341,
+      "alcance": 8538,
       "leads": 7,
-      "cpl": 167.64
+      "cpl": 177.92
     },
     {
       "id": "6996804894758",
@@ -49,22 +49,22 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
       "presupuesto_dia": 357.94,
-      "gasto": 2221.43,
-      "impresiones": 30965,
-      "alcance": 16638,
-      "leads": 39,
-      "cpl": 56.96
+      "gasto": 2315.63,
+      "impresiones": 33028,
+      "alcance": 17478,
+      "leads": 40,
+      "cpl": 57.89
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Ya ERMITA",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 15726.51,
-      "impresiones": 156635,
-      "alcance": 90046,
-      "leads": 299,
-      "cpl": 52.6
+      "gasto": 15832.97,
+      "impresiones": 157517,
+      "alcance": 90498,
+      "leads": 300,
+      "cpl": 52.78
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
-      "gasto": 1175.2,
+      "gasto": 1245.44,
       "leads": 7,
-      "cpl": 167.89
+      "cpl": 177.92
     },
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -168,9 +168,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 2222.14,
-      "leads": 39,
-      "cpl": 56.98
+      "gasto": 2315.63,
+      "leads": 40,
+      "cpl": 57.89
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
@@ -186,9 +186,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 15726.51,
-      "leads": 299,
-      "cpl": 52.6
+      "gasto": 15832.97,
+      "leads": 300,
+      "cpl": 52.78
     },
     {
       "nombre": "New Engagement Campaign",
@@ -345,39 +345,39 @@ const DATA_INGLES = {
     },
     "2026-06-23": {
       "leads": 9,
-      "gasto": 1344.73
+      "gasto": 1344.77
     },
     "2026-06-24": {
       "leads": 11,
-      "gasto": 1143.75
+      "gasto": 1144.18
     },
     "2026-06-25": {
-      "leads": 4,
-      "gasto": 412.54
+      "leads": 6,
+      "gasto": 684.67
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 123,
-      "llamadas": 80,
+      "leads": 125,
+      "llamadas": 82,
       "no_contesta": 51,
       "citas": 10,
       "visitas": 1,
       "inscritos": 4
     },
     "IZTACALCO": {
-      "leads": 109,
-      "llamadas": 67,
-      "no_contesta": 50,
+      "leads": 111,
+      "llamadas": 68,
+      "no_contesta": 51,
       "citas": 3,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 92,
-      "llamadas": 54,
+      "leads": 93,
+      "llamadas": 55,
       "no_contesta": 48,
-      "citas": 2,
+      "citas": 3,
       "visitas": 0,
       "inscritos": 1
     }
@@ -936,29 +936,29 @@ const DATA_INGLES = {
       "ERMITA": {
         "leads": 4,
         "llamadas": 2,
-        "citas": 0,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
     },
     "2026-06-25": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 1,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
