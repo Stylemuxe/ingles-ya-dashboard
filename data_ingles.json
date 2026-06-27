@@ -1,11 +1,11 @@
 {
-  "actualizado": "26/06/2026 16:52",
+  "actualizado": "27/06/2026 09:18",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 424,
-    "gasto": 25560.58,
-    "cpl": 60.28,
+    "leads_meta": 428,
+    "gasto": 25826.43,
+    "cpl": 60.34,
     "citas": 16,
     "visitas": 1,
     "inscritos": 5
@@ -16,11 +16,11 @@
       "nombre": "Leads Iztacalco Campaña",
       "status": "PAUSED",
       "presupuesto_dia": 326.0,
-      "gasto": 1477.51,
-      "impresiones": 16515,
-      "alcance": 9544,
+      "gasto": 1491.91,
+      "impresiones": 16664,
+      "alcance": 9613,
       "leads": 9,
-      "cpl": 164.17
+      "cpl": 165.77
     },
     {
       "id": "6996804894758",
@@ -49,22 +49,22 @@
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "PAUSED",
       "presupuesto_dia": 357.94,
-      "gasto": 2657.98,
-      "impresiones": 39663,
-      "alcance": 20379,
+      "gasto": 2676.53,
+      "impresiones": 40046,
+      "alcance": 20412,
       "leads": 45,
-      "cpl": 59.07
+      "cpl": 59.48
     },
     {
       "id": "6922243400958",
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 16145.28,
-      "impresiones": 160967,
-      "alcance": 91785,
-      "leads": 305,
-      "cpl": 52.94
+      "gasto": 16378.18,
+      "impresiones": 163405,
+      "alcance": 93264,
+      "leads": 309,
+      "cpl": 53.0
     },
     {
       "id": "6917541255358",
@@ -150,18 +150,18 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 7.51,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 221.03,
+      "leads": 4,
+      "cpl": 55.26
     },
     {
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
-      "gasto": 1477.51,
+      "gasto": 1491.91,
       "leads": 9,
-      "cpl": 164.17
+      "cpl": 165.77
     },
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
@@ -177,9 +177,9 @@
       "status": "ACTIVE",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
-      "gasto": 2657.98,
+      "gasto": 2676.53,
       "leads": 45,
-      "cpl": 59.07
+      "cpl": 59.48
     },
     {
       "nombre": "Ingles Ya IZTACALCO",
@@ -195,9 +195,9 @@
       "status": "PAUSED",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 16137.77,
+      "gasto": 16157.15,
       "leads": 305,
-      "cpl": 52.91
+      "cpl": 52.97
     },
     {
       "nombre": "New Engagement Campaign",
@@ -362,11 +362,15 @@
     },
     "2026-06-25": {
       "leads": 9,
-      "gasto": 897.51
+      "gasto": 898.24
     },
     "2026-06-26": {
-      "leads": 9,
-      "gasto": 673.38
+      "leads": 12,
+      "gasto": 910.69
+    },
+    "2026-06-27": {
+      "leads": 1,
+      "gasto": 27.81
     }
   },
   "sucursales": {
@@ -1087,6 +1091,33 @@
     }
   },
   "agenda": [
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Monica",
+      "tel": "5534330087",
+      "fecha_cita": "03-07263:30:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica Olguín/Tanya Rangel (13 años)",
+      "tel": "5564165791",
+      "fecha_cita": "26-06-26 4:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra y Exame de colocación"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica",
+      "tel": "5565247689",
+      "fecha_cita": "03-07-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muetra"
+    },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Melina",
