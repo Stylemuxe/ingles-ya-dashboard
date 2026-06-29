@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -1895,21 +1895,24 @@ function renderSucursales() {
 }
 
 function renderCampanas() {
-  const rows=(D.campanas||[]).map(c=>`<tr>
+  const activas  = (D.campanas||[]).filter(c => c.status === 'ACTIVE');
+  const pausadas = (D.campanas||[]).filter(c => c.status !== 'ACTIVE' && c.leads > 0);
+  const fila = c => `<tr>
     <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
-    <td>${c.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'—'}</td>
+    <td>${c.status==='ACTIVE'?'<span class="badge ba">&#9679; ACTIVA</span>':'<span class="badge bp">&#9208; PAUSADA</span>'}</td>
+    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'&mdash;'}</td>
     <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
     <td class="num">${$n(c.impresiones)}</td>
     <td class="num">${$n(c.alcance)}</td>
-    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'—'}</td>
-  </tr>`).join('');
+    <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'&mdash;'}</td>
+  </tr>`;
+  const sepPausadas = pausadas.length ? `<tr><td colspan="8" style="padding:6px 10px;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.6px;background:rgba(255,255,255,.03)">&#9866; PAUSADAS &mdash; acumulado del mes</td></tr>` : '';
+  const rows = activas.map(fila).join('') + sepPausadas + pausadas.map(fila).join('');
   document.getElementById('tbl-campanas').innerHTML=
-    `<thead><tr><th>Campaña</th><th>Status</th><th>Budget/Día</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
-     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos — corre actualizar_ingles.py</td></tr>'}</tbody>`;
+    `<thead><tr><th>Campa&ntilde;a</th><th>Status</th><th>Budget/D&iacute;a</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
+     <tbody>${rows||'<tr><td colspan="8" class="empty">Sin datos &mdash; corre actualizar_ingles.py</td></tr>'}</tbody>`;
 }
-
 function renderAdsets() {
   const rows=[...(D.adsets||[])].sort((a,b)=>b.leads-a.leads).map(a=>`<tr>
     <td style="font-weight:600">${a.nombre}</td>
