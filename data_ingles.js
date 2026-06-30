@@ -1,14 +1,14 @@
 const DATA_INGLES = {
-  "actualizado": "29/06/2026 21:16",
+  "actualizado": "30/06/2026 02:14",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 456,
-    "gasto": 26652.16,
-    "cpl": 58.45,
+    "leads_meta": 459,
+    "gasto": 26768.96,
+    "cpl": 58.32,
     "citas": 18,
-    "visitas": 1,
-    "inscritos": 6
+    "visitas": 2,
+    "inscritos": 8
   },
   "campanas": [
     {
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 17202.11,
-      "impresiones": 171946,
-      "alcance": 97104,
-      "leads": 337,
-      "cpl": 51.04
+      "gasto": 17318.91,
+      "impresiones": 173271,
+      "alcance": 98153,
+      "leads": 340,
+      "cpl": 50.94
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1044.29,
-      "leads": 32,
-      "cpl": 32.63
+      "gasto": 1161.09,
+      "leads": 35,
+      "cpl": 33.17
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -377,31 +377,31 @@ const DATA_INGLES = {
       "gasto": 332.24
     },
     "2026-06-29": {
-      "leads": 6,
-      "gasto": 181.85
+      "leads": 9,
+      "gasto": 298.65
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 133,
-      "llamadas": 88,
-      "no_contesta": 53,
+      "leads": 140,
+      "llamadas": 94,
+      "no_contesta": 54,
       "citas": 12,
       "visitas": 1,
       "inscritos": 4
     },
     "IZTACALCO": {
-      "leads": 117,
-      "llamadas": 71,
-      "no_contesta": 54,
+      "leads": 121,
+      "llamadas": 73,
+      "no_contesta": 56,
       "citas": 3,
-      "visitas": 0,
-      "inscritos": 1
+      "visitas": 1,
+      "inscritos": 3
     },
     "ERMITA": {
-      "leads": 99,
-      "llamadas": 58,
-      "no_contesta": 51,
+      "leads": 103,
+      "llamadas": 59,
+      "no_contesta": 54,
       "citas": 3,
       "visitas": 0,
       "inscritos": 1
@@ -1002,7 +1002,7 @@ const DATA_INGLES = {
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 1
+        "inscritos": 3
       },
       "ERMITA": {
         "leads": 3,
@@ -1037,22 +1037,22 @@ const DATA_INGLES = {
     },
     "2026-06-28": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 4,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
-        "visitas": 0,
+        "visitas": 1,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -1060,21 +1060,21 @@ const DATA_INGLES = {
     },
     "2026-06-29": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 1,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
+        "leads": 1,
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
