@@ -1,12 +1,12 @@
 {
-  "actualizado": "30/06/2026 17:46",
+  "actualizado": "30/06/2026 21:22",
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 466,
-    "gasto": 27077.63,
-    "cpl": 58.11,
-    "citas": 18,
+    "leads_meta": 469,
+    "gasto": 27163.15,
+    "cpl": 57.92,
+    "citas": 20,
     "visitas": 2,
     "inscritos": 8
   },
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 17627.58,
-      "impresiones": 178137,
-      "alcance": 100670,
-      "leads": 347,
-      "cpl": 50.8
+      "gasto": 17713.1,
+      "impresiones": 179615,
+      "alcance": 101548,
+      "leads": 350,
+      "cpl": 50.61
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1469.76,
-      "leads": 42,
-      "cpl": 34.99
+      "gasto": 1555.28,
+      "leads": 45,
+      "cpl": 34.56
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -378,11 +378,11 @@
     },
     "2026-06-29": {
       "leads": 10,
-      "gasto": 385.89
+      "gasto": 386.22
     },
     "2026-06-30": {
-      "leads": 6,
-      "gasto": 218.58
+      "leads": 9,
+      "gasto": 303.77
     }
   },
   "sucursales": {
@@ -395,17 +395,17 @@
       "inscritos": 4
     },
     "IZTACALCO": {
-      "leads": 121,
-      "llamadas": 73,
-      "no_contesta": 56,
-      "citas": 3,
+      "leads": 124,
+      "llamadas": 74,
+      "no_contesta": 58,
+      "citas": 5,
       "visitas": 1,
       "inscritos": 3
     },
     "ERMITA": {
-      "leads": 103,
+      "leads": 106,
       "llamadas": 59,
-      "no_contesta": 54,
+      "no_contesta": 57,
       "citas": 3,
       "visitas": 0,
       "inscritos": 1
@@ -1073,7 +1073,7 @@
       "IZTACALCO": {
         "leads": 1,
         "llamadas": 1,
-        "citas": 0,
+        "citas": 2,
         "visitas": 0,
         "inscritos": 0
       },
@@ -1087,14 +1087,14 @@
     },
     "2026-06-30": {
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
+        "leads": 3,
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
@@ -1158,6 +1158,24 @@
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Karla y Ricardo",
+      "tel": "5554544895",
+      "fecha_cita": "01-07-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra en línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "dio nombre",
+      "tel": "5535005446",
+      "fecha_cita": "01-07-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra en línea"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Vanessa",
       "tel": "5575109275",
@@ -1171,7 +1189,7 @@
       "nombre": "Zaida",
       "tel": "5549414250",
       "fecha_cita": "25-06-26 5:00",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra"
     },
