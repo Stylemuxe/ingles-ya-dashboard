@@ -1,11 +1,11 @@
 {
-  "actualizado": "01/07/2026 17:46",
+  "actualizado": "01/07/2026 21:17",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 8,
-    "gasto": 202.73,
-    "cpl": 25.34,
+    "leads_meta": 9,
+    "gasto": 249.26,
+    "cpl": 27.7,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 202.73,
-      "impresiones": 3938,
-      "alcance": 3530,
-      "leads": 8,
-      "cpl": 25.34
+      "gasto": 249.26,
+      "impresiones": 5089,
+      "alcance": 4476,
+      "leads": 9,
+      "cpl": 27.7
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 203.08,
-      "leads": 8,
-      "cpl": 25.39
+      "gasto": 249.26,
+      "leads": 9,
+      "cpl": 27.7
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -265,8 +265,8 @@
   ],
   "diario_meta": {
     "2026-07-01": {
-      "leads": 8,
-      "gasto": 203.08
+      "leads": 9,
+      "gasto": 249.26
     }
   },
   "sucursales": {
@@ -302,5 +302,24 @@
   },
   "meta_inscritos_mkt": 45,
   "diario_suc": {},
-  "agenda": []
+  "agenda": [
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Juan",
+      "tel": "5545030189",
+      "fecha_cita": "04-07-26 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Janeth Romero",
+      "tel": "5543186541",
+      "fecha_cita": "02-07-26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra y examen de colocación"
+    }
+  ]
 }
