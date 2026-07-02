@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "02/07/2026 13:28",
+  "actualizado": "02/07/2026 17:26",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 14,
-    "gasto": 451.8,
-    "cpl": 32.27,
+    "leads_meta": 19,
+    "gasto": 557.66,
+    "cpl": 29.35,
     "citas": 2,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 451.8,
-      "impresiones": 9846,
-      "alcance": 8131,
-      "leads": 14,
-      "cpl": 32.27
+      "gasto": 557.66,
+      "impresiones": 11832,
+      "alcance": 9549,
+      "leads": 19,
+      "cpl": 29.35
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 451.8,
-      "leads": 14,
-      "cpl": 32.27
+      "gasto": 557.66,
+      "leads": 19,
+      "cpl": 29.35
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -266,11 +266,11 @@ const DATA_INGLES = {
   "diario_meta": {
     "2026-07-01": {
       "leads": 13,
-      "gasto": 418.65
+      "gasto": 419.9
     },
     "2026-07-02": {
-      "leads": 1,
-      "gasto": 33.15
+      "leads": 6,
+      "gasto": 137.76
     }
   },
   "sucursales": {
@@ -344,10 +344,19 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Janeth Romero",
       "tel": "5543186541",
-      "fecha_cita": "02-07-26",
+      "fecha_cita": "02-07-26 3:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra y examen de colocación"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Alejandra lopez hernandez",
+      "tel": "5522160410",
+      "fecha_cita": "04-07-26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
     }
   ]
 };
