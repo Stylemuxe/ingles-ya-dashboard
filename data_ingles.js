@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "01/07/2026 21:17",
+  "actualizado": "02/07/2026 02:11",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 9,
-    "gasto": 249.26,
-    "cpl": 27.7,
-    "citas": 0,
+    "leads_meta": 11,
+    "gasto": 339.69,
+    "cpl": 30.88,
+    "citas": 2,
     "visitas": 0,
     "inscritos": 0
   },
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 249.26,
-      "impresiones": 5089,
-      "alcance": 4476,
-      "leads": 9,
-      "cpl": 27.7
+      "gasto": 339.69,
+      "impresiones": 7434,
+      "alcance": 6404,
+      "leads": 11,
+      "cpl": 30.88
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 249.26,
-      "leads": 9,
-      "cpl": 27.7
+      "gasto": 339.69,
+      "leads": 11,
+      "cpl": 30.88
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -265,31 +265,31 @@ const DATA_INGLES = {
   ],
   "diario_meta": {
     "2026-07-01": {
-      "leads": 9,
-      "gasto": 249.26
+      "leads": 11,
+      "gasto": 339.69
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 0,
-      "llamadas": 0,
-      "no_contesta": 0,
-      "citas": 0,
+      "leads": 3,
+      "llamadas": 2,
+      "no_contesta": 1,
+      "citas": 1,
       "visitas": 0,
       "inscritos": 0
     },
     "IZTACALCO": {
-      "leads": 0,
-      "llamadas": 0,
-      "no_contesta": 0,
-      "citas": 0,
+      "leads": 3,
+      "llamadas": 1,
+      "no_contesta": 2,
+      "citas": 1,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 0,
+      "leads": 2,
       "llamadas": 0,
-      "no_contesta": 0,
+      "no_contesta": 2,
       "citas": 0,
       "visitas": 0,
       "inscritos": 0
@@ -301,7 +301,31 @@ const DATA_INGLES = {
     "ERMITA": 106
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {},
+  "diario_suc": {
+    "2026-07-01": {
+      "LINDAVISTA": {
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 3,
+        "llamadas": 1,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 2,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    }
+  },
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
