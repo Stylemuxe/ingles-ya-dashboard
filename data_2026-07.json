@@ -1,11 +1,11 @@
 {
-  "actualizado": "03/07/2026 13:41",
+  "actualizado": "03/07/2026 17:12",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 26,
-    "gasto": 836.56,
-    "cpl": 32.18,
+    "leads_meta": 28,
+    "gasto": 933.08,
+    "cpl": 33.32,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 836.56,
-      "impresiones": 17272,
-      "alcance": 12884,
-      "leads": 26,
-      "cpl": 32.18
+      "gasto": 933.08,
+      "impresiones": 19074,
+      "alcance": 13894,
+      "leads": 28,
+      "cpl": 33.32
     },
     {
       "id": "6917541255358",
@@ -146,13 +146,13 @@
   ],
   "adsets": [
     {
-      "nombre": "Ingles Consolidada final v2",
+      "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 836.56,
-      "leads": 26,
-      "cpl": 32.18
+      "gasto": 933.08,
+      "leads": 28,
+      "cpl": 33.32
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -270,11 +270,11 @@
     },
     "2026-07-02": {
       "leads": 12,
-      "gasto": 396.68
+      "gasto": 397.47
     },
     "2026-07-03": {
-      "leads": 1,
-      "gasto": 17.7
+      "leads": 3,
+      "gasto": 113.43
     }
   },
   "sucursales": {
@@ -352,6 +352,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Artemisa",
+      "tel": "5517853179",
+      "fecha_cita": "04-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra presencial"
     },
     {
       "sucursal": "ERMITA",
