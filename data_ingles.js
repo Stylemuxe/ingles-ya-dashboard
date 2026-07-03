@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "02/07/2026 20:53",
+  "actualizado": "03/07/2026 01:55",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 20,
-    "gasto": 640.1,
-    "cpl": 32.01,
-    "citas": 2,
+    "leads_meta": 22,
+    "gasto": 716.84,
+    "cpl": 32.58,
+    "citas": 0,
     "visitas": 0,
     "inscritos": 0
   },
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 640.1,
-      "impresiones": 13262,
-      "alcance": 10450,
-      "leads": 20,
-      "cpl": 32.01
+      "gasto": 716.84,
+      "impresiones": 14640,
+      "alcance": 11424,
+      "leads": 22,
+      "cpl": 32.58
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 640.1,
-      "leads": 20,
-      "cpl": 32.01
+      "gasto": 716.84,
+      "leads": 22,
+      "cpl": 32.58
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -266,27 +266,27 @@ const DATA_INGLES = {
   "diario_meta": {
     "2026-07-01": {
       "leads": 13,
-      "gasto": 420.61
+      "gasto": 422.1
     },
     "2026-07-02": {
-      "leads": 7,
-      "gasto": 219.49
+      "leads": 9,
+      "gasto": 294.74
     }
   },
   "sucursales": {
     "LINDAVISTA": {
       "leads": 3,
-      "llamadas": 2,
-      "no_contesta": 1,
-      "citas": 1,
+      "llamadas": 0,
+      "no_contesta": 3,
+      "citas": 0,
       "visitas": 0,
       "inscritos": 0
     },
     "IZTACALCO": {
-      "leads": 3,
-      "llamadas": 1,
+      "leads": 2,
+      "llamadas": 0,
       "no_contesta": 2,
-      "citas": 1,
+      "citas": 0,
       "visitas": 0,
       "inscritos": 0
     },
@@ -306,18 +306,18 @@ const DATA_INGLES = {
   },
   "meta_inscritos_mkt": 45,
   "diario_suc": {
-    "2026-07-01": {
+    "2026-07-02": {
       "LINDAVISTA": {
         "leads": 3,
-        "llamadas": 2,
-        "citas": 1,
+        "llamadas": 0,
+        "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 1,
+        "leads": 2,
+        "llamadas": 0,
+        "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
@@ -339,6 +339,15 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Beatriz mesisas",
+      "tel": "5523269915",
+      "fecha_cita": "09-07-26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita al plantel"
     },
     {
       "sucursal": "ERMITA",
