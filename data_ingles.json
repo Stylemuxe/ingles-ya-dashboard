@@ -1,11 +1,11 @@
 {
-  "actualizado": "03/07/2026 20:52",
+  "actualizado": "04/07/2026 01:54",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 32,
-    "gasto": 1017.43,
-    "cpl": 31.79,
+    "leads_meta": 33,
+    "gasto": 1114.14,
+    "cpl": 33.76,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 1017.43,
-      "impresiones": 20354,
-      "alcance": 14710,
-      "leads": 32,
-      "cpl": 31.79
+      "gasto": 1114.14,
+      "impresiones": 21967,
+      "alcance": 15528,
+      "leads": 33,
+      "cpl": 33.76
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1017.43,
-      "leads": 32,
-      "cpl": 31.79
+      "gasto": 1114.14,
+      "leads": 33,
+      "cpl": 33.76
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -270,11 +270,11 @@
     },
     "2026-07-02": {
       "leads": 12,
-      "gasto": 397.77
+      "gasto": 397.91
     },
     "2026-07-03": {
-      "leads": 7,
-      "gasto": 197.48
+      "leads": 8,
+      "gasto": 294.05
     }
   },
   "sucursales": {
@@ -372,6 +372,15 @@
       "obs": "Clase mustra y examen de colocación"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Jorge ulloa",
+      "tel": "5532457006",
+      "fecha_cita": "09-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra presencial"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Janeth Romero",
       "tel": "5543186541",
@@ -397,6 +406,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra tiene conocimiento"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Ramon Alvarez",
+      "tel": "5591973025",
+      "fecha_cita": "06-07-26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra  60 años"
     }
   ]
 }
