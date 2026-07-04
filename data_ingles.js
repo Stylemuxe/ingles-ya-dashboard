@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "04/07/2026 16:52",
+  "actualizado": "04/07/2026 20:42",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 38,
-    "gasto": 1301.98,
-    "cpl": 34.26,
+    "leads_meta": 39,
+    "gasto": 1364.04,
+    "cpl": 34.98,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 1301.98,
-      "impresiones": 24676,
-      "alcance": 16742,
-      "leads": 38,
-      "cpl": 34.26
+      "gasto": 1364.04,
+      "impresiones": 25641,
+      "alcance": 17374,
+      "leads": 39,
+      "cpl": 34.98
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1301.98,
-      "leads": 38,
-      "cpl": 34.26
+      "gasto": 1364.04,
+      "leads": 39,
+      "cpl": 34.98
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -274,11 +274,11 @@ const DATA_INGLES = {
     },
     "2026-07-03": {
       "leads": 9,
-      "gasto": 351.87
+      "gasto": 351.94
     },
     "2026-07-04": {
-      "leads": 4,
-      "gasto": 129.51
+      "leads": 5,
+      "gasto": 191.5
     }
   },
   "sucursales": {
@@ -419,6 +419,33 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra  60 años"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Lizbeth reyes",
+      "tel": "5520903008",
+      "fecha_cita": "04-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "aljandra lopez",
+      "tel": "5522160410",
+      "fecha_cita": "04-07-26 2:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "ramon alvarez",
+      "tel": "5591973025",
+      "fecha_cita": "06-07-26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "examen"
     }
   ]
 };
