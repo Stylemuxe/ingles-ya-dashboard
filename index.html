@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inglés YA · Dashboard</title>
-<link href="https://fonts.cdnfonts.com/css/gilroy-free" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -824,6 +823,9 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
           <option value="Pendiente">Pendientes</option>
           <option value="Atendida">Atendidas</option>
         </select>
+        <select class="filter" id="inc-f-mes" onchange="incRender()">
+          <option value="">Todos los meses</option>
+        </select>
         <span class="filter" style="cursor:pointer" onclick="incCargar()">↻</span>
         <span class="filter" style="cursor:pointer" onclick="incExportar()">⬇ Excel</span>
       </span>
@@ -1010,6 +1012,26 @@ function incFmtFecha(f){
   return d.toLocaleString('es-MX',{day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
 }
 
+const INC_MESES_NOM = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+function incMesOf(f){
+  if(!f) return '';
+  const d = new Date(f);
+  if(isNaN(d)) return '';
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');
+}
+
+// Llena el select de meses con los meses presentes en los datos, más reciente primero
+function incBuildMeses(){
+  const sel = document.getElementById('inc-f-mes');
+  const prev = sel.value;
+  const metidos = [...new Set(INC_DATA.map(i=>incMesOf(i.fecha)).filter(Boolean))].sort().reverse();
+  sel.innerHTML = '<option value="">Todos los meses</option>' + metidos.map(m=>{
+    const [y,mm] = m.split('-');
+    return `<option value="${m}">${INC_MESES_NOM[+mm-1]} ${y}</option>`;
+  }).join('');
+  sel.value = metidos.includes(prev) ? prev : '';
+}
+
 // Construye los botones grandes (pills) la primera vez
 function incBuildPills(){
   if(incBuilt) return;
@@ -1121,6 +1143,7 @@ async function incCargar(){
     if(tabla) tabla.innerHTML='<tr><td style="color:var(--pink);padding:14px">No se pudieron cargar las incidencias</td></tr>';
     return;
   }
+  incBuildMeses();
   incRender();
 }
 
@@ -1128,12 +1151,13 @@ function incRender(){
   const fP = document.getElementById('inc-f-plantel').value;
   const fT = document.getElementById('inc-f-tipo').value;
   const fE = document.getElementById('inc-f-estado').value;
+  const fM = document.getElementById('inc-f-mes').value;
   const q  = (document.getElementById('inc-buscar').value||'').toLowerCase().trim();
 
-  const base = INC_DATA.filter(i => !fP || i.plantel===fP);
+  const base = INC_DATA.filter(i => (!fP || i.plantel===fP) && (!fM || incMesOf(i.fecha)===fM));
   const rows = INC_DATA.filter(i =>
       (!fP || i.plantel===fP) && (!fT || i.tipo===fT) &&
-      (!fE || (i.estado||'Pendiente')===fE) &&
+      (!fE || (i.estado||'Pendiente')===fE) && (!fM || incMesOf(i.fecha)===fM) &&
       (!q || [i.nombre,i.telefono,i.comentario].join(' ').toLowerCase().includes(q))
     ).slice().reverse();
 
