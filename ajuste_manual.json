@@ -1,3 +1,8 @@
 {
-  "_nota": "Override temporal por fechas mal formateadas en Sheet. Agregar bloque del mes si se necesita. Formato: { 'YYYY-MM': { 'SUCURSAL': { leads, llamadas, no_contesta, citas, visitas, inscritos } } }"
+  "_nota": "Override temporal por fechas mal formateadas en Sheet. Agregar bloque del mes si se necesita. Formato: { 'YYYY-MM': { 'SUCURSAL': { leads, llamadas, no_contesta, citas, visitas, inscritos } } }",
+  "2026-07": {
+    "LINDAVISTA": { "leads": 18, "llamadas": 9, "no_contesta": 9, "citas": 5, "visitas": 1, "inscritos": 3 },
+    "IZTACALCO":  { "leads": 13, "llamadas": 6, "no_contesta": 7, "citas": 5, "visitas": 0, "inscritos": 0 },
+    "ERMITA":     { "leads": 12, "llamadas": 5, "no_contesta": 7, "citas": 2, "visitas": 0, "inscritos": 1 }
+  }
 }

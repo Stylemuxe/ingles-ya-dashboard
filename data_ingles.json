@@ -1,14 +1,14 @@
 {
-  "actualizado": "07/07/2026 21:14",
+  "actualizado": "07/07/2026 16:31",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 73,
-    "gasto": 2491.96,
-    "cpl": 34.14,
-    "citas": 0,
-    "visitas": 0,
-    "inscritos": 0
+    "leads_meta": 75,
+    "gasto": 2532.16,
+    "cpl": 33.76,
+    "citas": 12,
+    "visitas": 1,
+    "inscritos": 4
   },
   "campanas": [
     {
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 2491.96,
-      "impresiones": 43386,
-      "alcance": 26140,
-      "leads": 73,
-      "cpl": 34.14
+      "gasto": 2532.16,
+      "impresiones": 43997,
+      "alcance": 26645,
+      "leads": 75,
+      "cpl": 33.76
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2491.96,
-      "leads": 73,
-      "cpl": 34.14
+      "gasto": 2532.16,
+      "leads": 75,
+      "cpl": 33.76
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -286,37 +286,37 @@
     },
     "2026-07-06": {
       "leads": 14,
-      "gasto": 429.97
+      "gasto": 429.98
     },
     "2026-07-07": {
-      "leads": 6,
-      "gasto": 292.41
+      "leads": 8,
+      "gasto": 332.6
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 3,
-      "llamadas": 0,
-      "no_contesta": 3,
-      "citas": 0,
-      "visitas": 0,
-      "inscritos": 0
+      "leads": 18,
+      "llamadas": 9,
+      "no_contesta": 9,
+      "citas": 5,
+      "visitas": 1,
+      "inscritos": 3
     },
     "IZTACALCO": {
-      "leads": 2,
-      "llamadas": 0,
-      "no_contesta": 2,
-      "citas": 0,
+      "leads": 13,
+      "llamadas": 6,
+      "no_contesta": 7,
+      "citas": 5,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 2,
-      "llamadas": 0,
-      "no_contesta": 2,
-      "citas": 0,
+      "leads": 12,
+      "llamadas": 5,
+      "no_contesta": 7,
+      "citas": 2,
       "visitas": 0,
-      "inscritos": 0
+      "inscritos": 1
     }
   },
   "metas_leads": {
