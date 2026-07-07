@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "06/07/2026 21:20",
+  "actualizado": "07/07/2026 02:03",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 58,
-    "gasto": 1944.06,
-    "cpl": 33.52,
+    "leads_meta": 61,
+    "gasto": 2048.81,
+    "cpl": 33.59,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 1944.06,
-      "impresiones": 35129,
-      "alcance": 21727,
-      "leads": 58,
-      "cpl": 33.52
+      "gasto": 2048.81,
+      "impresiones": 36611,
+      "alcance": 22483,
+      "leads": 61,
+      "cpl": 33.59
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1944.06,
-      "leads": 58,
-      "cpl": 33.52
+      "gasto": 2048.81,
+      "leads": 61,
+      "cpl": 33.59
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -282,11 +282,11 @@ const DATA_INGLES = {
     },
     "2026-07-05": {
       "leads": 6,
-      "gasto": 259.84
+      "gasto": 259.86
     },
     "2026-07-06": {
-      "leads": 5,
-      "gasto": 174.51
+      "leads": 8,
+      "gasto": 279.24
     }
   },
   "sucursales": {
@@ -364,6 +364,24 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Liliana Durán",
+      "tel": "5532690133",
+      "fecha_cita": "06-07-26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "visita la plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Arturo",
+      "tel": "5527728487",
+      "fecha_cita": "07-07-26 5:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
     },
     {
       "sucursal": "IZTACALCO",
