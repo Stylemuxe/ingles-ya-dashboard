@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "07/07/2026 17:51",
+  "actualizado": "07/07/2026 21:14",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 71,
-    "gasto": 2358.15,
-    "cpl": 33.21,
+    "leads_meta": 73,
+    "gasto": 2491.96,
+    "cpl": 34.14,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 2358.15,
-      "impresiones": 41594,
-      "alcance": 25295,
-      "leads": 71,
-      "cpl": 33.21
+      "gasto": 2491.96,
+      "impresiones": 43386,
+      "alcance": 26140,
+      "leads": 73,
+      "cpl": 34.14
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2358.15,
-      "leads": 71,
-      "cpl": 33.21
+      "gasto": 2491.96,
+      "leads": 73,
+      "cpl": 34.14
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -286,11 +286,11 @@ const DATA_INGLES = {
     },
     "2026-07-06": {
       "leads": 14,
-      "gasto": 428.35
+      "gasto": 429.97
     },
     "2026-07-07": {
-      "leads": 4,
-      "gasto": 160.22
+      "leads": 6,
+      "gasto": 292.41
     }
   },
   "sucursales": {
@@ -382,7 +382,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Arturo",
       "tel": "5527728487",
-      "fecha_cita": "07-07-26 5:30",
+      "fecha_cita": "08-07-26 5:30",
       "asistio": false,
       "inscrito": false,
       "obs": "Examen de colocación"
@@ -446,18 +446,9 @@ const DATA_INGLES = {
       "nombre": "Ramon Alvarez",
       "tel": "5591973025",
       "fecha_cita": "06-07-26 5:00",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra  60 años"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Lizbeth reyes",
-      "tel": "5520903008",
-      "fecha_cita": "04-07-26 9:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "clase muestra"
     },
     {
       "sucursal": "ERMITA",
@@ -470,12 +461,12 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "ERMITA",
-      "nombre": "ramon alvarez",
-      "tel": "5591973025",
-      "fecha_cita": "06-07-26 5:00",
+      "nombre": "Sandra Mendoza",
+      "tel": "5520505426",
+      "fecha_cita": "09-07-26 4:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "examen"
+      "obs": "examen de colocación"
     }
   ]
 };
