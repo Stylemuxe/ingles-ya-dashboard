@@ -1,11 +1,11 @@
 {
-  "actualizado": "08/07/2026 17:18",
+  "actualizado": "08/07/2026 20:56",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 86,
-    "gasto": 2878.87,
-    "cpl": 33.48,
+    "leads_meta": 87,
+    "gasto": 2983.5,
+    "cpl": 34.29,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 2878.87,
-      "impresiones": 49219,
-      "alcance": 29372,
-      "leads": 86,
-      "cpl": 33.48
+      "gasto": 2983.5,
+      "impresiones": 50649,
+      "alcance": 29914,
+      "leads": 87,
+      "cpl": 34.29
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2878.87,
-      "leads": 86,
-      "cpl": 33.48
+      "gasto": 2983.5,
+      "leads": 87,
+      "cpl": 34.29
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -290,11 +290,11 @@
     },
     "2026-07-07": {
       "leads": 15,
-      "gasto": 516.19
+      "gasto": 517.28
     },
     "2026-07-08": {
-      "leads": 4,
-      "gasto": 163.03
+      "leads": 5,
+      "gasto": 266.57
     }
   },
   "sucursales": {
@@ -395,37 +395,19 @@
       "sucursal": "LINDAVISTA",
       "nombre": "azucena Sanchez /Tonalli salvador",
       "tel": "5535228100",
-      "fecha_cita": "8:00 5:00",
+      "fecha_cita": "08-07-26 5:00",
       "asistio": false,
       "inscrito": false,
       "obs": "conocer el plantel"
     },
     {
       "sucursal": "IZTACALCO",
-      "nombre": "Artemisa",
-      "tel": "5517853179",
-      "fecha_cita": "04-07-26",
+      "nombre": "Beverly",
+      "tel": "5535181159",
+      "fecha_cita": "08-07-26 abierta",
       "asistio": false,
       "inscrito": false,
-      "obs": "Clase muestra presencial"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Edna",
-      "tel": "5525354273",
-      "fecha_cita": "04-07-26 11:30",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Clase mustra y examen de colocación"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Jorge ulloa",
-      "tel": "5532457006",
-      "fecha_cita": "09-07-26 9:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Clase muestra presencial"
+      "obs": "conocer el plantel"
     },
     {
       "sucursal": "ERMITA",
@@ -488,7 +470,16 @@
       "fecha_cita": "09-07-26 11:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "conocer el plantel"
+      "obs": "conocer el plantel (llamada)"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Sra. Erica /hijo",
+      "tel": "7791130868",
+      "fecha_cita": "12-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
     }
   ]
 }
