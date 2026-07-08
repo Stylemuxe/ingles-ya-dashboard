@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "08/07/2026 13:29",
+  "actualizado": "08/07/2026 17:18",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 83,
-    "gasto": 2753.94,
-    "cpl": 33.18,
+    "leads_meta": 86,
+    "gasto": 2878.87,
+    "cpl": 33.48,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 2753.94,
-      "impresiones": 47638,
-      "alcance": 28748,
-      "leads": 83,
-      "cpl": 33.18
+      "gasto": 2878.87,
+      "impresiones": 49219,
+      "alcance": 29372,
+      "leads": 86,
+      "cpl": 33.48
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2753.94,
-      "leads": 83,
-      "cpl": 33.18
+      "gasto": 2878.87,
+      "leads": 86,
+      "cpl": 33.48
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -290,11 +290,11 @@ const DATA_INGLES = {
     },
     "2026-07-07": {
       "leads": 15,
-      "gasto": 515.04
+      "gasto": 516.19
     },
     "2026-07-08": {
-      "leads": 1,
-      "gasto": 39.25
+      "leads": 4,
+      "gasto": 163.03
     }
   },
   "sucursales": {
@@ -392,6 +392,15 @@ const DATA_INGLES = {
       "obs": "Examen de colocación"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "azucena Sanchez /Tonalli salvador",
+      "tel": "5535228100",
+      "fecha_cita": "8:00 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "conocer el plantel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Artemisa",
       "tel": "5517853179",
@@ -471,6 +480,15 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "examen de colocación"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Sra. Ruth",
+      "tel": "5573489773",
+      "fecha_cita": "09-07-26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "conocer el plantel"
     }
   ]
 };
