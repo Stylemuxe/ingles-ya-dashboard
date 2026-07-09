@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "09/07/2026 14:29",
+  "actualizado": "09/07/2026 17:47",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 96,
-    "gasto": 3215.33,
-    "cpl": 33.49,
+    "leads_meta": 99,
+    "gasto": 3292.85,
+    "cpl": 33.26,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 3215.33,
-      "impresiones": 55052,
-      "alcance": 32236,
-      "leads": 96,
-      "cpl": 33.49
+      "gasto": 3292.85,
+      "impresiones": 56201,
+      "alcance": 32645,
+      "leads": 99,
+      "cpl": 33.26
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3215.33,
-      "leads": 96,
-      "cpl": 33.49
+      "gasto": 3292.85,
+      "leads": 99,
+      "cpl": 33.26
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -294,11 +294,11 @@ const DATA_INGLES = {
     },
     "2026-07-08": {
       "leads": 10,
-      "gasto": 451.92
+      "gasto": 452.75
     },
     "2026-07-09": {
-      "leads": 4,
-      "gasto": 46.23
+      "leads": 7,
+      "gasto": 122.92
     }
   },
   "sucursales": {
@@ -400,8 +400,8 @@ const DATA_INGLES = {
       "nombre": "azucena Sanchez /Tonalli salvador",
       "tel": "5535228100",
       "fecha_cita": "08-07-26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "conocer el plantel"
     },
     {
