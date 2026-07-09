@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "09/07/2026 07:28",
+  "actualizado": "09/07/2026 10:45",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 92,
-    "gasto": 3168.38,
-    "cpl": 34.44,
+    "leads_meta": 93,
+    "gasto": 3175.36,
+    "cpl": 34.14,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 3168.38,
-      "impresiones": 54342,
-      "alcance": 32155,
-      "leads": 92,
-      "cpl": 34.44
+      "gasto": 3175.36,
+      "impresiones": 54423,
+      "alcance": 32174,
+      "leads": 93,
+      "cpl": 34.14
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3168.38,
-      "leads": 92,
-      "cpl": 34.44
+      "gasto": 3175.36,
+      "leads": 93,
+      "cpl": 34.14
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -294,11 +294,11 @@ const DATA_INGLES = {
     },
     "2026-07-08": {
       "leads": 10,
-      "gasto": 450.79
+      "gasto": 451.52
     },
     "2026-07-09": {
-      "leads": 0,
-      "gasto": 0.41
+      "leads": 1,
+      "gasto": 6.66
     }
   },
   "sucursales": {
