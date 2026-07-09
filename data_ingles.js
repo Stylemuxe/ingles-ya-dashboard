@@ -1,11 +1,11 @@
 const DATA_INGLES = {
-  "actualizado": "09/07/2026 17:47",
+  "actualizado": "09/07/2026 21:12",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 99,
-    "gasto": 3292.85,
-    "cpl": 33.26,
+    "leads_meta": 102,
+    "gasto": 3423.08,
+    "cpl": 33.56,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -60,11 +60,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 3292.85,
-      "impresiones": 56201,
-      "alcance": 32645,
-      "leads": 99,
-      "cpl": 33.26
+      "gasto": 3423.08,
+      "impresiones": 59573,
+      "alcance": 34331,
+      "leads": 102,
+      "cpl": 33.56
     },
     {
       "id": "6917541255358",
@@ -150,9 +150,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3292.85,
-      "leads": 99,
-      "cpl": 33.26
+      "gasto": 3423.08,
+      "leads": 102,
+      "cpl": 33.56
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -294,11 +294,11 @@ const DATA_INGLES = {
     },
     "2026-07-08": {
       "leads": 10,
-      "gasto": 452.75
+      "gasto": 452.83
     },
     "2026-07-09": {
-      "leads": 7,
-      "gasto": 122.92
+      "leads": 10,
+      "gasto": 253.07
     }
   },
   "sucursales": {
@@ -390,7 +390,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Arturo",
       "tel": "5527728487",
-      "fecha_cita": "08-07-26 5:30",
+      "fecha_cita": "PENDIENTE",
       "asistio": false,
       "inscrito": false,
       "obs": "Examen de colocación"
@@ -403,6 +403,24 @@ const DATA_INGLES = {
       "asistio": true,
       "inscrito": true,
       "obs": "conocer el plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Carlos",
+      "tel": "Facebook",
+      "fecha_cita": "11-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra y visita al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica Morales",
+      "tel": "5520728743",
+      "fecha_cita": "10-07-26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Inscribir a sus dos hijos ya tiene toda la información"
     },
     {
       "sucursal": "IZTACALCO",
