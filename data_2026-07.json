@@ -1,5 +1,5 @@
 {
-  "actualizado": "11/07/2026 16:42",
+  "actualizado": "11/07/2026 20:37",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
@@ -121,18 +121,27 @@
       "nombre": "Carlos",
       "tel": "Facebook",
       "fecha_cita": "11-07-26 9:00",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
-      "obs": "Clase muestra y visita al plantel"
+      "obs": "Vino, pendiente"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Angelica Morales",
       "tel": "5520728743",
       "fecha_cita": "10-07-26 11:00",
+      "asistio": true,
+      "inscrito": true,
+      "obs": "Inscribir a sus dos hijos ya tiene toda la información"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Isela",
+      "tel": "5530291231",
+      "fecha_cita": "46219,20833",
       "asistio": false,
       "inscrito": false,
-      "obs": "Inscribir a sus dos hijos ya tiene toda la información"
+      "obs": "vista plantel"
     },
     {
       "sucursal": "IZTACALCO",
@@ -210,10 +219,19 @@
       "sucursal": "ERMITA",
       "nombre": "Sra. Erica /hijo",
       "tel": "7791130868",
-      "fecha_cita": "12-07-26 9:00",
+      "fecha_cita": "16/07/2026",
       "asistio": false,
       "inscrito": false,
       "obs": "Examen de colocación"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Ana",
+      "tel": "5518645984",
+      "fecha_cita": "18-07-26 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita plantel"
     }
   ]
 }
