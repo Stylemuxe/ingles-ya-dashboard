@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "13/07/2026 17:47",
+  "actualizado": "13/07/2026 20:48",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
@@ -187,15 +187,6 @@ const DATA_INGLES = {
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra  60 años"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "aljandra lopez",
-      "tel": "5522160410",
-      "fecha_cita": "04-07-26 2:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "clase muestra"
     },
     {
       "sucursal": "ERMITA",
