@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "14/07/2026 20:49",
+  "actualizado": "15/07/2026 01:21",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
@@ -151,6 +151,15 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "conocer el plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Gladys / Diego Lopez",
+      "tel": "5564321807",
+      "fecha_cita": "17/07/26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase musestra visita al plantel"
     },
     {
       "sucursal": "ERMITA",
