@@ -1,5 +1,5 @@
 {
-  "actualizado": "15/07/2026 17:04",
+  "actualizado": "15/07/2026 20:49",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
@@ -75,7 +75,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Juan",
       "tel": "5545030189",
-      "fecha_cita": "04-07-26 12:00",
+      "fecha_cita": "",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
@@ -142,6 +142,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "vista plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Juan",
+      "tel": "5545030189",
+      "fecha_cita": "16/07/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "IZTACALCO",
@@ -232,6 +241,33 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Visita plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Mercedes /Leslie cilelo",
+      "tel": "5535765506",
+      "fecha_cita": "17-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Rosa Isela /Eduardo mondragon",
+      "tel": "5534129747",
+      "fecha_cita": "17-07-26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Roman Ortiz",
+      "tel": "222483153",
+      "fecha_cita": "16-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
     }
   ]
 }
