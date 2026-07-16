@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "16/07/2026 15:04",
-  "meta_actualizado": "16/07/2026 15:04",
+  "actualizado": "16/07/2026 17:02",
+  "meta_actualizado": "16/07/2026 17:02",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 185,
-    "gasto": 6478.85,
-    "cpl": 35.02,
+    "leads_meta": 187,
+    "gasto": 6600.98,
+    "cpl": 35.3,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 547.25,
-      "impresiones": 5629,
-      "alcance": 4426,
-      "leads": 12,
-      "cpl": 45.6
+      "gasto": 623.65,
+      "impresiones": 6185,
+      "alcance": 4749,
+      "leads": 13,
+      "cpl": 47.97
     },
     {
       "id": "6999397980958",
@@ -73,11 +73,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 415.0,
-      "gasto": 5931.6,
-      "impresiones": 106642,
-      "alcance": 56352,
-      "leads": 173,
-      "cpl": 34.29
+      "gasto": 5977.33,
+      "impresiones": 107202,
+      "alcance": 56564,
+      "leads": 174,
+      "cpl": 34.35
     },
     {
       "id": "6917541255358",
@@ -163,18 +163,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52515312914962",
       "presupuesto_dia": 299.82,
-      "gasto": 547.25,
-      "leads": 12,
-      "cpl": 45.6
+      "gasto": 623.65,
+      "leads": 13,
+      "cpl": 47.97
     },
     {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5931.6,
-      "leads": 173,
-      "cpl": 34.29
+      "gasto": 5977.33,
+      "leads": 174,
+      "cpl": 34.35
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -344,11 +344,11 @@ const DATA_INGLES = {
     },
     "2026-07-15": {
       "leads": 24,
-      "gasto": 810.03
+      "gasto": 810.13
     },
     "2026-07-16": {
-      "leads": 1,
-      "gasto": 47.93
+      "leads": 3,
+      "gasto": 169.96
     }
   },
   "sucursales": {
@@ -1048,15 +1048,6 @@ const DATA_INGLES = {
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Juan",
-      "tel": "5545030189",
-      "fecha_cita": "",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
       "nombre": "Beatriz mesisas",
       "tel": "5523269915",
       "fecha_cita": "09-07-26 3:00",
@@ -1238,7 +1229,7 @@ const DATA_INGLES = {
     {
       "sucursal": "ERMITA",
       "nombre": "Roman Ortiz",
-      "tel": "222483153",
+      "tel": "2224813153",
       "fecha_cita": "16-07-26 9:00",
       "asistio": false,
       "inscrito": false,
