@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "16/07/2026 06:09",
+  "actualizado": "16/07/2026 09:55",
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
