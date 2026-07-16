@@ -647,6 +647,7 @@ for r, semana in enumerate(calendario):
 # ════════════════════════════════════════════════════════════════
 # GUARDAR
 # ════════════════════════════════════════════════════════════════
-output_path = r"C:\Users\Trafficker ETH\Desktop\INGLES FABIAN\Parrilla_Junio2026_InglésYA.pptx"
+import os
+output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Parrilla_Junio2026_InglésYA.pptx")
 prs.save(output_path)
 print(f"✅ Guardado: {output_path}")

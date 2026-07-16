@@ -32,6 +32,7 @@ SHEET_SEG_ID  = '1mlIqrmxvEou-occ3Osv7DJv_O_jvU0c-'
 SHEET_SEG_GIDS = {
     '2026-05': '1913702244',
     '2026-06': '768692381',
+    '2026-07': '1235374062',
 }
 SHEET_SEG_GID = SHEET_SEG_GIDS.get(MES_ACTUAL, '768692381')
 SHEET_AGE_ID  = '1MtKus1GkNxZGriSN2Ku5kNNaaROK6hoL'
@@ -72,10 +73,17 @@ def fetch_csv_sheet(sheet_id, gid):
         return None
 
 # ─── META ADS ────────────────────────────────────────────────────────────────
+class MetaAPIError(Exception):
+    pass
+
 def meta_get(endpoint, params):
     params['access_token'] = TOKEN
     r = requests.get(f'{API_BASE}/{endpoint}', params=params, timeout=30)
-    return r.json()
+    j = r.json()
+    if 'error' in j:
+        err = j['error']
+        raise MetaAPIError(f"{err.get('message', '?')} (code {err.get('code', '?')})")
+    return j
 
 def time_range():
     return json.dumps({'since': f'{MES_ACTUAL}-01', 'until': HOY.strftime('%Y-%m-%d')})
@@ -318,17 +326,40 @@ def main():
         print('ERROR: TOKEN_INGLES_YA no está en variables de entorno')
         sys.exit(1)
 
-    print('[1] Meta Ads — campañas...')
-    campanas = fetch_campanas()
-    print(f'    {len(campanas)} campañas')
+    # Si Meta API falla (token bloqueado/vencido), NO escribir ceros:
+    # conservar los datos Meta del JSON anterior del mes.
+    meta_ok = True
+    meta_actualizado = datetime.now().strftime('%d/%m/%Y %H:%M')
+    try:
+        print('[1] Meta Ads — campañas...')
+        campanas = fetch_campanas()
+        print(f'    {len(campanas)} campañas')
 
-    print('[2] Meta Ads — ad sets...')
-    adsets = fetch_adsets()
-    print(f'    {len(adsets)} ad sets')
+        print('[2] Meta Ads — ad sets...')
+        adsets = fetch_adsets()
+        print(f'    {len(adsets)} ad sets')
 
-    print('[3] Meta Ads — datos diarios...')
-    diario_meta = fetch_diario_meta()
-    print(f'    {len(diario_meta)} días con datos')
+        print('[3] Meta Ads — datos diarios...')
+        diario_meta = fetch_diario_meta()
+        print(f'    {len(diario_meta)} días con datos')
+    except MetaAPIError as e:
+        meta_ok = False
+        print(f'    ERROR Meta API: {e}')
+        campanas, adsets, diario_meta = [], [], {}
+        prev_path = os.path.join(BASE_DIR, f'data_{MES_ACTUAL}.json')
+        if os.path.exists(prev_path):
+            try:
+                with open(prev_path, encoding='utf-8') as f:
+                    prev = json.load(f)
+                campanas    = prev.get('campanas', [])
+                adsets      = prev.get('adsets', [])
+                diario_meta = prev.get('diario_meta', {})
+                meta_actualizado = prev.get('meta_actualizado', prev.get('actualizado', ''))
+                print(f'    CONSERVANDO datos Meta previos (última actualización Meta: {meta_actualizado})')
+            except Exception as e2:
+                print(f'    AVISO: no se pudo leer JSON previo: {e2}')
+        else:
+            print('    AVISO: no hay JSON previo del mes, datos Meta quedan vacíos')
 
     print('[4] Google Sheets — seguimiento diario...')
     csv_seg = fetch_csv_sheet(SHEET_SEG_ID, SHEET_SEG_GID)
@@ -392,6 +423,8 @@ def main():
 
     data = {
         'actualizado': datetime.now().strftime('%d/%m/%Y %H:%M'),
+        'meta_actualizado': meta_actualizado,
+        'meta_ok':     meta_ok,
         'mes':         mes_nombre,
         'mes_id':      MES_ACTUAL,
         'kpis': {
