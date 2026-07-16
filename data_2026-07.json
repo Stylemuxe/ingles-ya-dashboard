@@ -1,18 +1,29 @@
 {
-  "actualizado": "16/07/2026 08:38",
-  "meta_actualizado": "10/07/2026 13:57",
-  "meta_ok": false,
+  "actualizado": "16/07/2026 09:02",
+  "meta_actualizado": "16/07/2026 09:01",
+  "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 108,
-    "gasto": 3553.09,
-    "cpl": 32.9,
+    "leads_meta": 185,
+    "gasto": 6478.85,
+    "cpl": 35.02,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
   },
   "campanas": [
+    {
+      "id": "52515312914962",
+      "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
+      "status": "ACTIVE",
+      "presupuesto_dia": 0.0,
+      "gasto": 547.25,
+      "impresiones": 5629,
+      "alcance": 4426,
+      "leads": 12,
+      "cpl": 45.6
+    },
     {
       "id": "6999397980958",
       "nombre": "Leads Iztacalco Campaña",
@@ -61,12 +72,12 @@
       "id": "6922243400958",
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
-      "presupuesto_dia": 395.0,
-      "gasto": 3553.09,
-      "impresiones": 62566,
-      "alcance": 36234,
-      "leads": 108,
-      "cpl": 32.9
+      "presupuesto_dia": 415.0,
+      "gasto": 5931.6,
+      "impresiones": 106642,
+      "alcance": 56352,
+      "leads": 173,
+      "cpl": 34.29
     },
     {
       "id": "6917541255358",
@@ -148,13 +159,22 @@
   ],
   "adsets": [
     {
+      "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
+      "status": "ACTIVE",
+      "campaign_id": "52515312914962",
+      "presupuesto_dia": 299.82,
+      "gasto": 547.25,
+      "leads": 12,
+      "cpl": 45.6
+    },
+    {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3553.09,
-      "leads": 108,
-      "cpl": 32.9
+      "gasto": 5929.32,
+      "leads": 173,
+      "cpl": 34.27
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -296,15 +316,39 @@
     },
     "2026-07-08": {
       "leads": 10,
-      "gasto": 453.33
+      "gasto": 453.43
     },
     "2026-07-09": {
       "leads": 13,
-      "gasto": 354.82
+      "gasto": 357.12
     },
     "2026-07-10": {
-      "leads": 3,
-      "gasto": 27.76
+      "leads": 16,
+      "gasto": 359.36
+    },
+    "2026-07-11": {
+      "leads": 16,
+      "gasto": 378.71
+    },
+    "2026-07-12": {
+      "leads": 6,
+      "gasto": 351.51
+    },
+    "2026-07-13": {
+      "leads": 2,
+      "gasto": 361.96
+    },
+    "2026-07-14": {
+      "leads": 15,
+      "gasto": 641.62
+    },
+    "2026-07-15": {
+      "leads": 24,
+      "gasto": 810.03
+    },
+    "2026-07-16": {
+      "leads": 1,
+      "gasto": 47.93
     }
   },
   "sucursales": {
