@@ -1,6 +1,6 @@
 {
-  "actualizado": "16/07/2026 09:02",
-  "meta_actualizado": "16/07/2026 09:01",
+  "actualizado": "16/07/2026 15:04",
+  "meta_actualizado": "16/07/2026 15:04",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 5929.32,
+      "gasto": 5931.6,
       "leads": 173,
-      "cpl": 34.27
+      "cpl": 34.29
     },
     {
       "nombre": "Leads Iztacalco Campaña",
