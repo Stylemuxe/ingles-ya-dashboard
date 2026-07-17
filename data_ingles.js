@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "16/07/2026 20:45",
-  "meta_actualizado": "16/07/2026 20:45",
+  "actualizado": "17/07/2026 01:45",
+  "meta_actualizado": "17/07/2026 01:45",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 189,
-    "gasto": 6800.11,
-    "cpl": 35.98,
+    "leads_meta": 194,
+    "gasto": 7011.09,
+    "cpl": 36.14,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -16,13 +16,13 @@ const DATA_INGLES = {
     {
       "id": "52515312914962",
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
-      "status": "ACTIVE",
+      "status": "PAUSED",
       "presupuesto_dia": 0.0,
-      "gasto": 749.99,
-      "impresiones": 7411,
-      "alcance": 5449,
-      "leads": 14,
-      "cpl": 53.57
+      "gasto": 870.45,
+      "impresiones": 8718,
+      "alcance": 6310,
+      "leads": 15,
+      "cpl": 58.03
     },
     {
       "id": "6999397980958",
@@ -73,11 +73,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 415.0,
-      "gasto": 6050.12,
-      "impresiones": 108448,
-      "alcance": 56997,
-      "leads": 175,
-      "cpl": 34.57
+      "gasto": 6140.64,
+      "impresiones": 109959,
+      "alcance": 57724,
+      "leads": 179,
+      "cpl": 34.31
     },
     {
       "id": "6917541255358",
@@ -163,18 +163,18 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52515312914962",
       "presupuesto_dia": 299.82,
-      "gasto": 749.99,
-      "leads": 14,
-      "cpl": 53.57
+      "gasto": 870.45,
+      "leads": 15,
+      "cpl": 58.03
     },
     {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 6050.12,
-      "leads": 175,
-      "cpl": 34.57
+      "gasto": 6140.64,
+      "leads": 179,
+      "cpl": 34.31
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -344,11 +344,11 @@ const DATA_INGLES = {
     },
     "2026-07-15": {
       "leads": 24,
-      "gasto": 810.68
+      "gasto": 811.16
     },
     "2026-07-16": {
-      "leads": 5,
-      "gasto": 368.51
+      "leads": 10,
+      "gasto": 579.01
     }
   },
   "sucursales": {
@@ -701,21 +701,21 @@ const DATA_INGLES = {
     },
     "2026-07-16": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
+        "leads": 3,
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
+        "leads": 3,
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
