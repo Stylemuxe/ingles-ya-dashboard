@@ -1,7 +1,7 @@
 const DATA_INGLES = {
-  "actualizado": "17/07/2026 01:45",
+  "actualizado": "17/07/2026 06:08",
   "meta_actualizado": "17/07/2026 01:45",
-  "meta_ok": true,
+  "meta_ok": false,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
