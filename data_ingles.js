@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "17/07/2026 20:42",
+  "actualizado": "18/07/2026 01:25",
   "meta_actualizado": "17/07/2026 01:45",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -724,23 +724,23 @@ const DATA_INGLES = {
     },
     "2026-07-17": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
@@ -1137,6 +1137,15 @@ const DATA_INGLES = {
       "obs": "Clase musestra visita al plantel"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Sra. Elvira",
+      "tel": "5559976551",
+      "fecha_cita": "18-07-26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Janeth Romero",
       "tel": "5543186541",
@@ -1231,6 +1240,15 @@ const DATA_INGLES = {
       "nombre": "Roman Ortiz",
       "tel": "2224813153",
       "fecha_cita": "16-07-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "sra.Judith/Emmy Ledesma",
+      "tel": "5616684126",
+      "fecha_cita": "18-07-26 12:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
