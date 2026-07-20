@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "20/07/2026 17:23",
+  "actualizado": "20/07/2026 21:00",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -1131,6 +1131,15 @@ const DATA_INGLES = {
       "tel": "5545030189",
       "fecha_cita": "16/07/26 9:00",
       "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Eunice",
+      "tel": "5526572077",
+      "fecha_cita": "20/07/26",
+      "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra"
     },
