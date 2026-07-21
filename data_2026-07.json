@@ -1,5 +1,5 @@
 {
-  "actualizado": "20/07/2026 21:00",
+  "actualizado": "21/07/2026 01:43",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -697,7 +697,7 @@
         "leads": 6,
         "llamadas": 4,
         "citas": 1,
-        "visitas": 0,
+        "visitas": 1,
         "inscritos": 0
       },
       "IZTACALCO": {
@@ -711,7 +711,7 @@
         "leads": 7,
         "llamadas": 4,
         "citas": 2,
-        "visitas": 0,
+        "visitas": 2,
         "inscritos": 0
       }
     },
@@ -786,21 +786,21 @@
     },
     "2026-07-19": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
+        "leads": 3,
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
@@ -809,22 +809,22 @@
     },
     "2026-07-20": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
