@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "21/07/2026 17:06",
+  "actualizado": "21/07/2026 20:57",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -1105,7 +1105,7 @@ const DATA_INGLES = {
       "fecha_cita": "11-07-26 9:00",
       "asistio": true,
       "inscrito": false,
-      "obs": "Vino, pendiente"
+      "obs": "Vino, pendiente sigue pendiente"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -1140,7 +1140,7 @@ const DATA_INGLES = {
       "tel": "5526572077",
       "fecha_cita": "20/07/26",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": true,
       "obs": "Clase muestra"
     },
     {
