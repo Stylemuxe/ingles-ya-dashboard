@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "23/07/2026 17:08",
+  "actualizado": "23/07/2026 20:50",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -758,7 +758,7 @@ const DATA_INGLES = {
         "llamadas": 2,
         "citas": 1,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 1
       }
     },
     "2026-07-18": {
@@ -790,7 +790,7 @@ const DATA_INGLES = {
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 2
       },
       "IZTACALCO": {
         "leads": 2,
