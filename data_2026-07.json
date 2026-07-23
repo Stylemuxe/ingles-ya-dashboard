@@ -1,5 +1,5 @@
 {
-  "actualizado": "22/07/2026 20:54",
+  "actualizado": "23/07/2026 01:49",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -846,8 +846,8 @@
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 1,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -855,22 +855,22 @@
     },
     "2026-07-22": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 1,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -1142,6 +1142,15 @@
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Miriam Carolina Santos",
+      "tel": "5616538043",
+      "fecha_cita": "22/07/26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita al plantel"
     },
     {
       "sucursal": "IZTACALCO",
