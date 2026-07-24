@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inglés YA · Dashboard</title>
+<script>document.documentElement.dataset.theme = localStorage.getItem('ingles_theme') || 'dark';</script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -24,6 +25,22 @@
   --muted: #7a78a0;
   --dim:   #3e3c60;
   --r:     16px;
+  --bg-rgb: 13,11,30;
+  --fg-rgb: 255,255,255;
+}
+:root[data-theme="light"] {
+  --bg:    #f3f1fa;
+  --c1:    #ffffff;
+  --c2:    #ffffff00;
+  --c3:    #ece9f7;
+  --c4:    #e2ddf3;
+  --cyan:  #0089a3;
+  --green: #009a52;
+  --text:  #1c1a30;
+  --muted: #5d5a7a;
+  --dim:   #9b98b8;
+  --bg-rgb: 255,255,255;
+  --fg-rgb: 20,16,50;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -47,9 +64,9 @@ body::before {
 /* ── HEADER ── */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(13,11,30,.92);
+  background: rgba(var(--bg-rgb),.92);
   backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(var(--fg-rgb),.06);
   padding: 0 28px;
   display: flex; align-items: center; justify-content: space-between;
   height: 64px; overflow: hidden;
@@ -64,6 +81,12 @@ header::after {
 @keyframes fadeInLeft { from{opacity:0;transform:translateX(-24px)} to{opacity:1;transform:none} }
 .header-right { display: flex; align-items: center; gap: 22px; position: relative; z-index: 1; }
 .live-badge { display:flex; align-items:center; gap:7px; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+.theme-toggle-btn {
+  background:var(--c3); border:1px solid rgba(var(--fg-rgb),.1); color:var(--text);
+  width:32px; height:32px; border-radius:9px; font-size:15px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:border-color .2s, transform .2s;
+}
+.theme-toggle-btn:hover { border-color:var(--cyan); transform:translateY(-1px); }
 .live-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--green); box-shadow: 0 0 0 0 rgba(0,255,136,.7);
@@ -85,14 +108,14 @@ header::after {
   transition: border-color .2s;
 }
 #mes-select:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.2); }
-#mes-select option { background: #1e1b3c; color: var(--text); }
+#mes-select option { background: var(--c3); color: var(--text); }
 
 /* ── TABS ── */
 nav {
   position: sticky; top: 64px; z-index: 99;
-  background: rgba(13,11,30,.96);
+  background: rgba(var(--bg-rgb),.96);
   backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(var(--fg-rgb),.05);
   padding: 0 28px;
   display: flex; overflow-x: auto;
 }
@@ -118,7 +141,7 @@ nav::-webkit-scrollbar { height: 0; }
 
 .kpi-card {
   background: var(--c1);
-  border: 1px solid rgba(255,255,255,.05);
+  border: 1px solid rgba(var(--fg-rgb),.05);
   border-radius: var(--r);
   padding: 20px 14px 16px;
   display: flex; flex-direction: column; align-items: center;
@@ -154,14 +177,14 @@ nav::-webkit-scrollbar { height: 0; }
 /* Donut Ring */
 .ring-wrap { position:relative; width:110px; height:110px; margin-bottom:12px; flex-shrink:0; }
 .ring-wrap svg { width:100%; height:100%; transform:rotate(-90deg); }
-.ring-track  { fill:none; stroke:rgba(255,255,255,.05); stroke-width:8; }
+.ring-track  { fill:none; stroke:rgba(var(--fg-rgb),.05); stroke-width:8; }
 .ring-fill {
   fill:none; stroke:var(--kc,#00f0ff); stroke-width:8; stroke-linecap:round;
   stroke-dasharray:263.9; stroke-dashoffset:263.9;
   transition:stroke-dashoffset 1.5s cubic-bezier(.22,1,.36,1);
   filter:drop-shadow(0 0 5px var(--kc,#00f0ff));
 }
-.ring-fill-2 { fill:none; stroke:rgba(255,255,255,.04); stroke-width:4; stroke-dasharray:263.9; }
+.ring-fill-2 { fill:none; stroke:rgba(var(--fg-rgb),.04); stroke-width:4; stroke-dasharray:263.9; }
 .ring-inner {
   position:absolute; inset:0;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -206,7 +229,7 @@ nav::-webkit-scrollbar { height: 0; }
 .guia-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 @media (max-width:860px){ .guia-grid { grid-template-columns:1fr; } }
 .guia-card {
-  background:var(--c1); border:1px solid rgba(255,255,255,.06);
+  background:var(--c1); border:1px solid rgba(var(--fg-rgb),.06);
   border-left:3px solid var(--gc,#00f0ff); border-radius:12px; padding:18px 20px;
   transition:transform .25s, box-shadow .25s;
 }
@@ -227,7 +250,7 @@ nav::-webkit-scrollbar { height: 0; }
 }
 .guia-card .gc-read {
   font-size:12.5px; color:var(--muted); line-height:1.55;
-  border-top:1px dashed rgba(255,255,255,.08); padding-top:8px; margin-top:8px;
+  border-top:1px dashed rgba(var(--fg-rgb),.08); padding-top:8px; margin-top:8px;
 }
 .guia-card .gc-read b { color:var(--text); }
 .guia-good { color:var(--green); font-weight:700; }
@@ -240,7 +263,7 @@ nav::-webkit-scrollbar { height: 0; }
 
 /* ── CARD ── */
 .card {
-  background: var(--c1); border:1px solid rgba(255,255,255,.05); border-radius:var(--r);
+  background: var(--c1); border:1px solid rgba(var(--fg-rgb),.05); border-radius:var(--r);
   overflow:hidden; margin-bottom:14px; position:relative;
   animation: cardIn .45s cubic-bezier(.22,1,.36,1) both;
 }
@@ -250,7 +273,7 @@ nav::-webkit-scrollbar { height: 0; }
   pointer-events:none;
 }
 .card-head {
-  padding:14px 20px; border-bottom:1px solid rgba(255,255,255,.05);
+  padding:14px 20px; border-bottom:1px solid rgba(var(--fg-rgb),.05);
   display:flex; align-items:center; justify-content:space-between;
   background:linear-gradient(90deg, rgba(224,32,32,.04), transparent 60%);
 }
@@ -273,7 +296,7 @@ nav::-webkit-scrollbar { height: 0; }
 .f-pill:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(0,0,0,.4); }
 .f-pill::before {
   content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-  background:linear-gradient(135deg,rgba(255,255,255,.06) 0%,transparent 60%); pointer-events:none;
+  background:linear-gradient(135deg,rgba(var(--fg-rgb),.06) 0%,transparent 60%); pointer-events:none;
 }
 .f-val { font-family:'Gilroy','Montserrat',sans-serif; font-size:30px; font-weight:800; line-height:1.1; }
 .f-lbl { font-size:9px; font-weight:700; letter-spacing:.7px; text-transform:uppercase; margin-top:3px; opacity:.8; }
@@ -282,12 +305,12 @@ nav::-webkit-scrollbar { height: 0; }
 /* ── TABLE ── */
 table { width:100%; border-collapse:collapse; }
 th {
-  background:rgba(13,11,30,.6); color:var(--dim);
+  background:rgba(var(--bg-rgb),.6); color:var(--dim);
   font-size:10px; font-weight:700; letter-spacing:.7px;
   text-transform:uppercase; padding:11px 16px;
-  text-align:left; border-bottom:1px solid rgba(255,255,255,.05); white-space:nowrap;
+  text-align:left; border-bottom:1px solid rgba(var(--fg-rgb),.05); white-space:nowrap;
 }
-td { padding:11px 16px; border-bottom:1px solid rgba(255,255,255,.025); vertical-align:middle; font-size:13px; }
+td { padding:11px 16px; border-bottom:1px solid rgba(var(--fg-rgb),.025); vertical-align:middle; font-size:13px; }
 tr:last-child td { border-bottom:none; }
 tr:hover td { background:rgba(0,240,255,.025); }
 .num { font-weight:700; font-variant-numeric:tabular-nums; font-size:14px; }
@@ -302,7 +325,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 
 /* ── PROGRESS BAR ── */
 .pbar-wrap { display:flex; align-items:center; gap:8px; }
-.pbar { flex:1; height:4px; border-radius:99px; background:rgba(255,255,255,.05); overflow:hidden; }
+.pbar { flex:1; height:4px; border-radius:99px; background:rgba(var(--fg-rgb),.05); overflow:hidden; }
 .pbar-fill {
   height:100%; border-radius:99px;
   background:linear-gradient(90deg, var(--red), var(--pink));
@@ -337,7 +360,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .reporte-agencia-lbl  { font-size: 10px; color: var(--muted); font-weight: 600; letter-spacing: .5px; text-transform: uppercase; margin-top: 2px; }
 
 .reporte-resumen {
-  background: var(--c3); border: 1px solid rgba(255,255,255,.06);
+  background: var(--c3); border: 1px solid rgba(var(--fg-rgb),.06);
   border-radius: var(--r); padding: 18px 24px; margin-bottom: 20px;
   font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 500;
 }
@@ -346,7 +369,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 @media(max-width: 860px) { .nov-grid { grid-template-columns: 1fr; } }
 
 .nov-card {
-  background: var(--c1); border: 1px solid rgba(255,255,255,.05);
+  background: var(--c1); border: 1px solid rgba(var(--fg-rgb),.05);
   border-radius: var(--r); padding: 22px 24px; position: relative;
   overflow: hidden; transition: transform .25s, box-shadow .25s;
   animation: cardIn .5s cubic-bezier(.22,1,.36,1) both;
@@ -373,8 +396,8 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .nov-detalle-item {
   display: flex; align-items: center; gap: 8px;
   font-size: 12px; color: var(--text); font-weight: 600;
-  background: rgba(255,255,255,.03); border-radius: 8px; padding: 7px 12px;
-  border: 1px solid rgba(255,255,255,.04);
+  background: rgba(var(--fg-rgb),.03); border-radius: 8px; padding: 7px 12px;
+  border: 1px solid rgba(var(--fg-rgb),.04);
 }
 .nov-detalle-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--nc); flex-shrink: 0; }
 
@@ -399,13 +422,13 @@ tr:hover td { background:rgba(0,240,255,.025); }
 }
 
 /* ── META LEADS ── */
-.ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(255,255,255,.04); }
+.ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(var(--fg-rgb),.04); }
 .ml-row:last-child { border-bottom:none; }
 .ml-label { min-width:200px; }
 .ml-name { font-size:12px; font-weight:800; letter-spacing:.4px; }
 .ml-sub { font-size:10px; color:var(--muted); margin-top:2px; }
 .ml-bar { flex:1; }
-.ml-bar-track { height:10px; border-radius:99px; background:rgba(255,255,255,.06); overflow:hidden; margin-bottom:5px; }
+.ml-bar-track { height:10px; border-radius:99px; background:rgba(var(--fg-rgb),.06); overflow:hidden; margin-bottom:5px; }
 .ml-bar-fill { height:100%; border-radius:99px; animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
 .ml-nums { display:flex; justify-content:space-between; font-size:11px; }
 .ml-actual { font-weight:800; font-variant-numeric:tabular-nums; }
@@ -425,22 +448,22 @@ tr:hover td { background:rgba(0,240,255,.025); }
   font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
   color:var(--muted); margin:22px 0 10px; display:flex; align-items:center; gap:10px;
 }
-.sim-section-title::after { content:''; flex:1; height:1px; background:rgba(255,255,255,.07); }
+.sim-section-title::after { content:''; flex:1; height:1px; background:rgba(var(--fg-rgb),.07); }
 .sim-kpi-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
-.sim-kpi { background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:14px 20px; flex:1; min-width:110px; }
+.sim-kpi { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.06); border-radius:12px; padding:14px 20px; flex:1; min-width:110px; }
 .sim-kpi-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
 .sim-kpi-lbl { font-size:10px; color:var(--muted); font-weight:700; letter-spacing:.5px; text-transform:uppercase; margin-top:4px; }
 .ref-table { width:100%; border-collapse:collapse; font-size:12px; }
-.ref-table th { background:rgba(13,11,30,.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); white-space:nowrap; }
+.ref-table th { background:rgba(var(--bg-rgb),.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(var(--fg-rgb),.06); white-space:nowrap; }
 .ref-table th:first-child { text-align:left; }
-.ref-table td { padding:9px 12px; border-bottom:1px solid rgba(255,255,255,.03); text-align:center; font-variant-numeric:tabular-nums; }
+.ref-table td { padding:9px 12px; border-bottom:1px solid rgba(var(--fg-rgb),.03); text-align:center; font-variant-numeric:tabular-nums; }
 .ref-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
-.ref-table tr:hover td { background:rgba(255,255,255,.02); }
+.ref-table tr:hover td { background:rgba(var(--fg-rgb),.02); }
 .ref-table .tot td { font-weight:800; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; font-size:13px; }
 .proy-table { width:100%; border-collapse:collapse; }
-.proy-table th { background:rgba(13,11,30,.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(255,255,255,.06); white-space:nowrap; }
+.proy-table th { background:rgba(var(--bg-rgb),.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(var(--fg-rgb),.06); white-space:nowrap; }
 .proy-table th:first-child { text-align:left; }
-.proy-table td { padding:8px 10px; border-bottom:1px solid rgba(255,255,255,.03); text-align:center; vertical-align:middle; }
+.proy-table td { padding:8px 10px; border-bottom:1px solid rgba(var(--fg-rgb),.03); text-align:center; vertical-align:middle; }
 .proy-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
 .proy-table .tot td { font-weight:800; font-size:13px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
 .proy-input {
@@ -459,14 +482,14 @@ tr:hover td { background:rgba(0,240,255,.025); }
   color:var(--cyan); border-radius:7px; padding:6px 10px; font-size:14px; font-weight:800; text-align:center;
   font-family:inherit; outline:none; }
 .calc-cpl-row input:focus { box-shadow:0 0 0 3px rgba(0,240,255,.12); }
-.calc-reset-btn { background:none; border:1px solid rgba(255,255,255,.15); color:var(--muted);
+.calc-reset-btn { background:none; border:1px solid rgba(var(--fg-rgb),.15); color:var(--muted);
   padding:6px 12px; border-radius:7px; font-size:11px; font-weight:700; cursor:pointer; }
 .calc-reset-btn:hover { border-color:var(--cyan); color:var(--cyan); }
 .calc-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:16px 22px 22px; }
 @media(max-width:760px){ .calc-grid{grid-template-columns:1fr} }
-.calc-box { background:var(--c3); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:18px 20px; text-align:center; }
+.calc-box { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.07); border-radius:12px; padding:18px 20px; text-align:center; }
 .calc-box label { display:block; font-size:11px; font-weight:800; letter-spacing:.3px; color:var(--muted); margin-bottom:10px; }
-.calc-box input[type=number] { width:100%; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12);
+.calc-box input[type=number] { width:100%; background:rgba(var(--fg-rgb),.04); border:1px solid rgba(var(--fg-rgb),.12);
   color:var(--text); padding:12px 14px; border-radius:9px; font-size:20px; font-weight:800; font-family:inherit;
   text-align:center; outline:none; font-variant-numeric:tabular-nums; }
 .calc-box input[type=number]:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,240,255,.12); }
@@ -480,7 +503,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
 .churn-card {
-  background:var(--c3); border:1px solid rgba(255,255,255,.06); border-radius:14px;
+  background:var(--c3); border:1px solid rgba(var(--fg-rgb),.06); border-radius:14px;
   padding:18px 20px; position:relative; overflow:hidden;
   transition:transform .25s, box-shadow .25s;
 }
@@ -491,7 +514,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .churn-label { font-size:11px; color:var(--muted); font-weight:600; }
 .churn-val { font-size:15px; font-weight:800; font-variant-numeric:tabular-nums; }
 .churn-bar-wrap { margin-top:14px; }
-.churn-bar-track { height:8px; border-radius:99px; background:rgba(255,255,255,.06); overflow:hidden; margin-bottom:6px; }
+.churn-bar-track { height:8px; border-radius:99px; background:rgba(var(--fg-rgb),.06); overflow:hidden; margin-bottom:6px; }
 .churn-bar-fill { height:100%; border-radius:99px; transition:width .9s cubic-bezier(.22,1,.36,1); animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
 .churn-pct-label { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); }
 .churn-status { font-size:12px; font-weight:800; }
@@ -508,7 +531,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:14px; }
 @media (max-width:900px) { .suc-cards { grid-template-columns:1fr; } }
 .suc-card {
-  background:var(--c1); border:1px solid rgba(255,255,255,.05); border-radius:var(--r);
+  background:var(--c1); border:1px solid rgba(var(--fg-rgb),.05); border-radius:var(--r);
   overflow:hidden; position:relative;
   transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s, border-color .3s;
   animation: cardIn .5s cubic-bezier(.22,1,.36,1) both;
@@ -519,7 +542,7 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .suc-card:hover { transform:translateY(-6px); border-color:var(--sc); box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 25px var(--sg); }
 .suc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--sc); box-shadow:0 0 12px var(--sc); }
 .suc-card-head {
-  padding:16px 18px; border-bottom:1px solid rgba(255,255,255,.05);
+  padding:16px 18px; border-bottom:1px solid rgba(var(--fg-rgb),.05);
   display:flex; align-items:center; gap:12px;
   background:linear-gradient(90deg, var(--sb,rgba(0,240,255,.06)), transparent 70%);
 }
@@ -530,12 +553,12 @@ tr:hover td { background:rgba(0,240,255,.025); }
 .suc-stat { text-align:center; }
 .suc-stat-val { font-family:'Gilroy','Montserrat',sans-serif; font-size:28px; font-weight:800; line-height:1.1; }
 .suc-stat-lbl { font-size:9px; font-weight:700; color:var(--dim); text-transform:uppercase; letter-spacing:.6px; margin-top:2px; }
-.suc-foot { padding:12px 18px; border-top:1px solid rgba(255,255,255,.05); display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,.25); }
+.suc-foot { padding:12px 18px; border-top:1px solid rgba(var(--fg-rgb),.05); display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,.25); }
 .conv-label { font-size:10px; color:var(--dim); font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
 .conv-rate { font-family:'Gilroy','Montserrat',sans-serif; font-size:24px; font-weight:800; color:var(--green); text-shadow:0 0 16px rgba(0,255,136,.4); }
 
 /* ── SELECT ── */
-select.filter { background:var(--c3); border:1px solid rgba(255,255,255,.1); color:var(--text); padding:6px 14px; border-radius:8px; font-size:11px; font-weight:700; letter-spacing:.3px; cursor:pointer; }
+select.filter { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.1); color:var(--text); padding:6px 14px; border-radius:8px; font-size:11px; font-weight:700; letter-spacing:.3px; cursor:pointer; }
 select.filter:focus { outline:none; border-color:var(--cyan); }
 
 .empty { text-align:center; color:var(--dim); padding:36px; font-size:12px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
@@ -563,6 +586,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     </div>
     <div class="live-badge"><div class="live-dot"></div>En vivo</div>
     <span id="updated">—</span>
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
   </div>
 </header>
 
@@ -779,20 +803,20 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     @media(max-width:760px){.inc-grid{grid-template-columns:1fr}}
     .inc-field{display:flex;flex-direction:column;gap:7px;margin-bottom:6px}
     .inc-field label{font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
-    .inc-field input,.inc-field textarea{background:var(--c3);border:1px solid rgba(255,255,255,.1);color:var(--text);padding:12px 14px;border-radius:9px;font-size:14px;font-family:inherit;width:100%}
+    .inc-field input,.inc-field textarea{background:var(--c3);border:1px solid rgba(var(--fg-rgb),.1);color:var(--text);padding:12px 14px;border-radius:9px;font-size:14px;font-family:inherit;width:100%}
     .inc-field input:focus,.inc-field textarea:focus{outline:none;border-color:var(--cyan)}
     .inc-field.full{grid-column:1/-1}
     /* Botones grandes (pills) */
     .inc-pills{display:flex;flex-wrap:wrap;gap:8px}
-    .inc-pill{border:1.5px solid rgba(255,255,255,.12);background:var(--c3);color:var(--text);padding:11px 16px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;transition:.12s;user-select:none}
-    .inc-pill:hover{border-color:rgba(255,255,255,.35)}
+    .inc-pill{border:1.5px solid rgba(var(--fg-rgb),.12);background:var(--c3);color:var(--text);padding:11px 16px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;transition:.12s;user-select:none}
+    .inc-pill:hover{border-color:rgba(var(--fg-rgb),.35)}
     .inc-pill.on{color:#04121a}
     .inc-btn{background:linear-gradient(135deg,var(--cyan),#0bb);color:#04121a;border:none;padding:15px 34px;border-radius:11px;font-size:14px;font-weight:800;letter-spacing:.5px;cursor:pointer;text-transform:uppercase}
     .inc-btn:disabled{opacity:.45;cursor:not-allowed}
     .inc-msg{font-size:13px;font-weight:800;margin-left:14px}
     .inc-warn{background:rgba(255,153,0,.12);border:1px solid var(--orange);color:var(--orange);padding:9px 14px;border-radius:9px;font-size:12px;font-weight:700;margin-top:4px;display:none}
     .inc-count-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
-    .inc-count{background:var(--c3);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:14px 12px;text-align:center}
+    .inc-count{background:var(--c3);border:1px solid rgba(var(--fg-rgb),.07);border-radius:12px;padding:14px 12px;text-align:center}
     .inc-count .n{font-size:26px;font-weight:800;line-height:1}
     .inc-count .l{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
     .inc-chip{padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
@@ -891,42 +915,42 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="guia-section-title">🔢 Las 6 tarjetas de arriba (pestaña Resumen)</div>
   <div class="guia-grid">
 
-    <div class="guia-card" style="--gc:#00f0ff">
+    <div class="guia-card" style="--gc:var(--cyan)">
       <h3>💬 Leads Meta <span class="gc-tag">Cantidad</span></h3>
       <div class="gc-def">Son las <b>personas que escribieron por WhatsApp</b> desde los anuncios de Facebook e Instagram durante el mes. El anuncio lleva un botón que abre un chat de WhatsApp, y cada persona que manda mensaje cuenta como un lead: un posible alumno interesado.</div>
       <div class="gc-calc">Es un conteo directo: 1 mensaje nuevo a WhatsApp desde el anuncio = 1 lead.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> más leads = más oportunidades de venta. Pero ojo: un lead NO es un alumno todavía, apenas mostró interés. Ej. en mayo Ermita generó <b>470 leads</b>.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#E02020">
+    <div class="guia-card" style="--gc:var(--red)">
       <h3>💸 Gasto Total <span class="gc-tag">Dinero</span></h3>
       <div class="gc-def">El <b>dinero invertido en publicidad</b> (pauta) en Meta durante el mes. Es lo que se le paga a Facebook/Instagram para mostrar los anuncios.</div>
       <div class="gc-calc">Suma de todo lo gastado en las campañas activas del mes.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> por sí solo no dice si vamos bien o mal — hay que mirarlo siempre junto a cuántos leads e inscritos trajo ese gasto.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#ff9900">
+    <div class="guia-card" style="--gc:var(--orange)">
       <h3>📊 CPL — Costo por Lead <span class="gc-tag">La clave de Víctor</span></h3>
       <div class="gc-def">Es <b>cuánto cuesta conseguir UN lead</b>. La métrica más importante para saber si la pauta es eficiente.</div>
       <div class="gc-calc">CPL = Gasto Total ÷ Leads<br>Ej: $21,128 ÷ 470 leads = <b>$44.95 por lead</b> (Ermita, mayo).</div>
       <div class="gc-read"><b>Cómo leerlo:</b> <span class="guia-good">Verde / barato: menos de $150</span> · <span class="guia-warn">Naranja / regular: $150 a $300</span> · <span class="guia-bad">Rojo / caro: más de $300</span>. Entre más bajo, mejor: significa que cada interesado nos costó poco.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#7b2ff7">
+    <div class="guia-card" style="--gc:var(--purple)">
       <h3>📅 Citas <span class="gc-tag">Cantidad</span></h3>
       <div class="gc-def">Leads a los que el <b>Call Center (CC) logró agendar una cita</b> para visitar el plantel. Es el primer filtro de calidad: el interesado dijo "sí, voy a ir".</div>
       <div class="gc-calc">Conteo de leads que aceptaron una fecha de visita.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> si hay muchos leads pero pocas citas, el cuello de botella suele estar en el <b>Call Center</b> (no en la pauta): no contestan, no agendan o tardan.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#ff0066">
+    <div class="guia-card" style="--gc:var(--pink)">
       <h3>🏃 Visitas <span class="gc-tag">Cantidad</span></h3>
       <div class="gc-def">Personas que <b>sí asistieron</b> al plantel a su cita. Es la diferencia entre agendar y presentarse.</div>
       <div class="gc-calc">Conteo de citas que efectivamente llegaron.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> muchas citas pero pocas visitas = la gente agenda y no llega (falta confirmar/recordar la cita). Es donde más se pierde gente.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#00ff88">
+    <div class="guia-card" style="--gc:var(--green)">
       <h3>✅ Inscritos <span class="gc-tag">El resultado final</span></h3>
       <div class="gc-def">Las personas que <b>se inscribieron y pagaron</b>: alumnos nuevos reales. Es el objetivo de todo el embudo.</div>
       <div class="gc-calc">Conteo de visitas que cerraron inscripción. La meta de marketing es <b>45 inscritos/mes</b>.</div>
@@ -938,42 +962,42 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="guia-section-title">🧮 Métricas que combinan números (más abajo en el tablero)</div>
   <div class="guia-grid">
 
-    <div class="guia-card" style="--gc:#ff9900">
+    <div class="guia-card" style="--gc:var(--orange)">
       <h3>📊 CPL Promedio <span class="gc-tag">Promedio</span></h3>
       <div class="gc-def">El <b>costo por lead promedio de toda la red</b> (las 3 sucursales juntas), no de una sola.</div>
       <div class="gc-calc">CPL Prom = Gasto de TODAS las sedes ÷ Leads de TODAS las sedes.<br>No es el promedio simple de los CPL, sino ponderado por gasto.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> sirve para comparar una sede contra el promedio general. Si Iztacalco está por encima del promedio, esa sede está cara y hay que revisarla.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#00ff88">
+    <div class="guia-card" style="--gc:var(--green)">
       <h3>🔁 Conversión Lead → Inscrito <span class="gc-tag">Porcentaje</span></h3>
       <div class="gc-def">De cada 100 leads, <b>cuántos terminan inscritos</b>. Mide qué tan bien se aprovechan los interesados.</div>
       <div class="gc-calc">Conv = (Inscritos ÷ Leads) × 100<br>Ej: 4 inscritos ÷ 92 leads = <b>4.3%</b> (Lindavista).</div>
       <div class="gc-read"><b>Cómo leerlo:</b> baja conversión con CPL barato = los leads llegan bien pero se pierden en CC o en el plantel. Es el termómetro de la operación, no de la pauta.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#00f0ff">
+    <div class="guia-card" style="--gc:var(--cyan)">
       <h3>💵 Costo por Inscrito (CPI) <span class="gc-tag">Dinero</span></h3>
       <div class="gc-def">Cuánto nos costó en publicidad <b>cada alumno nuevo inscrito</b>. Es el CPL llevado hasta el final del embudo.</div>
       <div class="gc-calc">CPI = Gasto Total ÷ Inscritos.<br>Ej: $5,678 ÷ 4 inscritos = <b>$1,419 por inscrito</b>.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> es lo que de verdad cuesta "comprar" un alumno. Si el CPL es barato pero el CPI altísimo, el problema NO es la pauta: es que se pierde mucha gente entre el lead y la inscripción.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#7b2ff7">
+    <div class="guia-card" style="--gc:var(--purple)">
       <h3>🪜 Embudo del Mes <span class="gc-tag">Visual</span></h3>
       <div class="gc-def">La <b>gráfica en forma de embudo</b> que muestra cómo se va reduciendo la gente en cada etapa: Leads → Citas → Visitas → Inscritos.</div>
       <div class="gc-calc">Cada escalón es más chico que el anterior porque siempre se pierde gente en el camino.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Si cae fuerte de Leads a Citas → problema de Call Center.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#00ff88">
+    <div class="guia-card" style="--gc:var(--green)">
       <h3>📞 % Contactabilidad (% Cont) <span class="gc-tag">Porcentaje</span></h3>
       <div class="gc-def">De los leads que entraron, a <b>cuántos sí logró localizar el Call Center</b> por teléfono.</div>
       <div class="gc-calc">% Cont = (Llamadas contestadas ÷ Leads) × 100.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> si es bajo, mucha gente dejó sus datos pero nunca contestó (o nunca le marcaron). Sin contacto no hay cita, así que esto frena todo el embudo.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#ff0066">
+    <div class="guia-card" style="--gc:var(--pink)">
       <h3>🔄 Churn y Recuperación <span class="gc-tag">Retención</span></h3>
       <div class="gc-def"><b>Churn</b> = alumnos que se dan de baja cada mes (se estima ~10% de la plantilla). <b>Recuperación</b> = cuántos de esos se logran reactivar.</div>
       <div class="gc-calc">Compara los alumnos recuperados contra ese 10% que se pierde mes a mes.</div>
@@ -985,13 +1009,13 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="guia-section-title">📁 Términos de la pauta (pestañas Campañas y Ad Sets)</div>
   <div class="guia-grid">
 
-    <div class="guia-card" style="--gc:#00f0ff">
+    <div class="guia-card" style="--gc:var(--cyan)">
       <h3>📣 Campaña <span class="gc-tag">Estructura</span></h3>
       <div class="gc-def">Es el <b>"contenedor" grande de un anuncio</b> en Meta, con un objetivo (ej. conseguir leads). Cada plantel suele tener su propia campaña.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> en la pestaña Campañas ves cuánto gastó y cuántos leads trajo cada una. Sirve para comparar plantel contra plantel.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#7b2ff7">
+    <div class="guia-card" style="--gc:var(--purple)">
       <h3>🎯 Ad Set (Conjunto de anuncios) <span class="gc-tag">Estructura</span></h3>
       <div class="gc-def">Dentro de una campaña, el Ad Set define <b>a quién le llega el anuncio</b> (público, zona, edad) y cuánto presupuesto se le asigna.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> la pestaña Ad Sets está ordenada por leads ↓. Los de arriba son los públicos que mejor funcionan; ahí conviene poner más presupuesto. Los de abajo con CPL caro son candidatos a pausar.</div>
@@ -1022,6 +1046,31 @@ const $n  = n => new Intl.NumberFormat('es-MX').format(Math.round(n)||0);
 const pct = (a,b) => b>0 ? ((a/b)*100).toFixed(1)+'%' : '—';
 const pctN= (a,b) => b>0 ? Math.min(100,(a/b)*100) : 0;
 const cplColor = v => !v?'var(--dim)':v<150?'var(--green)':v<300?'var(--orange)':'var(--pink)';
+
+// ── TEMA CLARO / OSCURO ────────────────────────────────────────────────────────
+function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+function isLight(){ return document.documentElement.dataset.theme === 'light'; }
+function hexToRgba(hex, a){
+  hex = hex.replace('#','');
+  const r = parseInt(hex.slice(0,2),16), g = parseInt(hex.slice(2,4),16), b = parseInt(hex.slice(4,6),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function applyTheme(theme){
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem('ingles_theme', theme);
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = theme==='light' ? '🌙' : '☀️';
+  INC_COLOR.LINDAVISTA = cssVar('--cyan');
+  INC_TIPO_COLOR['Ya inscrito'] = cssVar('--green');
+  if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
+  if (incBuilt) incRenderDona(INC_DATA.filter(i=>{
+    const fP=document.getElementById('inc-f-plantel')?.value, fM=document.getElementById('inc-f-mes')?.value;
+    return (!fP||i.plantel===fP) && (!fM||incMesOf(i.fecha)===fM);
+  }));
+}
+function toggleTheme(){
+  applyTheme(isLight() ? 'dark' : 'light');
+}
 
 // Tabs
 document.querySelectorAll('.tab').forEach(tab => {
@@ -1107,13 +1156,13 @@ function incPaintPills(){
     const on = el.dataset.v===incSelPlantel;
     el.classList.toggle('on', on);
     el.style.background = on ? INC_COLOR[el.dataset.v] : 'var(--c3)';
-    el.style.borderColor = on ? INC_COLOR[el.dataset.v] : 'rgba(255,255,255,.12)';
+    el.style.borderColor = on ? INC_COLOR[el.dataset.v] : 'rgba(var(--fg-rgb),.12)';
   });
   document.querySelectorAll('#inc-pills-tipo .inc-pill').forEach(el=>{
     const on = el.dataset.v===incSelTipo;
     el.classList.toggle('on', on);
     el.style.background = on ? INC_TIPO_COLOR[el.dataset.v] : 'var(--c3)';
-    el.style.borderColor = on ? INC_TIPO_COLOR[el.dataset.v] : 'rgba(255,255,255,.12)';
+    el.style.borderColor = on ? INC_TIPO_COLOR[el.dataset.v] : 'rgba(var(--fg-rgb),.12)';
   });
 }
 
@@ -1262,8 +1311,8 @@ function incRenderDona(base){
   if(!labels.length){ return; }
   incDona = new Chart(ctx, {
     type:'doughnut',
-    data:{ labels, datasets:[{ data, backgroundColor:colors, borderColor:'#0d0b1e', borderWidth:2 }] },
-    options:{ plugins:{ legend:{ position:'right', labels:{ color:'#e8e6f5', font:{size:11}, boxWidth:12 } } },
+    data:{ labels, datasets:[{ data, backgroundColor:colors, borderColor:cssVar('--bg'), borderWidth:2 }] },
+    options:{ plugins:{ legend:{ position:'right', labels:{ color:cssVar('--text'), font:{size:11}, boxWidth:12 } } },
       cutout:'62%', responsive:true, maintainAspectRatio:false }
   });
 }
@@ -1473,8 +1522,8 @@ function simCalc(){
 // Reporte
 const TIPO_CFG = {
   estrategia:  { icon:'🚀', label:'Estrategia',   color:'#7b2ff7', glow:'rgba(123,47,247,.18)', bg:'rgba(123,47,247,.12)', border:'rgba(123,47,247,.3)' },
-  optimizacion:{ icon:'⚡', label:'Optimización', color:'#00f0ff', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
-  novedad:     { icon:'✨', label:'Novedad',       color:'#00ff88', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
+  optimizacion:{ icon:'⚡', label:'Optimización', color:'var(--cyan)', glow:'rgba(0,240,255,.15)',  bg:'rgba(0,240,255,.1)',   border:'rgba(0,240,255,.25)' },
+  novedad:     { icon:'✨', label:'Novedad',       color:'var(--green)', glow:'rgba(0,255,136,.15)', bg:'rgba(0,255,136,.1)',   border:'rgba(0,255,136,.25)' },
   correccion:  { icon:'🔧', label:'Corrección',   color:'#ff9900', glow:'rgba(255,153,0,.15)', bg:'rgba(255,153,0,.1)',   border:'rgba(255,153,0,.25)' },
   alerta:      { icon:'🔴', label:'Alerta',       color:'#E02020', glow:'rgba(224,32,32,.15)', bg:'rgba(224,32,32,.1)',   border:'rgba(224,32,32,.25)' },
 };
@@ -1592,12 +1641,12 @@ function renderKpis() {
   const mp = monthProgress();
   const agendadosN = (D.agenda||[]).length;
   const cards = [
-    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'var(--cyan)', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
     { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
     { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
     { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), sub: costoXU(k.gasto,k.citas), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
     { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), sub: costoXU(k.gasto,k.visitas), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'var(--green)', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
     { icon:'📋', lbl:'Agendados',  val:agendadosN, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, agendadosN), sub: costoXU(k.gasto,agendadosN), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
   ];
 
@@ -1629,10 +1678,10 @@ function renderKpis() {
 function renderFunnel() {
   const k = D.kpis;
   const steps = [
-    {l:'Leads',    v:k.leads_meta, tc:'#00f0ff', bc:'rgba(0,240,255,.12)',  bi:'rgba(0,240,255,.3)'},
+    {l:'Leads',    v:k.leads_meta, tc:'var(--cyan)', bc:'rgba(0,240,255,.12)',  bi:'rgba(0,240,255,.3)'},
     {l:'Citas',    v:k.citas,      tc:'#7b2ff7', bc:'rgba(123,47,247,.12)', bi:'rgba(123,47,247,.3)'},
     {l:'Visitas',  v:k.visitas,    tc:'#ff9900', bc:'rgba(255,153,0,.10)',  bi:'rgba(255,153,0,.28)'},
-    {l:'Inscritos',v:k.inscritos,  tc:'#00ff88', bc:'rgba(0,255,136,.12)',  bi:'rgba(0,255,136,.3)'},
+    {l:'Inscritos',v:k.inscritos,  tc:'var(--green)', bc:'rgba(0,255,136,.12)',  bi:'rgba(0,255,136,.3)'},
   ];
   document.getElementById('funnel').innerHTML = steps.map((s,i)=>{
     const p = i>0&&steps[0].v>0?`${((s.v/steps[0].v)*100).toFixed(0)}%`:'';
@@ -1648,7 +1697,7 @@ function renderFunnel() {
 
 const SUC_COLOR = {
   ERMITA:     '#E02020',
-  LINDAVISTA: '#00f0ff',
+  LINDAVISTA: 'var(--cyan)',
   IZTACALCO:  '#1B46B4',
 };
 
@@ -1731,7 +1780,7 @@ function renderMetaLeads() {
     <div class="ml-total-item"><div class="ml-total-val" style="color:var(--muted)">${$n(totMeta)}</div><div class="ml-total-lbl">Meta total</div></div>
     <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(Math.max(0,totMeta-totLeads))}</div><div class="ml-total-lbl">Pendientes</div></div>
     <div class="ml-total-item">
-      <div style="height:8px;width:160px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+      <div style="height:8px;width:160px;border-radius:99px;background:rgba(var(--fg-rgb),.06);overflow:hidden">
         <div style="height:100%;width:${totPct}%;background:${totColor};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
       </div>
       <div style="font-size:11px;color:${totColor};font-weight:800;margin-top:4px;text-align:center">${totPct.toFixed(1)}% completado</div>
@@ -1811,7 +1860,7 @@ function renderChurn() {
     <div class="churn-total-item"><div class="churn-total-val" style="color:${mktColor}">${mktPct.toFixed(0)}%</div><div class="churn-total-lbl">Avance MKT</div></div>
   </div>
   <div style="margin-top:10px;padding:0 2px">
-    <div style="height:6px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+    <div style="height:6px;border-radius:99px;background:rgba(var(--fg-rgb),.06);overflow:hidden">
       <div style="height:100%;width:${mktPct}%;background:${mktColor};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
     </div>
   </div>`;
@@ -1824,7 +1873,7 @@ function renderChurn() {
 
 // Sucursal config
 const SUC = {
-  LINDAVISTA:{ c:'#00f0ff', g:'rgba(0,240,255,.12)',   b:'rgba(0,240,255,.06)' },
+  LINDAVISTA:{ c:'var(--cyan)', g:'rgba(0,240,255,.12)',   b:'rgba(0,240,255,.06)' },
   IZTACALCO: { c:'#1B46B4', g:'rgba(27,70,180,.18)',   b:'rgba(27,70,180,.07)' },
   ERMITA:    { c:'#E02020', g:'rgba(224,32,32,.15)',   b:'rgba(224,32,32,.06)' },
 };
@@ -1845,9 +1894,9 @@ function renderSucMini() {
     const insc   = v.inscritos || 0;
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-size:13px;font-weight:800">${s}</strong></span></td>
-      <td class="num" style="color:#00f0ff">${$n(leads)}</td>
+      <td class="num" style="color:var(--cyan)">${$n(leads)}</td>
       <td class="num" style="color:#7b2ff7">${$n(citas)}</td>
-      <td class="num" style="color:#00ff88">${$n(insc)}</td>
+      <td class="num" style="color:var(--green)">${$n(insc)}</td>
       <td><div class="pbar-wrap">
         <div class="pbar"><div class="pbar-fill" style="width:${pctN(insc,leads)}%"></div></div>
         <div class="pbar-val">${pct(insc,leads)}</div>
@@ -1868,7 +1917,7 @@ function renderCampMini() {
   const row = active.length ? `<tr>
     <td style="max-width:230px"><span style="display:block;font-weight:600">Leads de Meta</span>
       <span style="font-size:10px;color:var(--muted)">${active.length} campaña${active.length>1?'s':''} activa${active.length>1?'s':''}</span></td>
-    <td class="num" style="color:#00f0ff">${$n(totLeads)}</td>
+    <td class="num" style="color:var(--cyan)">${$n(totLeads)}</td>
     <td class="num" style="color:#E02020">${$m(totGasto)}</td>
     <td class="num" style="color:${cplColor(totCPL)}">${totLeads>0?$m(totCPL):'—'}</td>
     <td>${totBudget>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(totBudget)}/día</span>`:'—'}</td>
@@ -1896,7 +1945,7 @@ function renderSucCards() {
           <span>META LEADS: ${$n(meta)}</span>
           <span style="color:${avCol}">${avPct.toFixed(0)}%</span>
         </div>
-        <div style="height:5px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden">
+        <div style="height:5px;border-radius:99px;background:rgba(var(--fg-rgb),.06);overflow:hidden">
           <div style="height:100%;width:${avPct}%;background:${avCol};border-radius:99px;animation:barGrow .9s cubic-bezier(.22,1,.36,1) both"></div>
         </div>
         <div style="font-size:10px;color:var(--muted);margin-top:4px;text-align:right">${leads >= meta ? 'Meta alcanzada' : $n(meta-leads)+' leads para meta'}</div>
@@ -1910,7 +1959,7 @@ function renderSucCards() {
         <div class="suc-stat"><div class="suc-stat-val" style="color:${cfg.c};text-shadow:0 0 14px ${cfg.c}66">${$n(leads)}</div><div class="suc-stat-lbl">Leads Meta</div></div>
         <div class="suc-stat"><div class="suc-stat-val" style="color:#7b2ff7">${$n(v.citas||0)}</div><div class="suc-stat-lbl">Citas</div></div>
         <div class="suc-stat"><div class="suc-stat-val" style="color:#ff9900">${$n(v.llamadas||0)}</div><div class="suc-stat-lbl">Llamadas</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#00ff88;text-shadow:0 0 12px rgba(0,255,136,.4)">${$n(v.inscritos||0)}</div><div class="suc-stat-lbl">Inscritos</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--green);text-shadow:0 0 12px rgba(0,255,136,.4)">${$n(v.inscritos||0)}</div><div class="suc-stat-lbl">Inscritos</div></div>
       </div>
       ${metaHTML}
       <div class="suc-foot">
@@ -1940,14 +1989,14 @@ function renderSucursales() {
       : '<td style="color:var(--dim)">—</td>';
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-weight:800">${s}</strong></span></td>
-      <td class="num" style="color:#00f0ff">${$n(leads)}</td>
+      <td class="num" style="color:var(--cyan)">${$n(leads)}</td>
       ${metaTd}
       <td class="num">${$n(v.llamadas||0)}</td>
       <td class="num">${$n(v.no_contesta||0)}</td>
       <td class="num" style="color:#7b2ff7">${$n(v.citas||0)}</td>
       <td class="num" style="color:#ff9900">${$n(v.visitas||0)}</td>
-      <td class="num" style="color:#00ff88">${$n(v.inscritos||0)}</td>
-      <td style="color:#00ff88;font-weight:800;font-size:14px">${pct(v.inscritos||0, leads)}</td>
+      <td class="num" style="color:var(--green)">${$n(v.inscritos||0)}</td>
+      <td style="color:var(--green);font-weight:800;font-size:14px">${pct(v.inscritos||0, leads)}</td>
     </tr>`;
   });
   const totLeads= Object.values(metaLeads).reduce((a,v)=>a+v,0);
@@ -1960,12 +2009,12 @@ function renderSucursales() {
     `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th></tr></thead>
      <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
-       <td style="color:#00f0ff">${$n(totLeads)}</td>
+       <td style="color:var(--cyan)">${$n(totLeads)}</td>
        <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'—'}</td>
        <td>${$n(totCC.llamadas)}</td><td>${$n(totCC.no_contesta)}</td>
        <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
-       <td style="color:#00ff88">${$n(totCC.inscritos)}</td>
-       <td style="color:#00ff88">${pct(totCC.inscritos,totLeads)}</td>
+       <td style="color:var(--green)">${$n(totCC.inscritos)}</td>
+       <td style="color:var(--green)">${pct(totCC.inscritos,totLeads)}</td>
      </tr></tbody>`;
 }
 
@@ -1976,13 +2025,13 @@ function renderCampanas() {
     <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
     <td>${c.status==='ACTIVE'?'<span class="badge ba">&#9679; ACTIVA</span>':'<span class="badge bp">&#9208; PAUSADA</span>'}</td>
     <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'&mdash;'}</td>
-    <td class="num" style="color:#00f0ff">${$n(c.leads)}</td>
+    <td class="num" style="color:var(--cyan)">${$n(c.leads)}</td>
     <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
     <td class="num">${$n(c.impresiones)}</td>
     <td class="num">${$n(c.alcance)}</td>
     <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'&mdash;'}</td>
   </tr>`;
-  const sepPausadas = pausadas.length ? `<tr><td colspan="8" style="padding:6px 10px;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.6px;background:rgba(255,255,255,.03)">&#9866; PAUSADAS &mdash; acumulado del mes</td></tr>` : '';
+  const sepPausadas = pausadas.length ? `<tr><td colspan="8" style="padding:6px 10px;font-size:10px;font-weight:800;color:var(--muted);letter-spacing:.6px;background:rgba(var(--fg-rgb),.03)">&#9866; PAUSADAS &mdash; acumulado del mes</td></tr>` : '';
   const rows = activas.map(fila).join('') + sepPausadas + pausadas.map(fila).join('');
   document.getElementById('tbl-campanas').innerHTML=
     `<thead><tr><th>Campa&ntilde;a</th><th>Status</th><th>Budget/D&iacute;a</th><th>Leads</th><th>Gasto</th><th>Impresiones</th><th>Alcance</th><th>CPL</th></tr></thead>
@@ -1993,7 +2042,7 @@ function renderAdsets() {
     <td style="font-weight:600">${a.nombre}</td>
     <td>${a.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
     <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
-    <td class="num" style="color:#00f0ff">${$n(a.leads)}</td>
+    <td class="num" style="color:var(--cyan)">${$n(a.leads)}</td>
     <td class="num" style="color:#E02020">${$m(a.gasto)}</td>
     <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'—'}</td>
   </tr>`).join('');
@@ -2041,23 +2090,26 @@ function renderDiario() {
   const lbl=fechas.map(f=>f.slice(5));
   const leads=fechas.map(f=>(dm[f]||{}).leads||0);
   const gasto=fechas.map(f=>(dm[f]||{}).gasto||0);
-  const GC='rgba(255,255,255,.04)', TC='#3e3c60';
+  const cyanNow=cssVar('--cyan'), redNow=cssVar('--red');
+  SUC_C.LINDAVISTA = cyanNow;
+  const GC=isLight()?'rgba(20,16,50,.08)':'rgba(255,255,255,.04)', TC=cssVar('--dim');
+  const tipBg=isLight()?'rgba(255,255,255,.97)':'rgba(13,11,30,.95)';
   const font={size:10,family:'Montserrat,sans-serif'};
 
   if(chartMeta) chartMeta.destroy();
   const ctxM=document.getElementById('chart-meta').getContext('2d');
   chartMeta=new Chart(ctxM,{
     data:{labels:lbl,datasets:[
-      {type:'bar',label:'Leads',data:leads,backgroundColor:'rgba(0,240,255,.3)',borderColor:'#00f0ff',borderWidth:1.5,borderRadius:5,yAxisID:'yL'},
-      {type:'line',label:'Gasto ($)',data:gasto,borderColor:'#E02020',borderWidth:2.5,pointRadius:3,pointBackgroundColor:'#E02020',tension:.4,yAxisID:'yG',
-       fill:true,backgroundColor:makeGrad(ctxM,'E02020')},
+      {type:'bar',label:'Leads',data:leads,backgroundColor:hexToRgba(cyanNow,.3),borderColor:cyanNow,borderWidth:1.5,borderRadius:5,yAxisID:'yL'},
+      {type:'line',label:'Gasto ($)',data:gasto,borderColor:redNow,borderWidth:2.5,pointRadius:3,pointBackgroundColor:redNow,tension:.4,yAxisID:'yG',
+       fill:true,backgroundColor:makeGrad(ctxM,redNow.replace('#',''))},
     ]},
     options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{labels:{color:TC,font}},tooltip:{mode:'index',intersect:false,backgroundColor:'rgba(13,11,30,.95)',borderColor:'rgba(0,240,255,.2)',borderWidth:1}},
+      plugins:{legend:{labels:{color:TC,font}},tooltip:{mode:'index',intersect:false,backgroundColor:tipBg,borderColor:hexToRgba(cyanNow,.2),borderWidth:1}},
       scales:{
         x:{ticks:{color:TC,font},grid:{color:GC}},
-        yL:{position:'left',ticks:{color:'#00f0ff',font},grid:{color:GC}},
-        yG:{position:'right',ticks:{color:'#E02020',font,callback:v=>`$${v}`},grid:{display:false}},
+        yL:{position:'left',ticks:{color:cyanNow,font},grid:{color:GC}},
+        yG:{position:'right',ticks:{color:redNow,font,callback:v=>`$${v}`},grid:{display:false}},
       }
     }
   });
@@ -2075,7 +2127,7 @@ function renderDiario() {
       backgroundColor:makeGrad(ctxS,color.replace('#','')),
     }))},
     options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{labels:{color:TC,font}},tooltip:{mode:'index',intersect:false,backgroundColor:'rgba(13,11,30,.95)',borderColor:'rgba(0,240,255,.2)',borderWidth:1}},
+      plugins:{legend:{labels:{color:TC,font}},tooltip:{mode:'index',intersect:false,backgroundColor:tipBg,borderColor:hexToRgba(cyanNow,.2),borderWidth:1}},
       scales:{
         x:{ticks:{color:TC,font},grid:{color:GC}},
         y:{ticks:{color:TC,font},grid:{color:GC}},
@@ -2208,6 +2260,7 @@ async function initMeses() {
 }
 
 // Init
+applyTheme(document.documentElement.dataset.theme || 'dark');
 initMeses();
 </script>
 </body>
