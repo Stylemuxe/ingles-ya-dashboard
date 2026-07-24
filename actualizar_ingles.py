@@ -207,6 +207,42 @@ def parse_seguimiento(text):
 
     return totales, diario
 
+def parse_seguimiento_mensual(text):
+    """Lee el bloque 'ACUMULADO MENSUAL' (columna 'M', a la derecha del sheet)
+    en vez de sumar los bloques diarios uno por uno. Yolanda/CC ya lo calculan
+    ahi mismo con formulas de Sheets, por lo que es inmune a typos de fecha en
+    las filas diarias (ej. '6/4/2026' en vez de '6/7/2026') y coincide con lo
+    que reporta el Contact Center."""
+    rows = list(csv.reader(io.StringIO(text)))
+    totales = {s: dict(leads=0, llamadas=0, no_contesta=0, citas=0, visitas=0, inscritos=0)
+               for s in SUCURSALES}
+    cur_section = None
+
+    for row in rows:
+        if len(row) <= 19:
+            continue
+        col18 = row[18].strip() if len(row) > 18 else ''
+        if col18 and col18.upper() not in SUCURSALES:
+            cur_section = col18.upper()
+            continue
+        if cur_section != 'M' or col18.upper() not in SUCURSALES:
+            continue
+
+        suc = col18.upper()
+        try:
+            totales[suc] = dict(
+                leads       = si(row[19]),
+                llamadas    = si(row[20]),
+                no_contesta = si(row[22]),
+                citas       = si(row[24]),
+                visitas     = si(row[26]),
+                inscritos   = si(row[29]),
+            )
+        except IndexError:
+            continue
+
+    return totales
+
 # ─── AGENDA ──────────────────────────────────────────────────────────────────
 SKIP_KW = ('HOJA AGENDA', 'SUCURSAL:', 'FECHA:')
 
@@ -364,7 +400,16 @@ def main():
     print('[4] Google Sheets — seguimiento diario...')
     csv_seg = fetch_csv_sheet(SHEET_SEG_ID, SHEET_SEG_GID)
     if csv_seg:
-        totales_suc, diario_suc = parse_seguimiento(csv_seg)
+        totales_diario, diario_suc = parse_seguimiento(csv_seg)
+        totales_mensual = parse_seguimiento_mensual(csv_seg)
+        # El bloque ACUMULADO MENSUAL del Sheet es la fuente autoritativa (la
+        # calcula el mismo CC con formulas de Sheets); si aun no existe ese
+        # bloque para el mes, se usa la suma diaria como respaldo.
+        if any(v['leads'] for v in totales_mensual.values()):
+            totales_suc = totales_mensual
+        else:
+            totales_suc = totales_diario
+            print('    AVISO: no se encontro bloque ACUMULADO MENSUAL, usando suma diaria')
         insc_total = sum(v['inscritos'] for v in totales_suc.values())
         print(f'    OK - {insc_total} inscritos en el mes')
     else:
