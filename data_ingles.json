@@ -1,5 +1,5 @@
 {
-  "actualizado": "24/07/2026 17:19",
+  "actualizado": "24/07/2026 20:54",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -1151,6 +1151,15 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Adriana Pineda /hijo",
+      "tel": "5616538043",
+      "fecha_cita": "27/07/26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Vista al plantel y examen de colocación"
     },
     {
       "sucursal": "IZTACALCO",
