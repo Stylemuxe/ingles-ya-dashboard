@@ -1,5 +1,5 @@
 {
-  "actualizado": "23/07/2026 20:50",
+  "actualizado": "24/07/2026 01:45",
   "meta_actualizado": "20/07/2026 10:37",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -878,23 +878,23 @@
     },
     "2026-07-23": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 3,
+        "llamadas": 1,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
