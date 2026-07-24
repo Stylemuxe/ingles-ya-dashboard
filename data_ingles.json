@@ -1,13 +1,13 @@
 {
-  "actualizado": "24/07/2026 20:54",
-  "meta_actualizado": "20/07/2026 10:37",
-  "meta_ok": false,
+  "actualizado": "24/07/2026 16:17",
+  "meta_actualizado": "24/07/2026 16:17",
+  "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 235,
-    "gasto": 8387.45,
-    "cpl": 35.69,
+    "leads_meta": 285,
+    "gasto": 10205.0,
+    "cpl": 35.81,
     "citas": 12,
     "visitas": 1,
     "inscritos": 4
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 415.0,
-      "gasto": 7502.8,
-      "impresiones": 135090,
-      "alcance": 68040,
-      "leads": 220,
-      "cpl": 34.1
+      "gasto": 9320.35,
+      "impresiones": 163844,
+      "alcance": 78749,
+      "leads": 270,
+      "cpl": 34.52
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 7500.65,
-      "leads": 220,
-      "cpl": 34.09
+      "gasto": 9320.35,
+      "leads": 270,
+      "cpl": 34.52
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -360,11 +360,27 @@
     },
     "2026-07-19": {
       "leads": 10,
-      "gasto": 384.46
+      "gasto": 385.44
     },
     "2026-07-20": {
-      "leads": 4,
-      "gasto": 142.13
+      "leads": 14,
+      "gasto": 454.38
+    },
+    "2026-07-21": {
+      "leads": 9,
+      "gasto": 442.75
+    },
+    "2026-07-22": {
+      "leads": 7,
+      "gasto": 400.77
+    },
+    "2026-07-23": {
+      "leads": 14,
+      "gasto": 365.22
+    },
+    "2026-07-24": {
+      "leads": 10,
+      "gasto": 295.58
     }
   },
   "sucursales": {
@@ -901,22 +917,22 @@
     },
     "2026-07-24": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 3,
+        "llamadas": 3,
+        "citas": 3,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -1160,6 +1176,24 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Vista al plantel y examen de colocación"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Dorian",
+      "tel": "2221631690",
+      "fecha_cita": "30/07/26 10:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen TOEFL"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Paula /Davis ornelas",
+      "tel": "5532635325",
+      "fecha_cita": "06/08/26 10:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen TOEFL"
     },
     {
       "sucursal": "IZTACALCO",
