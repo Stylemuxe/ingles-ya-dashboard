@@ -186,6 +186,10 @@ nav::-webkit-scrollbar { height: 0; }
   cursor:help; opacity:.65; transition:opacity .2s; line-height:1;
 }
 .kpi-card:hover .kpi-info { opacity:1; }
+.kpi-sub {
+  font-size:11px; font-weight:800; color:var(--kc,#00f0ff); margin-top:6px;
+  font-variant-numeric:tabular-nums; opacity:.9;
+}
 
 /* ── GUÍA DE MÉTRICAS ── */
 .guia-intro {
@@ -1580,18 +1584,21 @@ function monthProgress() {
 }
 
 // KPI CONFIG
+function costoXU(gasto, n){ return n>0 ? `${$m(gasto/n)} c/u` : '—'; }
+
 function renderKpis() {
   document.getElementById('updated').textContent = `${D.actualizado} · ${D.mes}`;
   const k = D.kpis;
   const mp = monthProgress();
+  const agendadosN = (D.agenda||[]).length;
   const cards = [
     { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'#00f0ff', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
     { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
     { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
-    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
-    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: `meta MKT: ${D.meta_inscritos_mkt||45}`, tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
-    { icon:'📋', lbl:'Agendados',  val:(D.agenda||[]).length, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, (D.agenda||[]).length), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
+    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), sub: costoXU(k.gasto,k.citas), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
+    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), sub: costoXU(k.gasto,k.visitas), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'#00ff88', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
+    { icon:'📋', lbl:'Agendados',  val:agendadosN, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, agendadosN), sub: costoXU(k.gasto,agendadosN), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -1607,6 +1614,7 @@ function renderKpis() {
       </div>
       <div class="kpi-val" id="kv${i}">0</div>
       <div class="kpi-lbl">${c.lbl}<span class="kpi-info" title="${c.tip||''}">i</span></div>
+      ${c.sub?`<div class="kpi-sub">${c.sub}</div>`:''}
     </div>`).join('');
 
   cards.forEach((c,i)=>{
