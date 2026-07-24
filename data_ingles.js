@@ -1,16 +1,16 @@
 const DATA_INGLES = {
-  "actualizado": "24/07/2026 16:24",
-  "meta_actualizado": "24/07/2026 16:23",
+  "actualizado": "24/07/2026 16:33",
+  "meta_actualizado": "24/07/2026 16:33",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
     "leads_meta": 285,
-    "gasto": 10207.85,
+    "gasto": 10208.84,
     "cpl": 35.82,
-    "citas": 12,
-    "visitas": 1,
-    "inscritos": 4
+    "citas": 28,
+    "visitas": 7,
+    "inscritos": 7
   },
   "campanas": [
     {
@@ -73,9 +73,9 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 415.0,
-      "gasto": 9323.2,
-      "impresiones": 163862,
-      "alcance": 78749,
+      "gasto": 9324.19,
+      "impresiones": 163886,
+      "alcance": 78765,
       "leads": 270,
       "cpl": 34.53
     },
@@ -172,7 +172,7 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 9323.2,
+      "gasto": 9324.19,
       "leads": 270,
       "cpl": 34.53
     },
@@ -376,37 +376,37 @@ const DATA_INGLES = {
     },
     "2026-07-23": {
       "leads": 14,
-      "gasto": 365.22
+      "gasto": 365.3
     },
     "2026-07-24": {
       "leads": 10,
-      "gasto": 298.43
+      "gasto": 299.34
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 18,
-      "llamadas": 9,
-      "no_contesta": 9,
-      "citas": 5,
-      "visitas": 1,
-      "inscritos": 3
+      "leads": 62,
+      "llamadas": 35,
+      "no_contesta": 27,
+      "citas": 12,
+      "visitas": 4,
+      "inscritos": 5
     },
     "IZTACALCO": {
-      "leads": 13,
-      "llamadas": 6,
-      "no_contesta": 7,
-      "citas": 5,
+      "leads": 57,
+      "llamadas": 24,
+      "no_contesta": 33,
+      "citas": 8,
       "visitas": 0,
       "inscritos": 0
     },
     "ERMITA": {
-      "leads": 12,
-      "llamadas": 5,
-      "no_contesta": 7,
-      "citas": 2,
-      "visitas": 0,
-      "inscritos": 1
+      "leads": 57,
+      "llamadas": 23,
+      "no_contesta": 34,
+      "citas": 8,
+      "visitas": 3,
+      "inscritos": 2
     }
   },
   "metas_leads": {
