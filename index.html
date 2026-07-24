@@ -447,6 +447,27 @@ tr:hover td { background:rgba(0,240,255,.025); }
 }
 .proy-input:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(0,255,136,.12); }
 .proy-calc { font-weight:800; font-variant-numeric:tabular-nums; font-size:13px; }
+
+/* ── CALCULADORA DE LEADS ── */
+.calc-cpl-row { display:flex; align-items:center; gap:10px; padding:14px 22px 4px; flex-wrap:wrap; }
+.calc-cpl-row label { font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; color:var(--muted); }
+.calc-cpl-row input { width:100px; background:rgba(0,240,255,.08); border:1px solid rgba(0,240,255,.3);
+  color:var(--cyan); border-radius:7px; padding:6px 10px; font-size:14px; font-weight:800; text-align:center;
+  font-family:inherit; outline:none; }
+.calc-cpl-row input:focus { box-shadow:0 0 0 3px rgba(0,240,255,.12); }
+.calc-reset-btn { background:none; border:1px solid rgba(255,255,255,.15); color:var(--muted);
+  padding:6px 12px; border-radius:7px; font-size:11px; font-weight:700; cursor:pointer; }
+.calc-reset-btn:hover { border-color:var(--cyan); color:var(--cyan); }
+.calc-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:16px 22px 22px; }
+@media(max-width:760px){ .calc-grid{grid-template-columns:1fr} }
+.calc-box { background:var(--c3); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:18px 20px; text-align:center; }
+.calc-box label { display:block; font-size:11px; font-weight:800; letter-spacing:.3px; color:var(--muted); margin-bottom:10px; }
+.calc-box input[type=number] { width:100%; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.12);
+  color:var(--text); padding:12px 14px; border-radius:9px; font-size:20px; font-weight:800; font-family:inherit;
+  text-align:center; outline:none; font-variant-numeric:tabular-nums; }
+.calc-box input[type=number]:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,240,255,.12); }
+.calc-arrow { font-size:12px; color:var(--dim); margin:12px 0 6px; }
+.calc-result { font-size:26px; font-weight:800; font-variant-numeric:tabular-nums; }
 .vs-chip { font-size:10px; font-weight:800; padding:2px 8px; border-radius:5px; margin-left:4px; vertical-align:middle; }
 .vs-ok  { background:rgba(0,255,136,.15); color:var(--green); }
 .vs-bad { background:rgba(224,32,32,.15);  color:var(--pink); }
@@ -558,6 +579,28 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- RESUMEN -->
 <div id="pane-resumen" class="pane active">
   <div class="kpi-grid" id="kpis"></div>
+  <div class="card" id="card-calc-leads">
+    <div class="card-head"><span class="card-title">🧮 Calculadora de Leads</span><span class="card-sub">¿Cuántos leads quieren y cuánto hay que invertir?</span></div>
+    <div class="calc-cpl-row">
+      <label>CPL de referencia (MXN)</label>
+      <input type="number" id="calc-cpl" step="0.01" oninput="calcLeads()">
+      <button class="calc-reset-btn" onclick="calcResetCpl()">Usar CPL del mes</button>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-box">
+        <label>¿Cuántos leads quieren?</label>
+        <input type="number" id="calc-leads-in" placeholder="Ej. 300" oninput="calcLeads()">
+        <div class="calc-arrow">↓ presupuesto necesario</div>
+        <div class="calc-result" id="calc-budget-out" style="color:var(--green)">—</div>
+      </div>
+      <div class="calc-box">
+        <label>¿Cuánto presupuesto tienen?</label>
+        <input type="number" id="calc-budget-in" placeholder="Ej. 10000" oninput="calcLeads()">
+        <div class="calc-arrow">↓ leads estimados</div>
+        <div class="calc-result" id="calc-leads-out" style="color:var(--cyan)">—</div>
+      </div>
+    </div>
+  </div>
   <div class="card" id="card-meta-leads">
     <div class="card-head"><span class="card-title">Avance de Leads del Mes</span><span class="card-sub" id="meta-leads-sub">—</span></div>
     <div id="meta-leads-body"></div>
@@ -2077,7 +2120,29 @@ function renderAgendaMini() {
 }
 
 // ── Render todo ──
+// ── CALCULADORA DE LEADS ──────────────────────────────────────────────────────
+function calcResetCpl(){
+  const el = document.getElementById('calc-cpl');
+  if (el) el.value = (D.kpis.cpl||0).toFixed(2);
+  calcLeads();
+}
+function calcLeadsInit(){
+  const el = document.getElementById('calc-cpl');
+  if (el) el.value = (D.kpis.cpl||0).toFixed(2);
+  calcLeads();
+}
+function calcLeads(){
+  const cpl      = parseFloat(document.getElementById('calc-cpl')?.value) || 0;
+  const leadsIn  = parseFloat(document.getElementById('calc-leads-in')?.value) || 0;
+  const budgetIn = parseFloat(document.getElementById('calc-budget-in')?.value) || 0;
+  const bOut = document.getElementById('calc-budget-out');
+  const lOut = document.getElementById('calc-leads-out');
+  if (bOut) bOut.textContent = (cpl>0 && leadsIn>0)  ? $m(leadsIn*cpl) : '—';
+  if (lOut) lOut.textContent = (cpl>0 && budgetIn>0) ? $n(budgetIn/cpl)+' leads' : '—';
+}
+
 function renderAll() {
+  calcLeadsInit();
   renderKpis();
   renderMetaLeads();
   renderFunnel();
