@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "25/07/2026 12:59",
-  "meta_actualizado": "25/07/2026 12:59",
+  "actualizado": "25/07/2026 16:44",
+  "meta_actualizado": "25/07/2026 16:44",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 290,
-    "gasto": 10401.52,
-    "cpl": 35.87,
+    "leads_meta": 294,
+    "gasto": 10530.26,
+    "cpl": 35.82,
     "citas": 29,
     "visitas": 9,
     "inscritos": 8
@@ -73,11 +73,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 498.0,
-      "gasto": 9516.87,
-      "impresiones": 166050,
-      "alcance": 80091,
-      "leads": 275,
-      "cpl": 34.61
+      "gasto": 9645.61,
+      "impresiones": 167191,
+      "alcance": 80251,
+      "leads": 279,
+      "cpl": 34.57
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 9516.87,
-      "leads": 275,
-      "cpl": 34.61
+      "gasto": 9645.61,
+      "leads": 279,
+      "cpl": 34.57
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -380,11 +380,11 @@ const DATA_INGLES = {
     },
     "2026-07-24": {
       "leads": 13,
-      "gasto": 463.83
+      "gasto": 466.52
     },
     "2026-07-25": {
-      "leads": 2,
-      "gasto": 28.03
+      "leads": 6,
+      "gasto": 154.08
     }
   },
   "sucursales": {
@@ -1176,7 +1176,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Adriana Pineda /hijo",
       "tel": "5616538043",
-      "fecha_cita": "27/07/26",
+      "fecha_cita": "27/07/26 0:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Vista al plantel y examen de colocación"
@@ -1195,8 +1195,8 @@ const DATA_INGLES = {
       "nombre": "Paula /Davis ornelas",
       "tel": "5532635325",
       "fecha_cita": "06/08/26 10:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Examen TOEFL"
     },
     {
