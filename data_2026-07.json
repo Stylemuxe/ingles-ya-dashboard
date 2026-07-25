@@ -1,16 +1,16 @@
 {
-  "actualizado": "25/07/2026 16:44",
-  "meta_actualizado": "25/07/2026 16:44",
+  "actualizado": "25/07/2026 20:39",
+  "meta_actualizado": "25/07/2026 20:39",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 294,
-    "gasto": 10530.26,
-    "cpl": 35.82,
-    "citas": 29,
+    "leads_meta": 296,
+    "gasto": 10642.61,
+    "cpl": 35.95,
+    "citas": 31,
     "visitas": 9,
-    "inscritos": 8
+    "inscritos": 12
   },
   "campanas": [
     {
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 498.0,
-      "gasto": 9645.61,
-      "impresiones": 167191,
-      "alcance": 80251,
-      "leads": 279,
-      "cpl": 34.57
+      "gasto": 9757.96,
+      "impresiones": 168906,
+      "alcance": 81764,
+      "leads": 281,
+      "cpl": 34.73
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 9645.61,
-      "leads": 279,
-      "cpl": 34.57
+      "gasto": 9757.96,
+      "leads": 281,
+      "cpl": 34.73
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -380,37 +380,37 @@
     },
     "2026-07-24": {
       "leads": 13,
-      "gasto": 466.52
+      "gasto": 468.34
     },
     "2026-07-25": {
-      "leads": 6,
-      "gasto": 154.08
+      "leads": 8,
+      "gasto": 264.61
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 64,
-      "llamadas": 36,
+      "leads": 66,
+      "llamadas": 38,
       "no_contesta": 28,
-      "citas": 12,
+      "citas": 13,
       "visitas": 4,
-      "inscritos": 4
+      "inscritos": 6
     },
     "IZTACALCO": {
-      "leads": 55,
-      "llamadas": 24,
-      "no_contesta": 28,
+      "leads": 57,
+      "llamadas": 25,
+      "no_contesta": 29,
       "citas": 9,
       "visitas": 1,
       "inscritos": 2
     },
     "ERMITA": {
-      "leads": 54,
-      "llamadas": 24,
-      "no_contesta": 31,
-      "citas": 8,
+      "leads": 56,
+      "llamadas": 25,
+      "no_contesta": 32,
+      "citas": 9,
       "visitas": 4,
-      "inscritos": 2
+      "inscritos": 4
     }
   },
   "metas_leads": {
@@ -925,7 +925,7 @@
         "llamadas": 3,
         "citas": 3,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 2
       },
       "IZTACALCO": {
         "leads": 3,
@@ -939,28 +939,28 @@
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 2
       }
     },
     "2026-07-25": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 2,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
@@ -1120,7 +1120,7 @@
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Carlos",
+      "nombre": "Carlos Hurtado",
       "tel": "Facebook",
       "fecha_cita": "11-07-26 9:00",
       "asistio": true,
@@ -1200,6 +1200,24 @@
       "obs": "Examen TOEFL"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Laura",
+      "tel": "5519184224",
+      "fecha_cita": "01/07/26",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Adriana Pineda para sus hijo",
+      "tel": "5571803205",
+      "fecha_cita": "27/07/26 4:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Beverly",
       "tel": "5535181159",
@@ -1222,6 +1240,15 @@
       "nombre": "Sra. Elvira",
       "tel": "5559976551",
       "fecha_cita": "18-07-26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra (pendiente)"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Lorena gomez/miguel",
+      "tel": "5549032712",
+      "fecha_cita": "24-07-26 5:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
