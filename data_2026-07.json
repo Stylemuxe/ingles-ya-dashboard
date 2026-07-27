@@ -1,14 +1,14 @@
 {
-  "actualizado": "27/07/2026 17:29",
+  "actualizado": "27/07/2026 21:01",
   "meta_actualizado": "27/07/2026 17:29",
-  "meta_ok": true,
+  "meta_ok": false,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
     "leads_meta": 319,
     "gasto": 11314.97,
     "cpl": 35.47,
-    "citas": 31,
+    "citas": 33,
     "visitas": 9,
     "inscritos": 12
   },
@@ -400,7 +400,7 @@
       "leads": 66,
       "llamadas": 38,
       "no_contesta": 28,
-      "citas": 13,
+      "citas": 14,
       "visitas": 4,
       "inscritos": 6
     },
@@ -408,7 +408,7 @@
       "leads": 57,
       "llamadas": 25,
       "no_contesta": 29,
-      "citas": 9,
+      "citas": 10,
       "visitas": 1,
       "inscritos": 2
     },
@@ -1000,14 +1000,14 @@
       "LINDAVISTA": {
         "leads": 0,
         "llamadas": 0,
-        "citas": 0,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
         "leads": 0,
         "llamadas": 0,
-        "citas": 0,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
@@ -1183,8 +1183,8 @@
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Adriana Pineda /hijo",
-      "tel": "5616538043",
-      "fecha_cita": "27/07/26 0:00",
+      "tel": "5571803205",
+      "fecha_cita": "27/07/26 4:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Vista al plantel y examen de colocación"
@@ -1196,7 +1196,7 @@
       "fecha_cita": "30/07/26 10:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "Examen TOEFL"
+      "obs": "Examen TOEFL siguiente semana)"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -1206,24 +1206,6 @@
       "asistio": true,
       "inscrito": true,
       "obs": "Examen TOEFL"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Laura",
-      "tel": "5519184224",
-      "fecha_cita": "01/07/26",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Adriana Pineda para sus hijo",
-      "tel": "5571803205",
-      "fecha_cita": "27/07/26 4:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Examen de colocación"
     },
     {
       "sucursal": "IZTACALCO",
@@ -1365,6 +1347,15 @@
       "nombre": "sra.Judith/Emmy Ledesma",
       "tel": "5616684126",
       "fecha_cita": "18-07-26 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Laura",
+      "tel": "5519184224",
+      "fecha_cita": "01/07/26 0:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
