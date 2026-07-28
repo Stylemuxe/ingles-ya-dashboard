@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "27/07/2026 21:01",
+  "actualizado": "28/07/2026 01:29",
   "meta_actualizado": "27/07/2026 17:29",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -8,7 +8,7 @@ const DATA_INGLES = {
     "leads_meta": 319,
     "gasto": 11314.97,
     "cpl": 35.47,
-    "citas": 33,
+    "citas": 35,
     "visitas": 9,
     "inscritos": 12
   },
@@ -397,25 +397,25 @@ const DATA_INGLES = {
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 66,
-      "llamadas": 38,
-      "no_contesta": 28,
-      "citas": 14,
+      "leads": 79,
+      "llamadas": 44,
+      "no_contesta": 35,
+      "citas": 15,
       "visitas": 4,
       "inscritos": 6
     },
     "IZTACALCO": {
-      "leads": 57,
-      "llamadas": 25,
-      "no_contesta": 29,
-      "citas": 10,
+      "leads": 66,
+      "llamadas": 29,
+      "no_contesta": 34,
+      "citas": 11,
       "visitas": 1,
       "inscritos": 2
     },
     "ERMITA": {
-      "leads": 56,
-      "llamadas": 25,
-      "no_contesta": 32,
+      "leads": 63,
+      "llamadas": 29,
+      "no_contesta": 35,
       "citas": 9,
       "visitas": 4,
       "inscritos": 4
@@ -975,22 +975,22 @@ const DATA_INGLES = {
     },
     "2026-07-26": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 10,
+        "llamadas": 3,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 6,
+        "llamadas": 3,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 4,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -998,22 +998,22 @@ const DATA_INGLES = {
     },
     "2026-07-27": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 3,
         "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
