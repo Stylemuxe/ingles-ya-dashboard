@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "29/07/2026 13:44",
+  "actualizado": "29/07/2026 17:03",
   "meta_actualizado": "27/07/2026 17:29",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -10,7 +10,7 @@ const DATA_INGLES = {
     "cpl": 35.47,
     "citas": 37,
     "visitas": 9,
-    "inscritos": 12
+    "inscritos": 14
   },
   "campanas": [
     {
@@ -402,7 +402,7 @@ const DATA_INGLES = {
       "no_contesta": 37,
       "citas": 16,
       "visitas": 4,
-      "inscritos": 6
+      "inscritos": 7
     },
     "IZTACALCO": {
       "leads": 69,
@@ -410,7 +410,7 @@ const DATA_INGLES = {
       "no_contesta": 36,
       "citas": 12,
       "visitas": 1,
-      "inscritos": 2
+      "inscritos": 3
     },
     "ERMITA": {
       "leads": 66,
@@ -1032,7 +1032,7 @@ const DATA_INGLES = {
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 1
       },
       "ERMITA": {
         "leads": 3,
@@ -1048,7 +1048,7 @@ const DATA_INGLES = {
         "llamadas": 0,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 1
       },
       "IZTACALCO": {
         "leads": 0,
@@ -1208,6 +1208,24 @@ const DATA_INGLES = {
       "obs": "Examen TOEFL"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Ada",
+      "tel": "5545705811",
+      "fecha_cita": "29/07/26 9:00",
+      "asistio": true,
+      "inscrito": true,
+      "obs": "examaen d colocación"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "julia",
+      "tel": "5521725165",
+      "fecha_cita": "31/07/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Beverly",
       "tel": "5535181159",
@@ -1355,7 +1373,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Laura",
       "tel": "5519184224",
-      "fecha_cita": "01/07/26 0:00",
+      "fecha_cita": "01/07/26 12:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
