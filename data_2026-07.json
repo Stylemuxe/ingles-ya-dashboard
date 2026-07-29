@@ -1,5 +1,5 @@
 {
-  "actualizado": "29/07/2026 17:03",
+  "actualizado": "29/07/2026 20:42",
   "meta_actualizado": "27/07/2026 17:29",
   "meta_ok": false,
   "mes": "Julio 2026",
@@ -1110,7 +1110,7 @@
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Arturo",
+      "nombre": "Arturo Alonso",
       "tel": "5527728487",
       "fecha_cita": "PENDIENTE",
       "asistio": false,
@@ -1166,7 +1166,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Eunice",
       "tel": "5526572077",
-      "fecha_cita": "20/07/26",
+      "fecha_cita": "20/07/26 0:00",
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
@@ -1193,10 +1193,10 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Dorian",
       "tel": "2221631690",
-      "fecha_cita": "30/07/26 10:00",
+      "fecha_cita": "06/08/26 10:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "Examen TOEFL siguiente semana)"
+      "obs": "Examen TOEFL (siguiente semana)"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -1209,7 +1209,7 @@
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Ada",
+      "nombre": "Adamarys",
       "tel": "5545705811",
       "fecha_cita": "29/07/26 9:00",
       "asistio": true,
@@ -1257,8 +1257,8 @@
       "nombre": "Lorena gomez/miguel",
       "tel": "5549032712",
       "fecha_cita": "24-07-26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Clase muestra"
     },
     {
