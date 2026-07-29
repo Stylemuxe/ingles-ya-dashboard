@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "29/07/2026 06:23",
+  "actualizado": "29/07/2026 10:29",
   "meta_actualizado": "27/07/2026 17:29",
   "meta_ok": false,
   "mes": "Julio 2026",
