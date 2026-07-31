@@ -1,13 +1,13 @@
 {
-  "actualizado": "30/07/2026 20:54",
-  "meta_actualizado": "30/07/2026 20:54",
+  "actualizado": "30/07/2026 17:01",
+  "meta_actualizado": "30/07/2026 17:01",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
     "leads_meta": 379,
-    "gasto": 13506.13,
-    "cpl": 35.64,
+    "gasto": 13558.65,
+    "cpl": 35.77,
     "citas": 37,
     "visitas": 9,
     "inscritos": 14
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 12621.48,
-      "impresiones": 202099,
-      "alcance": 96875,
+      "gasto": 12674.0,
+      "impresiones": 202629,
+      "alcance": 97442,
       "leads": 364,
-      "cpl": 34.67
+      "cpl": 34.82
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 12621.48,
+      "gasto": 12674.0,
       "leads": 364,
-      "cpl": 34.67
+      "cpl": 34.82
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -400,34 +400,34 @@
     },
     "2026-07-29": {
       "leads": 14,
-      "gasto": 523.11
+      "gasto": 523.21
     },
     "2026-07-30": {
       "leads": 4,
-      "gasto": 332.78
+      "gasto": 385.2
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 86,
+      "leads": 91,
       "llamadas": 47,
-      "no_contesta": 39,
+      "no_contesta": 44,
       "citas": 16,
       "visitas": 4,
       "inscritos": 7
     },
     "IZTACALCO": {
-      "leads": 73,
+      "leads": 80,
       "llamadas": 32,
-      "no_contesta": 38,
+      "no_contesta": 45,
       "citas": 12,
       "visitas": 1,
       "inscritos": 3
     },
     "ERMITA": {
-      "leads": 70,
+      "leads": 81,
       "llamadas": 31,
-      "no_contesta": 40,
+      "no_contesta": 51,
       "citas": 9,
       "visitas": 4,
       "inscritos": 4
@@ -833,7 +833,7 @@
         "inscritos": 2
       },
       "IZTACALCO": {
-        "leads": 2,
+        "leads": 3,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -849,21 +849,21 @@
     },
     "2026-07-20": {
       "LINDAVISTA": {
-        "leads": 2,
+        "leads": 4,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 2,
+        "leads": 3,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 2,
+        "leads": 3,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -909,7 +909,7 @@
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 1,
+        "leads": 2,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -918,21 +918,21 @@
     },
     "2026-07-23": {
       "LINDAVISTA": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
@@ -941,21 +941,21 @@
     },
     "2026-07-24": {
       "LINDAVISTA": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 3,
         "citas": 3,
         "visitas": 0,
         "inscritos": 2
       },
       "IZTACALCO": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 2,
+        "leads": 4,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -978,7 +978,7 @@
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 2,
+        "leads": 3,
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
@@ -1017,14 +1017,14 @@
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -1033,21 +1033,21 @@
     },
     "2026-07-28": {
       "LINDAVISTA": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 3,
+        "leads": 4,
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
         "inscritos": 1
       },
       "ERMITA": {
-        "leads": 3,
+        "leads": 6,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
@@ -1063,14 +1063,14 @@
         "inscritos": 1
       },
       "IZTACALCO": {
-        "leads": 4,
+        "leads": 5,
         "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 4,
+        "leads": 5,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
