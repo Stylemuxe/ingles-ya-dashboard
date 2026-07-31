@@ -1,13 +1,13 @@
 {
-  "actualizado": "31/07/2026 17:18",
-  "meta_actualizado": "31/07/2026 17:18",
+  "actualizado": "31/07/2026 20:52",
+  "meta_actualizado": "31/07/2026 20:52",
   "meta_ok": true,
   "mes": "Julio 2026",
   "mes_id": "2026-07",
   "kpis": {
-    "leads_meta": 387,
-    "gasto": 14077.04,
-    "cpl": 36.37,
+    "leads_meta": 388,
+    "gasto": 14239.49,
+    "cpl": 36.7,
     "citas": 37,
     "visitas": 9,
     "inscritos": 14
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 13192.39,
-      "impresiones": 209677,
-      "alcance": 99762,
-      "leads": 372,
-      "cpl": 35.46
+      "gasto": 13354.84,
+      "impresiones": 211788,
+      "alcance": 100354,
+      "leads": 373,
+      "cpl": 35.8
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 13192.39,
-      "leads": 372,
-      "cpl": 35.46
+      "gasto": 13354.84,
+      "leads": 373,
+      "cpl": 35.8
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -404,11 +404,11 @@
     },
     "2026-07-30": {
       "leads": 11,
-      "gasto": 655.7
+      "gasto": 656.17
     },
     "2026-07-31": {
-      "leads": 1,
-      "gasto": 247.52
+      "leads": 2,
+      "gasto": 409.5
     }
   },
   "sucursales": {
@@ -1276,6 +1276,33 @@
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Alex hijo",
+      "tel": "5534711832",
+      "fecha_cita": "05/08/26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "nanci /hija",
+      "tel": "5632561537",
+      "fecha_cita": "30/07/26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Joss/hija",
+      "tel": "5532708961",
+      "fecha_cita": "30/07/26 4:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita al plantel"
     },
     {
       "sucursal": "ERMITA",
