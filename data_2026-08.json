@@ -1,12 +1,12 @@
 {
-  "actualizado": "01/08/2026 06:19",
-  "meta_actualizado": "01/08/2026 06:19",
+  "actualizado": "01/08/2026 09:49",
+  "meta_actualizado": "01/08/2026 09:48",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 0,
-    "gasto": 0.0,
+    "gasto": 3.93,
     "cpl": 0,
     "citas": 18,
     "visitas": 3,
@@ -73,9 +73,9 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 0.0,
-      "impresiones": 0,
-      "alcance": 0,
+      "gasto": 3.93,
+      "impresiones": 86,
+      "alcance": 73,
       "leads": 0,
       "cpl": 0
     },
@@ -172,7 +172,7 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 0.0,
+      "gasto": 3.93,
       "leads": 0,
       "cpl": 0
     },
@@ -285,7 +285,12 @@
       "cpl": 0
     }
   ],
-  "diario_meta": {},
+  "diario_meta": {
+    "2026-08-01": {
+      "leads": 0,
+      "gasto": 3.93
+    }
+  },
   "sucursales": {
     "LINDAVISTA": {
       "leads": 131,
