@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "01/08/2026 09:49",
-  "meta_actualizado": "01/08/2026 09:48",
+  "actualizado": "01/08/2026 12:55",
+  "meta_actualizado": "01/08/2026 12:55",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 0,
-    "gasto": 3.93,
+    "gasto": 22.11,
     "cpl": 0,
     "citas": 18,
     "visitas": 3,
@@ -73,9 +73,9 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 3.93,
-      "impresiones": 86,
-      "alcance": 73,
+      "gasto": 22.11,
+      "impresiones": 301,
+      "alcance": 261,
       "leads": 0,
       "cpl": 0
     },
@@ -172,7 +172,7 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 3.93,
+      "gasto": 22.11,
       "leads": 0,
       "cpl": 0
     },
@@ -288,7 +288,7 @@ const DATA_INGLES = {
   "diario_meta": {
     "2026-08-01": {
       "leads": 0,
-      "gasto": 3.93
+      "gasto": 22.11
     }
   },
   "sucursales": {
