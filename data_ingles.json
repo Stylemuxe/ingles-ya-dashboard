@@ -1,13 +1,13 @@
 {
-  "actualizado": "01/08/2026 12:55",
-  "meta_actualizado": "01/08/2026 12:55",
+  "actualizado": "01/08/2026 16:47",
+  "meta_actualizado": "01/08/2026 16:47",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 0,
-    "gasto": 22.11,
-    "cpl": 0,
+    "leads_meta": 3,
+    "gasto": 126.57,
+    "cpl": 42.19,
     "citas": 18,
     "visitas": 3,
     "inscritos": 10
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 22.11,
-      "impresiones": 301,
-      "alcance": 261,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 126.57,
+      "impresiones": 1586,
+      "alcance": 1480,
+      "leads": 3,
+      "cpl": 42.19
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 22.11,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 126.57,
+      "leads": 3,
+      "cpl": 42.19
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -287,8 +287,8 @@
   ],
   "diario_meta": {
     "2026-08-01": {
-      "leads": 0,
-      "gasto": 22.11
+      "leads": 3,
+      "gasto": 126.57
     }
   },
   "sucursales": {
@@ -333,15 +333,6 @@
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Ada",
-      "tel": "5545705811",
-      "fecha_cita": "29/07/26 9:00",
-      "asistio": false,
-      "inscrito": false,
-      "obs": "Examen de coloción"
     }
   ]
 }
