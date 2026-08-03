@@ -1,16 +1,16 @@
 const DATA_INGLES = {
-  "actualizado": "03/08/2026 17:46",
-  "meta_actualizado": "03/08/2026 17:46",
+  "actualizado": "03/08/2026 13:19",
+  "meta_actualizado": "03/08/2026 13:19",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 31,
-    "gasto": 1448.88,
-    "cpl": 46.74,
-    "citas": 18,
-    "visitas": 3,
-    "inscritos": 10
+    "leads_meta": 34,
+    "gasto": 1533.07,
+    "cpl": 45.09,
+    "citas": 0,
+    "visitas": 1,
+    "inscritos": 4
   },
   "campanas": [
     {
@@ -73,11 +73,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 1448.88,
-      "impresiones": 22478,
-      "alcance": 18223,
-      "leads": 31,
-      "cpl": 46.74
+      "gasto": 1533.07,
+      "impresiones": 23555,
+      "alcance": 18934,
+      "leads": 34,
+      "cpl": 45.09
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1448.88,
-      "leads": 31,
-      "cpl": 46.74
+      "gasto": 1533.07,
+      "leads": 34,
+      "cpl": 45.09
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -292,37 +292,37 @@ const DATA_INGLES = {
     },
     "2026-08-02": {
       "leads": 11,
-      "gasto": 526.5
+      "gasto": 526.7
     },
     "2026-08-03": {
-      "leads": 8,
-      "gasto": 301.65
+      "leads": 11,
+      "gasto": 385.64
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 131,
-      "llamadas": 89,
-      "no_contesta": 50,
-      "citas": 10,
+      "leads": 2,
+      "llamadas": 1,
+      "no_contesta": 1,
+      "citas": 0,
       "visitas": 1,
-      "inscritos": 5
+      "inscritos": 2
     },
     "IZTACALCO": {
-      "leads": 112,
-      "llamadas": 68,
-      "no_contesta": 54,
-      "citas": 5,
-      "visitas": 2,
-      "inscritos": 3
+      "leads": 1,
+      "llamadas": 1,
+      "no_contesta": 0,
+      "citas": 0,
+      "visitas": 0,
+      "inscritos": 1
     },
     "ERMITA": {
-      "leads": 96,
-      "llamadas": 53,
-      "no_contesta": 53,
-      "citas": 3,
+      "leads": 1,
+      "llamadas": 1,
+      "no_contesta": 0,
+      "citas": 0,
       "visitas": 0,
-      "inscritos": 2
+      "inscritos": 1
     }
   },
   "metas_leads": {
@@ -331,16 +331,81 @@ const DATA_INGLES = {
     "ERMITA": 81
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {},
+  "diario_suc": {
+    "2026-08-01": {
+      "LINDAVISTA": {
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 1,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 1,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 1
+      }
+    },
+    "2026-08-02": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    }
+  },
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Eliot",
       "tel": "5647517297",
       "fecha_cita": "01/08/26 12:00",
+      "asistio": true,
+      "inscrito": true,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Juana cruz/ Iris Cruz",
+      "tel": "5574007309",
+      "fecha_cita": "03/08/26 9:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Raúl",
+      "tel": "5570476480",
+      "fecha_cita": "04-08-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clae muestra y examen de coloca"
     }
   ]
 };
