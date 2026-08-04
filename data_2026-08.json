@@ -1,13 +1,13 @@
 {
-  "actualizado": "04/08/2026 08:24",
-  "meta_actualizado": "04/08/2026 08:24",
+  "actualizado": "04/08/2026 08:34",
+  "meta_actualizado": "04/08/2026 08:34",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 44,
-    "gasto": 1938.09,
-    "cpl": 44.05,
+    "gasto": 1942.61,
+    "cpl": 44.15,
     "citas": 2,
     "visitas": 1,
     "inscritos": 5
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 1938.09,
-      "impresiones": 31503,
-      "alcance": 25340,
+      "gasto": 1942.61,
+      "impresiones": 31579,
+      "alcance": 25483,
       "leads": 44,
-      "cpl": 44.05
+      "cpl": 44.15
     },
     {
       "id": "6917541255358",
@@ -159,6 +159,15 @@
   ],
   "adsets": [
     {
+      "nombre": "Ingles Consolidada / Solo Whats",
+      "status": "ACTIVE",
+      "campaign_id": "6922243400958",
+      "presupuesto_dia": 0.0,
+      "gasto": 0.0,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
       "status": "ACTIVE",
       "campaign_id": "52515312914962",
@@ -172,9 +181,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1938.09,
+      "gasto": 1942.61,
       "leads": 44,
-      "cpl": 44.05
+      "cpl": 44.15
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -296,11 +305,11 @@
     },
     "2026-08-03": {
       "leads": 18,
-      "gasto": 725.88
+      "gasto": 725.91
     },
     "2026-08-04": {
       "leads": 3,
-      "gasto": 63.12
+      "gasto": 67.61
     }
   },
   "sucursales": {
