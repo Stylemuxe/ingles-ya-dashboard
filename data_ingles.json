@@ -1,14 +1,14 @@
 {
-  "actualizado": "04/08/2026 09:32",
-  "meta_actualizado": "04/08/2026 09:32",
+  "actualizado": "04/08/2026 17:28",
+  "meta_actualizado": "04/08/2026 17:28",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 44,
-    "gasto": 2005.15,
-    "cpl": 45.57,
-    "citas": 2,
+    "leads_meta": 51,
+    "gasto": 2140.84,
+    "cpl": 41.98,
+    "citas": 5,
     "visitas": 1,
     "inscritos": 5
   },
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 0.0,
-      "impresiones": 0,
-      "alcance": 0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 80.92,
+      "impresiones": 870,
+      "alcance": 700,
+      "leads": 4,
+      "cpl": 20.23
     },
     {
       "id": "52515312914962",
@@ -84,11 +84,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 2005.15,
-      "impresiones": 32585,
-      "alcance": 26011,
-      "leads": 44,
-      "cpl": 45.57
+      "gasto": 2059.92,
+      "impresiones": 33485,
+      "alcance": 27225,
+      "leads": 47,
+      "cpl": 43.83
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52521943337762",
       "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 80.92,
+      "leads": 4,
+      "cpl": 20.23
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,9 +192,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1971.14,
-      "leads": 44,
-      "cpl": 44.8
+      "gasto": 2022.68,
+      "leads": 47,
+      "cpl": 43.04
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -307,34 +307,34 @@
     },
     "2026-08-03": {
       "leads": 18,
-      "gasto": 726.73
+      "gasto": 727.12
     },
     "2026-08-04": {
-      "leads": 3,
-      "gasto": 129.33
+      "leads": 10,
+      "gasto": 264.63
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 12,
-      "llamadas": 7,
-      "no_contesta": 5,
-      "citas": 0,
+      "leads": 14,
+      "llamadas": 8,
+      "no_contesta": 6,
+      "citas": 3,
       "visitas": 1,
       "inscritos": 2
     },
     "IZTACALCO": {
       "leads": 14,
-      "llamadas": 6,
-      "no_contesta": 8,
+      "llamadas": 8,
+      "no_contesta": 6,
       "citas": 1,
       "visitas": 0,
       "inscritos": 1
     },
     "ERMITA": {
-      "leads": 9,
+      "leads": 11,
       "llamadas": 4,
-      "no_contesta": 5,
+      "no_contesta": 7,
       "citas": 1,
       "visitas": 0,
       "inscritos": 2
@@ -409,6 +409,33 @@
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
       "fecha_cita": "03/08/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Priscila Cuevas",
+      "tel": "5632317308",
+      "fecha_cita": "07/08/26 3:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Visita examen de colocación"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Airy",
+      "tel": "5566779585",
+      "fecha_cita": "05/08/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocaión"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Vanessa",
+      "tel": "5512920422",
+      "fecha_cita": "08/08/26 9:00",
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
