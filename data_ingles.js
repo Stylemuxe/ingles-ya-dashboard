@@ -1,18 +1,29 @@
 const DATA_INGLES = {
-  "actualizado": "04/08/2026 08:34",
-  "meta_actualizado": "04/08/2026 08:34",
+  "actualizado": "04/08/2026 09:32",
+  "meta_actualizado": "04/08/2026 09:32",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 44,
-    "gasto": 1942.61,
-    "cpl": 44.15,
+    "gasto": 2005.15,
+    "cpl": 45.57,
     "citas": 2,
     "visitas": 1,
     "inscritos": 5
   },
   "campanas": [
+    {
+      "id": "52521943337762",
+      "nombre": "Ingles Consolidada - Whats",
+      "status": "ACTIVE",
+      "presupuesto_dia": 785.94,
+      "gasto": 0.0,
+      "impresiones": 0,
+      "alcance": 0,
+      "leads": 0,
+      "cpl": 0
+    },
     {
       "id": "52515312914962",
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -73,11 +84,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 1942.61,
-      "impresiones": 31579,
-      "alcance": 25483,
+      "gasto": 2005.15,
+      "impresiones": 32585,
+      "alcance": 26011,
       "leads": 44,
-      "cpl": 44.15
+      "cpl": 45.57
     },
     {
       "id": "6917541255358",
@@ -159,9 +170,9 @@ const DATA_INGLES = {
   ],
   "adsets": [
     {
-      "nombre": "Ingles Consolidada / Solo Whats",
+      "nombre": "Ingles Consolidada - Whats",
       "status": "ACTIVE",
-      "campaign_id": "6922243400958",
+      "campaign_id": "52521943337762",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "leads": 0,
@@ -181,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1942.61,
+      "gasto": 1971.14,
       "leads": 44,
-      "cpl": 44.15
+      "cpl": 44.8
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -216,15 +227,6 @@ const DATA_INGLES = {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
       "campaign_id": "6978346009358",
-      "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
-    },
-    {
-      "nombre": "Ingles Consolidada final",
-      "status": "PAUSED",
-      "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "leads": 0,
@@ -305,11 +307,11 @@ const DATA_INGLES = {
     },
     "2026-08-03": {
       "leads": 18,
-      "gasto": 725.91
+      "gasto": 726.73
     },
     "2026-08-04": {
       "leads": 3,
-      "gasto": 67.61
+      "gasto": 129.33
     }
   },
   "sucursales": {
