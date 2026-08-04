@@ -1,16 +1,16 @@
 {
-  "actualizado": "03/08/2026 20:54",
-  "meta_actualizado": "03/08/2026 20:54",
+  "actualizado": "04/08/2026 01:25",
+  "meta_actualizado": "04/08/2026 01:25",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 36,
-    "gasto": 1634.45,
-    "cpl": 45.4,
-    "citas": 0,
+    "leads_meta": 38,
+    "gasto": 1744.02,
+    "cpl": 45.9,
+    "citas": 2,
     "visitas": 1,
-    "inscritos": 4
+    "inscritos": 5
   },
   "campanas": [
     {
@@ -73,11 +73,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 1634.45,
-      "impresiones": 25293,
-      "alcance": 20635,
-      "leads": 36,
-      "cpl": 45.4
+      "gasto": 1744.02,
+      "impresiones": 27268,
+      "alcance": 21836,
+      "leads": 38,
+      "cpl": 45.9
     },
     {
       "id": "6917541255358",
@@ -172,9 +172,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 1634.45,
-      "leads": 36,
-      "cpl": 45.4
+      "gasto": 1744.02,
+      "leads": 38,
+      "cpl": 45.9
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -292,37 +292,37 @@
     },
     "2026-08-02": {
       "leads": 11,
-      "gasto": 526.75
+      "gasto": 527.16
     },
     "2026-08-03": {
-      "leads": 13,
-      "gasto": 486.97
+      "leads": 15,
+      "gasto": 596.13
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 2,
-      "llamadas": 1,
-      "no_contesta": 1,
+      "leads": 12,
+      "llamadas": 7,
+      "no_contesta": 5,
       "citas": 0,
       "visitas": 1,
       "inscritos": 2
     },
     "IZTACALCO": {
-      "leads": 1,
-      "llamadas": 1,
-      "no_contesta": 0,
-      "citas": 0,
+      "leads": 14,
+      "llamadas": 6,
+      "no_contesta": 8,
+      "citas": 1,
       "visitas": 0,
       "inscritos": 1
     },
     "ERMITA": {
-      "leads": 1,
-      "llamadas": 1,
-      "no_contesta": 0,
-      "citas": 0,
+      "leads": 9,
+      "llamadas": 4,
+      "no_contesta": 5,
+      "citas": 1,
       "visitas": 0,
-      "inscritos": 1
+      "inscritos": 2
     }
   },
   "metas_leads": {
@@ -334,45 +334,45 @@
   "diario_suc": {
     "2026-08-01": {
       "LINDAVISTA": {
-        "leads": 2,
-        "llamadas": 1,
+        "leads": 4,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 1
       },
       "IZTACALCO": {
-        "leads": 1,
-        "llamadas": 1,
-        "citas": 0,
+        "leads": 4,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 1,
+        "leads": 3,
         "llamadas": 1,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 1
+        "inscritos": 2
       }
     },
     "2026-08-02": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 5,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 5,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
