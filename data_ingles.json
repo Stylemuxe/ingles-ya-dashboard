@@ -1,13 +1,13 @@
 {
-  "actualizado": "05/08/2026 01:39",
-  "meta_actualizado": "05/08/2026 01:39",
+  "actualizado": "05/08/2026 06:19",
+  "meta_actualizado": "05/08/2026 06:19",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 71,
-    "gasto": 2751.65,
-    "cpl": 38.76,
+    "leads_meta": 85,
+    "gasto": 3165.56,
+    "cpl": 37.24,
     "citas": 5,
     "visitas": 1,
     "inscritos": 5
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 399.48,
-      "impresiones": 5980,
-      "alcance": 5326,
-      "leads": 11,
-      "cpl": 36.32
+      "gasto": 568.24,
+      "impresiones": 8672,
+      "alcance": 7800,
+      "leads": 17,
+      "cpl": 33.43
     },
     {
       "id": "52515312914962",
@@ -84,11 +84,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 647.92,
-      "gasto": 2352.17,
-      "impresiones": 38027,
-      "alcance": 30408,
-      "leads": 60,
-      "cpl": 39.2
+      "gasto": 2597.32,
+      "impresiones": 43959,
+      "alcance": 34444,
+      "leads": 68,
+      "cpl": 38.2
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 399.48,
-      "leads": 11,
-      "cpl": 36.32
+      "gasto": 568.24,
+      "leads": 17,
+      "cpl": 33.43
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,9 +192,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2313.04,
-      "leads": 60,
-      "cpl": 38.55
+      "gasto": 2557.96,
+      "leads": 68,
+      "cpl": 37.62
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -307,11 +307,11 @@
     },
     "2026-08-03": {
       "leads": 18,
-      "gasto": 729.01
+      "gasto": 730.05
     },
     "2026-08-04": {
-      "leads": 38,
-      "gasto": 1093.09
+      "leads": 52,
+      "gasto": 1510.77
     }
   },
   "sucursales": {
