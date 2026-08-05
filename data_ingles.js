@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "05/08/2026 13:41",
-  "meta_actualizado": "05/08/2026 13:41",
+  "actualizado": "05/08/2026 17:18",
+  "meta_actualizado": "05/08/2026 17:18",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 98,
-    "gasto": 3426.53,
-    "cpl": 34.96,
+    "leads_meta": 113,
+    "gasto": 3743.46,
+    "cpl": 33.13,
     "citas": 5,
     "visitas": 1,
     "inscritos": 5
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 720.83,
-      "impresiones": 11315,
-      "alcance": 9862,
-      "leads": 26,
-      "cpl": 27.72
+      "gasto": 970.39,
+      "impresiones": 14928,
+      "alcance": 12606,
+      "leads": 41,
+      "cpl": 23.67
     },
     {
       "id": "52515312914962",
@@ -82,13 +82,13 @@ const DATA_INGLES = {
     {
       "id": "6922243400958",
       "nombre": "Ingles Consolidada",
-      "status": "ACTIVE",
+      "status": "PAUSED",
       "presupuesto_dia": 647.92,
-      "gasto": 2705.7,
-      "impresiones": 45582,
-      "alcance": 35467,
+      "gasto": 2773.07,
+      "impresiones": 46338,
+      "alcance": 35893,
       "leads": 72,
-      "cpl": 37.58
+      "cpl": 38.51
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 720.83,
-      "leads": 26,
-      "cpl": 27.72
+      "gasto": 970.39,
+      "leads": 40,
+      "cpl": 24.26
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2666.33,
+      "gasto": 2733.7,
       "leads": 72,
-      "cpl": 37.03
+      "cpl": 37.97
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -311,11 +311,11 @@ const DATA_INGLES = {
     },
     "2026-08-04": {
       "leads": 53,
-      "gasto": 1541.37
+      "gasto": 1545.6
     },
     "2026-08-05": {
-      "leads": 12,
-      "gasto": 231.4
+      "leads": 27,
+      "gasto": 544.12
     }
   },
   "sucursales": {
