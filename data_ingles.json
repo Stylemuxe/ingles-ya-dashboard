@@ -1,13 +1,13 @@
 {
-  "actualizado": "05/08/2026 17:18",
-  "meta_actualizado": "05/08/2026 17:18",
+  "actualizado": "05/08/2026 20:56",
+  "meta_actualizado": "05/08/2026 20:56",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 113,
-    "gasto": 3743.46,
-    "cpl": 33.13,
+    "leads_meta": 119,
+    "gasto": 3951.1,
+    "cpl": 33.2,
     "citas": 5,
     "visitas": 1,
     "inscritos": 5
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 970.39,
-      "impresiones": 14928,
-      "alcance": 12606,
-      "leads": 41,
-      "cpl": 23.67
+      "gasto": 1175.33,
+      "impresiones": 17754,
+      "alcance": 14545,
+      "leads": 47,
+      "cpl": 25.01
     },
     {
       "id": "52515312914962",
@@ -84,11 +84,11 @@
       "nombre": "Ingles Consolidada",
       "status": "PAUSED",
       "presupuesto_dia": 647.92,
-      "gasto": 2773.07,
-      "impresiones": 46338,
-      "alcance": 35893,
+      "gasto": 2775.77,
+      "impresiones": 46399,
+      "alcance": 35913,
       "leads": 72,
-      "cpl": 38.51
+      "cpl": 38.55
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 970.39,
-      "leads": 40,
-      "cpl": 24.26
+      "gasto": 1175.33,
+      "leads": 47,
+      "cpl": 25.01
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,9 +192,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2733.7,
+      "gasto": 2736.4,
       "leads": 72,
-      "cpl": 37.97
+      "cpl": 38.01
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -311,11 +311,11 @@
     },
     "2026-08-04": {
       "leads": 53,
-      "gasto": 1545.6
+      "gasto": 1546.94
     },
     "2026-08-05": {
-      "leads": 27,
-      "gasto": 544.12
+      "leads": 33,
+      "gasto": 750.71
     }
   },
   "sucursales": {
