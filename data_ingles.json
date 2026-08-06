@@ -1,14 +1,14 @@
 {
-  "actualizado": "05/08/2026 20:56",
-  "meta_actualizado": "05/08/2026 20:56",
+  "actualizado": "06/08/2026 01:28",
+  "meta_actualizado": "06/08/2026 01:28",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 119,
-    "gasto": 3951.1,
-    "cpl": 33.2,
-    "citas": 5,
+    "leads_meta": 122,
+    "gasto": 4111.87,
+    "cpl": 33.7,
+    "citas": 12,
     "visitas": 1,
     "inscritos": 5
   },
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 1175.33,
-      "impresiones": 17754,
-      "alcance": 14545,
-      "leads": 47,
-      "cpl": 25.01
+      "gasto": 1331.97,
+      "impresiones": 20007,
+      "alcance": 16254,
+      "leads": 50,
+      "cpl": 26.64
     },
     {
       "id": "52515312914962",
@@ -84,11 +84,11 @@
       "nombre": "Ingles Consolidada",
       "status": "PAUSED",
       "presupuesto_dia": 647.92,
-      "gasto": 2775.77,
-      "impresiones": 46399,
+      "gasto": 2779.9,
+      "impresiones": 46446,
       "alcance": 35913,
       "leads": 72,
-      "cpl": 38.55
+      "cpl": 38.61
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1175.33,
-      "leads": 47,
-      "cpl": 25.01
+      "gasto": 1331.97,
+      "leads": 50,
+      "cpl": 26.64
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,9 +192,9 @@
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2736.4,
+      "gasto": 2740.53,
       "leads": 72,
-      "cpl": 38.01
+      "cpl": 38.06
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -311,35 +311,35 @@
     },
     "2026-08-04": {
       "leads": 53,
-      "gasto": 1546.94
+      "gasto": 1548.47
     },
     "2026-08-05": {
-      "leads": 33,
-      "gasto": 750.71
+      "leads": 36,
+      "gasto": 909.95
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 21,
-      "llamadas": 12,
-      "no_contesta": 9,
-      "citas": 3,
+      "leads": 34,
+      "llamadas": 16,
+      "no_contesta": 18,
+      "citas": 4,
       "visitas": 1,
       "inscritos": 2
     },
     "IZTACALCO": {
-      "leads": 21,
-      "llamadas": 9,
-      "no_contesta": 12,
-      "citas": 1,
+      "leads": 36,
+      "llamadas": 18,
+      "no_contesta": 18,
+      "citas": 4,
       "visitas": 0,
       "inscritos": 1
     },
     "ERMITA": {
-      "leads": 19,
-      "llamadas": 5,
-      "no_contesta": 14,
-      "citas": 1,
+      "leads": 33,
+      "llamadas": 10,
+      "no_contesta": 23,
+      "citas": 4,
       "visitas": 0,
       "inscritos": 2
     }
