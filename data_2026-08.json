@@ -1,13 +1,13 @@
 {
-  "actualizado": "07/08/2026 00:49",
-  "meta_actualizado": "07/08/2026 00:49",
+  "actualizado": "07/08/2026 05:27",
+  "meta_actualizado": "07/08/2026 05:27",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 140,
-    "gasto": 4582.23,
-    "cpl": 32.73,
+    "leads_meta": 142,
+    "gasto": 4649.32,
+    "cpl": 32.74,
     "citas": 14,
     "visitas": 1,
     "inscritos": 5
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 1801.13,
-      "impresiones": 27306,
-      "alcance": 21434,
-      "leads": 68,
-      "cpl": 26.49
+      "gasto": 1868.22,
+      "impresiones": 28415,
+      "alcance": 22319,
+      "leads": 70,
+      "cpl": 26.69
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1801.13,
-      "leads": 68,
-      "cpl": 26.49
+      "gasto": 1868.22,
+      "leads": 70,
+      "cpl": 26.69
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -315,11 +315,11 @@
     },
     "2026-08-05": {
       "leads": 42,
-      "gasto": 1038.65
+      "gasto": 1039.46
     },
     "2026-08-06": {
-      "leads": 12,
-      "gasto": 340.99
+      "leads": 14,
+      "gasto": 407.27
     }
   },
   "sucursales": {
