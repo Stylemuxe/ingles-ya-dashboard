@@ -1,14 +1,14 @@
 const DATA_INGLES = {
-  "actualizado": "06/08/2026 13:40",
-  "meta_actualizado": "06/08/2026 13:40",
+  "actualizado": "07/08/2026 00:49",
+  "meta_actualizado": "07/08/2026 00:49",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 129,
-    "gasto": 4298.54,
-    "cpl": 33.32,
-    "citas": 12,
+    "leads_meta": 140,
+    "gasto": 4582.23,
+    "cpl": 32.73,
+    "citas": 14,
     "visitas": 1,
     "inscritos": 5
   },
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 1517.58,
-      "impresiones": 23049,
-      "alcance": 18616,
-      "leads": 57,
-      "cpl": 26.62
+      "gasto": 1801.13,
+      "impresiones": 27306,
+      "alcance": 21434,
+      "leads": 68,
+      "cpl": 26.49
     },
     {
       "id": "52515312914962",
@@ -84,11 +84,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "PAUSED",
       "presupuesto_dia": 647.92,
-      "gasto": 2780.96,
-      "impresiones": 46476,
+      "gasto": 2781.1,
+      "impresiones": 46477,
       "alcance": 35960,
       "leads": 72,
-      "cpl": 38.62
+      "cpl": 38.63
     },
     {
       "id": "6917541255358",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1517.58,
-      "leads": 57,
-      "cpl": 26.62
+      "gasto": 1801.13,
+      "leads": 68,
+      "cpl": 26.49
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -192,7 +192,7 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2741.59,
+      "gasto": 2741.73,
       "leads": 72,
       "cpl": 38.08
     },
@@ -311,38 +311,38 @@ const DATA_INGLES = {
     },
     "2026-08-04": {
       "leads": 53,
-      "gasto": 1549.1
+      "gasto": 1549.16
     },
     "2026-08-05": {
       "leads": 42,
-      "gasto": 1036.55
+      "gasto": 1038.65
     },
     "2026-08-06": {
-      "leads": 1,
-      "gasto": 59.44
+      "leads": 12,
+      "gasto": 340.99
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 34,
-      "llamadas": 16,
-      "no_contesta": 18,
+      "leads": 37,
+      "llamadas": 18,
+      "no_contesta": 19,
       "citas": 4,
       "visitas": 1,
       "inscritos": 2
     },
     "IZTACALCO": {
-      "leads": 36,
-      "llamadas": 18,
-      "no_contesta": 18,
-      "citas": 4,
+      "leads": 40,
+      "llamadas": 20,
+      "no_contesta": 20,
+      "citas": 6,
       "visitas": 0,
       "inscritos": 1
     },
     "ERMITA": {
-      "leads": 33,
-      "llamadas": 10,
-      "no_contesta": 23,
+      "leads": 37,
+      "llamadas": 11,
+      "no_contesta": 26,
       "citas": 4,
       "visitas": 0,
       "inscritos": 2
@@ -440,6 +440,24 @@ const DATA_INGLES = {
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Barbara Arzola",
+      "tel": "5529419946",
+      "fecha_cita": "06/08/26 9:00",
+      "asistio": true,
+      "inscrito": false,
+      "obs": "Clase muestra y examen de colocaion"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "GAbriela",
+      "tel": "5559033089",
+      "fecha_cita": "05/08/26 3:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra y examen de colocaion"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
@@ -449,6 +467,51 @@ const DATA_INGLES = {
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Berenice Vazquez/Mariano Tapia",
+      "tel": "5573634927",
+      "fecha_cita": "07/08/26 7:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clasae muestra línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Mirella Emelia perez",
+      "tel": "5652292387",
+      "fecha_cita": "07/08/26 7:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Alejandro",
+      "tel": "5519058497",
+      "fecha_cita": "07/08/26 7:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Alfredo armando Acosta",
+      "tel": "5539550418",
+      "fecha_cita": "12/08/26 5:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "CLase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Paula",
+      "tel": "5582355533",
+      "fecha_cita": "07/08/26 6:30",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase en línea"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
@@ -456,6 +519,33 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Clae muestra y examen de coloca"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Isaac Reyes Alvarez",
+      "tel": "5566779585",
+      "fecha_cita": "10-08-26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra en líne"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Rodolfo",
+      "tel": "5558262960",
+      "fecha_cita": "05-08-26 4:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Lucia Flores Ayala",
+      "tel": "5527220028",
+      "fecha_cita": "06/08/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muerstra"
     }
   ]
 };
