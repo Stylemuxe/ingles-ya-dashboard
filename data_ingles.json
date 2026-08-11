@@ -1,16 +1,16 @@
 {
-  "actualizado": "11/08/2026 16:45",
-  "meta_actualizado": "11/08/2026 16:45",
+  "actualizado": "11/08/2026 20:33",
+  "meta_actualizado": "11/08/2026 20:33",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 194,
-    "gasto": 8625.27,
-    "cpl": 44.46,
-    "citas": 16,
-    "visitas": 6,
-    "inscritos": 5
+    "leads_meta": 198,
+    "gasto": 8745.54,
+    "cpl": 44.17,
+    "citas": 17,
+    "visitas": 7,
+    "inscritos": 8
   },
   "campanas": [
     {
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 5844.17,
-      "impresiones": 82475,
-      "alcance": 61315,
-      "leads": 122,
-      "cpl": 47.9
+      "gasto": 5964.44,
+      "impresiones": 83642,
+      "alcance": 61787,
+      "leads": 126,
+      "cpl": 47.34
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 5844.17,
-      "leads": 122,
-      "cpl": 47.9
+      "gasto": 5964.44,
+      "leads": 126,
+      "cpl": 47.34
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -335,11 +335,11 @@
     },
     "2026-08-10": {
       "leads": 8,
-      "gasto": 429.42
+      "gasto": 430.13
     },
     "2026-08-11": {
-      "leads": 9,
-      "gasto": 762.82
+      "leads": 13,
+      "gasto": 882.38
     }
   },
   "sucursales": {
@@ -349,15 +349,15 @@
       "no_contesta": 24,
       "citas": 5,
       "visitas": 2,
-      "inscritos": 3
+      "inscritos": 5
     },
     "IZTACALCO": {
       "leads": 52,
       "llamadas": 30,
       "no_contesta": 26,
-      "citas": 7,
-      "visitas": 0,
-      "inscritos": 0
+      "citas": 8,
+      "visitas": 1,
+      "inscritos": 1
     },
     "ERMITA": {
       "leads": 52,
@@ -437,8 +437,8 @@
       "nombre": "Priscila Cuevas",
       "tel": "5632317308",
       "fecha_cita": "07/08/26 3:30",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Visita examen de colocación"
     },
     {
@@ -470,7 +470,7 @@
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "GAbriela",
+      "nombre": "Gabriela",
       "tel": "5559033089",
       "fecha_cita": "05/08/26 3:00",
       "asistio": false,
@@ -488,7 +488,7 @@
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Staphany Grajeda",
+      "nombre": "Stephany Grajeda",
       "tel": "5545824465",
       "fecha_cita": "10/08/26 2:00",
       "asistio": true,
@@ -518,7 +518,7 @@
       "nombre": "Berenice Vazquez/Mariano Tapia",
       "tel": "5573634927",
       "fecha_cita": "07/08/26 7:30",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
       "obs": "Clasae muestra línea"
     },
