@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "11/08/2026 12:39",
-  "meta_actualizado": "11/08/2026 12:39",
+  "actualizado": "11/08/2026 16:45",
+  "meta_actualizado": "11/08/2026 16:45",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 187,
-    "gasto": 7963.66,
-    "cpl": 42.59,
+    "leads_meta": 194,
+    "gasto": 8625.27,
+    "cpl": 44.46,
     "citas": 16,
     "visitas": 6,
     "inscritos": 5
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 5182.56,
-      "impresiones": 75438,
-      "alcance": 56252,
-      "leads": 115,
-      "cpl": 45.07
+      "gasto": 5844.17,
+      "impresiones": 82475,
+      "alcance": 61315,
+      "leads": 122,
+      "cpl": 47.9
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 5182.56,
-      "leads": 115,
-      "cpl": 45.07
+      "gasto": 5844.17,
+      "leads": 122,
+      "cpl": 47.9
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -335,11 +335,11 @@ const DATA_INGLES = {
     },
     "2026-08-10": {
       "leads": 8,
-      "gasto": 428.41
+      "gasto": 429.42
     },
     "2026-08-11": {
-      "leads": 2,
-      "gasto": 102.22
+      "leads": 9,
+      "gasto": 762.82
     }
   },
   "sucursales": {
@@ -494,6 +494,15 @@ const DATA_INGLES = {
       "asistio": true,
       "inscrito": false,
       "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Megan Avalos /Ana Araujo",
+      "tel": "55444514002",
+      "fecha_cita": "11/08/26 9:00",
+      "asistio": true,
+      "inscrito": true,
+      "obs": ""
     },
     {
       "sucursal": "IZTACALCO",
