@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "14/08/2026 16:39",
-  "meta_actualizado": "14/08/2026 16:39",
+  "actualizado": "14/08/2026 20:21",
+  "meta_actualizado": "14/08/2026 20:21",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 228,
-    "gasto": 10690.45,
-    "cpl": 46.89,
+    "gasto": 10807.06,
+    "cpl": 47.4,
     "citas": 21,
     "visitas": 7,
     "inscritos": 8
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 7909.35,
-      "impresiones": 115009,
-      "alcance": 79585,
+      "gasto": 8025.96,
+      "impresiones": 115728,
+      "alcance": 79733,
       "leads": 156,
-      "cpl": 50.7
+      "cpl": 51.45
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 7909.35,
+      "gasto": 8025.96,
       "leads": 156,
-      "cpl": 50.7
+      "cpl": 51.45
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -347,11 +347,11 @@ const DATA_INGLES = {
     },
     "2026-08-13": {
       "leads": 11,
-      "gasto": 802.71
+      "gasto": 803.7
     },
     "2026-08-14": {
       "leads": 4,
-      "gasto": 158.85
+      "gasto": 274.47
     }
   },
   "sucursales": {
@@ -494,7 +494,7 @@ const DATA_INGLES = {
       "nombre": "Pamela lópez",
       "tel": "5545257264",
       "fecha_cita": "13/08/26 3:00",
-      "asistio": false,
+      "asistio": true,
       "inscrito": false,
       "obs": "Examen de colocación 2 hermanas"
     },
@@ -518,7 +518,7 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "Angelicca garcia",
+      "nombre": "Angelica garcia",
       "tel": "554287383859",
       "fecha_cita": "12/08/26 11:00",
       "asistio": true,
@@ -527,7 +527,7 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "LINDAVISTA",
-      "nombre": "alejandro martinez",
+      "nombre": "alejandro martinez /pauliana Martínez",
       "tel": "5521492324",
       "fecha_cita": "13/08/26 11:00",
       "asistio": true,
