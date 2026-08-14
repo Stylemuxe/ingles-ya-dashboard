@@ -1,14 +1,14 @@
 const DATA_INGLES = {
-  "actualizado": "13/08/2026 20:29",
-  "meta_actualizado": "13/08/2026 20:29",
+  "actualizado": "14/08/2026 01:02",
+  "meta_actualizado": "14/08/2026 01:02",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 218,
-    "gasto": 10244.76,
-    "cpl": 46.99,
-    "citas": 17,
+    "gasto": 10305.53,
+    "cpl": 47.27,
+    "citas": 21,
     "visitas": 7,
     "inscritos": 8
   },
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 7463.66,
-      "impresiones": 107561,
-      "alcance": 75533,
+      "gasto": 7524.43,
+      "impresiones": 107922,
+      "alcance": 75629,
       "leads": 146,
-      "cpl": 51.12
+      "cpl": 51.54
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 7463.66,
+      "gasto": 7524.43,
       "leads": 146,
-      "cpl": 51.12
+      "cpl": 51.54
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -343,35 +343,35 @@ const DATA_INGLES = {
     },
     "2026-08-12": {
       "leads": 6,
-      "gasto": 569.47
+      "gasto": 569.96
     },
     "2026-08-13": {
       "leads": 5,
-      "gasto": 516.51
+      "gasto": 576.79
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 52,
-      "llamadas": 30,
-      "no_contesta": 24,
-      "citas": 5,
+      "leads": 57,
+      "llamadas": 34,
+      "no_contesta": 25,
+      "citas": 6,
       "visitas": 2,
       "inscritos": 5
     },
     "IZTACALCO": {
-      "leads": 52,
-      "llamadas": 30,
-      "no_contesta": 26,
-      "citas": 8,
+      "leads": 57,
+      "llamadas": 34,
+      "no_contesta": 27,
+      "citas": 9,
       "visitas": 1,
       "inscritos": 1
     },
     "ERMITA": {
-      "leads": 52,
-      "llamadas": 15,
-      "no_contesta": 31,
-      "citas": 4,
+      "leads": 56,
+      "llamadas": 17,
+      "no_contesta": 33,
+      "citas": 6,
       "visitas": 4,
       "inscritos": 2
     }
@@ -513,6 +513,33 @@ const DATA_INGLES = {
       "obs": ""
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelicca garcia",
+      "tel": "554287383859",
+      "fecha_cita": "12/08/26 11:00",
+      "asistio": true,
+      "inscrito": false,
+      "obs": "clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "alejandro martinez",
+      "tel": "5521492324",
+      "fecha_cita": "13/08/26 11:00",
+      "asistio": true,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Alma liliar Resendiz mora",
+      "tel": "5516920799",
+      "fecha_cita": "14/08/26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "uno a uno"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
@@ -567,6 +594,15 @@ const DATA_INGLES = {
       "obs": "Clase en línea"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Melissa",
+      "tel": "5564871978",
+      "fecha_cita": "17/08/26 9:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
@@ -582,7 +618,7 @@ const DATA_INGLES = {
       "fecha_cita": "10-08-26 9:00",
       "asistio": false,
       "inscrito": false,
-      "obs": "Clase muestra en líne"
+      "obs": ""
     },
     {
       "sucursal": "ERMITA",
@@ -601,6 +637,42 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muerstra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Vianey Merida",
+      "tel": "5637425075",
+      "fecha_cita": "22-08-36 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Mamá Pilar Avalos/itzayana Irineo",
+      "tel": "5543523489",
+      "fecha_cita": "15-08-26 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Informes TOEFL"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Erandi  irineo",
+      "tel": "5543523489",
+      "fecha_cita": "15-08-26 12:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Gabriel",
+      "tel": "5612574686",
+      "fecha_cita": "14-08-26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
     }
   ]
 };
