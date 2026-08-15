@@ -1,16 +1,16 @@
 {
-  "actualizado": "14/08/2026 20:21",
-  "meta_actualizado": "14/08/2026 20:21",
+  "actualizado": "15/08/2026 00:37",
+  "meta_actualizado": "15/08/2026 00:37",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 228,
-    "gasto": 10807.06,
-    "cpl": 47.4,
+    "leads_meta": 234,
+    "gasto": 11120.3,
+    "cpl": 47.52,
     "citas": 21,
-    "visitas": 7,
-    "inscritos": 8
+    "visitas": 10,
+    "inscritos": 10
   },
   "campanas": [
     {
@@ -18,11 +18,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 8025.96,
-      "impresiones": 115728,
-      "alcance": 79733,
-      "leads": 156,
-      "cpl": 51.45
+      "gasto": 8339.2,
+      "impresiones": 120750,
+      "alcance": 81437,
+      "leads": 162,
+      "cpl": 51.48
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8025.96,
-      "leads": 156,
-      "cpl": 51.45
+      "gasto": 8339.2,
+      "leads": 162,
+      "cpl": 51.48
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -347,34 +347,34 @@
     },
     "2026-08-13": {
       "leads": 11,
-      "gasto": 803.7
+      "gasto": 804.29
     },
     "2026-08-14": {
-      "leads": 4,
-      "gasto": 274.47
+      "leads": 10,
+      "gasto": 587.12
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 57,
-      "llamadas": 34,
-      "no_contesta": 25,
+      "leads": 61,
+      "llamadas": 36,
+      "no_contesta": 27,
       "citas": 6,
-      "visitas": 2,
-      "inscritos": 5
+      "visitas": 4,
+      "inscritos": 6
     },
     "IZTACALCO": {
-      "leads": 57,
-      "llamadas": 34,
-      "no_contesta": 27,
+      "leads": 61,
+      "llamadas": 36,
+      "no_contesta": 29,
       "citas": 9,
-      "visitas": 1,
-      "inscritos": 1
+      "visitas": 2,
+      "inscritos": 2
     },
     "ERMITA": {
-      "leads": 56,
-      "llamadas": 17,
-      "no_contesta": 33,
+      "leads": 59,
+      "llamadas": 19,
+      "no_contesta": 34,
       "citas": 6,
       "visitas": 4,
       "inscritos": 2
@@ -496,7 +496,7 @@
       "fecha_cita": "13/08/26 3:00",
       "asistio": true,
       "inscrito": false,
-      "obs": "Examen de colocación 2 hermanas"
+      "obs": "Examen de colocación 2 hermanas ( martes paga)"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -519,11 +519,11 @@
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Angelica garcia",
-      "tel": "554287383859",
+      "tel": "5542873838",
       "fecha_cita": "12/08/26 11:00",
       "asistio": true,
       "inscrito": false,
-      "obs": "clase muestra"
+      "obs": "clase muestra sábado"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -532,15 +532,15 @@
       "fecha_cita": "13/08/26 11:00",
       "asistio": true,
       "inscrito": false,
-      "obs": "Clase muestra"
+      "obs": "(sabado paga)"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Alma liliar Resendiz mora",
       "tel": "5516920799",
       "fecha_cita": "14/08/26 11:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": true,
+      "inscrito": true,
       "obs": "uno a uno"
     },
     {
