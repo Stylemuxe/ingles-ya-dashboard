@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "15/08/2026 12:16",
-  "meta_actualizado": "15/08/2026 12:16",
+  "actualizado": "15/08/2026 16:11",
+  "meta_actualizado": "15/08/2026 16:11",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 239,
-    "gasto": 11322.66,
-    "cpl": 47.38,
+    "leads_meta": 242,
+    "gasto": 11455.66,
+    "cpl": 47.34,
     "citas": 21,
     "visitas": 10,
     "inscritos": 10
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 8541.56,
-      "impresiones": 124123,
-      "alcance": 82903,
-      "leads": 167,
-      "cpl": 51.15
+      "gasto": 8674.56,
+      "impresiones": 125582,
+      "alcance": 83479,
+      "leads": 170,
+      "cpl": 51.03
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8541.56,
-      "leads": 167,
-      "cpl": 51.15
+      "gasto": 8674.56,
+      "leads": 170,
+      "cpl": 51.03
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -351,11 +351,11 @@ const DATA_INGLES = {
     },
     "2026-08-14": {
       "leads": 12,
-      "gasto": 740.31
+      "gasto": 740.93
     },
     "2026-08-15": {
-      "leads": 3,
-      "gasto": 48.94
+      "leads": 6,
+      "gasto": 181.32
     }
   },
   "sucursales": {
@@ -609,6 +609,15 @@ const DATA_INGLES = {
       "asistio": false,
       "inscrito": false,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Emanuel Troya /Itzuri Daniela",
+      "tel": "5583256058",
+      "fecha_cita": "22/08/26 11:00",
+      "asistio": false,
+      "inscrito": false,
+      "obs": "Examen de colocación"
     },
     {
       "sucursal": "ERMITA",
