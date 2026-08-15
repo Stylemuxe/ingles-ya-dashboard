@@ -1,16 +1,16 @@
 const DATA_INGLES = {
-  "actualizado": "15/08/2026 16:11",
-  "meta_actualizado": "15/08/2026 16:11",
+  "actualizado": "15/08/2026 20:10",
+  "meta_actualizado": "15/08/2026 20:10",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 242,
-    "gasto": 11455.66,
-    "cpl": 47.34,
-    "citas": 21,
+    "leads_meta": 244,
+    "gasto": 11588.52,
+    "cpl": 47.49,
+    "citas": 24,
     "visitas": 10,
-    "inscritos": 10
+    "inscritos": 11
   },
   "campanas": [
     {
@@ -18,11 +18,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 8674.56,
-      "impresiones": 125582,
-      "alcance": 83479,
-      "leads": 170,
-      "cpl": 51.03
+      "gasto": 8807.42,
+      "impresiones": 127392,
+      "alcance": 84644,
+      "leads": 172,
+      "cpl": 51.21
     },
     {
       "id": "52515312914962",
@@ -174,9 +174,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8674.56,
-      "leads": 170,
-      "cpl": 51.03
+      "gasto": 8807.42,
+      "leads": 172,
+      "cpl": 51.21
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -351,35 +351,35 @@ const DATA_INGLES = {
     },
     "2026-08-14": {
       "leads": 12,
-      "gasto": 740.93
+      "gasto": 741.07
     },
     "2026-08-15": {
-      "leads": 6,
-      "gasto": 181.32
+      "leads": 8,
+      "gasto": 314.04
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 61,
-      "llamadas": 36,
-      "no_contesta": 27,
+      "leads": 64,
+      "llamadas": 37,
+      "no_contesta": 29,
       "citas": 6,
       "visitas": 4,
-      "inscritos": 6
+      "inscritos": 7
     },
     "IZTACALCO": {
-      "leads": 61,
-      "llamadas": 36,
-      "no_contesta": 29,
-      "citas": 9,
+      "leads": 64,
+      "llamadas": 37,
+      "no_contesta": 31,
+      "citas": 10,
       "visitas": 2,
       "inscritos": 2
     },
     "ERMITA": {
-      "leads": 59,
-      "llamadas": 19,
-      "no_contesta": 34,
-      "citas": 6,
+      "leads": 62,
+      "llamadas": 20,
+      "no_contesta": 36,
+      "citas": 8,
       "visitas": 4,
       "inscritos": 2
     }
@@ -535,7 +535,7 @@ const DATA_INGLES = {
       "tel": "5521492324",
       "fecha_cita": "13/08/26 11:00",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": true,
       "obs": "(sabado paga)"
     },
     {
