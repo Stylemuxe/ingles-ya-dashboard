@@ -255,6 +255,18 @@ nav::-webkit-scrollbar { height: 0; }
   border-top:1px dashed rgba(var(--fg-rgb),.08); padding-top:8px; margin-top:8px;
 }
 .guia-card .gc-read b { color:var(--text); }
+.guia-card .gc-src {
+  font-size:11.5px; color:#ffb800; line-height:1.55;
+  background:rgba(255,184,0,.08); border:1px solid rgba(255,184,0,.2);
+  border-radius:8px; padding:7px 10px; margin-top:8px;
+}
+.guia-card .gc-src b { color:#ffb800; }
+.fin-fuente {
+  margin:0 18px 16px; padding:10px 14px; border-radius:10px;
+  background:rgba(255,184,0,.06); border:1px solid rgba(255,184,0,.16);
+  font-size:11.5px; color:var(--muted); line-height:1.5;
+}
+.fin-fuente b { color:#ffb800; }
 .guia-good { color:var(--green); font-weight:700; }
 .guia-warn { color:var(--orange); font-weight:700; }
 .guia-bad  { color:var(--pink); font-weight:700; }
@@ -1027,6 +1039,35 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
   </div>
 
+  <div class="guia-section-title">💰 Asistencia, Ticket y Gastos (tarjetas nuevas — pedido de Vic)</div>
+  <div class="guia-grid">
+
+    <div class="guia-card" style="--gc:#00c2a8">
+      <h3>🚶 % Asistencia <span class="gc-tag">Porcentaje</span></h3>
+      <div class="gc-def">De las citas agendadas en cada sucursal, <b>cuántas efectivamente se presentaron</b> al plantel (no solo agendaron, sino que llegaron).</div>
+      <div class="gc-calc">% Asistencia = Asistieron ÷ (Asistieron + No asistieron) × 100<br>Solo cuenta citas que YA tienen dato de SÍ/NO capturado. Las que aún están en blanco se muestran como "Pendiente" y no afectan el %.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si el % es bajo, la gente agenda pero no llega — hay que reforzar confirmación/recordatorio de cita.</div>
+      <div class="gc-src">📋 <b>Fuente:</b> Hoja Agenda de Google Sheets (una pestaña por sucursal: LIN / IZT / ERM), columna "ASIS" que llena el equipo de cada plantel cita por cita.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#ffb800">
+      <h3>🎟️ Ticket Promedio <span class="gc-tag">Dinero</span></h3>
+      <div class="gc-def">Cuánto paga <b>en promedio</b> cada alumno que se inscribe ese mes.</div>
+      <div class="gc-calc">Ticket Prom = Ingresos del mes ÷ Inscritos del mes.<br>Si Vic ya escribió el número exacto en la celda "TICKET PROM" del sheet, se usa ese; si no, el dashboard lo calcula solo con esa fórmula.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> compáralo contra la beca mínima ($980) y las mensualidades reales — te dice si se está vendiendo con mucho descuento o a precio de lista.</div>
+      <div class="gc-src">📋 <b>Fuente:</b> Sheet de seguimiento diario (pestaña del mes), columna "PAGO POR ALUMNO" por sucursal + celda "TICKET PROM" del bloque de cierre de mes.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#E02020">
+      <h3>💰 Finanzas del Mes <span class="gc-tag">Ingresos / Gastos / Utilidad</span></h3>
+      <div class="gc-def">Compara lo que <b>entró</b> (Ingresos, o sea la suma de lo que pagaron los inscritos) contra lo que <b>salió</b> (Gastos: Meta Ads + sueldo de Fabián + sueldo de Yolanda) para dar la <b>Utilidad</b> del mes.</div>
+      <div class="gc-calc">Utilidad = Ingresos − (Meta Ads + Fabián + Yolanda)</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si la Utilidad es negativa, ese mes se gastó más de lo que entró — hay que revisar de dónde viene el hueco (gasto de pauta muy alto, pocos inscritos, etc.)</div>
+      <div class="gc-src">📋 <b>Fuente:</b> mismo sheet de seguimiento diario, bloque "GASTOS / INGRESOS / UTILIDAD" que Vic llena a mano al cerrar cada mes (columnas META, FABIÁN, YOLANDA). Si todavía no cierra el mes, esta tarjeta sale vacía — no es un error del dashboard, es que falta esa captura.</div>
+    </div>
+
+  </div>
+
   <div class="guia-section-title">📁 Términos de la pauta (pestañas Campañas y Ad Sets)</div>
   <div class="guia-grid">
 
@@ -1753,7 +1794,8 @@ function renderFinanzas() {
       <div class="fin-gasto-item"><span class="fin-gasto-lbl">📣 Meta Ads</span><span class="fin-gasto-val">${$m(g.meta_ads)}</span></div>
       <div class="fin-gasto-item"><span class="fin-gasto-lbl">👤 Fabián</span><span class="fin-gasto-val">${$m(g.fabian)}</span></div>
       <div class="fin-gasto-item"><span class="fin-gasto-lbl">👤 Yolanda</span><span class="fin-gasto-val">${$m(g.yolanda)}</span></div>
-    </div>`;
+    </div>
+    <div class="fin-fuente">📋 <b>¿De dónde sale esto?</b> Ingresos y Ticket Promedio vienen de la columna "PAGO POR ALUMNO" del sheet de seguimiento diario. Gastos/Utilidad vienen del bloque que Vic llena a mano al cerrar el mes (columnas META, FABIÁN, YOLANDA). Más detalle en la pestaña 📖 Guía.</div>`;
 }
 
 const SUC_COLOR = {
@@ -2027,8 +2069,8 @@ function renderSucCards() {
         <span class="conv-label">Lead → Inscrito</span>
         <span class="conv-rate">${pct(v.inscritos||0, leads)}</span>
       </div>
-      <div class="suc-foot">
-        <span class="conv-label">🚶 % Asistencia (citas c/dato)</span>
+      <div class="suc-foot" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Solo cuenta citas con SÍ/NO ya capturado.">
+        <span class="conv-label">🚶 % Asistencia (citas c/dato) <span class="kpi-info" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Solo cuenta citas con SÍ/NO ya capturado — ver pestaña 📖 Guía para más detalle.">i</span></span>
         <span class="conv-rate" style="color:#00c2a8">${(v.asistieron||v.no_asistieron)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}</span>
       </div>
     </div>`;
