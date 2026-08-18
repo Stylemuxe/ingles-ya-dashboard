@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "18/08/2026 00:37",
-  "meta_actualizado": "18/08/2026 00:37",
+  "actualizado": "18/08/2026 16:18",
+  "meta_actualizado": "18/08/2026 16:18",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 266,
-    "gasto": 13184.43,
-    "cpl": 49.57,
+    "leads_meta": 276,
+    "gasto": 13665.73,
+    "cpl": 49.51,
     "citas": 27,
     "visitas": 11,
     "inscritos": 11,
@@ -16,8 +16,19 @@ const DATA_INGLES = {
     "no_asistieron": 4,
     "sin_dato_asistencia": 9,
     "tasa_asistencia": 81.8,
-    "ingresos": 29568.0,
-    "ticket_promedio": 2688.0
+    "ingresos": 29.568,
+    "ticket_promedio": 2.688
+  },
+  "financiero": {
+    "ingresos": 29.568,
+    "utilidad": 89100.0,
+    "ticket_promedio": 2.688,
+    "gastos": {
+      "meta_ads": 11.977,
+      "fabian": 12.0,
+      "yolanda": 4.7,
+      "total": 28.68
+    }
   },
   "campanas": [
     {
@@ -25,11 +36,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 10403.33,
-      "impresiones": 152766,
-      "alcance": 100249,
-      "leads": 194,
-      "cpl": 53.63
+      "gasto": 10884.63,
+      "impresiones": 157309,
+      "alcance": 102443,
+      "leads": 204,
+      "cpl": 53.36
     },
     {
       "id": "52515312914962",
@@ -181,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 10403.33,
-      "leads": 194,
-      "cpl": 53.63
+      "gasto": 10886.36,
+      "leads": 204,
+      "cpl": 53.36
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -366,11 +377,15 @@ const DATA_INGLES = {
     },
     "2026-08-16": {
       "leads": 7,
-      "gasto": 718.38
+      "gasto": 718.66
     },
     "2026-08-17": {
+      "leads": 10,
+      "gasto": 780.9
+    },
+    "2026-08-18": {
       "leads": 9,
-      "gasto": 641.63
+      "gasto": 343.48
     }
   },
   "sucursales": {
@@ -476,7 +491,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Eliot",
       "tel": "5647517297",
-      "fecha_cita": "01-08-2026",
+      "fecha_cita": "01/08/26 12:00",
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
@@ -485,7 +500,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Priscila Cuevas",
       "tel": "5632317308",
-      "fecha_cita": "07-08-2026",
+      "fecha_cita": "07/08/26 3:30",
       "asistio": true,
       "inscrito": true,
       "obs": "Visita examen de colocación"
@@ -494,7 +509,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Airy",
       "tel": "5566779585",
-      "fecha_cita": "05-08-2026",
+      "fecha_cita": "05/08/26 9:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Examen de colocaión"
@@ -503,7 +518,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Vanessa",
       "tel": "5512920422",
-      "fecha_cita": "08-08-2026",
+      "fecha_cita": "08/08/26 9:00",
       "asistio": false,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -512,7 +527,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Barbara Arzola",
       "tel": "5529419946",
-      "fecha_cita": "06-08-2026",
+      "fecha_cita": "06/08/26 9:00",
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra y examen de colocaion"
@@ -521,7 +536,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Gabriela",
       "tel": "5559033089",
-      "fecha_cita": "05-08-2026",
+      "fecha_cita": "05/08/26 3:00",
       "asistio": false,
       "inscrito": null,
       "obs": "Clase muestra y examen de colocaion"
@@ -530,7 +545,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Pamela lópez",
       "tel": "5545257264",
-      "fecha_cita": "13-08-2026",
+      "fecha_cita": "13/08/26 3:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Examen de colocación 2 hermanas ( martes paga)"
@@ -539,7 +554,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Stephany Grajeda",
       "tel": "5545824465",
-      "fecha_cita": "10-08-2026",
+      "fecha_cita": "10/08/26 2:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Visita al plantel"
@@ -548,7 +563,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Megan Avalos /Ana Araujo",
       "tel": "55444514002",
-      "fecha_cita": "11-08-2026",
+      "fecha_cita": "11/08/26 9:00",
       "asistio": true,
       "inscrito": true,
       "obs": ""
@@ -557,7 +572,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Angelica garcia",
       "tel": "5542873859",
-      "fecha_cita": "12-08-2026",
+      "fecha_cita": "12/08/26 11:00",
       "asistio": true,
       "inscrito": null,
       "obs": "clase muestra sábado"
@@ -566,7 +581,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "alejandro martinez /pauliana Martínez",
       "tel": "5521492324",
-      "fecha_cita": "13-08-2026",
+      "fecha_cita": "13/08/26 11:00",
       "asistio": true,
       "inscrito": true,
       "obs": "(sabado paga)"
@@ -575,7 +590,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Alma liliar Resendiz mora",
       "tel": "5516920799",
-      "fecha_cita": "14-08-2026",
+      "fecha_cita": "14/08/26 11:00",
       "asistio": true,
       "inscrito": true,
       "obs": "uno a uno"
@@ -584,7 +599,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
-      "fecha_cita": "03-08-2026",
+      "fecha_cita": "03/08/26 9:00",
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra"
@@ -593,7 +608,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Berenice Vazquez/Mariano Tapia",
       "tel": "5573634927",
-      "fecha_cita": "07-08-2026",
+      "fecha_cita": "07/08/26 7:30",
       "asistio": true,
       "inscrito": null,
       "obs": "Clasae muestra línea"
@@ -602,7 +617,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Mirella Emelia perez",
       "tel": "5652292387",
-      "fecha_cita": "07-08-2026",
+      "fecha_cita": "07/08/26 7:30",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra línea"
@@ -611,7 +626,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Alejandro",
       "tel": "5519058497",
-      "fecha_cita": "07-08-2026",
+      "fecha_cita": "07/08/26 7:30",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra línea"
@@ -620,7 +635,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Alfredo armando Acosta",
       "tel": "5539550418",
-      "fecha_cita": "12-08-2026",
+      "fecha_cita": "12/08/26 5:00",
       "asistio": null,
       "inscrito": null,
       "obs": "CLase muestra"
@@ -629,7 +644,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Paula",
       "tel": "5582355533",
-      "fecha_cita": "07-08-2026",
+      "fecha_cita": "07/08/26 6:30",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase en línea"
@@ -638,7 +653,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Melissa",
       "tel": "5564871978",
-      "fecha_cita": "17-08-2026",
+      "fecha_cita": "17/08/26 9:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -647,7 +662,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Emanuel Troya /Itzuri Daniela",
       "tel": "5583256058",
-      "fecha_cita": "22-08-2026",
+      "fecha_cita": "22/08/26 11:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Examen de colocación"
@@ -656,7 +671,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "carlos Omar Chavez Yañez",
       "tel": "5578823552",
-      "fecha_cita": "17-08-2026",
+      "fecha_cita": "17/08/26 2:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Visita el plantel"
@@ -665,7 +680,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Erika Lopez e hija",
       "tel": "5548231114",
-      "fecha_cita": "21-08-2026",
+      "fecha_cita": "21/08/26 7:30",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase mustra en línea"
@@ -674,7 +689,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
-      "fecha_cita": "04-08-2026",
+      "fecha_cita": "04-08-26 9:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Clae muestra y examen de coloca"
@@ -683,7 +698,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Isaac Reyes Alvarez",
       "tel": "5566779585",
-      "fecha_cita": "10-08-2026",
+      "fecha_cita": "10-08-26 9:00",
       "asistio": false,
       "inscrito": null,
       "obs": ""
@@ -692,7 +707,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Rodolfo",
       "tel": "5558262960",
-      "fecha_cita": "05-08-2026",
+      "fecha_cita": "05-08-26 4:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -701,7 +716,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Lucia Flores Ayala",
       "tel": "5527220028",
-      "fecha_cita": "06-08-2026",
+      "fecha_cita": "06/08/26 9:00",
       "asistio": false,
       "inscrito": null,
       "obs": "Clase muerstra"
@@ -719,7 +734,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Mamá Pilar Avalos/itzayana Irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-2026",
+      "fecha_cita": "15-08-26 12:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Informes TOEFL"
@@ -728,7 +743,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Erandi  irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-2026",
+      "fecha_cita": "15-08-26 12:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -737,7 +752,7 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Gabriel",
       "tel": "5612574686",
-      "fecha_cita": "14-08-2026",
+      "fecha_cita": "14-08-26 11:00",
       "asistio": true,
       "inscrito": true,
       "obs": "Examen de colocación"
@@ -746,21 +761,10 @@ const DATA_INGLES = {
       "sucursal": "ERMITA",
       "nombre": "Beatriz Martínez",
       "tel": "5566244326",
-      "fecha_cita": "20-08-2026",
+      "fecha_cita": "20-08-26 5:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clasae meustra"
     }
-  ],
-  "financiero": {
-    "ingresos": 29568.0,
-    "utilidad": 891.0,
-    "ticket_promedio": 2688.0,
-    "gastos": {
-      "meta_ads": 11977.0,
-      "fabian": 12000.0,
-      "yolanda": 4700.0,
-      "total": 28677.0
-    }
-  }
+  ]
 };
