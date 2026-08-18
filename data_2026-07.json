@@ -10,7 +10,14 @@
     "cpl": 36.7,
     "citas": 37,
     "visitas": 9,
-    "inscritos": 14
+    "inscritos": 14,
+    "citas_agendadas": 36,
+    "asistieron": 11,
+    "no_asistieron": 4,
+    "sin_dato_asistencia": 21,
+    "tasa_asistencia": 73.3,
+    "ingresos": 45145.0,
+    "ticket_promedio": 3224.64
   },
   "campanas": [
     {
@@ -418,7 +425,13 @@
       "no_contesta": 44,
       "citas": 16,
       "visitas": 4,
-      "inscritos": 7
+      "inscritos": 7,
+      "citas_agendadas": 15,
+      "asistieron": 6,
+      "no_asistieron": 2,
+      "sin_dato": 7,
+      "tasa_asistencia": 75.0,
+      "tasa_asistencia_total": 40.0
     },
     "IZTACALCO": {
       "leads": 80,
@@ -426,7 +439,13 @@
       "no_contesta": 45,
       "citas": 12,
       "visitas": 1,
-      "inscritos": 3
+      "inscritos": 3,
+      "citas_agendadas": 8,
+      "asistieron": 1,
+      "no_asistieron": 0,
+      "sin_dato": 7,
+      "tasa_asistencia": 100.0,
+      "tasa_asistencia_total": 12.5
     },
     "ERMITA": {
       "leads": 81,
@@ -434,7 +453,13 @@
       "no_contesta": 51,
       "citas": 9,
       "visitas": 4,
-      "inscritos": 4
+      "inscritos": 4,
+      "citas_agendadas": 13,
+      "asistieron": 4,
+      "no_asistieron": 2,
+      "sin_dato": 7,
+      "tasa_asistencia": 66.7,
+      "tasa_asistencia_total": 30.8
     }
   },
   "metas_leads": {
@@ -1110,18 +1135,18 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Beatriz mesisas",
       "tel": "5523269915",
-      "fecha_cita": "09-07-26 3:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "09-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Visita al plantel"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Liliana Durán",
       "tel": "5532690133",
-      "fecha_cita": "07/07/2026",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "07-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "visita la plantel"
     },
     {
@@ -1129,7 +1154,7 @@
       "nombre": "Arturo Alonso",
       "tel": "5527728487",
       "fecha_cita": "PENDIENTE",
-      "asistio": false,
+      "asistio": null,
       "inscrito": false,
       "obs": "Examen de colocación"
     },
@@ -1137,7 +1162,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "azucena Sanchez /Tonalli salvador",
       "tel": "5535228100",
-      "fecha_cita": "08-07-26 5:00",
+      "fecha_cita": "08-07-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "conocer el plantel"
@@ -1146,16 +1171,16 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Carlos Hurtado",
       "tel": "Facebook",
-      "fecha_cita": "11-07-26 9:00",
+      "fecha_cita": "11-07-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Vino, pendiente sigue pendiente"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Angelica Morales",
       "tel": "5520728743",
-      "fecha_cita": "10-07-26 11:00",
+      "fecha_cita": "10-07-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Inscribir a sus dos hijos ya tiene toda la información"
@@ -1163,26 +1188,26 @@
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Isela",
-      "tel": "5530291231",
-      "fecha_cita": "16-07-26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "tel": "55 3029 1231",
+      "fecha_cita": "16-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "vista plantel"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Juan",
       "tel": "5545030189",
-      "fecha_cita": "16/07/26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "16-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Eunice",
       "tel": "5526572077",
-      "fecha_cita": "20/07/26 0:00",
+      "fecha_cita": "20-07-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
@@ -1191,34 +1216,34 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Miriam Carolina Santos",
       "tel": "5616538043",
-      "fecha_cita": "22/07/26 3:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "22-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Visita al plantel"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Adriana Pineda /hijo",
       "tel": "5571803205",
-      "fecha_cita": "27/07/26 4:00",
+      "fecha_cita": "27-07-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Vista al plantel y examen de colocación"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Dorian",
       "tel": "2221631690",
-      "fecha_cita": "06/08/26 10:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "06-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Examen TOEFL (siguiente semana)"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Paula /Davis ornelas",
       "tel": "5532635325",
-      "fecha_cita": "06/08/26 10:00",
+      "fecha_cita": "06-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Examen TOEFL"
@@ -1227,7 +1252,7 @@
       "sucursal": "LINDAVISTA",
       "nombre": "Adamarys",
       "tel": "5545705811",
-      "fecha_cita": "29/07/26 9:00",
+      "fecha_cita": "29-07-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "examaen d colocación"
@@ -1236,9 +1261,9 @@
       "sucursal": "LINDAVISTA",
       "nombre": "julia",
       "tel": "5521725165",
-      "fecha_cita": "31/07/26 9:00",
+      "fecha_cita": "31-07-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
@@ -1246,33 +1271,33 @@
       "nombre": "Beverly",
       "tel": "5535181159",
       "fecha_cita": "08-07-26 abierta",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": null,
+      "inscrito": null,
       "obs": "conocer el plantel"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Gladys / Diego Lopez",
       "tel": "5564321807",
-      "fecha_cita": "17/07/26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "17-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase musestra visita al plantel"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Sra. Elvira",
       "tel": "5559976551",
-      "fecha_cita": "18-07-26 11:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "18-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra (pendiente)"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Lorena gomez/miguel",
       "tel": "5549032712",
-      "fecha_cita": "24-07-26 5:00",
+      "fecha_cita": "24-07-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
@@ -1281,72 +1306,81 @@
       "sucursal": "IZTACALCO",
       "nombre": "Alex hijo",
       "tel": "5534711832",
-      "fecha_cita": "05/08/26 3:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "05-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "nanci /hija",
       "tel": "5632561537",
-      "fecha_cita": "30/07/26 3:30",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "30-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Visita al plantel"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Joss/hija",
       "tel": "5532708961",
-      "fecha_cita": "30/07/26 4:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "30-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Luis",
+      "tel": "3319629162",
+      "fecha_cita": "01-08-2026",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Janeth Romero",
       "tel": "5543186541",
-      "fecha_cita": "02-07-26 3:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "02-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra y examen de colocación"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Alejandra lopez hernandez",
       "tel": "5522160410",
-      "fecha_cita": "04-07-26 3:00",
+      "fecha_cita": "04-07-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra  (facebock)"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Diego",
       "tel": "5539593164",
-      "fecha_cita": "04-07-26 12:00",
+      "fecha_cita": "04-07-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra tiene conocimiento"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Ramon Alvarez",
       "tel": "5591973025",
-      "fecha_cita": "06-07-26 5:00",
+      "fecha_cita": "06-07-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra  60 años"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Sandra Mendoza",
       "tel": "5520505426",
-      "fecha_cita": "09-07-26 4:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "09-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "examen de colocación"
     },
     {
@@ -1354,72 +1388,83 @@
       "nombre": "Sra. Ruth",
       "tel": "5573489773",
       "fecha_cita": "16/07/26 hoario libre",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": null,
+      "inscrito": null,
       "obs": "conocer el plantel (llamada)"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Sra. Erica /hijo",
       "tel": "7791130868",
-      "fecha_cita": "16/07/2026",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "16-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Examen de colocación"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Ana",
       "tel": "5518645984",
-      "fecha_cita": "18-07-26 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "18-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Visita plantel"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Mercedes /Leslie cilelo",
       "tel": "5535765506",
-      "fecha_cita": "17-07-26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "17-07-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Rosa Isela /Eduardo mondragon",
       "tel": "5534129747",
-      "fecha_cita": "17-07-26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "17-07-2026",
+      "asistio": true,
+      "inscrito": true,
       "obs": "Examen de colocación"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Roman Ortiz",
       "tel": "2224813153",
-      "fecha_cita": "16-07-26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "16-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "sra.Judith/Emmy Ledesma",
       "tel": "5616684126",
-      "fecha_cita": "18-07-26 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "18-07-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Laura",
       "tel": "5519184224",
-      "fecha_cita": "01/07/26 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "01-07-2026",
+      "asistio": true,
+      "inscrito": true,
       "obs": "Clase muestra"
     }
-  ]
+  ],
+  "financiero": {
+    "ingresos": 45145.0,
+    "utilidad": 5156.0,
+    "ticket_promedio": 3224.64,
+    "gastos": {
+      "meta_ads": 14239.0,
+      "fabian": 12000.0,
+      "yolanda": 13750.0,
+      "total": 39989.0
+    }
+  }
 }

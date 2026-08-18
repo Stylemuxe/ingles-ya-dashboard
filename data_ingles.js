@@ -1,16 +1,23 @@
 const DATA_INGLES = {
-  "actualizado": "18/08/2026 12:22",
-  "meta_actualizado": "18/08/2026 12:22",
+  "actualizado": "18/08/2026 00:37",
+  "meta_actualizado": "18/08/2026 00:37",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 267,
-    "gasto": 13438.85,
-    "cpl": 50.33,
+    "leads_meta": 266,
+    "gasto": 13184.43,
+    "cpl": 49.57,
     "citas": 27,
     "visitas": 11,
-    "inscritos": 11
+    "inscritos": 11,
+    "citas_agendadas": 31,
+    "asistieron": 18,
+    "no_asistieron": 4,
+    "sin_dato_asistencia": 9,
+    "tasa_asistencia": 81.8,
+    "ingresos": 29568.0,
+    "ticket_promedio": 2688.0
   },
   "campanas": [
     {
@@ -18,11 +25,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 10657.75,
-      "impresiones": 155408,
-      "alcance": 101658,
-      "leads": 195,
-      "cpl": 54.66
+      "gasto": 10403.33,
+      "impresiones": 152766,
+      "alcance": 100249,
+      "leads": 194,
+      "cpl": 53.63
     },
     {
       "id": "52515312914962",
@@ -174,9 +181,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 10657.75,
-      "leads": 195,
-      "cpl": 54.66
+      "gasto": 10403.33,
+      "leads": 194,
+      "cpl": 53.63
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -359,15 +366,11 @@ const DATA_INGLES = {
     },
     "2026-08-16": {
       "leads": 7,
-      "gasto": 718.66
+      "gasto": 718.38
     },
     "2026-08-17": {
-      "leads": 10,
-      "gasto": 777.23
-    },
-    "2026-08-18": {
-      "leads": 0,
-      "gasto": 118.54
+      "leads": 9,
+      "gasto": 641.63
     }
   },
   "sucursales": {
@@ -377,7 +380,13 @@ const DATA_INGLES = {
       "no_contesta": 31,
       "citas": 6,
       "visitas": 4,
-      "inscritos": 7
+      "inscritos": 7,
+      "citas_agendadas": 12,
+      "asistieron": 10,
+      "no_asistieron": 2,
+      "sin_dato": 0,
+      "tasa_asistencia": 83.3,
+      "tasa_asistencia_total": 83.3
     },
     "IZTACALCO": {
       "leads": 68,
@@ -385,7 +394,13 @@ const DATA_INGLES = {
       "no_contesta": 31,
       "citas": 12,
       "visitas": 3,
-      "inscritos": 2
+      "inscritos": 2,
+      "citas_agendadas": 10,
+      "asistieron": 3,
+      "no_asistieron": 0,
+      "sin_dato": 7,
+      "tasa_asistencia": 100.0,
+      "tasa_asistencia_total": 30.0
     },
     "ERMITA": {
       "leads": 65,
@@ -393,7 +408,13 @@ const DATA_INGLES = {
       "no_contesta": 37,
       "citas": 9,
       "visitas": 4,
-      "inscritos": 2
+      "inscritos": 2,
+      "citas_agendadas": 9,
+      "asistieron": 5,
+      "no_asistieron": 2,
+      "sin_dato": 2,
+      "tasa_asistencia": 71.4,
+      "tasa_asistencia_total": 55.6
     }
   },
   "metas_leads": {
@@ -455,7 +476,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Eliot",
       "tel": "5647517297",
-      "fecha_cita": "01/08/26 12:00",
+      "fecha_cita": "01-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Clase muestra"
@@ -464,7 +485,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Priscila Cuevas",
       "tel": "5632317308",
-      "fecha_cita": "07/08/26 3:30",
+      "fecha_cita": "07-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "Visita examen de colocación"
@@ -473,25 +494,25 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Airy",
       "tel": "5566779585",
-      "fecha_cita": "05/08/26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "05-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Examen de colocaión"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Vanessa",
       "tel": "5512920422",
-      "fecha_cita": "08/08/26 9:00",
+      "fecha_cita": "08-08-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Barbara Arzola",
       "tel": "5529419946",
-      "fecha_cita": "06/08/26 9:00",
+      "fecha_cita": "06-08-2026",
       "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra y examen de colocaion"
@@ -500,34 +521,34 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Gabriela",
       "tel": "5559033089",
-      "fecha_cita": "05/08/26 3:00",
+      "fecha_cita": "05-08-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muestra y examen de colocaion"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Pamela lópez",
       "tel": "5545257264",
-      "fecha_cita": "13/08/26 3:00",
+      "fecha_cita": "13-08-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Examen de colocación 2 hermanas ( martes paga)"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Stephany Grajeda",
       "tel": "5545824465",
-      "fecha_cita": "10/08/26 2:00",
+      "fecha_cita": "10-08-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Visita al plantel"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Megan Avalos /Ana Araujo",
       "tel": "55444514002",
-      "fecha_cita": "11/08/26 9:00",
+      "fecha_cita": "11-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": ""
@@ -536,16 +557,16 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Angelica garcia",
       "tel": "5542873859",
-      "fecha_cita": "12/08/26 11:00",
+      "fecha_cita": "12-08-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "clase muestra sábado"
     },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "alejandro martinez /pauliana Martínez",
       "tel": "5521492324",
-      "fecha_cita": "13/08/26 11:00",
+      "fecha_cita": "13-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "(sabado paga)"
@@ -554,7 +575,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Alma liliar Resendiz mora",
       "tel": "5516920799",
-      "fecha_cita": "14/08/26 11:00",
+      "fecha_cita": "14-08-2026",
       "asistio": true,
       "inscrito": true,
       "obs": "uno a uno"
@@ -563,8 +584,8 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
-      "fecha_cita": "03/08/26 9:00",
-      "asistio": false,
+      "fecha_cita": "03-08-2026",
+      "asistio": true,
       "inscrito": false,
       "obs": "Clase muestra"
     },
@@ -572,117 +593,117 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Berenice Vazquez/Mariano Tapia",
       "tel": "5573634927",
-      "fecha_cita": "07/08/26 7:30",
+      "fecha_cita": "07-08-2026",
       "asistio": true,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clasae muestra línea"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Mirella Emelia perez",
       "tel": "5652292387",
-      "fecha_cita": "07/08/26 7:30",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "07-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra línea"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Alejandro",
       "tel": "5519058497",
-      "fecha_cita": "07/08/26 7:30",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "07-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra línea"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Alfredo armando Acosta",
       "tel": "5539550418",
-      "fecha_cita": "12/08/26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "12-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "CLase muestra"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Paula",
       "tel": "5582355533",
-      "fecha_cita": "07/08/26 6:30",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "07-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase en línea"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Melissa",
       "tel": "5564871978",
-      "fecha_cita": "17/08/26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "17-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Emanuel Troya /Itzuri Daniela",
       "tel": "5583256058",
-      "fecha_cita": "22/08/26 11:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "22-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Examen de colocación"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "carlos Omar Chavez Yañez",
       "tel": "5578823552",
-      "fecha_cita": "17/08/26 2:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "17-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Visita el plantel"
     },
     {
       "sucursal": "IZTACALCO",
       "nombre": "Erika Lopez e hija",
       "tel": "5548231114",
-      "fecha_cita": "21/08/26 7:30",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "21-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase mustra en línea"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
-      "fecha_cita": "04-08-26 9:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "04-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Clae muestra y examen de coloca"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Isaac Reyes Alvarez",
       "tel": "5566779585",
-      "fecha_cita": "10-08-26 9:00",
+      "fecha_cita": "10-08-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": ""
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Rodolfo",
       "tel": "5558262960",
-      "fecha_cita": "05-08-26 4:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "05-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Lucia Flores Ayala",
       "tel": "5527220028",
-      "fecha_cita": "06/08/26 9:00",
+      "fecha_cita": "06-08-2026",
       "asistio": false,
-      "inscrito": false,
+      "inscrito": null,
       "obs": "Clase muerstra"
     },
     {
@@ -690,45 +711,56 @@ const DATA_INGLES = {
       "nombre": "Vianey Merida",
       "tel": "5637425075",
       "fecha_cita": "22-08-36 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Mamá Pilar Avalos/itzayana Irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-26 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "15-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Informes TOEFL"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Erandi  irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-26 12:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "15-08-2026",
+      "asistio": true,
+      "inscrito": null,
       "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Gabriel",
       "tel": "5612574686",
-      "fecha_cita": "14-08-26 11:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "14-08-2026",
+      "asistio": true,
+      "inscrito": true,
       "obs": "Examen de colocación"
     },
     {
       "sucursal": "ERMITA",
       "nombre": "Beatriz Martínez",
       "tel": "5566244326",
-      "fecha_cita": "20-08-26 5:00",
-      "asistio": false,
-      "inscrito": false,
+      "fecha_cita": "20-08-2026",
+      "asistio": null,
+      "inscrito": null,
       "obs": "Clasae meustra"
     }
-  ]
+  ],
+  "financiero": {
+    "ingresos": 29568.0,
+    "utilidad": 891.0,
+    "ticket_promedio": 2688.0,
+    "gastos": {
+      "meta_ads": 11977.0,
+      "fabian": 12000.0,
+      "yolanda": 4700.0,
+      "total": 28677.0
+    }
+  }
 };

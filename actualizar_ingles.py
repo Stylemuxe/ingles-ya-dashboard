@@ -54,6 +54,18 @@ def sf(v, d=0.0):
     try: return float(str(v).replace(',', '').strip() or d)
     except: return d
 
+def money(v, d=0.0):
+    """Convierte celdas tipo '$14,239.00' a float. Quita $, comas y espacios."""
+    try:
+        limpio = re.sub(r'[^0-9.\-]', '', str(v))
+        return float(limpio) if limpio not in ('', '-', '.') else d
+    except: return d
+
+MESES_TXT = {
+    '01':'Enero','02':'Febrero','03':'Marzo','04':'Abril','05':'Mayo','06':'Junio',
+    '07':'Julio','08':'Agosto','09':'Septiembre','10':'Octubre','11':'Noviembre','12':'Diciembre'
+}
+
 def parse_fecha(s):
     s = str(s).strip()
     for fmt in ('%d/%m/%Y', '%d-%m-%Y', '%Y-%m-%d', '%d/%m/%y', '%d-%m-%y'):
@@ -244,8 +256,79 @@ def parse_seguimiento_mensual(text):
 
     return totales
 
+def parse_financiero(text):
+    """Lee el bloque financiero de cierre de mes que Vic llena a mano en el
+    sheet de seguimiento (columnas M/META/FABIÁN/YOLANDA, filas
+    GASTOS/INGRESOS/UTILIDAD/TICKET PROM que aparecen al final del embudo
+    diario). Cada mes vive en su propia pestaña del Sheet (ver
+    SHEET_SEG_GIDS), así que basta con leer ese bloque una vez por texto — no
+    hace falta filtrar por nombre de mes. Si el mes aún no tiene ese bloque
+    (no ha cerrado o Vic no lo ha llenado), devuelve todo en cero."""
+    rows = list(csv.reader(io.StringIO(text)))
+    resultado = dict(gasto_meta=0.0, gasto_fabian=0.0, gasto_yolanda=0.0,
+                      ingresos=0.0, utilidad=0.0, ticket_prom=0.0)
+
+    for row in rows:
+        if not any(c.strip() for c in row):
+            continue
+        # La etiqueta (GASTOS/INGRESOS/UTILIDAD/TICKET PROM) vive en la
+        # columna 19 (0-index), un lugar a la derecha del bloque 'S1'/'M' del
+        # embudo (columna 18) — así quedó tecleado a mano en el Sheet.
+        col19 = row[19].strip().upper() if len(row) > 19 else ''
+        if col19 == 'GASTOS' and len(row) > 22:
+            resultado['gasto_meta']    = money(row[20])
+            resultado['gasto_fabian']  = money(row[21])
+            resultado['gasto_yolanda'] = money(row[22])
+        elif col19 == 'INGRESOS' and len(row) > 20:
+            resultado['ingresos'] = money(row[20])
+        elif col19 == 'UTILIDAD' and len(row) > 20:
+            resultado['utilidad'] = money(row[20])
+        elif col19 == 'TICKET PROM' and len(row) > 20:
+            resultado['ticket_prom'] = money(row[20])
+
+    return resultado
+
+# ─── ASISTENCIA (desde HOJA AGENDA) ──────────────────────────────────────────
+def calc_asistencia(agenda, sucursales):
+    """Tasa de asistencia real: de las citas registradas en la Hoja Agenda de
+    cada sucursal (columna ASIS: SÍ/NO/en blanco), cuántas efectivamente
+    acudieron. 'asistio' ahora es tri-estado (True/False/None) para no contar
+    una cita sin dato todavía capturado como si fuera un 'no vino'. La tasa
+    se calcula sobre las citas CON dato de asistencia (más justo); el % sobre
+    el total de citas agendadas también se incluye para referencia."""
+    totales = {s: dict(citas_agendadas=0, asistieron=0, no_asistieron=0, sin_dato=0)
+               for s in sucursales}
+    for a in agenda:
+        suc = a.get('sucursal')
+        if suc not in totales:
+            continue
+        totales[suc]['citas_agendadas'] += 1
+        asis = a.get('asistio')
+        if asis is True:
+            totales[suc]['asistieron'] += 1
+        elif asis is False:
+            totales[suc]['no_asistieron'] += 1
+        else:
+            totales[suc]['sin_dato'] += 1
+    for s in totales:
+        t = totales[s]
+        con_dato = t['asistieron'] + t['no_asistieron']
+        t['tasa_asistencia']       = round(100 * t['asistieron'] / con_dato, 1) if con_dato else 0.0
+        t['tasa_asistencia_total'] = round(100 * t['asistieron'] / t['citas_agendadas'], 1) if t['citas_agendadas'] else 0.0
+    return totales
+
 # ─── AGENDA ──────────────────────────────────────────────────────────────────
 SKIP_KW = ('HOJA AGENDA', 'SUCURSAL:', 'FECHA:')
+
+def tri(v):
+    """SÍ/SI -> True, NO -> False, cualquier otra cosa (vacío, 'pendiente',
+    etc.) -> None (sin dato todavía). Evita contar 'sin dato' como 'no vino'."""
+    v = (v or '').strip().upper()
+    if v in ('SÍ', 'SI'):
+        return True
+    if v == 'NO':
+        return False
+    return None
 
 def parse_agenda(text, sucursal):
     rows     = list(csv.reader(io.StringIO(text)))
@@ -282,8 +365,8 @@ def parse_agenda(text, sucursal):
         try:
             tel  = row[1].strip() if len(row) > 1 else ''
             fecha= row[3].strip() if len(row) > 3 else ''
-            asis = 'SÍ' in (row[4].strip().upper() if len(row) > 4 else '')
-            insc = 'SÍ' in (row[5].strip().upper() if len(row) > 5 else '')
+            asis = tri(row[4] if len(row) > 4 else '')
+            insc = tri(row[5] if len(row) > 5 else '')
             obs  = row[6].strip() if len(row) > 6 else ''
         except Exception:
             continue
@@ -437,6 +520,17 @@ def main():
         except Exception as e:
             print(f'    AVISO: no se pudo leer ajuste_manual.json: {e}')
 
+    print('[4b] Google Sheets — finanzas del mes (gastos/ingresos)...')
+    financiero = parse_financiero(csv_seg) if csv_seg else dict(
+        gasto_meta=0.0, gasto_fabian=0.0, gasto_yolanda=0.0,
+        ingresos=0.0, utilidad=0.0, ticket_prom=0.0)
+    if financiero['ingresos'] or financiero['gasto_fabian']:
+        print(f"    OK - Ingresos: ${financiero['ingresos']:,.2f} | "
+              f"Gastos (Meta/Fabián/Yolanda): ${financiero['gasto_meta']:,.2f} / "
+              f"${financiero['gasto_fabian']:,.2f} / ${financiero['gasto_yolanda']:,.2f}")
+    else:
+        print('    AVISO: sin bloque de finanzas para este mes todavía (Vic lo llena al cierre)')
+
     print('[5] Google Sheets — agenda (3 sucursales)...')
     agenda = []
     for suc, gid in SHEET_AGE_GIDS.items():
@@ -448,6 +542,17 @@ def main():
         else:
             print(f'    {suc}: sin datos')
     print(f'    Total: {len(agenda)} prospectos')
+
+    print('[5c] Tasa de asistencia (desde Hoja Agenda)...')
+    asistencia_suc  = calc_asistencia(agenda, SUCURSALES)
+    total_citas_ag  = sum(v['citas_agendadas'] for v in asistencia_suc.values())
+    total_asis_ag   = sum(v['asistieron']       for v in asistencia_suc.values())
+    total_noasis_ag = sum(v['no_asistieron']    for v in asistencia_suc.values())
+    total_sindato_ag= sum(v['sin_dato']         for v in asistencia_suc.values())
+    total_con_dato  = total_asis_ag + total_noasis_ag
+    tasa_asistencia_total = round(100 * total_asis_ag / total_con_dato, 1) if total_con_dato else 0.0
+    print(f'    {total_asis_ag} asistieron / {total_noasis_ag} no asistieron / {total_sindato_ag} sin dato '
+          f'(de {total_citas_ag} citas) = {tasa_asistencia_total}% asistencia sobre citas con dato')
 
     print('[5b] Metas de leads (mes anterior)...')
     metas_leads = cargar_metas_leads()
@@ -467,6 +572,17 @@ def main():
     }
     mes_nombre = f"{MESES_ES[MES_ACTUAL[5:]]} {MES_ACTUAL[:4]}"
 
+    # Ticket promedio: usa el que Vic captura a mano (TICKET PROM); si aún no
+    # lo llena ese mes, lo calculamos como ingresos / inscritos.
+    ticket_promedio = financiero['ticket_prom'] or (
+        round(financiero['ingresos'] / total_insc, 2) if total_insc else 0.0)
+
+    # Fusiona citas_agendadas/asistieron/tasa_asistencia (de la Hoja Agenda)
+    # dentro de cada sucursal, junto a los datos del embudo diario.
+    for s in SUCURSALES:
+        totales_suc.setdefault(s, {})
+        totales_suc[s].update(asistencia_suc.get(s, {}))
+
     data = {
         'actualizado': datetime.now().strftime('%d/%m/%Y %H:%M'),
         'meta_actualizado': meta_actualizado,
@@ -480,6 +596,24 @@ def main():
             'citas':      total_citas,
             'visitas':    total_visitas,
             'inscritos':  total_insc,
+            'citas_agendadas': total_citas_ag,
+            'asistieron':      total_asis_ag,
+            'no_asistieron':   total_noasis_ag,
+            'sin_dato_asistencia': total_sindato_ag,
+            'tasa_asistencia': tasa_asistencia_total,
+            'ingresos':        financiero['ingresos'],
+            'ticket_promedio': ticket_promedio,
+        },
+        'financiero': {
+            'ingresos':  financiero['ingresos'],
+            'utilidad':  financiero['utilidad'],
+            'ticket_promedio': ticket_promedio,
+            'gastos': {
+                'meta_ads': financiero['gasto_meta'],
+                'fabian':   financiero['gasto_fabian'],
+                'yolanda':  financiero['gasto_yolanda'],
+                'total':    round(financiero['gasto_meta'] + financiero['gasto_fabian'] + financiero['gasto_yolanda'], 2),
+            },
         },
         'campanas':    campanas,
         'adsets':      adsets,
@@ -495,6 +629,7 @@ def main():
     guardar_historico(data)
 
     print(f'\nOK Leads: {total_leads} | Gasto: ${total_gasto:,.2f} | CPL: ${cpl:,.2f} | Inscritos: {total_insc}')
+    print(f'OK Asistencia: {tasa_asistencia_total}% | Ingresos: ${financiero["ingresos"]:,.2f} | Ticket prom: ${ticket_promedio:,.2f}')
 
 
 if __name__ == '__main__':
