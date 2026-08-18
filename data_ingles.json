@@ -16,18 +16,18 @@
     "no_asistieron": 4,
     "sin_dato_asistencia": 9,
     "tasa_asistencia": 81.8,
-    "ingresos": 29.568,
-    "ticket_promedio": 2.688
+    "ingresos": 29568.0,
+    "ticket_promedio": 2688.0
   },
   "financiero": {
-    "ingresos": 29.568,
-    "utilidad": 89100.0,
-    "ticket_promedio": 2.688,
+    "ingresos": 29568.0,
+    "utilidad": 891.0,
+    "ticket_promedio": 2688.0,
     "gastos": {
-      "meta_ads": 11.977,
-      "fabian": 12.0,
-      "yolanda": 4.7,
-      "total": 28.68
+      "meta_ads": 11977.0,
+      "fabian": 12000.0,
+      "yolanda": 4700.0,
+      "total": 28677.0
     }
   },
   "campanas": [

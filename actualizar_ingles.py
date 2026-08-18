@@ -55,10 +55,37 @@ def sf(v, d=0.0):
     except: return d
 
 def money(v, d=0.0):
-    """Convierte celdas tipo '$14,239.00' a float. Quita $, comas y espacios."""
+    """Convierte celdas de dinero a float, sin importar si Vic las tecleó
+    como '$14,239.00' (coma=miles, punto=decimales) o como '29.568' /
+    '891,00' (formato mixto que a veces captura a mano). Antes esta función
+    solo quitaba $/espacios y asumía SIEMPRE coma=miles, punto=decimal — eso
+    interpretaba '29.568' como 29.568 pesos (÷1000) y '891,00' como 89100
+    pesos (x100) en vez de 29,568 y 891. Ahora detecta el formato real de
+    cada celda antes de convertir."""
+    s = re.sub(r'[^0-9.,\-]', '', str(v)).strip()
+    if s in ('', '-', '.', ','):
+        return d
     try:
-        limpio = re.sub(r'[^0-9.\-]', '', str(v))
-        return float(limpio) if limpio not in ('', '-', '.') else d
+        tiene_coma = ',' in s
+        tiene_punto = '.' in s
+        if tiene_coma and tiene_punto:
+            # El último separador que aparece es el decimal; el otro es de miles.
+            if s.rfind(',') > s.rfind('.'):
+                s = s.replace('.', '').replace(',', '.')   # 1.234,56 -> 1234.56
+            else:
+                s = s.replace(',', '')                      # 1,234.56 -> 1234.56
+        elif tiene_coma:
+            entero, _, frac = s.rpartition(',')
+            # 3 dígitos exactos tras la coma y hay parte entera -> separador de
+            # miles ('29,568' -> 29568). Si no, es coma decimal ('891,00'/'45,5').
+            s = s.replace(',', '') if (entero and len(frac) == 3) else s.replace(',', '.')
+        elif tiene_punto:
+            entero, _, frac = s.rpartition('.')
+            # Mismo criterio pero con punto: '29.568'/'12.000' -> miles;
+            # '29.50' (2 dígitos, centavos normales) se deja como decimal.
+            if entero and len(frac) == 3:
+                s = s.replace('.', '')
+        return float(s) if s not in ('', '-', '.') else d
     except: return d
 
 MESES_TXT = {
