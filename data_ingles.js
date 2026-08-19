@@ -1,33 +1,33 @@
 const DATA_INGLES = {
-  "actualizado": "19/08/2026 08:23",
-  "meta_actualizado": "19/08/2026 08:23",
+  "actualizado": "19/08/2026 12:22",
+  "meta_actualizado": "19/08/2026 12:22",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
     "leads_meta": 298,
-    "gasto": 14397.3,
-    "cpl": 48.31,
-    "citas": 29,
-    "visitas": 11,
-    "inscritos": 11,
+    "gasto": 14410.66,
+    "cpl": 48.36,
+    "citas": 0,
+    "visitas": 0,
+    "inscritos": 0,
     "citas_agendadas": 31,
     "asistieron": 18,
     "no_asistieron": 4,
     "sin_dato_asistencia": 9,
     "tasa_asistencia": 81.8,
-    "ingresos": 30198.0,
-    "ticket_promedio": 2745.27
+    "ingresos": 0.0,
+    "ticket_promedio": 0.0
   },
   "financiero": {
-    "ingresos": 30198.0,
-    "utilidad": -168.0,
-    "ticket_promedio": 2745.27,
+    "ingresos": 0.0,
+    "utilidad": 0.0,
+    "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 13666.0,
-      "fabian": 12000.0,
-      "yolanda": 4700.0,
-      "total": 30366.0
+      "meta_ads": 0.0,
+      "fabian": 0.0,
+      "yolanda": 0.0,
+      "total": 0.0
     }
   },
   "campanas": [
@@ -36,11 +36,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 11616.2,
-      "impresiones": 168440,
-      "alcance": 109185,
+      "gasto": 11629.56,
+      "impresiones": 168636,
+      "alcance": 109262,
       "leads": 226,
-      "cpl": 51.4
+      "cpl": 51.46
     },
     {
       "id": "52515312914962",
@@ -192,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 11616.2,
+      "gasto": 11629.56,
       "leads": 226,
-      "cpl": 51.4
+      "cpl": 51.46
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -385,21 +385,21 @@ const DATA_INGLES = {
     },
     "2026-08-18": {
       "leads": 31,
-      "gasto": 1049.87
+      "gasto": 1050.24
     },
     "2026-08-19": {
       "leads": 0,
-      "gasto": 18.46
+      "gasto": 31.45
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 84,
-      "llamadas": 46,
-      "no_contesta": 37,
-      "citas": 6,
-      "visitas": 4,
-      "inscritos": 7,
+      "leads": 0,
+      "llamadas": 0,
+      "no_contesta": 0,
+      "citas": 0,
+      "visitas": 0,
+      "inscritos": 0,
       "citas_agendadas": 12,
       "asistieron": 10,
       "no_asistieron": 2,
@@ -408,12 +408,12 @@ const DATA_INGLES = {
       "tasa_asistencia_total": 83.3
     },
     "IZTACALCO": {
-      "leads": 82,
-      "llamadas": 47,
-      "no_contesta": 36,
-      "citas": 13,
-      "visitas": 3,
-      "inscritos": 2,
+      "leads": 0,
+      "llamadas": 0,
+      "no_contesta": 0,
+      "citas": 0,
+      "visitas": 0,
+      "inscritos": 0,
       "citas_agendadas": 10,
       "asistieron": 3,
       "no_asistieron": 0,
@@ -422,12 +422,12 @@ const DATA_INGLES = {
       "tasa_asistencia_total": 30.0
     },
     "ERMITA": {
-      "leads": 78,
-      "llamadas": 27,
-      "no_contesta": 44,
-      "citas": 10,
-      "visitas": 4,
-      "inscritos": 2,
+      "leads": 0,
+      "llamadas": 0,
+      "no_contesta": 0,
+      "citas": 0,
+      "visitas": 0,
+      "inscritos": 0,
       "citas_agendadas": 9,
       "asistieron": 5,
       "no_asistieron": 2,
@@ -442,54 +442,7 @@ const DATA_INGLES = {
     "ERMITA": 81
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {
-    "2026-08-01": {
-      "LINDAVISTA": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 1
-      },
-      "IZTACALCO": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 2
-      }
-    },
-    "2026-08-02": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    }
-  },
+  "diario_suc": {},
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
