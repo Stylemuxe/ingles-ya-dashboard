@@ -1,20 +1,20 @@
 const DATA_INGLES = {
-  "actualizado": "19/08/2026 16:18",
-  "meta_actualizado": "19/08/2026 16:18",
+  "actualizado": "19/08/2026 20:14",
+  "meta_actualizado": "19/08/2026 20:14",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 303,
-    "gasto": 14573.07,
-    "cpl": 48.1,
+    "leads_meta": 309,
+    "gasto": 14728.32,
+    "cpl": 47.66,
     "citas": 29,
     "visitas": 11,
     "inscritos": 11,
-    "citas_agendadas": 31,
+    "citas_agendadas": 33,
     "asistieron": 18,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 9,
+    "sin_dato_asistencia": 11,
     "tasa_asistencia": 81.8,
     "ingresos": 30198.0,
     "ticket_promedio": 2745.27
@@ -36,11 +36,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 11791.97,
-      "impresiones": 170110,
-      "alcance": 109544,
-      "leads": 231,
-      "cpl": 51.05
+      "gasto": 11947.22,
+      "impresiones": 171639,
+      "alcance": 110278,
+      "leads": 237,
+      "cpl": 50.41
     },
     {
       "id": "52515312914962",
@@ -192,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 11791.97,
-      "leads": 231,
-      "cpl": 51.05
+      "gasto": 11947.22,
+      "leads": 237,
+      "cpl": 50.41
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -385,11 +385,11 @@ const DATA_INGLES = {
     },
     "2026-08-18": {
       "leads": 31,
-      "gasto": 1052.77
+      "gasto": 1055.19
     },
     "2026-08-19": {
-      "leads": 5,
-      "gasto": 191.14
+      "leads": 11,
+      "gasto": 346.59
     }
   },
   "sucursales": {
@@ -414,12 +414,12 @@ const DATA_INGLES = {
       "citas": 13,
       "visitas": 3,
       "inscritos": 2,
-      "citas_agendadas": 10,
+      "citas_agendadas": 11,
       "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 7,
+      "sin_dato": 8,
       "tasa_asistencia": 100.0,
-      "tasa_asistencia_total": 30.0
+      "tasa_asistencia_total": 27.3
     },
     "ERMITA": {
       "leads": 78,
@@ -428,12 +428,12 @@ const DATA_INGLES = {
       "citas": 10,
       "visitas": 4,
       "inscritos": 2,
-      "citas_agendadas": 9,
+      "citas_agendadas": 10,
       "asistieron": 5,
       "no_asistieron": 2,
-      "sin_dato": 2,
+      "sin_dato": 3,
       "tasa_asistencia": 71.4,
-      "tasa_asistencia_total": 55.6
+      "tasa_asistencia_total": 50.0
     }
   },
   "metas_leads": {
@@ -690,6 +690,15 @@ const DATA_INGLES = {
       "obs": "Clase mustra en línea"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Etrella",
+      "tel": "5535074702",
+      "fecha_cita": "21/08/26 6:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra línea"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
@@ -769,6 +778,15 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "Clasae meustra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Natalia",
+      "tel": "5568690613",
+      "fecha_cita": "19-08-26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "clase muestra visita al plantel"
     }
   ]
 };
