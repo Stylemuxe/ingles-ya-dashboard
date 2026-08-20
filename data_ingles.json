@@ -1,28 +1,28 @@
 {
-  "actualizado": "20/08/2026 12:25",
-  "meta_actualizado": "20/08/2026 12:25",
+  "actualizado": "20/08/2026 16:21",
+  "meta_actualizado": "20/08/2026 16:21",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 324,
-    "gasto": 15278.74,
-    "cpl": 47.16,
+    "leads_meta": 327,
+    "gasto": 15510.81,
+    "cpl": 47.43,
     "citas": 31,
     "visitas": 11,
-    "inscritos": 13,
+    "inscritos": 14,
     "citas_agendadas": 34,
     "asistieron": 18,
     "no_asistieron": 4,
     "sin_dato_asistencia": 12,
     "tasa_asistencia": 81.8,
     "ingresos": 30198.0,
-    "ticket_promedio": 2322.92
+    "ticket_promedio": 2157.0
   },
   "financiero": {
     "ingresos": 30198.0,
     "utilidad": -168.0,
-    "ticket_promedio": 2322.92,
+    "ticket_promedio": 2157.0,
     "gastos": {
       "meta_ads": 13666.0,
       "fabian": 12000.0,
@@ -36,11 +36,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 12497.64,
-      "impresiones": 178523,
-      "alcance": 112770,
-      "leads": 252,
-      "cpl": 49.59
+      "gasto": 12729.71,
+      "impresiones": 181840,
+      "alcance": 114412,
+      "leads": 255,
+      "cpl": 49.92
     },
     {
       "id": "52515312914962",
@@ -192,9 +192,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 12497.64,
-      "leads": 252,
-      "cpl": 49.59
+      "gasto": 12729.71,
+      "leads": 255,
+      "cpl": 49.92
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -385,15 +385,15 @@
     },
     "2026-08-18": {
       "leads": 31,
-      "gasto": 1056.5
+      "gasto": 1056.53
     },
     "2026-08-19": {
       "leads": 22,
-      "gasto": 832.2
+      "gasto": 834.55
     },
     "2026-08-20": {
-      "leads": 4,
-      "gasto": 60.75
+      "leads": 8,
+      "gasto": 290.44
     }
   },
   "sucursales": {
@@ -417,7 +417,7 @@
       "no_contesta": 37,
       "citas": 13,
       "visitas": 3,
-      "inscritos": 2,
+      "inscritos": 3,
       "citas_agendadas": 11,
       "asistieron": 3,
       "no_asistieron": 0,
@@ -681,7 +681,7 @@
       "tel": "5578823552",
       "fecha_cita": "17/08/26 2:00",
       "asistio": true,
-      "inscrito": null,
+      "inscrito": true,
       "obs": "Visita el plantel"
     },
     {
