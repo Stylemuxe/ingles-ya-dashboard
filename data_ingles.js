@@ -1,23 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "20/08/2026 16:31",
-  "meta_actualizado": "20/08/2026 16:31",
+  "actualizado": "20/08/2026 20:17",
+  "meta_actualizado": "20/08/2026 20:16",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 339,
-    "gasto": 15750.09,
-    "cpl": 46.46,
-    "citas": 33,
-    "visitas": 13,
+    "leads_meta": 335,
+    "gasto": 15699.75,
+    "cpl": 46.86,
+    "citas": 31,
+    "visitas": 11,
     "inscritos": 14,
-    "citas_agendadas": 36,
+    "citas_agendadas": 34,
     "asistieron": 18,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 14,
-    "tasa_asistencia": 50.0,
-    "tasa_asistencia_con_dato": 81.8,
-    "conv_asistio_inscrito": 77.8,
+    "sin_dato_asistencia": 12,
+    "tasa_asistencia": 81.8,
     "ingresos": 30198.0,
     "ticket_promedio": 2157.0
   },
@@ -38,11 +36,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 12968.99,
-      "impresiones": 184691,
-      "alcance": 115362,
-      "leads": 267,
-      "cpl": 48.57
+      "gasto": 12918.65,
+      "impresiones": 183953,
+      "alcance": 115229,
+      "leads": 263,
+      "cpl": 49.12
     },
     {
       "id": "52515312914962",
@@ -194,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 12968.99,
-      "leads": 267,
-      "cpl": 48.57
+      "gasto": 12918.65,
+      "leads": 265,
+      "cpl": 48.75
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -391,48 +389,46 @@ const DATA_INGLES = {
     },
     "2026-08-19": {
       "leads": 22,
-      "gasto": 835.5
+      "gasto": 835.46
     },
     "2026-08-20": {
-      "leads": 19,
-      "gasto": 528.77
+      "leads": 15,
+      "gasto": 472.03
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 97,
-      "llamadas": 54,
-      "no_contesta": 42,
-      "citas": 8,
-      "visitas": 5,
+      "leads": 90,
+      "llamadas": 51,
+      "no_contesta": 38,
+      "citas": 7,
+      "visitas": 4,
       "inscritos": 9,
-      "citas_agendadas": 13,
+      "citas_agendadas": 12,
       "asistieron": 10,
       "no_asistieron": 2,
-      "sin_dato": 1,
-      "tasa_asistencia": 76.9,
-      "tasa_asistencia_con_dato": 83.3,
-      "conv_asistio_inscrito": 90.0
+      "sin_dato": 0,
+      "tasa_asistencia": 83.3,
+      "tasa_asistencia_total": 83.3
     },
     "IZTACALCO": {
-      "leads": 94,
-      "llamadas": 54,
-      "no_contesta": 41,
-      "citas": 14,
-      "visitas": 4,
+      "leads": 87,
+      "llamadas": 51,
+      "no_contesta": 37,
+      "citas": 13,
+      "visitas": 3,
       "inscritos": 3,
-      "citas_agendadas": 12,
+      "citas_agendadas": 11,
       "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 9,
-      "tasa_asistencia": 25.0,
-      "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 100.0
+      "sin_dato": 8,
+      "tasa_asistencia": 100.0,
+      "tasa_asistencia_total": 27.3
     },
     "ERMITA": {
-      "leads": 90,
-      "llamadas": 32,
-      "no_contesta": 51,
+      "leads": 83,
+      "llamadas": 29,
+      "no_contesta": 47,
       "citas": 11,
       "visitas": 4,
       "inscritos": 2,
@@ -440,9 +436,8 @@ const DATA_INGLES = {
       "asistieron": 5,
       "no_asistieron": 2,
       "sin_dato": 4,
-      "tasa_asistencia": 45.5,
-      "tasa_asistencia_con_dato": 71.4,
-      "conv_asistio_inscrito": 40.0
+      "tasa_asistencia": 71.4,
+      "tasa_asistencia_total": 45.5
     }
   },
   "metas_leads": {
@@ -609,15 +604,6 @@ const DATA_INGLES = {
       "obs": "uno a uno"
     },
     {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Frida",
-      "tel": "55 3677 9096",
-      "fecha_cita": "21/08/26",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clases presenciales paga hoy o mañana"
-    },
-    {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
@@ -715,15 +701,6 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Alison Rangel",
-      "tel": "5515378172",
-      "fecha_cita": "22/08/2026 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Examen de colocación"
     },
     {
       "sucursal": "ERMITA",
