@@ -1,28 +1,28 @@
 const DATA_INGLES = {
-  "actualizado": "19/08/2026 20:14",
-  "meta_actualizado": "19/08/2026 20:14",
+  "actualizado": "20/08/2026 00:37",
+  "meta_actualizado": "20/08/2026 00:37",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 309,
-    "gasto": 14728.32,
-    "cpl": 47.66,
-    "citas": 29,
+    "leads_meta": 316,
+    "gasto": 14954.56,
+    "cpl": 47.32,
+    "citas": 31,
     "visitas": 11,
-    "inscritos": 11,
-    "citas_agendadas": 33,
+    "inscritos": 13,
+    "citas_agendadas": 34,
     "asistieron": 18,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 11,
+    "sin_dato_asistencia": 12,
     "tasa_asistencia": 81.8,
     "ingresos": 30198.0,
-    "ticket_promedio": 2745.27
+    "ticket_promedio": 2322.92
   },
   "financiero": {
     "ingresos": 30198.0,
     "utilidad": -168.0,
-    "ticket_promedio": 2745.27,
+    "ticket_promedio": 2322.92,
     "gastos": {
       "meta_ads": 13666.0,
       "fabian": 12000.0,
@@ -36,11 +36,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 11947.22,
-      "impresiones": 171639,
-      "alcance": 110278,
-      "leads": 237,
-      "cpl": 50.41
+      "gasto": 12173.46,
+      "impresiones": 174301,
+      "alcance": 111171,
+      "leads": 244,
+      "cpl": 49.89
     },
     {
       "id": "52515312914962",
@@ -192,9 +192,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 11947.22,
-      "leads": 237,
-      "cpl": 50.41
+      "gasto": 12173.46,
+      "leads": 244,
+      "cpl": 49.89
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -385,21 +385,21 @@ const DATA_INGLES = {
     },
     "2026-08-18": {
       "leads": 31,
-      "gasto": 1055.19
+      "gasto": 1055.84
     },
     "2026-08-19": {
-      "leads": 11,
-      "gasto": 346.59
+      "leads": 18,
+      "gasto": 569.56
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 84,
-      "llamadas": 46,
-      "no_contesta": 37,
-      "citas": 6,
+      "leads": 90,
+      "llamadas": 51,
+      "no_contesta": 38,
+      "citas": 7,
       "visitas": 4,
-      "inscritos": 7,
+      "inscritos": 9,
       "citas_agendadas": 12,
       "asistieron": 10,
       "no_asistieron": 2,
@@ -408,9 +408,9 @@ const DATA_INGLES = {
       "tasa_asistencia_total": 83.3
     },
     "IZTACALCO": {
-      "leads": 82,
-      "llamadas": 47,
-      "no_contesta": 36,
+      "leads": 87,
+      "llamadas": 51,
+      "no_contesta": 37,
       "citas": 13,
       "visitas": 3,
       "inscritos": 2,
@@ -422,18 +422,18 @@ const DATA_INGLES = {
       "tasa_asistencia_total": 27.3
     },
     "ERMITA": {
-      "leads": 78,
-      "llamadas": 27,
-      "no_contesta": 44,
-      "citas": 10,
+      "leads": 83,
+      "llamadas": 29,
+      "no_contesta": 47,
+      "citas": 11,
       "visitas": 4,
       "inscritos": 2,
-      "citas_agendadas": 10,
+      "citas_agendadas": 11,
       "asistieron": 5,
       "no_asistieron": 2,
-      "sin_dato": 3,
+      "sin_dato": 4,
       "tasa_asistencia": 71.4,
-      "tasa_asistencia_total": 50.0
+      "tasa_asistencia_total": 45.5
     }
   },
   "metas_leads": {
@@ -551,7 +551,7 @@ const DATA_INGLES = {
       "tel": "5545257264",
       "fecha_cita": "13/08/26 3:00",
       "asistio": true,
-      "inscrito": null,
+      "inscrito": true,
       "obs": "Examen de colocación 2 hermanas ( martes paga)"
     },
     {
@@ -787,6 +787,15 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "clase muestra visita al plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Sheyra Briseño",
+      "tel": "5527422697",
+      "fecha_cita": "21-08-26 3:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     }
   ]
 };
