@@ -1,9 +1,60 @@
 {
-  "periodo": "Junio 2026",
+  "periodo": "Agosto 2026",
   "agencia": "Tráfico ETH",
   "cliente": "Inglés YA",
-  "resumen": "Mes 1 del Paquete 2 ($12,000/mes). Campañas activas por plantel con geo segmentado, exclusión de foráneos aplicada, dashboard actualizado con agenda del mes y 4 inscritos confirmados al 18 de junio.",
+  "resumen": "Al 20 de agosto: 339 leads, $15,751 de gasto, CPL $46.46, 14 inscritos y $30,198 en ingresos del mes. Se corrigió la fórmula de % Asistencia (ya no se infla por citas sin dato capturado) y se agregó la conversión Asistió→Inscrito, ambas pedidas por Vic. El dashboard sigue actualizándose solo cada 4h desde Meta Ads y los Sheets de seguimiento.",
   "novedades": [
+    {
+      "fecha": "20/08/2026",
+      "tipo": "correccion",
+      "titulo": "% Asistencia corregido + nueva métrica Asistió → Inscrito",
+      "descripcion": "Vic reportó que el % de Asistencia se veía inflado. Se detectó que el cálculo excluía las citas sin dato SÍ/NO capturado todavía en el Sheet, lo que subía artificialmente el porcentaje. Ahora se calcula sobre el total de citas agendadas, y se agregó una tarjeta nueva que muestra qué % de los que sí asistieron terminan inscribiéndose.",
+      "detalle": [
+        "% Asistencia agosto: pasó de 81.8% (solo citas con dato) a 50.0% (sobre total agendadas) — número real",
+        "Nueva métrica: Asistió → Inscrito, por sucursal y total (77.8% en agosto)",
+        "Mientras más al día se capture la columna ASIS en el Sheet de Agenda, más exacto será este número"
+      ]
+    },
+    {
+      "fecha": "03/08/2026",
+      "tipo": "correccion",
+      "titulo": "Datos de agosto corregidos al detectar Sheet del mes nuevo",
+      "descripcion": "Se detectó que el dashboard leía por error la pestaña de junio del Sheet de seguimiento al iniciar agosto, mostrando inscritos incorrectos. Corregido registrando el Sheet correcto del mes.",
+      "detalle": [
+        "Inscritos de agosto quedaron reflejando el dato real, no el heredado de junio"
+      ]
+    },
+    {
+      "fecha": "24/07/2026",
+      "tipo": "correccion",
+      "titulo": "Dashboard ahora coincide exacto con el reporte de Yolanda",
+      "descripcion": "Se corrigió un bug que hacía que el dashboard mostrara menos leads e inscritos de los que reportaba el Call Center. Ahora se lee directamente el bloque de acumulado mensual que ya calcula el propio Sheet, así que el número siempre coincide con lo que reporta Yolanda.",
+      "detalle": [
+        "Verificado exacto: leads e inscritos por sucursal coinciden con el reporte del CC"
+      ]
+    },
+    {
+      "fecha": "16/07/2026",
+      "tipo": "novedad",
+      "titulo": "Tasa de Asistencia, Ticket Promedio y Gastos de plataforma — pedido de Vic",
+      "descripcion": "Se agregaron 3 tarjetas nuevas al dashboard a petición de Vic: % de asistencia por sucursal (fuente: columna ASIS del Sheet de Agenda), Ticket promedio de inscripción, y el bloque de Finanzas del Mes (Ingresos, Gastos de Meta/Fabián/Yolanda y Utilidad).",
+      "detalle": [
+        "% Asistencia por sucursal con fuente citada",
+        "Ticket promedio: usa el dato manual de Vic o lo calcula (Ingresos ÷ Inscritos)",
+        "Finanzas del Mes: Ingresos, Gastos por partida y Utilidad"
+      ]
+    },
+    {
+      "fecha": "10/07/2026",
+      "tipo": "optimizacion",
+      "titulo": "Mejoras de uso: modo claro/oscuro, calculadora de leads y costo por etapa",
+      "descripcion": "Se agregó un botón para cambiar entre modo claro y oscuro, una calculadora de leads en el Resumen, y el costo por lead de cada etapa del embudo (Citas, Visitas, Inscritos, Agendados) directo en las tarjetas principales.",
+      "detalle": [
+        "Toggle 🌙/☀️ en la esquina superior",
+        "Calculadora de leads necesarios según meta de inscritos",
+        "Costo por Cita / Visita / Inscrito / Agendado visible en cada KPI card"
+      ]
+    },
     {
       "fecha": "18/06/2026",
       "tipo": "optimizacion",
@@ -127,22 +178,20 @@
   ],
   "en_proceso": [
     {
-      "fecha": "18/06/2026",
+      "fecha": "20/08/2026",
       "tipo": "novedad",
-      "titulo": "Producción de contenido junio (6 posts + 3 reels)",
-      "descripcion": "En espera de la autorización de la parrilla por parte de David para arrancar con los diseños. Una vez aprobada se producen las piezas para Facebook e Instagram.",
+      "titulo": "Producción de contenido de agosto",
+      "descripcion": "Piezas de video y estáticos de agosto en producción para Facebook e Instagram (material en carpeta de contenidos del mes).",
       "detalle": [
-        "6 posts estáticos o carruseles",
-        "3 reels o videos cortos",
-        "Publicar y programar en Facebook e Instagram"
+        "Videos y estáticos en proceso de edición",
+        "Publicación y programación conforme se vayan terminando"
       ]
     }
   ],
   "pendientes": [
-    "Yolanda: corregir fechas del 17 al 30 de junio en el Sheet (el mes aparece como '4' en lugar de '6')",
     "IZTACALCO: agregar headers de fecha en el Sheet de Agenda para que el filtro por mes funcione correctamente",
-    "Cuando Yolanda corrija las fechas: correr actualizar_ingles.py para reflejar los nuevos inscritos",
-    "Agregar foráneos nuevos al Custom Audience de Meta conforme Yolanda los capture",
-    "Reporte ejecutivo mensual en PDF — fin de junio"
+    "Vic: capturar a tiempo la columna ASIS (SÍ/NO) en el Sheet de Agenda — mientras más citas queden sin dato, menos exacto es el % de Asistencia",
+    "Agregar foráneos nuevos al Custom Audience de Meta conforme se capturen",
+    "Confirmar con Vic a qué se refería con '% de inscritos del total' (no quedó claro en el audio del 20-ago)"
   ]
 }
