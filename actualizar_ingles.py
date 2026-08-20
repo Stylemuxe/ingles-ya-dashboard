@@ -320,9 +320,14 @@ def calc_asistencia(agenda, sucursales):
     """Tasa de asistencia real: de las citas registradas en la Hoja Agenda de
     cada sucursal (columna ASIS: SÍ/NO/en blanco), cuántas efectivamente
     acudieron. 'asistio' ahora es tri-estado (True/False/None) para no contar
-    una cita sin dato todavía capturado como si fuera un 'no vino'. La tasa
-    se calcula sobre las citas CON dato de asistencia (más justo); el % sobre
-    el total de citas agendadas también se incluye para referencia."""
+    una cita sin dato todavía capturado como si fuera un 'no vino'.
+
+    'tasa_asistencia' (la que se muestra como principal) se calcula sobre el
+    TOTAL de citas agendadas -- las que aún no tienen SÍ/NO capturado cuentan
+    en el denominador como pendientes/no confirmadas, así el % no se ve
+    inflado por captura atrasada (pedido de Vic, 2026-08-20). La versión
+    'tasa_asistencia_con_dato' (solo sobre citas con SÍ/NO ya capturado) se
+    conserva como referencia secundaria."""
     totales = {s: dict(citas_agendadas=0, asistieron=0, no_asistieron=0, sin_dato=0)
                for s in sucursales}
     for a in agenda:
@@ -340,8 +345,8 @@ def calc_asistencia(agenda, sucursales):
     for s in totales:
         t = totales[s]
         con_dato = t['asistieron'] + t['no_asistieron']
-        t['tasa_asistencia']       = round(100 * t['asistieron'] / con_dato, 1) if con_dato else 0.0
-        t['tasa_asistencia_total'] = round(100 * t['asistieron'] / t['citas_agendadas'], 1) if t['citas_agendadas'] else 0.0
+        t['tasa_asistencia']          = round(100 * t['asistieron'] / t['citas_agendadas'], 1) if t['citas_agendadas'] else 0.0
+        t['tasa_asistencia_con_dato'] = round(100 * t['asistieron'] / con_dato, 1) if con_dato else 0.0
     return totales
 
 # ─── AGENDA ──────────────────────────────────────────────────────────────────
@@ -577,9 +582,11 @@ def main():
     total_noasis_ag = sum(v['no_asistieron']    for v in asistencia_suc.values())
     total_sindato_ag= sum(v['sin_dato']         for v in asistencia_suc.values())
     total_con_dato  = total_asis_ag + total_noasis_ag
-    tasa_asistencia_total = round(100 * total_asis_ag / total_con_dato, 1) if total_con_dato else 0.0
+    tasa_asistencia          = round(100 * total_asis_ag / total_citas_ag, 1) if total_citas_ag else 0.0
+    tasa_asistencia_con_dato = round(100 * total_asis_ag / total_con_dato, 1) if total_con_dato else 0.0
     print(f'    {total_asis_ag} asistieron / {total_noasis_ag} no asistieron / {total_sindato_ag} sin dato '
-          f'(de {total_citas_ag} citas) = {tasa_asistencia_total}% asistencia sobre citas con dato')
+          f'(de {total_citas_ag} citas) = {tasa_asistencia}% asistencia sobre total agendados '
+          f'({tasa_asistencia_con_dato}% sobre citas con dato)')
 
     print('[5b] Metas de leads (mes anterior)...')
     metas_leads = cargar_metas_leads()
@@ -609,6 +616,11 @@ def main():
     for s in SUCURSALES:
         totales_suc.setdefault(s, {})
         totales_suc[s].update(asistencia_suc.get(s, {}))
+        asis_s = totales_suc[s].get('asistieron', 0)
+        insc_s = totales_suc[s].get('inscritos', 0)
+        totales_suc[s]['conv_asistio_inscrito'] = round(100 * insc_s / asis_s, 1) if asis_s else 0.0
+
+    conv_asistio_inscrito = round(100 * total_insc / total_asis_ag, 1) if total_asis_ag else 0.0
 
     data = {
         'actualizado': datetime.now().strftime('%d/%m/%Y %H:%M'),
@@ -627,7 +639,9 @@ def main():
             'asistieron':      total_asis_ag,
             'no_asistieron':   total_noasis_ag,
             'sin_dato_asistencia': total_sindato_ag,
-            'tasa_asistencia': tasa_asistencia_total,
+            'tasa_asistencia':          tasa_asistencia,
+            'tasa_asistencia_con_dato': tasa_asistencia_con_dato,
+            'conv_asistio_inscrito':    conv_asistio_inscrito,
             'ingresos':        financiero['ingresos'],
             'ticket_promedio': ticket_promedio,
         },
@@ -656,7 +670,7 @@ def main():
     guardar_historico(data)
 
     print(f'\nOK Leads: {total_leads} | Gasto: ${total_gasto:,.2f} | CPL: ${cpl:,.2f} | Inscritos: {total_insc}')
-    print(f'OK Asistencia: {tasa_asistencia_total}% | Ingresos: ${financiero["ingresos"]:,.2f} | Ticket prom: ${ticket_promedio:,.2f}')
+    print(f'OK Asistencia: {tasa_asistencia}% | Ingresos: ${financiero["ingresos"]:,.2f} | Ticket prom: ${ticket_promedio:,.2f}')
 
 
 if __name__ == '__main__':

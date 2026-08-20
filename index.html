@@ -1045,9 +1045,17 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div class="guia-card" style="--gc:#00c2a8">
       <h3>🚶 % Asistencia <span class="gc-tag">Porcentaje</span></h3>
       <div class="gc-def">De las citas agendadas en cada sucursal, <b>cuántas efectivamente se presentaron</b> al plantel (no solo agendaron, sino que llegaron).</div>
-      <div class="gc-calc">% Asistencia = Asistieron ÷ (Asistieron + No asistieron) × 100<br>Solo cuenta citas que YA tienen dato de SÍ/NO capturado. Las que aún están en blanco se muestran como "Pendiente" y no afectan el %.</div>
-      <div class="gc-read"><b>Cómo leerlo:</b> si el % es bajo, la gente agenda pero no llega — hay que reforzar confirmación/recordatorio de cita.</div>
+      <div class="gc-calc">% Asistencia = Asistieron ÷ Total de citas agendadas × 100<br>Cuenta TODAS las citas agendadas, incluidas las que aún no tienen SÍ/NO capturado en la columna ASIS (esas cuentan como no confirmadas, no se excluyen) — así el % no se ve inflado por captura atrasada.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si el % es bajo, la gente agenda pero no llega — hay que reforzar confirmación/recordatorio de cita, y capturar la columna ASIS al día para que este número sea exacto.</div>
       <div class="gc-src">📋 <b>Fuente:</b> Hoja Agenda de Google Sheets (una pestaña por sucursal: LIN / IZT / ERM), columna "ASIS" que llena el equipo de cada plantel cita por cita.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#00c2a8">
+      <h3>🎓 Asistió → Inscrito <span class="gc-tag">Porcentaje</span></h3>
+      <div class="gc-def">De los que <b>sí se presentaron</b> a su cita, <b>cuántos terminaron inscribiéndose</b>.</div>
+      <div class="gc-calc">Asistió → Inscrito = Inscritos ÷ Asistieron × 100</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> si la asistencia es buena pero este % es bajo, el problema ya no es agenda ni confirmación — es el cierre de venta en el plantel.</div>
+      <div class="gc-src">📋 <b>Fuente:</b> combina la columna "ASIS" de la Hoja Agenda con los inscritos del sheet de seguimiento diario, por sucursal.</div>
     </div>
 
     <div class="guia-card" style="--gc:#ffb800">
@@ -2069,9 +2077,13 @@ function renderSucCards() {
         <span class="conv-label">Lead → Inscrito</span>
         <span class="conv-rate">${pct(v.inscritos||0, leads)}</span>
       </div>
-      <div class="suc-foot" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Solo cuenta citas con SÍ/NO ya capturado.">
-        <span class="conv-label">🚶 % Asistencia (citas c/dato) <span class="kpi-info" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Solo cuenta citas con SÍ/NO ya capturado — ver pestaña 📖 Guía para más detalle.">i</span></span>
-        <span class="conv-rate" style="color:#00c2a8">${(v.asistieron||v.no_asistieron)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}</span>
+      <div class="suc-foot" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Sobre el total de citas agendadas (las sin SÍ/NO capturado cuentan como no confirmadas).">
+        <span class="conv-label">🚶 % Asistencia <span class="kpi-info" title="Asistieron ÷ Total citas agendadas. Las citas sin SÍ/NO capturado todavía cuentan en el total (no se excluyen) — ver pestaña 📖 Guía para más detalle.">i</span></span>
+        <span class="conv-rate" style="color:#00c2a8">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}</span>
+      </div>
+      <div class="suc-foot">
+        <span class="conv-label">🎓 Asistió → Inscrito</span>
+        <span class="conv-rate">${(v.asistieron)?(v.conv_asistio_inscrito.toFixed(1)+'%'):'—'}</span>
       </div>
     </div>`;
   }).join('');
@@ -2104,19 +2116,20 @@ function renderSucursales() {
       <td class="num" style="color:#ff9900">${$n(v.visitas||0)}</td>
       <td class="num" style="color:var(--green)">${$n(v.inscritos||0)}</td>
       <td style="color:var(--green);font-weight:800;font-size:14px">${pct(v.inscritos||0, leads)}</td>
-      <td style="color:#00c2a8;font-weight:800;font-size:14px">${(v.asistieron||v.no_asistieron)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}<div style="font-size:10px;color:var(--muted);font-weight:600">${$n(v.asistieron||0)}/${$n((v.asistieron||0)+(v.no_asistieron||0))} c/dato</div></td>
+      <td style="color:#00c2a8;font-weight:800;font-size:14px">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}<div style="font-size:10px;color:var(--muted);font-weight:600">${$n(v.asistieron||0)}/${$n(v.citas_agendadas||0)} agendados</div></td>
+      <td style="color:#00c2a8;font-weight:800;font-size:14px">${(v.asistieron)?(v.conv_asistio_inscrito.toFixed(1)+'%'):'—'}</td>
     </tr>`;
   });
   const totLeads= Object.values(metaLeads).reduce((a,v)=>a+v,0);
   const totCC   = ORDEN.reduce((a,s)=>{ const v=suc[s]||{}; return {
     llamadas:a.llamadas+(v.llamadas||0), no_contesta:a.no_contesta+(v.no_contesta||0),
     citas:a.citas+(v.citas||0), visitas:a.visitas+(v.visitas||0), inscritos:a.inscritos+(v.inscritos||0),
-    asistieron:a.asistieron+(v.asistieron||0), no_asistieron:a.no_asistieron+(v.no_asistieron||0)
-  };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0,asistieron:0,no_asistieron:0});
+    asistieron:a.asistieron+(v.asistieron||0), no_asistieron:a.no_asistieron+(v.no_asistieron||0),
+    citas_agendadas:a.citas_agendadas+(v.citas_agendadas||0)
+  };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0,asistieron:0,no_asistieron:0,citas_agendadas:0});
   const totMeta = Object.values(metas).reduce((a,v)=>a+v,0);
-  const totConDato = totCC.asistieron + totCC.no_asistieron;
   document.getElementById('tbl-sucursales').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th><th>🚶 % Asistencia</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th><th>🚶 % Asistencia</th><th>🎓 Asistió→Insc.</th></tr></thead>
      <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
        <td style="color:var(--cyan)">${$n(totLeads)}</td>
@@ -2125,7 +2138,8 @@ function renderSucursales() {
        <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
        <td style="color:var(--green)">${$n(totCC.inscritos)}</td>
        <td style="color:var(--green)">${pct(totCC.inscritos,totLeads)}</td>
-       <td style="color:#00c2a8">${totConDato?pct(totCC.asistieron,totConDato):'—'}</td>
+       <td style="color:#00c2a8">${totCC.citas_agendadas?pct(totCC.asistieron,totCC.citas_agendadas):'—'}</td>
+       <td style="color:#00c2a8">${totCC.asistieron?pct(totCC.inscritos,totCC.asistieron):'—'}</td>
      </tr></tbody>`;
 }
 
