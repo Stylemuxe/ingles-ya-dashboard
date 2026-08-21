@@ -1,13 +1,13 @@
 {
-  "actualizado": "21/08/2026 16:20",
-  "meta_actualizado": "21/08/2026 16:19",
+  "actualizado": "21/08/2026 20:13",
+  "meta_actualizado": "21/08/2026 20:13",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 352,
-    "gasto": 16189.74,
-    "cpl": 45.99,
+    "leads_meta": 356,
+    "gasto": 16438.77,
+    "cpl": 46.18,
     "citas": 33,
     "visitas": 13,
     "inscritos": 14,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 13408.64,
-      "impresiones": 191710,
-      "alcance": 118734,
-      "leads": 280,
-      "cpl": 47.89
+      "gasto": 13657.67,
+      "impresiones": 196084,
+      "alcance": 120840,
+      "leads": 284,
+      "cpl": 48.09
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 13408.64,
-      "leads": 280,
-      "cpl": 47.89
+      "gasto": 13657.67,
+      "leads": 284,
+      "cpl": 48.09
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -391,15 +391,15 @@
     },
     "2026-08-19": {
       "leads": 22,
-      "gasto": 838.33
+      "gasto": 838.38
     },
     "2026-08-20": {
       "leads": 24,
-      "gasto": 739.15
+      "gasto": 740.03
     },
     "2026-08-21": {
-      "leads": 8,
-      "gasto": 226.44
+      "leads": 12,
+      "gasto": 474.54
     }
   },
   "sucursales": {
@@ -651,7 +651,7 @@
     {
       "sucursal": "IZTACALCO",
       "nombre": "Alejandro",
-      "tel": "5519058497",
+      "tel": "",
       "fecha_cita": "07/08/26 7:30",
       "asistio": null,
       "inscrito": null,
@@ -751,7 +751,7 @@
       "sucursal": "ERMITA",
       "nombre": "Rodolfo",
       "tel": "5558262960",
-      "fecha_cita": "05-08-26 4:00",
+      "fecha_cita": "05/08/26 4:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -769,7 +769,7 @@
       "sucursal": "ERMITA",
       "nombre": "Vianey Merida",
       "tel": "5637425075",
-      "fecha_cita": "22-08-36 12:00",
+      "fecha_cita": "22/08/36 12:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -778,7 +778,7 @@
       "sucursal": "ERMITA",
       "nombre": "Mamá Pilar Avalos/itzayana Irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-26 12:00",
+      "fecha_cita": "15/08/26 12:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Informes TOEFL"
@@ -787,7 +787,7 @@
       "sucursal": "ERMITA",
       "nombre": "Erandi  irineo",
       "tel": "5543523489",
-      "fecha_cita": "15-08-26 12:00",
+      "fecha_cita": "15/08/26 12:00",
       "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -805,7 +805,7 @@
       "sucursal": "ERMITA",
       "nombre": "Beatriz Martínez",
       "tel": "5566244326",
-      "fecha_cita": "20-08-26 5:00",
+      "fecha_cita": "20/08/26 5:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clasae meustra"
@@ -814,7 +814,7 @@
       "sucursal": "ERMITA",
       "nombre": "Natalia",
       "tel": "5568690613",
-      "fecha_cita": "19-08-26 9:00",
+      "fecha_cita": "19/08/26 9:00",
       "asistio": null,
       "inscrito": null,
       "obs": "clase muestra visita al plantel"
@@ -823,7 +823,7 @@
       "sucursal": "ERMITA",
       "nombre": "Sheyra Briseño",
       "tel": "5527422697",
-      "fecha_cita": "21-08-26 3:00",
+      "fecha_cita": "21/08/26 3:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
