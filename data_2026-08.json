@@ -1,30 +1,30 @@
 {
-  "actualizado": "21/08/2026 20:13",
-  "meta_actualizado": "21/08/2026 20:13",
+  "actualizado": "22/08/2026 00:37",
+  "meta_actualizado": "22/08/2026 00:37",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 356,
-    "gasto": 16438.77,
-    "cpl": 46.18,
+    "leads_meta": 358,
+    "gasto": 16552.98,
+    "cpl": 46.24,
     "citas": 33,
     "visitas": 13,
-    "inscritos": 14,
+    "inscritos": 15,
     "citas_agendadas": 36,
     "asistieron": 18,
     "no_asistieron": 4,
     "sin_dato_asistencia": 14,
     "tasa_asistencia": 50.0,
     "tasa_asistencia_con_dato": 81.8,
-    "conv_asistio_inscrito": 77.8,
+    "conv_asistio_inscrito": 83.3,
     "ingresos": 30198.0,
-    "ticket_promedio": 2157.0
+    "ticket_promedio": 2013.2
   },
   "financiero": {
     "ingresos": 30198.0,
     "utilidad": -168.0,
-    "ticket_promedio": 2157.0,
+    "ticket_promedio": 2013.2,
     "gastos": {
       "meta_ads": 13666.0,
       "fabian": 12000.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 13657.67,
-      "impresiones": 196084,
-      "alcance": 120840,
-      "leads": 284,
-      "cpl": 48.09
+      "gasto": 13771.88,
+      "impresiones": 197624,
+      "alcance": 121682,
+      "leads": 286,
+      "cpl": 48.15
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 13657.67,
-      "leads": 284,
-      "cpl": 48.09
+      "gasto": 13771.88,
+      "leads": 286,
+      "cpl": 48.15
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -395,33 +395,33 @@
     },
     "2026-08-20": {
       "leads": 24,
-      "gasto": 740.03
+      "gasto": 740.85
     },
     "2026-08-21": {
-      "leads": 12,
-      "gasto": 474.54
+      "leads": 14,
+      "gasto": 587.93
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 97,
-      "llamadas": 54,
-      "no_contesta": 42,
+      "leads": 102,
+      "llamadas": 58,
+      "no_contesta": 43,
       "citas": 8,
       "visitas": 5,
-      "inscritos": 9,
+      "inscritos": 10,
       "citas_agendadas": 13,
       "asistieron": 10,
       "no_asistieron": 2,
       "sin_dato": 1,
       "tasa_asistencia": 76.9,
       "tasa_asistencia_con_dato": 83.3,
-      "conv_asistio_inscrito": 90.0
+      "conv_asistio_inscrito": 100.0
     },
     "IZTACALCO": {
-      "leads": 94,
+      "leads": 99,
       "llamadas": 54,
-      "no_contesta": 41,
+      "no_contesta": 46,
       "citas": 14,
       "visitas": 4,
       "inscritos": 3,
@@ -434,9 +434,9 @@
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 90,
-      "llamadas": 32,
-      "no_contesta": 51,
+      "leads": 94,
+      "llamadas": 34,
+      "no_contesta": 53,
       "citas": 11,
       "visitas": 4,
       "inscritos": 2,
@@ -768,7 +768,7 @@
     {
       "sucursal": "ERMITA",
       "nombre": "Vianey Merida",
-      "tel": "5637425075",
+      "tel": "56 3742 4075",
       "fecha_cita": "22/08/36 12:00",
       "asistio": null,
       "inscrito": null,
@@ -804,7 +804,7 @@
     {
       "sucursal": "ERMITA",
       "nombre": "Beatriz Martínez",
-      "tel": "5566244326",
+      "tel": "55 6626 4306",
       "fecha_cita": "20/08/26 5:00",
       "asistio": null,
       "inscrito": null,
