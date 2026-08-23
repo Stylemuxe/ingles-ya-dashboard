@@ -1,13 +1,13 @@
 {
-  "actualizado": "22/08/2026 20:11",
-  "meta_actualizado": "22/08/2026 20:11",
+  "actualizado": "23/08/2026 00:40",
+  "meta_actualizado": "23/08/2026 00:40",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 367,
-    "gasto": 16942.97,
-    "cpl": 46.17,
+    "leads_meta": 372,
+    "gasto": 17135.98,
+    "cpl": 46.06,
     "citas": 37,
     "visitas": 13,
     "inscritos": 16,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 14161.87,
-      "impresiones": 202109,
-      "alcance": 124058,
-      "leads": 295,
-      "cpl": 48.01
+      "gasto": 14354.88,
+      "impresiones": 204686,
+      "alcance": 125504,
+      "leads": 300,
+      "cpl": 47.85
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 14161.87,
-      "leads": 295,
-      "cpl": 48.01
+      "gasto": 14354.88,
+      "leads": 300,
+      "cpl": 47.85
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -399,11 +399,11 @@
     },
     "2026-08-21": {
       "leads": 14,
-      "gasto": 681.88
+      "gasto": 682.34
     },
     "2026-08-22": {
-      "leads": 9,
-      "gasto": 295.93
+      "leads": 14,
+      "gasto": 488.48
     }
   },
   "sucursales": {
@@ -764,10 +764,10 @@
       "sucursal": "IZTACALCO",
       "nombre": "Pamela Godinez",
       "tel": "5530550152",
-      "fecha_cita": "",
+      "fecha_cita": "24/08/26 3:00",
       "asistio": null,
       "inscrito": null,
-      "obs": ""
+      "obs": "visita al plantel"
     },
     {
       "sucursal": "ERMITA",
