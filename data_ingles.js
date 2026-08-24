@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "24/08/2026 16:23",
-  "meta_actualizado": "24/08/2026 16:23",
+  "actualizado": "24/08/2026 20:17",
+  "meta_actualizado": "24/08/2026 20:17",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 388,
-    "gasto": 17957.46,
-    "cpl": 46.28,
+    "leads_meta": 389,
+    "gasto": 18090.11,
+    "cpl": 46.5,
     "citas": 37,
     "visitas": 13,
     "inscritos": 16,
-    "citas_agendadas": 40,
+    "citas_agendadas": 42,
     "asistieron": 18,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 18,
-    "tasa_asistencia": 45.0,
+    "sin_dato_asistencia": 20,
+    "tasa_asistencia": 42.9,
     "tasa_asistencia_con_dato": 81.8,
     "conv_asistio_inscrito": 88.9,
     "ingresos": 35259.0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 15176.36,
-      "impresiones": 217699,
-      "alcance": 132044,
-      "leads": 316,
-      "cpl": 48.03
+      "gasto": 15309.01,
+      "impresiones": 219433,
+      "alcance": 132259,
+      "leads": 317,
+      "cpl": 48.29
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 15176.36,
-      "leads": 316,
-      "cpl": 48.03
+      "gasto": 15309.01,
+      "leads": 317,
+      "cpl": 48.29
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -407,11 +407,11 @@ const DATA_INGLES = {
     },
     "2026-08-23": {
       "leads": 7,
-      "gasto": 527.38
+      "gasto": 527.51
     },
     "2026-08-24": {
-      "leads": 0,
-      "gasto": 109.48
+      "leads": 1,
+      "gasto": 242.0
     }
   },
   "sucursales": {
@@ -452,11 +452,11 @@ const DATA_INGLES = {
       "citas": 11,
       "visitas": 4,
       "inscritos": 2,
-      "citas_agendadas": 11,
+      "citas_agendadas": 13,
       "asistieron": 5,
       "no_asistieron": 2,
-      "sin_dato": 4,
-      "tasa_asistencia": 45.5,
+      "sin_dato": 6,
+      "tasa_asistencia": 38.5,
       "tasa_asistencia_con_dato": 71.4,
       "conv_asistio_inscrito": 40.0
     }
@@ -872,6 +872,24 @@ const DATA_INGLES = {
       "nombre": "Sheyra Briseño",
       "tel": "5527422697",
       "fecha_cita": "21/08/26 3:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Ariana godinez",
+      "tel": "55 8322 4367",
+      "fecha_cita": "19-08-26 4:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "visita al plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Irene Martinez /Alberto MArales",
+      "tel": "5546942638",
+      "fecha_cita": "22-08-26 12:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
