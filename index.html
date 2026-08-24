@@ -158,6 +158,9 @@ nav::-webkit-scrollbar { height: 0; }
 .kpi-card:nth-child(7){animation-delay:.35s}
 .kpi-card:nth-child(8){animation-delay:.40s}
 .kpi-card:nth-child(9){animation-delay:.45s}
+.kpi-card:nth-child(10){animation-delay:.50s}
+.kpi-card:nth-child(11){animation-delay:.55s}
+.kpi-card:nth-child(12){animation-delay:.60s}
 @keyframes cardIn { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
 
 .kpi-card::before {
@@ -544,6 +547,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
   <div class="tab" data-pane="presupuesto">Presupuesto</div>
+  <div class="tab" data-pane="metas">🎯 Metas</div>
   <div class="tab" data-pane="incidencias">🚩 Incidencias CC</div>
   <div class="tab" data-pane="guia">📖 Guía</div>
 </nav>
@@ -685,6 +689,29 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   </div>
 </div>
 
+<!-- METAS -->
+<div id="pane-metas" class="pane">
+  <div class="card">
+    <div class="card-head"><span class="card-title">🎯 Meta de David — 50 Leads/Día</span><span class="card-sub">Dónde estamos vs. a dónde quiere llegar</span></div>
+    <div class="sim-kpi-row" id="metas-stats" style="padding:18px 20px 4px"></div>
+    <div class="fin-fuente" id="metas-nota" style="margin:14px 20px 18px"></div>
+  </div>
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">📈 Camino a la Meta — Leads por Mes</span>
+      <span class="card-sub">Histórico real + meta propuesta</span>
+    </div>
+    <div class="calc-cpl-row">
+      <label>Meses para llegar a 50/día</label>
+      <input type="number" id="metas-meses-input" min="1" max="12" step="1" value="4" oninput="renderHistoricoLeads()">
+      <span style="font-size:11px;color:var(--muted);flex:1;min-width:200px">Ritmo de crecimiento propuesto (editable) para escalar el presupuesto sin disparar el CPL de golpe.</span>
+    </div>
+    <div style="overflow-x:auto">
+      <table id="tbl-historico-metas"></table>
+    </div>
+  </div>
+</div>
+
 <!-- DIARIO -->
 <div id="pane-diario" class="pane">
   <div class="card">
@@ -813,7 +840,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <p>Esta sección explica, en palabras simples, qué es cada número que ves en el tablero, cómo se calcula y cómo interpretarlo. La idea es que con esto cualquiera —sin ser experto en marketing— pueda leer el dashboard solo. Los ejemplos usan datos reales de Inglés YA.</p>
   </div>
 
-  <div class="guia-section-title">🔢 Las 6 tarjetas de arriba (pestaña Resumen)</div>
+  <div class="guia-section-title">🔢 Las tarjetas de arriba (pestaña Resumen)</div>
   <div class="guia-grid">
 
     <div class="guia-card" style="--gc:var(--cyan)">
@@ -858,6 +885,27 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="gc-read"><b>Cómo leerlo:</b> es el número que de verdad importa al negocio. Todo lo demás (leads, citas, visitas) solo sirve si termina en inscritos.</div>
     </div>
 
+    <div class="guia-card" style="--gc:#ff4757">
+      <h3>🎯 CPA (pauta) — Costo por Adquisición <span class="gc-tag">Lo que cuesta un alumno</span></h3>
+      <div class="gc-def">Cuánto costó <b>en publicidad</b> cada alumno nuevo inscrito. Es el CPL llevado hasta el final del embudo — la misma idea que el "CPI" que se explica más abajo (sección "Métricas que combinan números"), sólo que aquí vive como tarjeta propia del Resumen porque es la métrica que de verdad dice si el negocio gana o pierde dinero por cada alumno.</div>
+      <div class="gc-calc">CPA (pauta) = Gasto de Meta Ads ÷ Inscritos.<br>Ej: $17,925 ÷ 16 inscritos = <b>$1,120 por alumno</b> (agosto).</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> compáralo siempre contra el <b>Ticket Promedio</b> (lo que paga el alumno). El anillo muestra ese margen: entre más lleno, más lejos está el CPA del ticket (bien). Si el CPA se acerca o supera el ticket, cada alumno nuevo cuesta casi lo mismo — o más — de lo que paga, y ni sumando varios meses de clase se recupera esa inversión.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#c026d3">
+      <h3>💼 CPA Total <span class="gc-tag">El costo real completo</span></h3>
+      <div class="gc-def">La versión completa del CPA: además de la pauta, suma los <b>sueldos de Fabián y Yolanda</b> (todo el equipo que convierte un lead en alumno). Responde "¿cuánto nos cuesta de verdad conseguir un alumno?", no sólo lo que se le paga a Meta.</div>
+      <div class="gc-calc">CPA Total = (Meta Ads + Fabián + Yolanda) ÷ Inscritos.<br>Siempre es mayor o igual que el CPA de pauta, porque suma más gastos arriba del mismo número de inscritos.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> úsalo para decisiones de negocio (¿conviene el modelo actual?) y el CPA de pauta para decisiones de campaña (¿está cara la publicidad?). Sólo aparece cuando Vic ya cerró el bloque de gastos del mes en el sheet — si dice "Sin cierre de gastos", todavía no está disponible.</div>
+    </div>
+
+    <div class="guia-card" style="--gc:#2dd4bf">
+      <h3>📈 Conversión Lead → Inscrito <span class="gc-tag">Termómetro de la operación</span></h3>
+      <div class="gc-def">De cada 100 personas que escriben (leads), <b>cuántas terminan pagando su inscripción</b>. Junta en un solo número todo lo que pasa entre el primer mensaje y la firma: Call Center, citas, visitas y cierre en el plantel.</div>
+      <div class="gc-calc">Conv L→I = (Inscritos ÷ Leads) × 100.<br>Su inverso dice cuántos leads hacen falta para 1 inscrito: Leads ÷ Inscritos. Ej: 388 leads ÷ 16 inscritos = <b>~24 leads por cada inscrito</b> (agosto).</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> es normal que el % se vea bajo (leads son solo "interesados", no compradores). Lo que importa es la tendencia: si baja mes a mes con un CPL parecido, el problema está en el Call Center o el plantel, no en la pauta. Y es la métrica clave para planear cuántos leads hacen falta para alcanzar una meta de inscritos — ver pestaña 🎯 Metas.</div>
+    </div>
+
   </div>
 
   <div class="guia-section-title">🧮 Métricas que combinan números (más abajo en el tablero)</div>
@@ -871,17 +919,17 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     </div>
 
     <div class="guia-card" style="--gc:var(--green)">
-      <h3>🔁 Conversión Lead → Inscrito <span class="gc-tag">Porcentaje</span></h3>
-      <div class="gc-def">De cada 100 leads, <b>cuántos terminan inscritos</b>. Mide qué tan bien se aprovechan los interesados.</div>
+      <h3>🔁 Conversión Lead → Inscrito, por Sucursal <span class="gc-tag">Porcentaje</span></h3>
+      <div class="gc-def">La misma <b>Conversión Lead → Inscrito</b> de la tarjeta de arriba, pero calculada <b>sede por sede</b> en vez del total de la red. Se ve en la tabla de la pestaña Sucursales.</div>
       <div class="gc-calc">Conv = (Inscritos ÷ Leads) × 100<br>Ej: 4 inscritos ÷ 92 leads = <b>4.3%</b> (Lindavista).</div>
-      <div class="gc-read"><b>Cómo leerlo:</b> baja conversión con CPL barato = los leads llegan bien pero se pierden en CC o en el plantel. Es el termómetro de la operación, no de la pauta.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> baja conversión con CPL barato = los leads llegan bien pero se pierden en CC o en el plantel de esa sede. Sirve para detectar qué sucursal necesita ayuda, no para ver el número global.</div>
     </div>
 
     <div class="guia-card" style="--gc:var(--cyan)">
-      <h3>💵 Costo por Inscrito (CPI) <span class="gc-tag">Dinero</span></h3>
-      <div class="gc-def">Cuánto nos costó en publicidad <b>cada alumno nuevo inscrito</b>. Es el CPL llevado hasta el final del embudo.</div>
-      <div class="gc-calc">CPI = Gasto Total ÷ Inscritos.<br>Ej: $5,678 ÷ 4 inscritos = <b>$1,419 por inscrito</b>.</div>
-      <div class="gc-read"><b>Cómo leerlo:</b> es lo que de verdad cuesta "comprar" un alumno. Si el CPL es barato pero el CPI altísimo, el problema NO es la pauta: es que se pierde mucha gente entre el lead y la inscripción.</div>
+      <h3>💵 Costo por Inscrito (CPI), por Sucursal <span class="gc-tag">Dinero</span></h3>
+      <div class="gc-def">Es el mismo <b>CPA</b> de la tarjeta de arriba (cuánto costó en publicidad cada alumno nuevo), pero calculado <b>sede por sede</b> en la tabla de la pestaña Sucursales, en vez del total de la red.</div>
+      <div class="gc-calc">CPI = Gasto de esa sede ÷ Inscritos de esa sede.<br>Ej: $5,678 ÷ 4 inscritos = <b>$1,419 por inscrito</b> (Lindavista).</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> es lo que de verdad cuesta "comprar" un alumno en esa sucursal. Si el CPL es barato pero el CPI altísimo, el problema NO es la pauta: es que se pierde mucha gente entre el lead y la inscripción en esa sede.</div>
     </div>
 
     <div class="guia-card" style="--gc:var(--purple)">
@@ -1020,6 +1068,7 @@ document.querySelectorAll('.tab').forEach(tab => {
     if(tab.dataset.pane==='diario')      renderDiario();
     if(tab.dataset.pane==='presupuesto') simInit();
     if(tab.dataset.pane==='incidencias') incCargar();
+    if(tab.dataset.pane==='metas')       renderMetas();
   });
 });
 
@@ -1492,6 +1541,13 @@ function renderKpis() {
   const k = D.kpis;
   const mp = monthProgress();
   const agendadosN = (D.agenda||[]).length;
+  const cpa = k.inscritos>0 ? k.gasto/k.inscritos : 0;
+  const cpaRingPct = k.ticket_promedio>0 ? Math.max(0,Math.min(100, 100-(cpa/k.ticket_promedio*100))) : 0;
+  const gastosTotalOp = D.financiero?.gastos?.total || 0;
+  const cpaTotal = k.inscritos>0 ? gastosTotalOp/k.inscritos : 0;
+  const cpaTotalRingPct = k.ticket_promedio>0 ? Math.max(0,Math.min(100, 100-(cpaTotal/k.ticket_promedio*100))) : 0;
+  const convLI = k.leads_meta>0 ? (k.inscritos/k.leads_meta*100) : 0;
+  const leadsXInscrito = k.inscritos>0 ? Math.round(k.leads_meta/k.inscritos) : 0;
   const cards = [
     { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'var(--cyan)', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
     { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
@@ -1499,6 +1555,9 @@ function renderKpis() {
     { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), sub: costoXU(k.gasto,k.citas), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
     { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), sub: costoXU(k.gasto,k.visitas), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
     { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'var(--green)', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
+    { icon:'🎯', lbl:'CPA (pauta)', val:cpa,          m:true,  color:'#ff4757', glow:'rgba(255,71,87,.14)', ringPct: cpaRingPct, sub: `Ticket prom: ${$m(k.ticket_promedio||0)}`, tip:'Costo por Adquisición de Cliente = Gasto de pauta (Meta Ads) ÷ Inscritos. Es lo que cuesta "comprar" cada alumno nuevo sólo con publicidad. El anillo muestra qué tan lejos está del Ticket Promedio: si el CPA se acerca o supera el ticket, se pierde dinero por alumno. Ver pestaña 📖 Guía.' },
+    { icon:'💼', lbl:'CPA Total',   val:cpaTotal,     m:true,  color:'#c026d3', glow:'rgba(192,38,211,.14)', ringPct: cpaTotalRingPct, sub: gastosTotalOp ? `Incl. sueldos CC` : 'Sin cierre de gastos', tip:'CPA Total = (Meta Ads + sueldo Fabián + sueldo Yolanda) ÷ Inscritos. Es el costo REAL de conseguir cada alumno, sumando toda la operación de marketing y ventas — no sólo la pauta. Compáralo también contra el Ticket Promedio. Ver pestaña 📖 Guía.' },
+    { icon:'📈', lbl:'Conv. L→I',   val:convLI,       m:false, pct:true, color:'#2dd4bf', glow:'rgba(45,212,191,.14)', ringPct: pctN(k.inscritos, k.leads_meta), sub: leadsXInscrito?`1 inscrito cada ${leadsXInscrito} leads`:'—', tip:'Conversión de Leads a Inscritos = Inscritos ÷ Leads × 100. De cada 100 personas que escriben, cuántas terminan pagando su inscripción. El anillo muestra el % real (suele ser bajo, es normal); abajo se muestra cuántos leads en promedio hacen falta para lograr 1 inscrito. Ver pestaña 📖 Guía.' },
     { icon:'📋', lbl:'Agendados',  val:agendadosN, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, agendadosN), sub: costoXU(k.gasto,agendadosN), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
     { icon:'🚶', lbl:'% Asistencia', val:(k.tasa_asistencia||0), m:false, pct:true, color:'#00c2a8', glow:'rgba(0,194,168,.14)', ringPct:(k.tasa_asistencia||0), sub:`${$n(k.asistieron||0)} de ${$n(k.citas_agendadas||0)} agendados`, tip:`De todas las citas agendadas en la Hoja de Agenda, cuántas efectivamente llegaron (Asistieron ÷ Total agendadas). ${$n(k.sin_dato_asistencia||0)} citas del mes todavía no tienen el dato SÍ/NO capturado y cuentan como no confirmadas. Conversión Asistió→Inscrito: ${(k.conv_asistio_inscrito||0).toFixed(1)}%.` },
     { icon:'🎟️', lbl:'Ticket Prom.', val:(k.ticket_promedio||0), m:true, color:'#ffb800', glow:'rgba(255,184,0,.14)', ringPct: pctN(k.ticket_promedio, 3500), sub:`Ingresos: ${$m(k.ingresos||0)}`, tip:'Monto promedio que paga cada alumno inscrito (Ingresos del mes ÷ Inscritos). Viene de la columna PAGO POR ALUMNO que Vic captura en el sheet de seguimiento.' },
@@ -1762,6 +1821,132 @@ function renderChurn() {
   const el2 = document.getElementById('churn-resumen');
   if (el1) el1.innerHTML = html;
   if (el2) el2.innerHTML = html;
+}
+
+// ── METAS — plan hacia 50 leads/día ─────────────────────────────────────────
+const META_LEADS_DIA = 50;
+let HIST_CACHE = {};
+
+function avgLeadsDia(diario) {
+  const dias = Object.values(diario || {});
+  if (!dias.length) return 0;
+  const tot = dias.reduce((a, d) => a + (d.leads || 0), 0);
+  return tot / dias.length;
+}
+
+// Reparte el crecimiento en pasos mensuales (crecimiento compuesto) para no
+// disparar el presupuesto de golpe: cada mes sube el mismo % hasta llegar a la meta.
+function calcularRampa(avgDia, cpl, meses) {
+  meses = Math.max(1, Math.min(12, meses || 4));
+  const filas = [];
+  if (avgDia <= 0) return filas;
+  const factor = Math.pow(META_LEADS_DIA / avgDia, 1 / meses);
+  let prevDia = avgDia;
+  const base = D.mes_id ? D.mes_id.split('-').map(Number) : [new Date().getFullYear(), new Date().getMonth() + 1];
+  for (let i = 1; i <= meses; i++) {
+    const dia = i === meses ? META_LEADS_DIA : avgDia * Math.pow(factor, i);
+    const mesTot = Math.round(dia * 30);
+    const budgetDia = dia * cpl;
+    const budgetMes = budgetDia * 30;
+    const incPct = prevDia > 0 ? ((dia / prevDia) - 1) * 100 : 0;
+    let y = base[0], m = base[1] + i;
+    while (m > 12) { m -= 12; y += 1; }
+    filas.push({ mesId: `${y}-${String(m).padStart(2, '0')}`, dia, mesTot, budgetDia, budgetMes, incPct });
+    prevDia = dia;
+  }
+  return filas;
+}
+
+function renderMetaStats() {
+  const k = D.kpis || {};
+  const avgDia = avgLeadsDia(D.diario_meta);
+  const cpl = k.cpl || 0;
+  const gastoDiaActual = avgDia * cpl;
+  const brecha = Math.max(0, META_LEADS_DIA - avgDia);
+  const presupNecesario = META_LEADS_DIA * cpl;
+  const stats = [
+    { v: avgDia.toFixed(1), l: 'Leads/día actual (promedio del mes)', c: 'var(--cyan)' },
+    { v: META_LEADS_DIA, l: 'Meta de David (leads/día)', c: 'var(--green)' },
+    { v: brecha.toFixed(1), l: 'Brecha diaria', c: 'var(--pink)' },
+    { v: cpl ? $m(cpl) : '—', l: 'CPL actual', c: '#ff9900' },
+    { v: cpl ? $m(gastoDiaActual) : '—', l: 'Gasto/día actual (implícito)', c: 'var(--muted)' },
+    { v: cpl ? $m(presupNecesario) : '—', l: 'Presupuesto/día para 50 leads', c: '#ff4757' },
+  ];
+  const el = document.getElementById('metas-stats');
+  if (el) el.innerHTML = stats.map(s =>
+    `<div class="sim-kpi"><div class="sim-kpi-val" style="color:${s.c}">${s.v}</div><div class="sim-kpi-lbl">${s.l}</div></div>`
+  ).join('');
+
+  const suc = D.sucursales || {};
+  let totLeads = 0, totNC = 0;
+  Object.values(suc).forEach(v => { totLeads += v.leads || 0; totNC += v.no_contesta || 0; });
+  const pctNC = totLeads > 0 ? (totNC / totLeads * 100) : 0;
+  const notaEl = document.getElementById('metas-nota');
+  if (notaEl) notaEl.innerHTML = totLeads > 0
+    ? `<b>Antes de subir el volumen:</b> este mes el <b>${pctNC.toFixed(0)}%</b> de los leads (${$n(totNC)} de ${$n(totLeads)}) quedaron marcados como <b>"no contesta"</b> en el Call Center. Triplicar los leads sin resolver esto no da más inscritos — sólo triplica los leads que nadie contesta. El primer paso hacia los 50 leads/día es mejorar la tasa de contacto (más intentos, mejor horario de marcación, WhatsApp como respaldo a la llamada); el presupuesto se sube en paralelo, no antes.`
+    : `Aún no hay datos de "no contesta" capturados este mes para revisar la capacidad del Call Center.`;
+}
+
+async function fetchHistorico() {
+  const proms = (MESES_LIST || []).map(async m => {
+    if (HIST_CACHE[m]) return;
+    try {
+      const r = await fetch(`data_${m}.json`);
+      if (r.ok) HIST_CACHE[m] = await r.json();
+    } catch (e) { /* ignora meses que no existan aún */ }
+  });
+  await Promise.all(proms);
+}
+
+async function renderHistoricoLeads() {
+  await fetchHistorico();
+  const mesesAsc = [...(MESES_LIST || [])].sort();
+  let prevLeads = null;
+  const rowsReal = mesesAsc.map(m => {
+    const d = HIST_CACHE[m];
+    const leads = d?.kpis?.leads_meta || 0;
+    const gasto = d?.kpis?.gasto || 0;
+    const cplM  = d?.kpis?.cpl || 0;
+    const insc  = d?.kpis?.inscritos || 0;
+    const variacion = (prevLeads != null && prevLeads > 0) ? ((leads / prevLeads) - 1) * 100 : null;
+    prevLeads = leads;
+    const esActual = m === D.mes_id;
+    return `<tr>
+      <td>${nombreMes(m)}${esActual ? ' <span class="badge ba">en curso</span>' : ''}</td>
+      <td class="num">${$n(leads)}</td>
+      <td class="num">${gasto ? $m(gasto) : '—'}</td>
+      <td class="num">${cplM ? $m(cplM) : '—'}</td>
+      <td class="num" style="color:var(--green)">${$n(insc)}</td>
+      <td class="num" style="color:${variacion == null ? 'var(--muted)' : variacion >= 0 ? 'var(--green)' : 'var(--pink)'}">${variacion == null ? '—' : (variacion >= 0 ? '+' : '') + variacion.toFixed(0) + '%'}</td>
+    </tr>`;
+  }).join('');
+
+  const mesesInput = Math.max(1, Math.min(12, parseInt(document.getElementById('metas-meses-input')?.value) || 4));
+  localStorage.setItem('ingles_meta_meses', mesesInput);
+  const avgDia = avgLeadsDia(D.diario_meta);
+  const cpl = D.kpis?.cpl || 0;
+  const filas = calcularRampa(avgDia, cpl, mesesInput);
+  const rowsProy = filas.map(f => `<tr style="opacity:.8">
+    <td>${nombreMes(f.mesId)} <span class="badge bp">meta</span></td>
+    <td class="num" style="color:var(--cyan)">${$n(f.mesTot)}</td>
+    <td class="num">${cpl ? $m(f.budgetMes) : '—'}</td>
+    <td class="num">${cpl ? $m(cpl) : '—'}</td>
+    <td class="num">—</td>
+    <td class="num" style="color:var(--cyan)">+${f.incPct.toFixed(0)}%</td>
+  </tr>`).join('');
+
+  const el = document.getElementById('tbl-historico-metas');
+  if (el) el.innerHTML = `<thead><tr><th>Mes</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Inscritos</th><th>vs. mes ant.</th></tr></thead><tbody>${rowsReal}${rowsProy || '<tr><td colspan="6" class="empty">Sin datos suficientes este mes para proyectar (falta gasto/CPL)</td></tr>'}</tbody>`;
+}
+
+function renderMetas() {
+  const inp = document.getElementById('metas-meses-input');
+  if (inp && !inp.dataset.init) {
+    inp.value = localStorage.getItem('ingles_meta_meses') || 4;
+    inp.dataset.init = '1';
+  }
+  renderMetaStats();
+  renderHistoricoLeads();
 }
 
 // Sucursal config
@@ -2124,6 +2309,7 @@ function renderAll() {
   renderAdsets();
   renderAgenda();
   if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
+  if (document.querySelector('.tab.active')?.dataset.pane === 'metas')  renderMetas();
 }
 
 // ── Selector de mes ──
@@ -2151,10 +2337,13 @@ async function cambiarMes(mesId) {
   }
 }
 
+let MESES_LIST = [];
+
 async function initMeses() {
   try {
     const r = await fetch('meses.json');
     const meses = await r.json();
+    MESES_LIST = meses;
     const sel = document.getElementById('mes-select');
     sel.innerHTML = meses.map(m =>
       `<option value="${m}">${nombreMes(m)}</option>`
