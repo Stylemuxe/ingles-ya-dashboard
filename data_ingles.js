@@ -1,30 +1,30 @@
 const DATA_INGLES = {
-  "actualizado": "24/08/2026 20:17",
-  "meta_actualizado": "24/08/2026 20:17",
+  "actualizado": "25/08/2026 00:38",
+  "meta_actualizado": "25/08/2026 00:38",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 389,
-    "gasto": 18090.11,
-    "cpl": 46.5,
-    "citas": 37,
+    "leads_meta": 394,
+    "gasto": 18280.72,
+    "cpl": 46.4,
+    "citas": 39,
     "visitas": 13,
-    "inscritos": 16,
+    "inscritos": 18,
     "citas_agendadas": 42,
-    "asistieron": 18,
+    "asistieron": 22,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 20,
-    "tasa_asistencia": 42.9,
-    "tasa_asistencia_con_dato": 81.8,
-    "conv_asistio_inscrito": 88.9,
+    "sin_dato_asistencia": 16,
+    "tasa_asistencia": 52.4,
+    "tasa_asistencia_con_dato": 84.6,
+    "conv_asistio_inscrito": 81.8,
     "ingresos": 35259.0,
-    "ticket_promedio": 2203.69
+    "ticket_promedio": 1958.83
   },
   "financiero": {
     "ingresos": 35259.0,
     "utilidad": 4893.0,
-    "ticket_promedio": 2203.69,
+    "ticket_promedio": 1958.83,
     "gastos": {
       "meta_ads": 13666.0,
       "fabian": 12000.0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 15309.01,
-      "impresiones": 219433,
-      "alcance": 132259,
-      "leads": 317,
-      "cpl": 48.29
+      "gasto": 15499.62,
+      "impresiones": 222517,
+      "alcance": 133715,
+      "leads": 322,
+      "cpl": 48.14
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 15309.01,
-      "leads": 317,
-      "cpl": 48.29
+      "gasto": 15499.62,
+      "leads": 322,
+      "cpl": 48.14
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -407,18 +407,18 @@ const DATA_INGLES = {
     },
     "2026-08-23": {
       "leads": 7,
-      "gasto": 527.51
+      "gasto": 527.73
     },
     "2026-08-24": {
-      "leads": 1,
-      "gasto": 242.0
+      "leads": 6,
+      "gasto": 432.39
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 107,
-      "llamadas": 60,
-      "no_contesta": 46,
+      "leads": 130,
+      "llamadas": 63,
+      "no_contesta": 66,
       "citas": 11,
       "visitas": 5,
       "inscritos": 11,
@@ -431,34 +431,34 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 110.0
     },
     "IZTACALCO": {
-      "leads": 104,
-      "llamadas": 57,
-      "no_contesta": 48,
-      "citas": 15,
+      "leads": 132,
+      "llamadas": 61,
+      "no_contesta": 73,
+      "citas": 17,
       "visitas": 4,
-      "inscritos": 3,
+      "inscritos": 5,
       "citas_agendadas": 13,
       "asistieron": 3,
       "no_asistieron": 0,
       "sin_dato": 10,
       "tasa_asistencia": 23.1,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 100.0
+      "conv_asistio_inscrito": 166.7
     },
     "ERMITA": {
-      "leads": 96,
-      "llamadas": 36,
-      "no_contesta": 53,
+      "leads": 121,
+      "llamadas": 39,
+      "no_contesta": 75,
       "citas": 11,
       "visitas": 4,
       "inscritos": 2,
       "citas_agendadas": 13,
-      "asistieron": 5,
+      "asistieron": 9,
       "no_asistieron": 2,
-      "sin_dato": 6,
-      "tasa_asistencia": 38.5,
-      "tasa_asistencia_con_dato": 71.4,
-      "conv_asistio_inscrito": 40.0
+      "sin_dato": 2,
+      "tasa_asistencia": 69.2,
+      "tasa_asistencia_con_dato": 81.8,
+      "conv_asistio_inscrito": 22.2
     }
   },
   "metas_leads": {
@@ -818,7 +818,7 @@ const DATA_INGLES = {
       "nombre": "Vianey Merida",
       "tel": "56 3742 4075",
       "fecha_cita": "22/08/36 12:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
     },
@@ -872,7 +872,7 @@ const DATA_INGLES = {
       "nombre": "Sheyra Briseño",
       "tel": "5527422697",
       "fecha_cita": "21/08/26 3:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
     },
@@ -881,7 +881,7 @@ const DATA_INGLES = {
       "nombre": "Ariana godinez",
       "tel": "55 8322 4367",
       "fecha_cita": "19-08-26 4:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "visita al plantel"
     },
@@ -890,7 +890,7 @@ const DATA_INGLES = {
       "nombre": "Irene Martinez /Alberto MArales",
       "tel": "5546942638",
       "fecha_cita": "22-08-26 12:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
     }
