@@ -1,30 +1,30 @@
 {
-  "actualizado": "26/08/2026 16:41",
-  "meta_actualizado": "26/08/2026 16:41",
+  "actualizado": "26/08/2026 22:35",
+  "meta_actualizado": "26/08/2026 22:34",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 443,
-    "gasto": 20130.34,
-    "cpl": 45.44,
-    "citas": 43,
-    "visitas": 13,
-    "inscritos": 21,
-    "citas_agendadas": 48,
+    "leads_meta": 449,
+    "gasto": 20408.29,
+    "cpl": 45.45,
+    "citas": 49,
+    "visitas": 14,
+    "inscritos": 22,
+    "citas_agendadas": 52,
     "asistieron": 22,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 22,
-    "tasa_asistencia": 45.8,
+    "sin_dato_asistencia": 26,
+    "tasa_asistencia": 42.3,
     "tasa_asistencia_con_dato": 84.6,
-    "conv_asistio_inscrito": 95.5,
+    "conv_asistio_inscrito": 100.0,
     "ingresos": 40979.0,
-    "ticket_promedio": 1951.38
+    "ticket_promedio": 1862.68
   },
   "financiero": {
     "ingresos": 40979.0,
     "utilidad": -754.0,
-    "ticket_promedio": 1951.38,
+    "ticket_promedio": 1862.68,
     "gastos": {
       "meta_ads": 19233.0,
       "fabian": 12000.0,
@@ -38,10 +38,10 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 17349.24,
-      "impresiones": 249274,
-      "alcance": 144517,
-      "leads": 371,
+      "gasto": 17627.19,
+      "impresiones": 252504,
+      "alcance": 145486,
+      "leads": 377,
       "cpl": 46.76
     },
     {
@@ -194,8 +194,8 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 17349.24,
-      "leads": 371,
+      "gasto": 17627.19,
+      "leads": 377,
       "cpl": 46.76
     },
     {
@@ -411,62 +411,62 @@
     },
     "2026-08-24": {
       "leads": 22,
-      "gasto": 1030.4
+      "gasto": 1030.57
     },
     "2026-08-25": {
       "leads": 25,
-      "gasto": 1009.53
+      "gasto": 1011.09
     },
     "2026-08-26": {
-      "leads": 8,
-      "gasto": 242.0
+      "leads": 14,
+      "gasto": 518.22
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 147,
-      "llamadas": 68,
-      "no_contesta": 78,
-      "citas": 12,
-      "visitas": 5,
-      "inscritos": 12,
-      "citas_agendadas": 17,
+      "leads": 154,
+      "llamadas": 73,
+      "no_contesta": 80,
+      "citas": 16,
+      "visitas": 6,
+      "inscritos": 13,
+      "citas_agendadas": 21,
       "asistieron": 10,
       "no_asistieron": 2,
-      "sin_dato": 5,
-      "tasa_asistencia": 58.8,
+      "sin_dato": 9,
+      "tasa_asistencia": 47.6,
       "tasa_asistencia_con_dato": 83.3,
-      "conv_asistio_inscrito": 120.0
+      "conv_asistio_inscrito": 130.0
     },
     "IZTACALCO": {
-      "leads": 146,
-      "llamadas": 67,
-      "no_contesta": 81,
-      "citas": 20,
+      "leads": 153,
+      "llamadas": 72,
+      "no_contesta": 83,
+      "citas": 21,
       "visitas": 4,
       "inscritos": 7,
-      "citas_agendadas": 18,
-      "asistieron": 3,
+      "citas_agendadas": 19,
+      "asistieron": 4,
       "no_asistieron": 0,
       "sin_dato": 15,
-      "tasa_asistencia": 16.7,
+      "tasa_asistencia": 21.1,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 233.3
+      "conv_asistio_inscrito": 175.0
     },
     "ERMITA": {
-      "leads": 132,
-      "llamadas": 43,
-      "no_contesta": 82,
-      "citas": 11,
+      "leads": 139,
+      "llamadas": 46,
+      "no_contesta": 86,
+      "citas": 12,
       "visitas": 4,
       "inscritos": 2,
-      "citas_agendadas": 13,
-      "asistieron": 9,
+      "citas_agendadas": 12,
+      "asistieron": 8,
       "no_asistieron": 2,
       "sin_dato": 2,
-      "tasa_asistencia": 69.2,
-      "tasa_asistencia_con_dato": 81.8,
-      "conv_asistio_inscrito": 22.2
+      "tasa_asistencia": 66.7,
+      "tasa_asistencia_con_dato": 80.0,
+      "conv_asistio_inscrito": 25.0
     }
   },
   "metas_leads": {
@@ -678,6 +678,42 @@
       "obs": "Examen de colocación"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Patricia Mena",
+      "tel": "5576130735",
+      "fecha_cita": "29/05/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luis bernal",
+      "tel": "55 6628 4282",
+      "fecha_cita": "27/08/08/26 2:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "vista plantel (inscripción )"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Laura",
+      "tel": "",
+      "fecha_cita": "26/08/26",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visita"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Yuliana",
+      "tel": "5543637172",
+      "fecha_cita": "26/08/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
@@ -808,7 +844,7 @@
       "nombre": "Cristhian Schivon",
       "tel": "5591693423",
       "fecha_cita": "26/08/26 6:30",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra en línea"
     },
@@ -838,6 +874,15 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra en línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Paulina Garcia Ortega",
+      "tel": "5535127312",
+      "fecha_cita": "26/08/26 3:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
@@ -940,21 +985,12 @@
     },
     {
       "sucursal": "ERMITA",
-      "nombre": "Ariana godinez",
-      "tel": "55 8322 4367",
-      "fecha_cita": "19-08-26 4:00",
+      "nombre": "Irene MArtinez /Alberto",
+      "tel": "5546942698",
+      "fecha_cita": "22/08/26 12:00",
       "asistio": true,
       "inscrito": null,
-      "obs": "visita al plantel"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Irene Martinez /Alberto MArales",
-      "tel": "5546942638",
-      "fecha_cita": "22-08-26 12:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
+      "obs": "Clae muestra"
     }
   ]
 }
