@@ -1,21 +1,21 @@
 {
-  "actualizado": "25/08/2026 20:16",
-  "meta_actualizado": "25/08/2026 20:16",
+  "actualizado": "26/08/2026 00:39",
+  "meta_actualizado": "26/08/2026 00:39",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 423,
-    "gasto": 19468.36,
-    "cpl": 46.02,
-    "citas": 39,
+    "leads_meta": 430,
+    "gasto": 19689.9,
+    "cpl": 45.79,
+    "citas": 43,
     "visitas": 13,
     "inscritos": 21,
-    "citas_agendadas": 46,
+    "citas_agendadas": 48,
     "asistieron": 22,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 20,
-    "tasa_asistencia": 47.8,
+    "sin_dato_asistencia": 22,
+    "tasa_asistencia": 45.8,
     "tasa_asistencia_con_dato": 84.6,
     "conv_asistio_inscrito": 95.5,
     "ingresos": 40979.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 16687.26,
-      "impresiones": 240294,
-      "alcance": 141959,
-      "leads": 351,
-      "cpl": 47.54
+      "gasto": 16908.8,
+      "impresiones": 242991,
+      "alcance": 142909,
+      "leads": 358,
+      "cpl": 47.23
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 16687.26,
-      "leads": 351,
-      "cpl": 47.54
+      "gasto": 16908.8,
+      "leads": 358,
+      "cpl": 47.23
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -411,48 +411,48 @@
     },
     "2026-08-24": {
       "leads": 22,
-      "gasto": 1027.84
+      "gasto": 1029.41
     },
     "2026-08-25": {
-      "leads": 13,
-      "gasto": 592.11
+      "leads": 20,
+      "gasto": 812.08
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 137,
-      "llamadas": 63,
-      "no_contesta": 73,
-      "citas": 11,
+      "leads": 147,
+      "llamadas": 68,
+      "no_contesta": 78,
+      "citas": 12,
       "visitas": 5,
       "inscritos": 12,
-      "citas_agendadas": 16,
+      "citas_agendadas": 17,
       "asistieron": 10,
       "no_asistieron": 2,
-      "sin_dato": 4,
-      "tasa_asistencia": 62.5,
+      "sin_dato": 5,
+      "tasa_asistencia": 58.8,
       "tasa_asistencia_con_dato": 83.3,
       "conv_asistio_inscrito": 120.0
     },
     "IZTACALCO": {
-      "leads": 136,
-      "llamadas": 61,
-      "no_contesta": 77,
-      "citas": 17,
+      "leads": 146,
+      "llamadas": 67,
+      "no_contesta": 81,
+      "citas": 20,
       "visitas": 4,
       "inscritos": 7,
-      "citas_agendadas": 17,
+      "citas_agendadas": 18,
       "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 14,
-      "tasa_asistencia": 17.6,
+      "sin_dato": 15,
+      "tasa_asistencia": 16.7,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 233.3
     },
     "ERMITA": {
-      "leads": 126,
-      "llamadas": 39,
-      "no_contesta": 80,
+      "leads": 132,
+      "llamadas": 43,
+      "no_contesta": 82,
       "citas": 11,
       "visitas": 4,
       "inscritos": 2,
@@ -665,6 +665,15 @@
       "obs": "CLase Muestra"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "arisbeth Garduño",
+      "tel": "5521484818",
+      "fecha_cita": "28/08/26 5:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Examen de colocación"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Juana cruz/ Iris Cruz",
       "tel": "5574007309",
@@ -813,6 +822,15 @@
       "nombre": "Gabriela aguilar",
       "tel": "5543670412",
       "fecha_cita": "21/08/26 7:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra en línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Cristina Hernandez",
+      "tel": "5551722995",
+      "fecha_cita": "28/08/26 6:30",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra en línea"
