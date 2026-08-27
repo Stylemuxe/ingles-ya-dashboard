@@ -1,35 +1,35 @@
 {
-  "actualizado": "27/08/2026 05:41",
-  "meta_actualizado": "27/08/2026 05:41",
+  "actualizado": "27/08/2026 18:30",
+  "meta_actualizado": "27/08/2026 18:29",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 456,
-    "gasto": 20617.78,
-    "cpl": 45.21,
-    "citas": 49,
-    "visitas": 14,
-    "inscritos": 22,
+    "leads_meta": 468,
+    "gasto": 20893.15,
+    "cpl": 44.64,
+    "citas": 50,
+    "visitas": 17,
+    "inscritos": 19,
     "citas_agendadas": 52,
-    "asistieron": 22,
+    "asistieron": 26,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 26,
-    "tasa_asistencia": 42.3,
-    "tasa_asistencia_con_dato": 84.6,
-    "conv_asistio_inscrito": 100.0,
-    "ingresos": 51311.0,
-    "ticket_promedio": 2332.32
+    "sin_dato_asistencia": 22,
+    "tasa_asistencia": 50.0,
+    "tasa_asistencia_con_dato": 86.7,
+    "conv_asistio_inscrito": 73.1,
+    "ingresos": 46387.0,
+    "ticket_promedio": 2441.42
   },
   "financiero": {
-    "ingresos": 51311.0,
-    "utilidad": 9578.0,
-    "ticket_promedio": 2332.32,
+    "ingresos": 46387.0,
+    "utilidad": 264.0,
+    "ticket_promedio": 2441.42,
     "gastos": {
       "meta_ads": 19233.0,
       "fabian": 12000.0,
-      "yolanda": 10500.0,
-      "total": 41733.0
+      "yolanda": 12600.0,
+      "total": 43833.0
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 17836.68,
-      "impresiones": 255721,
-      "alcance": 145822,
-      "leads": 384,
-      "cpl": 46.45
+      "gasto": 18112.05,
+      "impresiones": 259126,
+      "alcance": 146557,
+      "leads": 396,
+      "cpl": 45.74
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 17836.68,
-      "leads": 384,
-      "cpl": 46.45
+      "gasto": 18112.05,
+      "leads": 396,
+      "cpl": 45.74
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -418,40 +418,44 @@
       "gasto": 1011.45
     },
     "2026-08-26": {
-      "leads": 21,
-      "gasto": 727.31
+      "leads": 23,
+      "gasto": 761.28
+    },
+    "2026-08-27": {
+      "leads": 10,
+      "gasto": 241.4
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 154,
+      "leads": 151,
       "llamadas": 73,
-      "no_contesta": 80,
-      "citas": 16,
+      "no_contesta": 77,
+      "citas": 17,
       "visitas": 6,
-      "inscritos": 13,
+      "inscritos": 12,
       "citas_agendadas": 21,
       "asistieron": 10,
       "no_asistieron": 2,
       "sin_dato": 9,
       "tasa_asistencia": 47.6,
       "tasa_asistencia_con_dato": 83.3,
-      "conv_asistio_inscrito": 130.0
+      "conv_asistio_inscrito": 120.0
     },
     "IZTACALCO": {
       "leads": 153,
       "llamadas": 72,
-      "no_contesta": 83,
+      "no_contesta": 80,
       "citas": 21,
-      "visitas": 4,
-      "inscritos": 7,
+      "visitas": 7,
+      "inscritos": 4,
       "citas_agendadas": 19,
-      "asistieron": 4,
+      "asistieron": 8,
       "no_asistieron": 0,
-      "sin_dato": 15,
-      "tasa_asistencia": 21.1,
+      "sin_dato": 11,
+      "tasa_asistencia": 42.1,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 175.0
+      "conv_asistio_inscrito": 50.0
     },
     "ERMITA": {
       "leads": 139,
@@ -459,14 +463,14 @@
       "no_contesta": 86,
       "citas": 12,
       "visitas": 4,
-      "inscritos": 2,
+      "inscritos": 3,
       "citas_agendadas": 12,
       "asistieron": 8,
       "no_asistieron": 2,
       "sin_dato": 2,
       "tasa_asistencia": 66.7,
       "tasa_asistencia_con_dato": 80.0,
-      "conv_asistio_inscrito": 25.0
+      "conv_asistio_inscrito": 37.5
     }
   },
   "metas_leads": {
@@ -835,9 +839,9 @@
       "nombre": "Luis Carvajal",
       "tel": "5520873437",
       "fecha_cita": "26/08/26 9:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
-      "obs": "Clase muestra"
+      "obs": "PENDIENTE"
     },
     {
       "sucursal": "IZTACALCO",
@@ -853,7 +857,7 @@
       "nombre": "Ada",
       "tel": "5591693423",
       "fecha_cita": "26/08/26 6:30",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra en línea"
     },
@@ -862,7 +866,7 @@
       "nombre": "Gabriela aguilar",
       "tel": "5543670412",
       "fecha_cita": "21/08/26 7:30",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra en línea"
     },
@@ -871,7 +875,7 @@
       "nombre": "Cristina Hernandez",
       "tel": "5551722995",
       "fecha_cita": "28/08/26 6:30",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra en línea"
     },
