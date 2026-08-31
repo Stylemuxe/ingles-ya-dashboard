@@ -1,23 +1,23 @@
 const DATA_INGLES = {
-  "actualizado": "31/08/2026 10:14",
-  "meta_actualizado": "31/08/2026 10:14",
+  "actualizado": "31/08/2026 18:24",
+  "meta_actualizado": "31/08/2026 18:24",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 540,
-    "gasto": 23466.38,
-    "cpl": 43.46,
+    "leads_meta": 546,
+    "gasto": 23656.0,
+    "cpl": 43.33,
     "citas": 53,
     "visitas": 19,
     "inscritos": 21,
-    "citas_agendadas": 53,
-    "asistieron": 26,
+    "citas_agendadas": 55,
+    "asistieron": 28,
     "no_asistieron": 4,
     "sin_dato_asistencia": 23,
-    "tasa_asistencia": 49.1,
-    "tasa_asistencia_con_dato": 86.7,
-    "conv_asistio_inscrito": 80.8,
+    "tasa_asistencia": 50.9,
+    "tasa_asistencia_con_dato": 87.5,
+    "conv_asistio_inscrito": 75.0,
     "ingresos": 55133.0,
     "ticket_promedio": 2625.38
   },
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 20685.28,
-      "impresiones": 296497,
-      "alcance": 162487,
-      "leads": 468,
-      "cpl": 44.2
+      "gasto": 20874.9,
+      "impresiones": 298097,
+      "alcance": 162539,
+      "leads": 474,
+      "cpl": 44.04
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 20685.28,
-      "leads": 468,
-      "cpl": 44.2
+      "gasto": 20874.9,
+      "leads": 473,
+      "cpl": 44.13
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -435,11 +435,11 @@ const DATA_INGLES = {
     },
     "2026-08-30": {
       "leads": 19,
-      "gasto": 642.97
+      "gasto": 644.22
     },
     "2026-08-31": {
-      "leads": 0,
-      "gasto": 1.35
+      "leads": 6,
+      "gasto": 189.72
     }
   },
   "sucursales": {
@@ -465,13 +465,13 @@ const DATA_INGLES = {
       "citas": 22,
       "visitas": 7,
       "inscritos": 4,
-      "citas_agendadas": 19,
-      "asistieron": 8,
+      "citas_agendadas": 21,
+      "asistieron": 10,
       "no_asistieron": 0,
       "sin_dato": 11,
-      "tasa_asistencia": 42.1,
+      "tasa_asistencia": 47.6,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 50.0
+      "conv_asistio_inscrito": 40.0
     },
     "ERMITA": {
       "leads": 153,
@@ -807,10 +807,10 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "IZTACALCO",
-      "nombre": "Emanuel Troya /Itzuri Daniela",
+      "nombre": "Emanuel Troya",
       "tel": "5583256058",
       "fecha_cita": "22/08/26 11:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Examen de colocación"
     },
@@ -909,6 +909,24 @@ const DATA_INGLES = {
       "nombre": "Paulina Garcia Ortega",
       "tel": "5535127312",
       "fecha_cita": "26/08/26 3:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Itzuri Daniela",
+      "tel": "5583256058",
+      "fecha_cita": "29-08-26",
+      "asistio": true,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "ALejandra",
+      "tel": "5522133951",
+      "fecha_cita": "31/05/26 5:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
