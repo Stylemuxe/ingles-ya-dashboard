@@ -1,21 +1,21 @@
 {
-  "actualizado": "31/08/2026 18:24",
-  "meta_actualizado": "31/08/2026 18:24",
+  "actualizado": "31/08/2026 23:29",
+  "meta_actualizado": "31/08/2026 23:29",
   "meta_ok": true,
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 546,
-    "gasto": 23656.0,
-    "cpl": 43.33,
+    "leads_meta": 547,
+    "gasto": 23828.41,
+    "cpl": 43.56,
     "citas": 53,
     "visitas": 19,
     "inscritos": 21,
-    "citas_agendadas": 55,
+    "citas_agendadas": 63,
     "asistieron": 28,
     "no_asistieron": 4,
-    "sin_dato_asistencia": 23,
-    "tasa_asistencia": 50.9,
+    "sin_dato_asistencia": 31,
+    "tasa_asistencia": 44.4,
     "tasa_asistencia_con_dato": 87.5,
     "conv_asistio_inscrito": 75.0,
     "ingresos": 55133.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 20874.9,
-      "impresiones": 298097,
-      "alcance": 162539,
-      "leads": 474,
-      "cpl": 44.04
+      "gasto": 21047.31,
+      "impresiones": 299291,
+      "alcance": 162718,
+      "leads": 475,
+      "cpl": 44.31
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 20874.9,
-      "leads": 473,
-      "cpl": 44.13
+      "gasto": 21047.31,
+      "leads": 474,
+      "cpl": 44.4
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -435,56 +435,56 @@
     },
     "2026-08-30": {
       "leads": 19,
-      "gasto": 644.22
+      "gasto": 644.61
     },
     "2026-08-31": {
-      "leads": 6,
-      "gasto": 189.72
+      "leads": 7,
+      "gasto": 361.74
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 167,
+      "leads": 179,
       "llamadas": 84,
-      "no_contesta": 80,
+      "no_contesta": 92,
       "citas": 19,
       "visitas": 8,
       "inscritos": 14,
-      "citas_agendadas": 22,
+      "citas_agendadas": 24,
       "asistieron": 10,
       "no_asistieron": 2,
-      "sin_dato": 10,
-      "tasa_asistencia": 45.5,
+      "sin_dato": 12,
+      "tasa_asistencia": 41.7,
       "tasa_asistencia_con_dato": 83.3,
       "conv_asistio_inscrito": 140.0
     },
     "IZTACALCO": {
-      "leads": 170,
+      "leads": 184,
       "llamadas": 83,
-      "no_contesta": 83,
+      "no_contesta": 97,
       "citas": 22,
       "visitas": 7,
       "inscritos": 4,
-      "citas_agendadas": 21,
+      "citas_agendadas": 26,
       "asistieron": 10,
       "no_asistieron": 0,
-      "sin_dato": 11,
-      "tasa_asistencia": 47.6,
+      "sin_dato": 16,
+      "tasa_asistencia": 38.5,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 40.0
     },
     "ERMITA": {
-      "leads": 153,
+      "leads": 164,
       "llamadas": 51,
-      "no_contesta": 95,
+      "no_contesta": 106,
       "citas": 12,
       "visitas": 4,
       "inscritos": 3,
-      "citas_agendadas": 12,
+      "citas_agendadas": 13,
       "asistieron": 8,
       "no_asistieron": 2,
-      "sin_dato": 2,
-      "tasa_asistencia": 66.7,
+      "sin_dato": 3,
+      "tasa_asistencia": 61.5,
       "tasa_asistencia_con_dato": 80.0,
       "conv_asistio_inscrito": 37.5
     }
@@ -537,6 +537,29 @@
       "ERMITA": {
         "leads": 3,
         "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-08-31": {
+      "LINDAVISTA": {
+        "leads": 3,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 3,
+        "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 2,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -727,7 +750,7 @@
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Yuliana",
-      "tel": "5543637172",
+      "tel": "5673637172",
       "fecha_cita": "26/08/26 9:00",
       "asistio": null,
       "inscrito": null,
@@ -741,6 +764,24 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Examen"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Emiliano miranda",
+      "tel": "5529920196",
+      "fecha_cita": "31/08/26",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "ccLASE MUESTRA INSCRIPCIÓN"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Valeria",
+      "tel": "5568986708",
+      "fecha_cita": "02/09/26 3:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Inscripción"
     },
     {
       "sucursal": "IZTACALCO",
@@ -932,6 +973,51 @@
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Alma Almazan es para sus dos hijos",
+      "tel": "5558009728",
+      "fecha_cita": "05/09/26 9:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "CLase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Jesica",
+      "tel": "5637335322",
+      "fecha_cita": "31/08/26 4:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visita al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Rocio solares",
+      "tel": "5513862950",
+      "fecha_cita": "01/08/26 4:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Examen Oral"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Ivan",
+      "tel": "5521194553",
+      "fecha_cita": "02/09/26 5:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clqase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Jaciel Bautizta",
+      "tel": "5616002035",
+      "fecha_cita": "05/09/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "inscripción"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Raúl",
       "tel": "5570476480",
@@ -1038,6 +1124,15 @@
       "asistio": true,
       "inscrito": null,
       "obs": "Clae muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Jaciel Bautizta",
+      "tel": "5616002035",
+      "fecha_cita": "05/09/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "inscripción"
     }
   ]
 }
