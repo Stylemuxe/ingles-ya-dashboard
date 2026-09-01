@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "31/08/2026 23:29",
-  "meta_actualizado": "31/08/2026 23:29",
+  "actualizado": "01/09/2026 02:34",
+  "meta_actualizado": "01/09/2026 02:34",
   "meta_ok": true,
-  "mes": "Agosto 2026",
-  "mes_id": "2026-08",
+  "mes": "Septiembre 2026",
+  "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 547,
-    "gasto": 23828.41,
-    "cpl": 43.56,
-    "citas": 53,
-    "visitas": 19,
-    "inscritos": 21,
-    "citas_agendadas": 63,
-    "asistieron": 28,
-    "no_asistieron": 4,
-    "sin_dato_asistencia": 31,
-    "tasa_asistencia": 44.4,
-    "tasa_asistencia_con_dato": 87.5,
-    "conv_asistio_inscrito": 75.0,
-    "ingresos": 55133.0,
-    "ticket_promedio": 2625.38
+    "leads_meta": 0,
+    "gasto": 0.0,
+    "cpl": 0,
+    "citas": 18,
+    "visitas": 3,
+    "inscritos": 10,
+    "citas_agendadas": 1,
+    "asistieron": 0,
+    "no_asistieron": 0,
+    "sin_dato_asistencia": 1,
+    "tasa_asistencia": 0.0,
+    "tasa_asistencia_con_dato": 0.0,
+    "conv_asistio_inscrito": 0.0,
+    "ingresos": 0.0,
+    "ticket_promedio": 0.0
   },
   "financiero": {
-    "ingresos": 55133.0,
-    "utilidad": 5734.0,
-    "ticket_promedio": 2625.38,
+    "ingresos": 0.0,
+    "utilidad": 0.0,
+    "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 22509.0,
-      "fabian": 12000.0,
-      "yolanda": 12600.0,
-      "total": 47109.0
+      "meta_ads": 0.0,
+      "fabian": 0.0,
+      "yolanda": 0.0,
+      "total": 0.0
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 21047.31,
-      "impresiones": 299291,
-      "alcance": 162718,
-      "leads": 475,
-      "cpl": 44.31
+      "gasto": 0.0,
+      "impresiones": 0,
+      "alcance": 0,
+      "leads": 0,
+      "cpl": 0
     },
     {
       "id": "52515312914962",
@@ -104,11 +104,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada",
       "status": "PAUSED",
       "presupuesto_dia": 647.92,
-      "gasto": 2781.1,
-      "impresiones": 46477,
-      "alcance": 35960,
-      "leads": 72,
-      "cpl": 38.63
+      "gasto": 0.0,
+      "impresiones": 0,
+      "alcance": 0,
+      "leads": 0,
+      "cpl": 0
     },
     {
       "id": "6917541255358",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 21047.31,
-      "leads": 474,
-      "cpl": 44.4
+      "gasto": 0.0,
+      "leads": 0,
+      "cpl": 0
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -212,9 +212,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
-      "gasto": 2741.73,
-      "leads": 72,
-      "cpl": 38.08
+      "gasto": 0.0,
+      "leads": 0,
+      "cpl": 0
     },
     {
       "nombre": "Leads Iztacalco Campaña",
@@ -316,823 +316,70 @@ const DATA_INGLES = {
       "cpl": 0
     }
   ],
-  "diario_meta": {
-    "2026-08-01": {
-      "leads": 12,
-      "gasto": 620.73
-    },
-    "2026-08-02": {
-      "leads": 11,
-      "gasto": 529.2
-    },
-    "2026-08-03": {
-      "leads": 18,
-      "gasto": 730.13
-    },
-    "2026-08-04": {
-      "leads": 53,
-      "gasto": 1549.16
-    },
-    "2026-08-05": {
-      "leads": 42,
-      "gasto": 1039.46
-    },
-    "2026-08-06": {
-      "leads": 15,
-      "gasto": 466.33
-    },
-    "2026-08-07": {
-      "leads": 8,
-      "gasto": 860.58
-    },
-    "2026-08-08": {
-      "leads": 14,
-      "gasto": 769.51
-    },
-    "2026-08-09": {
-      "leads": 12,
-      "gasto": 1094.56
-    },
-    "2026-08-10": {
-      "leads": 8,
-      "gasto": 434.09
-    },
-    "2026-08-11": {
-      "leads": 22,
-      "gasto": 1291.66
-    },
-    "2026-08-12": {
-      "leads": 6,
-      "gasto": 570.11
-    },
-    "2026-08-13": {
-      "leads": 11,
-      "gasto": 804.52
-    },
-    "2026-08-14": {
-      "leads": 12,
-      "gasto": 741.37
-    },
-    "2026-08-15": {
-      "leads": 14,
-      "gasto": 549.64
-    },
-    "2026-08-16": {
-      "leads": 7,
-      "gasto": 718.66
-    },
-    "2026-08-17": {
-      "leads": 10,
-      "gasto": 786.21
-    },
-    "2026-08-18": {
-      "leads": 31,
-      "gasto": 1056.53
-    },
-    "2026-08-19": {
-      "leads": 22,
-      "gasto": 838.38
-    },
-    "2026-08-20": {
-      "leads": 24,
-      "gasto": 740.96
-    },
-    "2026-08-21": {
-      "leads": 14,
-      "gasto": 682.67
-    },
-    "2026-08-22": {
-      "leads": 23,
-      "gasto": 672.77
-    },
-    "2026-08-23": {
-      "leads": 7,
-      "gasto": 527.81
-    },
-    "2026-08-24": {
-      "leads": 22,
-      "gasto": 1030.61
-    },
-    "2026-08-25": {
-      "leads": 25,
-      "gasto": 1011.45
-    },
-    "2026-08-26": {
-      "leads": 23,
-      "gasto": 762.8
-    },
-    "2026-08-27": {
-      "leads": 21,
-      "gasto": 771.44
-    },
-    "2026-08-28": {
-      "leads": 14,
-      "gasto": 681.13
-    },
-    "2026-08-29": {
-      "leads": 28,
-      "gasto": 716.22
-    },
-    "2026-08-30": {
-      "leads": 19,
-      "gasto": 644.61
-    },
-    "2026-08-31": {
-      "leads": 7,
-      "gasto": 361.74
-    }
-  },
+  "diario_meta": {},
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 179,
-      "llamadas": 84,
-      "no_contesta": 92,
-      "citas": 19,
-      "visitas": 8,
-      "inscritos": 14,
-      "citas_agendadas": 24,
-      "asistieron": 10,
-      "no_asistieron": 2,
-      "sin_dato": 12,
-      "tasa_asistencia": 41.7,
-      "tasa_asistencia_con_dato": 83.3,
-      "conv_asistio_inscrito": 140.0
+      "leads": 131,
+      "llamadas": 89,
+      "no_contesta": 50,
+      "citas": 10,
+      "visitas": 1,
+      "inscritos": 5,
+      "citas_agendadas": 0,
+      "asistieron": 0,
+      "no_asistieron": 0,
+      "sin_dato": 0,
+      "tasa_asistencia": 0.0,
+      "tasa_asistencia_con_dato": 0.0,
+      "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 184,
-      "llamadas": 83,
-      "no_contesta": 97,
-      "citas": 22,
-      "visitas": 7,
-      "inscritos": 4,
-      "citas_agendadas": 26,
-      "asistieron": 10,
+      "leads": 112,
+      "llamadas": 68,
+      "no_contesta": 54,
+      "citas": 5,
+      "visitas": 2,
+      "inscritos": 3,
+      "citas_agendadas": 0,
+      "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 16,
-      "tasa_asistencia": 38.5,
-      "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 40.0
+      "sin_dato": 0,
+      "tasa_asistencia": 0.0,
+      "tasa_asistencia_con_dato": 0.0,
+      "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 164,
-      "llamadas": 51,
-      "no_contesta": 106,
-      "citas": 12,
-      "visitas": 4,
-      "inscritos": 3,
-      "citas_agendadas": 13,
-      "asistieron": 8,
-      "no_asistieron": 2,
-      "sin_dato": 3,
-      "tasa_asistencia": 61.5,
-      "tasa_asistencia_con_dato": 80.0,
-      "conv_asistio_inscrito": 37.5
+      "leads": 96,
+      "llamadas": 53,
+      "no_contesta": 53,
+      "citas": 3,
+      "visitas": 0,
+      "inscritos": 2,
+      "citas_agendadas": 1,
+      "asistieron": 0,
+      "no_asistieron": 0,
+      "sin_dato": 1,
+      "tasa_asistencia": 0.0,
+      "tasa_asistencia_con_dato": 0.0,
+      "conv_asistio_inscrito": 0.0
     }
   },
   "metas_leads": {
-    "LINDAVISTA": 91,
-    "IZTACALCO": 80,
-    "ERMITA": 81
+    "LINDAVISTA": 179,
+    "IZTACALCO": 184,
+    "ERMITA": 164
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {
-    "2026-08-01": {
-      "LINDAVISTA": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 2
-      },
-      "IZTACALCO": {
-        "leads": 4,
-        "llamadas": 2,
-        "citas": 1,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 2
-      }
-    },
-    "2026-08-02": {
-      "LINDAVISTA": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 5,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 3,
-        "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    },
-    "2026-08-31": {
-      "LINDAVISTA": {
-        "leads": 3,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "IZTACALCO": {
-        "leads": 3,
-        "llamadas": 3,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      },
-      "ERMITA": {
-        "leads": 2,
-        "llamadas": 2,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
-      }
-    }
-  },
+  "diario_suc": {},
   "agenda": [
     {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Eliot",
-      "tel": "5647517297",
-      "fecha_cita": "01/08/26 12:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Priscila Cuevas",
-      "tel": "5632317308",
-      "fecha_cita": "07/08/26 3:30",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "Visita examen de colocación"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Airy",
-      "tel": "5566779585",
-      "fecha_cita": "05/08/26 9:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Examen de colocaión"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Vanessa",
-      "tel": "5512920422",
-      "fecha_cita": "08/08/26 9:00",
-      "asistio": false,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Barbara Arzola",
-      "tel": "5529419946",
-      "fecha_cita": "06/08/26 9:00",
-      "asistio": true,
-      "inscrito": false,
-      "obs": "Clase muestra y examen de colocaion"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Gabriela",
-      "tel": "5559033089",
-      "fecha_cita": "05/08/26 3:00",
-      "asistio": false,
-      "inscrito": null,
-      "obs": "Clase muestra y examen de colocaion"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Pamela lópez",
-      "tel": "5545257264",
-      "fecha_cita": "13/08/26 3:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "Examen de colocación 2 hermanas ( martes paga)"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Stephany Grajeda",
-      "tel": "5545824465",
-      "fecha_cita": "10/08/26 2:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Visita al plantel"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Megan Avalos /Ana Araujo",
-      "tel": "55444514002",
-      "fecha_cita": "11/08/26 9:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": ""
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Angelica garcia",
-      "tel": "5542873859",
-      "fecha_cita": "12/08/26 11:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "clase muestra sábado"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "alejandro martinez /pauliana Martínez",
-      "tel": "5521492324",
-      "fecha_cita": "13/08/26 11:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "(sabado paga)"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Alma liliar Resendiz mora",
-      "tel": "5516920799",
-      "fecha_cita": "14/08/26 11:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "uno a uno"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Frida",
-      "tel": "55 3677 9096",
-      "fecha_cita": "21/08/26",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clases presenciales paga hoy o mañana"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Raul sanches",
-      "tel": "5556845969",
-      "fecha_cita": "27/08/26 3:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "CLase Muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Aldo de la flor dominguez",
-      "tel": "5535638247",
-      "fecha_cita": "24/08/26 11:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Visita al paantel"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Rebeca",
-      "tel": "5534605239",
-      "fecha_cita": "29/08/26 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "CLase Muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "arisbeth Garduño",
-      "tel": "5521484818",
-      "fecha_cita": "28/08/26 5:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Examen de colocación"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Patricia Mena",
-      "tel": "5576130735",
-      "fecha_cita": "29/05/26 12:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Luis bernal",
-      "tel": "55 6628 4282",
-      "fecha_cita": "27/08/08/26 2:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "vista plantel (inscripción )"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Laura",
-      "tel": "",
-      "fecha_cita": "26/08/26",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Visita"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Yuliana",
-      "tel": "5673637172",
-      "fecha_cita": "26/08/26 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Paulina garcia Ortega",
-      "tel": "",
-      "fecha_cita": "28/08/26 1:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Examen"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Emiliano miranda",
-      "tel": "5529920196",
-      "fecha_cita": "31/08/26",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "ccLASE MUESTRA INSCRIPCIÓN"
-    },
-    {
-      "sucursal": "LINDAVISTA",
-      "nombre": "Valeria",
-      "tel": "5568986708",
-      "fecha_cita": "02/09/26 3:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Inscripción"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Juana cruz/ Iris Cruz",
-      "tel": "5574007309",
-      "fecha_cita": "03/08/26 9:00",
-      "asistio": true,
-      "inscrito": false,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Berenice Vazquez/Mariano Tapia",
-      "tel": "5573634927",
-      "fecha_cita": "07/08/26 7:30",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clasae muestra línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Mirella Emelia perez",
-      "tel": "5652292387",
-      "fecha_cita": "07/08/26 7:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Alejandro",
-      "tel": "",
-      "fecha_cita": "07/08/26 7:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Alfredo armando Acosta",
-      "tel": "5539550418",
-      "fecha_cita": "12/08/26 5:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "CLase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Paula",
-      "tel": "5582355533",
-      "fecha_cita": "07/08/26 6:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Melissa",
-      "tel": "5564871978",
-      "fecha_cita": "17/08/26 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Emanuel Troya",
-      "tel": "5583256058",
-      "fecha_cita": "22/08/26 11:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Examen de colocación"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "carlos Omar Chavez Yañez",
-      "tel": "5578823552",
-      "fecha_cita": "17/08/26 2:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "Visita el plantel"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Erika Lopez e hija",
-      "tel": "5548231114",
-      "fecha_cita": "21/08/26 7:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase mustra en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Etrella",
-      "tel": "5535074702",
-      "fecha_cita": "21/08/26 6:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Alison Rangel",
-      "tel": "5515378172",
-      "fecha_cita": "22/08/2026 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Examen de colocación"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Pamela Godinez",
-      "tel": "5530550152",
-      "fecha_cita": "24/08/26 3:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "visita al plantel"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Luis Carvajal",
-      "tel": "5520873437",
-      "fecha_cita": "26/08/26 9:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "PENDIENTE"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Cristhian Schivon",
-      "tel": "5591693423",
-      "fecha_cita": "26/08/26 6:30",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Ada",
-      "tel": "5591693423",
-      "fecha_cita": "26/08/26 6:30",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Gabriela aguilar",
-      "tel": "5543670412",
-      "fecha_cita": "21/08/26 7:30",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Cristina Hernandez",
-      "tel": "5551722995",
-      "fecha_cita": "28/08/26 6:30",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra en línea"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Paulina Garcia Ortega",
-      "tel": "5535127312",
-      "fecha_cita": "26/08/26 3:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Itzuri Daniela",
-      "tel": "5583256058",
-      "fecha_cita": "29-08-26",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "ALejandra",
-      "tel": "5522133951",
-      "fecha_cita": "31/05/26 5:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Alma Almazan es para sus dos hijos",
-      "tel": "5558009728",
-      "fecha_cita": "05/09/26 9:30",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "CLase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Jesica",
-      "tel": "5637335322",
-      "fecha_cita": "31/08/26 4:00",
+      "sucursal": "ERMITA",
+      "nombre": "Romina",
+      "tel": "9851116603",
+      "fecha_cita": "27/08/26 2:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Visita al plantel"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Rocio solares",
-      "tel": "5513862950",
-      "fecha_cita": "01/08/26 4:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Examen Oral"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Ivan",
-      "tel": "5521194553",
-      "fecha_cita": "02/09/26 5:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clqase muestra"
-    },
-    {
-      "sucursal": "IZTACALCO",
-      "nombre": "Jaciel Bautizta",
-      "tel": "5616002035",
-      "fecha_cita": "05/09/26 12:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "inscripción"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Raúl",
-      "tel": "5570476480",
-      "fecha_cita": "04-08-26 9:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clae muestra y examen de coloca"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Isaac Reyes Alvarez",
-      "tel": "5566779585",
-      "fecha_cita": "10-08-26 9:00",
-      "asistio": false,
-      "inscrito": null,
-      "obs": ""
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Rodolfo",
-      "tel": "5558262960",
-      "fecha_cita": "05/08/26 4:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Lucia Flores Ayala",
-      "tel": "5527220028",
-      "fecha_cita": "06/08/26 9:00",
-      "asistio": false,
-      "inscrito": null,
-      "obs": "Clase muerstra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Vianey Merida",
-      "tel": "56 3742 4075",
-      "fecha_cita": "22/08/36 12:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Mamá Pilar Avalos/itzayana Irineo",
-      "tel": "5543523489",
-      "fecha_cita": "15/08/26 12:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Informes TOEFL"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Erandi  irineo",
-      "tel": "5543523489",
-      "fecha_cita": "15/08/26 12:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Gabriel",
-      "tel": "5612574686",
-      "fecha_cita": "14-08-26 11:00",
-      "asistio": true,
-      "inscrito": true,
-      "obs": "Examen de colocación"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Beatriz Martínez",
-      "tel": "55 6626 4306",
-      "fecha_cita": "20/08/26 5:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clasae meustra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Natalia",
-      "tel": "5568690613",
-      "fecha_cita": "19/08/26 9:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "clase muestra visita al plantel"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Sheyra Briseño",
-      "tel": "5527422697",
-      "fecha_cita": "21/08/26 3:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clase muestra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Irene MArtinez /Alberto",
-      "tel": "5546942698",
-      "fecha_cita": "22/08/26 12:00",
-      "asistio": true,
-      "inscrito": null,
-      "obs": "Clae muestra"
-    },
-    {
-      "sucursal": "ERMITA",
-      "nombre": "Jaciel Bautizta",
-      "tel": "5616002035",
-      "fecha_cita": "05/09/26 12:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "inscripción"
     }
   ]
 };
