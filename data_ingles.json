@@ -1,13 +1,13 @@
 {
-  "actualizado": "02/09/2026 19:04",
-  "meta_actualizado": "02/09/2026 19:04",
+  "actualizado": "02/09/2026 22:07",
+  "meta_actualizado": "02/09/2026 22:07",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 34,
-    "gasto": 1209.67,
-    "cpl": 35.58,
+    "leads_meta": 36,
+    "gasto": 1347.6,
+    "cpl": 37.43,
     "citas": 18,
     "visitas": 3,
     "inscritos": 10,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 1209.67,
-      "impresiones": 15522,
-      "alcance": 13358,
-      "leads": 34,
-      "cpl": 35.58
+      "gasto": 1347.6,
+      "impresiones": 17127,
+      "alcance": 14883,
+      "leads": 36,
+      "cpl": 37.43
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1209.67,
-      "leads": 34,
-      "cpl": 35.58
+      "gasto": 1347.6,
+      "leads": 36,
+      "cpl": 37.43
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -319,11 +319,11 @@
   "diario_meta": {
     "2026-09-01": {
       "leads": 22,
-      "gasto": 918.64
+      "gasto": 918.85
     },
     "2026-09-02": {
-      "leads": 12,
-      "gasto": 291.03
+      "leads": 14,
+      "gasto": 428.75
     }
   },
   "sucursales": {
@@ -396,8 +396,8 @@
       "tel": "5560767790",
       "fecha_cita": "02/09/26 9:00",
       "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra"
+      "inscrito": false,
+      "obs": "Pendiente (hija enferma)"
     },
     {
       "sucursal": "ERMITA",
