@@ -30,7 +30,13 @@
       "fabian": 12000.0,
       "yolanda": 12600.0,
       "total": 47109.0
-    }
+    },
+    "pendiente_verificar": true,
+    "nota_verificacion": "Cierre capturado a mano por Vic no cuadra: Ingresos $55,133 - Gastos $47,109 = $8,024 de utilidad esperada, pero quedó capturado $5,734 (diferencia $2,290). Ademas el gasto de Meta Ads capturado a mano ($22,509) no coincide con el gasto real de la API de Meta ese mes ($23,828.41), diferencia de $1,319.41.",
+    "utilidad_esperada": 8024.0,
+    "diferencia_utilidad": 2290.0,
+    "gasto_meta_ads_api": 23828.41,
+    "diferencia_gasto_meta_ads": 1319.41
   },
   "campanas": [
     {

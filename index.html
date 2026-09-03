@@ -1619,7 +1619,13 @@ function renderFinanzas() {
   }
   const g = f.gastos || {meta_ads:0, fabian:0, yolanda:0, total:0};
   const utilColor = f.utilidad >= 0 ? 'var(--green)' : '#E02020';
+  const avisoHTML = f.pendiente_verificar ? `
+    <div style="margin-bottom:14px;padding:12px 14px;border:1px solid #ffb800;border-radius:10px;background:rgba(255,184,0,.08);font-size:13px;line-height:1.5">
+      <div style="font-weight:700;color:#ffb800;margin-bottom:4px">⚠️ PENDIENTE DE VERIFICAR CON VIC</div>
+      <div>${f.nota_verificacion || 'Los montos de este cierre no cuadran, en revisión.'}</div>
+    </div>` : '';
   el.innerHTML = `
+    ${avisoHTML}
     <div class="fin-grid">
       <div class="fin-stat">
         <div class="fin-stat-lbl">Ingresos (Pago por alumno)</div>
