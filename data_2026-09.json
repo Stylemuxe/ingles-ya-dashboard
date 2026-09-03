@@ -1,20 +1,20 @@
 {
-  "actualizado": "03/09/2026 12:59",
-  "meta_actualizado": "03/09/2026 12:59",
+  "actualizado": "03/09/2026 21:59",
+  "meta_actualizado": "03/09/2026 21:59",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 55,
-    "gasto": 2043.38,
-    "cpl": 37.15,
-    "citas": 2,
+    "leads_meta": 57,
+    "gasto": 2191.06,
+    "cpl": 38.44,
+    "citas": 4,
     "visitas": 1,
     "inscritos": 0,
-    "citas_agendadas": 3,
+    "citas_agendadas": 4,
     "asistieron": 0,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 3,
+    "sin_dato_asistencia": 4,
     "tasa_asistencia": 0.0,
     "tasa_asistencia_con_dato": 0.0,
     "conv_asistio_inscrito": 0.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 2043.38,
-      "impresiones": 27291,
-      "alcance": 21812,
-      "leads": 55,
-      "cpl": 37.15
+      "gasto": 2191.06,
+      "impresiones": 30975,
+      "alcance": 24301,
+      "leads": 57,
+      "cpl": 38.44
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2043.38,
-      "leads": 55,
-      "cpl": 37.15
+      "gasto": 2191.06,
+      "leads": 57,
+      "cpl": 38.44
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -323,33 +323,33 @@
     },
     "2026-09-02": {
       "leads": 21,
-      "gasto": 632.01
+      "gasto": 632.75
     },
     "2026-09-03": {
-      "leads": 12,
-      "gasto": 492.2
+      "leads": 14,
+      "gasto": 639.14
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 13,
-      "llamadas": 7,
-      "no_contesta": 6,
-      "citas": 0,
+      "leads": 18,
+      "llamadas": 9,
+      "no_contesta": 9,
+      "citas": 1,
       "visitas": 1,
       "inscritos": 0,
-      "citas_agendadas": 1,
+      "citas_agendadas": 2,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 1,
+      "sin_dato": 2,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 13,
-      "llamadas": 6,
-      "no_contesta": 7,
+      "leads": 18,
+      "llamadas": 8,
+      "no_contesta": 10,
       "citas": 2,
       "visitas": 0,
       "inscritos": 0,
@@ -362,10 +362,10 @@
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 12,
-      "llamadas": 5,
-      "no_contesta": 7,
-      "citas": 0,
+      "leads": 18,
+      "llamadas": 6,
+      "no_contesta": 12,
+      "citas": 1,
       "visitas": 0,
       "inscritos": 0,
       "citas_agendadas": 1,
@@ -390,6 +390,15 @@
       "nombre": "Fernando Otero",
       "tel": "5569884080",
       "fecha_cita": "02/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Luis gerardo",
+      "tel": "5615997330",
+      "fecha_cita": "03/09/26 3:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
