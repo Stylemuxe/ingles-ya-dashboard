@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "06/09/2026 17:52",
-  "meta_actualizado": "06/09/2026 17:51",
+  "actualizado": "06/09/2026 21:49",
+  "meta_actualizado": "06/09/2026 21:49",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 104,
-    "gasto": 4006.13,
-    "cpl": 38.52,
+    "leads_meta": 109,
+    "gasto": 4193.5,
+    "cpl": 38.47,
     "citas": 6,
     "visitas": 2,
     "inscritos": 0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 4006.13,
-      "impresiones": 68022,
-      "alcance": 47730,
-      "leads": 104,
-      "cpl": 38.52
+      "gasto": 4193.5,
+      "impresiones": 71754,
+      "alcance": 50841,
+      "leads": 109,
+      "cpl": 38.47
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 4006.13,
-      "leads": 105,
-      "cpl": 38.15
+      "gasto": 4193.5,
+      "leads": 109,
+      "cpl": 38.47
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -335,11 +335,11 @@ const DATA_INGLES = {
     },
     "2026-09-05": {
       "leads": 14,
-      "gasto": 664.81
+      "gasto": 664.84
     },
     "2026-09-06": {
-      "leads": 6,
-      "gasto": 319.95
+      "leads": 11,
+      "gasto": 507.29
     }
   },
   "sucursales": {
