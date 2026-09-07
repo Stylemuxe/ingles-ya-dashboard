@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "07/09/2026 01:48",
-  "meta_actualizado": "07/09/2026 01:48",
+  "actualizado": "07/09/2026 08:43",
+  "meta_actualizado": "07/09/2026 08:43",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 114,
-    "gasto": 4287.16,
+    "leads_meta": 116,
+    "gasto": 4362.38,
     "cpl": 37.61,
     "citas": 6,
     "visitas": 2,
@@ -38,10 +38,10 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 4287.16,
-      "impresiones": 73445,
-      "alcance": 52401,
-      "leads": 114,
+      "gasto": 4362.38,
+      "impresiones": 74878,
+      "alcance": 53546,
+      "leads": 116,
       "cpl": 37.61
     },
     {
@@ -194,8 +194,8 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 4287.16,
-      "leads": 114,
+      "gasto": 4362.38,
+      "leads": 116,
       "cpl": 37.61
     },
     {
@@ -335,11 +335,15 @@ const DATA_INGLES = {
     },
     "2026-09-05": {
       "leads": 14,
-      "gasto": 664.86
+      "gasto": 664.88
     },
     "2026-09-06": {
-      "leads": 16,
-      "gasto": 600.93
+      "leads": 18,
+      "gasto": 674.77
+    },
+    "2026-09-07": {
+      "leads": 0,
+      "gasto": 1.36
     }
   },
   "sucursales": {
