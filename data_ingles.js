@@ -1,23 +1,23 @@
 const DATA_INGLES = {
-  "actualizado": "08/09/2026 19:07",
-  "meta_actualizado": "08/09/2026 19:07",
+  "actualizado": "08/09/2026 22:08",
+  "meta_actualizado": "08/09/2026 22:08",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 145,
-    "gasto": 5604.3,
-    "cpl": 38.65,
-    "citas": 8,
+    "leads_meta": 148,
+    "gasto": 5796.0,
+    "cpl": 39.16,
+    "citas": 9,
     "visitas": 4,
     "inscritos": 2,
-    "citas_agendadas": 4,
-    "asistieron": 0,
+    "citas_agendadas": 8,
+    "asistieron": 1,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 4,
-    "tasa_asistencia": 0.0,
-    "tasa_asistencia_con_dato": 0.0,
-    "conv_asistio_inscrito": 0.0,
+    "sin_dato_asistencia": 7,
+    "tasa_asistencia": 12.5,
+    "tasa_asistencia_con_dato": 100.0,
+    "conv_asistio_inscrito": 200.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 5604.3,
-      "impresiones": 97416,
-      "alcance": 66293,
-      "leads": 145,
-      "cpl": 38.65
+      "gasto": 5796.0,
+      "impresiones": 100925,
+      "alcance": 67629,
+      "leads": 148,
+      "cpl": 39.16
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 5604.3,
-      "leads": 145,
-      "cpl": 38.65
+      "gasto": 5796.0,
+      "leads": 148,
+      "cpl": 39.16
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -343,48 +343,48 @@ const DATA_INGLES = {
     },
     "2026-09-07": {
       "leads": 15,
-      "gasto": 779.55
+      "gasto": 780.4
     },
     "2026-09-08": {
-      "leads": 14,
-      "gasto": 460.73
+      "leads": 17,
+      "gasto": 651.58
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 37,
-      "llamadas": 22,
-      "no_contesta": 15,
+      "leads": 44,
+      "llamadas": 25,
+      "no_contesta": 19,
       "citas": 4,
       "visitas": 2,
       "inscritos": 0,
-      "citas_agendadas": 2,
+      "citas_agendadas": 4,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 2,
+      "sin_dato": 4,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 38,
-      "llamadas": 19,
-      "no_contesta": 19,
-      "citas": 3,
+      "leads": 43,
+      "llamadas": 21,
+      "no_contesta": 22,
+      "citas": 4,
       "visitas": 0,
       "inscritos": 0,
-      "citas_agendadas": 1,
-      "asistieron": 0,
+      "citas_agendadas": 3,
+      "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 1,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
+      "sin_dato": 2,
+      "tasa_asistencia": 33.3,
+      "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 37,
-      "llamadas": 16,
-      "no_contesta": 21,
+      "leads": 42,
+      "llamadas": 17,
+      "no_contesta": 25,
       "citas": 1,
       "visitas": 2,
       "inscritos": 2,
@@ -424,6 +424,24 @@ const DATA_INGLES = {
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Diana",
+      "tel": "5534442978",
+      "fecha_cita": "12/09/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Irene",
+      "tel": "5575281924",
+      "fecha_cita": "07/09/26 4:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visita el plantel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "veronica 2 hijas",
       "tel": "5560767790",
@@ -431,6 +449,24 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": false,
       "obs": "Pendiente (hija enferma)"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Valeria",
+      "tel": "5643083936",
+      "fecha_cita": "07/09/26 3:30",
+      "asistio": true,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Ariadna",
+      "tel": "5551387817",
+      "fecha_cita": "12/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
