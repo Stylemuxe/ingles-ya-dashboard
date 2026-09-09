@@ -1,14 +1,14 @@
 {
-  "actualizado": "09/09/2026 18:55",
-  "meta_actualizado": "09/09/2026 18:55",
+  "actualizado": "09/09/2026 22:05",
+  "meta_actualizado": "09/09/2026 22:05",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 178,
-    "gasto": 6561.2,
-    "cpl": 36.86,
-    "citas": 9,
+    "leads_meta": 184,
+    "gasto": 6741.65,
+    "cpl": 36.64,
+    "citas": 11,
     "visitas": 4,
     "inscritos": 2,
     "citas_agendadas": 8,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 6561.2,
-      "impresiones": 112277,
-      "alcance": 73588,
-      "leads": 178,
-      "cpl": 36.86
+      "gasto": 6741.65,
+      "impresiones": 115178,
+      "alcance": 75270,
+      "leads": 184,
+      "cpl": 36.64
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 6561.2,
-      "leads": 179,
-      "cpl": 36.65
+      "gasto": 6741.65,
+      "leads": 184,
+      "cpl": 36.64
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -347,18 +347,18 @@
     },
     "2026-09-08": {
       "leads": 32,
-      "gasto": 1051.86
+      "gasto": 1052.55
     },
     "2026-09-09": {
-      "leads": 16,
-      "gasto": 363.41
+      "leads": 21,
+      "gasto": 543.17
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 44,
-      "llamadas": 25,
-      "no_contesta": 19,
+      "leads": 52,
+      "llamadas": 31,
+      "no_contesta": 21,
       "citas": 4,
       "visitas": 2,
       "inscritos": 0,
@@ -371,10 +371,10 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 43,
-      "llamadas": 21,
-      "no_contesta": 22,
-      "citas": 4,
+      "leads": 51,
+      "llamadas": 27,
+      "no_contesta": 24,
+      "citas": 6,
       "visitas": 0,
       "inscritos": 0,
       "citas_agendadas": 3,
@@ -386,9 +386,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 42,
-      "llamadas": 17,
-      "no_contesta": 25,
+      "leads": 46,
+      "llamadas": 19,
+      "no_contesta": 27,
       "citas": 1,
       "visitas": 2,
       "inscritos": 2,
