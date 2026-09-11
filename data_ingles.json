@@ -1,21 +1,21 @@
 {
-  "actualizado": "11/09/2026 18:51",
-  "meta_actualizado": "11/09/2026 18:51",
+  "actualizado": "11/09/2026 22:05",
+  "meta_actualizado": "11/09/2026 22:05",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 216,
-    "gasto": 8176.79,
-    "cpl": 37.86,
+    "leads_meta": 217,
+    "gasto": 8254.49,
+    "cpl": 38.04,
     "citas": 12,
     "visitas": 4,
     "inscritos": 2,
-    "citas_agendadas": 11,
+    "citas_agendadas": 14,
     "asistieron": 1,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 10,
-    "tasa_asistencia": 9.1,
+    "sin_dato_asistencia": 13,
+    "tasa_asistencia": 7.1,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 200.0,
     "ingresos": 22739.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 8176.79,
-      "impresiones": 137892,
-      "alcance": 87739,
-      "leads": 216,
-      "cpl": 37.86
+      "gasto": 8254.49,
+      "impresiones": 139129,
+      "alcance": 88394,
+      "leads": 217,
+      "cpl": 38.04
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8176.79,
-      "leads": 216,
-      "cpl": 37.86
+      "gasto": 8254.49,
+      "leads": 217,
+      "cpl": 38.04
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -355,11 +355,11 @@
     },
     "2026-09-10": {
       "leads": 18,
-      "gasto": 754.94
+      "gasto": 755.56
     },
     "2026-09-11": {
-      "leads": 8,
-      "gasto": 324.18
+      "leads": 9,
+      "gasto": 401.26
     }
   },
   "sucursales": {
@@ -370,10 +370,10 @@
       "citas": 4,
       "visitas": 2,
       "inscritos": 0,
-      "citas_agendadas": 6,
+      "citas_agendadas": 7,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 6,
+      "sin_dato": 7,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -385,11 +385,11 @@
       "citas": 6,
       "visitas": 0,
       "inscritos": 0,
-      "citas_agendadas": 4,
+      "citas_agendadas": 6,
       "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 3,
-      "tasa_asistencia": 25.0,
+      "sin_dato": 5,
+      "tasa_asistencia": 16.7,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 0.0
     },
@@ -472,6 +472,15 @@
       "obs": "Visita al plantel"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "andrea",
+      "tel": "5614423225",
+      "fecha_cita": "12/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clae muestra y visit al plantel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "veronica 2 hijas",
       "tel": "5560767790",
@@ -506,6 +515,24 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra en línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Yuri",
+      "tel": "5552746686",
+      "fecha_cita": "14/09/26 6:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra en líenea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Flor",
+      "tel": "5536825027",
+      "fecha_cita": "12/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
