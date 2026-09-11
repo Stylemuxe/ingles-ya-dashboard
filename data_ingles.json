@@ -1,13 +1,13 @@
 {
-  "actualizado": "11/09/2026 15:29",
-  "meta_actualizado": "11/09/2026 15:29",
+  "actualizado": "11/09/2026 18:51",
+  "meta_actualizado": "11/09/2026 18:51",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 212,
-    "gasto": 8040.91,
-    "cpl": 37.93,
+    "leads_meta": 216,
+    "gasto": 8176.79,
+    "cpl": 37.86,
     "citas": 12,
     "visitas": 4,
     "inscritos": 2,
@@ -18,18 +18,18 @@
     "tasa_asistencia": 9.1,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 200.0,
-    "ingresos": 0.0,
-    "ticket_promedio": 0.0
+    "ingresos": 22739.0,
+    "ticket_promedio": 11369.5
   },
   "financiero": {
-    "ingresos": 0.0,
-    "utilidad": 0.0,
-    "ticket_promedio": 0.0,
+    "ingresos": 22739.0,
+    "utilidad": 2698.0,
+    "ticket_promedio": 11369.5,
     "gastos": {
-      "meta_ads": 0.0,
-      "fabian": 0.0,
+      "meta_ads": 8041.0,
+      "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 0.0
+      "total": 20041.0
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 8040.91,
-      "impresiones": 136035,
-      "alcance": 86646,
-      "leads": 212,
-      "cpl": 37.93
+      "gasto": 8176.79,
+      "impresiones": 137892,
+      "alcance": 87739,
+      "leads": 216,
+      "cpl": 37.86
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8040.91,
-      "leads": 212,
-      "cpl": 37.93
+      "gasto": 8176.79,
+      "leads": 216,
+      "cpl": 37.86
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -355,11 +355,11 @@
     },
     "2026-09-10": {
       "leads": 18,
-      "gasto": 753.5
+      "gasto": 754.94
     },
     "2026-09-11": {
-      "leads": 4,
-      "gasto": 189.74
+      "leads": 8,
+      "gasto": 324.18
     }
   },
   "sucursales": {
