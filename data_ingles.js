@@ -1,30 +1,30 @@
 const DATA_INGLES = {
-  "actualizado": "14/09/2026 17:13",
-  "meta_actualizado": "14/09/2026 17:13",
+  "actualizado": "14/09/2026 22:50",
+  "meta_actualizado": "14/09/2026 22:50",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 270,
-    "gasto": 10393.76,
-    "cpl": 38.5,
-    "citas": 12,
+    "leads_meta": 276,
+    "gasto": 10688.73,
+    "cpl": 38.73,
+    "citas": 14,
     "visitas": 4,
-    "inscritos": 2,
-    "citas_agendadas": 16,
+    "inscritos": 7,
+    "citas_agendadas": 18,
     "asistieron": 1,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 15,
-    "tasa_asistencia": 6.2,
+    "sin_dato_asistencia": 17,
+    "tasa_asistencia": 5.6,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 200.0,
+    "conv_asistio_inscrito": 700.0,
     "ingresos": 22739.0,
-    "ticket_promedio": 11369.5
+    "ticket_promedio": 3248.43
   },
   "financiero": {
     "ingresos": 22739.0,
     "utilidad": 2698.0,
-    "ticket_promedio": 11369.5,
+    "ticket_promedio": 3248.43,
     "gastos": {
       "meta_ads": 8041.0,
       "fabian": 12000.0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 10393.76,
-      "impresiones": 164094,
-      "alcance": 99145,
-      "leads": 270,
-      "cpl": 38.5
+      "gasto": 10688.73,
+      "impresiones": 168015,
+      "alcance": 101622,
+      "leads": 276,
+      "cpl": 38.73
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 10393.76,
-      "leads": 270,
-      "cpl": 38.5
+      "gasto": 10688.73,
+      "leads": 276,
+      "cpl": 38.73
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -367,48 +367,48 @@ const DATA_INGLES = {
     },
     "2026-09-13": {
       "leads": 17,
-      "gasto": 632.58
+      "gasto": 633.81
     },
     "2026-09-14": {
-      "leads": 14,
-      "gasto": 573.68
+      "leads": 20,
+      "gasto": 867.42
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 56,
-      "llamadas": 34,
-      "no_contesta": 22,
-      "citas": 4,
+      "leads": 71,
+      "llamadas": 43,
+      "no_contesta": 28,
+      "citas": 5,
       "visitas": 2,
-      "inscritos": 0,
-      "citas_agendadas": 8,
+      "inscritos": 4,
+      "citas_agendadas": 9,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 8,
+      "sin_dato": 9,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 55,
-      "llamadas": 30,
-      "no_contesta": 25,
-      "citas": 6,
+      "leads": 70,
+      "llamadas": 39,
+      "no_contesta": 31,
+      "citas": 7,
       "visitas": 0,
-      "inscritos": 0,
-      "citas_agendadas": 7,
+      "inscritos": 1,
+      "citas_agendadas": 8,
       "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 6,
-      "tasa_asistencia": 14.3,
+      "sin_dato": 7,
+      "tasa_asistencia": 12.5,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 0.0
+      "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 49,
-      "llamadas": 20,
-      "no_contesta": 28,
+      "leads": 58,
+      "llamadas": 22,
+      "no_contesta": 35,
       "citas": 2,
       "visitas": 2,
       "inscritos": 2,
@@ -502,6 +502,15 @@ const DATA_INGLES = {
       "obs": "Clase muestra visita al plantel"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Rosa y dos hijas",
+      "tel": "5563313349",
+      "fecha_cita": "19/09/26 1:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visita al plantel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "veronica 2 hijas",
       "tel": "5560767790",
@@ -550,7 +559,7 @@ const DATA_INGLES = {
       "sucursal": "IZTACALCO",
       "nombre": "Flor",
       "tel": "5536825027",
-      "fecha_cita": "12/09/26 9:00",
+      "fecha_cita": "14/09/2026 9:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
@@ -563,6 +572,15 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muesta"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Edgar Eduardo",
+      "tel": "5630964129",
+      "fecha_cita": "03/10/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visit al plantel"
     },
     {
       "sucursal": "ERMITA",
