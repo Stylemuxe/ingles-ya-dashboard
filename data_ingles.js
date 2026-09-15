@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "15/09/2026 19:21",
-  "meta_actualizado": "15/09/2026 19:21",
+  "actualizado": "15/09/2026 22:31",
+  "meta_actualizado": "15/09/2026 22:31",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
     "leads_meta": 284,
-    "gasto": 11505.9,
-    "cpl": 40.51,
+    "gasto": 11882.5,
+    "cpl": 41.84,
     "citas": 14,
     "visitas": 4,
     "inscritos": 7,
-    "citas_agendadas": 18,
+    "citas_agendadas": 21,
     "asistieron": 1,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 17,
-    "tasa_asistencia": 5.6,
+    "sin_dato_asistencia": 20,
+    "tasa_asistencia": 4.8,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 700.0,
     "ingresos": 22739.0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 11505.9,
-      "impresiones": 178364,
-      "alcance": 107526,
+      "gasto": 11882.5,
+      "impresiones": 186803,
+      "alcance": 112039,
       "leads": 284,
-      "cpl": 40.51
+      "cpl": 41.84
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 11505.9,
+      "gasto": 11882.5,
       "leads": 284,
-      "cpl": 40.51
+      "cpl": 41.84
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -371,48 +371,48 @@ const DATA_INGLES = {
     },
     "2026-09-14": {
       "leads": 23,
-      "gasto": 1165.33
+      "gasto": 1165.62
     },
     "2026-09-15": {
       "leads": 5,
-      "gasto": 518.57
+      "gasto": 894.88
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 71,
-      "llamadas": 43,
+      "leads": 73,
+      "llamadas": 45,
       "no_contesta": 28,
       "citas": 5,
       "visitas": 2,
       "inscritos": 4,
-      "citas_agendadas": 9,
+      "citas_agendadas": 11,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 9,
+      "sin_dato": 11,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 70,
-      "llamadas": 39,
-      "no_contesta": 31,
+      "leads": 72,
+      "llamadas": 40,
+      "no_contesta": 32,
       "citas": 7,
       "visitas": 0,
       "inscritos": 1,
-      "citas_agendadas": 8,
+      "citas_agendadas": 9,
       "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 7,
-      "tasa_asistencia": 12.5,
+      "sin_dato": 8,
+      "tasa_asistencia": 11.1,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 58,
+      "leads": 59,
       "llamadas": 22,
-      "no_contesta": 35,
+      "no_contesta": 36,
       "citas": 2,
       "visitas": 2,
       "inscritos": 2,
@@ -515,6 +515,24 @@ const DATA_INGLES = {
       "obs": "Visita al plantel"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Veronica",
+      "tel": "5580368033",
+      "fecha_cita": "19/809/26 2:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visit al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "HAydee",
+      "tel": "5541894268",
+      "fecha_cita": "22/09/26 5:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visit al plantel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "veronica 2 hijas",
       "tel": "5560767790",
@@ -585,6 +603,15 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra y visit al plantel"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "lfredo vieyra Montoya",
+      "tel": "5618262103",
+      "fecha_cita": "14/09/26 6:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra en linea"
     },
     {
       "sucursal": "ERMITA",
