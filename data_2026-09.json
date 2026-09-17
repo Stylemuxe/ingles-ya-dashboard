@@ -1,13 +1,13 @@
 {
-  "actualizado": "17/09/2026 15:51",
-  "meta_actualizado": "17/09/2026 15:51",
+  "actualizado": "17/09/2026 19:23",
+  "meta_actualizado": "17/09/2026 19:23",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 309,
-    "gasto": 13262.26,
-    "cpl": 42.92,
+    "leads_meta": 316,
+    "gasto": 13541.34,
+    "cpl": 42.85,
     "citas": 14,
     "visitas": 4,
     "inscritos": 7,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 13262.26,
-      "impresiones": 213066,
-      "alcance": 124373,
-      "leads": 309,
-      "cpl": 42.92
+      "gasto": 13541.34,
+      "impresiones": 217574,
+      "alcance": 126154,
+      "leads": 316,
+      "cpl": 42.85
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 13262.26,
-      "leads": 309,
-      "cpl": 42.92
+      "gasto": 13541.34,
+      "leads": 316,
+      "cpl": 42.85
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -375,15 +375,15 @@
     },
     "2026-09-15": {
       "leads": 9,
-      "gasto": 1278.65
+      "gasto": 1278.79
     },
     "2026-09-16": {
       "leads": 14,
-      "gasto": 776.03
+      "gasto": 777.26
     },
     "2026-09-17": {
-      "leads": 7,
-      "gasto": 217.0
+      "leads": 14,
+      "gasto": 494.71
     }
   },
   "sucursales": {
@@ -562,7 +562,7 @@
       "sucursal": "IZTACALCO",
       "nombre": "Ariadna",
       "tel": "5551387817",
-      "fecha_cita": "12/09/26 9:00",
+      "fecha_cita": "19/09/2026 9:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
