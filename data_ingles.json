@@ -1,30 +1,30 @@
 {
-  "actualizado": "17/09/2026 22:31",
-  "meta_actualizado": "17/09/2026 22:31",
+  "actualizado": "18/09/2026 02:06",
+  "meta_actualizado": "18/09/2026 02:06",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 320,
-    "gasto": 13748.62,
-    "cpl": 42.96,
+    "leads_meta": 322,
+    "gasto": 13862.01,
+    "cpl": 43.05,
     "citas": 14,
     "visitas": 4,
-    "inscritos": 7,
+    "inscritos": 4,
     "citas_agendadas": 21,
     "asistieron": 1,
     "no_asistieron": 0,
     "sin_dato_asistencia": 20,
     "tasa_asistencia": 4.8,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 700.0,
-    "ingresos": 22739.0,
-    "ticket_promedio": 3248.43
+    "conv_asistio_inscrito": 400.0,
+    "ingresos": 16002.0,
+    "ticket_promedio": 4000.5
   },
   "financiero": {
-    "ingresos": 22739.0,
-    "utilidad": 2698.0,
-    "ticket_promedio": 3248.43,
+    "ingresos": 16002.0,
+    "utilidad": -4039.0,
+    "ticket_promedio": 4000.5,
     "gastos": {
       "meta_ads": 8041.0,
       "fabian": 12000.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 13748.62,
-      "impresiones": 221376,
-      "alcance": 127607,
-      "leads": 320,
-      "cpl": 42.96
+      "gasto": 13862.01,
+      "impresiones": 223340,
+      "alcance": 128989,
+      "leads": 322,
+      "cpl": 43.05
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 13748.62,
-      "leads": 320,
-      "cpl": 42.96
+      "gasto": 13862.01,
+      "leads": 322,
+      "cpl": 43.05
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -375,15 +375,15 @@
     },
     "2026-09-15": {
       "leads": 9,
-      "gasto": 1279.02
+      "gasto": 1279.06
     },
     "2026-09-16": {
       "leads": 14,
-      "gasto": 778.05
+      "gasto": 778.42
     },
     "2026-09-17": {
-      "leads": 18,
-      "gasto": 700.97
+      "leads": 20,
+      "gasto": 813.95
     }
   },
   "sucursales": {
@@ -393,7 +393,7 @@
       "no_contesta": 28,
       "citas": 5,
       "visitas": 2,
-      "inscritos": 4,
+      "inscritos": 2,
       "citas_agendadas": 11,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -408,14 +408,14 @@
       "no_contesta": 32,
       "citas": 7,
       "visitas": 0,
-      "inscritos": 1,
+      "inscritos": 0,
       "citas_agendadas": 9,
       "asistieron": 1,
       "no_asistieron": 0,
       "sin_dato": 8,
       "tasa_asistencia": 11.1,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 100.0
+      "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
       "leads": 59,
