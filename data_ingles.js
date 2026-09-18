@@ -1,14 +1,14 @@
 const DATA_INGLES = {
-  "actualizado": "18/09/2026 18:44",
-  "meta_actualizado": "18/09/2026 18:43",
+  "actualizado": "18/09/2026 22:02",
+  "meta_actualizado": "18/09/2026 22:02",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 329,
-    "gasto": 14190.1,
-    "cpl": 43.13,
-    "citas": 14,
+    "leads_meta": 333,
+    "gasto": 14326.55,
+    "cpl": 43.02,
+    "citas": 16,
     "visitas": 4,
     "inscritos": 4,
     "citas_agendadas": 21,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 14190.1,
-      "impresiones": 226160,
-      "alcance": 129837,
-      "leads": 329,
-      "cpl": 43.13
+      "gasto": 14326.55,
+      "impresiones": 227675,
+      "alcance": 131046,
+      "leads": 333,
+      "cpl": 43.02
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 14190.1,
-      "leads": 329,
-      "cpl": 43.13
+      "gasto": 14326.55,
+      "leads": 333,
+      "cpl": 43.02
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -379,23 +379,23 @@ const DATA_INGLES = {
     },
     "2026-09-16": {
       "leads": 14,
-      "gasto": 778.53
+      "gasto": 778.65
     },
     "2026-09-17": {
       "leads": 21,
-      "gasto": 901.14
+      "gasto": 901.38
     },
     "2026-09-18": {
-      "leads": 6,
-      "gasto": 240.79
+      "leads": 10,
+      "gasto": 372.99
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 73,
-      "llamadas": 45,
-      "no_contesta": 28,
-      "citas": 5,
+      "leads": 94,
+      "llamadas": 52,
+      "no_contesta": 42,
+      "citas": 7,
       "visitas": 2,
       "inscritos": 2,
       "citas_agendadas": 11,
@@ -407,9 +407,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 72,
-      "llamadas": 40,
-      "no_contesta": 32,
+      "leads": 91,
+      "llamadas": 47,
+      "no_contesta": 44,
       "citas": 7,
       "visitas": 0,
       "inscritos": 0,
@@ -422,9 +422,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 59,
-      "llamadas": 22,
-      "no_contesta": 36,
+      "leads": 74,
+      "llamadas": 26,
+      "no_contesta": 47,
       "citas": 2,
       "visitas": 2,
       "inscritos": 2,
