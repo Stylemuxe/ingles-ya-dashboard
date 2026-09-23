@@ -1,21 +1,21 @@
 {
-  "actualizado": "23/09/2026 19:18",
-  "meta_actualizado": "23/09/2026 19:18",
+  "actualizado": "23/09/2026 22:32",
+  "meta_actualizado": "23/09/2026 22:32",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 435,
-    "gasto": 19598.63,
-    "cpl": 45.05,
+    "leads_meta": 438,
+    "gasto": 19677.8,
+    "cpl": 44.93,
     "citas": 18,
     "visitas": 5,
     "inscritos": 5,
-    "citas_agendadas": 21,
+    "citas_agendadas": 23,
     "asistieron": 2,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 19,
-    "tasa_asistencia": 9.5,
+    "sin_dato_asistencia": 21,
+    "tasa_asistencia": 8.7,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 250.0,
     "ingresos": 16002.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 19598.63,
-      "impresiones": 293545,
-      "alcance": 159144,
-      "leads": 435,
-      "cpl": 45.05
+      "gasto": 19677.8,
+      "impresiones": 294180,
+      "alcance": 159275,
+      "leads": 438,
+      "cpl": 44.93
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 19598.63,
-      "leads": 435,
-      "cpl": 45.05
+      "gasto": 19677.8,
+      "leads": 438,
+      "cpl": 44.93
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -403,11 +403,11 @@
     },
     "2026-09-22": {
       "leads": 25,
-      "gasto": 1251.01
+      "gasto": 1251.26
     },
     "2026-09-23": {
-      "leads": 7,
-      "gasto": 514.85
+      "leads": 10,
+      "gasto": 593.77
     }
   },
   "sucursales": {
@@ -418,10 +418,10 @@
       "citas": 8,
       "visitas": 3,
       "inscritos": 3,
-      "citas_agendadas": 12,
+      "citas_agendadas": 14,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 12,
+      "sin_dato": 14,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -572,6 +572,24 @@
       "asistio": null,
       "inscrito": null,
       "obs": ""
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Sharahy Garcia",
+      "tel": "5580329487",
+      "fecha_cita": "26/09/26 12/09/26",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Yareli",
+      "tel": "5524484873",
+      "fecha_cita": "26/09/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "IZTACALCO",
