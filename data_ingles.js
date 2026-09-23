@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "23/09/2026 15:45",
-  "meta_actualizado": "23/09/2026 15:45",
+  "actualizado": "23/09/2026 19:18",
+  "meta_actualizado": "23/09/2026 19:18",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 433,
-    "gasto": 19363.1,
-    "cpl": 44.72,
+    "leads_meta": 435,
+    "gasto": 19598.63,
+    "cpl": 45.05,
     "citas": 18,
     "visitas": 5,
     "inscritos": 5,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 19363.1,
-      "impresiones": 291246,
-      "alcance": 158383,
-      "leads": 433,
-      "cpl": 44.72
+      "gasto": 19598.63,
+      "impresiones": 293545,
+      "alcance": 159144,
+      "leads": 435,
+      "cpl": 45.05
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 19363.1,
-      "leads": 433,
-      "cpl": 44.72
+      "gasto": 19598.63,
+      "leads": 435,
+      "cpl": 45.05
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -399,15 +399,15 @@ const DATA_INGLES = {
     },
     "2026-09-21": {
       "leads": 18,
-      "gasto": 1476.15
+      "gasto": 1476.19
     },
     "2026-09-22": {
       "leads": 25,
-      "gasto": 1250.26
+      "gasto": 1251.01
     },
     "2026-09-23": {
-      "leads": 5,
-      "gasto": 280.11
+      "leads": 7,
+      "gasto": 514.85
     }
   },
   "sucursales": {
@@ -532,7 +532,7 @@ const DATA_INGLES = {
       "sucursal": "LINDAVISTA",
       "nombre": "Blanca MArtínez",
       "tel": "5579834025",
-      "fecha_cita": "19/09/26 11:00",
+      "fecha_cita": "26/09/2026 9:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra visita al plantel"
