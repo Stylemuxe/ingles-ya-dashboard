@@ -1,21 +1,21 @@
 {
-  "actualizado": "25/09/2026 16:07",
-  "meta_actualizado": "25/09/2026 16:06",
+  "actualizado": "25/09/2026 22:56",
+  "meta_actualizado": "25/09/2026 22:56",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 466,
-    "gasto": 21013.84,
-    "cpl": 45.09,
+    "leads_meta": 475,
+    "gasto": 21289.49,
+    "cpl": 44.82,
     "citas": 23,
     "visitas": 7,
     "inscritos": 7,
-    "citas_agendadas": 25,
+    "citas_agendadas": 27,
     "asistieron": 2,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 23,
-    "tasa_asistencia": 8.0,
+    "sin_dato_asistencia": 25,
+    "tasa_asistencia": 7.4,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 350.0,
     "ingresos": 16002.0,
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 21013.84,
-      "impresiones": 304598,
-      "alcance": 160676,
-      "leads": 466,
-      "cpl": 45.09
+      "gasto": 21289.49,
+      "impresiones": 308379,
+      "alcance": 161823,
+      "leads": 475,
+      "cpl": 44.82
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 21013.84,
-      "leads": 466,
-      "cpl": 45.09
+      "gasto": 21289.49,
+      "leads": 475,
+      "cpl": 44.82
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -411,11 +411,11 @@
     },
     "2026-09-24": {
       "leads": 16,
-      "gasto": 904.57
+      "gasto": 905.49
     },
     "2026-09-25": {
-      "leads": 5,
-      "gasto": 179.22
+      "leads": 14,
+      "gasto": 453.95
     }
   },
   "sucursales": {
@@ -426,10 +426,10 @@
       "citas": 11,
       "visitas": 4,
       "inscritos": 5,
-      "citas_agendadas": 15,
+      "citas_agendadas": 17,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 15,
+      "sin_dato": 17,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -607,6 +607,24 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Visita la plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Miguel /hijo",
+      "tel": "5581329618",
+      "fecha_cita": "26/29/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Claase muestra"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Daniela",
+      "tel": "5543430523",
+      "fecha_cita": "26/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Examen de colocación"
     },
     {
       "sucursal": "IZTACALCO",
