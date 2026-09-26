@@ -1,30 +1,30 @@
 const DATA_INGLES = {
-  "actualizado": "26/09/2026 18:49",
-  "meta_actualizado": "26/09/2026 18:49",
+  "actualizado": "26/09/2026 22:15",
+  "meta_actualizado": "26/09/2026 22:15",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 482,
-    "gasto": 21963.1,
-    "cpl": 45.57,
-    "citas": 23,
-    "visitas": 7,
-    "inscritos": 7,
+    "leads_meta": 484,
+    "gasto": 22115.3,
+    "cpl": 45.69,
+    "citas": 25,
+    "visitas": 9,
+    "inscritos": 9,
     "citas_agendadas": 27,
     "asistieron": 2,
     "no_asistieron": 0,
     "sin_dato_asistencia": 25,
     "tasa_asistencia": 7.4,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 350.0,
+    "conv_asistio_inscrito": 450.0,
     "ingresos": 16002.0,
-    "ticket_promedio": 2286.0
+    "ticket_promedio": 1778.0
   },
   "financiero": {
     "ingresos": 16002.0,
     "utilidad": -4039.0,
-    "ticket_promedio": 2286.0,
+    "ticket_promedio": 1778.0,
     "gastos": {
       "meta_ads": 8041.0,
       "fabian": 12000.0,
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 21963.1,
-      "impresiones": 316245,
-      "alcance": 165465,
-      "leads": 482,
-      "cpl": 45.57
+      "gasto": 22115.3,
+      "impresiones": 318247,
+      "alcance": 165944,
+      "leads": 484,
+      "cpl": 45.69
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 21963.1,
-      "leads": 482,
-      "cpl": 45.57
+      "gasto": 22115.3,
+      "leads": 484,
+      "cpl": 45.69
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -415,21 +415,21 @@ const DATA_INGLES = {
     },
     "2026-09-25": {
       "leads": 16,
-      "gasto": 623.62
+      "gasto": 623.67
     },
     "2026-09-26": {
-      "leads": 5,
-      "gasto": 503.9
+      "leads": 7,
+      "gasto": 656.05
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 130,
-      "llamadas": 68,
-      "no_contesta": 62,
-      "citas": 11,
-      "visitas": 4,
-      "inscritos": 5,
+      "leads": 138,
+      "llamadas": 71,
+      "no_contesta": 67,
+      "citas": 13,
+      "visitas": 6,
+      "inscritos": 7,
       "citas_agendadas": 17,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -439,9 +439,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 122,
-      "llamadas": 59,
-      "no_contesta": 63,
+      "leads": 126,
+      "llamadas": 60,
+      "no_contesta": 66,
       "citas": 8,
       "visitas": 1,
       "inscritos": 0,
@@ -454,9 +454,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 100,
+      "leads": 104,
       "llamadas": 33,
-      "no_contesta": 66,
+      "no_contesta": 70,
       "citas": 4,
       "visitas": 2,
       "inscritos": 2,
