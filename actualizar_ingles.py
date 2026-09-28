@@ -363,6 +363,19 @@ def tri(v):
         return False
     return None
 
+def fecha_cita_mes(s):
+    """'YYYY-MM' de la fecha de cita ('02/09/26 3:00', '23-09-26 12:00',
+    '14/09/2026 9:00'); None si no trae fecha válida."""
+    m = re.match(r'^\s*(\d{1,2})[-/](\d{1,2})[-/](\d{2,4})', str(s))
+    if not m:
+        return None
+    dd, mm, yy = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    if yy < 100:
+        yy += 2000
+    if not (1 <= mm <= 12 and 1 <= dd <= 31):
+        return None
+    return f'{yy}-{mm:02d}'
+
 def parse_agenda(text, sucursal):
     rows     = list(csv.reader(io.StringIO(text)))
     agenda   = []
@@ -391,10 +404,6 @@ def parse_agenda(text, sucursal):
         if not nombre or len(nombre) < 3:
             continue
 
-        # Solo prospectos cuya sección de fecha corresponde al mes actual
-        if cur_date is None or cur_date.strftime('%Y-%m') != MES_ACTUAL:
-            continue
-
         try:
             tel  = row[1].strip() if len(row) > 1 else ''
             fecha= row[3].strip() if len(row) > 3 else ''
@@ -402,6 +411,14 @@ def parse_agenda(text, sucursal):
             insc = tri(row[5] if len(row) > 5 else '')
             obs  = row[6].strip() if len(row) > 6 else ''
         except Exception:
+            continue
+
+        # El mes lo decide la FECHA DE LA CITA (columna D). El encabezado de
+        # sección es la fecha de registro y trae typos (26/09 por 26/08), así
+        # que solo se usa de respaldo cuando la cita no trae fecha legible
+        # (ej. solo la hora "10:00" o "19/809/26").
+        mes_fila = fecha_cita_mes(fecha) or (cur_date.strftime('%Y-%m') if cur_date else None)
+        if mes_fila != MES_ACTUAL:
             continue
 
         if nombre and (tel or fecha):
@@ -611,6 +628,13 @@ def main():
     # lo llena ese mes, lo calculamos como ingresos / inscritos.
     ticket_promedio = financiero['ticket_prom'] or (
         round(financiero['ingresos'] / total_insc, 2) if total_insc else 0.0)
+
+    # Gasto Meta de la API (el del Sheet se captura a mano y se atrasa: sep-26
+    # decía $8,041 con $22,863 reales). Si la API falló, se queda el del Sheet.
+    if meta_ok and total_gasto:
+        financiero['gasto_meta'] = round(total_gasto, 2)
+        financiero['utilidad'] = round(financiero['ingresos'] - financiero['gasto_meta']
+                                       - financiero['gasto_fabian'] - financiero['gasto_yolanda'], 2)
 
     # Fusiona citas_agendadas/asistieron/tasa_asistencia (de la Hoja Agenda)
     # dentro de cada sucursal, junto a los datos del embudo diario.

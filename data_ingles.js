@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "27/09/2026 22:40",
-  "meta_actualizado": "27/09/2026 22:40",
+  "actualizado": "27/09/2026 19:30",
+  "meta_actualizado": "27/09/2026 19:30",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 496,
-    "gasto": 22863.66,
-    "cpl": 46.1,
+    "leads_meta": 498,
+    "gasto": 23024.82,
+    "cpl": 46.23,
     "citas": 25,
     "visitas": 9,
     "inscritos": 9,
-    "citas_agendadas": 27,
-    "asistieron": 2,
+    "citas_agendadas": 32,
+    "asistieron": 3,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 25,
-    "tasa_asistencia": 7.4,
+    "sin_dato_asistencia": 29,
+    "tasa_asistencia": 9.4,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 450.0,
+    "conv_asistio_inscrito": 300.0,
     "ingresos": 16002.0,
     "ticket_promedio": 1778.0
   },
   "financiero": {
     "ingresos": 16002.0,
-    "utilidad": -4039.0,
+    "utilidad": -19022.82,
     "ticket_promedio": 1778.0,
     "gastos": {
-      "meta_ads": 8041.0,
+      "meta_ads": 23024.82,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 20041.0
+      "total": 35024.82
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 22863.66,
-      "impresiones": 326688,
-      "alcance": 168903,
-      "leads": 496,
-      "cpl": 46.1
+      "gasto": 23024.82,
+      "impresiones": 329112,
+      "alcance": 170502,
+      "leads": 498,
+      "cpl": 46.23
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 22863.66,
-      "leads": 496,
-      "cpl": 46.1
+      "gasto": 23024.82,
+      "leads": 498,
+      "cpl": 46.23
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -422,8 +422,8 @@ const DATA_INGLES = {
       "gasto": 856.13
     },
     "2026-09-27": {
-      "leads": 9,
-      "gasto": 546.76
+      "leads": 11,
+      "gasto": 707.92
     }
   },
   "sucursales": {
@@ -434,10 +434,10 @@ const DATA_INGLES = {
       "citas": 13,
       "visitas": 6,
       "inscritos": 7,
-      "citas_agendadas": 17,
+      "citas_agendadas": 18,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 17,
+      "sin_dato": 18,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -449,11 +449,11 @@ const DATA_INGLES = {
       "citas": 8,
       "visitas": 1,
       "inscritos": 0,
-      "citas_agendadas": 9,
+      "citas_agendadas": 11,
       "asistieron": 2,
       "no_asistieron": 0,
-      "sin_dato": 7,
-      "tasa_asistencia": 22.2,
+      "sin_dato": 9,
+      "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 0.0
     },
@@ -464,13 +464,13 @@ const DATA_INGLES = {
       "citas": 4,
       "visitas": 2,
       "inscritos": 2,
-      "citas_agendadas": 1,
-      "asistieron": 0,
+      "citas_agendadas": 3,
+      "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 1,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
-      "conv_asistio_inscrito": 0.0
+      "sin_dato": 2,
+      "tasa_asistencia": 33.3,
+      "tasa_asistencia_con_dato": 100.0,
+      "conv_asistio_inscrito": 200.0
     }
   },
   "metas_leads": {
@@ -481,6 +481,15 @@ const DATA_INGLES = {
   "meta_inscritos_mkt": 45,
   "diario_suc": {},
   "agenda": [
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Valeria",
+      "tel": "5568986708",
+      "fecha_cita": "02/09/26 3:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Inscripción"
+    },
     {
       "sucursal": "LINDAVISTA",
       "nombre": "Fernando Otero",
@@ -636,6 +645,33 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "IZTACALCO",
+      "nombre": "Alma Almazan es para sus dos hijos",
+      "tel": "5558009728",
+      "fecha_cita": "05/09/26 9:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "CLase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Ivan",
+      "tel": "5521194553",
+      "fecha_cita": "02/09/26 5:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clqase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Jaciel Bautizta",
+      "tel": "5616002035",
+      "fecha_cita": "05/09/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "inscripción"
+    },
+    {
+      "sucursal": "IZTACALCO",
       "nombre": "veronica 2 hijas",
       "tel": "5560767790",
       "fecha_cita": "02/09/26 9:00",
@@ -690,15 +726,6 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "IZTACALCO",
-      "nombre": "Edgar Eduardo",
-      "tel": "5630964129",
-      "fecha_cita": "03/10/26 12:00",
-      "asistio": null,
-      "inscrito": null,
-      "obs": "Clase muestra y visit al plantel"
-    },
-    {
-      "sucursal": "IZTACALCO",
       "nombre": "lfredo vieyra Montoya",
       "tel": "5618262103",
       "fecha_cita": "14/09/26 6:30",
@@ -717,12 +744,30 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "ERMITA",
-      "nombre": "Romina",
-      "tel": "9851116603",
-      "fecha_cita": "27-08-26 2:00",
+      "nombre": "Jaciel Bautizta",
+      "tel": "5616002035",
+      "fecha_cita": "05-09-26 12:00",
       "asistio": null,
       "inscrito": null,
-      "obs": "Visita al plantel"
+      "obs": "inscripción"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Paty",
+      "tel": "5560793955",
+      "fecha_cita": "23-09-26 3:30",
+      "asistio": true,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Michell Lira",
+      "tel": "5554996147",
+      "fecha_cita": "23-09-26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "clase muestra"
     }
   ]
 };
