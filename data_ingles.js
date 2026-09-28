@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "28/09/2026 10:17",
-  "meta_actualizado": "28/09/2026 10:17",
+  "actualizado": "28/09/2026 18:55",
+  "meta_actualizado": "28/09/2026 18:55",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 499,
-    "gasto": 23113.58,
-    "cpl": 46.32,
+    "leads_meta": 512,
+    "gasto": 23694.78,
+    "cpl": 46.28,
     "citas": 25,
     "visitas": 9,
     "inscritos": 9,
     "citas_agendadas": 32,
-    "asistieron": 3,
+    "asistieron": 6,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 29,
-    "tasa_asistencia": 9.4,
+    "sin_dato_asistencia": 26,
+    "tasa_asistencia": 18.8,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 300.0,
+    "conv_asistio_inscrito": 150.0,
     "ingresos": 16002.0,
     "ticket_promedio": 1778.0
   },
   "financiero": {
     "ingresos": 16002.0,
-    "utilidad": -19111.58,
+    "utilidad": -19692.78,
     "ticket_promedio": 1778.0,
     "gastos": {
-      "meta_ads": 23113.58,
+      "meta_ads": 23694.78,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 35113.58
+      "total": 35694.78
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 23113.58,
-      "impresiones": 329971,
-      "alcance": 170589,
-      "leads": 499,
-      "cpl": 46.32
+      "gasto": 23694.78,
+      "impresiones": 332384,
+      "alcance": 171590,
+      "leads": 512,
+      "cpl": 46.28
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 23113.58,
-      "leads": 499,
-      "cpl": 46.32
+      "gasto": 23694.78,
+      "leads": 512,
+      "cpl": 46.28
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -423,11 +423,11 @@ const DATA_INGLES = {
     },
     "2026-09-27": {
       "leads": 12,
-      "gasto": 796.02
+      "gasto": 799.76
     },
     "2026-09-28": {
-      "leads": 0,
-      "gasto": 0.64
+      "leads": 13,
+      "gasto": 578.1
     }
   },
   "sucursales": {
@@ -439,12 +439,12 @@ const DATA_INGLES = {
       "visitas": 6,
       "inscritos": 7,
       "citas_agendadas": 18,
-      "asistieron": 0,
+      "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 18,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
-      "conv_asistio_inscrito": 0.0
+      "sin_dato": 15,
+      "tasa_asistencia": 16.7,
+      "tasa_asistencia_con_dato": 100.0,
+      "conv_asistio_inscrito": 233.3
     },
     "IZTACALCO": {
       "leads": 126,
@@ -589,8 +589,8 @@ const DATA_INGLES = {
       "nombre": "HAydee",
       "tel": "5541894268",
       "fecha_cita": "22/09/26 5:00",
-      "asistio": null,
-      "inscrito": null,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Clase muestra y visit al plantel"
     },
     {
@@ -607,8 +607,8 @@ const DATA_INGLES = {
       "nombre": "Sharahy Garcia",
       "tel": "5580329487",
       "fecha_cita": "26/09/26 12/09/26",
-      "asistio": null,
-      "inscrito": null,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Clase muestra"
     },
     {
@@ -643,8 +643,8 @@ const DATA_INGLES = {
       "nombre": "Daniela",
       "tel": "5543430523",
       "fecha_cita": "26/09/26 9:00",
-      "asistio": null,
-      "inscrito": null,
+      "asistio": true,
+      "inscrito": true,
       "obs": "Examen de colocación"
     },
     {
@@ -739,12 +739,12 @@ const DATA_INGLES = {
     },
     {
       "sucursal": "IZTACALCO",
-      "nombre": "Noemi / para mi hijo",
-      "tel": "5547881280",
-      "fecha_cita": "26/09/26 9:00",
+      "nombre": "Jazmín",
+      "tel": "5580381418",
+      "fecha_cita": "28/09/26 5:00",
       "asistio": null,
       "inscrito": null,
-      "obs": "Clase muestra"
+      "obs": "Pago de inscripción"
     },
     {
       "sucursal": "ERMITA",
