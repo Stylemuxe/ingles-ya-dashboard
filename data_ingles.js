@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "28/09/2026 18:55",
-  "meta_actualizado": "28/09/2026 18:55",
+  "actualizado": "29/09/2026 00:02",
+  "meta_actualizado": "29/09/2026 00:02",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 512,
-    "gasto": 23694.78,
-    "cpl": 46.28,
+    "leads_meta": 521,
+    "gasto": 24081.14,
+    "cpl": 46.22,
     "citas": 25,
     "visitas": 9,
     "inscritos": 9,
-    "citas_agendadas": 32,
+    "citas_agendadas": 33,
     "asistieron": 6,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 26,
-    "tasa_asistencia": 18.8,
+    "sin_dato_asistencia": 27,
+    "tasa_asistencia": 18.2,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 150.0,
     "ingresos": 16002.0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 16002.0,
-    "utilidad": -19692.78,
+    "utilidad": -20079.14,
     "ticket_promedio": 1778.0,
     "gastos": {
-      "meta_ads": 23694.78,
+      "meta_ads": 24081.14,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 35694.78
+      "total": 36081.14
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 23694.78,
-      "impresiones": 332384,
-      "alcance": 171590,
-      "leads": 512,
-      "cpl": 46.28
+      "gasto": 24081.14,
+      "impresiones": 334975,
+      "alcance": 172172,
+      "leads": 521,
+      "cpl": 46.22
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 23694.78,
-      "leads": 512,
-      "cpl": 46.28
+      "gasto": 24083.54,
+      "leads": 521,
+      "cpl": 46.23
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -423,33 +423,33 @@ const DATA_INGLES = {
     },
     "2026-09-27": {
       "leads": 12,
-      "gasto": 799.76
+      "gasto": 799.9
     },
     "2026-09-28": {
-      "leads": 13,
-      "gasto": 578.1
+      "leads": 22,
+      "gasto": 966.72
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 138,
-      "llamadas": 71,
-      "no_contesta": 67,
+      "leads": 154,
+      "llamadas": 77,
+      "no_contesta": 77,
       "citas": 13,
       "visitas": 6,
       "inscritos": 7,
-      "citas_agendadas": 18,
+      "citas_agendadas": 19,
       "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 15,
-      "tasa_asistencia": 16.7,
+      "sin_dato": 16,
+      "tasa_asistencia": 15.8,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 233.3
     },
     "IZTACALCO": {
-      "leads": 126,
-      "llamadas": 60,
-      "no_contesta": 66,
+      "leads": 144,
+      "llamadas": 67,
+      "no_contesta": 77,
       "citas": 8,
       "visitas": 1,
       "inscritos": 0,
@@ -462,9 +462,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 104,
-      "llamadas": 33,
-      "no_contesta": 70,
+      "leads": 112,
+      "llamadas": 36,
+      "no_contesta": 75,
       "citas": 4,
       "visitas": 2,
       "inscritos": 2,
@@ -646,6 +646,15 @@ const DATA_INGLES = {
       "asistio": true,
       "inscrito": true,
       "obs": "Examen de colocación"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "David",
+      "tel": "5587692951",
+      "fecha_cita": "29/09/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "IZTACALCO",
