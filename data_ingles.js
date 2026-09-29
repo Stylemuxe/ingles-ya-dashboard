@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "29/09/2026 17:14",
-  "meta_actualizado": "29/09/2026 17:14",
+  "actualizado": "29/09/2026 23:16",
+  "meta_actualizado": "29/09/2026 23:16",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 547,
-    "gasto": 25115.76,
-    "cpl": 45.92,
-    "citas": 25,
+    "leads_meta": 550,
+    "gasto": 25456.39,
+    "cpl": 46.28,
+    "citas": 29,
     "visitas": 9,
-    "inscritos": 9,
-    "citas_agendadas": 33,
+    "inscritos": 10,
+    "citas_agendadas": 35,
     "asistieron": 6,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 27,
-    "tasa_asistencia": 18.2,
+    "sin_dato_asistencia": 29,
+    "tasa_asistencia": 17.1,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 150.0,
+    "conv_asistio_inscrito": 166.7,
     "ingresos": 16002.0,
-    "ticket_promedio": 1778.0
+    "ticket_promedio": 1600.2
   },
   "financiero": {
     "ingresos": 16002.0,
-    "utilidad": -21113.76,
-    "ticket_promedio": 1778.0,
+    "utilidad": -21454.39,
+    "ticket_promedio": 1600.2,
     "gastos": {
-      "meta_ads": 25115.76,
+      "meta_ads": 25456.39,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 37115.76
+      "total": 37456.39
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 25115.76,
-      "impresiones": 344915,
-      "alcance": 176001,
-      "leads": 547,
-      "cpl": 45.92
+      "gasto": 25456.39,
+      "impresiones": 348216,
+      "alcance": 176292,
+      "leads": 550,
+      "cpl": 46.28
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 25115.76,
-      "leads": 547,
-      "cpl": 45.92
+      "gasto": 25456.39,
+      "leads": 550,
+      "cpl": 46.28
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -427,18 +427,18 @@ const DATA_INGLES = {
     },
     "2026-09-28": {
       "leads": 32,
-      "gasto": 1484.85
+      "gasto": 1486.26
     },
     "2026-09-29": {
-      "leads": 16,
-      "gasto": 514.09
+      "leads": 19,
+      "gasto": 853.31
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 154,
-      "llamadas": 77,
-      "no_contesta": 77,
+      "leads": 163,
+      "llamadas": 82,
+      "no_contesta": 81,
       "citas": 13,
       "visitas": 6,
       "inscritos": 7,
@@ -451,32 +451,32 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 233.3
     },
     "IZTACALCO": {
-      "leads": 144,
+      "leads": 151,
       "llamadas": 67,
-      "no_contesta": 77,
-      "citas": 8,
+      "no_contesta": 84,
+      "citas": 9,
       "visitas": 1,
-      "inscritos": 0,
+      "inscritos": 1,
       "citas_agendadas": 11,
       "asistieron": 2,
       "no_asistieron": 0,
       "sin_dato": 9,
       "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 0.0
+      "conv_asistio_inscrito": 50.0
     },
     "ERMITA": {
-      "leads": 112,
-      "llamadas": 36,
-      "no_contesta": 75,
-      "citas": 4,
+      "leads": 127,
+      "llamadas": 40,
+      "no_contesta": 86,
+      "citas": 7,
       "visitas": 2,
       "inscritos": 2,
-      "citas_agendadas": 3,
+      "citas_agendadas": 5,
       "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 2,
-      "tasa_asistencia": 33.3,
+      "sin_dato": 4,
+      "tasa_asistencia": 20.0,
       "tasa_asistencia_con_dato": 100.0,
       "conv_asistio_inscrito": 200.0
     }
@@ -785,6 +785,24 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Osvaldo",
+      "tel": "5588208281",
+      "fecha_cita": "30-09-26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visita al plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Angel Gómez",
+      "tel": "7207454548",
+      "fecha_cita": "30-09-26 3:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visita al plantel"
     }
   ]
 };
