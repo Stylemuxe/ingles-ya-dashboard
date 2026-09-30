@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "30/09/2026 17:12",
-  "meta_actualizado": "30/09/2026 17:12",
+  "actualizado": "30/09/2026 23:19",
+  "meta_actualizado": "30/09/2026 23:18",
   "meta_ok": true,
   "mes": "Septiembre 2026",
   "mes_id": "2026-09",
   "kpis": {
-    "leads_meta": 560,
-    "gasto": 25951.22,
-    "cpl": 46.34,
-    "citas": 29,
+    "leads_meta": 564,
+    "gasto": 26163.24,
+    "cpl": 46.39,
+    "citas": 30,
     "visitas": 9,
     "inscritos": 10,
-    "citas_agendadas": 35,
-    "asistieron": 6,
+    "citas_agendadas": 36,
+    "asistieron": 8,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 29,
-    "tasa_asistencia": 17.1,
+    "sin_dato_asistencia": 28,
+    "tasa_asistencia": 22.2,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 166.7,
+    "conv_asistio_inscrito": 125.0,
     "ingresos": 16002.0,
     "ticket_promedio": 1600.2
   },
   "financiero": {
     "ingresos": 16002.0,
-    "utilidad": -21949.22,
+    "utilidad": -22161.24,
     "ticket_promedio": 1600.2,
     "gastos": {
-      "meta_ads": 25951.22,
+      "meta_ads": 26163.24,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 37951.22
+      "total": 38163.24
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 25951.22,
-      "impresiones": 353316,
-      "alcance": 177504,
-      "leads": 560,
-      "cpl": 46.34
+      "gasto": 26163.24,
+      "impresiones": 354798,
+      "alcance": 178228,
+      "leads": 564,
+      "cpl": 46.39
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 25951.22,
-      "leads": 560,
-      "cpl": 46.34
+      "gasto": 26163.24,
+      "leads": 564,
+      "cpl": 46.39
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -431,19 +431,19 @@ const DATA_INGLES = {
     },
     "2026-09-29": {
       "leads": 23,
-      "gasto": 1161.39
+      "gasto": 1161.99
     },
     "2026-09-30": {
-      "leads": 6,
-      "gasto": 186.31
+      "leads": 10,
+      "gasto": 397.73
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 163,
-      "llamadas": 82,
-      "no_contesta": 81,
-      "citas": 13,
+      "leads": 167,
+      "llamadas": 85,
+      "no_contesta": 82,
+      "citas": 14,
       "visitas": 6,
       "inscritos": 7,
       "citas_agendadas": 19,
@@ -455,8 +455,8 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 233.3
     },
     "IZTACALCO": {
-      "leads": 151,
-      "llamadas": 67,
+      "leads": 153,
+      "llamadas": 69,
       "no_contesta": 84,
       "citas": 9,
       "visitas": 1,
@@ -470,19 +470,19 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 50.0
     },
     "ERMITA": {
-      "leads": 127,
+      "leads": 128,
       "llamadas": 40,
-      "no_contesta": 86,
+      "no_contesta": 87,
       "citas": 7,
       "visitas": 2,
       "inscritos": 2,
-      "citas_agendadas": 5,
-      "asistieron": 1,
+      "citas_agendadas": 6,
+      "asistieron": 3,
       "no_asistieron": 0,
-      "sin_dato": 4,
-      "tasa_asistencia": 20.0,
+      "sin_dato": 3,
+      "tasa_asistencia": 50.0,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 200.0
+      "conv_asistio_inscrito": 66.7
     }
   },
   "metas_leads": {
@@ -491,7 +491,31 @@ const DATA_INGLES = {
     "ERMITA": 164
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {},
+  "diario_suc": {
+    "2026-09-30": {
+      "LINDAVISTA": {
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 2,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 1,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    }
+  },
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
@@ -795,7 +819,7 @@ const DATA_INGLES = {
       "nombre": "Osvaldo",
       "tel": "5588208281",
       "fecha_cita": "30-09-26 9:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra y visita al plantel"
     },
@@ -805,6 +829,15 @@ const DATA_INGLES = {
       "tel": "7207454548",
       "fecha_cita": "30-09-26 3:30",
       "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra y visita al plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Julieta",
+      "tel": "5587861724",
+      "fecha_cita": "12-09-26 12:00",
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra y visita al plantel"
     }
