@@ -1,7 +1,7 @@
 const DATA_INGLES = {
-  "actualizado": "02/10/2026 03:04",
+  "actualizado": "02/10/2026 10:08",
   "meta_actualizado": "02/10/2026 03:04",
-  "meta_ok": true,
+  "meta_ok": false,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -661.75,
+    "utilidad": 0.0,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 661.75,
+      "meta_ads": 0.0,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 661.75
+      "total": 0.0
     }
   },
   "campanas": [
