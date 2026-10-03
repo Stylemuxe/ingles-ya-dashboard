@@ -1,5 +1,5 @@
 {
-  "actualizado": "03/10/2026 15:23",
+  "actualizado": "03/10/2026 18:53",
   "meta_actualizado": "02/10/2026 03:04",
   "meta_ok": false,
   "mes": "Octubre 2026",
@@ -11,13 +11,13 @@
     "citas": 18,
     "visitas": 3,
     "inscritos": 10,
-    "citas_agendadas": 6,
-    "asistieron": 0,
+    "citas_agendadas": 7,
+    "asistieron": 1,
     "no_asistieron": 0,
     "sin_dato_asistencia": 6,
-    "tasa_asistencia": 0.0,
-    "tasa_asistencia_con_dato": 0.0,
-    "conv_asistio_inscrito": 0.0,
+    "tasa_asistencia": 14.3,
+    "tasa_asistencia_con_dato": 100.0,
+    "conv_asistio_inscrito": 1000.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
@@ -330,10 +330,10 @@
       "citas": 10,
       "visitas": 1,
       "inscritos": 5,
-      "citas_agendadas": 1,
+      "citas_agendadas": 2,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 1,
+      "sin_dato": 2,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -346,12 +346,12 @@
       "visitas": 2,
       "inscritos": 3,
       "citas_agendadas": 3,
-      "asistieron": 0,
+      "asistieron": 1,
       "no_asistieron": 0,
-      "sin_dato": 3,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
-      "conv_asistio_inscrito": 0.0
+      "sin_dato": 2,
+      "tasa_asistencia": 33.3,
+      "tasa_asistencia_con_dato": 100.0,
+      "conv_asistio_inscrito": 300.0
     },
     "ERMITA": {
       "leads": 96,
@@ -387,6 +387,15 @@
       "obs": "Clase muestra"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Jose alberto",
+      "tel": "5531490922",
+      "fecha_cita": "9/10/2026 4:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visita al plntel"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Edgar Eduardo",
       "tel": "5630964129",
@@ -409,7 +418,7 @@
       "nombre": "Evelin Estefany Osorio Cruz",
       "tel": "5531490922",
       "fecha_cita": "03/10/26 9:00",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
     },
