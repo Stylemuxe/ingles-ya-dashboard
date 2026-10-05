@@ -1,5 +1,5 @@
 const DATA_INGLES = {
-  "actualizado": "05/10/2026 10:58",
+  "actualizado": "05/10/2026 09:09",
   "meta_actualizado": "02/10/2026 03:04",
   "meta_ok": false,
   "mes": "Octubre 2026",
@@ -8,16 +8,16 @@ const DATA_INGLES = {
     "leads_meta": 21,
     "gasto": 661.75,
     "cpl": 31.51,
-    "citas": 18,
+    "citas": 4,
     "visitas": 3,
-    "inscritos": 10,
+    "inscritos": 0,
     "citas_agendadas": 7,
     "asistieron": 1,
     "no_asistieron": 0,
     "sin_dato_asistencia": 6,
     "tasa_asistencia": 14.3,
     "tasa_asistencia_con_dato": 100.0,
-    "conv_asistio_inscrito": 1000.0,
+    "conv_asistio_inscrito": 0.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
@@ -324,12 +324,12 @@ const DATA_INGLES = {
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 131,
-      "llamadas": 89,
-      "no_contesta": 50,
-      "citas": 10,
-      "visitas": 1,
-      "inscritos": 5,
+      "leads": 22,
+      "llamadas": 5,
+      "no_contesta": 17,
+      "citas": 1,
+      "visitas": 2,
+      "inscritos": 0,
       "citas_agendadas": 2,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -339,27 +339,27 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 112,
-      "llamadas": 68,
-      "no_contesta": 54,
-      "citas": 5,
-      "visitas": 2,
-      "inscritos": 3,
+      "leads": 19,
+      "llamadas": 5,
+      "no_contesta": 14,
+      "citas": 3,
+      "visitas": 1,
+      "inscritos": 0,
       "citas_agendadas": 3,
       "asistieron": 1,
       "no_asistieron": 0,
       "sin_dato": 2,
       "tasa_asistencia": 33.3,
       "tasa_asistencia_con_dato": 100.0,
-      "conv_asistio_inscrito": 300.0
+      "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 96,
-      "llamadas": 53,
-      "no_contesta": 53,
-      "citas": 3,
+      "leads": 16,
+      "llamadas": 4,
+      "no_contesta": 12,
+      "citas": 0,
       "visitas": 0,
-      "inscritos": 2,
+      "inscritos": 0,
       "citas_agendadas": 2,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -375,7 +375,192 @@ const DATA_INGLES = {
     "ERMITA": 128
   },
   "meta_inscritos_mkt": 45,
-  "diario_suc": {},
+  "diario_suc": {
+    "2026-10-01": {
+      "LINDAVISTA": {
+        "leads": 9,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 1,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 7,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 1,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 7,
+        "llamadas": 2,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-02": {
+      "LINDAVISTA": {
+        "leads": 10,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 10,
+        "llamadas": 1,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 1
+      },
+      "ERMITA": {
+        "leads": 7,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-03": {
+      "LINDAVISTA": {
+        "leads": 3,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 1,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-04": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-05": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-06": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-07": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-08": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 1,
+        "inscritos": 1
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    }
+  },
   "agenda": [
     {
       "sucursal": "LINDAVISTA",
