@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "05/10/2026 09:09",
-  "meta_actualizado": "02/10/2026 03:04",
-  "meta_ok": false,
+  "actualizado": "05/10/2026 21:22",
+  "meta_actualizado": "05/10/2026 21:22",
+  "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 21,
-    "gasto": 661.75,
-    "cpl": 31.51,
+    "leads_meta": 79,
+    "gasto": 3538.68,
+    "cpl": 44.79,
     "citas": 4,
     "visitas": 3,
     "inscritos": 0,
-    "citas_agendadas": 7,
+    "citas_agendadas": 10,
     "asistieron": 1,
     "no_asistieron": 0,
-    "sin_dato_asistencia": 6,
-    "tasa_asistencia": 14.3,
+    "sin_dato_asistencia": 9,
+    "tasa_asistencia": 10.0,
     "tasa_asistencia_con_dato": 100.0,
     "conv_asistio_inscrito": 0.0,
     "ingresos": 0.0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": 0.0,
+    "utilidad": -3538.68,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 0.0,
+      "meta_ads": 3538.68,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 0.0
+      "total": 3538.68
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 661.75,
-      "impresiones": 6396,
-      "alcance": 5368,
-      "leads": 21,
-      "cpl": 31.51
+      "gasto": 3538.68,
+      "impresiones": 74235,
+      "alcance": 48164,
+      "leads": 79,
+      "cpl": 44.79
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 661.75,
-      "leads": 21,
-      "cpl": 31.51
+      "gasto": 3538.68,
+      "leads": 79,
+      "cpl": 44.79
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -318,8 +318,24 @@ const DATA_INGLES = {
   ],
   "diario_meta": {
     "2026-10-01": {
-      "leads": 21,
-      "gasto": 661.75
+      "leads": 23,
+      "gasto": 856.0
+    },
+    "2026-10-02": {
+      "leads": 17,
+      "gasto": 803.71
+    },
+    "2026-10-03": {
+      "leads": 12,
+      "gasto": 639.51
+    },
+    "2026-10-04": {
+      "leads": 22,
+      "gasto": 889.7
+    },
+    "2026-10-05": {
+      "leads": 5,
+      "gasto": 349.76
     }
   },
   "sucursales": {
@@ -330,10 +346,10 @@ const DATA_INGLES = {
       "citas": 1,
       "visitas": 2,
       "inscritos": 0,
-      "citas_agendadas": 2,
+      "citas_agendadas": 3,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 2,
+      "sin_dato": 3,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -360,10 +376,10 @@ const DATA_INGLES = {
       "citas": 0,
       "visitas": 0,
       "inscritos": 0,
-      "citas_agendadas": 2,
+      "citas_agendadas": 4,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 2,
+      "sin_dato": 4,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -581,6 +597,15 @@ const DATA_INGLES = {
       "obs": "Visita al plntel"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Anahi Alejadre",
+      "tel": "5527297250",
+      "fecha_cita": "09/10/26 9:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Examen de colocaión"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Edgar Eduardo",
       "tel": "5630964129",
@@ -624,6 +649,24 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "clase muestra y visita al plantel"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Filomena",
+      "tel": "5551847301",
+      "fecha_cita": "10-10-26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase mustra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Antonio",
+      "tel": "5516110146",
+      "fecha_cita": "07/10/26 3.30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase mustra"
     }
   ]
 };
