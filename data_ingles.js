@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "06/10/2026 10:53",
-  "meta_actualizado": "06/10/2026 10:53",
+  "actualizado": "06/10/2026 17:34",
+  "meta_actualizado": "06/10/2026 17:34",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 90,
-    "gasto": 4272.74,
-    "cpl": 47.47,
+    "leads_meta": 98,
+    "gasto": 4864.72,
+    "cpl": 49.64,
     "citas": 8,
     "visitas": 4,
     "inscritos": 0,
-    "citas_agendadas": 10,
+    "citas_agendadas": 11,
     "asistieron": 1,
-    "no_asistieron": 0,
-    "sin_dato_asistencia": 9,
-    "tasa_asistencia": 10.0,
-    "tasa_asistencia_con_dato": 100.0,
+    "no_asistieron": 2,
+    "sin_dato_asistencia": 8,
+    "tasa_asistencia": 9.1,
+    "tasa_asistencia_con_dato": 33.3,
     "conv_asistio_inscrito": 0.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -4272.74,
+    "utilidad": -4864.72,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 4272.74,
+      "meta_ads": 4864.72,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 4272.74
+      "total": 4864.72
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 4272.74,
-      "impresiones": 80808,
-      "alcance": 52093,
-      "leads": 90,
-      "cpl": 47.47
+      "gasto": 4864.72,
+      "impresiones": 88397,
+      "alcance": 57235,
+      "leads": 98,
+      "cpl": 49.64
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 4272.74,
-      "leads": 90,
-      "cpl": 47.47
+      "gasto": 4864.72,
+      "leads": 98,
+      "cpl": 49.64
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -335,11 +335,11 @@ const DATA_INGLES = {
     },
     "2026-10-05": {
       "leads": 13,
-      "gasto": 1004.94
+      "gasto": 1018.55
     },
     "2026-10-06": {
-      "leads": 3,
-      "gasto": 78.83
+      "leads": 11,
+      "gasto": 657.2
     }
   },
   "sucursales": {
@@ -365,12 +365,12 @@ const DATA_INGLES = {
       "citas": 2,
       "visitas": 1,
       "inscritos": 0,
-      "citas_agendadas": 3,
+      "citas_agendadas": 4,
       "asistieron": 1,
-      "no_asistieron": 0,
-      "sin_dato": 2,
-      "tasa_asistencia": 33.3,
-      "tasa_asistencia_con_dato": 100.0,
+      "no_asistieron": 2,
+      "sin_dato": 1,
+      "tasa_asistencia": 25.0,
+      "tasa_asistencia_con_dato": 33.3,
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
@@ -614,7 +614,7 @@ const DATA_INGLES = {
       "nombre": "Edgar Eduardo",
       "tel": "5630964129",
       "fecha_cita": "03/10/26 12:00",
-      "asistio": null,
+      "asistio": false,
       "inscrito": null,
       "obs": "Clase muestra y visit al plantel"
     },
@@ -635,6 +635,15 @@ const DATA_INGLES = {
       "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Ludy Rodriguez",
+      "tel": "72046303007",
+      "fecha_cita": "05/10/26 3:00",
+      "asistio": false,
+      "inscrito": null,
+      "obs": "visita al plnatel"
     },
     {
       "sucursal": "ERMITA",
