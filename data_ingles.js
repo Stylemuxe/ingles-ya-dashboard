@@ -1,15 +1,15 @@
 const DATA_INGLES = {
-  "actualizado": "05/10/2026 21:22",
-  "meta_actualizado": "05/10/2026 21:22",
+  "actualizado": "06/10/2026 01:01",
+  "meta_actualizado": "06/10/2026 01:01",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
     "leads_meta": 79,
-    "gasto": 3538.68,
-    "cpl": 44.79,
-    "citas": 4,
-    "visitas": 3,
+    "gasto": 3644.91,
+    "cpl": 46.14,
+    "citas": 8,
+    "visitas": 4,
     "inscritos": 0,
     "citas_agendadas": 10,
     "asistieron": 1,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -3538.68,
+    "utilidad": -3644.91,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 3538.68,
+      "meta_ads": 3644.91,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 3538.68
+      "total": 3644.91
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 3538.68,
-      "impresiones": 74235,
-      "alcance": 48164,
+      "gasto": 3644.91,
+      "impresiones": 75485,
+      "alcance": 49115,
       "leads": 79,
-      "cpl": 44.79
+      "cpl": 46.14
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 3538.68,
+      "gasto": 3644.91,
       "leads": 79,
-      "cpl": 44.79
+      "cpl": 46.14
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -331,20 +331,20 @@ const DATA_INGLES = {
     },
     "2026-10-04": {
       "leads": 22,
-      "gasto": 889.7
+      "gasto": 889.75
     },
     "2026-10-05": {
       "leads": 5,
-      "gasto": 349.76
+      "gasto": 455.94
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 22,
-      "llamadas": 5,
-      "no_contesta": 17,
-      "citas": 1,
-      "visitas": 2,
+      "leads": 32,
+      "llamadas": 10,
+      "no_contesta": 22,
+      "citas": 2,
+      "visitas": 3,
       "inscritos": 0,
       "citas_agendadas": 3,
       "asistieron": 0,
@@ -355,10 +355,10 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 19,
-      "llamadas": 5,
-      "no_contesta": 14,
-      "citas": 3,
+      "leads": 29,
+      "llamadas": 8,
+      "no_contesta": 21,
+      "citas": 2,
       "visitas": 1,
       "inscritos": 0,
       "citas_agendadas": 3,
@@ -370,10 +370,10 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 16,
-      "llamadas": 4,
-      "no_contesta": 12,
-      "citas": 0,
+      "leads": 25,
+      "llamadas": 7,
+      "no_contesta": 18,
+      "citas": 4,
       "visitas": 0,
       "inscritos": 0,
       "citas_agendadas": 4,
@@ -442,67 +442,67 @@ const DATA_INGLES = {
       "LINDAVISTA": {
         "leads": 3,
         "llamadas": 1,
-        "citas": 0,
-        "visitas": 0,
+        "citas": 1,
+        "visitas": 1,
         "inscritos": 0
       },
       "IZTACALCO": {
         "leads": 2,
         "llamadas": 1,
-        "citas": 1,
+        "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
         "leads": 2,
         "llamadas": 1,
-        "citas": 0,
+        "citas": 2,
         "visitas": 0,
         "inscritos": 0
       }
     },
     "2026-10-04": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 7,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 7,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 6,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
     },
     "2026-10-05": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
-        "inscritos": 0
+        "inscritos": 1
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 3,
+        "llamadas": 1,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
