@@ -1,35 +1,35 @@
 {
-  "actualizado": "07/10/2026 18:06",
-  "meta_actualizado": "07/10/2026 18:06",
+  "actualizado": "07/10/2026 23:55",
+  "meta_actualizado": "07/10/2026 23:55",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 113,
-    "gasto": 5667.38,
-    "cpl": 50.15,
-    "citas": 8,
-    "visitas": 4,
+    "leads_meta": 119,
+    "gasto": 5963.18,
+    "cpl": 50.11,
+    "citas": 15,
+    "visitas": 6,
     "inscritos": 0,
-    "citas_agendadas": 11,
-    "asistieron": 1,
+    "citas_agendadas": 17,
+    "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 8,
-    "tasa_asistencia": 9.1,
-    "tasa_asistencia_con_dato": 33.3,
+    "sin_dato_asistencia": 13,
+    "tasa_asistencia": 11.8,
+    "tasa_asistencia_con_dato": 50.0,
     "conv_asistio_inscrito": 0.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -5667.38,
+    "utilidad": -5963.18,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 5667.38,
+      "meta_ads": 5963.18,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 5667.38
+      "total": 5963.18
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 5667.38,
-      "impresiones": 99263,
-      "alcance": 63402,
-      "leads": 113,
-      "cpl": 50.15
+      "gasto": 5963.18,
+      "impresiones": 104785,
+      "alcance": 66917,
+      "leads": 119,
+      "cpl": 50.11
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 5667.38,
-      "leads": 113,
-      "cpl": 50.15
+      "gasto": 5965.07,
+      "leads": 119,
+      "cpl": 50.13
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -335,59 +335,59 @@
     },
     "2026-10-05": {
       "leads": 13,
-      "gasto": 1025.73
+      "gasto": 1025.8
     },
     "2026-10-06": {
       "leads": 21,
-      "gasto": 1182.46
+      "gasto": 1182.94
     },
     "2026-10-07": {
-      "leads": 5,
-      "gasto": 267.44
+      "leads": 11,
+      "gasto": 567.36
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 38,
-      "llamadas": 12,
-      "no_contesta": 26,
-      "citas": 2,
-      "visitas": 3,
-      "inscritos": 0,
-      "citas_agendadas": 3,
-      "asistieron": 0,
-      "no_asistieron": 0,
-      "sin_dato": 3,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
-      "conv_asistio_inscrito": 0.0
-    },
-    "IZTACALCO": {
-      "leads": 35,
-      "llamadas": 10,
-      "no_contesta": 25,
-      "citas": 2,
-      "visitas": 1,
-      "inscritos": 0,
-      "citas_agendadas": 4,
-      "asistieron": 1,
-      "no_asistieron": 2,
-      "sin_dato": 1,
-      "tasa_asistencia": 25.0,
-      "tasa_asistencia_con_dato": 33.3,
-      "conv_asistio_inscrito": 0.0
-    },
-    "ERMITA": {
-      "leads": 31,
-      "llamadas": 9,
-      "no_contesta": 22,
+      "leads": 43,
+      "llamadas": 15,
+      "no_contesta": 28,
       "citas": 4,
-      "visitas": 0,
+      "visitas": 4,
       "inscritos": 0,
       "citas_agendadas": 4,
       "asistieron": 0,
       "no_asistieron": 0,
       "sin_dato": 4,
+      "tasa_asistencia": 0.0,
+      "tasa_asistencia_con_dato": 0.0,
+      "conv_asistio_inscrito": 0.0
+    },
+    "IZTACALCO": {
+      "leads": 41,
+      "llamadas": 11,
+      "no_contesta": 30,
+      "citas": 6,
+      "visitas": 2,
+      "inscritos": 0,
+      "citas_agendadas": 8,
+      "asistieron": 2,
+      "no_asistieron": 2,
+      "sin_dato": 4,
+      "tasa_asistencia": 25.0,
+      "tasa_asistencia_con_dato": 50.0,
+      "conv_asistio_inscrito": 0.0
+    },
+    "ERMITA": {
+      "leads": 33,
+      "llamadas": 10,
+      "no_contesta": 23,
+      "citas": 5,
+      "visitas": 0,
+      "inscritos": 0,
+      "citas_agendadas": 5,
+      "asistieron": 0,
+      "no_asistieron": 0,
+      "sin_dato": 5,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -517,16 +517,16 @@
     },
     "2026-10-06": {
       "LINDAVISTA": {
-        "leads": 6,
+        "leads": 7,
         "llamadas": 2,
-        "citas": 0,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 6,
+        "leads": 8,
         "llamadas": 2,
-        "citas": 0,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
@@ -540,23 +540,23 @@
     },
     "2026-10-07": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
+        "leads": 4,
+        "llamadas": 3,
+        "citas": 1,
+        "visitas": 1,
+        "inscritos": 1
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
-        "visitas": 0,
-        "inscritos": 0
+        "leads": 4,
+        "llamadas": 1,
+        "citas": 3,
+        "visitas": 1,
+        "inscritos": 1
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 2,
+        "llamadas": 1,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       }
@@ -614,6 +614,15 @@
       "obs": "Examen de colocaión"
     },
     {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Israel",
+      "tel": "5534624677",
+      "fecha_cita": "10/10/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
       "sucursal": "IZTACALCO",
       "nombre": "Edgar Eduardo",
       "tel": "5630964129",
@@ -650,6 +659,42 @@
       "obs": "visita al plnatel"
     },
     {
+      "sucursal": "IZTACALCO",
+      "nombre": "Lilia Vázquez",
+      "tel": "5560448226",
+      "fecha_cita": "12/10/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Alex Rodriguez",
+      "tel": "5531302842",
+      "fecha_cita": "12/10/26 6:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "clase muestra en línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Francisco Javier",
+      "tel": "7531404041",
+      "fecha_cita": "07/10/26 3:30",
+      "asistio": true,
+      "inscrito": true,
+      "obs": "pago inscripción"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Ariana Escamilla",
+      "tel": "5531094619",
+      "fecha_cita": "14/10/26 9:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Vista al plantel clase muestra"
+    },
+    {
       "sucursal": "ERMITA",
       "nombre": "Maria Guadalupe",
       "tel": "5561857510",
@@ -684,6 +729,15 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Clase mustra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Sofia",
+      "tel": "5539081339",
+      "fecha_cita": "10-10-26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     }
   ]
 }
