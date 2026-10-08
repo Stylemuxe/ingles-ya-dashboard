@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "08/10/2026 11:01",
-  "meta_actualizado": "08/10/2026 11:01",
+  "actualizado": "08/10/2026 18:08",
+  "meta_actualizado": "08/10/2026 18:08",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 128,
-    "gasto": 6253.77,
-    "cpl": 48.86,
+    "leads_meta": 136,
+    "gasto": 6595.53,
+    "cpl": 48.5,
     "citas": 15,
     "visitas": 6,
     "inscritos": 0,
-    "citas_agendadas": 17,
+    "citas_agendadas": 18,
     "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 13,
-    "tasa_asistencia": 11.8,
+    "sin_dato_asistencia": 14,
+    "tasa_asistencia": 11.1,
     "tasa_asistencia_con_dato": 50.0,
     "conv_asistio_inscrito": 0.0,
     "ingresos": 0.0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -6253.77,
+    "utilidad": -6595.53,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 6253.77,
+      "meta_ads": 6595.53,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 6253.77
+      "total": 6595.53
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 6253.77,
-      "impresiones": 110678,
-      "alcance": 69424,
-      "leads": 128,
-      "cpl": 48.86
+      "gasto": 6595.53,
+      "impresiones": 116394,
+      "alcance": 73328,
+      "leads": 136,
+      "cpl": 48.5
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 6253.77,
-      "leads": 128,
-      "cpl": 48.86
+      "gasto": 6595.53,
+      "leads": 136,
+      "cpl": 48.5
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -343,11 +343,11 @@ const DATA_INGLES = {
     },
     "2026-10-07": {
       "leads": 19,
-      "gasto": 835.68
+      "gasto": 838.89
     },
     "2026-10-08": {
-      "leads": 1,
-      "gasto": 20.38
+      "leads": 9,
+      "gasto": 358.93
     }
   },
   "sucursales": {
@@ -388,10 +388,10 @@ const DATA_INGLES = {
       "citas": 5,
       "visitas": 0,
       "inscritos": 0,
-      "citas_agendadas": 5,
+      "citas_agendadas": 6,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 5,
+      "sin_dato": 6,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -739,6 +739,15 @@ const DATA_INGLES = {
       "nombre": "Sofia",
       "tel": "5539081339",
       "fecha_cita": "10-10-26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Isabel",
+      "tel": "5562008625",
+      "fecha_cita": "07-10-26 5:00",
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
