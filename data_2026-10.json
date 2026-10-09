@@ -1,14 +1,14 @@
 {
-  "actualizado": "08/10/2026 18:08",
-  "meta_actualizado": "08/10/2026 18:08",
+  "actualizado": "09/10/2026 00:02",
+  "meta_actualizado": "09/10/2026 00:02",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 136,
-    "gasto": 6595.53,
-    "cpl": 48.5,
-    "citas": 15,
+    "leads_meta": 146,
+    "gasto": 6952.44,
+    "cpl": 47.62,
+    "citas": 16,
     "visitas": 6,
     "inscritos": 0,
     "citas_agendadas": 18,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -6595.53,
+    "utilidad": -6952.44,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 6595.53,
+      "meta_ads": 6952.44,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 6595.53
+      "total": 6952.44
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 6595.53,
-      "impresiones": 116394,
-      "alcance": 73328,
-      "leads": 136,
-      "cpl": 48.5
+      "gasto": 6952.44,
+      "impresiones": 124005,
+      "alcance": 77637,
+      "leads": 146,
+      "cpl": 47.62
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 6595.53,
-      "leads": 136,
-      "cpl": 48.5
+      "gasto": 6952.44,
+      "leads": 146,
+      "cpl": 47.62
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -343,19 +343,19 @@
     },
     "2026-10-07": {
       "leads": 19,
-      "gasto": 838.89
+      "gasto": 839.6
     },
     "2026-10-08": {
-      "leads": 9,
-      "gasto": 358.93
+      "leads": 19,
+      "gasto": 715.13
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 43,
-      "llamadas": 15,
-      "no_contesta": 28,
-      "citas": 4,
+      "leads": 50,
+      "llamadas": 17,
+      "no_contesta": 33,
+      "citas": 5,
       "visitas": 4,
       "inscritos": 0,
       "citas_agendadas": 4,
@@ -367,9 +367,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 41,
-      "llamadas": 11,
-      "no_contesta": 30,
+      "leads": 48,
+      "llamadas": 16,
+      "no_contesta": 32,
       "citas": 6,
       "visitas": 2,
       "inscritos": 0,
@@ -382,9 +382,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 33,
-      "llamadas": 10,
-      "no_contesta": 23,
+      "leads": 42,
+      "llamadas": 15,
+      "no_contesta": 27,
       "citas": 5,
       "visitas": 0,
       "inscritos": 0,
@@ -440,7 +440,7 @@
         "llamadas": 1,
         "citas": 1,
         "visitas": 0,
-        "inscritos": 1
+        "inscritos": 0
       },
       "ERMITA": {
         "leads": 7,
@@ -456,7 +456,7 @@
         "llamadas": 1,
         "citas": 1,
         "visitas": 1,
-        "inscritos": 0
+        "inscritos": 1
       },
       "IZTACALCO": {
         "leads": 2,
@@ -552,14 +552,14 @@
       },
       "IZTACALCO": {
         "leads": 4,
-        "llamadas": 1,
+        "llamadas": 3,
         "citas": 3,
         "visitas": 1,
         "inscritos": 1
       },
       "ERMITA": {
-        "leads": 2,
-        "llamadas": 1,
+        "leads": 5,
+        "llamadas": 3,
         "citas": 1,
         "visitas": 0,
         "inscritos": 0
@@ -567,22 +567,22 @@
     },
     "2026-10-08": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 7,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 1,
-        "inscritos": 1
+        "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 7,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 6,
+        "llamadas": 3,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
