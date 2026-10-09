@@ -1,35 +1,35 @@
 {
-  "actualizado": "09/10/2026 17:42",
-  "meta_actualizado": "09/10/2026 17:42",
+  "actualizado": "09/10/2026 23:41",
+  "meta_actualizado": "09/10/2026 23:40",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 154,
-    "gasto": 7445.45,
-    "cpl": 48.35,
+    "leads_meta": 162,
+    "gasto": 7804.36,
+    "cpl": 48.18,
     "citas": 16,
     "visitas": 6,
-    "inscritos": 0,
-    "citas_agendadas": 18,
+    "inscritos": 1,
+    "citas_agendadas": 19,
     "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 14,
-    "tasa_asistencia": 11.1,
+    "sin_dato_asistencia": 15,
+    "tasa_asistencia": 10.5,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 0.0,
+    "conv_asistio_inscrito": 50.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -7445.45,
+    "utilidad": -7804.36,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 7445.45,
+      "meta_ads": 7804.36,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 7445.45
+      "total": 7804.36
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 7445.45,
-      "impresiones": 136344,
-      "alcance": 83569,
-      "leads": 154,
-      "cpl": 48.35
+      "gasto": 7804.36,
+      "impresiones": 141922,
+      "alcance": 86852,
+      "leads": 162,
+      "cpl": 48.18
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 7445.45,
-      "leads": 154,
-      "cpl": 48.35
+      "gasto": 7804.36,
+      "leads": 162,
+      "cpl": 48.18
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -347,18 +347,18 @@
     },
     "2026-10-08": {
       "leads": 22,
-      "gasto": 938.83
+      "gasto": 940.76
     },
     "2026-10-09": {
-      "leads": 5,
-      "gasto": 269.12
+      "leads": 13,
+      "gasto": 626.1
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 50,
-      "llamadas": 17,
-      "no_contesta": 33,
+      "leads": 56,
+      "llamadas": 21,
+      "no_contesta": 35,
       "citas": 5,
       "visitas": 4,
       "inscritos": 0,
@@ -371,9 +371,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 48,
-      "llamadas": 16,
-      "no_contesta": 32,
+      "leads": 52,
+      "llamadas": 19,
+      "no_contesta": 34,
       "citas": 6,
       "visitas": 2,
       "inscritos": 0,
@@ -386,16 +386,16 @@
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 42,
-      "llamadas": 15,
-      "no_contesta": 27,
+      "leads": 45,
+      "llamadas": 16,
+      "no_contesta": 28,
       "citas": 5,
       "visitas": 0,
-      "inscritos": 0,
-      "citas_agendadas": 6,
+      "inscritos": 1,
+      "citas_agendadas": 7,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 6,
+      "sin_dato": 7,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -619,7 +619,7 @@
       "fecha_cita": "09/10/26 9:30",
       "asistio": null,
       "inscrito": null,
-      "obs": "Examen de colocaión"
+      "obs": "Examen de colocaión  cambio de día"
     },
     {
       "sucursal": "LINDAVISTA",
@@ -755,6 +755,15 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Ricardo  para su hijo",
+      "tel": "5549594824",
+      "fecha_cita": "10-10-26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "clase muestra"
     }
   ]
 }
