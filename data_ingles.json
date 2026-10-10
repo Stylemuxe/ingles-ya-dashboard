@@ -1,14 +1,14 @@
 {
-  "actualizado": "10/10/2026 16:34",
-  "meta_actualizado": "10/10/2026 16:33",
+  "actualizado": "10/10/2026 23:04",
+  "meta_actualizado": "10/10/2026 23:04",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 167,
-    "gasto": 8211.48,
-    "cpl": 49.17,
-    "citas": 16,
+    "leads_meta": 176,
+    "gasto": 8605.29,
+    "cpl": 48.89,
+    "citas": 17,
     "visitas": 6,
     "inscritos": 1,
     "citas_agendadas": 19,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -8211.48,
+    "utilidad": -8605.29,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 8211.48,
+      "meta_ads": 8605.29,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 8211.48
+      "total": 8605.29
     }
   },
   "campanas": [
@@ -38,11 +38,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 8211.48,
-      "impresiones": 148255,
-      "alcance": 89800,
-      "leads": 167,
-      "cpl": 49.17
+      "gasto": 8605.29,
+      "impresiones": 154155,
+      "alcance": 93289,
+      "leads": 176,
+      "cpl": 48.89
     },
     {
       "id": "52515312914962",
@@ -194,9 +194,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 8211.48,
-      "leads": 167,
-      "cpl": 49.17
+      "gasto": 8605.29,
+      "leads": 176,
+      "cpl": 48.89
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -347,22 +347,22 @@
     },
     "2026-10-08": {
       "leads": 22,
-      "gasto": 941.4
+      "gasto": 941.46
     },
     "2026-10-09": {
       "leads": 15,
-      "gasto": 807.76
+      "gasto": 808.43
     },
     "2026-10-10": {
-      "leads": 3,
-      "gasto": 224.82
+      "leads": 12,
+      "gasto": 617.9
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 56,
-      "llamadas": 21,
-      "no_contesta": 35,
+      "leads": 59,
+      "llamadas": 23,
+      "no_contesta": 36,
       "citas": 5,
       "visitas": 4,
       "inscritos": 0,
@@ -375,10 +375,10 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 52,
-      "llamadas": 19,
-      "no_contesta": 34,
-      "citas": 6,
+      "leads": 55,
+      "llamadas": 20,
+      "no_contesta": 35,
+      "citas": 7,
       "visitas": 2,
       "inscritos": 0,
       "citas_agendadas": 8,
@@ -390,9 +390,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 45,
-      "llamadas": 16,
-      "no_contesta": 28,
+      "leads": 48,
+      "llamadas": 17,
+      "no_contesta": 30,
       "citas": 5,
       "visitas": 0,
       "inscritos": 1,
@@ -731,7 +731,7 @@
       "fecha_cita": "10-10-26 9:00",
       "asistio": null,
       "inscrito": null,
-      "obs": "Clase mustra"
+      "obs": "reagendo"
     },
     {
       "sucursal": "ERMITA",
