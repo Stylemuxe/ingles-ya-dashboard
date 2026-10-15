@@ -1,21 +1,21 @@
 {
-  "actualizado": "15/10/2026 19:37",
-  "meta_actualizado": "15/10/2026 19:37",
+  "actualizado": "15/10/2026 22:46",
+  "meta_actualizado": "15/10/2026 22:45",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 284,
-    "gasto": 14663.3,
-    "cpl": 51.63,
-    "citas": 20,
+    "leads_meta": 288,
+    "gasto": 14835.76,
+    "cpl": 51.51,
+    "citas": 22,
     "visitas": 6,
     "inscritos": 1,
-    "citas_agendadas": 22,
+    "citas_agendadas": 24,
     "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 18,
-    "tasa_asistencia": 9.1,
+    "sin_dato_asistencia": 20,
+    "tasa_asistencia": 8.3,
     "tasa_asistencia_con_dato": 50.0,
     "conv_asistio_inscrito": 50.0,
     "ingresos": 0.0,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -14663.3,
+    "utilidad": -14835.76,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 14663.3,
+      "meta_ads": 14835.76,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 14663.3
+      "total": 14835.76
     }
   },
   "campanas": [
@@ -38,22 +38,22 @@
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 332.98,
-      "gasto": 1338.05,
-      "impresiones": 7065,
-      "alcance": 5566,
-      "leads": 13,
-      "cpl": 102.93
+      "gasto": 1405.37,
+      "impresiones": 7350,
+      "alcance": 5713,
+      "leads": 14,
+      "cpl": 100.38
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 13325.25,
-      "impresiones": 217811,
-      "alcance": 123204,
-      "leads": 271,
-      "cpl": 49.17
+      "gasto": 13430.39,
+      "impresiones": 219069,
+      "alcance": 123440,
+      "leads": 274,
+      "cpl": 49.02
     },
     {
       "id": "52515312914962",
@@ -205,27 +205,27 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 489.86,
-      "leads": 11,
-      "cpl": 44.53
+      "gasto": 522.28,
+      "leads": 12,
+      "cpl": 43.52
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 1338.05,
-      "leads": 13,
-      "cpl": 102.93
+      "gasto": 1405.37,
+      "leads": 14,
+      "cpl": 100.38
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 12835.39,
-      "leads": 260,
-      "cpl": 49.37
+      "gasto": 12908.11,
+      "leads": 262,
+      "cpl": 49.27
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -403,15 +403,15 @@
       "gasto": 1179.52
     },
     "2026-10-15": {
-      "leads": 16,
-      "gasto": 673.66
+      "leads": 20,
+      "gasto": 846.12
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 75,
-      "llamadas": 32,
-      "no_contesta": 43,
+      "leads": 82,
+      "llamadas": 36,
+      "no_contesta": 46,
       "citas": 7,
       "visitas": 4,
       "inscritos": 0,
@@ -424,24 +424,24 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 69,
-      "llamadas": 28,
-      "no_contesta": 41,
-      "citas": 7,
+      "leads": 80,
+      "llamadas": 33,
+      "no_contesta": 47,
+      "citas": 9,
       "visitas": 2,
       "inscritos": 0,
-      "citas_agendadas": 9,
+      "citas_agendadas": 11,
       "asistieron": 2,
       "no_asistieron": 2,
-      "sin_dato": 5,
-      "tasa_asistencia": 22.2,
+      "sin_dato": 7,
+      "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 50.0,
       "conv_asistio_inscrito": 0.0
     },
     "ERMITA": {
-      "leads": 59,
-      "llamadas": 19,
-      "no_contesta": 35,
+      "leads": 69,
+      "llamadas": 25,
+      "no_contesta": 39,
       "citas": 6,
       "visitas": 0,
       "inscritos": 1,
@@ -772,6 +772,24 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Línea"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Yolanda",
+      "tel": "5534336204",
+      "fecha_cita": "24/10/26/26",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "IZTACALCO",
+      "nombre": "Diego",
+      "tel": "5528425338",
+      "fecha_cita": "16/10/26 3:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
     },
     {
       "sucursal": "ERMITA",
