@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "16/10/2026 02:10",
-  "meta_actualizado": "16/10/2026 02:10",
+  "actualizado": "16/10/2026 08:35",
+  "meta_actualizado": "16/10/2026 08:35",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 291,
-    "gasto": 14979.67,
-    "cpl": 51.48,
+    "leads_meta": 297,
+    "gasto": 15173.54,
+    "cpl": 51.09,
     "citas": 22,
     "visitas": 6,
     "inscritos": 1,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -14979.67,
+    "utilidad": -15173.54,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 14979.67,
+      "meta_ads": 15173.54,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 14979.67
+      "total": 15173.54
     }
   },
   "campanas": [
@@ -38,22 +38,22 @@ const DATA_INGLES = {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 332.98,
-      "gasto": 1444.73,
-      "impresiones": 7503,
-      "alcance": 5787,
-      "leads": 15,
-      "cpl": 96.32
+      "gasto": 1488.73,
+      "impresiones": 7684,
+      "alcance": 5858,
+      "leads": 16,
+      "cpl": 93.05
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 13534.94,
-      "impresiones": 220230,
-      "alcance": 123978,
-      "leads": 276,
-      "cpl": 49.04
+      "gasto": 13684.81,
+      "impresiones": 221695,
+      "alcance": 124562,
+      "leads": 281,
+      "cpl": 48.7
     },
     {
       "id": "52515312914962",
@@ -205,27 +205,27 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 554.31,
+      "gasto": 581.93,
       "leads": 14,
-      "cpl": 39.59
+      "cpl": 41.57
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 1444.73,
-      "leads": 15,
-      "cpl": 96.32
+      "gasto": 1488.73,
+      "leads": 16,
+      "cpl": 93.05
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 12980.63,
-      "leads": 262,
-      "cpl": 49.54
+      "gasto": 13102.88,
+      "leads": 267,
+      "cpl": 49.07
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -400,11 +400,15 @@ const DATA_INGLES = {
     },
     "2026-10-14": {
       "leads": 19,
-      "gasto": 1179.68
+      "gasto": 1179.76
     },
     "2026-10-15": {
-      "leads": 23,
-      "gasto": 989.87
+      "leads": 28,
+      "gasto": 1170.82
+    },
+    "2026-10-16": {
+      "leads": 1,
+      "gasto": 12.84
     }
   },
   "sucursales": {
