@@ -1,35 +1,35 @@
 {
-  "actualizado": "19/10/2026 09:24",
-  "meta_actualizado": "19/10/2026 09:24",
+  "actualizado": "19/10/2026 17:56",
+  "meta_actualizado": "19/10/2026 17:56",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 356,
-    "gasto": 18408.18,
-    "cpl": 51.71,
+    "leads_meta": 359,
+    "gasto": 18722.44,
+    "cpl": 52.15,
     "citas": 23,
     "visitas": 7,
-    "inscritos": 1,
+    "inscritos": 13,
     "citas_agendadas": 24,
     "asistieron": 2,
     "no_asistieron": 2,
     "sin_dato_asistencia": 20,
     "tasa_asistencia": 8.3,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 50.0,
+    "conv_asistio_inscrito": 650.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -18408.18,
+    "utilidad": -18722.44,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 18408.18,
+      "meta_ads": 18722.44,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 18408.18
+      "total": 18722.44
     }
   },
   "campanas": [
@@ -38,22 +38,22 @@
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 332.98,
-      "gasto": 2346.93,
-      "impresiones": 11918,
-      "alcance": 8469,
+      "gasto": 2407.57,
+      "impresiones": 12051,
+      "alcance": 8536,
       "leads": 23,
-      "cpl": 102.04
+      "cpl": 104.68
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 16061.25,
-      "impresiones": 247829,
-      "alcance": 134285,
-      "leads": 333,
-      "cpl": 48.23
+      "gasto": 16314.87,
+      "impresiones": 248857,
+      "alcance": 134676,
+      "leads": 336,
+      "cpl": 48.56
     },
     {
       "id": "52515312914962",
@@ -205,27 +205,27 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1035.23,
+      "gasto": 1069.09,
       "leads": 22,
-      "cpl": 47.06
+      "cpl": 48.59
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 2346.93,
+      "gasto": 2407.57,
       "leads": 23,
-      "cpl": 102.04
+      "cpl": 104.68
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 15026.02,
-      "leads": 311,
-      "cpl": 48.32
+      "gasto": 15245.78,
+      "leads": 314,
+      "cpl": 48.55
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -416,11 +416,11 @@
     },
     "2026-10-18": {
       "leads": 17,
-      "gasto": 881.15
+      "gasto": 882.31
     },
     "2026-10-19": {
-      "leads": 1,
-      "gasto": 4.74
+      "leads": 4,
+      "gasto": 317.84
     }
   },
   "sucursales": {
@@ -430,7 +430,7 @@
       "no_contesta": 48,
       "citas": 8,
       "visitas": 5,
-      "inscritos": 0,
+      "inscritos": 7,
       "citas_agendadas": 5,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -445,14 +445,14 @@
       "no_contesta": 49,
       "citas": 9,
       "visitas": 2,
-      "inscritos": 0,
+      "inscritos": 5,
       "citas_agendadas": 11,
       "asistieron": 2,
       "no_asistieron": 2,
       "sin_dato": 7,
       "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 50.0,
-      "conv_asistio_inscrito": 0.0
+      "conv_asistio_inscrito": 250.0
     },
     "ERMITA": {
       "leads": 74,
@@ -792,7 +792,7 @@
     {
       "sucursal": "IZTACALCO",
       "nombre": "Yolanda",
-      "tel": "5534336204",
+      "tel": "5528425338",
       "fecha_cita": "24/10/26/26",
       "asistio": null,
       "inscrito": null,
@@ -801,7 +801,7 @@
     {
       "sucursal": "IZTACALCO",
       "nombre": "Diego",
-      "tel": "5528425338",
+      "tel": "",
       "fecha_cita": "16/10/26 3:30",
       "asistio": null,
       "inscrito": null,
