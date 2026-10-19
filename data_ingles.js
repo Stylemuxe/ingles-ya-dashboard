@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "19/10/2026 17:56",
-  "meta_actualizado": "19/10/2026 17:56",
+  "actualizado": "19/10/2026 23:12",
+  "meta_actualizado": "19/10/2026 23:12",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 359,
-    "gasto": 18722.44,
-    "cpl": 52.15,
-    "citas": 23,
+    "leads_meta": 366,
+    "gasto": 19173.98,
+    "cpl": 52.39,
+    "citas": 25,
     "visitas": 7,
-    "inscritos": 13,
+    "inscritos": 14,
     "citas_agendadas": 24,
     "asistieron": 2,
     "no_asistieron": 2,
     "sin_dato_asistencia": 20,
     "tasa_asistencia": 8.3,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 650.0,
+    "conv_asistio_inscrito": 700.0,
     "ingresos": 0.0,
     "ticket_promedio": 0.0
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -18722.44,
+    "utilidad": -19173.98,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 18722.44,
+      "meta_ads": 19173.98,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 18722.44
+      "total": 19173.98
     }
   },
   "campanas": [
@@ -38,22 +38,22 @@ const DATA_INGLES = {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 332.98,
-      "gasto": 2407.57,
-      "impresiones": 12051,
-      "alcance": 8536,
-      "leads": 23,
-      "cpl": 104.68
+      "gasto": 2546.75,
+      "impresiones": 12930,
+      "alcance": 9249,
+      "leads": 25,
+      "cpl": 101.87
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 16314.87,
-      "impresiones": 248857,
-      "alcance": 134676,
-      "leads": 336,
-      "cpl": 48.56
+      "gasto": 16627.23,
+      "impresiones": 252652,
+      "alcance": 135620,
+      "leads": 341,
+      "cpl": 48.76
     },
     {
       "id": "52515312914962",
@@ -205,27 +205,27 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1069.09,
-      "leads": 22,
-      "cpl": 48.59
+      "gasto": 1109.8,
+      "leads": 23,
+      "cpl": 48.25
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 2407.57,
-      "leads": 23,
-      "cpl": 104.68
+      "gasto": 2546.75,
+      "leads": 25,
+      "cpl": 101.87
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 15245.78,
-      "leads": 314,
-      "cpl": 48.55
+      "gasto": 15517.43,
+      "leads": 318,
+      "cpl": 48.8
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -416,21 +416,21 @@ const DATA_INGLES = {
     },
     "2026-10-18": {
       "leads": 17,
-      "gasto": 882.31
+      "gasto": 883.17
     },
     "2026-10-19": {
-      "leads": 4,
-      "gasto": 317.84
+      "leads": 11,
+      "gasto": 768.52
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 87,
-      "llamadas": 39,
-      "no_contesta": 48,
-      "citas": 8,
+      "leads": 108,
+      "llamadas": 50,
+      "no_contesta": 58,
+      "citas": 9,
       "visitas": 5,
-      "inscritos": 7,
+      "inscritos": 8,
       "citas_agendadas": 5,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -440,9 +440,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 85,
-      "llamadas": 36,
-      "no_contesta": 49,
+      "leads": 103,
+      "llamadas": 44,
+      "no_contesta": 59,
       "citas": 9,
       "visitas": 2,
       "inscritos": 5,
@@ -455,10 +455,10 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 250.0
     },
     "ERMITA": {
-      "leads": 74,
-      "llamadas": 28,
-      "no_contesta": 41,
-      "citas": 6,
+      "leads": 90,
+      "llamadas": 37,
+      "no_contesta": 48,
+      "citas": 7,
       "visitas": 0,
       "inscritos": 1,
       "citas_agendadas": 8,
