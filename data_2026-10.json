@@ -1,13 +1,13 @@
 {
-  "actualizado": "21/10/2026 22:53",
-  "meta_actualizado": "21/10/2026 22:52",
+  "actualizado": "22/10/2026 02:24",
+  "meta_actualizado": "22/10/2026 02:24",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 417,
-    "gasto": 22613.14,
-    "cpl": 54.23,
+    "leads_meta": 421,
+    "gasto": 22847.85,
+    "cpl": 54.27,
     "citas": 26,
     "visitas": 7,
     "inscritos": 14,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -22613.14,
+    "utilidad": -22847.85,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 22613.14,
+      "meta_ads": 22847.85,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 22613.14
+      "total": 22847.85
     }
   },
   "campanas": [
@@ -38,22 +38,22 @@
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "presupuesto_dia": 332.98,
-      "gasto": 3435.07,
-      "impresiones": 17059,
-      "alcance": 11849,
+      "gasto": 3502.97,
+      "impresiones": 17236,
+      "alcance": 11984,
       "leads": 32,
-      "cpl": 107.35
+      "cpl": 109.47
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 943.13,
-      "gasto": 19178.07,
-      "impresiones": 285309,
-      "alcance": 148339,
-      "leads": 385,
-      "cpl": 49.81
+      "gasto": 19344.88,
+      "impresiones": 287042,
+      "alcance": 148849,
+      "leads": 389,
+      "cpl": 49.73
     },
     {
       "id": "52515312914962",
@@ -205,26 +205,26 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1439.21,
-      "leads": 25,
-      "cpl": 57.57
+      "gasto": 1459.5,
+      "leads": 26,
+      "cpl": 56.13
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 3435.07,
+      "gasto": 3502.97,
       "leads": 32,
-      "cpl": 107.35
+      "cpl": 109.47
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 17738.86,
-      "leads": 360,
+      "gasto": 17885.38,
+      "leads": 363,
       "cpl": 49.27
     },
     {
@@ -424,11 +424,11 @@
     },
     "2026-10-20": {
       "leads": 19,
-      "gasto": 1462.94
+      "gasto": 1462.98
     },
     "2026-10-21": {
-      "leads": 16,
-      "gasto": 983.54
+      "leads": 20,
+      "gasto": 1218.21
     }
   },
   "sucursales": {
