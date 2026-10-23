@@ -1,15 +1,15 @@
 {
-  "actualizado": "23/10/2026 16:05",
-  "meta_actualizado": "23/10/2026 16:05",
+  "actualizado": "23/10/2026 22:44",
+  "meta_actualizado": "23/10/2026 22:44",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 441,
-    "gasto": 24534.99,
-    "cpl": 55.63,
-    "citas": 26,
-    "visitas": 7,
+    "leads_meta": 449,
+    "gasto": 25124.39,
+    "cpl": 55.96,
+    "citas": 28,
+    "visitas": 8,
     "inscritos": 15,
     "citas_agendadas": 27,
     "asistieron": 2,
@@ -23,37 +23,37 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -24534.99,
+    "utilidad": -25124.39,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 24534.99,
+      "meta_ads": 25124.39,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 24534.99
+      "total": 25124.39
     }
   },
   "campanas": [
     {
       "id": "52537011571762",
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
-      "status": "ACTIVE",
+      "status": "PAUSED",
       "presupuesto_dia": 332.98,
-      "gasto": 3921.73,
-      "impresiones": 18760,
-      "alcance": 12747,
+      "gasto": 3991.11,
+      "impresiones": 19010,
+      "alcance": 12953,
       "leads": 34,
-      "cpl": 115.34
+      "cpl": 117.39
     },
     {
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
-      "presupuesto_dia": 943.13,
-      "gasto": 20613.26,
-      "impresiones": 302476,
-      "alcance": 154862,
-      "leads": 407,
-      "cpl": 50.65
+      "presupuesto_dia": 1276.11,
+      "gasto": 21133.28,
+      "impresiones": 309267,
+      "alcance": 158080,
+      "leads": 415,
+      "cpl": 50.92
     },
     {
       "id": "52515312914962",
@@ -205,27 +205,27 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1601.13,
-      "leads": 29,
-      "cpl": 55.21
+      "gasto": 1638.22,
+      "leads": 30,
+      "cpl": 54.61
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
-      "gasto": 3921.73,
+      "gasto": 3991.11,
       "leads": 34,
-      "cpl": 115.34
+      "cpl": 117.39
     },
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 19012.13,
-      "leads": 378,
-      "cpl": 50.3
+      "gasto": 19495.06,
+      "leads": 385,
+      "cpl": 50.64
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -432,20 +432,20 @@
     },
     "2026-10-22": {
       "leads": 13,
-      "gasto": 1198.47
+      "gasto": 1199.8
     },
     "2026-10-23": {
-      "leads": 3,
-      "gasto": 244.7
+      "leads": 11,
+      "gasto": 832.77
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 130,
-      "llamadas": 62,
-      "no_contesta": 68,
-      "citas": 10,
-      "visitas": 5,
+      "leads": 135,
+      "llamadas": 64,
+      "no_contesta": 71,
+      "citas": 12,
+      "visitas": 6,
       "inscritos": 9,
       "citas_agendadas": 5,
       "asistieron": 0,
@@ -456,9 +456,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 125,
-      "llamadas": 52,
-      "no_contesta": 73,
+      "leads": 129,
+      "llamadas": 54,
+      "no_contesta": 75,
       "citas": 9,
       "visitas": 2,
       "inscritos": 5,
@@ -471,9 +471,9 @@
       "conv_asistio_inscrito": 250.0
     },
     "ERMITA": {
-      "leads": 113,
-      "llamadas": 46,
-      "no_contesta": 62,
+      "leads": 116,
+      "llamadas": 48,
+      "no_contesta": 63,
       "citas": 7,
       "visitas": 0,
       "inscritos": 1,
