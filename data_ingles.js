@@ -1,12 +1,12 @@
 const DATA_INGLES = {
-  "actualizado": "24/10/2026 22:05",
-  "meta_actualizado": "24/10/2026 22:05",
+  "actualizado": "25/10/2026 02:14",
+  "meta_actualizado": "25/10/2026 02:14",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 476,
-    "gasto": 26332.33,
+    "leads_meta": 480,
+    "gasto": 26552.42,
     "cpl": 55.32,
     "citas": 28,
     "visitas": 8,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -26332.33,
+    "utilidad": -26552.42,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 26332.33,
+      "meta_ads": 26552.42,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 26332.33
+      "total": 26552.42
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 22319.89,
-      "impresiones": 322470,
-      "alcance": 163071,
-      "leads": 442,
-      "cpl": 50.5
+      "gasto": 22539.98,
+      "impresiones": 325443,
+      "alcance": 163952,
+      "leads": 446,
+      "cpl": 50.54
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1741.69,
-      "leads": 35,
-      "cpl": 49.76
+      "gasto": 1763.03,
+      "leads": 36,
+      "cpl": 48.97
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 20578.2,
-      "leads": 407,
-      "cpl": 50.56
+      "gasto": 20776.95,
+      "leads": 410,
+      "cpl": 50.68
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -436,11 +436,11 @@ const DATA_INGLES = {
     },
     "2026-10-23": {
       "leads": 18,
-      "gasto": 1257.83
+      "gasto": 1258.02
     },
     "2026-10-24": {
-      "leads": 20,
-      "gasto": 782.65
+      "leads": 24,
+      "gasto": 1002.55
     }
   },
   "sucursales": {
