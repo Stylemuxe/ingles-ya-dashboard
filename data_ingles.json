@@ -1,21 +1,21 @@
 {
-  "actualizado": "26/10/2026 17:52",
-  "meta_actualizado": "26/10/2026 17:52",
+  "actualizado": "26/10/2026 23:27",
+  "meta_actualizado": "26/10/2026 23:27",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 515,
-    "gasto": 28690.41,
-    "cpl": 55.71,
-    "citas": 28,
-    "visitas": 8,
+    "leads_meta": 522,
+    "gasto": 29258.53,
+    "cpl": 56.05,
+    "citas": 30,
+    "visitas": 10,
     "inscritos": 15,
-    "citas_agendadas": 27,
+    "citas_agendadas": 30,
     "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 23,
-    "tasa_asistencia": 7.4,
+    "sin_dato_asistencia": 26,
+    "tasa_asistencia": 6.7,
     "tasa_asistencia_con_dato": 50.0,
     "conv_asistio_inscrito": 750.0,
     "ingresos": 0.0,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -28690.41,
+    "utilidad": -29258.53,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 28690.41,
+      "meta_ads": 29258.53,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 28690.41
+      "total": 29258.53
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 24677.97,
-      "impresiones": 349177,
-      "alcance": 173827,
-      "leads": 481,
-      "cpl": 51.31
+      "gasto": 25246.09,
+      "impresiones": 353324,
+      "alcance": 175501,
+      "leads": 488,
+      "cpl": 51.73
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1976.21,
-      "leads": 39,
-      "cpl": 50.67
+      "gasto": 2058.11,
+      "leads": 40,
+      "cpl": 51.45
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 22701.76,
-      "leads": 442,
-      "cpl": 51.36
+      "gasto": 23187.98,
+      "leads": 448,
+      "cpl": 51.76
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -444,33 +444,33 @@
     },
     "2026-10-25": {
       "leads": 14,
-      "gasto": 1026.4
+      "gasto": 1027.54
     },
     "2026-10-26": {
-      "leads": 13,
-      "gasto": 900.89
+      "leads": 20,
+      "gasto": 1467.87
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 139,
-      "llamadas": 66,
-      "no_contesta": 73,
-      "citas": 12,
-      "visitas": 6,
+      "leads": 151,
+      "llamadas": 80,
+      "no_contesta": 71,
+      "citas": 14,
+      "visitas": 8,
       "inscritos": 9,
-      "citas_agendadas": 5,
+      "citas_agendadas": 8,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 5,
+      "sin_dato": 8,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 132,
-      "llamadas": 56,
-      "no_contesta": 76,
+      "leads": 144,
+      "llamadas": 66,
+      "no_contesta": 78,
       "citas": 9,
       "visitas": 2,
       "inscritos": 5,
@@ -483,9 +483,9 @@
       "conv_asistio_inscrito": 250.0
     },
     "ERMITA": {
-      "leads": 121,
-      "llamadas": 49,
-      "no_contesta": 67,
+      "leads": 135,
+      "llamadas": 59,
+      "no_contesta": 71,
       "citas": 7,
       "visitas": 0,
       "inscritos": 1,
@@ -735,6 +735,33 @@
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra y visita al lplantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Jazmin",
+      "tel": "55 6462 9603",
+      "fecha_cita": "26/10/26 12:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visira al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Fernanda",
+      "tel": "55 2173 3129",
+      "fecha_cita": "26/10/26",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Visira al plantel"
+    },
+    {
+      "sucursal": "LINDAVISTA",
+      "nombre": "Angelica Gomez",
+      "tel": "5536377939",
+      "fecha_cita": "28/10/26 11:00 a 1:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "visita al plantel"
     },
     {
       "sucursal": "IZTACALCO",
