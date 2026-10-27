@@ -1,35 +1,35 @@
 {
-  "actualizado": "27/10/2026 17:00",
-  "meta_actualizado": "27/10/2026 17:00",
+  "actualizado": "27/10/2026 23:19",
+  "meta_actualizado": "27/10/2026 23:19",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 543,
-    "gasto": 30312.08,
-    "cpl": 55.82,
+    "leads_meta": 559,
+    "gasto": 30859.1,
+    "cpl": 55.2,
     "citas": 30,
     "visitas": 10,
-    "inscritos": 13,
+    "inscritos": 20,
     "citas_agendadas": 30,
     "asistieron": 2,
     "no_asistieron": 2,
     "sin_dato_asistencia": 26,
     "tasa_asistencia": 6.7,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 650.0,
-    "ingresos": 39542.0,
-    "ticket_promedio": 3041.69
+    "conv_asistio_inscrito": 1000.0,
+    "ingresos": 62665.0,
+    "ticket_promedio": 3133.25
   },
   "financiero": {
-    "ingresos": 39542.0,
-    "utilidad": 9229.92,
-    "ticket_promedio": 3041.69,
+    "ingresos": 62665.0,
+    "utilidad": 19805.9,
+    "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 30312.08,
-      "fabian": 0.0,
+      "meta_ads": 30859.1,
+      "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 30312.08
+      "total": 42859.1
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 26299.64,
-      "impresiones": 363593,
-      "alcance": 180026,
-      "leads": 509,
-      "cpl": 51.67
+      "gasto": 26846.66,
+      "impresiones": 368814,
+      "alcance": 181014,
+      "leads": 525,
+      "cpl": 51.14
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2182.42,
-      "leads": 42,
-      "cpl": 51.96
+      "gasto": 2242.4,
+      "leads": 43,
+      "cpl": 52.15
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 24117.22,
-      "leads": 467,
-      "cpl": 51.64
+      "gasto": 24603.71,
+      "leads": 482,
+      "cpl": 51.05
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -448,21 +448,21 @@
     },
     "2026-10-26": {
       "leads": 32,
-      "gasto": 2069.26
+      "gasto": 2073.59
     },
     "2026-10-27": {
-      "leads": 9,
-      "gasto": 452.16
+      "leads": 25,
+      "gasto": 994.85
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 151,
-      "llamadas": 80,
-      "no_contesta": 71,
+      "leads": 158,
+      "llamadas": 84,
+      "no_contesta": 74,
       "citas": 14,
       "visitas": 8,
-      "inscritos": 10,
+      "inscritos": 17,
       "citas_agendadas": 8,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -472,9 +472,9 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 144,
-      "llamadas": 66,
-      "no_contesta": 78,
+      "leads": 151,
+      "llamadas": 70,
+      "no_contesta": 81,
       "citas": 9,
       "visitas": 2,
       "inscritos": 2,
@@ -487,9 +487,9 @@
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 135,
-      "llamadas": 59,
-      "no_contesta": 71,
+      "leads": 141,
+      "llamadas": 63,
+      "no_contesta": 73,
       "citas": 7,
       "visitas": 0,
       "inscritos": 1,
