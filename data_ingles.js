@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "27/10/2026 02:51",
-  "meta_actualizado": "27/10/2026 02:51",
+  "actualizado": "27/10/2026 09:25",
+  "meta_actualizado": "27/10/2026 09:25",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 529,
-    "gasto": 29596.64,
-    "cpl": 55.95,
+    "leads_meta": 537,
+    "gasto": 29898.94,
+    "cpl": 55.68,
     "citas": 30,
     "visitas": 10,
     "inscritos": 15,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -29596.64,
+    "utilidad": -29898.94,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 29596.64,
+      "meta_ads": 29898.94,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 29596.64
+      "total": 29898.94
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 25584.2,
-      "impresiones": 356736,
-      "alcance": 177422,
-      "leads": 495,
-      "cpl": 51.69
+      "gasto": 25886.5,
+      "impresiones": 359816,
+      "alcance": 178732,
+      "leads": 503,
+      "cpl": 51.46
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2101.2,
+      "gasto": 2129.55,
       "leads": 42,
-      "cpl": 50.03
+      "cpl": 50.7
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 23483.0,
-      "leads": 453,
-      "cpl": 51.84
+      "gasto": 23756.95,
+      "leads": 461,
+      "cpl": 51.53
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -447,8 +447,12 @@ const DATA_INGLES = {
       "gasto": 1027.54
     },
     "2026-10-26": {
-      "leads": 27,
-      "gasto": 1805.98
+      "leads": 32,
+      "gasto": 2055.7
+    },
+    "2026-10-27": {
+      "leads": 3,
+      "gasto": 52.58
     }
   },
   "sucursales": {
