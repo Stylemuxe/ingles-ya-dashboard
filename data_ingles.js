@@ -1,35 +1,35 @@
 const DATA_INGLES = {
-  "actualizado": "27/10/2026 09:25",
-  "meta_actualizado": "27/10/2026 09:25",
+  "actualizado": "27/10/2026 17:00",
+  "meta_actualizado": "27/10/2026 17:00",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 537,
-    "gasto": 29898.94,
-    "cpl": 55.68,
+    "leads_meta": 543,
+    "gasto": 30312.08,
+    "cpl": 55.82,
     "citas": 30,
     "visitas": 10,
-    "inscritos": 15,
+    "inscritos": 13,
     "citas_agendadas": 30,
     "asistieron": 2,
     "no_asistieron": 2,
     "sin_dato_asistencia": 26,
     "tasa_asistencia": 6.7,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 750.0,
-    "ingresos": 0.0,
-    "ticket_promedio": 0.0
+    "conv_asistio_inscrito": 650.0,
+    "ingresos": 39542.0,
+    "ticket_promedio": 3041.69
   },
   "financiero": {
-    "ingresos": 0.0,
-    "utilidad": -29898.94,
-    "ticket_promedio": 0.0,
+    "ingresos": 39542.0,
+    "utilidad": 9229.92,
+    "ticket_promedio": 3041.69,
     "gastos": {
-      "meta_ads": 29898.94,
+      "meta_ads": 30312.08,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 29898.94
+      "total": 30312.08
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 25886.5,
-      "impresiones": 359816,
-      "alcance": 178732,
-      "leads": 503,
-      "cpl": 51.46
+      "gasto": 26299.64,
+      "impresiones": 363593,
+      "alcance": 180026,
+      "leads": 509,
+      "cpl": 51.67
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2129.55,
+      "gasto": 2182.42,
       "leads": 42,
-      "cpl": 50.7
+      "cpl": 51.96
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 23756.95,
-      "leads": 461,
-      "cpl": 51.53
+      "gasto": 24117.22,
+      "leads": 467,
+      "cpl": 51.64
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -448,11 +448,11 @@ const DATA_INGLES = {
     },
     "2026-10-26": {
       "leads": 32,
-      "gasto": 2055.7
+      "gasto": 2069.26
     },
     "2026-10-27": {
-      "leads": 3,
-      "gasto": 52.58
+      "leads": 9,
+      "gasto": 452.16
     }
   },
   "sucursales": {
@@ -462,7 +462,7 @@ const DATA_INGLES = {
       "no_contesta": 71,
       "citas": 14,
       "visitas": 8,
-      "inscritos": 9,
+      "inscritos": 10,
       "citas_agendadas": 8,
       "asistieron": 0,
       "no_asistieron": 0,
@@ -477,14 +477,14 @@ const DATA_INGLES = {
       "no_contesta": 78,
       "citas": 9,
       "visitas": 2,
-      "inscritos": 5,
+      "inscritos": 2,
       "citas_agendadas": 11,
       "asistieron": 2,
       "no_asistieron": 2,
       "sin_dato": 7,
       "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 50.0,
-      "conv_asistio_inscrito": 250.0
+      "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
       "leads": 135,
