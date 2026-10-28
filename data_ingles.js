@@ -1,21 +1,21 @@
 const DATA_INGLES = {
-  "actualizado": "28/10/2026 17:37",
-  "meta_actualizado": "28/10/2026 17:37",
+  "actualizado": "28/10/2026 23:43",
+  "meta_actualizado": "28/10/2026 23:43",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 580,
-    "gasto": 31792.04,
-    "cpl": 54.81,
-    "citas": 30,
+    "leads_meta": 584,
+    "gasto": 32259.48,
+    "cpl": 55.24,
+    "citas": 33,
     "visitas": 10,
     "inscritos": 20,
-    "citas_agendadas": 30,
+    "citas_agendadas": 32,
     "asistieron": 2,
     "no_asistieron": 2,
-    "sin_dato_asistencia": 26,
-    "tasa_asistencia": 6.7,
+    "sin_dato_asistencia": 28,
+    "tasa_asistencia": 6.2,
     "tasa_asistencia_con_dato": 50.0,
     "conv_asistio_inscrito": 1000.0,
     "ingresos": 62665.0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 18872.96,
+    "utilidad": 18405.52,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 31792.04,
+      "meta_ads": 32259.48,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 43792.04
+      "total": 44259.48
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 27779.6,
-      "impresiones": 378678,
-      "alcance": 184782,
-      "leads": 546,
-      "cpl": 50.88
+      "gasto": 28247.04,
+      "impresiones": 384492,
+      "alcance": 186893,
+      "leads": 550,
+      "cpl": 51.36
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2339.8,
-      "leads": 46,
-      "cpl": 50.87
+      "gasto": 2392.6,
+      "leads": 47,
+      "cpl": 50.91
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 25439.8,
-      "leads": 500,
-      "cpl": 50.88
+      "gasto": 25854.44,
+      "leads": 503,
+      "cpl": 51.4
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -448,22 +448,22 @@ const DATA_INGLES = {
     },
     "2026-10-26": {
       "leads": 32,
-      "gasto": 2074.08
+      "gasto": 2074.36
     },
     "2026-10-27": {
       "leads": 30,
-      "gasto": 1489.53
+      "gasto": 1491.14
     },
     "2026-10-28": {
-      "leads": 16,
-      "gasto": 437.77
+      "leads": 20,
+      "gasto": 903.32
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 158,
-      "llamadas": 84,
-      "no_contesta": 74,
+      "leads": 165,
+      "llamadas": 89,
+      "no_contesta": 76,
       "citas": 14,
       "visitas": 8,
       "inscritos": 17,
@@ -476,10 +476,10 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 151,
-      "llamadas": 70,
-      "no_contesta": 81,
-      "citas": 9,
+      "leads": 158,
+      "llamadas": 75,
+      "no_contesta": 83,
+      "citas": 11,
       "visitas": 2,
       "inscritos": 2,
       "citas_agendadas": 11,
@@ -491,16 +491,16 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 141,
-      "llamadas": 63,
-      "no_contesta": 73,
-      "citas": 7,
+      "leads": 149,
+      "llamadas": 68,
+      "no_contesta": 76,
+      "citas": 8,
       "visitas": 0,
       "inscritos": 1,
-      "citas_agendadas": 11,
+      "citas_agendadas": 13,
       "asistieron": 0,
       "no_asistieron": 0,
-      "sin_dato": 11,
+      "sin_dato": 13,
       "tasa_asistencia": 0.0,
       "tasa_asistencia_con_dato": 0.0,
       "conv_asistio_inscrito": 0.0
@@ -968,6 +968,24 @@ const DATA_INGLES = {
       "asistio": null,
       "inscrito": null,
       "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Alejandro",
+      "tel": "55 5069 7328",
+      "fecha_cita": "30-10-26 3:30",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Clase muestra"
+    },
+    {
+      "sucursal": "ERMITA",
+      "nombre": "Fracisco",
+      "tel": "55364465260",
+      "fecha_cita": "30-10-26 11:00",
+      "asistio": null,
+      "inscrito": null,
+      "obs": "Exaemen de colocación"
     }
   ]
 };
