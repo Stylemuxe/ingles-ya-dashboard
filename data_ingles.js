@@ -1,14 +1,14 @@
 const DATA_INGLES = {
-  "actualizado": "29/10/2026 17:45",
-  "meta_actualizado": "29/10/2026 17:45",
+  "actualizado": "29/10/2026 23:42",
+  "meta_actualizado": "29/10/2026 23:42",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 606,
-    "gasto": 33081.98,
-    "cpl": 54.59,
-    "citas": 33,
+    "leads_meta": 615,
+    "gasto": 33404.88,
+    "cpl": 54.32,
+    "citas": 35,
     "visitas": 10,
     "inscritos": 20,
     "citas_agendadas": 32,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 17583.02,
+    "utilidad": 17260.12,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 33081.98,
+      "meta_ads": 33404.88,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 45081.98
+      "total": 45404.88
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 29069.54,
-      "impresiones": 394729,
-      "alcance": 190603,
-      "leads": 572,
-      "cpl": 50.82
+      "gasto": 29392.44,
+      "impresiones": 398130,
+      "alcance": 191938,
+      "leads": 581,
+      "cpl": 50.59
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2453.24,
+      "gasto": 2480.13,
       "leads": 50,
-      "cpl": 49.06
+      "cpl": 49.6
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 26616.3,
-      "leads": 522,
-      "cpl": 50.99
+      "gasto": 26912.31,
+      "leads": 531,
+      "cpl": 50.68
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -456,19 +456,19 @@ const DATA_INGLES = {
     },
     "2026-10-28": {
       "leads": 35,
-      "gasto": 1306.46
+      "gasto": 1307.34
     },
     "2026-10-29": {
-      "leads": 7,
-      "gasto": 418.84
+      "leads": 16,
+      "gasto": 740.86
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 165,
-      "llamadas": 89,
-      "no_contesta": 76,
-      "citas": 14,
+      "leads": 171,
+      "llamadas": 93,
+      "no_contesta": 78,
+      "citas": 15,
       "visitas": 8,
       "inscritos": 17,
       "citas_agendadas": 8,
@@ -480,9 +480,9 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 158,
-      "llamadas": 75,
-      "no_contesta": 83,
+      "leads": 163,
+      "llamadas": 79,
+      "no_contesta": 84,
       "citas": 11,
       "visitas": 2,
       "inscritos": 2,
@@ -495,10 +495,10 @@ const DATA_INGLES = {
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 149,
-      "llamadas": 68,
-      "no_contesta": 76,
-      "citas": 8,
+      "leads": 154,
+      "llamadas": 70,
+      "no_contesta": 79,
+      "citas": 9,
       "visitas": 0,
       "inscritos": 1,
       "citas_agendadas": 13,
