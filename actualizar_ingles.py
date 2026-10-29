@@ -37,7 +37,29 @@ SHEET_SEG_GIDS = {
     '2026-09': '701082000',
     '2026-10': '1957826242',
 }
-SHEET_SEG_GID = SHEET_SEG_GIDS.get(MES_ACTUAL, '768692381')
+MESES_ES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio',
+            'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+
+
+def buscar_gid_mes(sheet_id, mes):
+    """Busca en el Sheet la pestaña con el nombre del mes (ej. 'Noviembre').
+    Antes se caía a la pestaña de JUNIO cuando faltaba el GID del mes nuevo
+    y metía inscritos falsos; ahora, si no existe la pestaña, devuelve None
+    y el seguimiento del mes queda vacío hasta que Yolanda la cree."""
+    nombre = MESES_ES[int(mes[5:7]) - 1].lower()
+    try:
+        html = requests.get(f'https://docs.google.com/spreadsheets/d/{sheet_id}/htmlview', timeout=20).text
+        for n, gid in re.findall(r'\{name: "([^"]+)", pageUrl: "[^"]*?gid=(\d+)', html):
+            if n.strip().lower().startswith(nombre):
+                return gid
+    except Exception as e:
+        print(f'  AVISO: no pude listar pestañas del Sheet: {e}')
+    return None
+
+
+SHEET_SEG_GID = SHEET_SEG_GIDS.get(MES_ACTUAL) or buscar_gid_mes(SHEET_SEG_ID, MES_ACTUAL)
+if not SHEET_SEG_GID:
+    print(f'  AVISO: el Sheet de seguimiento no tiene pestaña de {MES_ACTUAL}; agenda/inscritos quedan sin datos')
 SHEET_AGE_ID  = '1MtKus1GkNxZGriSN2Ku5kNNaaROK6hoL'
 SHEET_AGE_GIDS = {
     'LINDAVISTA': '60143132',
@@ -533,7 +555,7 @@ def main():
             print('    AVISO: no hay JSON previo del mes, datos Meta quedan vacíos')
 
     print('[4] Google Sheets — seguimiento diario...')
-    csv_seg = fetch_csv_sheet(SHEET_SEG_ID, SHEET_SEG_GID)
+    csv_seg = fetch_csv_sheet(SHEET_SEG_ID, SHEET_SEG_GID) if SHEET_SEG_GID else None
     if csv_seg:
         totales_diario, diario_suc = parse_seguimiento(csv_seg)
         totales_mensual = parse_seguimiento_mensual(csv_seg)
