@@ -1,13 +1,13 @@
 {
-  "actualizado": "29/10/2026 08:37",
-  "meta_actualizado": "29/10/2026 08:37",
+  "actualizado": "29/10/2026 17:45",
+  "meta_actualizado": "29/10/2026 17:45",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 603,
-    "gasto": 32875.03,
-    "cpl": 54.52,
+    "leads_meta": 606,
+    "gasto": 33081.98,
+    "cpl": 54.59,
     "citas": 33,
     "visitas": 10,
     "inscritos": 20,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 17789.97,
+    "utilidad": 17583.02,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 32875.03,
+      "meta_ads": 33081.98,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 44875.03
+      "total": 45081.98
     }
   },
   "campanas": [
@@ -49,11 +49,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 28862.59,
-      "impresiones": 392255,
-      "alcance": 189925,
-      "leads": 569,
-      "cpl": 50.73
+      "gasto": 29069.54,
+      "impresiones": 394729,
+      "alcance": 190603,
+      "leads": 572,
+      "cpl": 50.82
     },
     {
       "id": "52515312914962",
@@ -205,9 +205,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2442.08,
+      "gasto": 2453.24,
       "leads": 50,
-      "cpl": 48.84
+      "cpl": 49.06
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -223,9 +223,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 26420.51,
-      "leads": 519,
-      "cpl": 50.91
+      "gasto": 26616.3,
+      "leads": 522,
+      "cpl": 50.99
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -456,11 +456,11 @@
     },
     "2026-10-28": {
       "leads": 35,
-      "gasto": 1304.48
+      "gasto": 1306.46
     },
     "2026-10-29": {
-      "leads": 4,
-      "gasto": 213.87
+      "leads": 7,
+      "gasto": 418.84
     }
   },
   "sucursales": {
