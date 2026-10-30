@@ -1,14 +1,14 @@
 {
-  "actualizado": "30/10/2026 17:26",
-  "meta_actualizado": "30/10/2026 17:25",
+  "actualizado": "30/10/2026 23:21",
+  "meta_actualizado": "30/10/2026 23:21",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 632,
-    "gasto": 34022.23,
-    "cpl": 53.83,
-    "citas": 35,
+    "leads_meta": 633,
+    "gasto": 34335.03,
+    "cpl": 54.24,
+    "citas": 38,
     "visitas": 10,
     "inscritos": 20,
     "citas_agendadas": 32,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 16642.77,
+    "utilidad": 16329.97,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 34022.23,
+      "meta_ads": 34335.03,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 46022.23
+      "total": 46335.03
     }
   },
   "campanas": [
@@ -49,20 +49,20 @@
       "nombre": "IY | REMARKETING | WhatsApp | OCT26",
       "status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 61.24,
-      "impresiones": 245,
-      "alcance": 222,
+      "gasto": 95.35,
+      "impresiones": 380,
+      "alcance": 324,
       "leads": 3,
-      "cpl": 20.41
+      "cpl": 31.78
     },
     {
       "id": "52540651597362",
       "nombre": "IY | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 10.38,
-      "impresiones": 106,
-      "alcance": 40,
+      "gasto": 88.69,
+      "impresiones": 859,
+      "alcance": 721,
       "leads": 0,
       "cpl": 0
     },
@@ -82,11 +82,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 29938.17,
-      "impresiones": 404324,
-      "alcance": 194498,
-      "leads": 595,
-      "cpl": 50.32
+      "gasto": 30138.55,
+      "impresiones": 405824,
+      "alcance": 195750,
+      "leads": 596,
+      "cpl": 50.57
     },
     {
       "id": "52515312914962",
@@ -247,16 +247,16 @@
       "status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 100.0,
-      "gasto": 61.24,
+      "gasto": 95.35,
       "leads": 3,
-      "cpl": 20.41
+      "cpl": 31.78
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 200.0,
-      "gasto": 10.38,
+      "gasto": 88.69,
       "leads": 0,
       "cpl": 0
     },
@@ -265,9 +265,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2530.22,
+      "gasto": 2543.07,
       "leads": 50,
-      "cpl": 50.6
+      "cpl": 50.86
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -283,9 +283,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 27410.03,
-      "leads": 545,
-      "cpl": 50.29
+      "gasto": 27595.48,
+      "leads": 546,
+      "cpl": 50.54
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -520,19 +520,19 @@
     },
     "2026-10-29": {
       "leads": 28,
-      "gasto": 1102.48
+      "gasto": 1104.47
     },
     "2026-10-30": {
-      "leads": 5,
-      "gasto": 254.54
+      "leads": 6,
+      "gasto": 565.35
     }
   },
   "sucursales": {
     "LINDAVISTA": {
-      "leads": 171,
-      "llamadas": 93,
-      "no_contesta": 78,
-      "citas": 15,
+      "leads": 176,
+      "llamadas": 96,
+      "no_contesta": 80,
+      "citas": 16,
       "visitas": 8,
       "inscritos": 17,
       "citas_agendadas": 8,
@@ -544,10 +544,10 @@
       "conv_asistio_inscrito": 0.0
     },
     "IZTACALCO": {
-      "leads": 163,
-      "llamadas": 79,
-      "no_contesta": 84,
-      "citas": 11,
+      "leads": 169,
+      "llamadas": 82,
+      "no_contesta": 87,
+      "citas": 12,
       "visitas": 2,
       "inscritos": 2,
       "citas_agendadas": 11,
@@ -559,10 +559,10 @@
       "conv_asistio_inscrito": 100.0
     },
     "ERMITA": {
-      "leads": 154,
-      "llamadas": 70,
-      "no_contesta": 79,
-      "citas": 9,
+      "leads": 159,
+      "llamadas": 73,
+      "no_contesta": 81,
+      "citas": 10,
       "visitas": 0,
       "inscritos": 1,
       "citas_agendadas": 13,
@@ -760,6 +760,29 @@
       "ERMITA": {
         "leads": 6,
         "llamadas": 3,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      }
+    },
+    "2026-10-30": {
+      "LINDAVISTA": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "IZTACALCO": {
+        "leads": 0,
+        "llamadas": 0,
+        "citas": 0,
+        "visitas": 0,
+        "inscritos": 0
+      },
+      "ERMITA": {
+        "leads": 0,
+        "llamadas": 0,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
