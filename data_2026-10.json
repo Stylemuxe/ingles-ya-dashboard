@@ -1,35 +1,35 @@
 {
-  "actualizado": "31/10/2026 16:29",
-  "meta_actualizado": "31/10/2026 16:29",
+  "actualizado": "31/10/2026 14:41",
+  "meta_actualizado": "31/10/2026 14:40",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
-    "leads_meta": 651,
-    "gasto": 35267.4,
-    "cpl": 54.17,
+    "leads_meta": 653,
+    "gasto": 35577.42,
+    "cpl": 54.48,
     "citas": 38,
     "visitas": 10,
     "inscritos": 20,
     "citas_agendadas": 32,
-    "asistieron": 2,
-    "no_asistieron": 2,
-    "sin_dato_asistencia": 28,
-    "tasa_asistencia": 6.2,
+    "asistieron": 3,
+    "no_asistieron": 3,
+    "sin_dato_asistencia": 26,
+    "tasa_asistencia": 9.4,
     "tasa_asistencia_con_dato": 50.0,
-    "conv_asistio_inscrito": 1000.0,
+    "conv_asistio_inscrito": 33.3,
     "ingresos": 62665.0,
     "ticket_promedio": 3133.25
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 15397.6,
+    "utilidad": 15087.58,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 35267.4,
+      "meta_ads": 35577.42,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 47267.4
+      "total": 47577.42
     }
   },
   "campanas": [
@@ -37,6 +37,7 @@
       "id": "52540651618162",
       "nombre": "IY | RECONOCIMIENTO | Comentarios | OCT26",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -48,28 +49,31 @@
       "id": "52540651607562",
       "nombre": "IY | REMARKETING | WhatsApp | OCT26",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 164.64,
-      "impresiones": 715,
-      "alcance": 584,
-      "leads": 3,
-      "cpl": 54.88
+      "gasto": 185.83,
+      "impresiones": 784,
+      "alcance": 635,
+      "leads": 4,
+      "cpl": 46.46
     },
     {
       "id": "52540651597362",
       "nombre": "IY | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 215.43,
-      "impresiones": 1878,
-      "alcance": 1416,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 272.69,
+      "impresiones": 2291,
+      "alcance": 1688,
+      "leads": 1,
+      "cpl": 272.69
     },
     {
       "id": "52537011571762",
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 332.98,
       "gasto": 4012.44,
       "impresiones": 19025,
@@ -81,17 +85,19 @@
       "id": "52522031966962",
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 30874.89,
-      "impresiones": 411579,
-      "alcance": 200172,
+      "gasto": 31106.46,
+      "impresiones": 413526,
+      "alcance": 200796,
       "leads": 614,
-      "cpl": 50.28
+      "cpl": 50.66
     },
     {
       "id": "52515312914962",
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -103,6 +109,7 @@
       "id": "6999397980958",
       "nombre": "Leads Iztacalco Campaña",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 326.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -114,6 +121,7 @@
       "id": "6996804894758",
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 260.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -125,6 +133,7 @@
       "id": "6978346009358",
       "nombre": "Ingles Ya IZTACALCO",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 193.71,
       "gasto": 0.0,
       "impresiones": 0,
@@ -136,6 +145,7 @@
       "id": "6978345982558",
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 357.94,
       "gasto": 0.0,
       "impresiones": 0,
@@ -147,6 +157,7 @@
       "id": "6922243400958",
       "nombre": "Ingles Consolidada",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 647.92,
       "gasto": 0.0,
       "impresiones": 0,
@@ -158,6 +169,7 @@
       "id": "6917541255358",
       "nombre": "New Engagement Campaign",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -169,6 +181,7 @@
       "id": "6911288981958",
       "nombre": "Ingles Ya Iztacalco",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 200.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -180,6 +193,7 @@
       "id": "6911288401158",
       "nombre": "Ingles Ya Lindavista",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 200.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -191,6 +205,7 @@
       "id": "6910207751758",
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 380.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -202,6 +217,7 @@
       "id": "6909460120758",
       "nombre": "Ingles Ya Leads Ermita",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 300.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -213,6 +229,7 @@
       "id": "6891492058958",
       "nombre": "INGLÉS ENERO 1",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -224,6 +241,7 @@
       "id": "6371521153558",
       "nombre": "Inglés_YA + Tráfico",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -236,6 +254,7 @@
     {
       "nombre": "CJ | RECONOCIMIENTO | Comentarios | OCT26",
       "status": "PAUSED",
+      "effective_status": "PAUSED",
       "campaign_id": "52540651618162",
       "presupuesto_dia": 102.39,
       "gasto": 0.0,
@@ -245,33 +264,37 @@
     {
       "nombre": "CJ | REMARKETING | WhatsApp | OCT26",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 164.64,
-      "leads": 3,
-      "cpl": 54.88
+      "gasto": 185.83,
+      "leads": 4,
+      "cpl": 46.46
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 215.43,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 272.69,
+      "leads": 1,
+      "cpl": 272.69
     },
     {
       "nombre": "PRUEBA CREATIVOS OCT 2026",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2561.13,
+      "gasto": 2564.03,
       "leads": 51,
-      "cpl": 50.22
+      "cpl": 50.28
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "52537011571762",
       "presupuesto_dia": 0.0,
       "gasto": 4012.44,
@@ -281,15 +304,17 @@
     {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 28313.76,
+      "gasto": 28542.43,
       "leads": 563,
-      "cpl": 50.29
+      "cpl": 50.7
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "52515312914962",
       "presupuesto_dia": 299.82,
       "gasto": 0.0,
@@ -299,6 +324,7 @@
     {
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6922243400958",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -308,6 +334,7 @@
     {
       "nombre": "Leads Iztacalco Campaña",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6999397980958",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -317,6 +344,7 @@
     {
       "nombre": "Ingles Ya LINDAVISTA - RESPALDO",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6996804894758",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -326,6 +354,7 @@
     {
       "nombre": "Ingles Ya LINDAVISTA",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6978345982558",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -335,6 +364,7 @@
     {
       "nombre": "Ingles Ya IZTACALCO",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6978346009358",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -344,6 +374,7 @@
     {
       "nombre": "New Engagement Campaign",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6917541255358",
       "presupuesto_dia": 119.74,
       "gasto": 0.0,
@@ -353,6 +384,7 @@
     {
       "nombre": "Ingles- Leads Mensajes 1 IZT Y LIND",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6910207751758",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -362,6 +394,7 @@
     {
       "nombre": "Ingles Ya Iztacalco",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6911288981958",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -371,6 +404,7 @@
     {
       "nombre": "Ingles Ya Lindavista",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6911288401158",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -380,6 +414,7 @@
     {
       "nombre": "Ingles Ya Leads Ermita",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6909460120758",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -389,6 +424,7 @@
     {
       "nombre": "INGLÉS ENERO 1",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6891492058958",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
@@ -398,6 +434,7 @@
     {
       "nombre": "Inglés_YA + Tráfico",
       "status": "ACTIVE",
+      "effective_status": "CAMPAIGN_PAUSED",
       "campaign_id": "6371521153558",
       "presupuesto_dia": 50.0,
       "gasto": 0.0,
@@ -524,11 +561,11 @@
     },
     "2026-10-30": {
       "leads": 17,
-      "gasto": 1025.82
+      "gasto": 1029.68
     },
     "2026-10-31": {
-      "leads": 7,
-      "gasto": 471.5
+      "leads": 9,
+      "gasto": 777.66
     }
   },
   "sucursales": {
@@ -560,7 +597,7 @@
       "sin_dato": 7,
       "tasa_asistencia": 18.2,
       "tasa_asistencia_con_dato": 50.0,
-      "conv_asistio_inscrito": 100.0
+      "conv_asistio_inscrito": 50.0
     },
     "ERMITA": {
       "leads": 159,
@@ -570,11 +607,11 @@
       "visitas": 0,
       "inscritos": 1,
       "citas_agendadas": 13,
-      "asistieron": 0,
-      "no_asistieron": 0,
-      "sin_dato": 13,
-      "tasa_asistencia": 0.0,
-      "tasa_asistencia_con_dato": 0.0,
+      "asistieron": 1,
+      "no_asistieron": 1,
+      "sin_dato": 11,
+      "tasa_asistencia": 7.7,
+      "tasa_asistencia_con_dato": 50.0,
       "conv_asistio_inscrito": 0.0
     }
   },
@@ -771,22 +808,22 @@
     },
     "2026-10-30": {
       "LINDAVISTA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 2,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
       },
       "IZTACALCO": {
-        "leads": 0,
-        "llamadas": 0,
-        "citas": 0,
+        "leads": 3,
+        "llamadas": 2,
+        "citas": 1,
         "visitas": 0,
         "inscritos": 0
       },
       "ERMITA": {
-        "leads": 0,
-        "llamadas": 0,
+        "leads": 3,
+        "llamadas": 1,
         "citas": 0,
         "visitas": 0,
         "inscritos": 0
@@ -1069,7 +1106,7 @@
       "nombre": "Alejandro",
       "tel": "55 5069 7328",
       "fecha_cita": "30-10-26 3:30",
-      "asistio": null,
+      "asistio": true,
       "inscrito": null,
       "obs": "Clase muestra"
     },
@@ -1078,8 +1115,8 @@
       "nombre": "Fracisco",
       "tel": "55 3646 5260",
       "fecha_cita": "30-10-26 11:00",
-      "asistio": null,
-      "inscrito": null,
+      "asistio": false,
+      "inscrito": false,
       "obs": "Exaemen de colocación"
     }
   ]

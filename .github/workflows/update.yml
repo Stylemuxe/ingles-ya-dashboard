@@ -29,6 +29,17 @@ jobs:
       - name: Instalar dependencias
         run: pip install requests
 
+      - name: Cerrar el mes anterior (días 1 y 2, hora de la cuenta de Meta)
+        env:
+          TOKEN_INGLES_YA: ${{ secrets.TOKEN_INGLES_YA }}
+        run: |
+          DIA=$(TZ=America/Los_Angeles date +%d)
+          if [ "$DIA" -le 2 ]; then
+            ANTERIOR=$(TZ=America/Los_Angeles date -d "$(TZ=America/Los_Angeles date +%Y-%m-01) -1 day" +%Y-%m)
+            echo "Recalculando $ANTERIOR para que cierre con el gasto completo del último día"
+            python actualizar_ingles.py --mes "$ANTERIOR"
+          fi
+
       - name: Correr script de actualización
         env:
           TOKEN_INGLES_YA: ${{ secrets.TOKEN_INGLES_YA }}

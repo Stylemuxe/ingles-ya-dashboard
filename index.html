@@ -5,149 +5,242 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inglés YA · Dashboard</title>
 <script>document.documentElement.dataset.theme = localStorage.getItem('ingles_theme') || 'dark';</script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+// Gráficas con la tipografía de la marca y entrada escalonada de barras y puntos
+if (window.Chart) {
+  Chart.defaults.font.family = "'Poppins', system-ui, sans-serif";
+  Chart.defaults.animation.duration = 1200;
+  Chart.defaults.animation.easing = 'easeOutQuart';
+  Chart.defaults.animation.delay = c => (c.type === 'data' && c.mode === 'default') ? c.dataIndex * 22 : 0;
+}
+</script>
 <style>
+/* ══════════════════════════════════════════════════════════════════════════
+   Inglés YA · Dashboard — rediseño 31-oct-2026 con el manual de identidad oficial
+   Azul #1951A0 · Rojo #E73331 · Blanco · Negro + paleta funcional (#154384 #103466 #0C2549,
+   #AE2724, #B2B2B2 #3C3C3B). Tipografía Poppins. Sin degradados: color sólido y movimiento.
+   Los nombres de clases y variables se conservan porque el JS los usa.
+   ══════════════════════════════════════════════════════════════════════════ */
 :root {
-  --bg:    #0d0b1e;
-  --c1:    #13112a;
-  --c2:    #17153200;
-  --c3:    #1e1b3c;
-  --c4:    #252248;
-  --red:   #E02020;
-  --blue:  #1B3FA0;
-  --cyan:  #00f0ff;
-  --green: #00ff88;
-  --pink:  #ff0066;
-  --orange:#ff9900;
-  --purple:#7b2ff7;
-  --text:  #e8e6f5;
-  --muted: #7a78a0;
-  --dim:   #3e3c60;
-  --r:     16px;
-  --bg-rgb: 13,11,30;
+  /* Tema oscuro (azul marino de la paleta funcional) */
+  --bg:    #0C2549;
+  --c1:    #103466;
+  --c2:    transparent;
+  --c3:    #154384;
+  --c4:    #1951A0;
+  --red:   #E73331;
+  --blue:  #1951A0;
+  --cyan:  #8EB0E8;   /* acento principal: azul oficial aclarado para leerse sobre marino */
+  --green: #34D27F;   /* solo para "va bien" */
+  --pink:  #FF6461;   /* solo para "va mal" */
+  --orange:#FFB020;   /* solo para "ojo" */
+  --purple:#C9D8F2;
+  --a1:#8EB0E8; --a2:#FF6461; --a3:#C9D8F2; --a4:#F59B98; --a5:#B2B2B2;
+  --s-lin:#8EB0E8; --s-izt:#B2B2B2; --s-erm:#FF6461;
+  --text:  #FFFFFF;
+  --muted: #ACB5C1;
+  --dim:   #6D7C92;
+  --r:     18px;
+  --bg-rgb: 12,37,73;
   --fg-rgb: 255,255,255;
+  --line:  rgba(255,255,255,.08);
+  --shadow: 0 18px 44px rgba(0,0,0,.28);
+  --ease:  cubic-bezier(.22,1,.36,1);
 }
 :root[data-theme="light"] {
-  --bg:    #f3f1fa;
-  --c1:    #ffffff;
-  --c2:    #ffffff00;
-  --c3:    #ece9f7;
-  --c4:    #e2ddf3;
-  --cyan:  #0089a3;
-  --green: #009a52;
-  --text:  #1c1a30;
-  --muted: #5d5a7a;
-  --dim:   #9b98b8;
-  --bg-rgb: 255,255,255;
-  --fg-rgb: 20,16,50;
+  --bg:    #F4F6FA;
+  --c1:    #FFFFFF;
+  --c3:    #EEF2F8;
+  --c4:    #E1E8F3;
+  --cyan:  #1951A0;
+  --green: #16924A;
+  --pink:  #E73331;
+  --orange:#C77700;
+  --purple:#103466;
+  --a1:#1951A0; --a2:#E73331; --a3:#103466; --a4:#AE2724; --a5:#3C3C3B;
+  --s-lin:#1951A0; --s-izt:#3C3C3B; --s-erm:#E73331;
+  --text:  #0C2549;
+  --muted: #5A6B83;
+  --dim:   #929DAD;
+  --bg-rgb: 244,246,250;
+  --fg-rgb: 12,37,73;
+  --line:  rgba(12,37,73,.09);
+  --shadow: 0 14px 36px rgba(12,37,73,.08);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  background: var(--bg);
+  background-color: var(--bg);
+  /* papel cuadriculado, como el de sus posts */
+  background-image:
+    linear-gradient(rgba(var(--fg-rgb),.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--fg-rgb),.035) 1px, transparent 1px);
+  background-size: 34px 34px;
   color: var(--text);
-  font-family: 'Gilroy', 'Montserrat', system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
   font-size: 14px;
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
-body::before {
-  content: '';
-  position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(123,47,247,.13) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 30% at 100% 100%, rgba(224,32,32,.06) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 0% 60%, rgba(27,63,160,.06) 0%, transparent 60%);
+/* Cintas inclinadas de la marca flotando al fondo */
+body::before, body::after {
+  content: ''; position: fixed; pointer-events: none; z-index: 0;
+  border-radius: 28px; transform: rotate(-8deg) skewX(-8deg);
 }
+body::before { width: 560px; height: 150px; top: 120px; right: -160px; background: var(--red); opacity: .07; animation: cinta 19s ease-in-out infinite alternate; }
+body::after  { width: 760px; height: 190px; bottom: -40px; left: -220px; background: var(--blue); opacity: .16; animation: cinta 23s ease-in-out infinite alternate-reverse; }
+:root[data-theme="light"] body::before { opacity: .06; }
+:root[data-theme="light"] body::after  { opacity: .07; }
+@keyframes cinta { from { transform: translate(0,0) rotate(-8deg) skewX(-8deg); } to { transform: translate(-60px,40px) rotate(-4deg) skewX(-8deg); } }
 
 /* ── HEADER ── */
 header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(var(--bg-rgb),.92);
-  backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(var(--fg-rgb),.06);
-  padding: 0 28px;
+  background: var(--blue);
+  padding: 0 32px;
   display: flex; align-items: center; justify-content: space-between;
   height: 64px; overflow: hidden;
+  box-shadow: 0 1px 0 rgba(255,255,255,.12), 0 10px 30px rgba(0,0,0,.18);
+}
+header::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 180px; height: 5px; background: var(--red);
+  transform-origin: left; animation: tiraIn .9s var(--ease) .2s both;
 }
 header::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0,240,255,.3), rgba(123,47,247,.3), transparent);
+  content: ''; position: absolute; top: 0; bottom: 0; left: -160px; width: 110px;
+  background: rgba(255,255,255,.07); transform: skewX(-22deg);
+  animation: brillo 7s ease-in-out 1.2s infinite;
 }
-.logo { display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; animation: fadeInLeft .7s cubic-bezier(.22,1,.36,1) both; }
-.logo img { height: 40px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(224,32,32,.5)); }
+@keyframes tiraIn { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes brillo { 0% { left: -160px; } 35%, 100% { left: calc(100% + 60px); } }
+.logo { display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; animation: fadeInLeft .7s var(--ease) both; }
+.logo img { height: 38px; width: auto; display: block; }
 @keyframes fadeInLeft { from{opacity:0;transform:translateX(-24px)} to{opacity:1;transform:none} }
-.header-right { display: flex; align-items: center; gap: 22px; position: relative; z-index: 1; }
-.live-badge { display:flex; align-items:center; gap:7px; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--muted); }
+.header-right { display: flex; align-items: center; gap: 20px; position: relative; z-index: 1; color: #fff; }
+.live-badge { display:flex; align-items:center; gap:8px; font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.85); }
 .theme-toggle-btn {
-  background:var(--c3); border:1px solid rgba(var(--fg-rgb),.1); color:var(--text);
-  width:32px; height:32px; border-radius:9px; font-size:15px; cursor:pointer;
-  display:flex; align-items:center; justify-content:center; transition:border-color .2s, transform .2s;
+  background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); color:#fff;
+  width:34px; height:34px; border-radius:10px; font-size:15px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:background .2s, transform .3s var(--ease);
 }
-.theme-toggle-btn:hover { border-color:var(--cyan); transform:translateY(-1px); }
+.theme-toggle-btn:hover { background:rgba(255,255,255,.22); transform:rotate(-12deg) scale(1.06); }
 .live-dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--green); box-shadow: 0 0 0 0 rgba(0,255,136,.7);
+  background: var(--green); box-shadow: 0 0 0 0 rgba(52,210,127,.7);
   animation: livePulse 2s infinite;
 }
-@keyframes livePulse { 0%{box-shadow:0 0 0 0 rgba(0,255,136,.7)} 70%{box-shadow:0 0 0 9px rgba(0,255,136,0)} 100%{box-shadow:0 0 0 0 rgba(0,255,136,0)} }
-#updated { font-size:11px; color:var(--dim); font-weight:600; }
+@keyframes livePulse { 0%{box-shadow:0 0 0 0 rgba(52,210,127,.7)} 70%{box-shadow:0 0 0 9px rgba(52,210,127,0)} 100%{box-shadow:0 0 0 0 rgba(52,210,127,0)} }
+#updated { font-size:11px; color:rgba(255,255,255,.7); font-weight:500; }
 
 /* Selector de mes */
-.mes-selector {
-  display: flex; align-items: center; gap: 8px;
-}
-.mes-selector label { font-size:10px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--muted); }
+.mes-selector { display: flex; align-items: center; gap: 8px; }
+.mes-selector label { font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.75); }
 #mes-select {
-  background: var(--c3); border: 1px solid rgba(0,240,255,.25);
-  color: var(--cyan); padding: 5px 12px; border-radius: 8px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28);
+  color: #fff; padding: 6px 14px; border-radius: 99px;
   font-size: 12px; font-weight: 700; cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  transition: border-color .2s;
+  font-family: 'Poppins', sans-serif;
+  transition: background .2s, border-color .2s;
 }
-#mes-select:focus { outline: none; border-color: var(--cyan); box-shadow: 0 0 10px rgba(0,240,255,.2); }
-#mes-select option { background: var(--c3); color: var(--text); }
+#mes-select:hover { background: rgba(255,255,255,.2); }
+#mes-select:focus { outline: none; border-color: #fff; }
+#mes-select option { background: #103466; color: #fff; }
+
+/* ── HERO ── */
+.hero {
+  position: relative; z-index: 1; overflow: hidden;
+  padding: 34px 32px 26px;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; flex-wrap: wrap;
+}
+.hero-kicker {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--cyan);
+  animation: subir .7s var(--ease) .1s both;
+}
+.hero-kicker::before { content: ''; width: 28px; height: 4px; border-radius: 2px; background: var(--red); }
+.hero-title {
+  font-size: 54px; font-weight: 800; line-height: 1.02; letter-spacing: -.035em; margin-top: 10px;
+  animation: subir .8s var(--ease) .18s both;
+}
+.hero-sub { margin-top: 10px; font-size: 15px; color: var(--muted); animation: subir .8s var(--ease) .28s both; }
+.hero-sub b { color: var(--red); font-weight: 700; font-style: italic; }
+.hero-prog {
+  min-width: 280px; background: var(--c1); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 16px 20px; box-shadow: var(--shadow); animation: subir .8s var(--ease) .36s both;
+}
+.hero-prog-top { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+.hero-prog-lbl { font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.hero-prog-val { font-size: 28px; font-weight: 800; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.hero-prog-track { height: 8px; border-radius: 99px; background: rgba(var(--fg-rgb),.08); overflow: hidden; margin: 10px 0 8px; }
+.hero-prog-fill { height: 100%; width: 0; border-radius: 99px; background: var(--red); transition: width 1.4s var(--ease); }
+.hero-prog-foot { font-size: 11.5px; color: var(--muted); }
+@keyframes subir { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
 /* ── TABS ── */
 nav {
   position: sticky; top: 64px; z-index: 99;
-  background: rgba(var(--bg-rgb),.96);
-  backdrop-filter: blur(30px);
-  border-bottom: 1px solid rgba(var(--fg-rgb),.05);
-  padding: 0 28px;
+  background: rgba(var(--bg-rgb),.9);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+  padding: 0 24px;
   display: flex; overflow-x: auto;
 }
 nav::-webkit-scrollbar { height: 0; }
 .tab {
-  padding: 16px 20px; font-size: 11px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase;
-  color: var(--dim); cursor: pointer; border-bottom: 2px solid transparent;
-  transition: all .2s; white-space: nowrap; user-select: none;
+  position: relative; z-index: 1;
+  padding: 17px 16px 15px; font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--muted); cursor: pointer;
+  transition: color .25s; white-space: nowrap; user-select: none;
 }
-.tab:hover { color: var(--muted); }
-.tab.active { color: var(--cyan); border-bottom-color: var(--cyan); text-shadow: 0 0 14px rgba(0,240,255,.6); }
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--text); font-weight: 700; }
+.tab-ink {
+  position: absolute; left: 0; bottom: 0; height: 3px; width: 0; border-radius: 3px 3px 0 0;
+  background: var(--red); transition: transform .45s var(--ease), width .45s var(--ease);
+}
 
 /* ── PANES ── */
-.pane { display: none; padding: 24px 28px; position: relative; z-index: 1; }
-.pane.active { display: block; animation: paneIn .35s ease both; }
-@keyframes paneIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+.pane { display: none; padding: 26px 32px 64px; position: relative; z-index: 1; }
+.pane.active { display: block; animation: paneIn .45s var(--ease) both; }
+@keyframes paneIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+
+/* Entrada en cascada de tarjetas y filas cada vez que se abre una pestaña */
+.pane.active > .card, .pane.active > .g2, .pane.active > .suc-cards { animation: cardIn .6s var(--ease) both; }
+.pane.active > :nth-child(2) { animation-delay: .06s; }
+.pane.active > :nth-child(3) { animation-delay: .12s; }
+.pane.active > :nth-child(4) { animation-delay: .18s; }
+.pane.active > :nth-child(5) { animation-delay: .24s; }
+.pane.active > :nth-child(6) { animation-delay: .30s; }
+.pane.active > :nth-child(7) { animation-delay: .36s; }
+.pane.active > :nth-child(n+8) { animation-delay: .42s; }
+.pane.active tr { animation: rowIn .5s var(--ease) both; }
+.pane.active tr:nth-child(2){animation-delay:.03s} .pane.active tr:nth-child(3){animation-delay:.06s}
+.pane.active tr:nth-child(4){animation-delay:.09s} .pane.active tr:nth-child(5){animation-delay:.12s}
+.pane.active tr:nth-child(6){animation-delay:.15s} .pane.active tr:nth-child(7){animation-delay:.18s}
+.pane.active tr:nth-child(8){animation-delay:.21s} .pane.active tr:nth-child(9){animation-delay:.24s}
+.pane.active tr:nth-child(n+10){animation-delay:.27s}
+@keyframes rowIn { from{opacity:0;transform:translateX(-10px)} to{opacity:1;transform:none} }
 
 /* ── KPI GRID ── */
-.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 14px; margin-bottom: 20px; }
-@media (max-width:1400px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
+.kpi-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 16px; margin-bottom: 22px; }
+#meta-leads-body, #churn-resumen, #churn-cards { padding: 6px 22px 20px; }
+@media (max-width:1100px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
 @media (max-width:900px)  { .kpi-grid { grid-template-columns: repeat(3,1fr); } }
 @media (max-width:600px)  { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
 
 .kpi-card {
   background: var(--c1);
-  border: 1px solid rgba(var(--fg-rgb),.05);
+  border: 1px solid var(--line);
   border-radius: var(--r);
-  padding: 20px 14px 16px;
+  padding: 24px 14px 18px;
   display: flex; flex-direction: column; align-items: center;
   position: relative; overflow: hidden; cursor: default;
-  transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s, border-color .3s;
-  animation: cardIn .55s cubic-bezier(.22,1,.36,1) both;
+  box-shadow: var(--shadow);
+  transition: transform .35s var(--ease), box-shadow .35s, border-color .35s;
+  animation: cardIn .6s var(--ease) both;
 }
 .kpi-card:nth-child(1){animation-delay:.05s}
 .kpi-card:nth-child(2){animation-delay:.10s}
@@ -161,361 +254,396 @@ nav::-webkit-scrollbar { height: 0; }
 .kpi-card:nth-child(10){animation-delay:.50s}
 .kpi-card:nth-child(11){animation-delay:.55s}
 .kpi-card:nth-child(12){animation-delay:.60s}
-@keyframes cardIn { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
+@keyframes cardIn { from{opacity:0;transform:translateY(26px) scale(.98)} to{opacity:1;transform:none} }
 
+/* Barra superior de color que se dibuja al entrar */
 .kpi-card::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:1px;
-  background: linear-gradient(90deg, transparent, var(--kc,#00f0ff) 50%, transparent);
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background: var(--kc, var(--cyan)); transform-origin: left;
+  animation: tiraIn 1s var(--ease) .35s both;
 }
+/* Destello que cruza la tarjeta al pasar el mouse */
 .kpi-card::after {
-  content:''; position:absolute; top:-30px; left:50%; transform:translateX(-50%);
-  width:100px; height:60px;
-  background: radial-gradient(ellipse, var(--kc-glow,rgba(0,240,255,.12)) 0%, transparent 70%);
-  pointer-events:none;
+  content:''; position:absolute; top:0; bottom:0; left:-70%; width:45%;
+  background: rgba(var(--fg-rgb),.06); transform: skewX(-20deg);
+  transition: left .8s var(--ease); pointer-events:none;
 }
 .kpi-card:hover {
   transform: translateY(-6px);
-  border-color: var(--kc,rgba(0,240,255,.4));
-  box-shadow: 0 20px 50px rgba(0,0,0,.5), 0 0 30px var(--kc-glow,rgba(0,240,255,.12));
+  border-color: color-mix(in srgb, var(--kc, var(--cyan)) 45%, transparent);
+  box-shadow: 0 22px 50px rgba(0,0,0,.3);
 }
+:root[data-theme="light"] .kpi-card:hover { box-shadow: 0 22px 46px rgba(12,37,73,.14); }
+.kpi-card:hover::after { left: 130%; }
 
-/* Donut Ring */
-.ring-wrap { position:relative; width:110px; height:110px; margin-bottom:12px; flex-shrink:0; }
+/* Anillo */
+.ring-wrap { position:relative; width:104px; height:104px; margin-bottom:12px; flex-shrink:0; }
 .ring-wrap svg { width:100%; height:100%; transform:rotate(-90deg); }
-.ring-track  { fill:none; stroke:rgba(var(--fg-rgb),.05); stroke-width:8; }
+.ring-track  { fill:none; stroke:rgba(var(--fg-rgb),.08); stroke-width:8; }
 .ring-fill {
-  fill:none; stroke:var(--kc,#00f0ff); stroke-width:8; stroke-linecap:round;
+  fill:none; stroke:var(--kc, var(--cyan)); stroke-width:8; stroke-linecap:round;
   stroke-dasharray:263.9; stroke-dashoffset:263.9;
-  transition:stroke-dashoffset 1.5s cubic-bezier(.22,1,.36,1);
-  filter:drop-shadow(0 0 5px var(--kc,#00f0ff));
+  transition:stroke-dashoffset 1.6s var(--ease);
 }
 .ring-fill-2 { fill:none; stroke:rgba(var(--fg-rgb),.04); stroke-width:4; stroke-dasharray:263.9; }
 .ring-inner {
   position:absolute; inset:0;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
 }
-.ring-icon { font-size:18px; line-height:1; margin-bottom:2px; }
+.ring-icon { font-size:19px; line-height:1; margin-bottom:2px; transition: transform .4s var(--ease); }
+.kpi-card:hover .ring-icon { transform: scale(1.25) rotate(-8deg); }
 
 .kpi-val {
-  font-family:'Gilroy','Montserrat',sans-serif;
-  font-size:24px; font-weight:800; line-height:1;
-  color:var(--text); text-align:center; margin-bottom:5px;
+  font-family:'Poppins',sans-serif;
+  font-size:26px; font-weight:800; line-height:1; letter-spacing:-.02em;
+  color:var(--text); text-align:center; margin-bottom:6px;
   font-variant-numeric:tabular-nums;
 }
 .kpi-lbl {
-  font-size:10px; font-weight:700; letter-spacing:.8px;
+  font-size:10.5px; font-weight:600; letter-spacing:.1em;
   text-transform:uppercase; color:var(--muted); text-align:center;
-  display:flex; align-items:center; justify-content:center; gap:5px;
+  display:flex; align-items:center; justify-content:center; gap:6px;
 }
 .kpi-info {
   display:inline-flex; align-items:center; justify-content:center;
-  width:14px; height:14px; border-radius:50%; font-size:9px; font-weight:800;
-  color:var(--kc,#00f0ff); border:1px solid var(--kc,#00f0ff);
-  cursor:help; opacity:.65; transition:opacity .2s; line-height:1;
+  width:15px; height:15px; border-radius:50%; font-size:9px; font-weight:700;
+  color:var(--kc,var(--cyan)); border:1px solid var(--kc,var(--cyan));
+  cursor:help; opacity:.7; transition:opacity .2s; line-height:1; text-transform:none;
 }
 .kpi-card:hover .kpi-info { opacity:1; }
 .kpi-sub {
-  font-size:11px; font-weight:800; color:var(--kc,#00f0ff); margin-top:6px;
-  font-variant-numeric:tabular-nums; opacity:.9;
+  font-size:11px; font-weight:600; color:var(--kc,var(--cyan)); margin-top:7px;
+  font-variant-numeric:tabular-nums; text-align:center;
 }
 
 /* ── GUÍA DE MÉTRICAS ── */
 .guia-intro {
-  background:linear-gradient(135deg, rgba(0,240,255,.08), rgba(123,47,247,.06));
-  border:1px solid rgba(0,240,255,.18); border-radius:var(--r);
-  padding:20px 22px; margin-bottom:18px;
+  background: color-mix(in srgb, var(--cyan) 8%, var(--c1));
+  border:1px solid color-mix(in srgb, var(--cyan) 25%, transparent); border-left:4px solid var(--red);
+  border-radius:var(--r); padding:22px 24px; margin-bottom:18px;
 }
-.guia-intro h2 { font-size:18px; color:var(--text); margin-bottom:6px; }
-.guia-intro p  { font-size:13px; color:var(--muted); line-height:1.6; }
+.guia-intro h2 { font-size:19px; font-weight:800; color:var(--text); margin-bottom:6px; letter-spacing:-.01em; }
+.guia-intro p  { font-size:13px; color:var(--muted); line-height:1.65; }
 .guia-section-title {
-  font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
-  color:var(--cyan); margin:24px 4px 12px; display:flex; align-items:center; gap:8px;
+  font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--text); margin:26px 4px 12px; display:flex; align-items:center; gap:10px;
 }
+.guia-section-title::before { content:''; width:22px; height:4px; border-radius:2px; background:var(--red); }
 .guia-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
 @media (max-width:860px){ .guia-grid { grid-template-columns:1fr; } }
 .guia-card {
-  background:var(--c1); border:1px solid rgba(var(--fg-rgb),.06);
-  border-left:3px solid var(--gc,#00f0ff); border-radius:12px; padding:18px 20px;
-  transition:transform .25s, box-shadow .25s;
+  background:var(--c1); border:1px solid var(--line);
+  border-left:4px solid var(--gc,var(--cyan)); border-radius:14px; padding:18px 20px;
+  box-shadow: var(--shadow);
+  transition:transform .3s var(--ease), box-shadow .3s;
 }
-.guia-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(0,0,0,.4); }
+.guia-card:hover { transform:translateY(-4px); }
 .guia-card h3 {
-  font-size:14px; color:var(--text); margin-bottom:4px;
+  font-size:14.5px; font-weight:700; color:var(--text); margin-bottom:4px;
   display:flex; align-items:center; gap:8px;
 }
 .guia-card .gc-tag {
-  font-size:10px; font-weight:700; color:var(--gc,#00f0ff);
-  background:color-mix(in srgb, var(--gc,#00f0ff) 14%, transparent);
-  padding:2px 8px; border-radius:99px; letter-spacing:.4px;
+  font-size:10px; font-weight:600; color:var(--gc,var(--cyan));
+  background:color-mix(in srgb, var(--gc,var(--cyan)) 14%, transparent);
+  padding:2px 9px; border-radius:99px; letter-spacing:.04em;
 }
-.guia-card .gc-def  { font-size:13px; color:var(--text);  line-height:1.55; margin:8px 0; }
+.guia-card .gc-def  { font-size:13px; color:var(--text);  line-height:1.6; margin:8px 0; }
 .guia-card .gc-calc {
-  font-size:12px; color:var(--muted); background:var(--bg); border-radius:8px;
-  padding:8px 12px; margin:8px 0; font-family:'Consolas',monospace; line-height:1.5;
+  font-size:12px; color:var(--muted); background:rgba(var(--fg-rgb),.05); border-radius:9px;
+  padding:9px 12px; margin:8px 0; font-family:'Consolas',monospace; line-height:1.5;
 }
 .guia-card .gc-read {
-  font-size:12.5px; color:var(--muted); line-height:1.55;
-  border-top:1px dashed rgba(var(--fg-rgb),.08); padding-top:8px; margin-top:8px;
+  font-size:12.5px; color:var(--muted); line-height:1.6;
+  border-top:1px dashed var(--line); padding-top:8px; margin-top:8px;
 }
 .guia-card .gc-read b { color:var(--text); }
 .guia-card .gc-src {
-  font-size:11.5px; color:#ffb800; line-height:1.55;
-  background:rgba(255,184,0,.08); border:1px solid rgba(255,184,0,.2);
-  border-radius:8px; padding:7px 10px; margin-top:8px;
+  font-size:11.5px; color:var(--text); line-height:1.55;
+  background:color-mix(in srgb, var(--orange) 10%, transparent); border:1px solid color-mix(in srgb, var(--orange) 30%, transparent);
+  border-radius:9px; padding:8px 11px; margin-top:8px;
 }
-.guia-card .gc-src b { color:#ffb800; }
+.guia-card .gc-src b { color:var(--orange); }
 .fin-fuente {
   margin:0 18px 16px; padding:10px 14px; border-radius:10px;
-  background:rgba(255,184,0,.06); border:1px solid rgba(255,184,0,.16);
-  font-size:11.5px; color:var(--muted); line-height:1.5;
+  background:color-mix(in srgb, var(--orange) 8%, transparent); border:1px solid color-mix(in srgb, var(--orange) 24%, transparent);
+  font-size:11.5px; color:var(--muted); line-height:1.55;
 }
-.fin-fuente b { color:#ffb800; }
+.fin-fuente b { color:var(--orange); }
 .guia-good { color:var(--green); font-weight:700; }
 .guia-warn { color:var(--orange); font-weight:700; }
 .guia-bad  { color:var(--pink); font-weight:700; }
 
 /* ── GRID 2 ── */
-.g2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+.g2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+.g2 > .card { margin-bottom:0; }
 @media (max-width:900px) { .g2 { grid-template-columns:1fr; } }
 
 /* ── CARD ── */
 .card {
-  background: var(--c1); border:1px solid rgba(var(--fg-rgb),.05); border-radius:var(--r);
-  overflow:hidden; margin-bottom:14px; position:relative;
-  animation: cardIn .45s cubic-bezier(.22,1,.36,1) both;
+  background: var(--c1); border:1px solid var(--line); border-radius:var(--r);
+  overflow:hidden; margin-bottom:16px; position:relative;
+  box-shadow: var(--shadow);
 }
 .card::before {
-  content:''; position:absolute; top:0; left:40px; right:40px; height:1px;
-  background:linear-gradient(90deg,transparent,rgba(0,240,255,.15),transparent);
+  content:''; position:absolute; top:0; left:22px; width:46px; height:4px; border-radius:0 0 3px 3px;
+  background:var(--red); transform-origin:left; animation:tiraIn .9s var(--ease) .3s both;
   pointer-events:none;
 }
 .card-head {
-  padding:14px 20px; border-bottom:1px solid rgba(var(--fg-rgb),.05);
-  display:flex; align-items:center; justify-content:space-between;
-  background:linear-gradient(90deg, rgba(224,32,32,.04), transparent 60%);
+  padding:17px 22px 15px; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
 }
-.card-title { font-size:11px; font-weight:800; letter-spacing:.9px; text-transform:uppercase; color:var(--muted); }
-.card-sub { font-size:11px; color:var(--dim); font-weight:600; }
+.card-title { font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--text); }
+.card-sub { font-size:11.5px; color:var(--muted); font-weight:500; }
 
 /* ── FINANZAS ── */
-.fin-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:14px; padding:18px; }
-.fin-stat { text-align:center; }
-.fin-stat-lbl { font-size:10px; font-weight:700; letter-spacing:.4px; color:var(--muted); text-transform:uppercase; margin-bottom:4px; }
-.fin-stat-val { font-size:20px; font-weight:800; }
-.fin-gastos-head { padding:0 20px 6px; font-size:10px; font-weight:800; letter-spacing:.6px; color:var(--muted); text-transform:uppercase; }
-.fin-gastos-row { display:flex; flex-wrap:wrap; gap:10px; padding:0 18px 18px; }
+.fin-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:14px; padding:20px; }
+.fin-stat { text-align:center; padding:6px 0; }
+.fin-stat-lbl { font-size:10.5px; font-weight:600; letter-spacing:.08em; color:var(--muted); text-transform:uppercase; margin-bottom:5px; }
+.fin-stat-val { font-size:22px; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.fin-gastos-head { padding:0 22px 8px; font-size:10.5px; font-weight:600; letter-spacing:.1em; color:var(--muted); text-transform:uppercase; }
+.fin-gastos-row { display:flex; flex-wrap:wrap; gap:10px; padding:0 20px 20px; }
 .fin-gasto-item {
   flex:1; min-width:140px; display:flex; justify-content:space-between; align-items:center;
-  background:rgba(var(--fg-rgb),.03); border:1px solid rgba(var(--fg-rgb),.06);
-  border-radius:10px; padding:10px 14px;
+  background:rgba(var(--fg-rgb),.04); border:1px solid var(--line);
+  border-radius:12px; padding:11px 15px; transition:transform .3s var(--ease);
 }
-.fin-gasto-lbl { font-size:12px; color:var(--muted); font-weight:600; }
-.fin-gasto-val { font-size:14px; font-weight:800; color:#E02020; }
+.fin-gasto-item:hover { transform:translateY(-3px); }
+.fin-gasto-lbl { font-size:12px; color:var(--muted); font-weight:500; }
+.fin-gasto-val { font-size:14.5px; font-weight:800; color:var(--red); font-variant-numeric:tabular-nums; }
 
 /* ── FUNNEL ── */
-.funnel { display:flex; padding:22px 16px; gap:6px; }
+.funnel { display:flex; padding:24px 18px; gap:8px; }
 .funnel-step { flex:1; position:relative; text-align:center; }
 .funnel-step:not(:last-child)::after {
-  content:'›'; position:absolute; right:-5px; top:50%;
-  transform:translateY(-50%); color:var(--dim); font-size:22px; z-index:1;
+  content:'›'; position:absolute; right:-7px; top:50%;
+  transform:translateY(-50%); color:var(--red); font-size:24px; font-weight:700; z-index:1;
+  animation: empuje 1.8s ease-in-out infinite;
 }
+@keyframes empuje { 0%,100% { transform:translate(0,-50%); opacity:.5; } 50% { transform:translate(4px,-50%); opacity:1; } }
 .f-pill {
   display:inline-flex; flex-direction:column; align-items:center; justify-content:center;
-  padding:16px 8px; border-radius:12px; width:calc(100% - 8px); min-height:92px;
+  padding:16px 8px; border-radius:14px; width:calc(100% - 10px); min-height:96px;
   border:1px solid; position:relative; overflow:hidden;
-  transition:transform .2s, box-shadow .2s;
+  transition:transform .3s var(--ease);
+  animation: cardIn .6s var(--ease) both;
 }
-.f-pill:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(0,0,0,.4); }
-.f-pill::before {
-  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
-  background:linear-gradient(135deg,rgba(var(--fg-rgb),.06) 0%,transparent 60%); pointer-events:none;
-}
-.f-val { font-family:'Gilroy','Montserrat',sans-serif; font-size:30px; font-weight:800; line-height:1.1; }
-.f-lbl { font-size:9px; font-weight:700; letter-spacing:.7px; text-transform:uppercase; margin-top:3px; opacity:.8; }
-.f-pct { font-size:10px; margin-top:5px; color:var(--dim); }
+.funnel-step:nth-child(2) .f-pill { animation-delay:.1s; }
+.funnel-step:nth-child(3) .f-pill { animation-delay:.2s; }
+.funnel-step:nth-child(4) .f-pill { animation-delay:.3s; }
+.f-pill:hover { transform:translateY(-4px); }
+.f-val { font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; line-height:1.1; letter-spacing:-.02em; text-shadow:none!important; font-variant-numeric:tabular-nums; }
+.f-lbl { font-size:10px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-top:4px; }
+.f-pct { font-size:11px; margin-top:5px; color:var(--muted); font-weight:600; }
 
 /* ── TABLE ── */
 table { width:100%; border-collapse:collapse; }
 th {
-  background:rgba(var(--bg-rgb),.6); color:var(--dim);
-  font-size:10px; font-weight:700; letter-spacing:.7px;
-  text-transform:uppercase; padding:11px 16px;
-  text-align:left; border-bottom:1px solid rgba(var(--fg-rgb),.05); white-space:nowrap;
+  background:rgba(var(--fg-rgb),.035); color:var(--muted);
+  font-size:10.5px; font-weight:600; letter-spacing:.09em;
+  text-transform:uppercase; padding:12px 16px;
+  text-align:left; border-bottom:1px solid var(--line); white-space:nowrap;
 }
-td { padding:11px 16px; border-bottom:1px solid rgba(var(--fg-rgb),.025); vertical-align:middle; font-size:13px; }
+td { padding:12px 16px; border-bottom:1px solid var(--line); vertical-align:middle; font-size:13px; transition:background .2s; }
 tr:last-child td { border-bottom:none; }
-tr:hover td { background:rgba(0,240,255,.025); }
+tr:hover td { background:rgba(var(--fg-rgb),.04); }
+tr:hover td:first-child { box-shadow: inset 3px 0 0 var(--red); }
 .num { font-weight:700; font-variant-numeric:tabular-nums; font-size:14px; }
-.tot td { font-weight:800; font-size:14px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
+.tot td { font-weight:800; font-size:14px; background:color-mix(in srgb, var(--cyan) 7%, transparent)!important; border-top:1px solid color-mix(in srgb, var(--cyan) 22%, transparent)!important; }
 
 /* ── BADGES ── */
-.badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:5px; font-size:10px; font-weight:700; letter-spacing:.3px; }
-.ba  { background:rgba(0,255,136,.12); color:var(--green); }
-.bp  { background:rgba(255,153,0,.1);  color:var(--orange); }
-.bsi { background:rgba(0,255,136,.12); color:var(--green); }
-.bno { background:rgba(255,0,102,.1);  color:var(--pink); }
+.badge { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:99px; font-size:10.5px; font-weight:700; letter-spacing:.03em; }
+.ba  { background:color-mix(in srgb, var(--green) 15%, transparent); color:var(--green); }
+.bp  { background:color-mix(in srgb, var(--orange) 15%, transparent); color:var(--orange); }
+.bsi { background:color-mix(in srgb, var(--green) 15%, transparent); color:var(--green); }
+.bno { background:color-mix(in srgb, var(--pink) 14%, transparent);  color:var(--pink); }
 
 /* ── PROGRESS BAR ── */
 .pbar-wrap { display:flex; align-items:center; gap:8px; }
-.pbar { flex:1; height:4px; border-radius:99px; background:rgba(var(--fg-rgb),.05); overflow:hidden; }
+.pbar { flex:1; height:6px; border-radius:99px; background:rgba(var(--fg-rgb),.08); overflow:hidden; }
 .pbar-fill {
   height:100%; border-radius:99px;
-  background:linear-gradient(90deg, var(--red), var(--pink));
-  animation:barGrow .9s cubic-bezier(.22,1,.36,1) both;
+  background:var(--red);
+  animation:barGrow 1.1s var(--ease) both;
 }
 @keyframes barGrow { from{width:0!important} }
-.pbar-val { font-size:12px; font-weight:700; color:var(--muted); min-width:38px; text-align:right; }
+.pbar-val { font-size:12px; font-weight:700; color:var(--muted); min-width:38px; text-align:right; font-variant-numeric:tabular-nums; }
 
 /* ── CHART ── */
-.chart-wrap { padding:20px; height:280px; }
+.chart-wrap { padding:20px 22px; height:300px; }
 
 /* ── META LEADS ── */
-.ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid rgba(var(--fg-rgb),.04); }
+.ml-row { display:flex; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid var(--line); }
 .ml-row:last-child { border-bottom:none; }
 .ml-label { min-width:200px; }
-.ml-name { font-size:12px; font-weight:800; letter-spacing:.4px; }
-.ml-sub { font-size:10px; color:var(--muted); margin-top:2px; }
+.ml-name { font-size:12px; font-weight:700; letter-spacing:.06em; }
+.ml-sub { font-size:10.5px; color:var(--muted); margin-top:2px; }
 .ml-bar { flex:1; }
-.ml-bar-track { height:10px; border-radius:99px; background:rgba(var(--fg-rgb),.06); overflow:hidden; margin-bottom:5px; }
-.ml-bar-fill { height:100%; border-radius:99px; animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
+.ml-bar-track { height:12px; border-radius:99px; background:rgba(var(--fg-rgb),.07); overflow:hidden; margin-bottom:5px; }
+.ml-bar-fill { height:100%; border-radius:99px; animation:barGrow 1.2s var(--ease) both; }
 .ml-nums { display:flex; justify-content:space-between; font-size:11px; }
 .ml-actual { font-weight:800; font-variant-numeric:tabular-nums; }
-.ml-total-row { margin-top:16px; padding:14px 18px; border-radius:10px; background:rgba(0,240,255,.04); border:1px solid rgba(0,240,255,.1); display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
+.ml-total-row { margin-top:16px; padding:15px 18px; border-radius:12px; background:color-mix(in srgb, var(--cyan) 6%, transparent); border:1px solid color-mix(in srgb, var(--cyan) 18%, transparent); display:flex; align-items:center; gap:24px; flex-wrap:wrap; }
 .ml-total-item { text-align:center; }
-.ml-total-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
-.ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
+.ml-total-val { font-size:22px; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.ml-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase; margin-top:2px; }
 
 /* ── SIMULADOR PRESUPUESTO ── */
 .sim-reset-btn {
-  background:rgba(123,47,247,.15); border:1px solid rgba(123,47,247,.3); color:var(--purple);
-  border-radius:8px; padding:7px 16px; font-size:11px; font-weight:800; cursor:pointer;
-  font-family:inherit; letter-spacing:.4px; transition:background .2s;
+  background:var(--blue); border:1px solid var(--blue); color:#fff;
+  border-radius:99px; padding:8px 18px; font-size:11px; font-weight:700; cursor:pointer;
+  font-family:inherit; letter-spacing:.06em; transition:transform .25s var(--ease), background .2s;
 }
-.sim-reset-btn:hover { background:rgba(123,47,247,.28); }
+.sim-reset-btn:hover { transform:translateY(-2px); background:var(--red); border-color:var(--red); }
 .sim-section-title {
-  font-size:11px; font-weight:800; letter-spacing:.8px; text-transform:uppercase;
-  color:var(--muted); margin:22px 0 10px; display:flex; align-items:center; gap:10px;
+  font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--text); margin:22px 0 10px; display:flex; align-items:center; gap:10px;
 }
-.sim-section-title::after { content:''; flex:1; height:1px; background:rgba(var(--fg-rgb),.07); }
+.sim-section-title::before { content:''; width:18px; height:4px; border-radius:2px; background:var(--red); }
+.sim-section-title::after { content:''; flex:1; height:1px; background:var(--line); }
 .sim-kpi-row { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
-.sim-kpi { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.06); border-radius:12px; padding:14px 20px; flex:1; min-width:110px; }
-.sim-kpi-val { font-size:22px; font-weight:900; font-variant-numeric:tabular-nums; }
-.sim-kpi-lbl { font-size:10px; color:var(--muted); font-weight:700; letter-spacing:.5px; text-transform:uppercase; margin-top:4px; }
+.sim-kpi { background:var(--c3); border:1px solid var(--line); border-radius:14px; padding:14px 20px; flex:1; min-width:110px; transition:transform .3s var(--ease); }
+.sim-kpi:hover { transform:translateY(-3px); }
+.sim-kpi-val { font-size:22px; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.sim-kpi-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase; margin-top:4px; }
 .ref-table { width:100%; border-collapse:collapse; font-size:12px; }
-.ref-table th { background:rgba(var(--bg-rgb),.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(var(--fg-rgb),.06); white-space:nowrap; }
+.ref-table th { background:rgba(var(--fg-rgb),.035); color:var(--muted); font-size:9.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:10px 12px; text-align:center; border-bottom:1px solid var(--line); white-space:nowrap; }
 .ref-table th:first-child { text-align:left; }
-.ref-table td { padding:9px 12px; border-bottom:1px solid rgba(var(--fg-rgb),.03); text-align:center; font-variant-numeric:tabular-nums; }
-.ref-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
-.ref-table tr:hover td { background:rgba(var(--fg-rgb),.02); }
-.ref-table .tot td { font-weight:800; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; font-size:13px; }
+.ref-table td { padding:10px 12px; border-bottom:1px solid var(--line); text-align:center; font-variant-numeric:tabular-nums; }
+.ref-table td:first-child { text-align:left; font-weight:700; font-size:13px; }
+.ref-table tr:hover td { background:rgba(var(--fg-rgb),.03); }
+.ref-table .tot td { font-weight:800; background:color-mix(in srgb, var(--cyan) 7%, transparent)!important; border-top:1px solid color-mix(in srgb, var(--cyan) 22%, transparent)!important; font-size:13px; }
 .proy-table { width:100%; border-collapse:collapse; }
-.proy-table th { background:rgba(var(--bg-rgb),.7); color:var(--muted); font-size:9px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; padding:9px 12px; text-align:center; border-bottom:1px solid rgba(var(--fg-rgb),.06); white-space:nowrap; }
+.proy-table th { background:rgba(var(--fg-rgb),.035); color:var(--muted); font-size:9.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:10px 12px; text-align:center; border-bottom:1px solid var(--line); white-space:nowrap; }
 .proy-table th:first-child { text-align:left; }
-.proy-table td { padding:8px 10px; border-bottom:1px solid rgba(var(--fg-rgb),.03); text-align:center; vertical-align:middle; }
-.proy-table td:first-child { text-align:left; font-weight:800; font-size:13px; }
-.proy-table .tot td { font-weight:800; font-size:13px; background:rgba(0,240,255,.04)!important; border-top:1px solid rgba(0,240,255,.1)!important; }
+.proy-table td { padding:9px 10px; border-bottom:1px solid var(--line); text-align:center; vertical-align:middle; }
+.proy-table td:first-child { text-align:left; font-weight:700; font-size:13px; }
+.proy-table .tot td { font-weight:800; font-size:13px; background:color-mix(in srgb, var(--cyan) 7%, transparent)!important; border-top:1px solid color-mix(in srgb, var(--cyan) 22%, transparent)!important; }
 .proy-input {
-  width:66px; background:rgba(0,255,136,.08); border:1px solid rgba(0,255,136,.3);
-  color:var(--green); border-radius:7px; padding:5px 8px; font-size:13px; font-weight:800;
+  width:70px; background:color-mix(in srgb, var(--cyan) 10%, transparent); border:1px solid color-mix(in srgb, var(--cyan) 40%, transparent);
+  color:var(--text); border-radius:9px; padding:6px 8px; font-size:13px; font-weight:700;
   text-align:center; font-family:inherit; font-variant-numeric:tabular-nums;
   outline:none; transition:border-color .2s, box-shadow .2s;
 }
-.proy-input:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(0,255,136,.12); }
+.proy-input:focus { border-color:var(--cyan); box-shadow:0 0 0 3px color-mix(in srgb, var(--cyan) 22%, transparent); }
 .proy-calc { font-weight:800; font-variant-numeric:tabular-nums; font-size:13px; }
 
 /* ── CALCULADORA DE LEADS ── */
-.calc-cpl-row { display:flex; align-items:center; gap:10px; padding:14px 22px 4px; flex-wrap:wrap; }
-.calc-cpl-row label { font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; color:var(--muted); }
-.calc-cpl-row input { width:100px; background:rgba(0,240,255,.08); border:1px solid rgba(0,240,255,.3);
-  color:var(--cyan); border-radius:7px; padding:6px 10px; font-size:14px; font-weight:800; text-align:center;
+.calc-cpl-row { display:flex; align-items:center; gap:10px; padding:16px 22px 4px; flex-wrap:wrap; }
+.calc-cpl-row label { font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.calc-cpl-row input { width:104px; background:color-mix(in srgb, var(--cyan) 10%, transparent); border:1px solid color-mix(in srgb, var(--cyan) 40%, transparent);
+  color:var(--text); border-radius:9px; padding:7px 10px; font-size:14px; font-weight:700; text-align:center;
   font-family:inherit; outline:none; }
-.calc-cpl-row input:focus { box-shadow:0 0 0 3px rgba(0,240,255,.12); }
-.calc-reset-btn { background:none; border:1px solid rgba(var(--fg-rgb),.15); color:var(--muted);
-  padding:6px 12px; border-radius:7px; font-size:11px; font-weight:700; cursor:pointer; }
-.calc-reset-btn:hover { border-color:var(--cyan); color:var(--cyan); }
+.calc-cpl-row input:focus { box-shadow:0 0 0 3px color-mix(in srgb, var(--cyan) 22%, transparent); }
+.calc-reset-btn { background:none; border:1px solid var(--line); color:var(--muted);
+  padding:7px 14px; border-radius:99px; font-size:11px; font-weight:600; cursor:pointer; font-family:inherit; transition:.2s; }
+.calc-reset-btn:hover { border-color:var(--red); color:var(--red); }
 .calc-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:16px 22px 22px; }
 @media(max-width:760px){ .calc-grid{grid-template-columns:1fr} }
-.calc-box { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.07); border-radius:12px; padding:18px 20px; text-align:center; }
-.calc-box label { display:block; font-size:11px; font-weight:800; letter-spacing:.3px; color:var(--muted); margin-bottom:10px; }
-.calc-box input[type=number] { width:100%; background:rgba(var(--fg-rgb),.04); border:1px solid rgba(var(--fg-rgb),.12);
-  color:var(--text); padding:12px 14px; border-radius:9px; font-size:20px; font-weight:800; font-family:inherit;
-  text-align:center; outline:none; font-variant-numeric:tabular-nums; }
-.calc-box input[type=number]:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,240,255,.12); }
-.calc-arrow { font-size:12px; color:var(--dim); margin:12px 0 6px; }
-.calc-result { font-size:26px; font-weight:800; font-variant-numeric:tabular-nums; }
-.vs-chip { font-size:10px; font-weight:800; padding:2px 8px; border-radius:5px; margin-left:4px; vertical-align:middle; }
-.vs-ok  { background:rgba(0,255,136,.15); color:var(--green); }
-.vs-bad { background:rgba(224,32,32,.15);  color:var(--pink); }
+.calc-box { background:var(--c3); border:1px solid var(--line); border-radius:14px; padding:18px 20px; text-align:center; }
+.calc-box label { display:block; font-size:11.5px; font-weight:600; letter-spacing:.02em; color:var(--muted); margin-bottom:10px; }
+.calc-box input[type=number] { width:100%; background:rgba(var(--fg-rgb),.05); border:1px solid var(--line);
+  color:var(--text); padding:12px 14px; border-radius:11px; font-size:20px; font-weight:800; font-family:inherit;
+  text-align:center; outline:none; font-variant-numeric:tabular-nums; transition:border-color .2s, box-shadow .2s; }
+.calc-box input[type=number]:focus { border-color:var(--cyan); box-shadow:0 0 0 3px color-mix(in srgb, var(--cyan) 22%, transparent); }
+.calc-arrow { font-size:12px; color:var(--muted); margin:12px 0 6px; }
+.calc-result { font-size:28px; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.vs-chip { font-size:10px; font-weight:700; padding:2px 8px; border-radius:99px; margin-left:4px; vertical-align:middle; }
+.vs-ok  { background:color-mix(in srgb, var(--green) 15%, transparent); color:var(--green); }
+.vs-bad { background:color-mix(in srgb, var(--pink) 15%, transparent);  color:var(--pink); }
 
 /* ── CHURN RECOVERY ── */
 .churn-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:4px 0; }
 @media(max-width:900px){ .churn-grid { grid-template-columns:1fr; } }
 .churn-card {
-  background:var(--c3); border:1px solid rgba(var(--fg-rgb),.06); border-radius:14px;
+  background:var(--c3); border:1px solid var(--line); border-radius:16px;
   padding:18px 20px; position:relative; overflow:hidden;
-  transition:transform .25s, box-shadow .25s;
+  transition:transform .3s var(--ease);
 }
-.churn-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(0,0,0,.4); }
-.churn-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--cc); box-shadow:0 0 10px var(--cc); }
-.churn-name { font-size:11px; font-weight:800; letter-spacing:.7px; text-transform:uppercase; color:var(--cc); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+.churn-card:hover { transform:translateY(-4px); }
+.churn-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--cc); transform-origin:left; animation:tiraIn 1s var(--ease) .3s both; }
+.churn-name { font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--cc); margin-bottom:14px; display:flex; align-items:center; gap:8px; }
 .churn-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
-.churn-label { font-size:11px; color:var(--muted); font-weight:600; }
+.churn-label { font-size:11.5px; color:var(--muted); font-weight:500; }
 .churn-val { font-size:15px; font-weight:800; font-variant-numeric:tabular-nums; }
 .churn-bar-wrap { margin-top:14px; }
-.churn-bar-track { height:8px; border-radius:99px; background:rgba(var(--fg-rgb),.06); overflow:hidden; margin-bottom:6px; }
-.churn-bar-fill { height:100%; border-radius:99px; transition:width .9s cubic-bezier(.22,1,.36,1); animation:barGrow .9s cubic-bezier(.22,1,.36,1) both; }
+.churn-bar-track { height:8px; border-radius:99px; background:rgba(var(--fg-rgb),.07); overflow:hidden; margin-bottom:6px; }
+.churn-bar-fill { height:100%; border-radius:99px; transition:width .9s var(--ease); animation:barGrow 1.1s var(--ease) both; }
 .churn-pct-label { display:flex; justify-content:space-between; font-size:11px; color:var(--muted); }
-.churn-status { font-size:12px; font-weight:800; }
+.churn-status { font-size:12px; font-weight:700; }
 .churn-total {
-  margin-top:16px; padding:14px 18px; border-radius:10px;
-  background:rgba(0,240,255,.04); border:1px solid rgba(0,240,255,.1);
+  margin-top:16px; padding:15px 18px; border-radius:12px;
+  background:color-mix(in srgb, var(--cyan) 6%, transparent); border:1px solid color-mix(in srgb, var(--cyan) 18%, transparent);
   display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
 }
 .churn-total-item { text-align:center; }
 .churn-total-val { font-size:20px; font-weight:800; font-variant-numeric:tabular-nums; }
-.churn-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.5px; text-transform:uppercase; margin-top:2px; }
+.churn-total-lbl { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase; margin-top:2px; }
 
 /* ── SUC CARDS ── */
-.suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:14px; }
+.suc-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:16px; }
 @media (max-width:900px) { .suc-cards { grid-template-columns:1fr; } }
 .suc-card {
-  background:var(--c1); border:1px solid rgba(var(--fg-rgb),.05); border-radius:var(--r);
-  overflow:hidden; position:relative;
-  transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s, border-color .3s;
-  animation: cardIn .5s cubic-bezier(.22,1,.36,1) both;
+  background:var(--c1); border:1px solid var(--line); border-radius:var(--r);
+  overflow:hidden; position:relative; box-shadow:var(--shadow);
+  transition:transform .35s var(--ease), border-color .35s;
+  animation: cardIn .6s var(--ease) both;
 }
-.suc-card:nth-child(1){animation-delay:.1s}
-.suc-card:nth-child(2){animation-delay:.2s}
-.suc-card:nth-child(3){animation-delay:.3s}
-.suc-card:hover { transform:translateY(-6px); border-color:var(--sc); box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 25px var(--sg); }
-.suc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--sc); box-shadow:0 0 12px var(--sc); }
+.suc-card:nth-child(1){animation-delay:.08s}
+.suc-card:nth-child(2){animation-delay:.16s}
+.suc-card:nth-child(3){animation-delay:.24s}
+.suc-card:hover { transform:translateY(-6px); border-color:color-mix(in srgb, var(--sc) 50%, transparent); }
+.suc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--sc); transform-origin:left; animation:tiraIn 1s var(--ease) .3s both; }
 .suc-card-head {
-  padding:16px 18px; border-bottom:1px solid rgba(var(--fg-rgb),.05);
+  padding:16px 18px; border-bottom:1px solid var(--line);
   display:flex; align-items:center; gap:12px;
-  background:linear-gradient(90deg, var(--sb,rgba(0,240,255,.06)), transparent 70%);
+  background:color-mix(in srgb, var(--sc) 9%, transparent);
 }
-.suc-dot { width:11px; height:11px; border-radius:50%; background:var(--sc); flex-shrink:0; box-shadow:0 0 12px var(--sc); animation:dotPulse 2.5s ease-in-out infinite; }
-@keyframes dotPulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:.65} }
-.suc-name { font-size:15px; font-weight:900; letter-spacing:.5px; text-transform:uppercase; color:var(--sc); }
+.suc-dot { width:11px; height:11px; border-radius:50%; background:var(--sc); flex-shrink:0; animation:dotPulse 2.4s ease-in-out infinite; }
+@keyframes dotPulse { 0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--sc) 60%, transparent)} 70%{box-shadow:0 0 0 9px transparent} 100%{box-shadow:0 0 0 0 transparent} }
+.suc-name { font-size:15px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--sc); }
 .suc-body { padding:18px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
 .suc-stat { text-align:center; }
-.suc-stat-val { font-family:'Gilroy','Montserrat',sans-serif; font-size:28px; font-weight:800; line-height:1.1; }
-.suc-stat-lbl { font-size:9px; font-weight:700; color:var(--dim); text-transform:uppercase; letter-spacing:.6px; margin-top:2px; }
-.suc-foot { padding:12px 18px; border-top:1px solid rgba(var(--fg-rgb),.05); display:flex; align-items:center; justify-content:space-between; background:rgba(0,0,0,.25); }
-.conv-label { font-size:10px; color:var(--dim); font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
-.conv-rate { font-family:'Gilroy','Montserrat',sans-serif; font-size:24px; font-weight:800; color:var(--green); text-shadow:0 0 16px rgba(0,255,136,.4); }
+.suc-stat-val { font-family:'Poppins',sans-serif; font-size:28px; font-weight:800; line-height:1.1; letter-spacing:-.02em; text-shadow:none!important; font-variant-numeric:tabular-nums; }
+.suc-stat-lbl { font-size:9.5px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.1em; margin-top:3px; }
+.suc-foot { padding:12px 18px; border-top:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; background:rgba(var(--fg-rgb),.03); }
+.conv-label { font-size:10px; color:var(--muted); font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+.conv-rate { font-family:'Poppins',sans-serif; font-size:24px; font-weight:800; color:var(--green); }
 
 /* ── SELECT ── */
-select.filter { background:var(--c3); border:1px solid rgba(var(--fg-rgb),.1); color:var(--text); padding:6px 14px; border-radius:8px; font-size:11px; font-weight:700; letter-spacing:.3px; cursor:pointer; }
+select.filter { background:var(--c3); border:1px solid var(--line); color:var(--text); padding:7px 14px; border-radius:99px; font-size:11.5px; font-weight:600; font-family:inherit; cursor:pointer; }
 select.filter:focus { outline:none; border-color:var(--cyan); }
 
-.empty { text-align:center; color:var(--dim); padding:36px; font-size:12px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; }
+.empty { text-align:center; color:var(--muted); padding:36px; font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
 /* scrollbar */
-::-webkit-scrollbar { width:4px; height:4px; }
+::-webkit-scrollbar { width:6px; height:6px; }
 ::-webkit-scrollbar-track { background:var(--bg); }
 ::-webkit-scrollbar-thumb { background:var(--c3); border-radius:99px; }
-::-webkit-scrollbar-thumb:hover { background:var(--cyan); }
+::-webkit-scrollbar-thumb:hover { background:var(--red); }
+
+/* Celular */
+@media (max-width:760px) {
+  header { padding: 0 16px; }
+  .logo img { height: 30px; }
+  .live-badge, #updated, .mes-selector label { display: none; }
+  .hero { padding: 24px 16px 18px; }
+  .hero-title { font-size: 36px; }
+  .hero-prog { min-width: 0; width: 100%; }
+  nav { padding: 0 8px; }
+  .pane { padding: 18px 16px 48px; }
+  .funnel { flex-wrap: wrap; }
+  .funnel-step { flex: 1 1 45%; }
+  .funnel-step::after { display: none; }
+  .ml-label { min-width: 130px; }
+}
+
+/* Si la persona pidió menos movimiento en su sistema, se respeta */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
 </style>
 </head>
 <body>
@@ -523,7 +651,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <img src="logo.jpg" alt="Inglés YA">
+    <img src="logo_blanco.png" alt="Inglés YA">
   </div>
   <div class="header-right">
     <div class="mes-selector">
@@ -537,6 +665,20 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
   </div>
 </header>
+
+<!-- PORTADA -->
+<section class="hero">
+  <div>
+    <div class="hero-kicker">Dashboard · Marketing y ventas</div>
+    <h1 class="hero-title" id="hero-mes">—</h1>
+    <p class="hero-sub">Deja de estudiar inglés. <b>Empieza a hablarlo.</b></p>
+  </div>
+  <div class="hero-prog">
+    <div class="hero-prog-top"><span class="hero-prog-lbl" id="hero-prog-lbl">Avance del mes</span><span class="hero-prog-val" id="hero-prog-val">—</span></div>
+    <div class="hero-prog-track"><div class="hero-prog-fill" id="hero-prog-fill"></div></div>
+    <div class="hero-prog-foot" id="hero-prog-foot">—</div>
+  </div>
+</section>
 
 <!-- NAV -->
 <nav>
@@ -685,7 +827,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     </div>
 
     <!-- RESUMEN TOTAL -->
-    <div id="sim-total" style="margin-top:16px;padding:18px 22px;border-radius:12px;background:rgba(0,240,255,.04);border:1px solid rgba(0,240,255,.12);display:flex;align-items:center;gap:32px;flex-wrap:wrap"></div>
+    <div id="sim-total" style="margin-top:16px;padding:18px 22px;border-radius:12px;background:color-mix(in srgb, var(--cyan) 4%, transparent);border:1px solid color-mix(in srgb, var(--cyan) 12%, transparent);display:flex;align-items:center;gap:32px;flex-wrap:wrap"></div>
   </div>
 </div>
 
@@ -736,21 +878,23 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     .inc-field.full{grid-column:1/-1}
     /* Botones grandes (pills) */
     .inc-pills{display:flex;flex-wrap:wrap;gap:8px}
-    .inc-pill{border:1.5px solid rgba(var(--fg-rgb),.12);background:var(--c3);color:var(--text);padding:11px 16px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;transition:.12s;user-select:none}
+    .inc-pill{border:1.5px solid rgba(var(--fg-rgb),.12);background:var(--c3);color:var(--text);padding:11px 18px;border-radius:99px;font-size:13px;font-weight:600;cursor:pointer;transition:transform .2s var(--ease),background .2s,border-color .2s;user-select:none}
+    .inc-pill:active{transform:scale(.96)}
     .inc-pill:hover{border-color:rgba(var(--fg-rgb),.35)}
-    .inc-pill.on{color:#04121a}
-    .inc-btn{background:linear-gradient(135deg,var(--cyan),#0bb);color:#04121a;border:none;padding:15px 34px;border-radius:11px;font-size:14px;font-weight:800;letter-spacing:.5px;cursor:pointer;text-transform:uppercase}
+    .inc-pill.on{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.4)}
+    .inc-btn{background:var(--red);color:#fff;border:none;padding:15px 34px;border-radius:99px;transition:transform .25s var(--ease),box-shadow .25s;font-size:14px;font-weight:800;letter-spacing:.5px;cursor:pointer;text-transform:uppercase}
+    .inc-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 12px 26px color-mix(in srgb, var(--red) 35%, transparent)}
     .inc-btn:disabled{opacity:.45;cursor:not-allowed}
     .inc-msg{font-size:13px;font-weight:800;margin-left:14px}
-    .inc-warn{background:rgba(255,153,0,.12);border:1px solid var(--orange);color:var(--orange);padding:9px 14px;border-radius:9px;font-size:12px;font-weight:700;margin-top:4px;display:none}
+    .inc-warn{background:color-mix(in srgb, var(--orange) 12%, transparent);border:1px solid var(--orange);color:var(--orange);padding:9px 14px;border-radius:9px;font-size:12px;font-weight:700;margin-top:4px;display:none}
     .inc-count-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
     .inc-count{background:var(--c3);border:1px solid rgba(var(--fg-rgb),.07);border-radius:12px;padding:14px 12px;text-align:center}
     .inc-count .n{font-size:26px;font-weight:800;line-height:1}
     .inc-count .l{font-size:9px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
     .inc-chip{padding:3px 10px;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
     .inc-est{padding:4px 11px;border-radius:20px;font-size:10px;font-weight:800;cursor:pointer;border:1.5px solid;white-space:nowrap;user-select:none}
-    .inc-est.pend{color:var(--orange);border-color:var(--orange);background:rgba(255,153,0,.1)}
-    .inc-est.aten{color:var(--green);border-color:var(--green);background:rgba(0,255,136,.1)}
+    .inc-est.pend{color:var(--orange);border-color:var(--orange);background:color-mix(in srgb, var(--orange) 10%, transparent)}
+    .inc-est.aten{color:var(--green);border-color:var(--green);background:color-mix(in srgb, var(--green) 10%, transparent)}
     .inc-wa{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;background:rgba(37,211,102,.15);color:#25D366;text-decoration:none;font-size:15px}
     .inc-wa:hover{background:rgba(37,211,102,.3)}
   </style>
@@ -906,21 +1050,21 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="gc-read"><b>Cómo leerlo:</b> es el número que de verdad importa al negocio. Todo lo demás (leads, citas, visitas) solo sirve si termina en inscritos.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#ff4757">
+    <div class="guia-card" style="--gc:var(--a2)">
       <h3>🎯 CPA (pauta) — Costo por Adquisición <span class="gc-tag">Lo que cuesta un alumno</span></h3>
       <div class="gc-def">Cuánto costó <b>en publicidad</b> cada alumno nuevo inscrito. Es el CPL llevado hasta el final del embudo — la misma idea que el "CPI" que se explica más abajo (sección "Métricas que combinan números"), sólo que aquí vive como tarjeta propia del Resumen porque es la métrica que de verdad dice si el negocio gana o pierde dinero por cada alumno.</div>
-      <div class="gc-calc">CPA (pauta) = Gasto de Meta Ads ÷ Inscritos.<br>Ej: $17,925 ÷ 16 inscritos = <b>$1,120 por alumno</b> (agosto).</div>
+      <div class="gc-calc">CPA (pauta) = Gasto de Meta Ads ÷ Inscritos.<br>Ej: $35,267 ÷ 20 inscritos = <b>$1,763 por alumno</b> (octubre 2026).</div>
       <div class="gc-read"><b>Cómo leerlo:</b> compáralo siempre contra el <b>Ticket Promedio</b> (lo que paga el alumno). El anillo muestra ese margen: entre más lleno, más lejos está el CPA del ticket (bien). Si el CPA se acerca o supera el ticket, cada alumno nuevo cuesta casi lo mismo — o más — de lo que paga, y ni sumando varios meses de clase se recupera esa inversión.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#c026d3">
+    <div class="guia-card" style="--gc:var(--a4)">
       <h3>💼 CPA Total <span class="gc-tag">El costo real completo</span></h3>
       <div class="gc-def">La versión completa del CPA: además de la pauta, suma los <b>sueldos de Fabián y Yolanda</b> (todo el equipo que convierte un lead en alumno). Responde "¿cuánto nos cuesta de verdad conseguir un alumno?", no sólo lo que se le paga a Meta.</div>
       <div class="gc-calc">CPA Total = (Meta Ads + Fabián + Yolanda) ÷ Inscritos.<br>Siempre es mayor o igual que el CPA de pauta, porque suma más gastos arriba del mismo número de inscritos.</div>
       <div class="gc-read"><b>Cómo leerlo:</b> úsalo para decisiones de negocio (¿conviene el modelo actual?) y el CPA de pauta para decisiones de campaña (¿está cara la publicidad?). Sólo aparece cuando Vic ya cerró el bloque de gastos del mes en el sheet — si dice "Sin cierre de gastos", todavía no está disponible.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#2dd4bf">
+    <div class="guia-card" style="--gc:var(--green)">
       <h3>📈 Conversión Lead → Inscrito <span class="gc-tag">Termómetro de la operación</span></h3>
       <div class="gc-def">De cada 100 personas que escriben (leads), <b>cuántas terminan pagando su inscripción</b>. Junta en un solo número todo lo que pasa entre el primer mensaje y la firma: Call Center, citas, visitas y cierre en el plantel.</div>
       <div class="gc-calc">Conv L→I = (Inscritos ÷ Leads) × 100.<br>Su inverso dice cuántos leads hacen falta para 1 inscrito: Leads ÷ Inscritos. Ej: 388 leads ÷ 16 inscritos = <b>~24 leads por cada inscrito</b> (agosto).</div>
@@ -979,7 +1123,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="guia-section-title">💰 Asistencia, Ticket y Gastos (tarjetas nuevas — pedido de Vic)</div>
   <div class="guia-grid">
 
-    <div class="guia-card" style="--gc:#00c2a8">
+    <div class="guia-card" style="--gc:var(--a1)">
       <h3>🚶 % Asistencia <span class="gc-tag">Porcentaje</span></h3>
       <div class="gc-def">De las citas agendadas en cada sucursal, <b>cuántas efectivamente se presentaron</b> al plantel (no solo agendaron, sino que llegaron).</div>
       <div class="gc-calc">% Asistencia = Asistieron ÷ Total de citas agendadas × 100<br>Cuenta TODAS las citas agendadas, incluidas las que aún no tienen SÍ/NO capturado en la columna ASIS (esas cuentan como no confirmadas, no se excluyen) — así el % no se ve inflado por captura atrasada.</div>
@@ -987,7 +1131,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="gc-src">📋 <b>Fuente:</b> Hoja Agenda de Google Sheets (una pestaña por sucursal: LIN / IZT / ERM), columna "ASIS" que llena el equipo de cada plantel cita por cita.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#00c2a8">
+    <div class="guia-card" style="--gc:var(--a1)">
       <h3>🎓 Asistió → Inscrito <span class="gc-tag">Porcentaje</span></h3>
       <div class="gc-def">De los que <b>sí se presentaron</b> a su cita, <b>cuántos terminaron inscribiéndose</b>.</div>
       <div class="gc-calc">Asistió → Inscrito = Inscritos ÷ Asistieron × 100</div>
@@ -995,7 +1139,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="gc-src">📋 <b>Fuente:</b> combina la columna "ASIS" de la Hoja Agenda con los inscritos del sheet de seguimiento diario, por sucursal.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#ffb800">
+    <div class="guia-card" style="--gc:var(--orange)">
       <h3>🎟️ Ticket Promedio <span class="gc-tag">Dinero</span></h3>
       <div class="gc-def">Cuánto paga <b>en promedio</b> cada alumno que se inscribe ese mes.</div>
       <div class="gc-calc">Ticket Prom = Ingresos del mes ÷ Inscritos del mes.<br>Si Vic ya escribió el número exacto en la celda "TICKET PROM" del sheet, se usa ese; si no, el dashboard lo calcula solo con esa fórmula.</div>
@@ -1003,7 +1147,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <div class="gc-src">📋 <b>Fuente:</b> Sheet de seguimiento diario (pestaña del mes), columna "PAGO POR ALUMNO" por sucursal + celda "TICKET PROM" del bloque de cierre de mes.</div>
     </div>
 
-    <div class="guia-card" style="--gc:#E02020">
+    <div class="guia-card" style="--gc:var(--red)">
       <h3>💰 Finanzas del Mes <span class="gc-tag">Ingresos / Gastos / Utilidad</span></h3>
       <div class="gc-def">Compara lo que <b>entró</b> (Ingresos, o sea la suma de lo que pagaron los inscritos) contra lo que <b>salió</b> (Gastos: Meta Ads + sueldo de Fabián + sueldo de Yolanda) para dar la <b>Utilidad</b> del mes.</div>
       <div class="gc-calc">Utilidad = Ingresos − (Meta Ads + Fabián + Yolanda)</div>
@@ -1030,7 +1174,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
   </div>
 
-  <div class="guia-intro" style="margin-top:18px;background:linear-gradient(135deg,rgba(0,255,136,.07),rgba(0,240,255,.05));border-color:rgba(0,255,136,.2)">
+  <div class="guia-intro" style="margin-top:18px;background:linear-gradient(135deg,color-mix(in srgb, var(--green) 7%, transparent),color-mix(in srgb, var(--cyan) 5%, transparent));border-color:color-mix(in srgb, var(--green) 20%, transparent)">
     <h2 style="font-size:15px">💡 La idea en una frase</h2>
     <p>La <b>pauta</b> (CPL, Leads, Gasto) trae interesados baratos. El <b>Call Center y el plantel</b> (Citas, Visitas, Inscritos) los convierten en alumnos. Cuando un número se ve mal, esta guía ayuda a saber <b>en cuál de las dos partes</b> está el problema — y casi siempre, cuando el CPL es barato pero hay pocos inscritos, el cuello de botella está en la operación, no en los anuncios.</p>
   </div>
@@ -1067,7 +1211,9 @@ function applyTheme(theme){
   localStorage.setItem('ingles_theme', theme);
   const btn = document.getElementById('theme-toggle');
   if (btn) btn.textContent = theme==='light' ? '🌙' : '☀️';
-  INC_COLOR.LINDAVISTA = cssVar('--cyan');
+  INC_COLOR.LINDAVISTA = cssVar('--s-lin');
+  INC_COLOR.IZTACALCO = cssVar('--s-izt');
+  INC_COLOR.ERMITA = cssVar('--s-erm');
   INC_TIPO_COLOR['Ya inscrito'] = cssVar('--green');
   if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
   if (incBuilt) incRenderDona(INC_DATA.filter(i=>{
@@ -1095,12 +1241,12 @@ document.querySelectorAll('.tab').forEach(tab => {
 
 // ── INCIDENCIAS CC ────────────────────────────────────────────────────────────
 const INCIDENCIAS_URL = "https://script.google.com/macros/s/AKfycbw45FRaGue1peFp4UHwUbU_THQh2M23imtu8OCYGQosLwOHg_0bSoy8NSdTC88x0jYyjg/exec";
-const INC_COLOR = { ERMITA:'#E02020', LINDAVISTA:'#00f0ff', IZTACALCO:'#1B46B4' };
+const INC_COLOR = { ERMITA:'#FF6461', LINDAVISTA:'#8EB0E8', IZTACALCO:'#B2B2B2' };  // applyTheme los ajusta al tema
 const INC_PLANTELES = ['ERMITA','LINDAVISTA','IZTACALCO'];
 const INC_TIPOS = ['Le queda lejos','Foráneo','Fuera de rango','Número equivocado','Ya inscrito','No contesta','Otro'];
 const INC_TIPO_COLOR = {
-  'Le queda lejos':'#ffd400','Foráneo':'#ff9900','Fuera de rango':'#ff0066','Número equivocado':'#7b2ff7',
-  'Ya inscrito':'#00ff88','No contesta':'#7a78a0','Otro':'#4d7fff'
+  'Le queda lejos':'#E0A100','Foráneo':'#E8792B','Fuera de rango':'#E73331','Número equivocado':'#7C5CC4',
+  'Ya inscrito':'#34D27F','No contesta':'#8A94A6','Otro':'#1951A0'
 };
 // Texto del botón: aclara la diferencia entre "lejos" (CDMX/Edomex) y "foráneo" (otro estado)
 const INC_TIPO_LABEL = { 'Le queda lejos':'Le queda lejos · CDMX/Edomex', 'Foráneo':'Foráneo · otro estado' };
@@ -1450,7 +1596,7 @@ function simInit() {
     const curLeads = leadsXSede();
     const thead = `<thead><tr>
       <th>Sede</th>
-      <th>Leads junio</th>
+      <th>Leads del mes</th>
       <th>% Agend<br><small style="font-weight:600;letter-spacing:0">(lead→cita)</small></th>
       <th>% Visita<br><small style="font-weight:600;letter-spacing:0">(cita→visita)</small></th>
       <th>CPL</th>
@@ -1575,13 +1721,43 @@ function monthProgress() {
   return (now.getDate()/days)*100;
 }
 
+// ¿El mes que se está viendo es el mes en curso?
+function mesEnCurso() {
+  const hoy = new Date();
+  const actual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
+  return !D.mes_id || D.mes_id === actual;
+}
+
+// Asistió → Inscrito con una sola fuente (Hoja Agenda): de los que llegaron, cuántos se inscribieron.
+// Antes se dividían los inscritos del Call Center entre los "asistió" de la Agenda (salía 1000%).
+function asistioInscrito(suc) {
+  const llegaron = (D.agenda||[]).filter(r => r.asistio === true && (!suc || r.sucursal === suc));
+  const insc = llegaron.filter(r => r.inscrito === true).length;
+  return { asis: llegaron.length, insc, txt: llegaron.length ? pct(insc, llegaron.length) : '—' };
+}
+
+// Leads por sucursal registrados por el Call Center (Sheet). Meta no separa por sucursal:
+// la campaña es una sola para las 3, así que el avance contra la meta se mide con estos.
+function leadsCC() {
+  const suc = D.sucursales || {};
+  const r = { ERMITA: suc.ERMITA?.leads || 0, LINDAVISTA: suc.LINDAVISTA?.leads || 0, IZTACALCO: suc.IZTACALCO?.leads || 0 };
+  return (r.ERMITA + r.LINDAVISTA + r.IZTACALCO) ? r : leadsXSede();
+}
+
+// Presupuesto diario real: si la campaña reparte por conjunto (presupuesto de campaña en 0), se suman sus conjuntos activos
+function presupuestoCamp(c) {
+  if (c.presupuesto_dia > 0 || c.status !== 'ACTIVE') return c.presupuesto_dia || 0;
+  return (D.adsets||[]).filter(a => a.campaign_id === c.id && (a.effective_status||a.status) === 'ACTIVE')
+    .reduce((t, a) => t + (a.presupuesto_dia||0), 0);
+}
+
 // KPI CONFIG
 function costoXU(gasto, n){ return n>0 ? `${$m(gasto/n)} c/u` : '—'; }
 
 function renderKpis() {
   document.getElementById('updated').textContent = `${D.actualizado} · ${D.mes}`;
   const k = D.kpis;
-  const mp = monthProgress();
+  const mp = mesEnCurso() ? monthProgress() : 100;
   const agendadosN = (D.agenda||[]).length;
   const cpa = k.inscritos>0 ? k.gasto/k.inscritos : 0;
   const cpaRingPct = k.ticket_promedio>0 ? Math.max(0,Math.min(100, 100-(cpa/k.ticket_promedio*100))) : 0;
@@ -1591,18 +1767,18 @@ function renderKpis() {
   const convLI = k.leads_meta>0 ? (k.inscritos/k.leads_meta*100) : 0;
   const leadsXInscrito = k.inscritos>0 ? Math.round(k.leads_meta/k.inscritos) : 0;
   const cards = [
-    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'var(--cyan)', glow:'rgba(0,240,255,.14)',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
-    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'#E02020', glow:'rgba(224,32,32,.14)', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
-    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'#ff9900', glow:'rgba(255,153,0,.12)', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
-    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'#7b2ff7', glow:'rgba(123,47,247,.14)',ringPct: pctN(k.citas,k.leads_meta), sub: costoXU(k.gasto,k.citas), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
-    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'#ff0066', glow:'rgba(255,0,102,.12)', ringPct: pctN(k.visitas,k.leads_meta), sub: costoXU(k.gasto,k.visitas), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
-    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'var(--green)', glow:'rgba(0,255,136,.14)', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
-    { icon:'🎯', lbl:'CPA (pauta)', val:cpa,          m:true,  color:'#ff4757', glow:'rgba(255,71,87,.14)', ringPct: cpaRingPct, sub: `Ticket prom: ${$m(k.ticket_promedio||0)}`, tip:'Costo por Adquisición de Cliente = Gasto de pauta (Meta Ads) ÷ Inscritos. Es lo que cuesta "comprar" cada alumno nuevo sólo con publicidad. El anillo muestra qué tan lejos está del Ticket Promedio: si el CPA se acerca o supera el ticket, se pierde dinero por alumno. Ver pestaña 📖 Guía.' },
-    { icon:'💼', lbl:'CPA Total',   val:cpaTotal,     m:true,  color:'#c026d3', glow:'rgba(192,38,211,.14)', ringPct: cpaTotalRingPct, sub: gastosTotalOp ? `Incl. sueldos CC` : 'Sin cierre de gastos', tip:'CPA Total = (Meta Ads + sueldo Fabián + sueldo Yolanda) ÷ Inscritos. Es el costo REAL de conseguir cada alumno, sumando toda la operación de marketing y ventas — no sólo la pauta. Compáralo también contra el Ticket Promedio. Ver pestaña 📖 Guía.' },
-    { icon:'📈', lbl:'Conv. L→I',   val:convLI,       m:false, pct:true, color:'#2dd4bf', glow:'rgba(45,212,191,.14)', ringPct: pctN(k.inscritos, k.leads_meta), sub: leadsXInscrito?`1 inscrito cada ${leadsXInscrito} leads`:'—', tip:'Conversión de Leads a Inscritos = Inscritos ÷ Leads × 100. De cada 100 personas que escriben, cuántas terminan pagando su inscripción. El anillo muestra el % real (suele ser bajo, es normal); abajo se muestra cuántos leads en promedio hacen falta para lograr 1 inscrito. Ver pestaña 📖 Guía.' },
-    { icon:'📋', lbl:'Agendados',  val:agendadosN, m:false, color:'#a855f7', glow:'rgba(168,85,247,.14)', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, agendadosN), sub: costoXU(k.gasto,agendadosN), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
-    { icon:'🚶', lbl:'% Asistencia', val:(k.tasa_asistencia||0), m:false, pct:true, color:'#00c2a8', glow:'rgba(0,194,168,.14)', ringPct:(k.tasa_asistencia||0), sub:`${$n(k.asistieron||0)} de ${$n(k.citas_agendadas||0)} agendados`, tip:`De todas las citas agendadas en la Hoja de Agenda, cuántas efectivamente llegaron (Asistieron ÷ Total agendadas). ${$n(k.sin_dato_asistencia||0)} citas del mes todavía no tienen el dato SÍ/NO capturado y cuentan como no confirmadas. Conversión Asistió→Inscrito: ${(k.conv_asistio_inscrito||0).toFixed(1)}%.` },
-    { icon:'🎟️', lbl:'Ticket Prom.', val:(k.ticket_promedio||0), m:true, color:'#ffb800', glow:'rgba(255,184,0,.14)', ringPct: pctN(k.ticket_promedio, 3500), sub:`Ingresos: ${$m(k.ingresos||0)}`, tip:'Monto promedio que paga cada alumno inscrito (Ingresos del mes ÷ Inscritos). Viene de la columna PAGO POR ALUMNO que Vic captura en el sheet de seguimiento.' },
+    { icon:'💬', lbl:'Leads Meta',  val:k.leads_meta, m:false, color:'var(--a1)', glow:'',  ringPct: mp, tip:'Personas que escribieron por WhatsApp desde los anuncios de Meta este mes. Cada mensaje es un posible alumno interesado (aún no es alumno). Ver pestaña 📖 Guía.' },
+    { icon:'💸', lbl:'Gasto Total', val:k.gasto,      m:true,  color:'var(--a2)', glow:'', ringPct: mp, tip:'Dinero invertido en publicidad (pauta) en Meta este mes. Hay que leerlo siempre junto a los leads e inscritos que trajo. Ver pestaña 📖 Guía.' },
+    { icon:'📊', lbl:'CPL',         val:k.cpl,        m:true,  color:'var(--orange)', glow:'', ringPct: Math.max(0,Math.min(100,(200-k.cpl)/200*100)), tip:'Costo por Lead = Gasto ÷ Leads. Cuánto cuesta conseguir un interesado. Barato: <$150 · Regular: $150-$300 · Caro: >$300. Ver pestaña 📖 Guía.' },
+    { icon:'📅', lbl:'Citas',       val:k.citas,      m:false, color:'var(--a3)', glow:'',ringPct: pctN(k.citas,k.leads_meta), sub: costoXU(k.gasto,k.citas), tip:'Leads a los que el Call Center logró agendar una visita al plantel. Pocas citas con muchos leads = cuello en el Call Center. Ver pestaña 📖 Guía.' },
+    { icon:'🏃', lbl:'Visitas',     val:k.visitas,    m:false, color:'var(--a4)', glow:'', ringPct: pctN(k.visitas,k.leads_meta), sub: costoXU(k.gasto,k.visitas), tip:'Personas que sí asistieron al plantel a su cita. Muchas citas y pocas visitas = la gente agenda pero no llega. Ver pestaña 📖 Guía.' },
+    { icon:'✅', lbl:'Inscritos',   val:k.inscritos,  m:false, color:'var(--green)', glow:'', ringPct: pctN(k.inscritos, D.meta_inscritos_mkt||45), sub: costoXU(k.gasto,k.inscritos), tip:`Alumnos nuevos que se inscribieron y pagaron. Es el resultado final del embudo. Meta de marketing: ${D.meta_inscritos_mkt||45}/mes. Ver pestaña 📖 Guía.` },
+    { icon:'🎯', lbl:'CPA (pauta)', val:cpa,          m:true,  color:'var(--a2)', glow:'', ringPct: cpaRingPct, sub: `Ticket prom: ${$m(k.ticket_promedio||0)}`, tip:'Costo por Adquisición de Cliente = Gasto de pauta (Meta Ads) ÷ Inscritos. Es lo que cuesta "comprar" cada alumno nuevo sólo con publicidad. El anillo muestra qué tan lejos está del Ticket Promedio: si el CPA se acerca o supera el ticket, se pierde dinero por alumno. Ver pestaña 📖 Guía.' },
+    { icon:'💼', lbl:'CPA Total',   val:cpaTotal,     m:true,  color:'var(--a4)', glow:'', ringPct: cpaTotalRingPct, sub: gastosTotalOp ? `Incl. sueldos CC` : 'Sin cierre de gastos', tip:'CPA Total = (Meta Ads + sueldo Fabián + sueldo Yolanda) ÷ Inscritos. Es el costo REAL de conseguir cada alumno, sumando toda la operación de marketing y ventas — no sólo la pauta. Compáralo también contra el Ticket Promedio. Ver pestaña 📖 Guía.' },
+    { icon:'📈', lbl:'Conv. L→I',   val:convLI,       m:false, pct:true, color:'var(--green)', glow:'', ringPct: pctN(k.inscritos, k.leads_meta), sub: leadsXInscrito?`1 inscrito cada ${leadsXInscrito} leads`:'—', tip:'Conversión de Leads a Inscritos = Inscritos ÷ Leads × 100. De cada 100 personas que escriben, cuántas terminan pagando su inscripción. El anillo muestra el % real (suele ser bajo, es normal); abajo se muestra cuántos leads en promedio hacen falta para lograr 1 inscrito. Ver pestaña 📖 Guía.' },
+    { icon:'📋', lbl:'Agendados',  val:agendadosN, m:false, color:'var(--a3)', glow:'', ringPct: pctN((D.agenda||[]).filter(r=>r.inscrito).length, agendadosN), sub: costoXU(k.gasto,agendadosN), tip:'Prospectos con cita registrada en agenda este mes (las 3 sucursales). El anillo muestra el % que terminó inscrito.' },
+    { icon:'🚶', lbl:'% Asistencia', val:(k.tasa_asistencia||0), m:false, pct:true, color:'var(--a1)', glow:'', ringPct:(k.tasa_asistencia||0), sub:`${$n(k.asistieron||0)} de ${$n(k.citas_agendadas||0)} agendados`, tip:`De todas las citas agendadas en la Hoja de Agenda, cuántas efectivamente llegaron (Asistieron ÷ Total agendadas). ${$n(k.sin_dato_asistencia||0)} citas del mes todavía no tienen el dato SÍ/NO capturado y cuentan como no confirmadas. Asistió→Inscrito (Hoja Agenda): ${asistioInscrito().txt} (${asistioInscrito().insc} de ${asistioInscrito().asis} que llegaron).` },
+    { icon:'🎟️', lbl:'Ticket Prom.', val:(k.ticket_promedio||0), m:true, color:'var(--a5)', glow:'', ringPct: pctN(k.ticket_promedio, 3500), sub:`Ingresos: ${$m(k.ingresos||0)}`, tip:'Monto promedio que paga cada alumno inscrito (Ingresos del mes ÷ Inscritos). Viene de la columna PAGO POR ALUMNO que Vic captura en el sheet de seguimiento.' },
   ];
 
   document.getElementById('kpis').innerHTML = cards.map((c,i)=>`
@@ -1633,16 +1809,16 @@ function renderKpis() {
 function renderFunnel() {
   const k = D.kpis;
   const steps = [
-    {l:'Leads',    v:k.leads_meta, tc:'var(--cyan)', bc:'rgba(0,240,255,.12)',  bi:'rgba(0,240,255,.3)'},
-    {l:'Citas',    v:k.citas,      tc:'#7b2ff7', bc:'rgba(123,47,247,.12)', bi:'rgba(123,47,247,.3)'},
-    {l:'Visitas',  v:k.visitas,    tc:'#ff9900', bc:'rgba(255,153,0,.10)',  bi:'rgba(255,153,0,.28)'},
-    {l:'Inscritos',v:k.inscritos,  tc:'var(--green)', bc:'rgba(0,255,136,.12)',  bi:'rgba(0,255,136,.3)'},
+    {l:'Leads',    v:k.leads_meta, tc:'var(--a1)'},
+    {l:'Citas',    v:k.citas,      tc:'var(--a3)'},
+    {l:'Visitas',  v:k.visitas,    tc:'var(--a4)'},
+    {l:'Inscritos',v:k.inscritos,  tc:'var(--green)'},
   ];
   document.getElementById('funnel').innerHTML = steps.map((s,i)=>{
     const p = i>0&&steps[0].v>0?`${((s.v/steps[0].v)*100).toFixed(0)}%`:'';
     return `<div class="funnel-step">
-      <div class="f-pill" style="background:${s.bc};border-color:${s.bi}">
-        <div class="f-val" style="color:${s.tc};text-shadow:0 0 14px ${s.tc}88">${$n(s.v)}</div>
+      <div class="f-pill" style="background:color-mix(in srgb, ${s.tc} 12%, transparent);border-color:color-mix(in srgb, ${s.tc} 35%, transparent)">
+        <div class="f-val" style="color:${s.tc}">${$n(s.v)}</div>
         <div class="f-lbl" style="color:${s.tc}">${s.l}</div>
         ${p?`<div class="f-pct">${p}</div>`:''}
       </div>
@@ -1660,10 +1836,10 @@ function renderFinanzas() {
     return;
   }
   const g = f.gastos || {meta_ads:0, fabian:0, yolanda:0, total:0};
-  const utilColor = f.utilidad >= 0 ? 'var(--green)' : '#E02020';
+  const utilColor = f.utilidad >= 0 ? 'var(--green)' : 'var(--pink)';
   const avisoHTML = f.pendiente_verificar ? `
-    <div style="margin-bottom:14px;padding:12px 14px;border:1px solid #ffb800;border-radius:10px;background:rgba(255,184,0,.08);font-size:13px;line-height:1.5">
-      <div style="font-weight:700;color:#ffb800;margin-bottom:4px">⚠️ PENDIENTE DE VERIFICAR CON VIC</div>
+    <div style="margin-bottom:14px;padding:12px 14px;border:1px solid var(--orange);border-radius:10px;background:color-mix(in srgb, var(--orange) 8%, transparent);font-size:13px;line-height:1.5">
+      <div style="font-weight:700;color:var(--orange);margin-bottom:4px">⚠️ PENDIENTE DE VERIFICAR CON VIC</div>
       <div>${f.nota_verificacion || 'Los montos de este cierre no cuadran, en revisión.'}</div>
     </div>` : '';
   el.innerHTML = `
@@ -1675,11 +1851,11 @@ function renderFinanzas() {
       </div>
       <div class="fin-stat">
         <div class="fin-stat-lbl">Ticket Promedio</div>
-        <div class="fin-stat-val" style="color:#ffb800">${$m(f.ticket_promedio)}</div>
+        <div class="fin-stat-val" style="color:var(--orange)">${$m(f.ticket_promedio)}</div>
       </div>
       <div class="fin-stat">
         <div class="fin-stat-lbl">Gastos Totales</div>
-        <div class="fin-stat-val" style="color:#E02020">${$m(g.total)}</div>
+        <div class="fin-stat-val" style="color:var(--red)">${$m(g.total)}</div>
       </div>
       <div class="fin-stat">
         <div class="fin-stat-lbl">Utilidad</div>
@@ -1696,9 +1872,9 @@ function renderFinanzas() {
 }
 
 const SUC_COLOR = {
-  ERMITA:     '#E02020',
-  LINDAVISTA: 'var(--cyan)',
-  IZTACALCO:  '#1B46B4',
+  ERMITA:     'var(--s-erm)',
+  LINDAVISTA: 'var(--s-lin)',
+  IZTACALCO:  'var(--s-izt)',
 };
 
 function leadsXSede() {
@@ -1740,15 +1916,15 @@ function leadsXSede() {
 function renderMetaLeads() {
   const metas    = D.metas_leads || {};
   const totMeta  = Object.values(metas).reduce((a,v)=>a+v, 0);
-  const totLeads = (D.kpis||{}).leads_meta || 0;
-  const leadsSede= leadsXSede();
+  const leadsSede= leadsCC();
+  const totLeads = Object.values(leadsSede).reduce((a,v)=>a+v, 0);
 
   const ORDEN = ['ERMITA','LINDAVISTA','IZTACALCO'];
   const totPct  = totMeta>0 ? Math.min(100,(totLeads/totMeta)*100) : 0;
   const totColor= totPct>=100?'var(--green)':totPct>=50?'var(--orange)':'var(--pink)';
 
   document.getElementById('meta-leads-sub').textContent =
-    `${$n(totLeads)} de ${$n(totMeta)} leads — ${totPct.toFixed(1)}%`;
+    `${$n(totLeads)} de ${$n(totMeta)} leads del Call Center — ${totPct.toFixed(1)}% · Meta reportó ${$n((D.kpis||{}).leads_meta||0)} conversaciones`;
 
   const rows = ORDEN.map(s => {
     const leads = leadsSede[s] || 0;
@@ -1776,7 +1952,7 @@ function renderMetaLeads() {
 
   const html = `<div style="padding:4px 0">${rows}</div>
   <div class="ml-total-row">
-    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(totLeads)}</div><div class="ml-total-lbl">Leads del mes</div></div>
+    <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(totLeads)}</div><div class="ml-total-lbl">Leads Call Center</div></div>
     <div class="ml-total-item"><div class="ml-total-val" style="color:var(--muted)">${$n(totMeta)}</div><div class="ml-total-lbl">Meta total</div></div>
     <div class="ml-total-item"><div class="ml-total-val" style="color:${totColor}">${$n(Math.max(0,totMeta-totLeads))}</div><div class="ml-total-lbl">Pendientes</div></div>
     <div class="ml-total-item">
@@ -1916,9 +2092,9 @@ function renderMetaStats() {
     { v: avgDia.toFixed(1), l: 'Leads/día actual (promedio del mes)', c: 'var(--cyan)' },
     { v: META_LEADS_DIA, l: 'Meta de David (leads/día)', c: 'var(--green)' },
     { v: brecha.toFixed(1), l: 'Brecha diaria', c: 'var(--pink)' },
-    { v: cpl ? $m(cpl) : '—', l: 'CPL actual', c: '#ff9900' },
+    { v: cpl ? $m(cpl) : '—', l: 'CPL actual', c: 'var(--orange)' },
     { v: cpl ? $m(gastoDiaActual) : '—', l: 'Gasto/día actual (implícito)', c: 'var(--muted)' },
-    { v: cpl ? $m(presupNecesario) : '—', l: 'Presupuesto/día para 50 leads', c: '#ff4757' },
+    { v: cpl ? $m(presupNecesario) : '—', l: 'Presupuesto/día para 50 leads', c: 'var(--a2)' },
   ];
   const el = document.getElementById('metas-stats');
   if (el) el.innerHTML = stats.map(s =>
@@ -1999,9 +2175,9 @@ function renderMetas() {
 
 // Sucursal config
 const SUC = {
-  LINDAVISTA:{ c:'var(--cyan)', g:'rgba(0,240,255,.12)',   b:'rgba(0,240,255,.06)' },
-  IZTACALCO: { c:'#1B46B4', g:'rgba(27,70,180,.18)',   b:'rgba(27,70,180,.07)' },
-  ERMITA:    { c:'#E02020', g:'rgba(224,32,32,.15)',   b:'rgba(224,32,32,.06)' },
+  LINDAVISTA:{ c:'var(--s-lin)', g:'color-mix(in srgb, var(--s-lin) 14%, transparent)', b:'color-mix(in srgb, var(--s-lin) 8%, transparent)' },
+  IZTACALCO: { c:'var(--s-izt)', g:'color-mix(in srgb, var(--s-izt) 14%, transparent)', b:'color-mix(in srgb, var(--s-izt) 8%, transparent)' },
+  ERMITA:    { c:'var(--s-erm)', g:'color-mix(in srgb, var(--s-erm) 14%, transparent)', b:'color-mix(in srgb, var(--s-erm) 8%, transparent)' },
 };
 
 function sucDot(s) {
@@ -2011,7 +2187,7 @@ function sucDot(s) {
 
 function renderSucMini() {
   const suc       = D.sucursales || {};
-  const metaLeads = leadsXSede();
+  const metaLeads = leadsCC();
   const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
   const rows = ORDEN.map(s => {
     const v      = suc[s] || {};
@@ -2021,7 +2197,7 @@ function renderSucMini() {
     return `<tr>
       <td><span style="display:flex;align-items:center;gap:9px">${sucDot(s)}<strong style="font-size:13px;font-weight:800">${s}</strong></span></td>
       <td class="num" style="color:var(--cyan)">${$n(leads)}</td>
-      <td class="num" style="color:#7b2ff7">${$n(citas)}</td>
+      <td class="num" style="color:var(--a3)">${$n(citas)}</td>
       <td class="num" style="color:var(--green)">${$n(insc)}</td>
       <td><div class="pbar-wrap">
         <div class="pbar"><div class="pbar-fill" style="width:${pctN(insc,leads)}%"></div></div>
@@ -2030,7 +2206,7 @@ function renderSucMini() {
     </tr>`;
   }).join('');
   document.getElementById('tbl-suc-mini').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads CC</th><th>Citas</th><th>Inscritos</th><th>Conv L→I</th></tr></thead>
      <tbody>${rows}</tbody>`;
 }
 
@@ -2038,15 +2214,15 @@ function renderCampMini() {
   const active = (D.campanas||[]).filter(c => c.status === 'ACTIVE');
   const totLeads  = active.reduce((a,c) => a + c.leads,          0);
   const totGasto  = active.reduce((a,c) => a + c.gasto,          0);
-  const totBudget = active.reduce((a,c) => a + c.presupuesto_dia, 0);
+  const totBudget = active.reduce((a,c) => a + presupuestoCamp(c), 0);
   const totCPL    = totLeads > 0 ? totGasto / totLeads : 0;
   const row = active.length ? `<tr>
     <td style="max-width:230px"><span style="display:block;font-weight:600">Leads de Meta</span>
-      <span style="font-size:10px;color:var(--muted)">${active.length} campaña${active.length>1?'s':''} activa${active.length>1?'s':''}</span></td>
+      <span style="font-size:10px;color:var(--muted)">${active.length} campaña${active.length>1?'s':''} activa${active.length>1?'s':''} · sin las pausadas del mes</span></td>
     <td class="num" style="color:var(--cyan)">${$n(totLeads)}</td>
-    <td class="num" style="color:#E02020">${$m(totGasto)}</td>
+    <td class="num" style="color:var(--red)">${$m(totGasto)}</td>
     <td class="num" style="color:${cplColor(totCPL)}">${totLeads>0?$m(totCPL):'—'}</td>
-    <td>${totBudget>0?`<span style="background:rgba(224,32,32,.12);color:#E02020;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(totBudget)}/día</span>`:'—'}</td>
+    <td>${totBudget>0?`<span style="background:color-mix(in srgb, var(--red) 12%, transparent);color:var(--red);padding:3px 10px;border-radius:5px;font-size:11px;font-weight:700">${$m(totBudget)}/día</span>`:'—'}</td>
   </tr>` : '<tr><td colspan="5" class="empty">Sin campañas activas</td></tr>';
   document.getElementById('tbl-camp-mini').innerHTML=
     `<thead><tr><th>Campaña</th><th>Leads</th><th>Gasto</th><th>CPL</th><th>Budget</th></tr></thead>
@@ -2056,7 +2232,7 @@ function renderCampMini() {
 function renderSucCards() {
   const suc       = D.sucursales  || {};
   const metas     = D.metas_leads || {};
-  const metaLeads = leadsXSede();
+  const metaLeads = leadsCC();
   const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
   document.getElementById('suc-cards').innerHTML = ORDEN.map(s => {
     const v    = suc[s] || {};
@@ -2082,10 +2258,10 @@ function renderSucCards() {
         <div class="suc-name">${s}</div>
       </div>
       <div class="suc-body">
-        <div class="suc-stat"><div class="suc-stat-val" style="color:${cfg.c};text-shadow:0 0 14px ${cfg.c}66">${$n(leads)}</div><div class="suc-stat-lbl">Leads Meta</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#7b2ff7">${$n(v.citas||0)}</div><div class="suc-stat-lbl">Citas</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:#ff9900">${$n(v.llamadas||0)}</div><div class="suc-stat-lbl">Llamadas</div></div>
-        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--green);text-shadow:0 0 12px rgba(0,255,136,.4)">${$n(v.inscritos||0)}</div><div class="suc-stat-lbl">Inscritos</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:${cfg.c}">${$n(leads)}</div><div class="suc-stat-lbl">Leads CC</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--a3)">${$n(v.citas||0)}</div><div class="suc-stat-lbl">Citas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--a4)">${$n(v.llamadas||0)}</div><div class="suc-stat-lbl">Llamadas</div></div>
+        <div class="suc-stat"><div class="suc-stat-val" style="color:var(--green)">${$n(v.inscritos||0)}</div><div class="suc-stat-lbl">Inscritos</div></div>
       </div>
       ${metaHTML}
       <div class="suc-foot">
@@ -2094,11 +2270,11 @@ function renderSucCards() {
       </div>
       <div class="suc-foot" title="Fuente: Hoja Agenda de Google Sheets, pestaña ${s}, columna ASIS. Sobre el total de citas agendadas (las sin SÍ/NO capturado cuentan como no confirmadas).">
         <span class="conv-label">🚶 % Asistencia <span class="kpi-info" title="Asistieron ÷ Total citas agendadas. Las citas sin SÍ/NO capturado todavía cuentan en el total (no se excluyen) — ver pestaña 📖 Guía para más detalle.">i</span></span>
-        <span class="conv-rate" style="color:#00c2a8">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}</span>
+        <span class="conv-rate" style="color:var(--a1)">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}</span>
       </div>
       <div class="suc-foot">
         <span class="conv-label">🎓 Asistió → Inscrito</span>
-        <span class="conv-rate">${(v.asistieron)?(v.conv_asistio_inscrito.toFixed(1)+'%'):'—'}</span>
+        <span class="conv-rate">${asistioInscrito(s).txt}</span>
       </div>
     </div>`;
   }).join('');
@@ -2107,7 +2283,7 @@ function renderSucCards() {
 function renderSucursales() {
   const suc       = D.sucursales  || {};
   const metas     = D.metas_leads || {};
-  const metaLeads = leadsXSede();
+  const metaLeads = leadsCC();
   const ORDEN     = ['ERMITA','LINDAVISTA','IZTACALCO'];
   const rows  = ORDEN.map(s=>{
     const v     = suc[s] || {};
@@ -2127,12 +2303,12 @@ function renderSucursales() {
       ${metaTd}
       <td class="num">${$n(v.llamadas||0)}</td>
       <td class="num">${$n(v.no_contesta||0)}</td>
-      <td class="num" style="color:#7b2ff7">${$n(v.citas||0)}</td>
-      <td class="num" style="color:#ff9900">${$n(v.visitas||0)}</td>
+      <td class="num" style="color:var(--a3)">${$n(v.citas||0)}</td>
+      <td class="num" style="color:var(--a4)">${$n(v.visitas||0)}</td>
       <td class="num" style="color:var(--green)">${$n(v.inscritos||0)}</td>
       <td style="color:var(--green);font-weight:800;font-size:14px">${pct(v.inscritos||0, leads)}</td>
-      <td style="color:#00c2a8;font-weight:800;font-size:14px">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}<div style="font-size:10px;color:var(--muted);font-weight:600">${$n(v.asistieron||0)}/${$n(v.citas_agendadas||0)} agendados</div></td>
-      <td style="color:#00c2a8;font-weight:800;font-size:14px">${(v.asistieron)?(v.conv_asistio_inscrito.toFixed(1)+'%'):'—'}</td>
+      <td style="color:var(--a1);font-weight:800;font-size:14px">${(v.citas_agendadas)?(v.tasa_asistencia.toFixed(1)+'%'):'—'}<div style="font-size:10px;color:var(--muted);font-weight:600">${$n(v.asistieron||0)}/${$n(v.citas_agendadas||0)} agendados</div></td>
+      <td style="color:var(--a1);font-weight:800;font-size:14px">${asistioInscrito(s).txt}<div style="font-size:10px;color:var(--muted);font-weight:600">${asistioInscrito(s).insc} de ${asistioInscrito(s).asis} que llegaron</div></td>
     </tr>`;
   });
   const totLeads= Object.values(metaLeads).reduce((a,v)=>a+v,0);
@@ -2144,17 +2320,17 @@ function renderSucursales() {
   };},{llamadas:0,no_contesta:0,citas:0,visitas:0,inscritos:0,asistieron:0,no_asistieron:0,citas_agendadas:0});
   const totMeta = Object.values(metas).reduce((a,v)=>a+v,0);
   document.getElementById('tbl-sucursales').innerHTML=
-    `<thead><tr><th>Sucursal</th><th>Leads Meta</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th><th>🚶 % Asistencia</th><th>🎓 Asistió→Insc.</th></tr></thead>
+    `<thead><tr><th>Sucursal</th><th>Leads CC</th><th>% vs Meta</th><th>Llamadas</th><th>No Contesta</th><th>Citas</th><th>Visitas</th><th>Inscritos</th><th>L→I</th><th>🚶 % Asistencia</th><th>🎓 Asistió→Insc.</th></tr></thead>
      <tbody>${rows.join('')}<tr class="tot">
        <td>TOTAL</td>
        <td style="color:var(--cyan)">${$n(totLeads)}</td>
        <td style="color:var(--muted);font-size:12px">${totMeta>0?$n(totLeads)+' / '+$n(totMeta):'—'}</td>
        <td>${$n(totCC.llamadas)}</td><td>${$n(totCC.no_contesta)}</td>
-       <td style="color:#7b2ff7">${$n(totCC.citas)}</td><td style="color:#ff9900">${$n(totCC.visitas)}</td>
+       <td style="color:var(--a3)">${$n(totCC.citas)}</td><td style="color:var(--a4)">${$n(totCC.visitas)}</td>
        <td style="color:var(--green)">${$n(totCC.inscritos)}</td>
        <td style="color:var(--green)">${pct(totCC.inscritos,totLeads)}</td>
-       <td style="color:#00c2a8">${totCC.citas_agendadas?pct(totCC.asistieron,totCC.citas_agendadas):'—'}</td>
-       <td style="color:#00c2a8">${totCC.asistieron?pct(totCC.inscritos,totCC.asistieron):'—'}</td>
+       <td style="color:var(--a1)">${totCC.citas_agendadas?pct(totCC.asistieron,totCC.citas_agendadas):'—'}</td>
+       <td style="color:var(--a1)">${asistioInscrito().txt}</td>
      </tr></tbody>`;
 }
 
@@ -2164,9 +2340,9 @@ function renderCampanas() {
   const fila = c => `<tr>
     <td style="max-width:200px"><span style="display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">${c.nombre}</span></td>
     <td>${c.status==='ACTIVE'?'<span class="badge ba">&#9679; ACTIVA</span>':'<span class="badge bp">&#9208; PAUSADA</span>'}</td>
-    <td>${c.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(c.presupuesto_dia)}</span>`:'&mdash;'}</td>
+    <td>${presupuestoCamp(c)>0?`<span style="color:var(--red);font-weight:800;font-size:14px">${$m(presupuestoCamp(c))}</span>`:'&mdash;'}</td>
     <td class="num" style="color:var(--cyan)">${$n(c.leads)}</td>
-    <td class="num" style="color:#E02020">${$m(c.gasto)}</td>
+    <td class="num" style="color:var(--red)">${$m(c.gasto)}</td>
     <td class="num">${$n(c.impresiones)}</td>
     <td class="num">${$n(c.alcance)}</td>
     <td class="num" style="color:${cplColor(c.cpl)}">${c.leads>0?$m(c.cpl):'&mdash;'}</td>
@@ -2180,10 +2356,10 @@ function renderCampanas() {
 function renderAdsets() {
   const rows=[...(D.adsets||[])].sort((a,b)=>b.leads-a.leads).map(a=>`<tr>
     <td style="font-weight:600">${a.nombre}</td>
-    <td>${a.status==='ACTIVE'?'<span class="badge ba">â— ACTIVA</span>':'<span class="badge bp">â¸ PAUSADA</span>'}</td>
-    <td>${a.presupuesto_dia>0?`<span style="color:#E02020;font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
+    <td>${(a.effective_status||a.status)==='ACTIVE'?'<span class="badge ba">&#9679; ACTIVA</span>':'<span class="badge bp">&#9208; PAUSADA</span>'}</td>
+    <td>${a.presupuesto_dia>0?`<span style="color:var(--red);font-weight:800;font-size:14px">${$m(a.presupuesto_dia)}</span>`:'—'}</td>
     <td class="num" style="color:var(--cyan)">${$n(a.leads)}</td>
-    <td class="num" style="color:#E02020">${$m(a.gasto)}</td>
+    <td class="num" style="color:var(--red)">${$m(a.gasto)}</td>
     <td class="num" style="color:${cplColor(a.cpl)}">${a.leads>0?$m(a.cpl):'—'}</td>
   </tr>`).join('');
   document.getElementById('tbl-adsets').innerHTML=
@@ -2201,8 +2377,8 @@ function renderAgenda() {
       <td><strong style="font-weight:700">${r.nombre}</strong></td>
       <td style="color:var(--muted)">${r.tel}</td>
       <td style="color:var(--dim);font-size:12px">${r.fecha_cita}</td>
-      <td>${r.asistio===true?'<span class="badge bsi">✓ SÍ</span>':r.asistio===false?'<span class="badge bno">✗ NO</span>':'<span class="badge" style="background:rgba(255,184,0,.12);color:#ffb800">? Pendiente</span>'}</td>
-      <td>${r.inscrito===true?'<span class="badge bsi">✓ SÍ</span>':r.inscrito===false?'<span class="badge bno">✗ NO</span>':'<span class="badge" style="background:rgba(255,184,0,.12);color:#ffb800">? Pendiente</span>'}</td>
+      <td>${r.asistio===true?'<span class="badge bsi">✓ SÍ</span>':r.asistio===false?'<span class="badge bno">✗ NO</span>':'<span class="badge" style="background:color-mix(in srgb, var(--orange) 12%, transparent);color:var(--orange)">? Pendiente</span>'}</td>
+      <td>${r.inscrito===true?'<span class="badge bsi">✓ SÍ</span>':r.inscrito===false?'<span class="badge bno">✗ NO</span>':'<span class="badge" style="background:color-mix(in srgb, var(--orange) 12%, transparent);color:var(--orange)">? Pendiente</span>'}</td>
       <td style="color:var(--dim);font-size:11px;max-width:200px">${r.obs||''}</td>
     </tr>`;
   }).join('');
@@ -2214,27 +2390,21 @@ function renderAgenda() {
 // Charts with gradient area
 let chartMeta=null, chartSuc=null;
 function makeGrad(ctx, color, h=280) {
-  const g=ctx.createLinearGradient(0,0,0,h);
-  const hex=color.replace('#','');
-  const r=parseInt(hex.slice(0,2),16), gv=parseInt(hex.slice(2,4),16), b=parseInt(hex.slice(4,6),16);
-  g.addColorStop(0,`rgba(${r},${gv},${b},.45)`);
-  g.addColorStop(.6,`rgba(${r},${gv},${b},.1)`);
-  g.addColorStop(1,`rgba(${r},${gv},${b},0)`);
-  return g;
+  // Relleno sólido y suave: el manual de marca pide no usar degradados
+  return hexToRgba(color, .14);
 }
 
 function renderDiario() {
   const dm=D.diario_meta||{}, ds=D.diario_suc||{};
-  const SUC_C={LINDAVISTA:'#00f0ff', IZTACALCO:'#4d7fff', ERMITA:'#E02020'};
+  const SUC_C={LINDAVISTA:cssVar('--s-lin'), IZTACALCO:cssVar('--s-izt'), ERMITA:cssVar('--s-erm')};
   const fechas=[...new Set([...Object.keys(dm),...Object.keys(ds)])].sort();
   const lbl=fechas.map(f=>f.slice(5));
   const leads=fechas.map(f=>(dm[f]||{}).leads||0);
   const gasto=fechas.map(f=>(dm[f]||{}).gasto||0);
   const cyanNow=cssVar('--cyan'), redNow=cssVar('--red');
-  SUC_C.LINDAVISTA = cyanNow;
-  const GC=isLight()?'rgba(20,16,50,.08)':'rgba(255,255,255,.04)', TC=cssVar('--dim');
-  const tipBg=isLight()?'rgba(255,255,255,.97)':'rgba(13,11,30,.95)';
-  const font={size:10,family:'Montserrat,sans-serif'};
+  const GC=isLight()?'rgba(12,37,73,.08)':'rgba(255,255,255,.06)', TC=cssVar('--dim');
+  const tipBg=isLight()?'rgba(255,255,255,.97)':'rgba(12,37,73,.96)';
+  const font={size:11,family:'Poppins,sans-serif'};
 
   if(chartMeta) chartMeta.destroy();
   const ctxM=document.getElementById('chart-meta').getContext('2d');
@@ -2342,22 +2512,13 @@ function calcLeads(){
 }
 
 function renderAll() {
-  calcLeadsInit();
-  renderKpis();
-  renderMetaLeads();
-  renderFunnel();
-  renderFinanzas();
-  renderSucMini();
-  renderCampMini();
-  renderAgendaMini();
-  renderSucCards();
-  renderSucursales();
-  renderChurn();
-  renderCampanas();
-  renderAdsets();
-  renderAgenda();
-  if (document.querySelector('.tab.active')?.dataset.pane === 'diario') renderDiario();
-  if (document.querySelector('.tab.active')?.dataset.pane === 'metas')  renderMetas();
+  // Cada sección se pinta por separado: si una falla con un mes viejo, las demás no se quedan con el mes anterior
+  const secciones = [calcLeadsInit, renderKpis, renderMetaLeads, renderFunnel, renderFinanzas, renderSucMini,
+    renderCampMini, renderAgendaMini, renderSucCards, renderSucursales, renderChurn, renderCampanas, renderAdsets, renderAgenda];
+  const pane = document.querySelector('.tab.active')?.dataset.pane;
+  if (pane === 'diario') secciones.push(renderDiario);
+  if (pane === 'metas')  secciones.push(renderMetas);
+  secciones.forEach(fn => { try { fn(); } catch (e) { console.warn('No se pudo pintar', fn.name, e); } });
 }
 
 // ── Selector de mes ──
@@ -2403,6 +2564,47 @@ async function initMeses() {
     renderAll();
   }
 }
+
+// ── MOVIMIENTO Y PORTADA (rediseño 31-oct-2026) ──────────────────────────────
+// La tinta roja se desliza bajo la pestaña activa
+(function(){
+  const nav = document.querySelector('nav');
+  const tinta = document.createElement('span');
+  tinta.className = 'tab-ink';
+  nav.appendChild(tinta);
+  const mover = () => {
+    const t = nav.querySelector('.tab.active');
+    if (!t) return;
+    tinta.style.width = t.offsetWidth + 'px';
+    tinta.style.transform = `translateX(${t.offsetLeft}px)`;
+  };
+  nav.querySelectorAll('.tab').forEach(t => t.addEventListener('click', mover));
+  window.addEventListener('resize', mover);
+  if (document.fonts) document.fonts.ready.then(mover);
+  mover();
+})();
+
+// Portada: nombre del mes y avance (el mes en curso avanza por día; los cerrados van al 100%)
+function heroUpdate(){
+  const titulo = document.getElementById('hero-mes');
+  if (!titulo) return;
+  titulo.textContent = D.mes || '—';
+  const hoy = new Date();
+  const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
+  const mesVisto = D.mes_id || document.getElementById('mes-select')?.value || mesActual;
+  const enCurso = mesVisto === mesActual;
+  const dias = new Date(hoy.getFullYear(), hoy.getMonth()+1, 0).getDate();
+  const avance = enCurso ? monthProgress() : 100;
+  document.getElementById('hero-prog-lbl').textContent = enCurso ? 'Avance del mes' : 'Mes cerrado';
+  document.getElementById('hero-prog-val').textContent = `${Math.round(avance)}%`;
+  document.getElementById('hero-prog-foot').textContent =
+    (enCurso ? `Día ${hoy.getDate()} de ${dias}` : 'Resultados finales') + ` · Actualizado ${D.actualizado || '—'}`;
+  const barra = document.getElementById('hero-prog-fill');
+  barra.style.width = '0';
+  requestAnimationFrame(() => requestAnimationFrame(() => { barra.style.width = avance + '%'; }));
+}
+const renderAllBase = renderAll;
+renderAll = function(){ const r = renderAllBase.apply(this, arguments); heroUpdate(); return r; };
 
 // Init
 applyTheme(document.documentElement.dataset.theme || 'dark');

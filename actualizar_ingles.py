@@ -6,6 +6,12 @@
 import os, json, csv, io, re, sys, argparse, calendar
 import requests
 from datetime import datetime, date
+from zoneinfo import ZoneInfo
+
+# La cuenta de Meta está en hora del Pacífico: el mes se corta con esa zona para no perder
+# las últimas horas del último día. Las horas que ve el equipo van en hora de CDMX.
+TZ_META = ZoneInfo('America/Los_Angeles')
+TZ_MX   = ZoneInfo('America/Mexico_City')
 
 # ─── ARGUMENTOS ──────────────────────────────────────────────────────────────
 parser = argparse.ArgumentParser()
@@ -18,7 +24,7 @@ if args.mes:
     HOY         = date(year, month, ultimo_dia)
     MES_ACTUAL  = args.mes
 else:
-    HOY        = date.today()
+    HOY        = datetime.now(TZ_META).date()
     MES_ACTUAL = HOY.strftime('%Y-%m')
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
@@ -155,8 +161,8 @@ def time_range():
 def fetch_campanas():
     tr = time_range()
     resp = meta_get(f'{AD_ACCOUNT}/campaigns', {
-        'fields': f'name,status,daily_budget,insights.time_range({tr}){{spend,impressions,reach,actions}}',
-        'limit':  25,
+        'fields': f'name,status,effective_status,daily_budget,insights.time_range({tr}){{spend,impressions,reach,actions}}',
+        'limit':  100,
     })
     out = []
     for c in resp.get('data', []):
@@ -168,6 +174,7 @@ def fetch_campanas():
             'id':              c['id'],
             'nombre':          c['name'],
             'status':          c['status'],
+            'effective_status': c.get('effective_status', c['status']),
             'presupuesto_dia': round(sf(c.get('daily_budget', 0)) / 100, 2),
             'gasto':           round(gasto, 2),
             'impresiones':     si(ins.get('impressions', 0)),
@@ -180,8 +187,8 @@ def fetch_campanas():
 def fetch_adsets():
     tr = time_range()
     resp = meta_get(f'{AD_ACCOUNT}/adsets', {
-        'fields': f'name,status,daily_budget,campaign_id,insights.time_range({tr}){{spend,actions}}',
-        'limit':  50,
+        'fields': f'name,status,effective_status,daily_budget,campaign_id,insights.time_range({tr}){{spend,actions}}',
+        'limit':  200,
     })
     out = []
     for a in resp.get('data', []):
@@ -192,6 +199,8 @@ def fetch_adsets():
         out.append({
             'nombre':          a['name'],
             'status':          a['status'],
+            # effective_status dice PAUSED también cuando lo que está en pausa es la campaña
+            'effective_status': a.get('effective_status', a['status']),
             'campaign_id':     a.get('campaign_id', ''),
             'presupuesto_dia': round(sf(a.get('daily_budget', 0)) / 100, 2),
             'gasto':           round(gasto, 2),
@@ -214,6 +223,18 @@ def fetch_diario_meta():
                       if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
         out[d['date_start']] = {'leads': leads, 'gasto': round(sf(d.get('spend', 0)), 2)}
     return out
+
+def fetch_totales_cuenta():
+    """Totales del mes a nivel cuenta. Incluyen campañas archivadas, que /campaigns no devuelve."""
+    resp = meta_get(f'{AD_ACCOUNT}/insights', {
+        'fields':     'spend,actions',
+        'time_range': time_range(),
+        'level':      'account',
+    })
+    d = (resp.get('data') or [{}])[0]
+    leads = next((si(a['value']) for a in d.get('actions', [])
+                  if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
+    return {'leads': leads, 'gasto': round(sf(d.get('spend', 0)), 2)}
 
 # ─── SEGUIMIENTO ─────────────────────────────────────────────────────────────
 def parse_seguimiento(text):
@@ -480,7 +501,7 @@ def guardar_historico(data):
         json.dump(meses, f, ensure_ascii=False)
 
     # Si es el mes actual también actualiza data_ingles.js (para compatibilidad)
-    if MES_ACTUAL == date.today().strftime('%Y-%m'):
+    if MES_ACTUAL == datetime.now(TZ_META).strftime('%Y-%m'):
         js_path = os.path.join(BASE_DIR, 'data_ingles.js')
         with open(js_path, 'w', encoding='utf-8') as f:
             f.write('const DATA_INGLES = ')
@@ -522,7 +543,8 @@ def main():
     # Si Meta API falla (token bloqueado/vencido), NO escribir ceros:
     # conservar los datos Meta del JSON anterior del mes.
     meta_ok = True
-    meta_actualizado = datetime.now().strftime('%d/%m/%Y %H:%M')
+    meta_actualizado = datetime.now(TZ_MX).strftime('%d/%m/%Y %H:%M')
+    totales_cuenta = None
     try:
         print('[1] Meta Ads — campañas...')
         campanas = fetch_campanas()
@@ -535,6 +557,9 @@ def main():
         print('[3] Meta Ads — datos diarios...')
         diario_meta = fetch_diario_meta()
         print(f'    {len(diario_meta)} días con datos')
+
+        totales_cuenta = fetch_totales_cuenta()
+        print(f"    Totales de la cuenta: {totales_cuenta['leads']} leads / ${totales_cuenta['gasto']:,.2f}")
     except MetaAPIError as e:
         meta_ok = False
         print(f'    ERROR Meta API: {e}')
@@ -633,8 +658,8 @@ def main():
     metas_leads = cargar_metas_leads()
     print(f'    {", ".join(f"{k}:{v}" for k,v in metas_leads.items())}')
 
-    total_leads   = sum(c['leads']   for c in campanas)
-    total_gasto   = sum(c['gasto']   for c in campanas)
+    total_leads   = totales_cuenta['leads'] if totales_cuenta else sum(c['leads'] for c in campanas)
+    total_gasto   = totales_cuenta['gasto'] if totales_cuenta else sum(c['gasto'] for c in campanas)
     total_insc    = sum(v['inscritos'] for v in totales_suc.values())
     total_citas   = sum(v['citas']    for v in totales_suc.values())
     total_visitas = sum(v['visitas']  for v in totales_suc.values())
@@ -664,14 +689,19 @@ def main():
     for s in SUCURSALES:
         totales_suc.setdefault(s, {})
         totales_suc[s].update(asistencia_suc.get(s, {}))
-        asis_s = totales_suc[s].get('asistieron', 0)
-        insc_s = totales_suc[s].get('inscritos', 0)
-        totales_suc[s]['conv_asistio_inscrito'] = round(100 * insc_s / asis_s, 1) if asis_s else 0.0
+        # Asistió -> Inscrito con una sola fuente (Hoja Agenda): de los que llegaron, cuántos se
+        # inscribieron. Antes se dividían los inscritos del Call Center entre los "asistió" de la
+        # Agenda y salían cifras imposibles (1000% en oct-26).
+        asis_s = [a for a in agenda if a.get('sucursal') == s and a.get('asistio') is True]
+        insc_s = sum(1 for a in asis_s if a.get('inscrito') is True)
+        totales_suc[s]['conv_asistio_inscrito'] = round(100 * insc_s / len(asis_s), 1) if asis_s else 0.0
 
-    conv_asistio_inscrito = round(100 * total_insc / total_asis_ag, 1) if total_asis_ag else 0.0
+    asis_ag = [a for a in agenda if a.get('asistio') is True]
+    insc_ag = sum(1 for a in asis_ag if a.get('inscrito') is True)
+    conv_asistio_inscrito = round(100 * insc_ag / len(asis_ag), 1) if asis_ag else 0.0
 
     data = {
-        'actualizado': datetime.now().strftime('%d/%m/%Y %H:%M'),
+        'actualizado': datetime.now(TZ_MX).strftime('%d/%m/%Y %H:%M'),
         'meta_actualizado': meta_actualizado,
         'meta_ok':     meta_ok,
         'mes':         mes_nombre,
