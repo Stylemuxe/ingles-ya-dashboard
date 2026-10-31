@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "31/10/2026 03:12",
-  "meta_actualizado": "31/10/2026 03:12",
+  "actualizado": "31/10/2026 10:01",
+  "meta_actualizado": "31/10/2026 10:01",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
   "kpis": {
     "leads_meta": 644,
-    "gasto": 34655.89,
-    "cpl": 53.81,
+    "gasto": 34825.16,
+    "cpl": 54.08,
     "citas": 38,
     "visitas": 10,
     "inscritos": 20,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 62665.0,
-    "utilidad": 16009.11,
+    "utilidad": 15839.84,
     "ticket_promedio": 3133.25,
     "gastos": {
-      "meta_ads": 34655.89,
+      "meta_ads": 34825.16,
       "fabian": 12000.0,
       "yolanda": 0.0,
-      "total": 46655.89
+      "total": 46825.16
     }
   },
   "campanas": [
@@ -49,20 +49,20 @@ const DATA_INGLES = {
       "nombre": "IY | REMARKETING | WhatsApp | OCT26",
       "status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 111.08,
-      "impresiones": 464,
-      "alcance": 389,
+      "gasto": 143.29,
+      "impresiones": 640,
+      "alcance": 531,
       "leads": 3,
-      "cpl": 37.03
+      "cpl": 47.76
     },
     {
       "id": "52540651597362",
       "nombre": "IY | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 132.42,
-      "impresiones": 1254,
-      "alcance": 971,
+      "gasto": 163.49,
+      "impresiones": 1512,
+      "alcance": 1198,
       "leads": 0,
       "cpl": 0
     },
@@ -82,11 +82,11 @@ const DATA_INGLES = {
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 30399.95,
-      "impresiones": 408417,
-      "alcance": 198091,
+      "gasto": 30505.94,
+      "impresiones": 409347,
+      "alcance": 198721,
       "leads": 607,
-      "cpl": 50.08
+      "cpl": 50.26
     },
     {
       "id": "52515312914962",
@@ -247,16 +247,16 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 111.08,
+      "gasto": 143.29,
       "leads": 3,
-      "cpl": 37.03
+      "cpl": 47.76
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
       "status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 132.42,
+      "gasto": 163.49,
       "leads": 0,
       "cpl": 0
     },
@@ -265,9 +265,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2550.95,
+      "gasto": 2553.52,
       "leads": 51,
-      "cpl": 50.02
+      "cpl": 50.07
     },
     {
       "nombre": "Publicación: \"👀 Se acaba el año y tú sigues con el \"el próximo...\"",
@@ -283,9 +283,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 27849.0,
+      "gasto": 27952.42,
       "leads": 556,
-      "cpl": 50.09
+      "cpl": 50.27
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -524,7 +524,11 @@ const DATA_INGLES = {
     },
     "2026-10-30": {
       "leads": 17,
-      "gasto": 885.96
+      "gasto": 1022.38
+    },
+    "2026-10-31": {
+      "leads": 0,
+      "gasto": 32.85
     }
   },
   "sucursales": {
