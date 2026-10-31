@@ -779,7 +779,23 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
         <div class="inc-warn" id="inc-dup">⚠️ Este teléfono ya fue registrado antes</div>
       </div>
       <div class="inc-field full">
-        <label>5 · Comentario (opcional)</label>
+        <label>5 · ¿De dónde es? Alcaldía, municipio o estado (obligatorio si le queda lejos, foráneo o fuera de rango)</label>
+        <input id="inc-zona" type="text" list="inc-zonas" placeholder="Ej. Tlalpan, Ecatepec, Puebla…" autocomplete="off">
+        <datalist id="inc-zonas">
+          <option value="Álvaro Obregón"><option value="Azcapotzalco"><option value="Benito Juárez"><option value="Coyoacán">
+          <option value="Cuajimalpa"><option value="Cuauhtémoc"><option value="Gustavo A. Madero"><option value="Iztacalco">
+          <option value="Iztapalapa"><option value="Magdalena Contreras"><option value="Miguel Hidalgo"><option value="Milpa Alta">
+          <option value="Tláhuac"><option value="Tlalpan"><option value="Venustiano Carranza"><option value="Xochimilco">
+          <option value="Ecatepec"><option value="Nezahualcóyotl"><option value="Tlalnepantla"><option value="Naucalpan">
+          <option value="Chimalhuacán"><option value="La Paz"><option value="Ixtapaluca"><option value="Chalco">
+          <option value="Valle de Chalco"><option value="Texcoco"><option value="Coacalco"><option value="Tultitlán">
+          <option value="Cuautitlán Izcalli"><option value="Tecámac"><option value="Huixquilucan"><option value="Atizapán">
+          <option value="Nicolás Romero"><option value="Toluca"><option value="Pachuca"><option value="Puebla">
+          <option value="Cuernavaca"><option value="Querétaro"><option value="Guadalajara"><option value="Monterrey">
+        </datalist>
+      </div>
+      <div class="inc-field full">
+        <label>6 · Comentario (opcional)</label>
         <textarea id="inc-comentario" rows="2" placeholder="Detalle de la incidencia…"></textarea>
       </div>
       <div class="inc-field full" style="flex-direction:row;align-items:center;margin-top:4px">
@@ -794,6 +810,10 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
     <div class="g2" style="align-items:center">
       <div class="inc-count-grid" id="inc-counts"></div>
       <div class="chart-wrap" style="max-height:240px"><canvas id="inc-dona"></canvas></div>
+    </div>
+    <div style="margin-top:16px">
+      <div style="font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">📍 De dónde son los que "les queda lejos", foráneos y fuera de rango</div>
+      <div class="inc-pills" id="inc-zonas-top"></div>
     </div>
   </div>
 
@@ -810,6 +830,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
         </select>
         <select class="filter" id="inc-f-tipo" onchange="incRender()">
           <option value="">Todos los tipos</option>
+          <option value="Le queda lejos">Le queda lejos</option>
           <option value="Foráneo">Foráneo</option>
           <option value="Fuera de rango">Fuera de rango</option>
           <option value="Número equivocado">Número equivocado</option>
@@ -1076,11 +1097,16 @@ document.querySelectorAll('.tab').forEach(tab => {
 const INCIDENCIAS_URL = "https://script.google.com/macros/s/AKfycbw45FRaGue1peFp4UHwUbU_THQh2M23imtu8OCYGQosLwOHg_0bSoy8NSdTC88x0jYyjg/exec";
 const INC_COLOR = { ERMITA:'#E02020', LINDAVISTA:'#00f0ff', IZTACALCO:'#1B46B4' };
 const INC_PLANTELES = ['ERMITA','LINDAVISTA','IZTACALCO'];
-const INC_TIPOS = ['Foráneo','Fuera de rango','Número equivocado','Ya inscrito','No contesta','Otro'];
+const INC_TIPOS = ['Le queda lejos','Foráneo','Fuera de rango','Número equivocado','Ya inscrito','No contesta','Otro'];
 const INC_TIPO_COLOR = {
-  'Foráneo':'#ff9900','Fuera de rango':'#ff0066','Número equivocado':'#7b2ff7',
+  'Le queda lejos':'#ffd400','Foráneo':'#ff9900','Fuera de rango':'#ff0066','Número equivocado':'#7b2ff7',
   'Ya inscrito':'#00ff88','No contesta':'#7a78a0','Otro':'#4d7fff'
 };
+// Texto del botón: aclara la diferencia entre "lejos" (CDMX/Edomex) y "foráneo" (otro estado)
+const INC_TIPO_LABEL = { 'Le queda lejos':'Le queda lejos · CDMX/Edomex', 'Foráneo':'Foráneo · otro estado' };
+// La zona se guarda al inicio del comentario ("📍 Tlalpan · …") porque el Apps Script solo tiene esas columnas
+const INC_ZONA_REQ = ['Le queda lejos','Foráneo','Fuera de rango'];
+const incZonaOf = c => { const m = String(c||'').match(/^📍\s*([^·]+)/); return m ? m[1].trim() : ''; };
 let INC_DATA = [];
 let incSelPlantel = localStorage.getItem('inc_last_plantel') || '';
 let incSelTipo = '';
@@ -1125,7 +1151,7 @@ function incBuildPills(){
   const ct = document.getElementById('inc-pills-tipo');
   ct.innerHTML = INC_TIPOS.map(t=>{
     const c = INC_TIPO_COLOR[t];
-    return `<div class="inc-pill" data-v="${t}" onclick="incPick('tipo',this.dataset.v)" style="--pc:${c}">${t}</div>`;
+    return `<div class="inc-pill" data-v="${t}" onclick="incPick('tipo',this.dataset.v)" style="--pc:${c}">${INC_TIPO_LABEL[t]||t}</div>`;
   }).join('');
   incBuilt = true;
   incPaintPills();
@@ -1164,13 +1190,20 @@ function incTelInput(){
 async function incGuardar(){
   const nombre     = document.getElementById('inc-nombre').value.trim();
   const telefono   = document.getElementById('inc-telefono').value.trim();
-  const comentario = document.getElementById('inc-comentario').value.trim();
+  const zona       = document.getElementById('inc-zona').value.trim().replace(/·/g,'-');
+  const nota       = document.getElementById('inc-comentario').value.trim();
+  const comentario = zona ? `📍 ${zona}` + (nota ? ` · ${nota}` : '') : nota;
   const msg = document.getElementById('inc-msg');
   const btn = document.getElementById('inc-guardar');
 
   if(!incSelPlantel || !incSelTipo || !nombre){
     msg.style.color='var(--pink)';
     msg.textContent='⚠️ Falta plantel, tipo o nombre';
+    return;
+  }
+  if(INC_ZONA_REQ.includes(incSelTipo) && !zona){
+    msg.style.color='var(--pink)';
+    msg.textContent='⚠️ Escribe de dónde es (alcaldía, municipio o estado)';
     return;
   }
   if(telefono && telefono.length<10){
@@ -1188,6 +1221,7 @@ async function incGuardar(){
     msg.textContent='✅ ¡Registrada!';
     document.getElementById('inc-nombre').value='';
     document.getElementById('inc-telefono').value='';
+    document.getElementById('inc-zona').value='';
     document.getElementById('inc-comentario').value='';
     document.getElementById('inc-dup').style.display='none';
     incSelTipo=''; incPaintPills(); // conserva el plantel, limpia el tipo
@@ -1257,6 +1291,14 @@ function incRender(){
     `${INC_DATA.length} en total` + (fP?` · ${base.length} en ${fP}`:'');
 
   incRenderDona(base);
+
+  // Zonas más frecuentes (solo registros con 📍)
+  const zc = {};
+  base.forEach(i=>{ const z = incZonaOf(i.comentario); if(z) zc[z] = (zc[z]||0) + 1; });
+  const top = Object.entries(zc).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  document.getElementById('inc-zonas-top').innerHTML = top.length
+    ? top.map(([z,n])=>`<div class="inc-pill" style="cursor:default">${z} <span style="color:var(--orange)">${n}</span></div>`).join('')
+    : '<span style="color:var(--muted);font-size:12px">Aún sin zonas registradas: se llenan con el campo "¿De dónde es?".</span>';
 
   // Tabla
   const tabla = document.getElementById('inc-tabla');
