@@ -3,9 +3,9 @@
   "mes": "Junio 2026",
   "mes_id": "2026-06",
   "kpis": {
-    "leads_meta": 469,
-    "gasto": 27163.15,
-    "cpl": 57.92,
+    "leads_meta": 473,
+    "gasto": 27385.34,
+    "cpl": 57.9,
     "citas": 20,
     "visitas": 2,
     "inscritos": 10
@@ -60,11 +60,11 @@
       "nombre": "Ingles Consolidada",
       "status": "ACTIVE",
       "presupuesto_dia": 395.0,
-      "gasto": 17713.1,
-      "impresiones": 179615,
-      "alcance": 101548,
-      "leads": 350,
-      "cpl": 50.61
+      "gasto": 17935.29,
+      "impresiones": 184764,
+      "alcance": 104067,
+      "leads": 354,
+      "cpl": 50.66
     },
     {
       "id": "6917541255358",
@@ -261,6 +261,15 @@
       "gasto": 0.0,
       "leads": 0,
       "cpl": 0
+    },
+    {
+      "nombre": "Ingles Consolidada",
+      "status": "ARCHIVED",
+      "campaign_id": "6922243400958",
+      "presupuesto_dia": 0,
+      "gasto": 1777.47,
+      "leads": 49,
+      "cpl": 36.27
     }
   ],
   "diario_meta": {
@@ -378,11 +387,11 @@
     },
     "2026-06-29": {
       "leads": 10,
-      "gasto": 386.22
+      "gasto": 386.57
     },
     "2026-06-30": {
-      "leads": 9,
-      "gasto": 303.77
+      "leads": 13,
+      "gasto": 525.61
     }
   },
   "sucursales": {

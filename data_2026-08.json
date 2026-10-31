@@ -5,9 +5,9 @@
   "mes": "Agosto 2026",
   "mes_id": "2026-08",
   "kpis": {
-    "leads_meta": 547,
-    "gasto": 23828.41,
-    "cpl": 43.56,
+    "leads_meta": 565,
+    "gasto": 24863.72,
+    "cpl": 44.01,
     "citas": 53,
     "visitas": 19,
     "inscritos": 21,
@@ -44,11 +44,11 @@
       "nombre": "Ingles Consolidada - Whats - Copia",
       "status": "ACTIVE",
       "presupuesto_dia": 785.94,
-      "gasto": 21047.31,
-      "impresiones": 299291,
-      "alcance": 162718,
-      "leads": 475,
-      "cpl": 44.31
+      "gasto": 21855.99,
+      "impresiones": 313198,
+      "alcance": 170600,
+      "leads": 485,
+      "cpl": 45.06
     },
     {
       "id": "52515312914962",
@@ -192,6 +192,17 @@
       "alcance": 0,
       "leads": 0,
       "cpl": 0
+    },
+    {
+      "id": "52521943337762",
+      "nombre": "Ingles Consolidada - Whats",
+      "status": "ARCHIVED",
+      "presupuesto_dia": 0,
+      "gasto": 226.63,
+      "leads": 8,
+      "cpl": 28.33,
+      "impresiones": 2539,
+      "alcance": 2141
     }
   ],
   "adsets": [
@@ -200,9 +211,9 @@
       "status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 21047.31,
-      "leads": 474,
-      "cpl": 44.4
+      "gasto": 21855.99,
+      "leads": 485,
+      "cpl": 45.06
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -320,6 +331,24 @@
       "gasto": 0.0,
       "leads": 0,
       "cpl": 0
+    },
+    {
+      "nombre": "Ingles Consolidada / Solo Whats",
+      "status": "ARCHIVED",
+      "campaign_id": "6922243400958",
+      "presupuesto_dia": 0,
+      "gasto": 39.37,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
+      "nombre": "Ingles Consolidada - Whats",
+      "status": "ARCHIVED",
+      "campaign_id": "52521943337762",
+      "presupuesto_dia": 0,
+      "gasto": 226.63,
+      "leads": 8,
+      "cpl": 28.33
     }
   ],
   "diario_meta": {
@@ -441,11 +470,11 @@
     },
     "2026-08-30": {
       "leads": 19,
-      "gasto": 644.61
+      "gasto": 645.49
     },
     "2026-08-31": {
-      "leads": 7,
-      "gasto": 361.74
+      "leads": 17,
+      "gasto": 1169.54
     }
   },
   "sucursales": {
