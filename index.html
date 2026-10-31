@@ -624,6 +624,58 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 ::-webkit-scrollbar-thumb { background:var(--c3); border-radius:99px; }
 ::-webkit-scrollbar-thumb:hover { background:var(--red); }
 
+/* ── COMPARATIVO Y CIERRE ── */
+.comp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; padding:18px 22px 6px; }
+.comp-tile { background:var(--c3); border:1px solid var(--line); border-radius:14px; padding:14px 16px; animation:cardIn .6s var(--ease) both; transition:transform .3s var(--ease); }
+.comp-tile:hover { transform:translateY(-3px); }
+.comp-lbl { font-size:10.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.comp-val { font-size:22px; font-weight:800; letter-spacing:-.02em; margin-top:4px; font-variant-numeric:tabular-nums; }
+.comp-delta { display:inline-flex; align-items:center; gap:4px; margin-top:6px; padding:2px 9px; border-radius:99px; font-size:11px; font-weight:700; font-variant-numeric:tabular-nums; }
+.comp-delta.up { color:var(--green); background:color-mix(in srgb, var(--green) 14%, transparent); }
+.comp-delta.down { color:var(--pink); background:color-mix(in srgb, var(--pink) 14%, transparent); }
+.comp-delta.neutro { color:var(--muted); background:rgba(var(--fg-rgb),.06); }
+.comp-prev { font-size:11px; color:var(--muted); margin-top:5px; }
+.comp-proy { margin:12px 22px 20px; padding:14px 18px; border-radius:14px; border:1px dashed color-mix(in srgb, var(--red) 50%, transparent); display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; }
+.comp-proy-titulo { font-size:11.5px; font-weight:700; color:var(--red); letter-spacing:.12em; text-transform:uppercase; }
+.comp-proy b { font-size:19px; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.comp-proy small { display:block; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+
+/* ── SEMÁFORO DE CAPTURA ── */
+.sema-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px; padding:18px 22px 20px; }
+.sema-item { --sm:var(--muted); background:var(--c3); border:1px solid var(--line); border-left:4px solid var(--sm); border-radius:14px; padding:14px 16px; animation:cardIn .6s var(--ease) both; }
+.sema-top { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.sema-t { font-size:12.5px; font-weight:700; display:flex; align-items:center; gap:8px; }
+.sema-luz { width:10px; height:10px; border-radius:50%; background:var(--sm); flex-shrink:0; animation:luz 2.2s ease-in-out infinite; }
+@keyframes luz { 0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--sm) 60%, transparent)} 70%{box-shadow:0 0 0 8px transparent} 100%{box-shadow:0 0 0 0 transparent} }
+.sema-v { font-size:24px; font-weight:800; color:var(--sm); letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+.sema-bar { height:6px; border-radius:99px; background:rgba(var(--fg-rgb),.08); overflow:hidden; margin:8px 0; }
+.sema-bar i { display:block; height:100%; border-radius:99px; background:var(--sm); animation:barGrow 1.1s var(--ease) both; }
+.sema-det { font-size:11.5px; color:var(--muted); line-height:1.5; }
+.sema-acc { font-size:11.5px; margin-top:6px; line-height:1.5; }
+.sema-acc b { color:var(--sm); }
+
+/* ── RANKING DE ANUNCIOS ── */
+.ads-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:16px; padding:18px 22px 22px; }
+.ad-card { background:var(--c3); border:1px solid var(--line); border-radius:16px; overflow:hidden; animation:cardIn .6s var(--ease) both; transition:transform .35s var(--ease), border-color .3s; }
+.ad-card:hover { transform:translateY(-6px); border-color:color-mix(in srgb, var(--red) 45%, transparent); }
+.ad-thumb { position:relative; aspect-ratio:1/1; background:rgba(var(--fg-rgb),.06); overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.ad-thumb::before { content:'Sin vista previa'; font-size:11px; color:var(--muted); font-weight:600; letter-spacing:.06em; }
+.ad-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s var(--ease); }
+.ad-card:hover .ad-thumb img { transform:scale(1.06); }
+.ad-rank { position:absolute; z-index:1; top:10px; left:10px; background:rgba(0,0,0,.6); color:#fff; font-weight:800; font-size:13px; padding:3px 11px; border-radius:99px; }
+.ad-card.top .ad-rank { background:var(--red); }
+.ad-estado { position:absolute; z-index:1; top:10px; right:10px; }
+.ad-estado .badge { background:rgba(0,0,0,.6); }
+.ad-info { padding:14px 16px 16px; }
+.ad-name { font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ad-camp { font-size:11px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:2px; }
+.ad-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-top:12px; text-align:center; }
+.ad-stats b { display:block; font-size:14px; font-weight:800; font-variant-numeric:tabular-nums; }
+.ad-stats span { font-size:9.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+.ad-share { height:5px; border-radius:99px; background:rgba(var(--fg-rgb),.08); overflow:hidden; margin-top:12px; }
+.ad-share i { display:block; height:100%; background:var(--a1); border-radius:99px; animation:barGrow 1.1s var(--ease) both; }
+.ad-share-lbl { font-size:10.5px; color:var(--muted); margin-top:5px; }
+
 /* Celular */
 @media (max-width:760px) {
   header { padding: 0 16px; }
@@ -686,6 +738,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="tab" data-pane="sucursales">Sucursales</div>
   <div class="tab" data-pane="campanas">Campañas</div>
   <div class="tab" data-pane="adsets">Ad Sets</div>
+  <div class="tab" data-pane="anuncios">🎬 Anuncios</div>
   <div class="tab" data-pane="agenda">Agenda</div>
   <div class="tab" data-pane="diario">Diario</div>
   <div class="tab" data-pane="presupuesto">Presupuesto</div>
@@ -697,6 +750,14 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 <!-- RESUMEN -->
 <div id="pane-resumen" class="pane active">
   <div class="kpi-grid" id="kpis"></div>
+  <div class="card" id="card-comparativo">
+    <div class="card-head"><span class="card-title">📈 Comparativo y cierre del mes</span><span class="card-sub" id="comp-sub">—</span></div>
+    <div id="comp-body"></div>
+  </div>
+  <div class="card" id="card-semaforo">
+    <div class="card-head"><span class="card-title">🚦 Semáforo de captura · Call Center</span><span class="card-sub">Qué tan completos están los datos que alimentan el embudo</span></div>
+    <div class="sema-grid" id="sema-body"></div>
+  </div>
   <div class="card" id="card-calc-leads">
     <div class="card-head"><span class="card-title">🧮 Calculadora de Leads</span><span class="card-sub">¿Cuántos leads quieren y cuánto hay que invertir?</span></div>
     <div class="calc-cpl-row">
@@ -780,6 +841,24 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
   <div class="card">
     <div class="card-head"><span class="card-title">Ad Sets — Mes Actual</span><span class="card-sub">Ordenado por Leads ↓</span></div>
     <table id="tbl-adsets"></table>
+  </div>
+</div>
+
+<!-- ANUNCIOS -->
+<div id="pane-anuncios" class="pane">
+  <div class="card">
+    <div class="card-head">
+      <span class="card-title">🎬 Ranking de anuncios del mes</span>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <span class="card-sub" id="ads-sub">—</span>
+        <select class="filter" id="ads-orden" onchange="renderAnuncios()">
+          <option value="leads">Más leads</option>
+          <option value="cpl">Mejor costo por lead (mín. 3 leads)</option>
+          <option value="gasto">Más gasto</option>
+        </select>
+      </div>
+    </div>
+    <div class="ads-grid" id="ads-grid"></div>
   </div>
 </div>
 
@@ -1174,6 +1253,24 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
 
   </div>
 
+  <div class="guia-section-title">Secciones nuevas (31-oct-2026)</div>
+  <div class="guia-grid">
+    <div class="guia-card" style="--gc:var(--a1)">
+      <h3>📈 Comparativo y cierre <span class="gc-tag">Resumen</span></h3>
+      <div class="gc-def">Compara el mes contra el anterior. Leads, gasto y costo por lead se comparan <b>al mismo día del mes</b> para que sea parejo; citas, inscritos e ingresos contra el mes anterior completo.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> verde = mejoró, rojo = empeoró (en costos, bajar es mejorar). Mientras el mes va en curso, la línea punteada dice con cuánto cerramos si seguimos al mismo ritmo.</div>
+    </div>
+    <div class="guia-card" style="--gc:var(--orange)">
+      <h3>🚦 Semáforo de captura <span class="gc-tag">Resumen</span></h3>
+      <div class="gc-def">Mide qué tan completos están los datos del Call Center: asistencias marcadas, días con fecha válida, leads de Meta registrados e inscritos con visita.</div>
+      <div class="gc-read"><b>Por qué importa:</b> si la captura está en rojo, el embudo y las tasas de conversión no son confiables. Cada tarjeta dice qué hacer para ponerla en verde.</div>
+    </div>
+    <div class="guia-card" style="--gc:var(--red)">
+      <h3>🎬 Ranking de anuncios <span class="gc-tag">Pestaña nueva</span></h3>
+      <div class="gc-def">Cada anuncio que gastó en el mes, con su miniatura, leads, costo por lead, gasto, CTR y qué parte del gasto se llevó.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> costo por lead en verde = igual o mejor que el promedio del mes; ámbar = hasta 50% más caro; rojo = más caro que eso. Sirve para decidir qué videos escalar y cuáles apagar.</div>
+    </div>
+  </div>
   <div class="guia-intro" style="margin-top:18px;background:linear-gradient(135deg,color-mix(in srgb, var(--green) 7%, transparent),color-mix(in srgb, var(--cyan) 5%, transparent));border-color:color-mix(in srgb, var(--green) 20%, transparent)">
     <h2 style="font-size:15px">💡 La idea en una frase</h2>
     <p>La <b>pauta</b> (CPL, Leads, Gasto) trae interesados baratos. El <b>Call Center y el plantel</b> (Citas, Visitas, Inscritos) los convierten en alumnos. Cuando un número se ve mal, esta guía ayuda a saber <b>en cuál de las dos partes</b> está el problema — y casi siempre, cuando el CPL es barato pero hay pocos inscritos, el cuello de botella está en la operación, no en los anuncios.</p>
@@ -2514,11 +2611,15 @@ function calcLeads(){
 function renderAll() {
   // Cada sección se pinta por separado: si una falla con un mes viejo, las demás no se quedan con el mes anterior
   const secciones = [calcLeadsInit, renderKpis, renderMetaLeads, renderFunnel, renderFinanzas, renderSucMini,
-    renderCampMini, renderAgendaMini, renderSucCards, renderSucursales, renderChurn, renderCampanas, renderAdsets, renderAgenda];
+    renderCampMini, renderAgendaMini, renderSucCards, renderSucursales, renderChurn, renderCampanas, renderAdsets, renderAgenda,
+    renderComparativo, renderSemaforo, renderAnuncios];
   const pane = document.querySelector('.tab.active')?.dataset.pane;
   if (pane === 'diario') secciones.push(renderDiario);
   if (pane === 'metas')  secciones.push(renderMetas);
-  secciones.forEach(fn => { try { fn(); } catch (e) { console.warn('No se pudo pintar', fn.name, e); } });
+  secciones.forEach(fn => {
+    try { Promise.resolve(fn()).catch(e => console.warn('No se pudo pintar', fn.name, e)); }
+    catch (e) { console.warn('No se pudo pintar', fn.name, e); }
+  });
 }
 
 // ── Selector de mes ──
@@ -2563,6 +2664,164 @@ async function initMeses() {
     sel.innerHTML = '<option value="">Mes actual</option>';
     renderAll();
   }
+}
+
+
+// ── COMPARATIVO VS MES ANTERIOR Y PROYECCIÓN DE CIERRE ───────────────────────
+const dinero0 = v => $m(Math.round(v || 0));   // montos grandes, sin centavos
+const dinero2 = v => new Intl.NumberFormat('es-MX', { style:'currency', currency:'MXN', minimumFractionDigits:2, maximumFractionDigits:2 }).format(v || 0);
+const CACHE_MESES = {};
+async function cargarMes(id) {
+  if (!(id in CACHE_MESES)) {
+    try { const r = await fetch(`data_${id}.json`); CACHE_MESES[id] = r.ok ? await r.json() : null; }
+    catch (e) { CACHE_MESES[id] = null; }
+  }
+  return CACHE_MESES[id];
+}
+function mesAnteriorId(id) {
+  const [y, m] = id.split('-').map(Number);
+  const d = new Date(y, m - 2, 1);
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+}
+async function renderComparativo() {
+  const el = document.getElementById('comp-body');
+  if (!el || !D.mes_id) return;
+  const visto = D;
+  const P = await cargarMes(mesAnteriorId(D.mes_id));
+  if (D !== visto) return;   // cambiaron de mes mientras cargaba
+  const k = D.kpis || {}, pk = (P && P.kpis) || {};
+  const enCurso = mesEnCurso();
+  const dia = enCurso ? new Date().getDate() : 31;
+  // Leads y gasto del mes anterior hasta el mismo día, para comparar parejo
+  const alDia = campo => Object.entries((P && P.diario_meta) || {})
+    .filter(([f]) => Number(f.slice(8, 10)) <= dia).reduce((a, [, v]) => a + (v[campo] || 0), 0);
+  const leadsP = P ? (enCurso ? alDia('leads') : pk.leads_meta) : null;
+  const gastoP = P ? (enCurso ? alDia('gasto') : pk.gasto) : null;
+  const div = (a, b) => b > 0 ? a / b : 0;
+  const filas = [
+    { l:'Leads Meta',  v:k.leads_meta, p:leadsP, f:$n, mejor:'sube' },
+    { l:'Gasto',       v:k.gasto,      p:gastoP, f:dinero0, mejor:'neutro' },
+    { l:'Costo por lead', v:k.cpl,     p:P ? div(gastoP, leadsP) : null, f:dinero2, mejor:'baja' },
+    { l:'Citas',       v:k.citas,      p:P ? pk.citas : null, f:$n, mejor:'sube' },
+    { l:'Inscritos',   v:k.inscritos,  p:P ? pk.inscritos : null, f:$n, mejor:'sube' },
+    { l:'Costo por inscrito', v:div(k.gasto, k.inscritos), p:P ? div(pk.gasto, pk.inscritos) : null, f:dinero0, mejor:'baja' },
+    { l:'Ingresos',    v:k.ingresos||0, p:P ? (pk.ingresos||0) : null, f:dinero0, mejor:'sube' },
+  ];
+  const nombreP = P ? (P.mes || '').split(' ')[0].toLowerCase() : '';
+  document.getElementById('comp-sub').textContent = P
+    ? (enCurso ? `vs ${nombreP} al día ${dia} (leads y gasto) y ${nombreP} completo (lo demás)` : `vs ${nombreP} completo`)
+    : 'Sin mes anterior para comparar';
+  const tiles = filas.map((r, i) => {
+    let chip = '';
+    if (r.p != null && r.p > 0) {
+      const cambio = (r.v - r.p) / r.p * 100;
+      const clase = r.mejor === 'neutro' ? 'neutro' : ((cambio >= 0) === (r.mejor === 'sube') ? 'up' : 'down');
+      chip = `<span class="comp-delta ${clase}">${cambio >= 0 ? '▲' : '▼'} ${Math.abs(cambio).toFixed(0)}%</span>`;
+    }
+    return `<div class="comp-tile" style="animation-delay:${i*50}ms">
+      <div class="comp-lbl">${r.l}</div>
+      <div class="comp-val">${r.v ? r.f(r.v) : '—'}</div>
+      ${chip}
+      <div class="comp-prev">${r.p != null ? `${nombreP}: ${r.p ? r.f(r.p) : '—'}` : '&nbsp;'}</div>
+    </div>`;
+  }).join('');
+  const meta = D.meta_inscritos_mkt || 45;
+  let proy;
+  if (enCurso && monthProgress() < 100) {
+    const fr = monthProgress() / 100;
+    const iP = Math.round((k.inscritos || 0) / fr);
+    proy = `<div class="comp-proy-titulo">A este ritmo cerramos con</div>
+      <div><b>${$n((k.leads_meta||0) / fr)}</b><small>leads</small></div>
+      <div><b>${$n(iP)}</b><small>inscritos · meta ${meta}</small></div>
+      <div><b>${dinero0((k.gasto||0) / fr)}</b><small>gasto en Meta</small></div>
+      <div><b style="color:${iP >= meta ? 'var(--green)' : 'var(--orange)'}">${Math.round(iP / meta * 100)}%</b><small>de la meta de inscritos</small></div>`;
+  } else {
+    proy = `<div class="comp-proy-titulo">Cierre del mes</div>
+      <div><b>${$n(k.inscritos||0)}</b><small>inscritos · meta ${meta}</small></div>
+      <div><b style="color:${(k.inscritos||0) >= meta ? 'var(--green)' : 'var(--orange)'}">${Math.round((k.inscritos||0) / meta * 100)}%</b><small>de la meta de inscritos</small></div>
+      <div><b>${k.inscritos ? dinero0(k.gasto / k.inscritos) : '—'}</b><small>costo por inscrito</small></div>`;
+  }
+  el.innerHTML = `<div class="comp-grid">${tiles}</div><div class="comp-proy">${proy}</div>`;
+}
+
+// ── SEMÁFORO DE CAPTURA DEL CALL CENTER ───────────────────────────────────────
+function renderSemaforo() {
+  const el = document.getElementById('sema-body');
+  if (!el) return;
+  const k = D.kpis || {};
+  const diasMes = D.mes_id ? new Date(+D.mes_id.slice(0,4), +D.mes_id.slice(5,7), 0).getDate() : 30;
+  const diasTrans = mesEnCurso() ? new Date().getDate() : diasMes;
+  const conDato = (k.asistieron||0) + (k.no_asistieron||0), citasAg = k.citas_agendadas || 0;
+  const diasReg = Object.keys(D.diario_suc || {}).length;
+  const leadsCCtot = Object.values(leadsCC()).reduce((a, v) => a + v, 0);
+  const items = [
+    { t:'Asistencia marcada', v: citasAg ? conDato / citasAg * 100 : null, ok:90, ojo:60,
+      det:`${conDato} de ${citasAg} citas de la Hoja Agenda tienen SÍ o NO.`,
+      acc:'Marcar SÍ o NO en la columna ASIS el mismo día de la cita.' },
+    { t:'Días con fecha válida', v: diasTrans ? Math.min(100, diasReg / diasTrans * 100) : null, ok:90, ojo:60,
+      det:`${diasReg} de ${diasTrans} días del seguimiento diario se pueden leer.`,
+      acc:'Escribir la fecha completa (dd/mm/aaaa) en cada renglón del seguimiento.' },
+    { t:'Leads de Meta registrados', v: k.leads_meta ? Math.min(100, leadsCCtot / k.leads_meta * 100) : null, ok:90, ojo:70,
+      det:`${$n(leadsCCtot)} registrados en el Call Center de ${$n(k.leads_meta||0)} conversaciones de Meta.`,
+      acc:'Registrar cada conversación de WhatsApp, aunque no conteste.' },
+    { t:'Inscritos con visita', v: k.inscritos ? Math.min(100, (k.visitas||0) / k.inscritos * 100) : null, ok:100, ojo:80,
+      det:`${$n(k.visitas||0)} visitas capturadas para ${$n(k.inscritos||0)} inscritos.`,
+      acc:'Cada inscrito debería tener su visita; si se inscribió sin cita, anotarlo en observaciones.' },
+  ];
+  el.innerHTML = items.map((it, i) => {
+    const color = it.v == null ? 'var(--muted)' : it.v >= it.ok ? 'var(--green)' : it.v >= it.ojo ? 'var(--orange)' : 'var(--pink)';
+    const estado = it.v == null ? 'Sin dato' : it.v >= it.ok ? 'Bien' : it.v >= it.ojo ? 'Ojo' : 'Urgente';
+    return `<div class="sema-item" style="--sm:${color};animation-delay:${i*60}ms">
+      <div class="sema-top"><span class="sema-t"><span class="sema-luz"></span>${it.t}</span><span class="sema-v">${it.v == null ? '—' : Math.round(it.v) + '%'}</span></div>
+      <div class="sema-bar"><i style="width:${it.v || 0}%"></i></div>
+      <div class="sema-det">${it.det}</div>
+      <div class="sema-acc"><b>${estado}:</b> ${it.acc}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── RANKING DE ANUNCIOS ───────────────────────────────────────────────────────
+const escH = t => String(t || '').replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+function renderAnuncios() {
+  const grid = document.getElementById('ads-grid');
+  if (!grid) return;
+  const lista = [...(D.anuncios || [])];
+  const orden = document.getElementById('ads-orden')?.value || 'leads';
+  if (orden === 'cpl') lista.sort((a, b) => ((b.leads >= 3) - (a.leads >= 3)) || ((a.cpl || 9e9) - (b.cpl || 9e9)));
+  else if (orden === 'gasto') lista.sort((a, b) => b.gasto - a.gasto);
+  else lista.sort((a, b) => (b.leads - a.leads) || (a.gasto - b.gasto));
+  const totG = lista.reduce((t, a) => t + a.gasto, 0);
+  const cplMes = (D.kpis || {}).cpl || 0;
+  document.getElementById('ads-sub').textContent = lista.length
+    ? `${lista.length} anuncios con gasto · ${dinero0(totG)} · costo por lead del mes ${dinero2(cplMes)}` : '—';
+  if (!lista.length) {
+    grid.innerHTML = '<div class="empty" style="grid-column:1/-1">Este mes todavía no tiene ranking de anuncios</div>';
+    return;
+  }
+  const colorCpl = c => !c ? 'var(--dim)' : !cplMes || c <= cplMes ? 'var(--green)' : c <= cplMes * 1.5 ? 'var(--orange)' : 'var(--pink)';
+  grid.innerHTML = lista.map((a, i) => {
+    const parte = totG ? a.gasto / totG * 100 : 0;
+    const activo = a.estado === 'ACTIVE';
+    return `<div class="ad-card${i < 3 ? ' top' : ''}" style="animation-delay:${Math.min(i, 12) * 45}ms">
+      <div class="ad-thumb">
+        ${a.miniatura ? `<img src="${escH(a.miniatura)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : ''}
+        <span class="ad-rank">#${i + 1}</span>
+        <span class="ad-estado">${activo ? '<span class="badge ba">&#9679; Activo</span>' : '<span class="badge bp">&#9208; Pausado</span>'}</span>
+      </div>
+      <div class="ad-info">
+        <div class="ad-name" title="${escH(a.nombre)}">${escH(a.nombre)}</div>
+        <div class="ad-camp" title="${escH(a.campana)}">${escH(a.campana)}</div>
+        <div class="ad-stats">
+          <div><b style="color:var(--a1)">${$n(a.leads)}</b><span>Leads</span></div>
+          <div><b style="color:${colorCpl(a.cpl)}">${a.leads ? dinero2(a.cpl) : '—'}</b><span>C/lead</span></div>
+          <div><b>${dinero0(a.gasto)}</b><span>Gasto</span></div>
+          <div><b>${(a.ctr || 0).toFixed(1)}%</b><span>CTR</span></div>
+        </div>
+        <div class="ad-share"><i style="width:${parte}%"></i></div>
+        <div class="ad-share-lbl">${parte.toFixed(1)}% del gasto del mes</div>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 // ── MOVIMIENTO Y PORTADA (rediseño 31-oct-2026) ──────────────────────────────

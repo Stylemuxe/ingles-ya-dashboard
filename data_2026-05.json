@@ -1667,5 +1667,137 @@
       "inscrito": false,
       "obs": "Clase muestra"
     }
+  ],
+  "anuncios": [
+    {
+      "id": "6939350780358",
+      "nombre": "EST-inscribciones2- 21 de abr",
+      "campana": "Ingles Consolidada",
+      "conjunto": "Ingles Consolidada final",
+      "estado": "ARCHIVED",
+      "miniatura": "",
+      "gasto": 11806.25,
+      "leads": 218,
+      "cpl": 54.16,
+      "ctr": 2.34,
+      "impresiones": 77187
+    },
+    {
+      "id": "6939346994158",
+      "nombre": "vid_invitacion-21abr",
+      "campana": "Ingles Consolidada",
+      "conjunto": "Ingles Consolidada final",
+      "estado": "ARCHIVED",
+      "miniatura": "",
+      "gasto": 5128.73,
+      "leads": 168,
+      "cpl": 30.53,
+      "ctr": 1.48,
+      "impresiones": 88748
+    },
+    {
+      "id": "6914902009558",
+      "nombre": "vid_invitacion-15abr",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://scontent.fmex11-1.fna.fbcdn.net/v/t15.5256-10/644238104_2776846985991785_8444589248826146774_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeEx1GUiPz8AGF7s77TdCBIuJMSw4XGbb_QkxLDhcZtv9HVVZDim5rdVVPZCwCwWcfDbAK_LxevWf3WSyy1eMC3N&_nc_ohc=_iaXh0EY14wQ7kNvwGTP7sG&_nc_oc=AdoGPi74VQnMov456HaQY2Lr6MMhxnvXrogTmkUQed6PBU8CO_TG92e7UUULUcZrtHlNxkEK2-JmlCfROKeticCW&_nc_zt=23&_nc_ht=scontent.fmex11-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&_nc_tpa=Q5bMBQKJyUA-0PROLaG_1010uCp4-ulaZfr1ASK_A0lLlRPhG9F_FUtesBIjWt_8I9hQ-XHPDP9r2Blo9Q&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQQDtD8ilh__zKZpBBohYWP843PSw1cZrpMByOADs0zHRQ&oe=6AEC2A06",
+      "gasto": 4389.57,
+      "leads": 91,
+      "cpl": 48.24,
+      "ctr": 1.17,
+      "impresiones": 68890
+    },
+    {
+      "id": "6934945576958",
+      "nombre": "EST- INSCRIBCIONES- 15 DE ABRIL",
+      "campana": "Ingles Consolidada",
+      "conjunto": "Ingles Consolidada final",
+      "estado": "ARCHIVED",
+      "miniatura": "",
+      "gasto": 3824.03,
+      "leads": 76,
+      "cpl": 50.32,
+      "ctr": 2.05,
+      "impresiones": 29330
+    },
+    {
+      "id": "6934944347358",
+      "nombre": "EST- INSCRIPCION 15- ABR",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://scontent.fmex11-3.fna.fbcdn.net/v/t45.1600-4/673561766_1075222165675637_2733814541975759301_n.png?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeGLZA77Rf3LitFrs5ZUTTe6ZlUDn9_aaZBmVQOf39ppkFYAR9XoGAugJ7oEl217Tl29Wc79-aN-rgvjobnuumBx&_nc_ohc=H0n37-PKFhUQ7kNvwFCbS90&_nc_oc=AdpNHbZwbZA0pmvOiZ0Sa9DTyd_bl8fa_rThfKbA---wn3rGSSjPmq1BYfABSXK1W8jeZIn3LVoc6wOvvdOeFAw1&_nc_zt=1&_nc_ht=scontent.fmex11-3.fna&edm=ACTJxZ4EAAAA&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&_nc_tpa=Q5bMBQLybRTv4JvU4qVySWGe2Rvw_fPcUIwI-14Jz154y83gqH5R7URYFKcNnWdMKR6wd3VFbXaiujHGRQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=52f3c4&_nc_sid=58080a&oh=00_AQTq8tXEKX9LQsS0Xgt3j8kZV7_kmADVcu0zOD9JtKHnnA&oe=6AEC0E0E",
+      "gasto": 3387.8,
+      "leads": 39,
+      "cpl": 86.87,
+      "ctr": 1.44,
+      "impresiones": 29466
+    },
+    {
+      "id": "6914902008958",
+      "nombre": "vid_TU HIJO LLEVA  AÑOS EN INGLES Y NO LO HABLA - Copia",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://scontent.fmex11-1.fna.fbcdn.net/v/t15.5256-10/644238104_2776846985991785_8444589248826146774_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeEx1GUiPz8AGF7s77TdCBIuJMSw4XGbb_QkxLDhcZtv9HVVZDim5rdVVPZCwCwWcfDbAK_LxevWf3WSyy1eMC3N&_nc_ohc=_iaXh0EY14wQ7kNvwGTP7sG&_nc_oc=AdoGPi74VQnMov456HaQY2Lr6MMhxnvXrogTmkUQed6PBU8CO_TG92e7UUULUcZrtHlNxkEK2-JmlCfROKeticCW&_nc_zt=23&_nc_ht=scontent.fmex11-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&_nc_tpa=Q5bMBQKMyPgbvz4WXjYeWZPpmx1psOoSENwlK1Nn8RAjqp0inUdm_KBDBDLHdg1z3tUDPZYmF6UvtOCGFw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQRxifsmIiHgyJqSPMY1vIx420qlwqThFHHU3Fv7n-mVEw&oe=6AEC2A06",
+      "gasto": 2009.27,
+      "leads": 37,
+      "cpl": 54.3,
+      "ctr": 1.43,
+      "impresiones": 33719
+    },
+    {
+      "id": "6914902009358",
+      "nombre": "EST-inscribciones2- 15 de abr",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://scontent.fmex11-3.fna.fbcdn.net/v/t45.1600-4/674572589_1075656895632164_1487986252281330020_n.png?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeEPOuYiN0156_Ad8Pf521ss7wDnpYExD97vAOelgTEP3jJ13DrsQW8ioSWzsjxK4qCD39DhWOfwdcPjWfW9SbQP&_nc_ohc=AQnoDUmW_70Q7kNvwFQTY3n&_nc_oc=AdoBFSBP5mNUFhOHkOyAOwPEyrapTcgsLLkYBZyzlY5v_ZN6pzL58PAZVD74WekIbkmKJ3ABqb6lDh90mBCNjJ7W&_nc_zt=1&_nc_ht=scontent.fmex11-3.fna&edm=ACTJxZ4EAAAA&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&_nc_tpa=Q5bMBQKaqV5K58Otb6FXDP3AnkmrXPAaoAS3KmsS5aLQuTWEOJTSFj6r_-jZ86doYsY6_wpyTbS1MnAsoA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=52f3c4&_nc_sid=58080a&oh=00_AQS6d8EC3kqD13QZLmP8q7JNMfHCr-YGWiOfMMh-weCGLg&oe=6AEC2DA4",
+      "gasto": 944.71,
+      "leads": 14,
+      "cpl": 67.48,
+      "ctr": 1.18,
+      "impresiones": 12360
+    },
+    {
+      "id": "6939349028958",
+      "nombre": "vid_TU HIJO LLEVA  AÑOS EN INGLES Y NO LO HABLA - 21 abr",
+      "campana": "Ingles Consolidada",
+      "conjunto": "Ingles Consolidada final",
+      "estado": "ARCHIVED",
+      "miniatura": "",
+      "gasto": 369.77,
+      "leads": 8,
+      "cpl": 46.22,
+      "ctr": 1.94,
+      "impresiones": 4225
+    },
+    {
+      "id": "6914902008758",
+      "nombre": "VID - DIRIGIDO A PADRES IA V1",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://scontent.fmex11-1.fna.fbcdn.net/v/t15.5256-10/652622581_1429959848369841_9182822706436477406_n.jpg?_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFVuK9vOoPvP5vrqr-_yYUZDHXUjuTf49cMddSO5N_j1xGdVkE8Rqx-giLfxf6xHoDjNZ8eiyrqODuMvII5Yfzx&_nc_ohc=xbskDFoWVvIQ7kNvwFn1c7W&_nc_oc=Ado6vCTePbG5A0oH6jh-uCkC_KvkoDobewoGcltOOuhhPJ0zAdOwxxWw9eHHIVdi7-CGkEvEXL93Hf0kpTyK7Mm3&_nc_zt=23&_nc_ht=scontent.fmex11-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&_nc_tpa=Q5bMBQLrpK9Xp3xhgOW_XuSGacuypSWF_iE7BJg0F9XRBqHO4n3zrzFsiYo58mPiJUSyAXvrGdQMjnB-jA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQTMv46duzm3pnsZ2SrztpUVl-g66oFvr26bS3CWnRVXzA&oe=6AEC3E51",
+      "gasto": 800.98,
+      "leads": 6,
+      "cpl": 133.5,
+      "ctr": 1.28,
+      "impresiones": 9892
+    },
+    {
+      "id": "6914902008558",
+      "nombre": "CAR - ADOL - Copia",
+      "campana": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "conjunto": "Ingles- Leads Mensajes 1 IZT Y LIND",
+      "estado": "CAMPAIGN_PAUSED",
+      "miniatura": "https://external.fmex11-3.fna.fbcdn.net/emg1/v/t13/5780145884248155807?_nc_oc=AdrBXmmOTt6lHbhWiWcK--ZK4nOGeAQqmsK9hEH7GnjbdDmaq8uN8ELNK3m-NU0jatPgtT9izgB7U1tEeYAI338_&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQJCt5tKrjqaXz-EVoEvbjsPEANtVwLpWvkCMx1K3K3nSZ358tikwTAHflZYlnKJ8KoasS8-gTdsGhxfyQPutmLd4cKj2izXCxjB1aVEhbi6PrHO6p4nSdjFONrdmX3oP-Q-4yqvzLkEJqr7RAMc3YL5&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex11-3.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mnmywBLR9mhUkS4O01ZDkg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeE-FU58p6XppNhhDGlwyc7IFT8NGOLar2oVPw0Y4tqvaqwOFr8oIBNFJdAYGclQdtIcsbenZzb2QYUZmit3M9JH&_nc_tpa=Q5bMBQIJQweumNSCFgfylXrZSxO7xL2y6i45Zayzb6S-Pf5o9MoOnQbPV2CtcaFpocC2r6MEjKg9PMArUw&oh=06_Q3_EAUmb6PQMDNLiOMgT0lJ8SIbOQyubnDdxadBvTBdn5ctC&oe=6AE83D23",
+      "gasto": 8.21,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 3.7,
+      "impresiones": 54
+    }
   ]
 }

@@ -236,6 +236,47 @@ def fetch_totales_cuenta():
                   if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
     return {'leads': leads, 'gasto': round(sf(d.get('spend', 0)), 2)}
 
+def fetch_anuncios():
+    """Ranking de anuncios del mes con su miniatura: qué video o imagen trae más leads y a qué costo."""
+    resp = meta_get(f'{AD_ACCOUNT}/insights', {
+        'level':      'ad',
+        'fields':     'ad_id,ad_name,campaign_name,adset_name,spend,impressions,ctr,actions',
+        'time_range': time_range(),
+        'limit':      500,
+    })
+    filas = resp.get('data', [])
+    info = {}
+    if filas:
+        ads = meta_get(f'{AD_ACCOUNT}/ads', {
+            'fields': 'id,effective_status,creative.thumbnail_width(480).thumbnail_height(480){thumbnail_url,object_type}',
+            'limit':  500,
+        })
+        info = {a['id']: a for a in ads.get('data', [])}
+    out = []
+    for f in filas:
+        gasto = sf(f.get('spend', 0))
+        if gasto <= 0:
+            continue
+        leads = next((si(a['value']) for a in f.get('actions', [])
+                      if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
+        ad = info.get(f['ad_id'], {})
+        creativo = ad.get('creative') or {}
+        out.append({
+            'id':          f['ad_id'],
+            'nombre':      f.get('ad_name', ''),
+            'campana':     f.get('campaign_name', ''),
+            'conjunto':    f.get('adset_name', ''),
+            'estado':      ad.get('effective_status', 'ARCHIVED'),   # /ads no devuelve los archivados
+            'miniatura':   creativo.get('thumbnail_url', ''),
+            'gasto':       round(gasto, 2),
+            'leads':       leads,
+            'cpl':         round(gasto / leads, 2) if leads else 0,
+            'ctr':         round(sf(f.get('ctr', 0)), 2),
+            'impresiones': si(f.get('impressions', 0)),
+        })
+    out.sort(key=lambda x: (-x['leads'], x['gasto']))
+    return out
+
 # ─── SEGUIMIENTO ─────────────────────────────────────────────────────────────
 def parse_seguimiento(text):
     rows    = list(csv.reader(io.StringIO(text)))
@@ -560,10 +601,14 @@ def main():
 
         totales_cuenta = fetch_totales_cuenta()
         print(f"    Totales de la cuenta: {totales_cuenta['leads']} leads / ${totales_cuenta['gasto']:,.2f}")
+
+        print('[3b] Meta Ads — ranking de anuncios...')
+        anuncios = fetch_anuncios()
+        print(f'    {len(anuncios)} anuncios con gasto en el mes')
     except MetaAPIError as e:
         meta_ok = False
         print(f'    ERROR Meta API: {e}')
-        campanas, adsets, diario_meta = [], [], {}
+        campanas, adsets, diario_meta, anuncios = [], [], {}, []
         prev_path = os.path.join(BASE_DIR, f'data_{MES_ACTUAL}.json')
         if os.path.exists(prev_path):
             try:
@@ -572,6 +617,7 @@ def main():
                 campanas    = prev.get('campanas', [])
                 adsets      = prev.get('adsets', [])
                 diario_meta = prev.get('diario_meta', {})
+                anuncios    = prev.get('anuncios', [])
                 meta_actualizado = prev.get('meta_actualizado', prev.get('actualizado', ''))
                 print(f'    CONSERVANDO datos Meta previos (última actualización Meta: {meta_actualizado})')
             except Exception as e2:
@@ -736,6 +782,7 @@ def main():
         },
         'campanas':    campanas,
         'adsets':      adsets,
+        'anuncios':    anuncios,
         'diario_meta': diario_meta,
         'sucursales':  totales_suc,
         'metas_leads':        metas_leads,
