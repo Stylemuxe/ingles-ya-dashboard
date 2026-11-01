@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "01/11/2026 04:53",
-  "meta_actualizado": "01/11/2026 04:53",
+  "actualizado": "01/11/2026 11:23",
+  "meta_actualizado": "01/11/2026 11:23",
   "meta_ok": true,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
-    "leads_meta": 1,
-    "gasto": 41.18,
-    "cpl": 41.18,
+    "leads_meta": 8,
+    "gasto": 517.19,
+    "cpl": 64.65,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -41.18,
+    "utilidad": -517.19,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 41.18,
+      "meta_ads": 517.19,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 41.18
+      "total": 517.19
     }
   },
   "campanas": [
@@ -51,11 +51,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 7.97,
-      "impresiones": 42,
-      "alcance": 38,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 50.27,
+      "impresiones": 219,
+      "alcance": 203,
+      "leads": 1,
+      "cpl": 50.27
     },
     {
       "id": "52540651597362",
@@ -63,11 +63,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 1.57,
-      "impresiones": 24,
-      "alcance": 21,
-      "leads": 1,
-      "cpl": 1.57
+      "gasto": 38.89,
+      "impresiones": 317,
+      "alcance": 268,
+      "leads": 2,
+      "cpl": 19.45
     },
     {
       "id": "52537011571762",
@@ -87,11 +87,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 31.64,
-      "impresiones": 418,
-      "alcance": 402,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 427.84,
+      "impresiones": 3417,
+      "alcance": 3088,
+      "leads": 5,
+      "cpl": 85.57
     },
     {
       "id": "52515312914962",
@@ -267,9 +267,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 7.97,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 50.27,
+      "leads": 1,
+      "cpl": 50.27
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
@@ -277,9 +277,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 1.57,
-      "leads": 1,
-      "cpl": 1.57
+      "gasto": 38.89,
+      "leads": 2,
+      "cpl": 19.45
     },
     {
       "nombre": "PRUEBA CREATIVOS OCT 2026",
@@ -287,7 +287,7 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 0.05,
+      "gasto": 33.37,
       "leads": 0,
       "cpl": 0
     },
@@ -307,9 +307,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 31.59,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 394.47,
+      "leads": 5,
+      "cpl": 78.89
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -444,17 +444,56 @@ const DATA_INGLES = {
   ],
   "anuncios": [
     {
+      "id": "52522031969362",
+      "nombre": "vid_invitacion-21abr - Copia",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/885039510_953598190852663_3218982903863382282_n.avif?_nc_cat=108&ccb=1-7&_nc_eui2=AeFDA1tIzuXNkn3r-OTbnydK_Bk-_bFbFMr8GT79sVsUylMS4DOBAjEC76WbFzNBkO0ncdkn-tg0kbK_GqzmyY_U&_nc_ohc=QF1vzOzTA28Q7kNvwFrAAMJ&_nc_oc=AdqHsbhUMUi1fuGcesw6w7U0hMQNSI7nmxfTks3apxiy-z-qLeVVfplBOR8ji3_2Gio&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKq6ij-u_z8s5tdZvG4Ltr57VZc-42KN1Dyt_5lLawBgxKDDiCCVj2HZic-qUrfwCio7Eh64TAQNg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQSV6hylvdEiC_1inhkYFCeJlCrHPaJGx_D9M8dmz-Zkbw&oe=6AED52E7",
+      "gasto": 366.47,
+      "leads": 5,
+      "cpl": 73.29,
+      "ctr": 1.88,
+      "impresiones": 3087
+    },
+    {
+      "id": "52540656258762",
+      "nombre": "TOEFL C6 Simulacros VIDEO",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/881787438_1672541821204079_8741006472433212179_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeECUtg-iGoOgMI6LLioFJvndKRthaHBYr50pG2FocFivmnktfoa_3grYFh9RI72qUKKNc1H23cJ4Ii0_lxJDBD5&_nc_ohc=ImhHY4LxVA0Q7kNvwEfzc45&_nc_oc=Adrwuz4N7tkIhNzheVVXbFkRd3wHqaVxvo62_MS6yV-guPGn2ykXHYeZdWk43sVPz98&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQL018DLJi8vaZXYYWi14IbpXnbHpnmK4QkfmcQwIHwS6zzmyElGJcJOz97C8mgscTG4QtN69TPhxg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQR2_sQuwRqdRq3_VKNh4pEYkLIGb2mi8TLOri8i-hY5kA&oe=6AED480B",
+      "gasto": 3.08,
+      "leads": 1,
+      "cpl": 3.08,
+      "ctr": 3.03,
+      "impresiones": 33
+    },
+    {
       "id": "52540651839362",
       "nombre": "TOEFL C4 Descuento",
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/880006697_1481051377459164_3444966786238202088_n.jpg?_nc_cat=107&ccb=1-7&_nc_eui2=AeGUGvZ5jZP96fhYzCuv9HKEvuMjrZ2DS06-4yOtnYNLTuL4FTI-BDEgV-fuxR9zqWzy313I9VXkTn5r_m3Z7DZp&_nc_ohc=-C9dCO_we4kQ7kNvwG2Es-C&_nc_oc=AdpzLibXvnJsEKlqIN8NIq_3uxRtqrBFkOQSXDOSjCcSffTbBAXPoSidcVAyykz8qiY&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQI1jpx0qFfM5SXYIwr4HdxpxtUE9ORbKj4RQSr9xs1oQK3ZCP-6eQKha5SJJYjZEZGbxk1wvAT8Pw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSsQA2Sp9L4BwcT0x7o9Bxvcmaaag68KgJpoSZhevr2pQ&oe=6AECE763",
-      "gasto": 0.89,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/880006697_1481051377459164_3444966786238202088_n.jpg?_nc_cat=107&ccb=1-7&_nc_eui2=AeGUGvZ5jZP96fhYzCuv9HKEvuMjrZ2DS06-4yOtnYNLTuL4FTI-BDEgV-fuxR9zqWzy313I9VXkTn5r_m3Z7DZp&_nc_ohc=-C9dCO_we4kQ7kNvwEX4BJw&_nc_oc=AdqEAo3Ws4iyR-2rZcVWT31HPZqK6AUweaAWGQXfLGpvdxEDtRrD5nJ1XuGpTD8iht4&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKqCqx2fxsq2GKs-TjeCB0nnPQvWvg5ygqIDzKn5Gxr7r0LIxZZvhFQOxnbFPTzdFa5jYD8AsxKRA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSJ357qW9WoCIGWks7jYSN620n3dN2G-h5eXRcc1zHMkQ&oe=6AED57E3",
+      "gasto": 10.17,
       "leads": 1,
-      "cpl": 0.89,
-      "ctr": 5.88,
-      "impresiones": 17
+      "cpl": 10.17,
+      "ctr": 0.69,
+      "impresiones": 144
+    },
+    {
+      "id": "52540651743762",
+      "nombre": "RMK 3",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/879591755_1649840590148135_1310835721001535011_n.jpg?_nc_cat=102&ccb=1-7&_nc_eui2=AeFfRxOhu9Ez0er2Oi8IVwudRYm06d8cFK5FibTp3xwUrgcR_P3A0DHAJGJbEx_bIwunjcxy7uCa56KoVlwvUzvx&_nc_ohc=Yeux4b2o-Y4Q7kNvwHd0QaS&_nc_oc=Adpf4DcMChmNZroBxASSgvwsvx1LbaHt1MsTyvOEfBEbHcjSp7WbdN7I0IpEWiHlgF4&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQLMOKNWniQ_U9KxmVLN_TCfRcvu3PbFUXOy_C8WEAw3w9B_A_LcB9ruGJIEHIA9PysfzeiTLCHyNg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQ-5-naWl4fDnnskYyw7v4nr-EE5nenTzpAPPOOWsdzlg&oe=6AED348D",
+      "gasto": 12.24,
+      "leads": 1,
+      "cpl": 12.24,
+      "ctr": 4.65,
+      "impresiones": 43
     },
     {
       "id": "52540651713762",
@@ -462,7 +501,7 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/879544298_1424536799861329_2908013346979664184_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeH0Cqjgkopsy787CSxjNWGonPwaJdDW9wqc_Bol0Nb3CqnXhZYoQOtnSJEilIHe553wArwM5KQZBWJpLLnH3Ato&_nc_ohc=fEIVPILNDGEQ7kNvwFkmaOa&_nc_oc=AdpkO2fC1_5J8RUDNtlOpCO6QqhesB97z6akS-r-DpY8vEiX7WkFlUJ1B1P3NQrd7Ao&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQLbl2Uu1dHKQUNX8PPo_N5asAt0t1s2b_nistQ0QEsy_QB5by3Em1C8oy64VM1cfn9DH1Q3K-8Swg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQHeukTDZ1piss-qr5v0_LzAGxtpR9Wm8yRMSdXA4IQHA&oe=6AECFCDA",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/879544298_1424536799861329_2908013346979664184_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeH0Cqjgkopsy787CSxjNWGonPwaJdDW9wqc_Bol0Nb3CqnXhZYoQOtnSJEilIHe553wArwM5KQZBWJpLLnH3Ato&_nc_ohc=fEIVPILNDGEQ7kNvwG24H0I&_nc_oc=AdoHL9Co8NrhlwqqAl6a22GprkfPOJNvgY1Dl8ccEAo3D3nqkS6r5VHyk0TWPTq2yjA&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKGvdBJ0ADOPOIG_8XFFMu9yme4H5XXveK8djliotgyY5jj4MSzHOkayX4pyqbL-TNLJNaAdc0fqQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSOSksMQDeAp47jE-AnghK2F4zyOPV6cHN5o6mCW6oFHQ&oe=6AED351A",
       "gasto": 0.01,
       "leads": 0,
       "cpl": 0,
@@ -470,13 +509,13 @@ const DATA_INGLES = {
       "impresiones": 1
     },
     {
-      "id": "52537014354962",
-      "nombre": "EST - TOEFL OCT26 (D)",
-      "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "id": "52540656356162",
+      "nombre": "RMK 6 Prueba social VIDEO",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/9543576559827867138?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQL51I9bvccUiW1bZFpxbDPznEdwHuan7VDXjX6mOaQ7in2-9BcgP3TN1ZAJvlL4SsX09oXPn81M2qFlBZHEcrLw_6wbuHWpPzVD3jZRuPhRvx6h9vak_nw62FznS8qfhER7B2_jAsaVV5rHS7bfyuSi&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGZ_meFfDU5HTIK7nJn43cgWBi1ET8R2gFYGLURPxHaAe2TTBPaBH8Qw7wjcn3od_RdmsVB5jOW5NUf6l5WnoZv&_nc_tpa=Q5bMBQKEpKDOYFay3hnJ0GVScnwevac93EFVXjDZ1epGls2AtXZk-FlQPP_w5x2OZ7VVHUzITCVELxxBRg&oh=06_Q3_EAZQM5RcbpYJEzWb_YDBsz9D5274NoREsNYbrv3CMHP_8&oe=6AE90975",
-      "gasto": 0.02,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/881767085_3449937852060905_7622941492586673297_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFwjCIu6qYo2zVpMP4AuUQnrlH0DNCFWz2uUfQM0IVbPbqtZ8gPsV9COSlU82HuD12E0SUtqFj90s3j9_sXheTj&_nc_ohc=lOt0Qav0GyUQ7kNvwE2GZ-W&_nc_oc=AdqvEWU3VSnjr9qfq093-pItNKkVgGHzdl6aJuZ2Y0B4IlHEQ0zjVUbNipuYPVmKJvA&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQIeLQsWGrinHKHYE3MDS5KSCLbMMwKE9dnY-7bAjNy1IBjTzdZvCLSFNYbNvwuz4PZFxlwPjKpzUw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSMj-Mi9Pt62vYpfImQ2JtIX4ybKk42P00zt1hRbbTeog&oe=6AED45B2",
+      "gasto": 0.23,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
@@ -488,51 +527,25 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879964992_1106984448790357_5948068773663553465_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeFD3OxpMvqTcmxoMINbX3YtpiMmZd9zSQGmIyZl33NJAbBjp2oq2RpOmzRQmR2XmbXrl5AqQ-h-ocxCOqQxYJps&_nc_ohc=gdGcqBKDYZ0Q7kNvwE184pv&_nc_oc=AdpLw8X4_GAYYH4XMEYGsyB4Fx82_0SVRGzskN3MudJOy_RwesIOcYQyI5NlF0_7a_0&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQJ_knFThvYT84sXMqMXLGNyYmVMTaiQtwoCqXI9Xg86c16v9gCONV1o09EwqZnXggMxUkoHRos9IQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQzw4Y7ZTpWuqe_nUR1YmWV3Yxcqu_lIUYiqouVmnCf9w&oe=6AECFD5A",
-      "gasto": 0.02,
+      "miniatura": "https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/879964992_1106984448790357_5948068773663553465_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeFD3OxpMvqTcmxoMINbX3YtpiMmZd9zSQGmIyZl33NJAbBjp2oq2RpOmzRQmR2XmbXrl5AqQ-h-ocxCOqQxYJps&_nc_ohc=6I28IQV4RWIQ7kNvwHUbPaZ&_nc_oc=AdqjvHlWED2QDHY7brgmsoZpoBUnrNc2ZAmexKNIHO_6tgk3kHL67M95g8BTMQDQp5M&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKhqqLTpkOQqMEt_hnNVCAoxQp848w8WdqvZoQViG0J2jpr4S77z5nD426sNX0JwT10M5T4C4Wgiw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQS_soJqVny8BtFTDWzN6wBByvAb-vkkZ6XqZ_VYIuR6LQ&oe=6AED359A",
+      "gasto": 0.25,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 1
+      "ctr": 16.67,
+      "impresiones": 6
     },
     {
-      "id": "52537014353362",
-      "nombre": "EST - ENTIENDES NO HABLAS OCT26 (B)",
-      "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "PRUEBA CREATIVOS OCT 2026",
-      "estado": "ACTIVE",
-      "miniatura": "https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/4784336512722688729?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKmlqrcZ78MMQZpkMsytsixRgepbvMN66Jg2ubjHNG8O9LpVSoRWOaUwmZ_NU_PZUsJd5gWDLIi1A9U2gZxvND97dwE-hIg-SgBybcPa4X8bxG4A_4xyrLzYy6LyJfMP4Ceq56kE--Eamg23yw4mLwH&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeHGzRqXiN7rMz6qDiKP33sct0DxYF3-PZq3QPFgXf49mi9XjNaNZ-XixchaGiRs-Hogf2J4GFb0USh7RA5hrv7F&_nc_tpa=Q5bMBQLCktr-2y4GFFhgzg7UcHF1V6rgLdyeH51yyyh94pRQyjEWLb5SCWQb3ucPjvwMPWsuCjzlWiP8VQ&oh=06_Q3_EAeX5wDAK34YL7ExrNtBqOLXaCOKoudsuS8ZkBhC2vM9e&oe=6AE90CA5",
-      "gasto": 0.03,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 1
-    },
-    {
-      "id": "52540656258762",
-      "nombre": "TOEFL C6 Simulacros VIDEO",
+      "id": "52540651809362",
+      "nombre": "TOEFL C2 Titulacion",
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/881787438_1672541821204079_8741006472433212179_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeECUtg-iGoOgMI6LLioFJvndKRthaHBYr50pG2FocFivmnktfoa_3grYFh9RI72qUKKNc1H23cJ4Ii0_lxJDBD5&_nc_ohc=ImhHY4LxVA0Q7kNvwGGMEnP&_nc_oc=AdqRH0VWUmholee_pP5q5Nf4ID24gVH2aaojhy5Kqh_zsPTuT-EeItwYYtmfWqFXCaw&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQJd-ZuVaqT3gRMdqIpobTDb7m721Zhy4ilCCk3HB_XvWa2WNVpM-AnOYYHGlLDcvIjy-Quf4T7Zbw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTzJeBc6jVwgf2lxuHP0SKmArucMMNA1NQMOJxAdNJSEg&oe=6AECD78B",
-      "gasto": 0.03,
+      "miniatura": "https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/880006707_2973749332959993_4053577084132451059_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeFRO4COA2MRBuG7v7FrLq7LZfv_uFDW4mpl-_-4UNbialXxbyloMdykPnG19LP34_2OfcSx3ugSZTlaJSGysLfL&_nc_ohc=THSCje2H6AQQ7kNvwFPg93r&_nc_oc=AdonPA0vrFm3ShpGY77gcflBvU9koow2JVOykku7nP3q3AgFYyhmte1MnFHp40Zp8Os&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKP8ApWnupSyUj3GesC2bL9OTrdLZFDtnNz43v_g34brsds-284SoyE1GYlkMnaGTZDNGP1DWMHOg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQgPfSovzNnURtRqeQ61S1xDdkL19S-YkCvmOsW4TTwPg&oe=6AED3E26",
+      "gasto": 0.37,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 1
-    },
-    {
-      "id": "52540651792362",
-      "nombre": "TOEFL C1 Reel",
-      "campana": "IY | TOEFL | WhatsApp | OCT26",
-      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/880081997_1121077977338582_114676420786547474_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFS8StRfbpVjJgdrZCxw8CbO_Yy1i3l7ng79jLWLeXueHTYC51oY8kczU_Xxxp_UmQg2tzRsX1dj8ZbKkkBegtB&_nc_ohc=k5VkXwmm8YsQ7kNvwH6nnwn&_nc_oc=AdrU7gRnF5S_i4enA2zyV6MopyKGvWLi06G1i8Hl-DI5dsUoHHh-2OD50ANN5u-jLY0&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQIar7kJCf05HYG6f_jSlllut6_eZ1PzWpKa56C7pddJKFDpM40VgVuU3F4XRHtV3MwwcSIBh_6vkA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSrna05crIb_r-gU-q7HghERHEEFSqhIjXJ5Mwskrn-8Q&oe=6AECFFD8",
-      "gasto": 0.09,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 3
+      "impresiones": 4
     },
     {
       "id": "52522031967562",
@@ -540,51 +553,25 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/885039467_1309531191258614_5403391413642115846_n.avif?_nc_cat=102&ccb=1-7&_nc_eui2=AeFFJ-QCrYSXWU7HAZ31GxVRm_tG6YTmCi6b-0bphOYKLv9qF6jVOCtrH41xL7MTKmOTz90G4TDJovzleG--_29B&_nc_ohc=KSOuX6zcJtkQ7kNvwHee8sq&_nc_oc=Adoq0BV2FZ29oArbg5HbpltpEpUblWdXA_f0XPx8tbmpgT-EgAQCrk5lBGa128Wo7xI&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQIN9n27wTVQYVprf33GGDsjJ3BvqaJ420m37HUVFalpYDYYl_OkL5VhFevWglOh7hI--Mq4s8GC1g&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQS7AgI4sHZXQZdHKwjQHa3THYmpPCDNV7trHjRadEafTg&oe=6AECF2A3",
-      "gasto": 0.15,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/885039467_1309531191258614_5403391413642115846_n.avif?_nc_cat=102&ccb=1-7&_nc_eui2=AeFFJ-QCrYSXWU7HAZ31GxVRm_tG6YTmCi6b-0bphOYKLv9qF6jVOCtrH41xL7MTKmOTz90G4TDJovzleG--_29B&_nc_ohc=KSOuX6zcJtkQ7kNvwGBnhKk&_nc_oc=Adqig_RBZzu4mD2y9hYLoibMhe32cHlDEa4L-9HEwrTDVaDpZwuUnsiD4vqNO4mkGpc&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQIEvRvnPRzIL5EfEPhLAU0eNQ_BU-B2SVcW0uix8P67pS8enRlpM0ZqFFUaYZge5u24ktGEHwzjGg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQQlOQsQOiB6ZakJx8Frq-bfmY-Di5EKMdAZExfoc3JbNw&oe=6AED6323",
+      "gasto": 0.66,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 1
+      "impresiones": 8
     },
     {
-      "id": "52540651545962",
-      "nombre": "vid_invitacion - COPY WHATSAPP OCT26",
+      "id": "52540656285562",
+      "nombre": "VID - ENTIENDES NO HABLAS OCT26 (G1)",
       "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879779117_2373093276829330_2265500411759558770_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeGx0kOalAQQykOvlsZFb0_fvlrSPi2O4l2-WtI-LY7iXVymZrlEvmJg0_zJomibPkMBwdnlnhKNnHlTKxb9q_XD&_nc_ohc=d4wQA3V8eCUQ7kNvwFs5hZj&_nc_oc=AdpTaEY2vFngzGIKNib4LQD0LrbIs1NGdIAlqcA1C5e3E8_yplHzNsxCmo0Fv64pgCU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQK638y67tfVrrvdJ_6kMZbz0ZcCy_CPKSu5pPRjqhLlziFonQGaiHzz0JNAXnw9KTdKR8tp8U5R5A&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQUyGA-7Mb_Xapsad6zgm5L2CXial8kEzSSn30Gp1JEnA&oe=6AECE704",
-      "gasto": 0.2,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/877006343_1900233681335931_189344301226186527_n.jpg?_nc_cat=102&ccb=1-7&_nc_eui2=AeHOPssLjVW0UUeddQ4X86EsqhsgvK01BSWqGyC8rTUFJQ09jQ6HZ4v2Im9VI99kF5oYw_10bNWfFXa9btnGDlbj&_nc_ohc=3nwFjwQHC6MQ7kNvwHQGrRI&_nc_oc=Adoz8PesikVcLk3KGhsaAMJ2gYid0RKiU8t4kqmmSMmidkKrfnd3eZEF9Qm-tabwUCY&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQIg4f5GmMF37JLyUnb-PuJazSgli0Rl7TbqJbQfNHF40uXdPc40f8c8WF1G7OoMeYjkZsANh_ryQw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSpoq-mWK1Qk_WVGKt-ISKCcgh0mnGGlSS1as7xQuY9hg&oe=6AED41CD",
+      "gasto": 0.82,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 4
-    },
-    {
-      "id": "52540656356162",
-      "nombre": "RMK 6 Prueba social VIDEO",
-      "campana": "IY | REMARKETING | WhatsApp | OCT26",
-      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/881767085_3449937852060905_7622941492586673297_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFwjCIu6qYo2zVpMP4AuUQnrlH0DNCFWz2uUfQM0IVbPbqtZ8gPsV9COSlU82HuD12E0SUtqFj90s3j9_sXheTj&_nc_ohc=lOt0Qav0GyUQ7kNvwFd33v7&_nc_oc=AdrQe5sKl4w6D7jmK2USrpc5q7zIIuJ30JUhTSDcm4JPVgSzTzkjDXA1qpNHwOFEfDc&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQJKfMa7r3gd6hi9lobLZOZVVPcTzKYOhwMoP3tReKloASrSjMDCXV4RGalQzohy3ImtGqxNmjHGhg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRTBEEtXFomcsImV2ADTLVx_5DIE5A6nzYiJNf1HRnGLA&oe=6AECD532",
-      "gasto": 0.23,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 1
-    },
-    {
-      "id": "52522031970362",
-      "nombre": "EST - CLASES DINAMICAS V2 - Copia 2",
-      "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "Ingles Consolidada - Whats - Copia",
-      "estado": "ACTIVE",
-      "miniatura": "https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/15685315378830332145?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIDaEa0QrNnQvG6klvFie5j-B3Bc3FakgcUw6Elrp1YtSssR9aFY8ihev5Qvx4OHk7mmK9LZiOPNIlMYErn9YUiVl5edAIgdXhp_8Ts6pyG_gGw3802mwGlQcMMtlTplzpIn0LXcqmmVardjvbd4pH9&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGDCZeOSWrctfiAJMPtNZd8VpV0jQ3smnVWlXSNDeyadfua0pcvL_S6eUxmKPG7lNpzpXRxwkH_rtNPOxoyfUnI&_nc_tpa=Q5bMBQJiiqIITPNVBuGTPWcJorZUln4uyk2UMhiObl6I92qL6eKwdQqomUrCnPSo0GyjwB1Vkt34OF0_4g&oh=06_Q3_EAeU8g7CPiS5t4g_7VxvCN_RQGYKpjOaWXcMlGXLcCBLc&oe=6AE90A9D",
-      "gasto": 0.4,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 1
+      "impresiones": 3
     },
     {
       "id": "52522031968162",
@@ -592,25 +579,25 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://external-ord5-1.xx.fbcdn.net/emg1/v/t13/12373189489982123691?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIg2sZGUvmXohy6FIiOxNkyjQ6GNgCoVVZBaTXeRaFXuWNuS56S8mu80Edd60I3Ry8radP6S_5APTboxEJH0G2hBz2eT_GGCqSeJvNh15JbMuEA0kWYQPNjmG40igXhbsKaSUswo-yhDyvpYf2uHOU-&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeEjJRi5r7gF5YiTAoJ_ha-dv6I89WVLcQS_ojz1ZUtxBA2fVIGUJYcA8EIV5dAF8gcKImzMercGPir-BACoH7uO&_nc_tpa=Q5bMBQJaXqmuuovCmZIz4KDpZSOt25CNj9wyq4UZBxtrYDuJzvgMlXWfbCKY0XNsYHZm2NdmIQ3eNaL1qw&oh=06_Q3_EATSbV2dUeApin81pAP0P1lODa8HBQ-LbyVphUCjETEBv&oe=6AE8F770",
-      "gasto": 0.46,
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/12373189489982123691?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIg2sZGUvmXohy6FIiOxNkyjQ6GNgCoVVZBaTXeRaFXuWNuS56S8mu80Edd60I3Ry8radP6S_5APTboxEJH0G2hBz2eT_GGCqSeJvNh15JbMuEA0kWYQPNjmG40igXhbsKaSUswo-yhDyvpYf2uHOU-&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeEjJRi5r7gF5YiTAoJ_ha-dv6I89WVLcQS_ojz1ZUtxBA2fVIGUJYcA8EIV5dAF8gcKImzMercGPir-BACoH7uO&_nc_tpa=Q5bMBQLtht63wI5VpOvOfH00o84nvmrn8s0DVhJ_JfzHK5osW87xzDtaBXRXYT1mxCXJ6jkjEujlz6tBmg&oh=06_Q3_EAZzrv6zwCa2vn012xJNCuCMxbyIK4wPGcVpQTnjScAJ0&oe=6AE967F0",
+      "gasto": 1.38,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 2
+      "impresiones": 11
     },
     {
-      "id": "52540656201762",
-      "nombre": "TOEFL C5 Titulacion VIDEO",
+      "id": "52540651792362",
+      "nombre": "TOEFL C1 Reel",
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/881767275_1657439559114594_7051247303701466985_n.jpg?_nc_cat=105&ccb=1-7&_nc_eui2=AeG238gyuqmQNrg0bNe_29-VGrKIPRD_z8Easog9EP_PwZSbhUDKmO3POE6K3iEPuwvwFGrcWIjFVdnDc1qQSvtY&_nc_ohc=ZctGZeSulqsQ7kNvwG5_bw7&_nc_oc=AdogFmxNJPRnuNDJWRMRVI2N90k_i_F-cWMGHmf-f8q3_zjaD682RPYpAZ82DvD0tSc&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQI-N1gEG8-YGwDdrETCGya8_tNP8e-_KSVho8E6OSfhhxaJgwgV0u4CrZw1yFIdb0kGvWNeLee2DA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQLiiuPwhI3TxAKH-k6-hhFQhx3am-WJlG4apQTaGZ1uA&oe=6AECEA1A",
-      "gasto": 0.56,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/880081997_1121077977338582_114676420786547474_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFS8StRfbpVjJgdrZCxw8CbO_Yy1i3l7ng79jLWLeXueHTYC51oY8kczU_Xxxp_UmQg2tzRsX1dj8ZbKkkBegtB&_nc_ohc=k5VkXwmm8YsQ7kNvwHIosgw&_nc_oc=Adr9Tkf-Pta_3MrDLZK0r5jK3zkvC_QFQXbaVeXt4q1d6T4RgwIz7f14grxRhy5ImjM&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQKG8CsQcFcwlpLrBjgBym5TMDZnTtoR8xlN9U5iKOE6EURDBssHi_D1sQE4rGsgnLlSQAu3bgvRzg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQS-oCORAQ_HrUxTh11RdjVPIn7qz2QNmvEats87J56s2A&oe=6AED3818",
+      "gasto": 1.93,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 3
+      "ctr": 5.26,
+      "impresiones": 19
     },
     {
       "id": "52533464338562",
@@ -618,12 +605,142 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/821201051_1126400869713135_2021777098874713997_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeH46HfONninu9h_NyFszYadnhK7mK1TDr6eEruYrVMOvpNkxVbVaHDcPZwIl3bzfmQ2T2Pgy1UwX_KRHYJ50PiV&_nc_ohc=ZlNf23jgol8Q7kNvwFwEEfO&_nc_oc=AdqDbsNZc-UUxO1PpQlhb9uFxkDgPDvkJJ4_v7lAJcdefTy9X_gSMvay83OnbV7vYLo&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQKfysGnnpErjsNt_eezBRLgWVd7tvO1-wv5xDGG7Ab5FB0ROmOrLYatX-AYjz_1fO-oiEJtv6A77g&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQS7bBYX2WXZB0MYepvSYa-RwKADNRzSgtkSobNpl1Y8Hw&oe=6AED0417",
-      "gasto": 0.8,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/821201051_1126400869713135_2021777098874713997_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeH46HfONninu9h_NyFszYadnhK7mK1TDr6eEruYrVMOvpNkxVbVaHDcPZwIl3bzfmQ2T2Pgy1UwX_KRHYJ50PiV&_nc_ohc=ZlNf23jgol8Q7kNvwENLiUp&_nc_oc=AdrIvjuaD6zG_QIBL_n5RII8kLKiU-yeQpN2lrDgRgetHqwOj_PoU7iFsJIswdbikA8&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQI8vxK0wcz_SmzaAkYNGn8IJq98d7XyY_FPOwnglVVq4sWul64NSBiEuPdSjBY414tOCgosvi0RXw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQlUQASTOM_1rRDsktZ4EbmMCGEQJQUQo_yICVl3DYMTw&oe=6AED3C57",
+      "gasto": 2.0,
       "leads": 0,
       "cpl": 0,
-      "ctr": 20.0,
+      "ctr": 14.29,
+      "impresiones": 14
+    },
+    {
+      "id": "52522031970362",
+      "nombre": "EST - CLASES DINAMICAS V2 - Copia 2",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "estado": "ACTIVE",
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/15685315378830332145?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIDaEa0QrNnQvG6klvFie5j-B3Bc3FakgcUw6Elrp1YtSssR9aFY8ihev5Qvx4OHk7mmK9LZiOPNIlMYErn9YUiVl5edAIgdXhp_8Ts6pyG_gGw3802mwGlQcMMtlTplzpIn0LXcqmmVardjvbd4pH9&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGDCZeOSWrctfiAJMPtNZd8VpV0jQ3smnVWlXSNDeyadfua0pcvL_S6eUxmKPG7lNpzpXRxwkH_rtNPOxoyfUnI&_nc_tpa=Q5bMBQKwbW8iDIM_Ez6xT5eVv6LHYFAKUJtoY8pOhatXAp3WDnAgfrMXGu9ucMYuwIXn4OFQNu0I_rDmjQ&oh=06_Q3_EAbTqaF64nEchpC7hwcJedKZnlPcBAUZ26IGPnG4A1WeH&oe=6AE942DD",
+      "gasto": 2.17,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
       "impresiones": 5
+    },
+    {
+      "id": "52522031970162",
+      "nombre": "Video Fluidez",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/747536163_1036342942215902_8876700349734615537_n.jpg?_nc_cat=108&ccb=1-7&_nc_eui2=AeHY1IHRu0nZyI8t8nOayQr0vUtqtBzgruy9S2q0HOCu7MDXm_Wr4RpbnkeMNrzcsahPgH3_PxnHxfwk8jAUqkTt&_nc_ohc=rr2bkGLMh_oQ7kNvwHh9kG4&_nc_oc=AdqGnFPD4BmBZccEVLUUrHluwdcvMqg2PJTGIaMsM-yOHtaQ5nPeQhDIJ4detGq8ldE&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQLDMhOWGwg7pORR0aJ8gk-Af1XdB_f4go5Srvty8muYxZVhTW3zatMipZApLIbWjOgbbDNu1n2trw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQT0vn_Ke8YykJgvv5SnxCwq0bM0DnG8OBnlnxNvjPRcAQ&oe=6AED352A",
+      "gasto": 2.93,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 25
+    },
+    {
+      "id": "52537014355962",
+      "nombre": "EST - NUNCA ES TARDE OCT26 (E)",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "estado": "ACTIVE",
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/7369313691922659991?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQK6qmRltSBKBAll3Ydu_MDiQ0j2G3QyUWQ7iC3eUdjhfa8NCmJ6zmyJTXM_qs7glEo9Ekn2KcOTimYfukWS1fXyPbCgTEwFz7EN929ei8OjQvdGFELmNZTwxUmA2T5NRK0sqd4_hUNMbqADp9yqan4A&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeFTeto5pSDkAxeEzfLlK_PFI1QNKaAFKoIjVA0poAUqghZz05CTIOG15ujQJX_M2vuYzfFJYSh1MahRDoW5R20E&_nc_tpa=Q5bMBQKyre88Yc_tephiMGYyNKhsZRRZ1rgAxBaisPJx-HsSCVf9HBvNQsS6Ke03k8_Fy2sdmoPgbk4ZaQ&oh=06_Q3_EAWlkEjs4nQ9nvPyUK499Y1RjgASh5UqahMxnaNJWRzhh&oe=6AE9613A",
+      "gasto": 3.48,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 5
+    },
+    {
+      "id": "52537014354962",
+      "nombre": "EST - TOEFL OCT26 (D)",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "estado": "ACTIVE",
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/9543576559827867138?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQL51I9bvccUiW1bZFpxbDPznEdwHuan7VDXjX6mOaQ7in2-9BcgP3TN1ZAJvlL4SsX09oXPn81M2qFlBZHEcrLw_6wbuHWpPzVD3jZRuPhRvx6h9vak_nw62FznS8qfhER7B2_jAsaVV5rHS7bfyuSi&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGZ_meFfDU5HTIK7nJn43cgWBi1ET8R2gFYGLURPxHaAe2TTBPaBH8Qw7wjcn3od_RdmsVB5jOW5NUf6l5WnoZv&_nc_tpa=Q5bMBQIqiYTgNuJYlyKYNWkOQDnpN2RaLlZargX_Bnc1e1ER3CRCiR_ocJ3CR_e3Hvu8Qn68nXm1WK5QuA&oh=06_Q3_EAUj-Qg9dOZn23W818p8PvTQsX8EZ4_qeAxGuepepc2gh&oe=6AE941B5",
+      "gasto": 3.67,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 2.56,
+      "impresiones": 39
+    },
+    {
+      "id": "52540656307562",
+      "nombre": "VID - HABLAS EL 80% OCT26 (G3)",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/881733574_1104864315779498_3378185287128337555_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeGG0ee1HuDRna5g73ACqiGR0HpcNa2AXP_Qelw1rYBc_9Tot5ogLQp9kfdGueFQlvA38ovU5eW5eiKH_6m8WQ1H&_nc_ohc=IQ7L1NyqFRIQ7kNvwHqtuxH&_nc_oc=AdoOb-KVQO-hLCFz7gtE5BNUJpfEoylAYDrPjfuXJpto3RojRPqJNmTLBdh8Wxza8Ks&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQJtMhv4qZyS3SpqPcuZ2rpO3T9R9Pg3KSjmEUK3uO3QhIi2M_riFr4iqVtQjQSzXomdbVeKVvEUzg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQS6DQVb_F3MEmQ8vlu5M0HoTU2sSFkJRx6FC65KU1qoUA&oe=6AED63F4",
+      "gasto": 4.0,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 40
+    },
+    {
+      "id": "52537014352162",
+      "nombre": "EST - CLASES DINAMICAS OCT26 (A)",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "estado": "ACTIVE",
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/7317888674284321319?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIpiE7rgXFhWZnHWrxfqHyy25N_Kla3N8m2AVyffgCUIVysz1xv1YSoioWrTbl8T5Ho3YcW3iTbLI6P4gXKNiFLJAfS0fmkLN4KbkwSYCMemYpV-mSN4_wfsM7Z38FAnRFwuTyc4c8fGB292DTGWXWe&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeHBO-5vTG-MQKc0K9YtFSgTF5a2zLv6ysgXlrbMu_rKyNvhHxg4Qr4qP3WPMZ6ErSDg_Uijnz8NQhLoXgWEFgAe&_nc_tpa=Q5bMBQJFfnkNHctX7iGFdHcmCmY2H2wkqkAa2wAbr4pqlv4WErFcVG0_HCBaSDhSVYCABOc1MCSrie3kkA&oh=06_Q3_EAYdWc-v3AkSt6RZhUohn8KfxVfcet-JCyLK560bD5Tye&oe=6AE95BCA",
+      "gasto": 4.98,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 21
+    },
+    {
+      "id": "52540651820562",
+      "nombre": "TOEFL C3 Posgrado",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/878660919_2147720295840567_2310426109159860724_n.jpg?_nc_cat=104&ccb=1-7&_nc_eui2=AeGXb_UfnmPmKgluN6EAlcOURktEiRECe5tGS0SJEQJ7mzjP-OY-GEqt764VWit5pEVWiTQRoQuhpwXmJx9cSujC&_nc_ohc=nO2rjL3_kbMQ7kNvwFPYjyp&_nc_oc=AdpZYPXsNqH6WJIKjKgSB9CNCbqzpECtwu-10_7GsSJGpy-DfbCaeOJqRUrfL0awdrU&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQLnbPCO4nJuUULA9cB02gKyEeIrD3Rj3rMZ-Sli6xzOwiMGqXxuELKdrIDegsdHoxnPyxikE8MVYA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSULvwbSTiynFAlklV09GVcrdIXvQJsVX6980_azNhBtw&oe=6AED4C64",
+      "gasto": 9.78,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 2.5,
+      "impresiones": 40
+    },
+    {
+      "id": "52540656201762",
+      "nombre": "TOEFL C5 Titulacion VIDEO",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/881767275_1657439559114594_7051247303701466985_n.jpg?_nc_cat=105&ccb=1-7&_nc_eui2=AeG238gyuqmQNrg0bNe_29-VGrKIPRD_z8Easog9EP_PwZSbhUDKmO3POE6K3iEPuwvwFGrcWIjFVdnDc1qQSvtY&_nc_ohc=ZctGZeSulqsQ7kNvwG9SfD3&_nc_oc=AdrNM95Nx63N9POajqQa-UZAAgAQwwAoU6G1aJp6usrj4Oyksy8rDYK4wPGD_hovX8U&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQJJrwvBzSyrebTdd52Sq5E26D5WXZkeiAXN17OISKTcZzFqh2Hb9UwEAfWy3CigxrY6RgdJ_M0OcA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRh_hET0K_t3FxJHCLeTXRUmFHuipf9jqLcnFaEQ_Om3g&oe=6AED5A9A",
+      "gasto": 13.56,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 77
+    },
+    {
+      "id": "52537014353362",
+      "nombre": "EST - ENTIENDES NO HABLAS OCT26 (B)",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "PRUEBA CREATIVOS OCT 2026",
+      "estado": "ACTIVE",
+      "miniatura": "https://external-iad3-1.xx.fbcdn.net/emg1/v/t13/4784336512722688729?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKmlqrcZ78MMQZpkMsytsixRgepbvMN66Jg2ubjHNG8O9LpVSoRWOaUwmZ_NU_PZUsJd5gWDLIi1A9U2gZxvND97dwE-hIg-SgBybcPa4X8bxG4A_4xyrLzYy6LyJfMP4Ceq56kE--Eamg23yw4mLwH&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-iad3-1.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeHGzRqXiN7rMz6qDiKP33sct0DxYF3-PZq3QPFgXf49mi9XjNaNZ-XixchaGiRs-Hogf2J4GFb0USh7RA5hrv7F&_nc_tpa=Q5bMBQIvOALAbS-Ois3eImtM7VLzZpAaqroUrd-VwJALzpZkpEinVcQTJrPUs_7OdYX3FAaxFzAac3k84w&oh=06_Q3_EAezrg_V6_aB2mVvJLIwd55S6QteMMsH4wXpWxcU6lFuh&oe=6AE944E5",
+      "gasto": 16.41,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 1.52,
+      "impresiones": 66
+    },
+    {
+      "id": "52540651545962",
+      "nombre": "vid_invitacion - COPY WHATSAPP OCT26",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-iad3-2.xx.fbcdn.net/v/t15.5256-10/879779117_2373093276829330_2265500411759558770_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeGx0kOalAQQykOvlsZFb0_fvlrSPi2O4l2-WtI-LY7iXVymZrlEvmJg0_zJomibPkMBwdnlnhKNnHlTKxb9q_XD&_nc_ohc=d4wQA3V8eCUQ7kNvwG8-jAg&_nc_oc=AdoXA5pzNdQxyduudHoHykFfegD3fTEo_z0HMxH39rfifE1uHv-YJS464lpgV2OU4MM&_nc_zt=23&_nc_ht=scontent-iad3-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQJj2CWzCtQkXuNQvOMhCrFUEuVCU-5ln3LUx53MyGVhBNkO4TXqSRc4SuerAqMg0lfLhMwWeQNe2w&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTD7cgo9Fwcs2E0KBjKRKgT2Wcgkh5Yw9aPD1ie0dvNVg&oe=6AED5784",
+      "gasto": 18.64,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 3.3,
+      "impresiones": 91
     },
     {
       "id": "52540651759962",
@@ -631,44 +748,18 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/880881280_1529974695638941_7103482541846663376_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeFiydzuHwhgp10wiMfZTworBE8ICtpdFr0ETwgK2l0Wvay3-h3Or8LXsu2stZPoyrYINg-rq7BqVj7Nxn-TJ2iL&_nc_ohc=rjXUokOe524Q7kNvwGkACcQ&_nc_oc=Adqv-f6EvAqxDX8ZD07SILZt4LStEUxKC4y4vB2u7_Za47fYMGkFFqC-P1PoPhpKgkg&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQJ5cus5zNiXlieCEzNOYBbZqQSRoS6v8BKbrJ8whcLPDi4KMcCq4sXfHDWf0nOKzcMvL6DuCxiq_g&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRnpLPmQspxU1QJGW-BpYwr1zLWpUXsqFFX_y8Ll6cpEg&oe=6AECD745",
-      "gasto": 2.4,
+      "miniatura": "https://scontent-iad3-1.xx.fbcdn.net/v/t15.5256-10/880881280_1529974695638941_7103482541846663376_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeFiydzuHwhgp10wiMfZTworBE8ICtpdFr0ETwgK2l0Wvay3-h3Or8LXsu2stZPoyrYINg-rq7BqVj7Nxn-TJ2iL&_nc_ohc=rjXUokOe524Q7kNvwHiY8CM&_nc_oc=AdrtRdUYNEqNH8jg4SZzbpkFt0SdiontnKheBfwohRkwHr1PK-HaxChomJCPQmAUimg&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=Ti8UCybdp6Lcl3LoO4buYA&_nc_tpa=Q5bMBQLQkkrKVBRtnzkEhxJHnFP5inLoiPeh7B6zmMetnTgZ1wESo9wH5nA5dPNChy-8uxrabAJelpskGQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRASWxncAGk5Kzp381os-quUQYCZkON63ju8rovKPeABA&oe=6AED47C5",
+      "gasto": 37.54,
       "leads": 0,
       "cpl": 0,
-      "ctr": 3.85,
-      "impresiones": 26
-    },
-    {
-      "id": "52540651743762",
-      "nombre": "RMK 3",
-      "campana": "IY | REMARKETING | WhatsApp | OCT26",
-      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879591755_1649840590148135_1310835721001535011_n.jpg?_nc_cat=102&ccb=1-7&_nc_eui2=AeFfRxOhu9Ez0er2Oi8IVwudRYm06d8cFK5FibTp3xwUrgcR_P3A0DHAJGJbEx_bIwunjcxy7uCa56KoVlwvUzvx&_nc_ohc=Yeux4b2o-Y4Q7kNvwFGOPm1&_nc_oc=AdoXRjT_q9D9ALJkxftz1yJy9OKeafsJBTzG-nCtO7ScfeRLXmY90vfZXW5YfyzpRs4&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQKBM5b2sm25k_P9Ae6vV95ncKUL_YUNQuq0q1gxoHOZKeq5hYBBYy3uyzg5PqFjDmDrYmiKXz3ZZw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRzKvRN_D_x7WRsSMV2vW7hi-gkbyapn15Qo5K2f8lwhg&oe=6AECFC4D",
-      "gasto": 5.31,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 13
-    },
-    {
-      "id": "52522031969362",
-      "nombre": "vid_invitacion-21abr - Copia",
-      "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "Ingles Consolidada - Whats - Copia",
-      "estado": "ACTIVE",
-      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/885039510_953598190852663_3218982903863382282_n.avif?_nc_cat=108&ccb=1-7&_nc_eui2=AeFDA1tIzuXNkn3r-OTbnydK_Bk-_bFbFMr8GT79sVsUylMS4DOBAjEC76WbFzNBkO0ncdkn-tg0kbK_GqzmyY_U&_nc_ohc=yZbDmztWfgMQ7kNvwFvKd3T&_nc_oc=AdpgRyB8QBUq4nNxL3YoXIO5Q7pudAHVAlCltvbfhtcWeb3gsjbJwYtnFJiywP2elfk&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=RQxP-VjQY0kpKkKDAtfexw&_nc_tpa=Q5bMBQLIVW_7mOXl867yzABkhA9BUWztV8kF25K7FqGuU2N_BIcxBj_iFhGRuzkR23rhPEUNKCWWclUFOw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQR7fV-B4oOpyG939hdHLzj4iFRGYdG3lBXd8hUQJkzUXg&oe=6AECE267",
-      "gasto": 29.58,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 1.74,
-      "impresiones": 403
+      "ctr": 2.98,
+      "impresiones": 168
     }
   ],
   "diario_meta": {
     "2026-11-01": {
-      "leads": 1,
-      "gasto": 41.18
+      "leads": 8,
+      "gasto": 517.19
     }
   },
   "sucursales": {
