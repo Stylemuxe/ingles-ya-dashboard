@@ -1182,7 +1182,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <h3>🪜 Embudo del Mes <span class="gc-tag">Visual</span></h3>
       <div class="gc-def">La <b>gráfica en forma de embudo</b> que muestra cómo se va reduciendo la gente en cada etapa: Leads → Citas → Visitas → Inscritos.</div>
       <div class="gc-calc">Cada escalón es más chico que el anterior porque siempre se pierde gente en el camino.</div>
-      <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Cada etapa dice qué % pasó de la etapa anterior y la que más gente pierde sale en rojo como <b>cuello de botella</b>. Si cae fuerte de Leads a Citas → problema de Call Center. Si una etapa pasa del 100% (ej. más inscritos que visitas), falta capturar algo en el Sheet.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Cada etapa dice qué % pasó de la etapa anterior y la que más gente pierde sale en rojo como <b>cuello de botella</b>. Si cae fuerte de Leads a Citas → problema de Call Center. Si una etapa pasa del 100% (ej. más inscritos que visitas), falta capturar algo en el Sheet. La <b>meta del curso</b> sale del roadmap de ventas de BMP: 28% de los leads agenda cita (60% responde × 66% completa el diagnóstico × 70% agenda), 70% de las citas asiste y 60% de los que asisten se inscribe.</div>
     </div>
 
     <div class="guia-card" style="--gc:var(--green)">
@@ -1908,10 +1908,12 @@ function renderKpis() {
 function renderFunnel() {
   const k = D.kpis;
   const steps = [
+    // meta = % que debería pasar desde la etapa anterior según el roadmap de ventas de BMP (Clase 8):
+    // citas 60% responde × 66% diagnóstico × 70% agenda ≈ 28% de los leads; 70% asiste; 60% se inscribe
     {l:'Leads',    v:k.leads_meta, tc:'var(--a1)'},
-    {l:'Citas',    v:k.citas,      tc:'var(--a3)'},
-    {l:'Visitas',  v:k.visitas,    tc:'var(--a4)'},
-    {l:'Inscritos',v:k.inscritos,  tc:'var(--green)'},
+    {l:'Citas',    v:k.citas,      tc:'var(--a3)', meta:28},
+    {l:'Visitas',  v:k.visitas,    tc:'var(--a4)', meta:70},
+    {l:'Inscritos',v:k.inscritos,  tc:'var(--green)', meta:60},
   ];
   // Gestión de ventas (Clase 6 de BMP): además del % sobre leads, cuánto pasa de una etapa a la
   // siguiente; el escalón que más gente pierde se marca porque es el primero que hay que arreglar
@@ -1929,6 +1931,7 @@ function renderFunnel() {
         <div class="f-lbl" style="color:${s.tc}">${s.l}</div>
         ${p?`<div class="f-pct">${p}</div>`:''}
         ${paso?`<div class="f-paso${i===peor?' f-peor':''}">${paso}</div>`:''}
+        ${s.meta?`<div class="f-paso">meta del curso: ${s.meta}%</div>`:''}
       </div>
     </div>`;
   }).join('');
@@ -1945,6 +1948,9 @@ function renderFinanzas() {
   }
   const g = f.gastos || {meta_ads:0, fabian:0, yolanda:0, total:0};
   const utilColor = f.utilidad >= 0 ? 'var(--green)' : 'var(--pink)';
+  // ROAS (Clase 10 de BMP): cuántos pesos de ingreso regresa cada peso de pauta
+  const pauta = g.meta_ads || D.kpis?.gasto || 0;
+  const roas = pauta && f.ingresos ? f.ingresos / pauta : null;
   const avisoHTML = f.pendiente_verificar ? `
     <div style="margin-bottom:14px;padding:12px 14px;border:1px solid var(--orange);border-radius:10px;background:color-mix(in srgb, var(--orange) 8%, transparent);font-size:13px;line-height:1.5">
       <div style="font-weight:700;color:var(--orange);margin-bottom:4px">⚠️ PENDIENTE DE VERIFICAR CON VIC</div>
@@ -1968,6 +1974,11 @@ function renderFinanzas() {
       <div class="fin-stat">
         <div class="fin-stat-lbl">Utilidad</div>
         <div class="fin-stat-val" style="color:${utilColor}">${$m(f.utilidad)}</div>
+      </div>
+      <div class="fin-stat" title="Ingresos ÷ gasto en Meta Ads. Arriba de 1 la pauta se paga sola; debajo de 1 cuesta más de lo que regresa.">
+        <div class="fin-stat-lbl">ROAS</div>
+        <div class="fin-stat-val" style="color:${roas===null?'var(--muted)':roas>=1?'var(--green)':'var(--pink)'}">${roas===null?'—':roas.toFixed(2)+'x'}</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px">${roas===null?'sin ingresos capturados':`$${roas.toFixed(2)} por cada $1 de pauta`}</div>
       </div>
     </div>
     <div class="fin-gastos-head">Desglose de gastos</div>
