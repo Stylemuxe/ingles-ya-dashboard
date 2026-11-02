@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "02/11/2026 12:39",
-  "meta_actualizado": "02/11/2026 12:39",
+  "actualizado": "02/11/2026 15:01",
+  "meta_actualizado": "02/11/2026 15:01",
   "meta_ok": true,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
-    "leads_meta": 36,
-    "gasto": 2401.28,
-    "cpl": 66.7,
+    "leads_meta": 40,
+    "gasto": 2636.77,
+    "cpl": 65.92,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -2401.28,
+    "utilidad": -2636.77,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 2401.28,
+      "meta_ads": 2636.77,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 2401.28
+      "total": 2636.77
     }
   },
   "campanas": [
@@ -51,11 +51,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 173.03,
-      "impresiones": 948,
-      "alcance": 788,
-      "leads": 1,
-      "cpl": 173.03
+      "gasto": 190.72,
+      "impresiones": 1019,
+      "alcance": 834,
+      "leads": 2,
+      "cpl": 95.36
     },
     {
       "id": "52540651597362",
@@ -63,11 +63,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 321.5,
-      "impresiones": 2451,
-      "alcance": 1914,
+      "gasto": 345.76,
+      "impresiones": 2606,
+      "alcance": 1998,
       "leads": 4,
-      "cpl": 80.38
+      "cpl": 86.44
     },
     {
       "id": "52537011571762",
@@ -87,11 +87,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 1906.75,
-      "impresiones": 15844,
-      "alcance": 13699,
-      "leads": 31,
-      "cpl": 61.51
+      "gasto": 2100.29,
+      "impresiones": 17185,
+      "alcance": 14628,
+      "leads": 34,
+      "cpl": 61.77
     },
     {
       "id": "52515312914962",
@@ -267,9 +267,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 173.03,
-      "leads": 1,
-      "cpl": 173.03
+      "gasto": 190.72,
+      "leads": 2,
+      "cpl": 95.36
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
@@ -277,9 +277,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 321.5,
+      "gasto": 345.76,
       "leads": 4,
-      "cpl": 80.38
+      "cpl": 86.44
     },
     {
       "nombre": "PRUEBA CREATIVOS OCT 2026",
@@ -287,7 +287,7 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 168.22,
+      "gasto": 180.31,
       "leads": 0,
       "cpl": 0
     },
@@ -307,9 +307,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 1738.53,
-      "leads": 31,
-      "cpl": 56.08
+      "gasto": 1919.98,
+      "leads": 34,
+      "cpl": 56.47
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -450,50 +450,11 @@ const DATA_INGLES = {
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031969362.png",
-      "gasto": 1618.29,
-      "leads": 30,
-      "cpl": 53.94,
-      "ctr": 1.71,
-      "impresiones": 14423
-    },
-    {
-      "id": "52540656201762",
-      "nombre": "TOEFL C5 Titulacion VIDEO",
-      "campana": "IY | TOEFL | WhatsApp | OCT26",
-      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52540656201762.jpg",
-      "gasto": 207.86,
-      "leads": 2,
-      "cpl": 103.93,
-      "ctr": 1.29,
-      "impresiones": 1084
-    },
-    {
-      "id": "52522031968162",
-      "nombre": "EST - CLASES DINAMICAS - Copia 2",
-      "campana": "Ingles Consolidada - Whats - Copia",
-      "conjunto": "Ingles Consolidada - Whats - Copia",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52522031968162.jpg",
-      "gasto": 6.48,
-      "leads": 1,
-      "cpl": 6.48,
-      "ctr": 7.84,
-      "impresiones": 51
-    },
-    {
-      "id": "52540656258762",
-      "nombre": "TOEFL C6 Simulacros VIDEO",
-      "campana": "IY | TOEFL | WhatsApp | OCT26",
-      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52540656258762.jpg",
-      "gasto": 18.9,
-      "leads": 1,
-      "cpl": 18.9,
-      "ctr": 2.07,
-      "impresiones": 241
+      "gasto": 1784.64,
+      "leads": 33,
+      "cpl": 54.08,
+      "ctr": 1.69,
+      "impresiones": 15649
     },
     {
       "id": "52540651743762",
@@ -502,11 +463,50 @@ const DATA_INGLES = {
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651743762.jpg",
-      "gasto": 37.89,
+      "gasto": 45.34,
+      "leads": 2,
+      "cpl": 22.67,
+      "ctr": 1.93,
+      "impresiones": 207
+    },
+    {
+      "id": "52540656201762",
+      "nombre": "TOEFL C5 Titulacion VIDEO",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52540656201762.jpg",
+      "gasto": 228.97,
+      "leads": 2,
+      "cpl": 114.48,
+      "ctr": 1.16,
+      "impresiones": 1205
+    },
+    {
+      "id": "52522031968162",
+      "nombre": "EST - CLASES DINAMICAS - Copia 2",
+      "campana": "Ingles Consolidada - Whats - Copia",
+      "conjunto": "Ingles Consolidada - Whats - Copia",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52522031968162.jpg",
+      "gasto": 7.31,
       "leads": 1,
-      "cpl": 37.89,
-      "ctr": 2.01,
-      "impresiones": 199
+      "cpl": 7.31,
+      "ctr": 7.41,
+      "impresiones": 54
+    },
+    {
+      "id": "52540656258762",
+      "nombre": "TOEFL C6 Simulacros VIDEO",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52540656258762.jpg",
+      "gasto": 19.48,
+      "leads": 1,
+      "cpl": 19.48,
+      "ctr": 1.98,
+      "impresiones": 253
     },
     {
       "id": "52540651839362",
@@ -515,11 +515,11 @@ const DATA_INGLES = {
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "PAUSED",
       "miniatura": "miniaturas/52540651839362.jpg",
-      "gasto": 67.66,
+      "gasto": 67.67,
       "leads": 1,
-      "cpl": 67.66,
+      "cpl": 67.67,
       "ctr": 0.44,
-      "impresiones": 912
+      "impresiones": 915
     },
     {
       "id": "52540656356162",
@@ -548,30 +548,30 @@ const DATA_INGLES = {
       "impresiones": 2
     },
     {
-      "id": "52540651809362",
-      "nombre": "TOEFL C2 Titulacion",
-      "campana": "IY | TOEFL | WhatsApp | OCT26",
-      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52540651809362.jpg",
-      "gasto": 2.01,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 24
-    },
-    {
       "id": "52540656285562",
       "nombre": "VID - ENTIENDES NO HABLAS OCT26 (G1)",
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540656285562.jpg",
-      "gasto": 2.05,
+      "gasto": 2.36,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 11
+      "impresiones": 12
+    },
+    {
+      "id": "52540651809362",
+      "nombre": "TOEFL C2 Titulacion",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52540651809362.jpg",
+      "gasto": 2.37,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 28
     },
     {
       "id": "52522031970362",
@@ -593,11 +593,11 @@ const DATA_INGLES = {
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651734962.jpg",
-      "gasto": 3.91,
+      "gasto": 4.03,
       "leads": 0,
       "cpl": 0,
-      "ctr": 6.45,
-      "impresiones": 31
+      "ctr": 6.25,
+      "impresiones": 32
     },
     {
       "id": "52537014355962",
@@ -619,11 +619,11 @@ const DATA_INGLES = {
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031967562.png",
-      "gasto": 6.85,
+      "gasto": 7.71,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 40
+      "impresiones": 43
     },
     {
       "id": "52540651792362",
@@ -632,11 +632,11 @@ const DATA_INGLES = {
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651792362.jpg",
-      "gasto": 9.22,
+      "gasto": 10.53,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.2,
-      "impresiones": 83
+      "ctr": 1.09,
+      "impresiones": 92
     },
     {
       "id": "52537014352162",
@@ -645,11 +645,11 @@ const DATA_INGLES = {
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014352162.jpg",
-      "gasto": 11.11,
+      "gasto": 11.14,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 48
+      "impresiones": 49
     },
     {
       "id": "52533464338562",
@@ -658,11 +658,11 @@ const DATA_INGLES = {
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52533464338562.jpg",
-      "gasto": 11.67,
+      "gasto": 12.7,
       "leads": 0,
       "cpl": 0,
-      "ctr": 4.35,
-      "impresiones": 69
+      "ctr": 4.0,
+      "impresiones": 75
     },
     {
       "id": "52540651820562",
@@ -671,11 +671,11 @@ const DATA_INGLES = {
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651820562.jpg",
-      "gasto": 15.85,
+      "gasto": 16.74,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.93,
-      "impresiones": 107
+      "ctr": 0.88,
+      "impresiones": 113
     },
     {
       "id": "52537014354962",
@@ -684,11 +684,11 @@ const DATA_INGLES = {
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014354962.jpg",
-      "gasto": 21.37,
+      "gasto": 23.07,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.96,
-      "impresiones": 169
+      "ctr": 2.62,
+      "impresiones": 191
     },
     {
       "id": "52522031970162",
@@ -697,11 +697,11 @@ const DATA_INGLES = {
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031970162.jpg",
-      "gasto": 23.54,
+      "gasto": 24.37,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.63,
-      "impresiones": 158
+      "ctr": 0.61,
+      "impresiones": 164
     },
     {
       "id": "52540656307562",
@@ -710,11 +710,11 @@ const DATA_INGLES = {
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540656307562.jpg",
-      "gasto": 44.2,
+      "gasto": 45.32,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.9,
-      "impresiones": 158
+      "ctr": 1.8,
+      "impresiones": 167
     },
     {
       "id": "52540651545962",
@@ -723,11 +723,11 @@ const DATA_INGLES = {
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651545962.jpg",
-      "gasto": 67.86,
+      "gasto": 79.41,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.27,
-      "impresiones": 309
+      "ctr": 2.4,
+      "impresiones": 333
     },
     {
       "id": "52537014353362",
@@ -736,11 +736,11 @@ const DATA_INGLES = {
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014353362.jpg",
-      "gasto": 84.77,
+      "gasto": 93.7,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.1,
-      "impresiones": 381
+      "ctr": 2.14,
+      "impresiones": 421
     },
     {
       "id": "52540651759962",
@@ -749,21 +749,21 @@ const DATA_INGLES = {
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651759962.jpg",
-      "gasto": 130.08,
+      "gasto": 140.2,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.96,
-      "impresiones": 714
+      "ctr": 1.8,
+      "impresiones": 776
     }
   ],
   "diario_meta": {
     "2026-11-01": {
       "leads": 21,
-      "gasto": 1647.13
+      "gasto": 1648.07
     },
     "2026-11-02": {
-      "leads": 15,
-      "gasto": 754.15
+      "leads": 19,
+      "gasto": 988.7
     }
   },
   "sucursales": {
