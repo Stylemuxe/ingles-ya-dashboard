@@ -712,7 +712,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
         <option value="">Cargando...</option>
       </select>
     </div>
-    <div class="live-badge"><div class="live-dot"></div>En vivo</div>
+    <div class="live-badge"><div class="live-dot"></div><span id="live-txt">En vivo</span></div>
     <span id="updated">—</span>
     <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Cambiar tema">🌙</button>
   </div>
@@ -2640,7 +2640,12 @@ async function cambiarMes(mesId) {
     D = await r.json();
     const hoy = new Date();
     const mesActual = `${hoy.getFullYear()}-${String(hoy.getMonth()+1).padStart(2,'0')}`;
-    document.querySelector('.live-dot').style.opacity = mesId === mesActual ? '1' : '0.3';
+    // Un mes cerrado ya no está "en vivo": se apaga el pulso y se rotula como cerrado
+    const enVivo = mesId === mesActual;
+    const dot = document.querySelector('.live-dot');
+    dot.style.opacity = enVivo ? '1' : '0.3';
+    dot.style.animation = enVivo ? '' : 'none';
+    document.getElementById('live-txt').textContent = enVivo ? 'En vivo' : 'Cerrado';
     renderAll();
   } catch(e) {
     console.warn('No se pudo cargar', mesId, e);

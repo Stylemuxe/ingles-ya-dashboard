@@ -236,6 +236,37 @@ def fetch_totales_cuenta():
                   if a['action_type'] == 'onsite_conversion.messaging_conversation_started_7d'), 0)
     return {'leads': leads, 'gasto': round(sf(d.get('spend', 0)), 2)}
 
+MINIATURAS_DIR = os.path.join(BASE_DIR, 'miniaturas')
+EXT_IMG = {'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/avif': 'avif', 'image/gif': 'gif'}
+
+def miniatura_local(ad_id, url):
+    """Las ligas de miniatura de Meta vencen en unos días y los meses cerrados se quedaban sin
+    imagen. Se guarda una copia por anuncio en miniaturas/ y el dashboard usa esa ruta. Si no se
+    puede descargar, se deja la liga de Meta como antes."""
+    for ext in EXT_IMG.values():
+        if os.path.exists(os.path.join(MINIATURAS_DIR, f'{ad_id}.{ext}')):
+            return f'miniaturas/{ad_id}.{ext}'
+    if not url:
+        # /ads no devuelve los archivados: se pide el creativo directo por id
+        try:
+            ad = meta_get(ad_id, {'fields': 'creative.thumbnail_width(480).thumbnail_height(480){thumbnail_url}'})
+            url = (ad.get('creative') or {}).get('thumbnail_url', '')
+        except MetaAPIError:
+            return ''
+    if not url:
+        return ''
+    try:
+        r = requests.get(url, timeout=20)
+    except requests.RequestException:
+        return url
+    ext = EXT_IMG.get(r.headers.get('Content-Type', '').split(';')[0].strip())
+    if r.status_code != 200 or not ext:
+        return url
+    os.makedirs(MINIATURAS_DIR, exist_ok=True)
+    with open(os.path.join(MINIATURAS_DIR, f'{ad_id}.{ext}'), 'wb') as f:
+        f.write(r.content)
+    return f'miniaturas/{ad_id}.{ext}'
+
 def fetch_anuncios():
     """Ranking de anuncios del mes con su miniatura: qué video o imagen trae más leads y a qué costo."""
     resp = meta_get(f'{AD_ACCOUNT}/insights', {
@@ -267,7 +298,7 @@ def fetch_anuncios():
             'campana':     f.get('campaign_name', ''),
             'conjunto':    f.get('adset_name', ''),
             'estado':      ad.get('effective_status', 'ARCHIVED'),   # /ads no devuelve los archivados
-            'miniatura':   creativo.get('thumbnail_url', ''),
+            'miniatura':   miniatura_local(f['ad_id'], creativo.get('thumbnail_url', '')),
             'gasto':       round(gasto, 2),
             'leads':       leads,
             'cpl':         round(gasto / leads, 2) if leads else 0,
