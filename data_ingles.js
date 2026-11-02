@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "01/11/2026 18:44",
-  "meta_actualizado": "01/11/2026 18:43",
+  "actualizado": "01/11/2026 21:19",
+  "meta_actualizado": "01/11/2026 21:19",
   "meta_ok": true,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
-    "leads_meta": 17,
-    "gasto": 1211.38,
-    "cpl": 71.26,
+    "leads_meta": 18,
+    "gasto": 1381.88,
+    "cpl": 76.77,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -1211.38,
+    "utilidad": -1381.88,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 1211.38,
+      "meta_ads": 1381.88,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 1211.38
+      "total": 1381.88
     }
   },
   "campanas": [
@@ -51,11 +51,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 103.07,
-      "impresiones": 566,
-      "alcance": 493,
+      "gasto": 112.56,
+      "impresiones": 622,
+      "alcance": 542,
       "leads": 1,
-      "cpl": 103.07
+      "cpl": 112.56
     },
     {
       "id": "52540651597362",
@@ -63,11 +63,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 141.67,
-      "impresiones": 1243,
-      "alcance": 1044,
+      "gasto": 173.3,
+      "impresiones": 1521,
+      "alcance": 1242,
       "leads": 4,
-      "cpl": 35.42
+      "cpl": 43.33
     },
     {
       "id": "52537011571762",
@@ -87,11 +87,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 966.64,
-      "impresiones": 9136,
-      "alcance": 8433,
-      "leads": 12,
-      "cpl": 80.55
+      "gasto": 1096.02,
+      "impresiones": 10656,
+      "alcance": 9709,
+      "leads": 13,
+      "cpl": 84.31
     },
     {
       "id": "52515312914962",
@@ -267,9 +267,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 103.07,
+      "gasto": 112.56,
       "leads": 1,
-      "cpl": 103.07
+      "cpl": 112.56
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
@@ -277,9 +277,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 141.67,
+      "gasto": 173.3,
       "leads": 4,
-      "cpl": 35.42
+      "cpl": 43.33
     },
     {
       "nombre": "PRUEBA CREATIVOS OCT 2026",
@@ -287,7 +287,7 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 81.97,
+      "gasto": 92.48,
       "leads": 0,
       "cpl": 0
     },
@@ -307,9 +307,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 884.67,
-      "leads": 12,
-      "cpl": 73.72
+      "gasto": 1003.54,
+      "leads": 13,
+      "cpl": 77.2
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -449,12 +449,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/885039510_953598190852663_3218982903863382282_n.avif?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFDA1tIzuXNkn3r-OTbnydK_Bk-_bFbFMr8GT79sVsUylMS4DOBAjEC76WbFzNBkO0ncdkn-tg0kbK_GqzmyY_U&_nc_ohc=QF1vzOzTA28Q7kNvwElzI_T&_nc_oc=AdqTTVoZFt9McBoHZEE7iMm9MRETksnH0uuaQDjwMxu8tCMKkfoKATZPIG1wqPlguJnfYvN3MPHB4pme9vEp6rzC&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQJoAGADA0-dScxIor_GXjPnMBHS2Tg6Quuf5zfDCEsavYUj9Ygne5dzT99lf-h6nXiBqOw-hfvVyw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQTh02WcOr8dvBvXDHU-BiwRq0r8g9SqW5uNUpVrRwQj2g&oe=6AEDC367",
-      "gasto": 805.22,
-      "leads": 11,
-      "cpl": 73.2,
-      "ctr": 1.43,
-      "impresiones": 8293
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/885039510_953598190852663_3218982903863382282_n.avif?_nc_cat=108&ccb=1-7&_nc_eui2=AeFDA1tIzuXNkn3r-OTbnydK_Bk-_bFbFMr8GT79sVsUylMS4DOBAjEC76WbFzNBkO0ncdkn-tg0kbK_GqzmyY_U&_nc_ohc=QF1vzOzTA28Q7kNvwEK4cpG&_nc_oc=AdpwjTYaK7V-CIc59S-n2b--Jwz-SsDHBiISBDfXXRSFTuW02oPzSUPGNuBv6cksRmo&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQKWs7vIDROEgta96HrlAGJMPS5Nj8LSjKuiiw_DmQy22SBvIRfbYFXllukt29z7qmI5f05TsnClSg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQuTlzCX0BBRf-Fx3FpzezYHytB_w4om204DPHSUMoEAw&oe=6AEDC367",
+      "gasto": 915.58,
+      "leads": 12,
+      "cpl": 76.3,
+      "ctr": 1.45,
+      "impresiones": 9659
     },
     {
       "id": "52540656201762",
@@ -462,12 +462,12 @@ const DATA_INGLES = {
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/881767275_1657439559114594_7051247303701466985_n.jpg?_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeG238gyuqmQNrg0bNe_29-VGrKIPRD_z8Easog9EP_PwZSbhUDKmO3POE6K3iEPuwvwFGrcWIjFVdnDc1qQSvtY&_nc_ohc=ZctGZeSulqsQ7kNvwFZgNwT&_nc_oc=AdoUbisziKQmcrTsXYnWY6VV-FvCM8Ju_GsviycFOLmn4LbkebNwL0HV_Ou2KEX-UY2EJYRr-gMDPxCfH1rNn3_A&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQJdN6tTmbd2tS2QF-oI1kghEhpgjcFP4KEjHs4t_O5ocS-K1fKNzvO6xF3S4QoVhx3lBF6FLn-MmA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRy3Rarih89KWWfU-YmeHKqe2sogKpzyy8Ux3BUonWBtg&oe=6AEDCB1A",
-      "gasto": 62.45,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/881767275_1657439559114594_7051247303701466985_n.jpg?_nc_cat=105&ccb=1-7&_nc_eui2=AeG238gyuqmQNrg0bNe_29-VGrKIPRD_z8Easog9EP_PwZSbhUDKmO3POE6K3iEPuwvwFGrcWIjFVdnDc1qQSvtY&_nc_ohc=ZctGZeSulqsQ7kNvwFTPYoV&_nc_oc=AdrTHOfElbssefF81bqoZmiZViD1K1z2sHchZWYfepo2G63pmlRw7WZazC1Tryxhpio&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQKMFv2DQ8-BwOENoXmgDru2DP-yOSA-JH6e3GvbQSCOBZwZHHsG9xqJ2vN10aWHdEmaY59I4yOe8A&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQR7uYRNATy1F8OhUb46FeP2Ki0_6SHz-8FZUVOseBJyMA&oe=6AEDCB1A",
+      "gasto": 80.07,
       "leads": 2,
-      "cpl": 31.23,
-      "ctr": 1.4,
-      "impresiones": 358
+      "cpl": 40.03,
+      "ctr": 1.08,
+      "impresiones": 463
     },
     {
       "id": "52522031968162",
@@ -475,12 +475,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/12373189489982123691?_nc_oc=AdrwHB9kmTRCG2UyZ5PK19y-MJoHk-syXJRXuykQJ0gxMHrho-AbbFc0gjnqZsEGQKl3IdWU_y7f0lT6oUu4TAZ9&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIg2sZGUvmXohy6FIiOxNkyjQ6GNgCoVVZBaTXeRaFXuWNuS56S8mu80Edd60I3Ry8radP6S_5APTboxEJH0G2hBz2eT_GGCqSeJvNh15JbMuEA0kWYQPNjmG40igXhbsKaSUswo-yhDyvpYf2uHOU-&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeEjJRi5r7gF5YiTAoJ_ha-dv6I89WVLcQS_ojz1ZUtxBA2fVIGUJYcA8EIV5dAF8gcKImzMercGPir-BACoH7uO&_nc_tpa=Q5bMBQJNv0Eee0ua9f3XhlRSUUuzCdv7vghzS1Q6fnDQf-FMM760RcezIHXarkfa-rnXvIy2iisjwM81Eg&oh=06_Q3_EAQ89xHyqq0pD4Ys3hUKtNU1ChD_oIuFU53iVii6Q55-v&oe=6AE9A030",
-      "gasto": 3.56,
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/12373189489982123691?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIg2sZGUvmXohy6FIiOxNkyjQ6GNgCoVVZBaTXeRaFXuWNuS56S8mu80Edd60I3Ry8radP6S_5APTboxEJH0G2hBz2eT_GGCqSeJvNh15JbMuEA0kWYQPNjmG40igXhbsKaSUswo-yhDyvpYf2uHOU-&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeEjJRi5r7gF5YiTAoJ_ha-dv6I89WVLcQS_ojz1ZUtxBA2fVIGUJYcA8EIV5dAF8gcKImzMercGPir-BACoH7uO&_nc_tpa=Q5bMBQJXWKmHHNymIrE0AljEBwi8_fwv_9rWxN52CltLVz6Qq7oTE8WJz_bDKL7lYW95Dnq8FedBXlw7Sw&oh=06_Q3_EAasIWz81xZDJ3u1NNnhdZffI8Zd6EFR7nCiLyQOipIeb&oe=6AE9D870",
+      "gasto": 4.32,
       "leads": 1,
-      "cpl": 3.56,
-      "ctr": 3.23,
-      "impresiones": 31
+      "cpl": 4.32,
+      "ctr": 7.5,
+      "impresiones": 40
     },
     {
       "id": "52540656258762",
@@ -488,12 +488,12 @@ const DATA_INGLES = {
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/881787438_1672541821204079_8741006472433212179_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeECUtg-iGoOgMI6LLioFJvndKRthaHBYr50pG2FocFivmnktfoa_3grYFh9RI72qUKKNc1H23cJ4Ii0_lxJDBD5&_nc_ohc=ImhHY4LxVA0Q7kNvwF_iNry&_nc_oc=AdoU7nyq4A5nfga5ZJy3q9zpaxbPklYDRB89aCAxaKwCFf0UYq_kYOW6q5sHgkwRDqn77GjX30q94I0d7zXolnA7&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQIw_K9xVzK7HJVn5YZtHWs_55Q7YtwV55JYMLWKUBYCuchvvlOgSV-dNASUmAhoa1rZIRohkKoKUw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQi2CnUojBWYEru12UksTf-oLuMfDuzZre8hJ2dW0nQFg&oe=6AEDB88B",
-      "gasto": 11.83,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/881787438_1672541821204079_8741006472433212179_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeECUtg-iGoOgMI6LLioFJvndKRthaHBYr50pG2FocFivmnktfoa_3grYFh9RI72qUKKNc1H23cJ4Ii0_lxJDBD5&_nc_ohc=ImhHY4LxVA0Q7kNvwHv5AMZ&_nc_oc=Adp6ioWsBXVnj8V8kfvCQHyRDmiBBhlhcmq-OI0kgdgwfq-saC4VWl86tEv2VbzZXLY&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQJh2oRaFHP5d0ao6D1lyq-83_J1JAlo9ILC1eycHFCHDdVjO0wpbXe49-7F-NMGD6fZB0BhG7eN-g&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRNmyYSXOsT1p8aYVeEu2ycXhAOMnoj-vtwq1sg4-rhNg&oe=6AEDB88B",
+      "gasto": 13.58,
       "leads": 1,
-      "cpl": 11.83,
-      "ctr": 1.37,
-      "impresiones": 146
+      "cpl": 13.58,
+      "ctr": 2.96,
+      "impresiones": 169
     },
     {
       "id": "52540651743762",
@@ -501,12 +501,12 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/879591755_1649840590148135_1310835721001535011_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFfRxOhu9Ez0er2Oi8IVwudRYm06d8cFK5FibTp3xwUrgcR_P3A0DHAJGJbEx_bIwunjcxy7uCa56KoVlwvUzvx&_nc_ohc=Yeux4b2o-Y4Q7kNvwHaOhcb&_nc_oc=AdpCnmCUKFtLeK8_S6RMQ8b2uzrt096ECKMQHl90hwe25Nf9vySTdpg0hNOIPtFyjYMRkqMJeegIHYnnS4l-oHw3&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQK66z5Qrp-1UaaHg3SdrZn0QF7_AAu74V0h-qIyYJJjZ4dBy8JLWyigEp7a5UNjbrb2m0ygsP8kiQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQZZzzdJm7NILV_2cYM0CrwYzCLl1cqMb3N8qo9ZsFWCw&oe=6AEDA50D",
-      "gasto": 23.33,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879591755_1649840590148135_1310835721001535011_n.jpg?_nc_cat=102&ccb=1-7&_nc_eui2=AeFfRxOhu9Ez0er2Oi8IVwudRYm06d8cFK5FibTp3xwUrgcR_P3A0DHAJGJbEx_bIwunjcxy7uCa56KoVlwvUzvx&_nc_ohc=Yeux4b2o-Y4Q7kNvwE2D5YN&_nc_oc=AdrP3W73w91E9mSa3SvHFB-iOSBgNXQImI8ntKB95wmFSPq39oEoaHdmT0uyG9fjAnA&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQLB6QGWdF6pQHyOoD5biKibP27nYAoylW0A1aYcbMrcwSXgO36LfFkZuXB1saBej-lBnOc5PRGz4A&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSstytIZSpi2GckxbeVBDowjLAF_3d0PjOHNQ370YRtpA&oe=6AEDDD4D",
+      "gasto": 24.49,
       "leads": 1,
-      "cpl": 23.33,
-      "ctr": 2.46,
-      "impresiones": 122
+      "cpl": 24.49,
+      "ctr": 2.31,
+      "impresiones": 130
     },
     {
       "id": "52540651839362",
@@ -514,12 +514,12 @@ const DATA_INGLES = {
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/880006697_1481051377459164_3444966786238202088_n.jpg?_nc_cat=107&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeGUGvZ5jZP96fhYzCuv9HKEvuMjrZ2DS06-4yOtnYNLTuL4FTI-BDEgV-fuxR9zqWzy313I9VXkTn5r_m3Z7DZp&_nc_ohc=-C9dCO_we4kQ7kNvwE2D4T5&_nc_oc=AdqhPxbF4fpL4XY92LrOn8tOCUAhW5dVGcLD3dLyrMoVJFgRt7_aHpolDCL4LZG02vK6mv7jFQeiU4Rao1mWEDu_&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQJ28xTXDE3lMevMsgTpcHRM4uLEIFdMYgQkBkCS9o-IV5RZYKpmNjOu8xOoj1Dgo6j1tp9me66Nlg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTOpw-7xBuDJKFNTDOckbBXVW0SsESDE6p8zGEaWzRETA&oe=6AEDC863",
-      "gasto": 47.03,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/880006697_1481051377459164_3444966786238202088_n.jpg?_nc_cat=107&ccb=1-7&_nc_eui2=AeGUGvZ5jZP96fhYzCuv9HKEvuMjrZ2DS06-4yOtnYNLTuL4FTI-BDEgV-fuxR9zqWzy313I9VXkTn5r_m3Z7DZp&_nc_ohc=-C9dCO_we4kQ7kNvwHrEG2I&_nc_oc=AdpuhGv-4xrBp8uomooAzITYJbIE_VEbITJRSQhG7-1qfLdjkE4mIczQ0rMYtB88NaU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQIeIzBgq-E51qOXPCxXn28AZXAT11dlLmiWm_lOdzqGHYM2ArRYjQllfaC-nxPox7n-Ej3JRJ73DA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRyFVY-lcob1fWVfHd5JOYZLqGpCmz957p6iI06aEqwCQ&oe=6AEDC863",
+      "gasto": 57.84,
       "leads": 1,
-      "cpl": 47.03,
-      "ctr": 0.5,
-      "impresiones": 599
+      "cpl": 57.84,
+      "ctr": 0.41,
+      "impresiones": 734
     },
     {
       "id": "52540656356162",
@@ -527,7 +527,7 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/881767085_3449937852060905_7622941492586673297_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFwjCIu6qYo2zVpMP4AuUQnrlH0DNCFWz2uUfQM0IVbPbqtZ8gPsV9COSlU82HuD12E0SUtqFj90s3j9_sXheTj&_nc_ohc=lOt0Qav0GyUQ7kNvwE-e-Dc&_nc_oc=Ado6lJd_Tt39tipIj_JH18Qiw60w6muupsq9_7kONb6JtlB-RMJcwo9uGpRPa2dqzBdMoNJ1mAPsvpsc0VV12u6p&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQLZzeP_INoI446lYWwNfe2nfFgPhvl3qy7BTRchH62tEh3meJNX-E9KsAbF5QrJiYwWNeupCxK3ZQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQ4OIkmVHW05L0zXwzlUfuyHkRjAsv7fL_f2OoTz733jQ&oe=6AEDB632",
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/881767085_3449937852060905_7622941492586673297_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFwjCIu6qYo2zVpMP4AuUQnrlH0DNCFWz2uUfQM0IVbPbqtZ8gPsV9COSlU82HuD12E0SUtqFj90s3j9_sXheTj&_nc_ohc=lOt0Qav0GyUQ7kNvwF9LRlt&_nc_oc=Adrh3BRgMog3oBWuYXbKwr28tkVdGqnHwSJikrC3ZhpehlJ7dtVcV0K23eRCtX-NaM8&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQJ-kLut7iG0kstficPYRxL3hO-CGHYUgEZxlBg3pM3AYiKE3UIn3JUTBOnEfSz1dfoBsENIuISqBg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQT1JiVwovCP4OyGvPQk2R7B32byo7gy-TLDBxcFz2U4xg&oe=6AEDEE72",
       "gasto": 0.44,
       "leads": 0,
       "cpl": 0,
@@ -540,7 +540,7 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/879544298_1424536799861329_2908013346979664184_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeH0Cqjgkopsy787CSxjNWGonPwaJdDW9wqc_Bol0Nb3CqnXhZYoQOtnSJEilIHe553wArwM5KQZBWJpLLnH3Ato&_nc_ohc=asJoWhx2RToQ7kNvwE9Zemb&_nc_oc=AdrvjDpBK_J1FT8hjYe_eh-1IAEc2Il_7qzmRVa8q-EER9RF7LqwLUBm6kIfA0c2WCzE0FKRQmNcDKLzpxTcOQ0F&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQLjHr4bWRTnPkKphBbjw4cyDmG8T1dwsmaLG5arH53pDAP7u7qefH6K6WnJblolds08YK0JHca44Q&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTGxZKniu0QDMJBRfGTMzz7Ia87QsPVv2sMH6MBqFymwg&oe=6AEDA59A",
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/879544298_1424536799861329_2908013346979664184_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeH0Cqjgkopsy787CSxjNWGonPwaJdDW9wqc_Bol0Nb3CqnXhZYoQOtnSJEilIHe553wArwM5KQZBWJpLLnH3Ato&_nc_ohc=asJoWhx2RToQ7kNvwGEtB_a&_nc_oc=AdomR8MZkT1KmrV02pyTsWNUAc_Pmxd2cgc4WiKUFuniGjSKhCOV3Y3p_uDo7-P7p9w&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQI1-xO0sauz7CwqfCM6k9XZUpevhnqlzkdczNDGWlWOdMSM8cm-wtB6yxnFFLx9gjKkUdwEoh9_qA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRqd_qOx4_lsquBJO5IUr0ZWqYVdngZS2Vk58119kptwg&oe=6AEDDDDA",
       "gasto": 0.71,
       "leads": 0,
       "cpl": 0,
@@ -548,30 +548,17 @@ const DATA_INGLES = {
       "impresiones": 2
     },
     {
-      "id": "52540651734962",
-      "nombre": "RMK 2",
-      "campana": "IY | REMARKETING | WhatsApp | OCT26",
-      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/879964992_1106984448790357_5948068773663553465_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFD3OxpMvqTcmxoMINbX3YtpiMmZd9zSQGmIyZl33NJAbBjp2oq2RpOmzRQmR2XmbXrl5AqQ-h-ocxCOqQxYJps&_nc_ohc=6I28IQV4RWIQ7kNvwFidr5T&_nc_oc=AdoHi66f4Pb-JckzWzT_3sRHy3RmC_L6KQ5PUklld7D-IR4JK8_FiKRKKz-jg1nFwIpV-_pLQParhURuh0iK3pn1&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQI_RbtVRdmzZe491-xduqGOBKBm2OmZrtyquPAnkqMqrflzSgkV0PzHNq9v_mCE5hnRWb7FVoh8Gg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQIAkZMPBlAKsRICp1Axs1x6Q-kilz9flnjbIH5GEl5Ig&oe=6AEDA61A",
-      "gasto": 0.85,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 13.33,
-      "impresiones": 15
-    },
-    {
       "id": "52540651809362",
       "nombre": "TOEFL C2 Titulacion",
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/880006707_2973749332959993_4053577084132451059_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFRO4COA2MRBuG7v7FrLq7LZfv_uFDW4mpl-_-4UNbialXxbyloMdykPnG19LP34_2OfcSx3ugSZTlaJSGysLfL&_nc_ohc=THSCje2H6AQQ7kNvwFpgeNU&_nc_oc=Adrd82gvk_HWeMu3gyEv07ZXIQ66KoPvzEQ5JJCne1KbYUsEM_oGZdL1ZfK4UMVgMrv9RUSqcPHIa7pHN23YLTUB&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQIvjHS-YpeVxgDCWSxTyMRvCL2xtq0cV57K377L59H45RYErh8NrsnZwxCrUgwx4oFaxlTeV9U8yg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQg9ExuW7uHjPpHlS5O91Cjk54hLLPd23lSITF_OsjTRA&oe=6AEDAEA6",
-      "gasto": 0.96,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/880006707_2973749332959993_4053577084132451059_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeFRO4COA2MRBuG7v7FrLq7LZfv_uFDW4mpl-_-4UNbialXxbyloMdykPnG19LP34_2OfcSx3ugSZTlaJSGysLfL&_nc_ohc=THSCje2H6AQQ7kNvwGDTOWz&_nc_oc=AdpC-jML2shQc2kxzouytAg5knbNZydhlGB2QCWpBiQSPQnlRZqglqgANUj8RjiofIk&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQJP5Bc384aKQZl1HsJcTG0lXMi_Yyegle0HXR118GwvcnUCa24CPhXxofAGgH9RQkWbBU9bA-XM7A&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQR2gLZqzfFLxJCUBtqvSJk_59ye94DqnvswvxIDmP9KMw&oe=6AEDE6E6",
+      "gasto": 1.0,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 14
+      "impresiones": 15
     },
     {
       "id": "52540656285562",
@@ -579,12 +566,25 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/877006343_1900233681335931_189344301226186527_n.jpg?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeHOPssLjVW0UUeddQ4X86EsqhsgvK01BSWqGyC8rTUFJQ09jQ6HZ4v2Im9VI99kF5oYw_10bNWfFXa9btnGDlbj&_nc_ohc=3nwFjwQHC6MQ7kNvwGW9tOX&_nc_oc=Adr2G6van6BpUniBX3TIAuk8Gnf3uqdRuN1ain5PC4H7FRwSoYtarDzmlTH9ucVILp9AFMZKLbLQAQMPmxYUNjjV&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQInda2uOtWGXDyxcxaxSJvzLFxiR8YO4iSPkmVr3MdmhTGaVyKHrkDEN6XZB4S5DbeVUywEFH1Ldw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQR7W_8ndZIlPYLVh_hwCE7MCozhwy4O22JW-WuRgef23A&oe=6AEDB24D",
-      "gasto": 1.36,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/877006343_1900233681335931_189344301226186527_n.jpg?_nc_cat=102&ccb=1-7&_nc_eui2=AeHOPssLjVW0UUeddQ4X86EsqhsgvK01BSWqGyC8rTUFJQ09jQ6HZ4v2Im9VI99kF5oYw_10bNWfFXa9btnGDlbj&_nc_ohc=3nwFjwQHC6MQ7kNvwGO1aBr&_nc_oc=AdqPcjK0w8lcuwaAQ_lunhqM3lvuzPiPj7hSmSG0XDLXc2lbN4VvAIFxXNSHau6InLI&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQKNZd7RotpJp9TcWZFYeJqnSbvx9WDcPZU5lxmFJDmW26LIzGEPvnbSvTCW4fD6502ck6GBzwSFkA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQS4yHiaewBeJchQjoV5l6rjprF9qtAWea2bpkEiDZwoqw&oe=6AEDEA8D",
+      "gasto": 1.38,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 6
+      "impresiones": 7
+    },
+    {
+      "id": "52540651734962",
+      "nombre": "RMK 2",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879964992_1106984448790357_5948068773663553465_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeFD3OxpMvqTcmxoMINbX3YtpiMmZd9zSQGmIyZl33NJAbBjp2oq2RpOmzRQmR2XmbXrl5AqQ-h-ocxCOqQxYJps&_nc_ohc=6I28IQV4RWIQ7kNvwHGgIZ4&_nc_oc=Adqyno5W4Dr8g1VsXjg5jhlh0Y1bf94j_Tk6C7CbjFoizLDgurPkMk6NDGwgDMq0UCI&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQKmmFWCf0IstIIdegssAxqtQiMm0XaSnhIbaUKFnVu9fyU_wmEGVVFm_QrQMZ30IRtdd2B52YDFwA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTTrk0D0Yz6vtxJ9DZCCn4svVPzpGz8x-Whi07rq28WhQ&oe=6AEDDE5A",
+      "gasto": 2.08,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 11.76,
+      "impresiones": 17
     },
     {
       "id": "52522031967562",
@@ -592,12 +592,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/885039467_1309531191258614_5403391413642115846_n.avif?_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFFJ-QCrYSXWU7HAZ31GxVRm_tG6YTmCi6b-0bphOYKLv9qF6jVOCtrH41xL7MTKmOTz90G4TDJovzleG--_29B&_nc_ohc=KSOuX6zcJtkQ7kNvwEOZO6M&_nc_oc=AdpV0kHMhP6Yy7On2q0AYjBdB5bchqM8wc2q9D7YRM0WoonGaJ07Kwg5Y7S-PeOOyYgnMZeIP4w5Jqq4MqdFcA1D&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQIbb-Ggv4bzftMXOTcAnTNTLyZc88rn6AKr1q5zVcDvmwGWLZoR6iezlyewWvMBjh_ZupIOw3tRzw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQSID_HgxYEutsORYiFXPQ-i5hFpYeLq_dcw5xG-nsxVdw&oe=6AED9B63",
-      "gasto": 1.98,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/885039467_1309531191258614_5403391413642115846_n.avif?_nc_cat=102&ccb=1-7&_nc_eui2=AeFFJ-QCrYSXWU7HAZ31GxVRm_tG6YTmCi6b-0bphOYKLv9qF6jVOCtrH41xL7MTKmOTz90G4TDJovzleG--_29B&_nc_ohc=KSOuX6zcJtkQ7kNvwElYM__&_nc_oc=Adoyll6zES5P9UvalWqFtxAKVJ3Cho7v63Iit22cWVaWc4bxJuPlWwk2OS6hdQvlICc&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQLSvnfdKol_p5ClzR2R1Zpw6ECGXtKpF-NEBIwiPnvSBrJA9FneVrmMwVZu_ttQxeLj3i2jQgaawA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=28e8fc&_nc_sid=58080a&oh=00_AQSskElM1SWIbLzkw1U8MTXhmVMpkfqRQPWJWuba8KNqOQ&oe=6AEDD3A3",
+      "gasto": 2.21,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 17
+      "impresiones": 23
     },
     {
       "id": "52522031970362",
@@ -605,7 +605,7 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/15685315378830332145?_nc_oc=Adr-F7YwCfpSfRL2CnocZceMyLcnkWiIEFcFPIeUVFQy5fJd91oPSa471qAuZ9604QQLphdghskMQckhNs52kf0P&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIDaEa0QrNnQvG6klvFie5j-B3Bc3FakgcUw6Elrp1YtSssR9aFY8ihev5Qvx4OHk7mmK9LZiOPNIlMYErn9YUiVl5edAIgdXhp_8Ts6pyG_gGw3802mwGlQcMMtlTplzpIn0LXcqmmVardjvbd4pH9&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeGDCZeOSWrctfiAJMPtNZd8VpV0jQ3smnVWlXSNDeyadfua0pcvL_S6eUxmKPG7lNpzpXRxwkH_rtNPOxoyfUnI&_nc_tpa=Q5bMBQJf2d8HD6uAM_ivVrxaCQM5ryN2gv88KynamGlADZcoIEm65sFxk442bS4Rb_7iMvdsYN22f4VL4Q&oh=06_Q3_EAZ5JzolmMkzM6UOm5lsSQjLaQ8OTs95kdTzFmU4ExXHz&oe=6AE9B35D",
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/15685315378830332145?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIDaEa0QrNnQvG6klvFie5j-B3Bc3FakgcUw6Elrp1YtSssR9aFY8ihev5Qvx4OHk7mmK9LZiOPNIlMYErn9YUiVl5edAIgdXhp_8Ts6pyG_gGw3802mwGlQcMMtlTplzpIn0LXcqmmVardjvbd4pH9&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGDCZeOSWrctfiAJMPtNZd8VpV0jQ3smnVWlXSNDeyadfua0pcvL_S6eUxmKPG7lNpzpXRxwkH_rtNPOxoyfUnI&_nc_tpa=Q5bMBQIjImVNZMl8A7ZGkmaBtkceXgGSWHC98jI7EBaxzs2HovWfj0UxpEtxFdo553it7-rcLBeyFm1v7A&oh=06_Q3_EAQQzEs9ed-S1jQWkd0Rf57dvGD5mhnnXDs_xkLLO6Vdv&oe=6AE9EB9D",
       "gasto": 2.34,
       "leads": 0,
       "cpl": 0,
@@ -618,12 +618,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/7369313691922659991?_nc_oc=AdobqE2tZV5nYbRN_Qp0bo5TBSrWKyx1y1Stc5tNwnStby_Jiz2v9mqrKXWg1vnW19OcFTA_DvWQM_G_1I0wNOou&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQK6qmRltSBKBAll3Ydu_MDiQ0j2G3QyUWQ7iC3eUdjhfa8NCmJ6zmyJTXM_qs7glEo9Ekn2KcOTimYfukWS1fXyPbCgTEwFz7EN929ei8OjQvdGFELmNZTwxUmA2T5NRK0sqd4_hUNMbqADp9yqan4A&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeFTeto5pSDkAxeEzfLlK_PFI1QNKaAFKoIjVA0poAUqghZz05CTIOG15ujQJX_M2vuYzfFJYSh1MahRDoW5R20E&_nc_tpa=Q5bMBQLYppR7HWrVLfIvTgaeCZ802SWaUPdOSg2U320Ri4V34uf4cMQjuhJoXyWECKtHYa0Wq3WFm4R-sQ&oh=06_Q3_EATkww_Zi746xHse60m43P6wwZQG6clBuCgivEncMc9hm&oe=6AE9D1BA",
-      "gasto": 3.9,
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/7369313691922659991?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQK6qmRltSBKBAll3Ydu_MDiQ0j2G3QyUWQ7iC3eUdjhfa8NCmJ6zmyJTXM_qs7glEo9Ekn2KcOTimYfukWS1fXyPbCgTEwFz7EN929ei8OjQvdGFELmNZTwxUmA2T5NRK0sqd4_hUNMbqADp9yqan4A&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeFTeto5pSDkAxeEzfLlK_PFI1QNKaAFKoIjVA0poAUqghZz05CTIOG15ujQJX_M2vuYzfFJYSh1MahRDoW5R20E&_nc_tpa=Q5bMBQKu9pkvEoz5fJhIrucxSac4mH_DUWFOZLZYvyqEvczvX7nqiagZsgKPxZChHqC8BCZoztK6NdOQeQ&oh=06_Q3_EAftbYkvS3YxEOMgv5hgKg3b6tumT7rEEVsGEXPdLiTR3&oe=6AE9D1BA",
+      "gasto": 4.14,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 11
+      "impresiones": 13
     },
     {
       "id": "52540651792362",
@@ -631,12 +631,12 @@ const DATA_INGLES = {
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/880081997_1121077977338582_114676420786547474_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFS8StRfbpVjJgdrZCxw8CbO_Yy1i3l7ng79jLWLeXueHTYC51oY8kczU_Xxxp_UmQg2tzRsX1dj8ZbKkkBegtB&_nc_ohc=_raX5HgJzPAQ7kNvwG01gS0&_nc_oc=AdrmqoKiDw7e9oHtC-H9PO7tUbxFo4EvcANANjWsHxv52y_MxRHEHq2XtzSC7kejmAclwq55yTBtv2GkoqKUBbOW&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQJEn-RA9Ar317lf99hasPjl8akuJ9ztsPBfnkmDwZ-KzAelZZQEY3wzQ2jBBhSDDBa5cBLJlEnwnA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRgrRT91YkczftoqSi7plz_SRn_kt5cPAWqXYBtOef8hw&oe=6AEDA898",
-      "gasto": 5.98,
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/880081997_1121077977338582_114676420786547474_n.jpg?_nc_cat=101&ccb=1-7&_nc_eui2=AeFS8StRfbpVjJgdrZCxw8CbO_Yy1i3l7ng79jLWLeXueHTYC51oY8kczU_Xxxp_UmQg2tzRsX1dj8ZbKkkBegtB&_nc_ohc=_raX5HgJzPAQ7kNvwGH1h6K&_nc_oc=Adp3mG69l894iB9ordPg7GLDHw-anIM3fV1-VeCF-wC8zCUQmvJbxIN7l6GYUpbDGeI&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQLOQUeEuD8OPHm5RbwDxMrF3388f1s-9KbPf-evuXajXbD4n2cY-7InIacTc653t3qLFjXkyGYJAQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSvUYU5HxEj5DdCAH0H_EdRBZinJ7cV0Bwf0LyKt8Buwg&oe=6AEDE0D8",
+      "gasto": 6.89,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.89,
-      "impresiones": 53
+      "ctr": 1.67,
+      "impresiones": 60
     },
     {
       "id": "52533464338562",
@@ -644,12 +644,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/821201051_1126400869713135_2021777098874713997_n.jpg?_nc_cat=110&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeH46HfONninu9h_NyFszYadnhK7mK1TDr6eEruYrVMOvpNkxVbVaHDcPZwIl3bzfmQ2T2Pgy1UwX_KRHYJ50PiV&_nc_ohc=ZlNf23jgol8Q7kNvwFY5MNz&_nc_oc=AdokxRyFSNSu6VV1bjlLNhHwM-NKSv1YNUlG6t9v4xAe--4aaVlEiGBZM-QfYEAQYsBhIYWtVLyHpETwF_3Gim69&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQKFoC_iyyVhD1paxbQpNbYv8U4lbq2tVFqPzB_y967pUa1jkmQCzQ99pqo9Isg8J5ZyoXftAeDgnQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQQ33NKJXUPr896_Yu3M625NA8moFS2AvZHG9tFOV8AY0A&oe=6AEDACD7",
-      "gasto": 8.22,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/821201051_1126400869713135_2021777098874713997_n.jpg?_nc_cat=110&ccb=1-7&_nc_eui2=AeH46HfONninu9h_NyFszYadnhK7mK1TDr6eEruYrVMOvpNkxVbVaHDcPZwIl3bzfmQ2T2Pgy1UwX_KRHYJ50PiV&_nc_ohc=ZlNf23jgol8Q7kNvwG_sJ56&_nc_oc=AdrU89aUmI2x2HjdKioIJZlVB27kpP0L-CXN5KzESKMWiS0uBYdtVjtzNxxPAMuVhtU&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQJIEXqEEHmsrfBPLWNQltBbhhIsQZS1t1pDxlgcBg3q6cnAeon23FelSPs6HVM07uoXB1F91JE_xA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQT_pgwBEbreLBRC35gtW200iLru-cz4Y-ZRLe2PdzowEg&oe=6AEDE517",
+      "gasto": 9.06,
       "leads": 0,
       "cpl": 0,
-      "ctr": 7.69,
-      "impresiones": 39
+      "ctr": 6.0,
+      "impresiones": 50
     },
     {
       "id": "52537014354962",
@@ -657,12 +657,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/9543576559827867138?_nc_oc=AdoOk8BPT_4jl8LTiSgYiKF00TXo-mKzbh0PznyyStRnruhxRlGETt3-iqMIYnmq446u2x3B1biPdHMlNw78v7ED&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQL51I9bvccUiW1bZFpxbDPznEdwHuan7VDXjX6mOaQ7in2-9BcgP3TN1ZAJvlL4SsX09oXPn81M2qFlBZHEcrLw_6wbuHWpPzVD3jZRuPhRvx6h9vak_nw62FznS8qfhER7B2_jAsaVV5rHS7bfyuSi&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeGZ_meFfDU5HTIK7nJn43cgWBi1ET8R2gFYGLURPxHaAe2TTBPaBH8Qw7wjcn3od_RdmsVB5jOW5NUf6l5WnoZv&_nc_tpa=Q5bMBQKlykOi0tkT8x4883Pv9gh6oGAGWP5HWUPtGYzuIjZpzode9Sm6wZMoVzYY8_dzE_-lC43T06MK4g&oh=06_Q3_EAVcHvqZ1xvZs21E3LAeTfe-hmR71-dUmiml8pGfGqRTX&oe=6AE9B235",
-      "gasto": 9.17,
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/9543576559827867138?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQL51I9bvccUiW1bZFpxbDPznEdwHuan7VDXjX6mOaQ7in2-9BcgP3TN1ZAJvlL4SsX09oXPn81M2qFlBZHEcrLw_6wbuHWpPzVD3jZRuPhRvx6h9vak_nw62FznS8qfhER7B2_jAsaVV5rHS7bfyuSi&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeGZ_meFfDU5HTIK7nJn43cgWBi1ET8R2gFYGLURPxHaAe2TTBPaBH8Qw7wjcn3od_RdmsVB5jOW5NUf6l5WnoZv&_nc_tpa=Q5bMBQI6iVC6QES67BvgX5_Ju62K-uHLn2Pz4_cyMSZbXR1fZABU_rfffGxNnzUzUmExxn6VeGGVxpu60A&oh=06_Q3_EAbHVhWXQzvJ6rjfubv6ozTgSjHkoGDTVnW6-spFGbP6A&oe=6AE9EA75",
+      "gasto": 10.27,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.5,
-      "impresiones": 80
+      "ctr": 2.02,
+      "impresiones": 99
     },
     {
       "id": "52540656307562",
@@ -670,12 +670,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/881733574_1104864315779498_3378185287128337555_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeGG0ee1HuDRna5g73ACqiGR0HpcNa2AXP_Qelw1rYBc_9Tot5ogLQp9kfdGueFQlvA38ovU5eW5eiKH_6m8WQ1H&_nc_ohc=GeJ_fUR8I6sQ7kNvwGCG4jh&_nc_oc=AdrWbJcZbq6hTN0h7uNIeh_NU5zpnO-o5HzKlOSpnFeXgRQo3W_YCP6bymxaF6IY-akhJ3aBIMaWNbZf8kz_kiIS&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQL1bHH9Vxh2DvoEtwbjBFrMX8f0Xsek4wP53UVUBZDU6U6ORe7NwmcW2QQWNPG4GxwYchTdVGe9cg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTP79iX4AOLzhdBD3jKTbuo4j2kO5vAicjJFtYowrHVoA&oe=6AED9C34",
-      "gasto": 9.82,
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/881733574_1104864315779498_3378185287128337555_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeGG0ee1HuDRna5g73ACqiGR0HpcNa2AXP_Qelw1rYBc_9Tot5ogLQp9kfdGueFQlvA38ovU5eW5eiKH_6m8WQ1H&_nc_ohc=GeJ_fUR8I6sQ7kNvwHOya8j&_nc_oc=AdrfInqpkS4jwWW5qbdBMGZD_zcG7XlzFVQ8L1mG51N3DWdTDQPnhhCcQWIpy1IGgYY&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQJuZ_PNREtaRZRDUFJtS_8wTy1k1Z17zczjSwKvRqayvo_5D7fXDOip7EMfPXJeaDXugGO80_POFw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTIt9JVVj4WkA__AQbfewN_v_gUkdw_zoeds6AlgiYuGg&oe=6AEDD474",
+      "gasto": 10.73,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.01,
-      "impresiones": 99
+      "ctr": 0.85,
+      "impresiones": 117
     },
     {
       "id": "52537014352162",
@@ -683,12 +683,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/7317888674284321319?_nc_oc=AdpbzprpsCk5C40JGHCkPtrDWuSUzEH5Kzw8pTP0fl6c6ZO3A9Ps5TYYXKNtpG7CZx3vkKmLZwAhWcoNZ7hX-p2Z&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIpiE7rgXFhWZnHWrxfqHyy25N_Kla3N8m2AVyffgCUIVysz1xv1YSoioWrTbl8T5Ho3YcW3iTbLI6P4gXKNiFLJAfS0fmkLN4KbkwSYCMemYpV-mSN4_wfsM7Z38FAnRFwuTyc4c8fGB292DTGWXWe&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeHBO-5vTG-MQKc0K9YtFSgTF5a2zLv6ysgXlrbMu_rKyNvhHxg4Qr4qP3WPMZ6ErSDg_Uijnz8NQhLoXgWEFgAe&_nc_tpa=Q5bMBQJdHTPl9JwHtE2jCYLgmwIggA9NtviZqawIAx8OWPGTwZzLdN5IE2KcYtg8eB_SSTEjxEfkL5NwTg&oh=06_Q3_EAbXSVl7GXGtHQV7mufr_g81FH_UIMKLb3LJ4QZ0i6jca&oe=6AE9CC4A",
-      "gasto": 9.88,
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/7317888674284321319?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQIpiE7rgXFhWZnHWrxfqHyy25N_Kla3N8m2AVyffgCUIVysz1xv1YSoioWrTbl8T5Ho3YcW3iTbLI6P4gXKNiFLJAfS0fmkLN4KbkwSYCMemYpV-mSN4_wfsM7Z38FAnRFwuTyc4c8fGB292DTGWXWe&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeHBO-5vTG-MQKc0K9YtFSgTF5a2zLv6ysgXlrbMu_rKyNvhHxg4Qr4qP3WPMZ6ErSDg_Uijnz8NQhLoXgWEFgAe&_nc_tpa=Q5bMBQKJZFT1M_F-vq2BVyDR4gYTyV49VrF1_aIqXmU9wYu3mku1lQiT1XeFrTpcsia-3SONVJBlBnmTiA&oh=06_Q3_EAWz4oRqYIxmJ1OQ3SM-90jAO30gjFzkDUsWepXfwU3cq&oe=6AE9CC4A",
+      "gasto": 10.96,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 30
+      "impresiones": 37
     },
     {
       "id": "52540651820562",
@@ -696,12 +696,12 @@ const DATA_INGLES = {
       "campana": "IY | TOEFL | WhatsApp | OCT26",
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/878660919_2147720295840567_2310426109159860724_n.jpg?_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeGXb_UfnmPmKgluN6EAlcOURktEiRECe5tGS0SJEQJ7mzjP-OY-GEqt764VWit5pEVWiTQRoQuhpwXmJx9cSujC&_nc_ohc=nO2rjL3_kbMQ7kNvwH3psY3&_nc_oc=Adq4JyFzaTamh1WBaXIVvK2uDqj7oC0fHYEvK8ndvtjkHjPNDBMnHOYfJXrWTDocDgkLL5_OShugqqJFqF8bfwS2&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQLr1qlG-eUcvktpHKY-WhTAPawX-5MT6s2mivBLSUP8fMb-g9ofEWrJy3Fvt1k2r9nkr09zHaOmDw&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQSp0ectTauSR44VoZp9TDezWIFtz6qTYFYFYfoDTsz0Gg&oe=6AEDBCE4",
-      "gasto": 13.42,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/878660919_2147720295840567_2310426109159860724_n.jpg?_nc_cat=104&ccb=1-7&_nc_eui2=AeGXb_UfnmPmKgluN6EAlcOURktEiRECe5tGS0SJEQJ7mzjP-OY-GEqt764VWit5pEVWiTQRoQuhpwXmJx9cSujC&_nc_ohc=nO2rjL3_kbMQ7kNvwEnWW4b&_nc_oc=AdrVQbbFgHpmrM5KyI6wopueveihXlfJIOK3PF-yxAo8G61j3ptnkc5nFi1wU491Q7Q&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQIBfKFyfi8IBBRz1N1X9peG7B4ha5LwbVDa0RWD9iJmVlHPuDOcTrrKU2EJuvFOq6UBlQPUm2t3lA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRxyoTL9Vthbj0ezp7meuuXNExpP5k4B22XxytRJY4UoQ&oe=6AEDBCE4",
+      "gasto": 13.92,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.37,
-      "impresiones": 73
+      "ctr": 1.25,
+      "impresiones": 80
     },
     {
       "id": "52522031970162",
@@ -709,12 +709,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/747536163_1036342942215902_8876700349734615537_n.jpg?_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeHY1IHRu0nZyI8t8nOayQr0vUtqtBzgruy9S2q0HOCu7MDXm_Wr4RpbnkeMNrzcsahPgH3_PxnHxfwk8jAUqkTt&_nc_ohc=rr2bkGLMh_oQ7kNvwEWh7sX&_nc_oc=AdqKGYFdrHFvOhzDSiqQdWagwxVs7AYFyOrSmN5QxnNW1xAYXh2A-sAn43B4gHkK5y66QeQ_ysQ4nEHBsrmvVlQ_&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQIeratg32-MfaNvK4zUcDE3JREA9a5bWKXbZJeC4P-zHlLd-pqwacvCoHfJMYBCUibDxjstBLO2vQ&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQTK45Yoir-kihsCL3oPUSBAsQu5NszTtKG6xcE78SA0DA&oe=6AEDA5AA",
-      "gasto": 17.31,
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/747536163_1036342942215902_8876700349734615537_n.jpg?_nc_cat=108&ccb=1-7&_nc_eui2=AeHY1IHRu0nZyI8t8nOayQr0vUtqtBzgruy9S2q0HOCu7MDXm_Wr4RpbnkeMNrzcsahPgH3_PxnHxfwk8jAUqkTt&_nc_ohc=rr2bkGLMh_oQ7kNvwHgQxU7&_nc_oc=AdqJDb7Pk-V1aMdpkqSlfwDkb_zOI1V9QPM8Bb0n4JoAdvNqn0Le5pgl3b91xwprlo0&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQIhZblXki_Q4UR_LTeutvkuv5RhDdKZOyA8t07b2kUADlP6v25WLRTWkdxxA-kaNrNyeu_4QXDvWA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=5fad0e&_nc_sid=58080a&oh=00_AQStbtyRCeup8sok-o55GFgVteWaqv97hia2oVZB7BlQQQ&oe=6AEDDDEA",
+      "gasto": 17.72,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 118
+      "ctr": 0.79,
+      "impresiones": 126
     },
     {
       "id": "52540651545962",
@@ -722,12 +722,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/879779117_2373093276829330_2265500411759558770_n.jpg?_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeGx0kOalAQQykOvlsZFb0_fvlrSPi2O4l2-WtI-LY7iXVymZrlEvmJg0_zJomibPkMBwdnlnhKNnHlTKxb9q_XD&_nc_ohc=d4wQA3V8eCUQ7kNvwETpA6W&_nc_oc=Ado-1rUhTM6YZc98ovik34C6j-LCkAZjij3arpFzqAvZjbKcfzqcg9X1asyjNs6GiDLIFcy2rvCHdT17Mstj61eo&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQLmPH1sTIStTcAqEf_CMK4h6cswBsZ6LPnGYpJepZL_u59YtTTvSs0q0L9_dJ182f8lEef-wcU1ww&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTPacpYrLIGX5Pa-WHUco7MOdG2u_exyq-8YxQwayPVcg&oe=6AEDC804",
-      "gasto": 46.04,
+      "miniatura": "https://scontent-ord5-2.xx.fbcdn.net/v/t15.5256-10/879779117_2373093276829330_2265500411759558770_n.jpg?_nc_cat=100&ccb=1-7&_nc_eui2=AeGx0kOalAQQykOvlsZFb0_fvlrSPi2O4l2-WtI-LY7iXVymZrlEvmJg0_zJomibPkMBwdnlnhKNnHlTKxb9q_XD&_nc_ohc=d4wQA3V8eCUQ7kNvwHhvg4L&_nc_oc=Ado7Zkam_G2_s6t0YbeKz8kD8kXegzJHV6LHc_3Utsl5wt-E9-QesgDg3ewXptS8gj8&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQLlymQiIaObcxjj6r7FNAUlRZBabjX_QuJZuwcAEhW1XsH8lYh7uapeINcLKGZXr_kaEJkuIGZ6yg&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQQB7vDaTiwRl63MGfB9a469_mjTWRvaa53cIo_5v4Zc1Q&oe=6AEDC804",
+      "gasto": 52.31,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.4,
-      "impresiones": 208
+      "ctr": 2.53,
+      "impresiones": 237
     },
     {
       "id": "52537014353362",
@@ -735,12 +735,12 @@ const DATA_INGLES = {
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
-      "miniatura": "https://external.fmex39-1.fna.fbcdn.net/emg1/v/t13/4784336512722688729?_nc_oc=AdrZ7ZN7oZmQ2GURQU06Cy7H1tixEVX3AnvaBWO41fdcsGjnPHqINJGjJmV28LD2uRHWYvw0RjDjy-mkEpoCgYL9&url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKmlqrcZ78MMQZpkMsytsixRgepbvMN66Jg2ubjHNG8O9LpVSoRWOaUwmZ_NU_PZUsJd5gWDLIi1A9U2gZxvND97dwE-hIg-SgBybcPa4X8bxG4A_4xyrLzYy6LyJfMP4Ceq56kE--Eamg23yw4mLwH&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external.fmex39-1.fna.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&edm=ACTJxZ4EAAAA&_nc_map=urlgen_bucketless&_nc_zt=3&_nc_eui2=AeHGzRqXiN7rMz6qDiKP33sct0DxYF3-PZq3QPFgXf49mi9XjNaNZ-XixchaGiRs-Hogf2J4GFb0USh7RA5hrv7F&_nc_tpa=Q5bMBQIGKELAYXV2bAVZmC6oH5v104Bdctk8YPkBmhYAa1mIOuKd0IcDOVTa_WVDI-j5_clctImyQtbQ3w&oh=06_Q3_EAYAxzk_7vWERQvXn1dkFUWKbvw3kRFPEuieE-ONVGONH&oe=6AE9B565",
-      "gasto": 47.84,
+      "miniatura": "https://external-ord5-2.xx.fbcdn.net/emg1/v/t13/4784336512722688729?url=https%3A%2F%2Fwww.facebook.com%2Fads%2Fimage%2F%3Fd%3DAQKmlqrcZ78MMQZpkMsytsixRgepbvMN66Jg2ubjHNG8O9LpVSoRWOaUwmZ_NU_PZUsJd5gWDLIi1A9U2gZxvND97dwE-hIg-SgBybcPa4X8bxG4A_4xyrLzYy6LyJfMP4Ceq56kE--Eamg23yw4mLwH&fb_obo=1&utld=facebook.com&_nc_sid=58080a&_nc_ht=external-ord5-2.xx.fbcdn.net&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ccb=18-1&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&edm=ACTJxZ4EAAAA&_nc_zt=3&_nc_eui2=AeHGzRqXiN7rMz6qDiKP33sct0DxYF3-PZq3QPFgXf49mi9XjNaNZ-XixchaGiRs-Hogf2J4GFb0USh7RA5hrv7F&_nc_tpa=Q5bMBQKrKF3R3U0SxT25vuNge0LJw6QH8KKIu4-LyfSbS3myZYH1u4ijwjZ5NtWOchcxBFGaTPsggupjzg&oh=06_Q3_EAR076-cgtUrSik2ojJSkwBEOoSsGYP1qRpE9ruais_Lp&oe=6AE9EDA5",
+      "gasto": 55.0,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.02,
-      "impresiones": 196
+      "ctr": 2.5,
+      "impresiones": 240
     },
     {
       "id": "52540651759962",
@@ -748,18 +748,18 @@ const DATA_INGLES = {
       "campana": "IY | REMARKETING | WhatsApp | OCT26",
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
-      "miniatura": "https://scontent.fmex39-1.fna.fbcdn.net/v/t15.5256-10/880881280_1529974695638941_7103482541846663376_n.jpg?_nc_cat=109&_nc_map=urlgen_bucketless&ccb=1-7&_nc_eui2=AeFiydzuHwhgp10wiMfZTworBE8ICtpdFr0ETwgK2l0Wvay3-h3Or8LXsu2stZPoyrYINg-rq7BqVj7Nxn-TJ2iL&_nc_ohc=MP5EzfLjJbYQ7kNvwGemS3z&_nc_oc=AdoT79FOmNJuFqps09RizoAt6y2VOW3JPIw791fYQwgIsXjTtwPO59TCRIyHxcm-Rdt4uqkGKl6C0V4R3cPNrYbK&_nc_zt=23&_nc_ht=scontent.fmex39-1.fna&edm=ACTJxZ4EAAAA&_nc_gid=CpgrBGjJuiNqwPqW4z1Tsg&_nc_tpa=Q5bMBQLu7qHzMWRKcOD_C2ikFNJw6kmcqRvYyiryBWEt5WiOI_nU_r-la81UsKMkqqdsUq_0e06bDIRazA&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQTPyMimQtSjoHh3jS_wfa69EVnyFqUrWW_CrDc42wEumA&oe=6AEDB845",
-      "gasto": 77.74,
+      "miniatura": "https://scontent-ord5-1.xx.fbcdn.net/v/t15.5256-10/880881280_1529974695638941_7103482541846663376_n.jpg?_nc_cat=109&ccb=1-7&_nc_eui2=AeFiydzuHwhgp10wiMfZTworBE8ICtpdFr0ETwgK2l0Wvay3-h3Or8LXsu2stZPoyrYINg-rq7BqVj7Nxn-TJ2iL&_nc_ohc=MP5EzfLjJbYQ7kNvwHzjwLC&_nc_oc=AdrwmEINAmtUOp7fo-ObYHLy0Rz7_oiFqEeCxAQmkaWeQgNeD-SHwhU-o2b0dZ_9b5o&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&edm=ACTJxZ4EAAAA&_nc_gid=mpw9Ev7MQonqZnP4Op-fIQ&_nc_tpa=Q5bMBQIGGGbQBaxQzhX6VT9oIIGpO5o2ideaLZEEpN2oM31-Yqq_m_62Lp2tXIZIRryNv3Zfife72TsD-w&stp=c0.5000x0.5000f_dst-emg0_p480x480_q75_tt6&ur=d2b52d&_nc_sid=58080a&oh=00_AQRrlDeKdEoX9Jh4iMH6l7aTwcCP-IuAG1VZ36TIUZMELA&oe=6AEDB845",
+      "gasto": 84.84,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.88,
-      "impresiones": 425
+      "ctr": 1.7,
+      "impresiones": 471
     }
   ],
   "diario_meta": {
     "2026-11-01": {
-      "leads": 17,
-      "gasto": 1211.38
+      "leads": 18,
+      "gasto": 1381.88
     }
   },
   "sucursales": {
