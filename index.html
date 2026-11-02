@@ -435,6 +435,8 @@ nav::-webkit-scrollbar { height: 0; }
 .f-val { font-family:'Poppins',sans-serif; font-size:30px; font-weight:800; line-height:1.1; letter-spacing:-.02em; text-shadow:none!important; font-variant-numeric:tabular-nums; }
 .f-lbl { font-size:10px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; margin-top:4px; }
 .f-pct { font-size:11px; margin-top:5px; color:var(--muted); font-weight:600; }
+.f-paso { font-size:10.5px; margin-top:3px; color:var(--muted); }
+.f-peor { color:var(--red); font-weight:700; }
 
 /* ── TABLE ── */
 table { width:100%; border-collapse:collapse; }
@@ -1180,7 +1182,7 @@ select.filter:focus { outline:none; border-color:var(--cyan); }
       <h3>🪜 Embudo del Mes <span class="gc-tag">Visual</span></h3>
       <div class="gc-def">La <b>gráfica en forma de embudo</b> que muestra cómo se va reduciendo la gente en cada etapa: Leads → Citas → Visitas → Inscritos.</div>
       <div class="gc-calc">Cada escalón es más chico que el anterior porque siempre se pierde gente en el camino.</div>
-      <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Si cae fuerte de Leads a Citas → problema de Call Center.</div>
+      <div class="gc-read"><b>Cómo leerlo:</b> el escalón donde MÁS se encoge el embudo es el que hay que arreglar. Cada etapa dice qué % pasó de la etapa anterior y la que más gente pierde sale en rojo como <b>cuello de botella</b>. Si cae fuerte de Leads a Citas → problema de Call Center. Si una etapa pasa del 100% (ej. más inscritos que visitas), falta capturar algo en el Sheet.</div>
     </div>
 
     <div class="guia-card" style="--gc:var(--green)">
@@ -1911,13 +1913,22 @@ function renderFunnel() {
     {l:'Visitas',  v:k.visitas,    tc:'var(--a4)'},
     {l:'Inscritos',v:k.inscritos,  tc:'var(--green)'},
   ];
+  // Gestión de ventas (Clase 6 de BMP): además del % sobre leads, cuánto pasa de una etapa a la
+  // siguiente; el escalón que más gente pierde se marca porque es el primero que hay que arreglar
+  const pasos = steps.map((s,i)=> i>0 && steps[i-1].v>0 ? s.v/steps[i-1].v : null);
+  const validos = pasos.filter(x=>x!==null);
+  const peor = validos.length > 1 ? pasos.indexOf(Math.min(...validos)) : -1;
   document.getElementById('funnel').innerHTML = steps.map((s,i)=>{
-    const p = i>0&&steps[0].v>0?`${((s.v/steps[0].v)*100).toFixed(0)}%`:'';
+    const p = i>0&&steps[0].v>0?`${((s.v/steps[0].v)*100).toFixed(0)}% de los leads`:'';
+    // en Citas el paso es el mismo % de los leads, así que solo se rotula si es el cuello de botella
+    const paso = pasos[i]===null ? '' : i===1 ? (i===peor?'cuello de botella':'')
+      : `${(pasos[i]*100).toFixed(0)}% de ${steps[i-1].l.toLowerCase()}${i===peor?' · cuello de botella':''}`;
     return `<div class="funnel-step">
       <div class="f-pill" style="background:color-mix(in srgb, ${s.tc} 12%, transparent);border-color:color-mix(in srgb, ${s.tc} 35%, transparent)">
         <div class="f-val" style="color:${s.tc}">${$n(s.v)}</div>
         <div class="f-lbl" style="color:${s.tc}">${s.l}</div>
         ${p?`<div class="f-pct">${p}</div>`:''}
+        ${paso?`<div class="f-paso${i===peor?' f-peor':''}">${paso}</div>`:''}
       </div>
     </div>`;
   }).join('');
