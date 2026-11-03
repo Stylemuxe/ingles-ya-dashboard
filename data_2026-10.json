@@ -1,6 +1,6 @@
 {
-  "actualizado": "02/11/2026 15:01",
-  "meta_actualizado": "02/11/2026 15:01",
+  "actualizado": "02/11/2026 22:31",
+  "meta_actualizado": "02/11/2026 22:31",
   "meta_ok": true,
   "mes": "Octubre 2026",
   "mes_id": "2026-10",
@@ -36,8 +36,8 @@
     {
       "id": "52540651618162",
       "nombre": "IY | RECONOCIMIENTO | Comentarios | OCT26",
-      "status": "PAUSED",
-      "effective_status": "PAUSED",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
       "gasto": 0.0,
       "impresiones": 0,
@@ -251,6 +251,26 @@
     }
   ],
   "adsets": [
+    {
+      "nombre": "CJ | RECONOCIMIENTO | ThruPlay | NOV26 | Clase 6",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "campaign_id": "52540651618162",
+      "presupuesto_dia": 102.39,
+      "gasto": 0.0,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
+      "nombre": "CJ | REMARKETING | WhatsApp | NOV26 | Clase 6",
+      "status": "ACTIVE",
+      "effective_status": "ACTIVE",
+      "campaign_id": "52540651607562",
+      "presupuesto_dia": 101.83,
+      "gasto": 0.0,
+      "leads": 0,
+      "cpl": 0
+    },
     {
       "nombre": "CJ | RECONOCIMIENTO | Comentarios | OCT26",
       "status": "PAUSED",
