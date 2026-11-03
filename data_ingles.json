@@ -1,13 +1,13 @@
 {
-  "actualizado": "02/11/2026 22:31",
-  "meta_actualizado": "02/11/2026 22:31",
+  "actualizado": "03/11/2026 09:36",
+  "meta_actualizado": "03/11/2026 09:35",
   "meta_ok": true,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
-    "leads_meta": 50,
-    "gasto": 3569.92,
-    "cpl": 71.4,
+    "leads_meta": 61,
+    "gasto": 4176.6,
+    "cpl": 68.47,
     "citas": 0,
     "visitas": 0,
     "inscritos": 0,
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -3569.92,
+    "utilidad": -4176.6,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 3569.92,
+      "meta_ads": 4176.6,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 3569.92
+      "total": 4176.6
     }
   },
   "campanas": [
@@ -39,9 +39,9 @@
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 0.0,
-      "impresiones": 0,
-      "alcance": 0,
+      "gasto": 21.23,
+      "impresiones": 777,
+      "alcance": 741,
       "leads": 0,
       "cpl": 0
     },
@@ -51,11 +51,11 @@
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 292.33,
-      "impresiones": 1596,
-      "alcance": 1303,
-      "leads": 3,
-      "cpl": 97.44
+      "gasto": 342.95,
+      "impresiones": 1870,
+      "alcance": 1474,
+      "leads": 5,
+      "cpl": 68.59
     },
     {
       "id": "52540651597362",
@@ -63,11 +63,11 @@
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 468.47,
-      "impresiones": 3443,
-      "alcance": 2488,
-      "leads": 4,
-      "cpl": 117.12
+      "gasto": 546.2,
+      "impresiones": 4123,
+      "alcance": 2832,
+      "leads": 6,
+      "cpl": 91.03
     },
     {
       "id": "52537011571762",
@@ -87,11 +87,11 @@
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 1276.11,
-      "gasto": 2809.12,
-      "impresiones": 24799,
-      "alcance": 20551,
-      "leads": 43,
-      "cpl": 65.33
+      "gasto": 3266.22,
+      "impresiones": 29996,
+      "alcance": 24309,
+      "leads": 50,
+      "cpl": 65.32
     },
     {
       "id": "52515312914962",
@@ -257,7 +257,7 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52540651618162",
       "presupuesto_dia": 102.39,
-      "gasto": 0.0,
+      "gasto": 21.23,
       "leads": 0,
       "cpl": 0
     },
@@ -267,9 +267,9 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 0.0,
-      "leads": 0,
-      "cpl": 0
+      "gasto": 41.12,
+      "leads": 2,
+      "cpl": 20.56
     },
     {
       "nombre": "CJ | RECONOCIMIENTO | Comentarios | OCT26",
@@ -287,9 +287,9 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 292.33,
+      "gasto": 301.83,
       "leads": 3,
-      "cpl": 97.44
+      "cpl": 100.61
     },
     {
       "nombre": "CJ | TOEFL | WhatsApp | OCT26",
@@ -297,9 +297,9 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52540651597362",
       "presupuesto_dia": 203.47,
-      "gasto": 468.47,
-      "leads": 4,
-      "cpl": 117.12
+      "gasto": 546.2,
+      "leads": 6,
+      "cpl": 91.03
     },
     {
       "nombre": "PRUEBA CREATIVOS OCT 2026",
@@ -307,7 +307,7 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 222.94,
+      "gasto": 245.78,
       "leads": 0,
       "cpl": 0
     },
@@ -327,9 +327,9 @@
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 2586.18,
-      "leads": 43,
-      "cpl": 60.14
+      "gasto": 3020.44,
+      "leads": 50,
+      "cpl": 60.41
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -470,24 +470,11 @@
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031969362.png",
-      "gasto": 2415.84,
-      "leads": 41,
-      "cpl": 58.92,
-      "ctr": 1.6,
-      "impresiones": 22829
-    },
-    {
-      "id": "52540651743762",
-      "nombre": "RMK 3",
-      "campana": "IY | REMARKETING | WhatsApp | OCT26",
-      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52540651743762.jpg",
-      "gasto": 61.63,
-      "leads": 2,
-      "cpl": 30.82,
-      "ctr": 1.56,
-      "impresiones": 257
+      "gasto": 2831.81,
+      "leads": 48,
+      "cpl": 59.0,
+      "ctr": 1.61,
+      "impresiones": 27724
     },
     {
       "id": "52540656201762",
@@ -496,11 +483,37 @@
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540656201762.jpg",
-      "gasto": 324.22,
+      "gasto": 385.54,
+      "leads": 4,
+      "cpl": 96.39,
+      "ctr": 1.22,
+      "impresiones": 2372
+    },
+    {
+      "id": "52540651743762",
+      "nombre": "RMK 3",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52540651743762.jpg",
+      "gasto": 62.78,
       "leads": 2,
-      "cpl": 162.11,
-      "ctr": 1.25,
-      "impresiones": 1833
+      "cpl": 31.39,
+      "ctr": 1.47,
+      "impresiones": 273
+    },
+    {
+      "id": "52541360003362",
+      "nombre": "RMK 3",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360003362.jpg",
+      "gasto": 12.66,
+      "leads": 1,
+      "cpl": 12.66,
+      "ctr": 1.89,
+      "impresiones": 53
     },
     {
       "id": "52522031968162",
@@ -509,11 +522,11 @@
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031968162.jpg",
-      "gasto": 9.52,
+      "gasto": 13.04,
       "leads": 1,
-      "cpl": 9.52,
-      "ctr": 5.88,
-      "impresiones": 68
+      "cpl": 13.04,
+      "ctr": 5.0,
+      "impresiones": 80
     },
     {
       "id": "52540656258762",
@@ -522,11 +535,24 @@
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540656258762.jpg",
-      "gasto": 23.53,
+      "gasto": 26.59,
       "leads": 1,
-      "cpl": 23.53,
-      "ctr": 1.57,
-      "impresiones": 318
+      "cpl": 26.59,
+      "ctr": 1.34,
+      "impresiones": 374
+    },
+    {
+      "id": "52541359983762",
+      "nombre": "RMK 4",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541359983762.jpg",
+      "gasto": 27.61,
+      "leads": 1,
+      "cpl": 27.61,
+      "ctr": 0.78,
+      "impresiones": 128
     },
     {
       "id": "52540651839362",
@@ -548,11 +574,11 @@
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651545962.jpg",
-      "gasto": 95.83,
+      "gasto": 102.93,
       "leads": 1,
-      "cpl": 95.83,
-      "ctr": 2.34,
-      "impresiones": 428
+      "cpl": 102.93,
+      "ctr": 2.24,
+      "impresiones": 490
     },
     {
       "id": "52540651759962",
@@ -561,11 +587,11 @@
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651759962.jpg",
-      "gasto": 223.25,
+      "gasto": 231.01,
       "leads": 1,
-      "cpl": 223.25,
-      "ctr": 1.87,
-      "impresiones": 1282
+      "cpl": 231.01,
+      "ctr": 1.86,
+      "impresiones": 1343
     },
     {
       "id": "52540656356162",
@@ -594,6 +620,45 @@
       "impresiones": 2
     },
     {
+      "id": "52541360006962",
+      "nombre": "RMK 1",
+      "campana": "IY | REMARKETING | WhatsApp | OCT26",
+      "conjunto": "CJ | REMARKETING | WhatsApp | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360006962.jpg",
+      "gasto": 0.85,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 8
+    },
+    {
+      "id": "52541360038362",
+      "nombre": "REC 1 ThruPlay",
+      "campana": "IY | RECONOCIMIENTO | Comentarios | OCT26",
+      "conjunto": "CJ | RECONOCIMIENTO | ThruPlay | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360038362.jpg",
+      "gasto": 1.13,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 109
+    },
+    {
+      "id": "52541360060362",
+      "nombre": "REC 3 ThruPlay",
+      "campana": "IY | RECONOCIMIENTO | Comentarios | OCT26",
+      "conjunto": "CJ | RECONOCIMIENTO | ThruPlay | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360060362.jpg",
+      "gasto": 1.18,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 2.27,
+      "impresiones": 44
+    },
+    {
       "id": "52540656285562",
       "nombre": "VID - ENTIENDES NO HABLAS OCT26 (G1)",
       "campana": "Ingles Consolidada - Whats - Copia",
@@ -605,6 +670,19 @@
       "cpl": 0,
       "ctr": 7.69,
       "impresiones": 13
+    },
+    {
+      "id": "52541360027562",
+      "nombre": "REC 2 ThruPlay",
+      "campana": "IY | RECONOCIMIENTO | Comentarios | OCT26",
+      "conjunto": "CJ | RECONOCIMIENTO | ThruPlay | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360027562.jpg",
+      "gasto": 3.74,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 100
     },
     {
       "id": "52522031970362",
@@ -626,11 +704,11 @@
       "conjunto": "CJ | REMARKETING | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651734962.jpg",
-      "gasto": 6.26,
+      "gasto": 6.85,
       "leads": 0,
       "cpl": 0,
-      "ctr": 3.85,
-      "impresiones": 52
+      "ctr": 3.33,
+      "impresiones": 60
     },
     {
       "id": "52537014355962",
@@ -639,24 +717,11 @@
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014355962.jpg",
-      "gasto": 7.98,
+      "gasto": 8.17,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 16
-    },
-    {
-      "id": "52540651809362",
-      "nombre": "TOEFL C2 Titulacion",
-      "campana": "IY | TOEFL | WhatsApp | OCT26",
-      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52540651809362.jpg",
-      "gasto": 9.34,
-      "leads": 0,
-      "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 80
+      "impresiones": 17
     },
     {
       "id": "52522031967562",
@@ -665,11 +730,11 @@
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031967562.png",
-      "gasto": 10.1,
+      "gasto": 11.38,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.0,
-      "impresiones": 52
+      "ctr": 1.61,
+      "impresiones": 62
     },
     {
       "id": "52537014352162",
@@ -685,17 +750,43 @@
       "impresiones": 53
     },
     {
+      "id": "52541360064362",
+      "nombre": "REC 4 ThruPlay",
+      "campana": "IY | RECONOCIMIENTO | Comentarios | OCT26",
+      "conjunto": "CJ | RECONOCIMIENTO | ThruPlay | NOV26 | Clase 6",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52541360064362.jpg",
+      "gasto": 15.18,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.19,
+      "impresiones": 524
+    },
+    {
+      "id": "52540651809362",
+      "nombre": "TOEFL C2 Titulacion",
+      "campana": "IY | TOEFL | WhatsApp | OCT26",
+      "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52540651809362.jpg",
+      "gasto": 16.45,
+      "leads": 0,
+      "cpl": 0,
+      "ctr": 0.0,
+      "impresiones": 121
+    },
+    {
       "id": "52533464338562",
       "nombre": "VID _ TESTIMONIO 1",
       "campana": "Ingles Consolidada - Whats - Copia",
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52533464338562.jpg",
-      "gasto": 19.02,
+      "gasto": 24.37,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.97,
-      "impresiones": 101
+      "ctr": 2.4,
+      "impresiones": 125
     },
     {
       "id": "52540651792362",
@@ -704,11 +795,11 @@
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651792362.jpg",
-      "gasto": 19.61,
+      "gasto": 24.43,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.38,
-      "impresiones": 145
+      "ctr": 1.18,
+      "impresiones": 169
     },
     {
       "id": "52540651820562",
@@ -717,11 +808,11 @@
       "conjunto": "CJ | TOEFL | WhatsApp | OCT26",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540651820562.jpg",
-      "gasto": 24.1,
+      "gasto": 25.52,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.68,
-      "impresiones": 148
+      "ctr": 0.6,
+      "impresiones": 168
     },
     {
       "id": "52522031970162",
@@ -730,11 +821,11 @@
       "conjunto": "Ingles Consolidada - Whats - Copia",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031970162.jpg",
-      "gasto": 29.65,
+      "gasto": 30.69,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.52,
-      "impresiones": 193
+      "ctr": 0.49,
+      "impresiones": 203
     },
     {
       "id": "52537014354962",
@@ -743,11 +834,11 @@
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014354962.jpg",
-      "gasto": 36.82,
+      "gasto": 40.07,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.99,
-      "impresiones": 302
+      "ctr": 2.02,
+      "impresiones": 347
     },
     {
       "id": "52540656307562",
@@ -756,11 +847,11 @@
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52540656307562.jpg",
-      "gasto": 48.19,
+      "gasto": 51.68,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.44,
-      "impresiones": 208
+      "ctr": 1.69,
+      "impresiones": 237
     },
     {
       "id": "52537014353362",
@@ -769,21 +860,25 @@
       "conjunto": "PRUEBA CREATIVOS OCT 2026",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52537014353362.jpg",
-      "gasto": 115.38,
+      "gasto": 131.29,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.13,
-      "impresiones": 517
+      "ctr": 1.92,
+      "impresiones": 626
     }
   ],
   "diario_meta": {
     "2026-11-01": {
       "leads": 21,
-      "gasto": 1649.28
+      "gasto": 1649.79
     },
     "2026-11-02": {
-      "leads": 29,
-      "gasto": 1920.64
+      "leads": 33,
+      "gasto": 2154.14
+    },
+    "2026-11-03": {
+      "leads": 7,
+      "gasto": 372.67
     }
   },
   "sucursales": {
