@@ -1,13 +1,13 @@
 const DATA_INGLES = {
-  "actualizado": "09/11/2026 23:10",
-  "meta_actualizado": "09/11/2026 23:10",
+  "actualizado": "10/11/2026 09:55",
+  "meta_actualizado": "10/11/2026 09:55",
   "meta_ok": true,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
-    "leads_meta": 212,
-    "gasto": 13810.44,
-    "cpl": 65.14,
+    "leads_meta": 221,
+    "gasto": 14188.98,
+    "cpl": 64.2,
     "citas": 18,
     "visitas": 4,
     "inscritos": 2,
@@ -23,13 +23,13 @@ const DATA_INGLES = {
   },
   "financiero": {
     "ingresos": 0.0,
-    "utilidad": -13810.44,
+    "utilidad": -14188.98,
     "ticket_promedio": 0.0,
     "gastos": {
-      "meta_ads": 13810.44,
+      "meta_ads": 14188.98,
       "fabian": 0.0,
       "yolanda": 0.0,
-      "total": 13810.44
+      "total": 14188.98
     }
   },
   "campanas": [
@@ -39,11 +39,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 811.36,
-      "impresiones": 5611,
-      "alcance": 3975,
+      "gasto": 838.2,
+      "impresiones": 5776,
+      "alcance": 4061,
       "leads": 14,
-      "cpl": 57.95
+      "cpl": 59.87
     },
     {
       "id": "52540651618162",
@@ -51,9 +51,9 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 541.53,
-      "impresiones": 15857,
-      "alcance": 8347,
+      "gasto": 552.34,
+      "impresiones": 16133,
+      "alcance": 8397,
       "leads": 0,
       "cpl": 0
     },
@@ -63,11 +63,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 0.0,
-      "gasto": 981.68,
-      "impresiones": 7532,
-      "alcance": 5079,
+      "gasto": 1021.19,
+      "impresiones": 7923,
+      "alcance": 5256,
       "leads": 20,
-      "cpl": 49.08
+      "cpl": 51.06
     },
     {
       "id": "52540651597362",
@@ -99,11 +99,11 @@ const DATA_INGLES = {
       "status": "ACTIVE",
       "effective_status": "ACTIVE",
       "presupuesto_dia": 1081.07,
-      "gasto": 10231.49,
-      "impresiones": 103178,
-      "alcance": 76177,
-      "leads": 163,
-      "cpl": 62.77
+      "gasto": 10532.87,
+      "impresiones": 106353,
+      "alcance": 78262,
+      "leads": 172,
+      "cpl": 61.24
     },
     {
       "id": "52515312914962",
@@ -269,9 +269,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 47.79,
-      "leads": 3,
-      "cpl": 15.93
+      "gasto": 57.13,
+      "leads": 4,
+      "cpl": 14.28
     },
     {
       "nombre": "[03-11-2026] [Testeo 5 creativos] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
@@ -279,9 +279,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52541575028562",
       "presupuesto_dia": 75.0,
-      "gasto": 811.36,
+      "gasto": 838.2,
       "leads": 14,
-      "cpl": 57.95
+      "cpl": 59.87
     },
     {
       "nombre": "[03-11-2026] [Reproducciones de video Thruplay] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
@@ -289,7 +289,7 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651618162",
       "presupuesto_dia": 51.2,
-      "gasto": 541.53,
+      "gasto": 552.34,
       "leads": 0,
       "cpl": 0
     },
@@ -299,9 +299,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52540651607562",
       "presupuesto_dia": 101.83,
-      "gasto": 679.84,
+      "gasto": 719.35,
       "leads": 17,
-      "cpl": 39.99
+      "cpl": 42.31
     },
     {
       "nombre": "[29-10-2026] [Interacción con la Publicación] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
@@ -359,9 +359,9 @@ const DATA_INGLES = {
       "effective_status": "ACTIVE",
       "campaign_id": "52522031966962",
       "presupuesto_dia": 0.0,
-      "gasto": 9923.63,
-      "leads": 160,
-      "cpl": 62.02
+      "gasto": 10215.67,
+      "leads": 168,
+      "cpl": 60.81
     },
     {
       "nombre": "Publicación: \"¿Saber gramática no te da fluidez? 🥶 Recuerda:...\"",
@@ -502,11 +502,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031969362.png",
-      "gasto": 9444.99,
-      "leads": 150,
-      "cpl": 62.97,
-      "ctr": 1.71,
-      "impresiones": 99132
+      "gasto": 9731.59,
+      "leads": 158,
+      "cpl": 61.59,
+      "ctr": 1.7,
+      "impresiones": 102244
     },
     {
       "id": "52541359983762",
@@ -515,11 +515,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Objeciones y testimonios] [Mensajes WhatsApp] [Público Personalizado] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541359983762.jpg",
-      "gasto": 582.88,
+      "gasto": 621.81,
       "leads": 14,
-      "cpl": 41.63,
-      "ctr": 2.05,
-      "impresiones": 5221
+      "cpl": 44.41,
+      "ctr": 2.02,
+      "impresiones": 5600
     },
     {
       "id": "52540656201762",
@@ -541,11 +541,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Testeo 5 creativos] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541575084962.jpg",
-      "gasto": 299.26,
+      "gasto": 326.1,
       "leads": 6,
-      "cpl": 49.88,
-      "ctr": 1.8,
-      "impresiones": 2328
+      "cpl": 54.35,
+      "ctr": 1.81,
+      "impresiones": 2493
     },
     {
       "id": "52541575069362",
@@ -593,11 +593,24 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Objeciones y testimonios] [Mensajes WhatsApp] [Público Personalizado] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541360006962.jpg",
-      "gasto": 18.78,
+      "gasto": 19.36,
       "leads": 2,
-      "cpl": 9.39,
-      "ctr": 3.83,
-      "impresiones": 183
+      "cpl": 9.68,
+      "ctr": 4.1,
+      "impresiones": 195
+    },
+    {
+      "id": "52542306196162",
+      "nombre": "VID - ENTIENDES PERO NO HABLAS · copy NOV26",
+      "campana": "🟢 [IY] [FASE DE VENTAS] [MENSAJES] [PB-FRIO] [CBO] [FABIÁN]",
+      "conjunto": "[06-11-2026] [Segunda vida · ganadores históricos] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
+      "estado": "ACTIVE",
+      "miniatura": "miniaturas/52542306196162.jpg",
+      "gasto": 48.96,
+      "leads": 2,
+      "cpl": 24.48,
+      "ctr": 1.62,
+      "impresiones": 308
     },
     {
       "id": "52522031967562",
@@ -606,11 +619,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031967562.png",
-      "gasto": 54.43,
+      "gasto": 57.38,
       "leads": 2,
-      "cpl": 27.21,
-      "ctr": 1.64,
-      "impresiones": 304
+      "cpl": 28.69,
+      "ctr": 1.59,
+      "impresiones": 314
     },
     {
       "id": "52540651743762",
@@ -632,11 +645,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031970162.jpg",
-      "gasto": 119.84,
+      "gasto": 120.39,
       "leads": 2,
-      "cpl": 59.92,
-      "ctr": 1.64,
-      "impresiones": 611
+      "cpl": 60.2,
+      "ctr": 1.63,
+      "impresiones": 613
     },
     {
       "id": "52540656258762",
@@ -689,19 +702,6 @@ const DATA_INGLES = {
       "cpl": 22.15,
       "ctr": 1.89,
       "impresiones": 106
-    },
-    {
-      "id": "52542306196162",
-      "nombre": "VID - ENTIENDES PERO NO HABLAS · copy NOV26",
-      "campana": "🟢 [IY] [FASE DE VENTAS] [MENSAJES] [PB-FRIO] [CBO] [FABIÁN]",
-      "conjunto": "[06-11-2026] [Segunda vida · ganadores históricos] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
-      "estado": "ACTIVE",
-      "miniatura": "miniaturas/52542306196162.jpg",
-      "gasto": 39.62,
-      "leads": 1,
-      "cpl": 39.62,
-      "ctr": 1.09,
-      "impresiones": 275
     },
     {
       "id": "52541360003362",
@@ -931,11 +931,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031967362.jpg",
-      "gasto": 18.02,
+      "gasto": 18.55,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.0,
-      "impresiones": 129
+      "impresiones": 134
     },
     {
       "id": "52541359985962",
@@ -970,11 +970,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52522031967762.jpg",
-      "gasto": 30.11,
+      "gasto": 31.38,
       "leads": 0,
       "cpl": 0,
-      "ctr": 1.92,
-      "impresiones": 156
+      "ctr": 1.81,
+      "impresiones": 166
     },
     {
       "id": "52533464338562",
@@ -983,11 +983,11 @@ const DATA_INGLES = {
       "conjunto": "[04-08-2026] [General 3 sedes] [Mensajes WhatsApp] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52533464338562.jpg",
-      "gasto": 32.89,
+      "gasto": 33.03,
       "leads": 0,
       "cpl": 0,
-      "ctr": 2.1,
-      "impresiones": 143
+      "ctr": 2.05,
+      "impresiones": 146
     },
     {
       "id": "52541360027562",
@@ -996,11 +996,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Reproducciones de video Thruplay] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541360027562.jpg",
-      "gasto": 35.04,
+      "gasto": 35.88,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.12,
-      "impresiones": 862
+      "ctr": 0.11,
+      "impresiones": 881
     },
     {
       "id": "52537014354962",
@@ -1061,11 +1061,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Reproducciones de video Thruplay] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541360038362.jpg",
-      "gasto": 64.44,
+      "gasto": 65.23,
       "leads": 0,
       "cpl": 0,
-      "ctr": 0.67,
-      "impresiones": 3899
+      "ctr": 0.68,
+      "impresiones": 3946
     },
     {
       "id": "52541360064362",
@@ -1074,11 +1074,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Reproducciones de video Thruplay] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541360064362.jpg",
-      "gasto": 82.65,
+      "gasto": 83.04,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.2,
-      "impresiones": 2498
+      "impresiones": 2507
     },
     {
       "id": "52537014353362",
@@ -1100,11 +1100,11 @@ const DATA_INGLES = {
       "conjunto": "[03-11-2026] [Reproducciones de video Thruplay] [Abierto Ubicaciones] [CDMX 3 sedes] [7 días atribución]",
       "estado": "ACTIVE",
       "miniatura": "miniaturas/52541360060362.jpg",
-      "gasto": 310.2,
+      "gasto": 318.99,
       "leads": 0,
       "cpl": 0,
       "ctr": 0.04,
-      "impresiones": 7261
+      "impresiones": 7462
     }
   ],
   "diario_meta": {
@@ -1138,11 +1138,15 @@ const DATA_INGLES = {
     },
     "2026-11-08": {
       "leads": 25,
-      "gasto": 1024.65
+      "gasto": 1024.8
     },
     "2026-11-09": {
-      "leads": 29,
-      "gasto": 1473.41
+      "leads": 31,
+      "gasto": 1563.18
+    },
+    "2026-11-10": {
+      "leads": 7,
+      "gasto": 288.62
     }
   },
   "sucursales": {
