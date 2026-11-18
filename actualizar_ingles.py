@@ -125,7 +125,8 @@ MESES_TXT = {
 
 def parse_fecha(s):
     s = str(s).strip()
-    for fmt in ('%d/%m/%Y', '%d-%m-%Y', '%Y-%m-%d', '%d/%m/%y', '%d-%m-%y'):
+    # '%Y/%m/%d': así exporta Google algunas fechas tecleadas a mano (ej. '2026/11/9', 18 nov 2026)
+    for fmt in ('%d/%m/%Y', '%d-%m-%Y', '%Y-%m-%d', '%Y/%m/%d', '%d/%m/%y', '%d-%m-%y'):
         try: return datetime.strptime(s, fmt).date()
         except: pass
     return None
@@ -310,21 +311,33 @@ def fetch_anuncios():
 
 # ─── SEGUIMIENTO ─────────────────────────────────────────────────────────────
 def parse_seguimiento(text):
+    """Suma los bloques diarios. Además regresa cuántos encabezados de día hay y cuáles traen una fecha
+    ilegible o de otro mes ('raros'): si no hay ninguno raro, la suma de los días está completa."""
     rows    = list(csv.reader(io.StringIO(text)))
     totales = {s: dict(leads=0, llamadas=0, no_contesta=0, citas=0, visitas=0, inscritos=0)
                for s in SUCURSALES}
     diario  = {}
     cur_date = None
+    encabezados, raros = 0, []
 
     for row in rows:
         if not any(c.strip() for c in row):
             continue
         col0 = row[0].strip() if row else ''
         col1 = row[1].strip() if len(row) > 1 else ''
+        es_encabezado = len(row) > 2 and 'LEADS' in row[2].upper()
 
         d = parse_fecha(col1) or parse_fecha(col0)
         if d:
             cur_date = d
+            if es_encabezado:
+                encabezados += 1
+                if d.strftime('%Y-%m') != MES_ACTUAL:
+                    raros.append(col1 or col0)
+            continue
+        if es_encabezado:
+            encabezados += 1
+            raros.append(col1 or col0 or '(sin fecha)')
             continue
 
         suc, offset = None, None
@@ -356,13 +369,15 @@ def parse_seguimiento(text):
         t['visitas']     += visitas
         t['inscritos']   += inscritos
 
+        # Se suma (no se reemplaza): si un encabezado sale ilegible, sus filas caen en el día anterior
+        # y antes borraban los datos de ese día en la gráfica diaria.
         ds = cur_date.strftime('%Y-%m-%d')
-        diario.setdefault(ds, {})[suc] = {
-            'leads': leads, 'llamadas': llamadas,
-            'citas': citas, 'visitas': visitas, 'inscritos': inscritos,
-        }
+        dia = diario.setdefault(ds, {}).setdefault(suc, dict(leads=0, llamadas=0, citas=0, visitas=0, inscritos=0))
+        for k, v in (('leads', leads), ('llamadas', llamadas), ('citas', citas),
+                     ('visitas', visitas), ('inscritos', inscritos)):
+            dia[k] += v
 
-    return totales, diario
+    return totales, diario, dict(encabezados=encabezados, raros=raros)
 
 def parse_seguimiento_mensual(text):
     """Lee el bloque 'ACUMULADO MENSUAL' (columna 'M', a la derecha del sheet)
@@ -659,13 +674,25 @@ def main():
     print('[4] Google Sheets — seguimiento diario...')
     csv_seg = fetch_csv_sheet(SHEET_SEG_ID, SHEET_SEG_GID) if SHEET_SEG_GID else None
     if csv_seg:
-        totales_diario, diario_suc = parse_seguimiento(csv_seg)
+        totales_diario, diario_suc, info_dias = parse_seguimiento(csv_seg)
         totales_mensual = parse_seguimiento_mensual(csv_seg)
-        # El bloque ACUMULADO MENSUAL del Sheet es la fuente autoritativa (la
-        # calcula el mismo CC con formulas de Sheets); si aun no existe ese
-        # bloque para el mes, se usa la suma diaria como respaldo.
-        if any(v['leads'] for v in totales_mensual.values()):
+        hay_mensual = any(v['leads'] for v in totales_mensual.values())
+        # Si todas las fechas de los días se leyeron bien, manda la suma de los días: el 18 nov 2026 el
+        # ACUMULADO SEMANAL de noviembre dejaba fuera los días 11 y 12 y algunas fórmulas apuntaban a
+        # filas de encabezado o de otra sucursal. Si hay fechas ilegibles o de otro mes (el problema de
+        # julio y de inicios de noviembre), manda el ACUMULADO MENSUAL que calcula el CC en el Sheet.
+        if info_dias['encabezados'] and not info_dias['raros']:
+            totales_suc = totales_diario
+            dif = {k: (sum(v[k] for v in totales_mensual.values()), sum(v[k] for v in totales_diario.values()))
+                   for k in ('leads', 'llamadas', 'citas', 'visitas', 'inscritos')}
+            if hay_mensual and any(a != b for a, b in dif.values()):
+                print('    AVISO: el ACUMULADO MENSUAL del Sheet no cuadra con la suma de los días ('
+                      + ', '.join(f'{k} {a} vs {b}' for k, (a, b) in dif.items() if a != b)
+                      + '); se usa la suma de los días')
+        elif hay_mensual:
             totales_suc = totales_mensual
+            print(f"    AVISO: {len(info_dias['raros'])} días con fecha ilegible o de otro mes "
+                  f"({', '.join(info_dias['raros'][:5])}); se usa el ACUMULADO MENSUAL del Sheet")
         else:
             totales_suc = totales_diario
             print('    AVISO: no se encontro bloque ACUMULADO MENSUAL, usando suma diaria')
