@@ -1,7 +1,7 @@
 {
-  "actualizado": "27/11/2026 17:49",
+  "actualizado": "27/11/2026 23:28",
   "meta_actualizado": "27/11/2026 17:49",
-  "meta_ok": true,
+  "meta_ok": false,
   "mes": "Noviembre 2026",
   "mes_id": "2026-11",
   "kpis": {
@@ -23,13 +23,13 @@
   },
   "financiero": {
     "ingresos": 37654.0,
-    "utilidad": -16660.83,
+    "utilidad": -12209.0,
     "ticket_promedio": 1637.13,
     "gastos": {
-      "meta_ads": 36614.83,
+      "meta_ads": 32163.0,
       "fabian": 6000.0,
       "yolanda": 11700.0,
-      "total": 54314.83
+      "total": 49863.0
     }
   },
   "campanas": [
